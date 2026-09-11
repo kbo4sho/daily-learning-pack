@@ -5,7 +5,33 @@ import { PDFDocument } from "pdf-lib";
 import { createPack, normalizeTopic } from "../src/pack.mjs";
 import { site, printDocument } from "../src/render.mjs";
 
-test("default and normalized sample resolve to the complete curated day", async () => {
+test("engines is the complete Grade 2 default, including normalized input", async () => {
+  const pack = await createPack();
+  assert.equal(pack.topic, "engines");
+  assert.equal(pack.kind, "engines");
+  assert.equal(pack.gradeLevel, 2);
+  assert.deepEqual(pack.ageRange, [7, 8]);
+  assert.deepEqual(await createPack("  EnGiNeS  "), pack);
+  assert.equal(pack.math.tasks.length, 3);
+  assert.equal(pack.reading.questions.length, 2);
+  assert.equal(pack.answers.length, 6);
+  for (const subject of ["math", "reading", "writing"]) {
+    assert.ok(pack[subject].parentNote);
+    assert.match(JSON.stringify(pack[subject]), /engine/);
+  }
+  const html = site(pack);
+  assert.ok(html.includes('id="add-turns"'));
+  assert.ok(!html.includes('id="fraction-shape"'));
+  assert.ok(!html.includes('id="reset-words"'));
+  const built = JSON.parse(await readFile("dist/pack.json", "utf8"));
+  assert.deepEqual(
+    built,
+    await createPack(built.topic),
+    "built metadata must match the selected pack",
+  );
+  assert.equal(built.gradeLevel, 2);
+});
+test("fair sharing remains an explicit curated sample", async () => {
   const pack = await createPack("  Fractions   as fair sharing  ");
   assert.equal(pack.kind, "fair-sharing");
   assert.equal(pack.reading.paragraphs.length, 5);
@@ -16,6 +42,8 @@ test("unseen topics produce consistent, deterministic inquiry packs", async () =
   for (const topic of ["weather", "friendship", "Ocean waves", "café & rain"]) {
     const pack = await createPack(topic);
     assert.equal(pack.kind, "topic-inquiry");
+    assert.equal(pack.gradeLevel, 2);
+    assert.deepEqual(pack.ageRange, [7, 8]);
     assert.deepEqual(pack, await createPack(topic));
     for (const s of ["math", "reading", "writing"])
       assert.ok(JSON.stringify(pack[s]).includes(topic));

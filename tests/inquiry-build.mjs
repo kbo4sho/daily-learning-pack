@@ -47,6 +47,12 @@ try {
     await new Promise((r) => server.close(r));
   }
   console.log("PASS alternate-topic build and inquiry interaction");
+  execFileSync(
+    process.execPath,
+    ["scripts/build.mjs", "fractions as fair sharing"],
+    { stdio: "inherit" },
+  );
+  execFileSync(process.execPath, ["tests/browser.mjs"], { stdio: "inherit" });
 } finally {
   execFileSync(process.execPath, ["scripts/build.mjs"], { stdio: "inherit" });
 }

@@ -835,6 +835,78 @@ p + p {
     gap: 16px;
   }
 }
+/* Engines: a labeled mechanism and paired turns, readable without color. */
+body[data-kind="engines"] .lesson-grid {
+  align-items: start;
+}
+.engine-lab {
+  min-width: 0;
+  padding: 24px;
+  background: #e5eddf;
+  border-radius: 18px;
+}
+.engine-lab h3 {
+  margin: 10px 0 18px;
+}
+.energy-path {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.energy-path li {
+  border-left: 3px solid var(--ink);
+  padding: 0 0 14px 15px;
+}
+.energy-path li:last-child {
+  padding-bottom: 0;
+}
+.energy-path b,
+.energy-path span {
+  display: block;
+}
+.energy-path span {
+  font-size: 15px;
+}
+.engine-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 18px 0 8px;
+}
+.turn-counter {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.turn-counter > p {
+  font-size: 16px;
+}
+.turn-pairs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 42px;
+  margin: 12px 0;
+}
+.turn-pair {
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: white;
+  padding: 2px 6px;
+  animation: arrive 0.3s ease-out;
+}
+.turn-counter .primary-button {
+  width: 100%;
+  margin-top: 14px;
+}
+.turn-counter .primary-button:disabled {
+  background: #526461;
+}
+@media (prefers-reduced-motion: reduce) {
+  .turn-pair {
+    animation: none;
+  }
+}
 /* Print layout uses physical units: each subject is exactly one US Letter page. */
 @page {
   size: Letter;
@@ -1042,4 +1114,24 @@ p + p {
     background: white;
     color: black;
   }
+}
+
+.engine-workspace {
+  border: 1pt solid #555;
+  height: 91pt;
+  margin: 10pt 0 14pt 29pt;
+  padding: 8pt 12pt;
+}
+.engine-workspace span {
+  font-size: 12pt;
+}
+
+.sheet .engine-diagram {
+  width: 240pt;
+  height: 88pt;
+  margin: 8pt auto 12pt;
+  color: #111;
+}
+.sheet .engine-diagram rect {
+  fill: white;
 }
