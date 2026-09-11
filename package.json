@@ -1,0 +1,27 @@
+{
+  "name": "daily-learning-pack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "generate": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:inquiry": "node tests/inquiry-build.mjs",
+    "format": "prettier --write \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"packs/*.json\" \"*.json\" \".github/workflows/*.yml\" README.md",
+    "format:check": "prettier --check \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"packs/*.json\" \"*.json\" \".github/workflows/*.yml\" README.md"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/nunito-sans": "^5.3.0",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.63.0",
+    "prettier": "3.6.2"
+  }
+}
