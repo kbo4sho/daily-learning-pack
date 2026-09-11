@@ -118,6 +118,29 @@ if (document.body.dataset.kind === "fair-sharing") {
     }),
   );
   draw();
+} else if (document.body.dataset.kind === "engines") {
+  let turns = 0;
+  const updateTurns = () => {
+    $("#turn-feedback").textContent =
+      turns === 0
+        ? "0 turns. Add a pair of turns."
+        : `${turns} turns. ${turns / 2} ${turns === 2 ? "pair" : "pairs"} of 2.${turns === 20 ? " You counted to 20 by twos! Start at 0 to try again." : ` ${turns - 2} + 2 = ${turns}. What comes next?`}`;
+    $("#add-turns").disabled = turns === 20;
+  };
+  $("#add-turns").addEventListener("click", () => {
+    if (turns >= 20) return;
+    turns += 2;
+    const pair = document.createElement("span");
+    pair.className = "turn-pair";
+    pair.textContent = "↻ ↻";
+    $("#turn-pairs").append(pair);
+    updateTurns();
+  });
+  $("#reset-turns").addEventListener("click", () => {
+    turns = 0;
+    $("#turn-pairs").replaceChildren();
+    updateTurns();
+  });
 } else {
   const updateCount = () => {
     const count = $$('.count-word[aria-pressed="true"]').length;

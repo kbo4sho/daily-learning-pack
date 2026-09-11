@@ -1,6 +1,12 @@
 import { readFile } from "node:fs/promises";
 
-export const DEFAULT_TOPIC = "fractions as fair sharing";
+export const DEFAULT_TOPIC = "engines";
+export const DEFAULT_GRADE_LEVEL = 2;
+export const DEFAULT_AGE_RANGE = [7, 8];
+const curatedPacks = {
+  engines: "engines.json",
+  "fractions as fair sharing": "fair-sharing.json",
+};
 export function normalizeTopic(input) {
   if (typeof input !== "string") throw new Error("Topic must be a string.");
   const topic = input.normalize("NFKC").trim().replace(/\s+/g, " ");
@@ -18,12 +24,12 @@ export function normalizeTopic(input) {
 }
 export async function createPack(input = DEFAULT_TOPIC) {
   const topic = normalizeTopic(input);
-  if (topic.toLowerCase() === DEFAULT_TOPIC) {
+  const curated = Object.hasOwn(curatedPacks, topic.toLowerCase())
+    ? curatedPacks[topic.toLowerCase()]
+    : null;
+  if (curated) {
     return JSON.parse(
-      await readFile(
-        new URL("../packs/fair-sharing.json", import.meta.url),
-        "utf8",
-      ),
+      await readFile(new URL(`../packs/${curated}`, import.meta.url), "utf8"),
     );
   }
   // A transparent, deterministic inquiry fallback. It asserts no facts about the topic.
@@ -33,6 +39,8 @@ export async function createPack(input = DEFAULT_TOPIC) {
   return {
     schemaVersion: 1,
     kind: "topic-inquiry",
+    gradeLevel: DEFAULT_GRADE_LEVEL,
+    ageRange: [...DEFAULT_AGE_RANGE],
     topic,
     title: "A small question. A big discovery.",
     question: `What do you wonder about ${topic}?`,

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "kind": "engines",
+  "gradeLevel": 2,
+  "ageRange": [7, 8],
+  "topic": "engines",
+  "title": "A push becomes a turn",
+  "question": "How can an engine make things move?",
+  "idea": "A push or a pull can change how things move. An engine uses energy to make motion. Its parts work together.",
+  "math": {
+    "title": "Little turns add up",
+    "parentNote": "3 min: count model turns by 2. 9 min: solve and draw. 3 min: explain one strategy. Use tens and ones or a number line. These are pretend engine counts, not real speeds.",
+    "intro": "An engine has a shaft that turns. One turn goes all the way around. Use these pretend counts to solve each problem.",
+    "tasks": [
+      "A model engine turns 24 times, then 18 more times. How many turns in all? Show tens and ones or draw jumps.",
+      "The goal is 60 turns. The model has made 42 turns. How many more turns does it need? Show how you know.",
+      "Count the model's turns by 2. Fill the gaps: 2, 4, ___, ___, 10, ___, 14, ___, 18, ___."
+    ],
+    "extension": "Tell someone: How can 42 + your answer to problem 2 help you check 60 minus 42?",
+    "workspaces": ["24 + 18 = ______ turns", "60 - 42 = ______ turns"]
+  },
+  "reading": {
+    "title": "The push inside",
+    "parentNote": "3 min: preview the three words. 7 min: read together and reread. 5 min: discuss. Help with piston and crankshaft. Point to the story as evidence; spoken answers count.",
+    "paragraphs": [
+      "Jo pushes a toy car away. Leo pulls it back. A push or pull can change its motion.",
+      "“What moves a real car?” asks Leo. “Some cars use a gasoline engine,” says Jo. “Let's look at a picture.”",
+      "Fuel stores energy. Inside this engine, fuel burns with air. Hot gases spread out and push a part called a piston.",
+      "The piston slides inside a tube. A rod links it to a crankshaft. As the piston moves, the crankshaft turns. Other parts carry the turn to the wheels.",
+      "“The parts work as a team!” says Leo. The engine changes some of the fuel's energy into motion. Some energy warms the engine and the air."
+    ],
+    "words": [
+      {
+        "word": "energy",
+        "meaning": "what can make things move or change"
+      },
+      {
+        "word": "piston",
+        "meaning": "an engine part that slides in a tube"
+      },
+      {
+        "word": "crankshaft",
+        "meaning": "a turning shaft linked to the piston"
+      }
+    ],
+    "questions": [
+      "What pushes the piston? Underline the words that tell you.",
+      "How does the piston's motion help the wheels turn? Name two parts in your answer."
+    ]
+  },
+  "writing": {
+    "title": "Tell the motion story",
+    "parentNote": "3 min: explain aloud. 4 min: draw and label. 6 min: write 3 short sentences. 2 min: reread. Offer the word bank and frames; accept invented spelling or dictation.",
+    "intro": "Teach a friend how a gasoline engine makes motion. Write 3 short sentences. Use the story to help you.",
+    "draw": "Draw a piston, a rod, and a crankshaft. Label them. Add arrows to show motion.",
+    "starter": "First, fuel ... Next, hot gases ... Then, the parts ...",
+    "words": ["energy", "burns", "push", "piston", "rod", "crankshaft", "turn"],
+    "check": "Read it aloud. Did I link fuel, a push, and a turn? Check capitals and end marks."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "42 turns. For example: 24 + 10 = 34; 34 + 8 = 42. Or combine 3 tens and 12 ones, then trade 10 ones for a ten: 4 tens and 2 ones."
+    },
+    {
+      "label": "Math · 2",
+      "text": "18 more turns. Count up: 42 + 8 = 50, then 50 + 10 = 60. Check: 42 + 18 = 60, so 60 - 42 = 18. Accept any sound strategy."
+    },
+    {
+      "label": "Math · 3",
+      "text": "Missing numbers: 6, 8, 12, 16, 20. Each next count adds 2 turns. The digital model shows pairs up to 20; its counts are not a fuel-use or speed measurement."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "Hot gases push the piston. Evidence: “Hot gases spread out and push a part called a piston.” Burning fuel with air releases energy; fuel does not push the wheels directly."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "The piston moves a rod linked to the crankshaft. The shaft turns, and other parts carry the turn to the wheels. Accept a spoken explanation naming at least two linked parts."
+    },
+    {
+      "label": "Writing",
+      "text": "Example: “First, fuel burns with air. Next, hot gases push the piston. Then, the rod and crankshaft help turn the wheels.” Look for the cause-and-effect chain, three short sentences, labels, and motion arrows."
+    }
+  ],
+  "parentGuidance": "This day models a gasoline piston engine, not every engine. A turning crankshaft also pushes and pulls the piston through the rod. The diagram leaves out valves, gears, and timing. Electric cars use motors powered by electricity. Explore with pictures, a toy car, or gestures; keep real engines and fuel out of this activity. Take breaks between sessions."
+}
