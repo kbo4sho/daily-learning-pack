@@ -49,6 +49,39 @@ try {
             await page.locator("#fraction-shape, #reset-words").count(),
             0,
           );
+          // Follow the cause-and-effect chain by keyboard and touch. Reduced
+          // motion still updates the connected parts, without intermediate frames.
+          await page.locator('[data-motion-step="1"]').press("Enter");
+          assert.match(
+            await page.locator("#motion-caption").textContent(),
+            /push the piston/,
+          );
+          await page.locator('[data-motion-step="2"]').click();
+          assert.match(
+            await page.locator("#motion-caption").textContent(),
+            /partway/,
+          );
+          assert.equal(
+            await page.locator(".engine-piston").getAttribute("x"),
+            "227",
+          );
+          assert.equal(
+            await page
+              .locator('[data-motion-step][aria-pressed="true"]')
+              .count(),
+            1,
+          );
+          await page.locator('[data-motion-step="0"]').click();
+          assert.equal(
+            await page.locator(".engine-piston").getAttribute("x"),
+            "147",
+          );
+          await page.locator(".math-hint summary").first().click();
+          assert.match(
+            await page.locator(".math-hint").first().textContent(),
+            /10 and 8/,
+          );
+          await page.locator(".math-hint summary").first().click();
           // Native buttons must support keyboard activation, including reset.
           await page.locator("#add-turns").focus();
           await page.keyboard.press("Enter");
@@ -176,6 +209,20 @@ try {
             });
           }
         }
+        if (pack.kind === "engines") {
+          await page.locator('[data-subject="reading"]').click();
+          await page.locator('[data-engine-answer="0"]').click();
+          assert.match(
+            await page.locator("#engine-reading-feedback").textContent(),
+            /Try again/,
+          );
+          await page.locator('[data-engine-answer="1"]').press("Enter");
+          assert.match(
+            await page.locator("#engine-reading-feedback").textContent(),
+            /You followed the parts/,
+          );
+          await page.locator('[data-subject="writing"]').click();
+        }
         await page
           .locator("#draft")
           .fill("Parts work together to make motion.");
@@ -214,6 +261,32 @@ try {
           `PASS ${pack.kind} ${engine.name()} ${viewport.width}×${viewport.height}`,
         );
       }
+      if (pack.kind === "engines") {
+        const motionPage = await browser.newPage({
+          reducedMotion: "no-preference",
+        });
+        await motionPage.goto(origin);
+        await motionPage.locator('[data-motion-step="2"]').click();
+        await motionPage.waitForFunction(
+          () =>
+            document.querySelector(".engine-piston").getAttribute("x") ===
+            "227",
+        );
+        await motionPage.locator('[data-motion-step="0"]').click();
+        assert.equal(
+          await motionPage.locator(".engine-piston").getAttribute("x"),
+          "147",
+        );
+        // A new stage cancels a running stroke rather than leaving detached parts.
+        await motionPage.locator('[data-motion-step="2"]').click();
+        await motionPage.locator('[data-motion-step="1"]').click();
+        await motionPage.waitForTimeout(1300);
+        assert.equal(
+          await motionPage.locator(".engine-piston").getAttribute("x"),
+          "147",
+        );
+        await motionPage.close();
+      }
       const noJS = await browser.newContext({ javaScriptEnabled: false });
       const page = await noJS.newPage();
       await page.goto(origin);
@@ -227,6 +300,11 @@ try {
         ).status(),
         200,
       );
+      if (pack.kind === "engines") {
+        assert.equal(await page.locator(".motion-fallback").count(), 3);
+        for (const caption of await page.locator(".motion-fallback").all())
+          assert.equal(await caption.isVisible(), true);
+      }
       await noJS.close();
     } finally {
       await browser.close();

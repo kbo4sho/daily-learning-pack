@@ -119,6 +119,59 @@ if (document.body.dataset.kind === "fair-sharing") {
   );
   draw();
 } else if (document.body.dataset.kind === "engines") {
+  const content = JSON.parse($("#engine-content").textContent);
+  const mechanism = $(".mechanism");
+  let motionFrame;
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  // A slider-crank linkage, shown only over its outward (power) stroke.
+  // The pin stays on the crank circle; the connecting rod keeps its length.
+  function drawStroke(progress) {
+    const angle = Math.PI + progress * Math.PI;
+    const pinX = 365 + 40 * Math.cos(angle);
+    const pinY = 125 + 40 * Math.sin(angle);
+    const pistonX = pinX - Math.sqrt(160 ** 2 - (pinY - 125) ** 2);
+    $(".engine-piston").setAttribute("x", pistonX - 18);
+    $(".engine-rod").setAttribute("d", `M${pistonX} 125L${pinX} ${pinY}`);
+    $(".crank-arm").setAttribute("d", `M${pinX} ${pinY}L365 125`);
+    $(".crank-pin").setAttribute("cx", pinX);
+    $(".crank-pin").setAttribute("cy", pinY);
+    $(".piston-leader").setAttribute("d", `M${pistonX} 181L145 200`);
+    $(".rod-leader").setAttribute(
+      "d",
+      `M${(pistonX + pinX) / 2} ${(125 + pinY) / 2 + 9}L270 200`,
+    );
+  }
+  $$("[data-motion-step]").forEach((button) => {
+    button.addEventListener("click", () => {
+      cancelAnimationFrame(motionFrame);
+      const stage = Number(button.dataset.motionStep);
+      mechanism.dataset.stage = stage;
+      $$("[data-motion-step]").forEach((b) =>
+        b.setAttribute("aria-pressed", String(b === button)),
+      );
+      $("#motion-caption").textContent = content.motion[stage].text;
+      drawStroke(stage === 2 ? 1 : 0);
+      if (stage === 2 && !reducedMotion.matches) {
+        let start;
+        const tick = (time) => {
+          start ??= time;
+          const progress = Math.min((time - start) / 1200, 1);
+          drawStroke((1 - Math.cos(progress * Math.PI)) / 2);
+          if (progress < 1 && !reducedMotion.matches && !$("#math").hidden)
+            motionFrame = requestAnimationFrame(tick);
+          else drawStroke(1);
+        };
+        motionFrame = requestAnimationFrame(tick);
+      }
+    });
+  });
+  $$("[data-engine-answer]").forEach((button) => {
+    button.addEventListener("click", () => {
+      $("#engine-reading-feedback").textContent =
+        content.feedback[Number(button.dataset.engineAnswer)];
+    });
+  });
+  document.body.classList.add("engine-interactive");
   let turns = 0;
   const updateTurns = () => {
     $("#turn-feedback").textContent =
@@ -132,7 +185,7 @@ if (document.body.dataset.kind === "fair-sharing") {
     turns += 2;
     const pair = document.createElement("span");
     pair.className = "turn-pair";
-    pair.textContent = "↻ ↻";
+    pair.innerHTML = `<span>↻ ↻</span><b>${turns}</b>`;
     $("#turn-pairs").append(pair);
     updateTurns();
   });

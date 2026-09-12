@@ -17,10 +17,18 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npx playwright install --with-deps chromium webkit
+      - run: npm run build
       - run: npm run test:inquiry
       - run: npm test
       - run: npm run test:browser
+      - name: Render grayscale print review pages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/print-kid
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/print-key
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: daily-learning-pack-preview
           path: |
