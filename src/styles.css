@@ -835,76 +835,345 @@ p + p {
     gap: 16px;
   }
 }
-/* Engines: a labeled mechanism and paired turns, readable without color. */
+/* Engines: one small workshop, followed by room to think. */
 body[data-kind="engines"] .lesson-grid {
-  align-items: start;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+}
+body[data-kind="engines"] .lesson-copy h2 {
+  max-width: 350px;
 }
 .engine-lab {
   min-width: 0;
-  padding: 24px;
+  padding: 26px;
   background: #e5eddf;
-  border-radius: 18px;
+  border: 1px solid #c8d2c9;
+  border-radius: 20px;
+}
+.engine-lab .lab-top {
+  margin-bottom: 8px;
 }
 .engine-lab h3 {
-  margin: 10px 0 18px;
+  font-size: 34px;
+  margin-bottom: 22px;
 }
-.energy-path {
+.motion-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-.energy-path li {
-  border-left: 3px solid var(--ink);
-  padding: 0 0 14px 15px;
-}
-.energy-path li:last-child {
-  padding-bottom: 0;
-}
-.energy-path b,
-.energy-path span {
-  display: block;
-}
-.energy-path span {
+.motion-steps button {
+  width: 100%;
+  min-height: 74px;
+  border: 1px solid #889e91;
+  border-radius: 10px;
+  background: #fafbf5;
   font-size: 15px;
+  line-height: 1.3;
+  padding: 10px 6px;
+}
+.motion-steps button span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.motion-steps button[aria-pressed="true"] {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+.motion-fallback {
+  font-size: 15px;
+  padding: 10px 0;
+}
+.engine-interactive .motion-fallback {
+  display: none;
+}
+.mechanism {
+  margin: 18px 0 12px;
+  background: #fafbf5;
+  border-radius: 12px;
+  padding: 8px;
 }
 .engine-diagram {
   display: block;
   width: 100%;
   height: auto;
-  margin: 18px 0 8px;
+}
+.gas-marks {
+  color: #a24d28;
+}
+.mechanism[data-stage="0"] .gas-marks,
+.mechanism[data-stage="1"] .engine-piston,
+.mechanism[data-stage="2"] .engine-rod,
+.mechanism[data-stage="2"] .crank-arm {
+  stroke: #a24d28;
+}
+.motion-caption {
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: 5.3em;
+}
+.engine-lab .lab-hint {
+  text-align: left;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.engine-math-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  margin: 38px 0 12px;
 }
 .turn-counter {
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-  margin-top: 16px;
+  background: var(--blue);
+  border-radius: 16px;
+  padding: 26px;
+}
+.turn-counter h3 {
+  margin: 12px 0;
 }
 .turn-counter > p {
   font-size: 16px;
 }
 .turn-pairs {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
-  min-height: 42px;
-  margin: 12px 0;
+  min-height: 126px;
+  margin: 20px 0 14px;
 }
 .turn-pair {
   border: 1px solid var(--ink);
-  border-radius: 6px;
+  border-radius: 7px;
   background: white;
-  padding: 2px 6px;
+  text-align: center;
+  padding: 4px 0;
   animation: arrive 0.3s ease-out;
+  align-self: start;
 }
-.turn-counter .primary-button {
-  width: 100%;
-  margin-top: 14px;
+.turn-pair span {
+  display: block;
+  font-size: 15px;
+}
+.turn-pair b {
+  display: block;
+  font-size: 17px;
+}
+#turn-feedback {
+  min-height: 6em;
+}
+.counter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+.counter-actions .text-button {
+  margin: 0;
+  padding: 10px;
 }
 .turn-counter .primary-button:disabled {
   background: #526461;
 }
-@media (prefers-reduced-motion: reduce) {
-  .turn-pair {
-    animation: none;
+.turn-counter .lab-hint {
+  font-size: 13px;
+  text-align: left;
+}
+.mission-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.mission-heading h3 {
+  margin-top: 8px;
+}
+.math-missions > p {
+  font-size: 16px;
+}
+.math-mission {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.math-mission h4 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+.math-mission h4 > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.math-mission > p {
+  font-size: 17px;
+}
+.math-hint summary {
+  min-height: 48px;
+  cursor: pointer;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.math-hint p {
+  font-size: 16px;
+  padding: 0 0 14px;
+}
+.count-prompt {
+  margin: 18px 0 12px;
+}
+.count-track {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.count-track > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.count-track > span + span {
+  border-left: 1px solid currentColor;
+}
+.count-blank {
+  width: 55%;
+  height: 20px;
+  border-bottom: 1px solid currentColor;
+}
+.math-share {
+  padding-top: 18px;
+}
+body[data-kind="engines"] .reading-layout {
+  grid-template-columns: minmax(0, 1fr) 245px;
+  gap: 36px;
+}
+body[data-kind="engines"] .story {
+  font-size: 22px;
+  line-height: 1.7;
+}
+body[data-kind="engines"] .story p:nth-child(3),
+body[data-kind="engines"] .story p:nth-child(4) {
+  border-left: 3px solid #b77a27;
+  padding-left: 18px;
+}
+body[data-kind="engines"] .word-garden {
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin-top: 0;
+}
+body[data-kind="engines"] .reading-questions {
+  background: #e5eddf;
+}
+.engine-reading-check {
+  margin-top: 24px;
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.engine-reading-check h3 {
+  margin: 10px 0 20px;
+  font-size: 25px;
+  max-width: 640px;
+}
+.engine-reading-check .quiz-options {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.engine-reading-check .quiz-options button {
+  font-size: 17px;
+  padding: 14px 18px;
+}
+#engine-reading-feedback {
+  font-size: 16px;
+  margin-top: 16px;
+}
+.sentence-frames {
+  margin-bottom: 24px;
+}
+.sentence-frames p {
+  margin: 12px 0 0;
+  border-bottom: 1px solid #b8a67a;
+  padding: 0 0 10px;
+}
+.sentence-frames b {
+  font-size: 20px;
+}
+.sentence-frames p span {
+  display: block;
+  font-size: 15px;
+  margin-top: 2px;
+}
+body[data-kind="engines"] .writing-desk label {
+  font-size: 23px;
+}
+@media (max-width: 900px) {
+  body[data-kind="engines"] .lesson-grid,
+  .engine-math-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 26px;
+  }
+  .engine-lab,
+  .turn-counter {
+    padding: 22px;
+  }
+  .motion-steps button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  body[data-kind="engines"] .lesson-grid,
+  body[data-kind="engines"] .reading-layout,
+  .engine-math-grid {
+    grid-template-columns: 1fr;
+  }
+  .engine-lab,
+  .turn-counter {
+    padding: 20px;
+  }
+  .engine-math-grid {
+    margin-top: 24px;
+    gap: 28px;
+  }
+  .engine-lab h3 {
+    font-size: 30px;
+  }
+  .engine-reading-check {
+    padding: 24px;
+  }
+  .engine-reading-check .quiz-options {
+    grid-template-columns: 1fr;
+  }
+  body[data-kind="engines"] .word-garden {
+    padding: 24px;
+  }
+  .count-track > span {
+    font-size: 16px;
+  }
+  .turn-pairs {
+    min-height: 138px;
+  }
+  #turn-feedback {
+    min-height: 4.5em;
   }
 }
 /* Print layout uses physical units: each subject is exactly one US Letter page. */
@@ -1116,22 +1385,72 @@ body[data-kind="engines"] .lesson-grid {
   }
 }
 
+/* A generous work area replaces the old decorative math diagram. */
 .engine-workspace {
   border: 1pt solid #555;
-  height: 91pt;
-  margin: 10pt 0 14pt 29pt;
-  padding: 8pt 12pt;
+  height: 111pt;
+  margin: 9pt 0 14pt 29pt;
+  padding: 10pt 12pt;
 }
-.engine-workspace span {
+.engine-workspace b {
+  font-size: 15pt;
+}
+.workspace-hint {
+  display: block;
+  font-size: 9pt;
+  margin-top: 7pt;
+  color: #555;
+}
+.paper-motion-link {
+  border-left: 2pt solid #111;
+  padding-left: 10pt;
+  font-size: 10pt;
+  margin-bottom: 14pt;
+}
+.engine-sheet .count-track {
+  margin: 10pt 0 0 29pt;
+  border-radius: 0;
+}
+.engine-sheet .count-track > span {
+  min-height: 31pt;
+  font-size: 14pt;
+}
+.engine-sheet .count-blank {
+  height: 16pt;
+}
+.engine-writing .drawing-space {
+  height: 110pt;
+}
+.engine-writing .paper-intro {
   font-size: 12pt;
 }
-
-.sheet .engine-diagram {
-  width: 240pt;
-  height: 88pt;
-  margin: 8pt auto 12pt;
-  color: #111;
+.paper-frames {
+  margin-top: 12pt;
 }
-.sheet .engine-diagram rect {
-  fill: white;
+.paper-frame {
+  margin-top: 11pt;
+}
+.paper-frame p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12pt;
+  font-size: 13pt;
+}
+.paper-frame p span {
+  font-size: 9pt;
+}
+.paper-frame .writing-lines {
+  margin-top: 0;
+}
+.engine-reading .paper-story {
+  font-size: 14pt;
+}
+@media print {
+  body[data-kind="engines"] .mechanism {
+    background: white;
+  }
+  .gas-marks {
+    color: black;
+  }
 }
