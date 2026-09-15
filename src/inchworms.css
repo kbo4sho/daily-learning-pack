@@ -329,20 +329,18 @@ body[data-kind="inchworms"] .engine-math-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
+  min-height: 84px;
   margin: 20px 0;
 }
 .loop-pairs span {
-  border: 1px solid var(--line);
-  background: var(--stock);
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--stock);
   text-align: center;
   padding: 7px 0;
   font-size: 16px;
   font-variant-numeric: tabular-nums;
-}
-.loop-pairs .counted {
-  background: var(--ink);
-  color: var(--stock);
-  border-color: var(--ink);
+  align-self: start;
 }
 #loop-feedback {
   min-height: 6.6em;

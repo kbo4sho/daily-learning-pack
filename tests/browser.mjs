@@ -177,6 +177,12 @@ try {
             /6 and 12/,
           );
           await page.locator(".math-hint summary").first().click();
+          assert.equal(
+            await page.locator("#loop-pairs").textContent(),
+            "",
+            "future totals stay blank until tapped",
+          );
+          assert.equal(await page.locator("#loop-pairs span").count(), 0);
           await page.locator("#add-loops").press("Enter");
           for (let inches = 2; inches <= 20; inches += 2) {
             if (inches > 2) await page.locator("#add-loops").tap();
@@ -185,13 +191,28 @@ try {
               new RegExp(`^${inches} inches in our model`),
             );
             assert.equal(
-              await page.locator(".loop-pairs .counted").count(),
+              await page.locator("#loop-pairs span").count(),
               inches / 2,
             );
+            assert.equal(
+              await page
+                .locator("#loop-pairs span")
+                .nth(inches / 2 - 1)
+                .textContent(),
+              String(inches),
+            );
+            if (inches < 20)
+              assert.equal(
+                (await page.locator("#loop-pairs").textContent()).includes(
+                  String(inches + 2),
+                ),
+                false,
+                "next total stays hidden",
+              );
           }
           assert.equal(await page.locator("#add-loops").isDisabled(), true);
           await page.locator("#reset-loops").press("Space");
-          assert.equal(await page.locator(".loop-pairs .counted").count(), 0);
+          assert.equal(await page.locator("#loop-pairs span").count(), 0);
           assert.equal(await page.locator("#add-loops").isEnabled(), true);
           await page.locator("#add-loops").click();
           await page.locator('[data-subject="reading"]').click();
