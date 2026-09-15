@@ -75,20 +75,26 @@ if (
   function settle() {
     cancelAnimationFrame(frame);
     // Stretch assigns stage/pose 2 here; motion Stretch begins at 1 below.
+    // Stretch caption/title also land here with stage/pose; Grip/Loop set them on tap.
     $(".inchworm-scene").dataset.stage = target;
     $(".inchworm-scene svg").dataset.pose = target;
+    $("#motion-caption").textContent = content.motion[target].text;
+    $("#inchworm-motion-title").textContent = wormPoseTitles[target];
     drawWorm(target);
   }
   $$("[data-motion-step]").forEach((button) => {
     button.addEventListener("click", () => {
       cancelAnimationFrame(frame);
       target = Number(button.dataset.motionStep);
-      // Grip/Loop update cues immediately. Motion Stretch starts at loop (1)
-      // so CSS matches drawWorm(target-1); stage/pose 2 only in settle().
-      // Reduced-motion Stretch skips this and goes straight to settle().
+      // Grip/Loop update stage/pose + caption/title immediately. Motion Stretch
+      // starts at loop (1) so CSS matches drawWorm(target-1); stage/pose 2 and
+      // Stretch caption/title land only in settle(). Reduced-motion Stretch
+      // skips the start pose and goes straight to settle() (gets Stretch copy there).
       if (target !== 2) {
         $(".inchworm-scene").dataset.stage = target;
         $(".inchworm-scene svg").dataset.pose = target;
+        $("#motion-caption").textContent = content.motion[target].text;
+        $("#inchworm-motion-title").textContent = wormPoseTitles[target];
       } else if (!reducedMotion.matches) {
         $(".inchworm-scene").dataset.stage = 1;
         $(".inchworm-scene svg").dataset.pose = 1;
@@ -96,8 +102,6 @@ if (
       $$("[data-motion-step]").forEach((b) =>
         b.setAttribute("aria-pressed", String(b === button)),
       );
-      $("#motion-caption").textContent = content.motion[target].text;
-      $("#inchworm-motion-title").textContent = wormPoseTitles[target];
       // Every tap is independently understandable: Loop demonstrates 0 → 1;
       // Stretch demonstrates 1 → 2. Grip resets without reversing the animal.
       if (target > 0 && !reducedMotion.matches) {
