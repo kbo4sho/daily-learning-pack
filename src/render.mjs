@@ -51,7 +51,7 @@ function countTrack(math) {
   return `<div class="count-track" aria-label="Count by two: 2, 4, blank, blank, 10, blank, 14, blank, 18, blank">${math.countSequence.map((n) => `<span>${n === null ? '<span class="count-blank" aria-hidden="true"></span>' : esc(n)}</span>`).join("")}</div>`;
 }
 function motionSteps(p) {
-  return `<ol class="motion-steps">${p.motion.steps.map((s, i) => `<li><button data-motion-step="${i}" aria-pressed="${i === 0}" aria-controls="motion-caption"><span>${String(i + 1).padStart(2, "0")}</span>${esc(s.label)}</button><p class="motion-fallback">${esc(s.text)}</p></li>`).join("")}</ol>`;
+  return `<ol class="motion-steps">${p.motion.steps.map((s, i) => `<li><button data-motion-step="${i}" aria-pressed="${i === 0}" aria-controls="motion-caption"><span>${p.kind === "inchworms" ? String(i + 1).padStart(2, "0") : String(i + 1)}</span>${esc(s.label)}</button><p class="motion-fallback">${esc(s.text)}</p></li>`).join("")}</ol>`;
 }
 function inchwormDiagram(id, stage = 0, interactive = false) {
   const pose = wormPose(stage);
@@ -112,7 +112,7 @@ function engineMath(p) {
     )}<p class="count-prompt">${esc(p.math.tasks[2])}</p>${countTrack(p.math)}<p class="math-share"><b>Share your thinking.</b> ${esc(p.math.extension)}</p></div></div>`;
 }
 function readingCheck(p) {
-  return `<div class="engine-reading-check"><span class="eyebrow">HELP LEO UNDERSTAND</span><h3>${esc(p.reading.check.prompt)}</h3><div class="quiz-options">${p.reading.check.choices.map((c, i) => `<button data-reading-answer="${i}">${esc(c)}</button>`).join("")}</div><p id="reading-feedback" aria-live="polite">Look back at the story. You can try again.</p></div>`;
+  return `<div class="engine-reading-check"><span class="eyebrow">HELP LEO UNDERSTAND</span><h3>${esc(p.reading.check.prompt)}</h3><div class="quiz-options">${p.reading.check.choices.map((c, i) => `<button data-reading-answer="${i}">${esc(c)}</button>`).join("")}</div><p id="reading-feedback" aria-live="polite">${p.kind === "inchworms" ? "Look back at the story. You can try again." : "Follow the parts in the story. You can try again."}</p></div>`;
 }
 function lab(p) {
   if (p.kind === "inchworms") return inchwormLab(p);
