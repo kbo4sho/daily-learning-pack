@@ -1,5 +1,11 @@
 // Shared by the digital motion and the printed illustrations. Positions are
 // drawing units, never inches. Front and rear alternate as fixed anchors.
+export const wormPoseTitles = [
+  "Front legs grip the leaf. The body is stretched behind them.",
+  "The front holds on while the rear pulls up, bending the middle into a loop.",
+  "The rear holds on while the front stretches forward.",
+];
+
 export function wormPose(stage) {
   const rear = 112 + 100 * Math.min(stage, 1);
   const front = 292 + 100 * Math.max(stage - 1, 0);
@@ -69,11 +75,7 @@ if (
         b.setAttribute("aria-pressed", String(b === button)),
       );
       $("#motion-caption").textContent = content.motion[target].text;
-      $("#inchworm-motion-title").textContent = [
-        "Front legs grip the leaf. The body is stretched behind them.",
-        "The front holds on while the rear pulls up, bending the middle into a loop.",
-        "The rear holds on while the front stretches forward.",
-      ][target];
+      $("#inchworm-motion-title").textContent = wormPoseTitles[target];
       // Every tap is independently understandable: Loop demonstrates 0 → 1;
       // Stretch demonstrates 1 → 2. Grip resets without reversing the animal.
       drawWorm(target === 0 || reducedMotion.matches ? target : target - 1);
