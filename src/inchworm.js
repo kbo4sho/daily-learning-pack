@@ -74,7 +74,7 @@ if (
   }
   function settle() {
     cancelAnimationFrame(frame);
-    // Stretch defers stage/pose until here so CSS anchors/guides match the body.
+    // Stretch assigns stage/pose 2 here; motion Stretch begins at 1 below.
     $(".inchworm-scene").dataset.stage = target;
     $(".inchworm-scene svg").dataset.pose = target;
     drawWorm(target);
@@ -83,11 +83,15 @@ if (
     button.addEventListener("click", () => {
       cancelAnimationFrame(frame);
       target = Number(button.dataset.motionStep);
-      // Grip/Loop update cues immediately. Stretch (2) waits for settle() so
-      // rear-hold anchors/guides do not flip while the worm still animates 1→2.
+      // Grip/Loop update cues immediately. Motion Stretch starts at loop (1)
+      // so CSS matches drawWorm(target-1); stage/pose 2 only in settle().
+      // Reduced-motion Stretch skips this and goes straight to settle().
       if (target !== 2) {
         $(".inchworm-scene").dataset.stage = target;
         $(".inchworm-scene svg").dataset.pose = target;
+      } else if (!reducedMotion.matches) {
+        $(".inchworm-scene").dataset.stage = 1;
+        $(".inchworm-scene svg").dataset.pose = 1;
       }
       $$("[data-motion-step]").forEach((b) =>
         b.setAttribute("aria-pressed", String(b === button)),
