@@ -23,6 +23,9 @@ test("engines is the complete Grade 2 default, including normalized input", asyn
   assert.ok(html.includes('id="add-turns"'));
   assert.ok(!html.includes('id="fraction-shape"'));
   assert.ok(!html.includes('id="reset-words"'));
+  assert.ok(!html.includes("inchworms.css"));
+  assert.ok(!html.includes("inchworm.js"));
+  assert.ok(!html.includes('type="module"'));
   const built = JSON.parse(await readFile("dist/pack.json", "utf8"));
   assert.deepEqual(
     built,
@@ -130,6 +133,14 @@ test("inchworm aliases select the complete curated Grade 2 day", async () => {
   assert.ok(!html.includes('id="reset-words"'));
   assert.ok(!html.includes('id="add-turns"'));
   assert.ok(!html.includes('id="fraction-shape"'));
+  assert.ok(html.includes("inchworms.css"));
+  assert.ok(html.includes('type="module" src="./inchworm.js"'));
+  assert.match(
+    html,
+    /id="loop-pairs" class="loop-pairs" aria-hidden="true"><\/div>/,
+  );
+  assert.ok(!html.includes("data-loop-pair"));
+  assert.ok(!html.includes(">20</span>"));
   const print = printDocument(pack, ["math", "reading", "writing"]);
   assert.equal((print.match(/class="engine-workspace"/g) || []).length, 2);
   assert.equal((print.match(/class="paper-frame"/g) || []).length, 3);
