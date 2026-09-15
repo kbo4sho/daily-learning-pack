@@ -5,6 +5,12 @@ export const DEFAULT_GRADE_LEVEL = 2;
 export const DEFAULT_AGE_RANGE = [7, 8];
 const curatedPacks = {
   engines: "engines.json",
+  "inch worms": "inchworms.json",
+  inchworms: "inchworms.json",
+  inchworm: "inchworms.json",
+  "inch worm": "inchworms.json",
+  "inch-worms": "inchworms.json",
+  "inch-worm": "inchworms.json",
   "fractions as fair sharing": "fair-sharing.json",
 };
 export function normalizeTopic(input) {

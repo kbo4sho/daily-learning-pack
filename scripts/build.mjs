@@ -17,18 +17,32 @@ await rm(staging, { recursive: true, force: true });
 await mkdir(`${staging}/pdf`, { recursive: true });
 await mkdir(`${staging}/print`, { recursive: true });
 await mkdir(`${staging}/fonts`, { recursive: true });
-for (const file of ["styles.css", "app.js"])
-  await copyFile(`src/${file}`, `${staging}/${file}`);
-for (const [family, file] of [
+const assets = ["styles.css", "app.js"];
+if (pack.kind === "inchworms") assets.push("inchworms.css", "inchworm.js");
+for (const file of assets) await copyFile(`src/${file}`, `${staging}/${file}`);
+const fonts = [
   ["fraunces", "fraunces-latin-600-normal.woff2"],
   ["nunito-sans", "nunito-sans-latin-400-normal.woff2"],
   ["nunito-sans", "nunito-sans-latin-700-normal.woff2"],
-])
+];
+if (pack.kind === "inchworms")
+  fonts.push(
+    ["newsreader", "newsreader-latin-400-normal.woff2"],
+    ["newsreader", "newsreader-latin-500-normal.woff2"],
+    ["inter", "inter-latin-400-normal.woff2"],
+    ["inter", "inter-latin-600-normal.woff2"],
+    ["inter", "inter-latin-700-normal.woff2"],
+  );
+for (const [family, file] of fonts)
   await copyFile(
     `node_modules/@fontsource/${family}/files/${file}`,
     `${staging}/fonts/${file}`,
   );
-for (const family of ["fraunces", "nunito-sans"])
+const fontFamilies =
+  pack.kind === "inchworms"
+    ? ["fraunces", "nunito-sans", "newsreader", "inter"]
+    : ["fraunces", "nunito-sans"];
+for (const family of fontFamilies)
   await copyFile(
     `node_modules/@fontsource/${family}/LICENSE`,
     `${staging}/fonts/${family}-LICENSE.txt`,
