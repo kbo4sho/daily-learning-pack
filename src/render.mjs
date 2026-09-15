@@ -1,4 +1,4 @@
-import { wormPose } from "./inchworm.js";
+import { wormPose, wormPoseTitles } from "./inchworm.js";
 
 export const esc = (value) =>
   String(value).replace(
@@ -55,7 +55,7 @@ function motionSteps(p) {
 }
 function inchwormDiagram(id, stage = 0, interactive = false) {
   const pose = wormPose(stage);
-  return `<svg class="inchworm-diagram" data-pose="${stage}" viewBox="0 0 480 240" role="img" aria-labelledby="${id}"><title id="${id}">${["Front legs grip the leaf. The body is stretched behind them.", "The front holds on while the rear pulls up, bending the middle into a loop.", "The rear holds on while the front stretches forward."][stage]}</title>
+  return `<svg class="inchworm-diagram" data-pose="${stage}" viewBox="0 0 480 240" role="img" aria-labelledby="${id}"><title id="${id}">${wormPoseTitles[stage]}</title>
   <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
     <path class="leaf" d="M24 167 Q190 157 452 166 Q335 259 24 167Z"/><path class="leaf-veins" d="M24 167 Q195 188 452 166 M102 174l43 23 M177 181l45 24 M262 180l43 18 M344 175l30 8"/>
     <path class="worm-body" d="${pose.body}"/><path class="worm-fill" d="${pose.body}"/><path class="worm-segments" d="${pose.segments}"/>

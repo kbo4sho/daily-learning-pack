@@ -418,10 +418,6 @@ body[data-kind="inchworms"] .engine-reading-check {
   background: var(--stock);
   border-radius: 5px;
 }
-#reading-feedback {
-  font-size: 16px;
-  margin-top: 16px;
-}
 body[data-kind="inchworms"] .writing-layout {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 48px;
