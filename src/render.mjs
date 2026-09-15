@@ -59,12 +59,12 @@ function inchwormDiagram(id, stage = 0, interactive = false) {
   <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
     <path class="leaf" d="M24 167 Q190 157 452 166 Q335 259 24 167Z"/><path class="leaf-veins" d="M24 167 Q195 188 452 166 M102 174l43 23 M177 181l45 24 M262 180l43 18 M344 175l30 8"/>
     <path class="worm-body" d="${pose.body}"/><path class="worm-fill" d="${pose.body}"/><path class="worm-segments" d="${pose.segments}"/>
-    <path class="rear-legs" d="M${pose.rear} 151v12h-7 m16-13v13h-6"/>
-    <path class="front-legs" d="M${pose.front - 23} 149l3 14h5 m3-13 3 13h5 m3-12 3 12h5"/>
-    <circle class="worm-head" cx="${pose.front + 3}" cy="145" r="9"/><circle class="worm-eye" cx="${pose.front + 7}" cy="143" r="1.3"/>
-    <path class="rear-leader" d="M${pose.rear - 5} 134l-18-18h-25"/><path class="front-leader" d="M${pose.front + 8} 129l16-21h24"/>
-    <circle class="rear-anchor" cx="${pose.rear + 2}" cy="169" r="4" fill="${stage === 2 ? "currentColor" : "none"}"/><circle class="front-anchor" cx="${pose.front - 8}" cy="169" r="4" fill="${stage !== 2 ? "currentColor" : "none"}"/>
-  </g><g fill="currentColor" font-size="18"><text class="rear-label" x="${pose.rear - 54}" y="108">rear</text><text class="front-label" x="${pose.front + 22}" y="99">front</text></g>
+    <path class="rear-legs" d="${pose.rearLegs}"/>
+    <path class="front-legs" d="${pose.frontLegs}"/>
+    <circle class="worm-head" cx="${pose.headCx}" cy="145" r="9"/><circle class="worm-eye" cx="${pose.eyeCx}" cy="143" r="1.3"/>
+    <path class="rear-leader" d="${pose.rearLeader}"/><path class="front-leader" d="${pose.frontLeader}"/>
+    <circle class="rear-anchor" cx="${pose.rearAnchorCx}" cy="169" r="4" fill="${stage === 2 ? "currentColor" : "none"}"/><circle class="front-anchor" cx="${pose.frontAnchorCx}" cy="169" r="4" fill="${stage !== 2 ? "currentColor" : "none"}"/>
+  </g><g fill="currentColor" font-size="18"><text class="rear-label" x="${pose.rearLabelX}" y="108">rear</text><text class="front-label" x="${pose.frontLabelX}" y="99">front</text></g>
   <g class="movement-guide" fill="none" stroke="currentColor" stroke-width="1.5"><path class="pull-guide" d="M112 216h90m-7-5 7 5-7 5"/><path class="stretch-guide" d="M292 216h100m-7-5 7 5-7 5"/></g>
   ${interactive ? '<text class="loop-label" x="252" y="42" text-anchor="middle">loop</text>' : ""}</svg>`;
 }
