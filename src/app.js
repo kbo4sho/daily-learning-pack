@@ -1,3 +1,5 @@
+import { wormPose } from "./inchworm.js";
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const completed = new Set();
@@ -40,6 +42,15 @@ $$("[data-finish]").forEach((button) =>
     }
   }),
 );
+if ($("#lesson-content")) {
+  const content = JSON.parse($("#lesson-content").textContent);
+  $$("[data-reading-answer]").forEach((button) => {
+    button.addEventListener("click", () => {
+      $("#reading-feedback").textContent =
+        content.feedback[Number(button.dataset.readingAnswer)];
+    });
+  });
+}
 if (document.body.dataset.kind === "fair-sharing") {
   let parts = 1;
   let selected = new Set([0]);
@@ -119,7 +130,7 @@ if (document.body.dataset.kind === "fair-sharing") {
   );
   draw();
 } else if (document.body.dataset.kind === "engines") {
-  const content = JSON.parse($("#engine-content").textContent);
+  const content = JSON.parse($("#lesson-content").textContent);
   const mechanism = $(".mechanism");
   let motionFrame;
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
@@ -165,12 +176,6 @@ if (document.body.dataset.kind === "fair-sharing") {
       }
     });
   });
-  $$("[data-engine-answer]").forEach((button) => {
-    button.addEventListener("click", () => {
-      $("#engine-reading-feedback").textContent =
-        content.feedback[Number(button.dataset.engineAnswer)];
-    });
-  });
   document.body.classList.add("engine-interactive");
   let turns = 0;
   const updateTurns = () => {
@@ -193,6 +198,91 @@ if (document.body.dataset.kind === "fair-sharing") {
     turns = 0;
     $("#turn-pairs").replaceChildren();
     updateTurns();
+  });
+} else if (document.body.dataset.kind === "inchworms") {
+  const content = JSON.parse($("#lesson-content").textContent);
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  let frame;
+  let target = 0;
+  function drawWorm(stage) {
+    const { rear, front, body, segments } = wormPose(stage);
+    const svg = $(".inchworm-scene svg");
+    const set = (selector, attribute, value) =>
+      svg.querySelector(selector).setAttribute(attribute, value);
+    set(".worm-body", "d", body);
+    set(".worm-fill", "d", body);
+    set(".worm-segments", "d", segments);
+    set(".rear-legs", "d", `M${rear} 151v12h-7 m16-13v13h-6`);
+    set(
+      ".front-legs",
+      "d",
+      `M${front - 23} 149l3 14h5 m3-13 3 13h5 m3-12 3 12h5`,
+    );
+    set(".worm-head", "cx", front + 3);
+    set(".worm-eye", "cx", front + 7);
+    set(".rear-leader", "d", `M${rear - 5} 134l-18-18h-25`);
+    set(".front-leader", "d", `M${front + 8} 129l16-21h24`);
+    set(".rear-label", "x", rear - 54);
+    set(".front-label", "x", front + 22);
+    set(".rear-anchor", "cx", rear + 2);
+    set(".front-anchor", "cx", front - 8);
+  }
+  function settle() {
+    cancelAnimationFrame(frame);
+    drawWorm(target);
+  }
+  $$("[data-motion-step]").forEach((button) => {
+    button.addEventListener("click", () => {
+      cancelAnimationFrame(frame);
+      target = Number(button.dataset.motionStep);
+      $(".inchworm-scene").dataset.stage = target;
+      $(".inchworm-scene svg").dataset.pose = target;
+      $$("[data-motion-step]").forEach((b) =>
+        b.setAttribute("aria-pressed", String(b === button)),
+      );
+      $("#motion-caption").textContent = content.motion[target].text;
+      $("#inchworm-motion-title").textContent = content.motion[target].text;
+      // Every tap is independently understandable: Loop demonstrates 0 → 1;
+      // Stretch demonstrates 1 → 2. Grip resets without reversing the animal.
+      drawWorm(target === 0 || reducedMotion.matches ? target : target - 1);
+      if (target > 0 && !reducedMotion.matches) {
+        let start;
+        const tick = (time) => {
+          start ??= time;
+          const progress = Math.min((time - start) / 1000, 1);
+          drawWorm(target - 1 + (1 - Math.cos(progress * Math.PI)) / 2);
+          if (progress < 1 && !reducedMotion.matches && !$("#math").hidden)
+            frame = requestAnimationFrame(tick);
+          else settle();
+        };
+        frame = requestAnimationFrame(tick);
+      }
+    });
+  });
+  reducedMotion.addEventListener("change", settle);
+  $$("[data-subject], [data-finish]").forEach((button) =>
+    button.addEventListener("click", settle),
+  );
+  document.body.classList.add("inchworm-interactive");
+  let loops = 0;
+  function updateLoops() {
+    $$("[data-loop-pair]").forEach((pair, i) =>
+      pair.classList.toggle("counted", i < loops / 2),
+    );
+    $("#loop-feedback").textContent =
+      loops === 0
+        ? "0 inches. Each pair adds 2 inches."
+        : `${loops} inches in our model. ${loops} pretend loops.${loops === 20 ? " You reached 20 by twos! Start at 0 to try again." : ` ${loops - 2} + 2 = ${loops}.`}`;
+    $("#add-loops").disabled = loops === 20;
+  }
+  $("#add-loops").addEventListener("click", () => {
+    if (loops >= 20) return;
+    loops += 2;
+    updateLoops();
+  });
+  $("#reset-loops").addEventListener("click", () => {
+    loops = 0;
+    updateLoops();
   });
 } else {
   const updateCount = () => {

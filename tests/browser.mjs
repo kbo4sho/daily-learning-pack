@@ -6,7 +6,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
 
 const pack = JSON.parse(await readFile("dist/pack.json", "utf8"));
-assert.ok(["engines", "fair-sharing"].includes(pack.kind));
+assert.ok(["engines", "fair-sharing", "inchworms"].includes(pack.kind));
 const server = await serve(resolve("dist"), 0);
 const origin = `http://127.0.0.1:${server.address().port}`;
 await mkdir("docs/stills", { recursive: true });
@@ -120,6 +120,88 @@ try {
             await page.locator("#turn-feedback").textContent(),
             /^2 turns/,
           );
+        } else if (pack.kind === "inchworms") {
+          assert.equal(
+            await page
+              .locator("#fraction-shape, #reset-words, #add-turns")
+              .count(),
+            0,
+          );
+          const scene = page.locator(".inchworm-scene");
+          const front = () => scene.locator(".worm-head").getAttribute("cx");
+          const rear = () => scene.locator(".rear-anchor").getAttribute("cx");
+          const initialFront = await front();
+          const initialRear = Number(await rear());
+          await page.locator('[data-motion-step="1"]').press("Enter");
+          assert.equal(
+            await front(),
+            initialFront,
+            "front stays anchored while looping",
+          );
+          assert.ok(
+            Number(await rear()) > initialRear,
+            "rear moves toward front",
+          );
+          assert.match(
+            await page.locator("#motion-caption").textContent(),
+            /middle rises into a loop/,
+          );
+          assert.equal(await scene.locator(".loop-label").isVisible(), true);
+          const loopRear = await rear();
+          await page.locator('[data-motion-step="2"]').tap();
+          assert.equal(
+            await rear(),
+            loopRear,
+            "rear stays anchored while stretching",
+          );
+          assert.ok(
+            Number(await front()) > Number(initialFront),
+            "front advances",
+          );
+          assert.match(
+            await page.locator("#motion-caption").textContent(),
+            /rear grips/,
+          );
+          assert.equal(
+            await page
+              .locator('[data-motion-step][aria-pressed="true"]')
+              .count(),
+            1,
+          );
+          await page.locator('[data-motion-step="0"]').click();
+          assert.equal(await front(), initialFront);
+          assert.equal(Number(await rear()), initialRear);
+          await page.locator(".math-hint summary").first().click();
+          assert.match(
+            await page.locator(".math-hint").first().textContent(),
+            /6 and 12/,
+          );
+          await page.locator(".math-hint summary").first().click();
+          await page.locator("#add-loops").press("Enter");
+          for (let inches = 2; inches <= 20; inches += 2) {
+            if (inches > 2) await page.locator("#add-loops").tap();
+            assert.match(
+              await page.locator("#loop-feedback").textContent(),
+              new RegExp(`^${inches} inches in our model`),
+            );
+            assert.equal(
+              await page.locator(".loop-pairs .counted").count(),
+              inches / 2,
+            );
+          }
+          assert.equal(await page.locator("#add-loops").isDisabled(), true);
+          await page.locator("#reset-loops").press("Space");
+          assert.equal(await page.locator(".loop-pairs .counted").count(), 0);
+          assert.equal(await page.locator("#add-loops").isEnabled(), true);
+          await page.locator("#add-loops").click();
+          await page.locator('[data-subject="reading"]').click();
+          await page.locator('[data-subject="math"]').click();
+          assert.match(
+            await page.locator("#loop-feedback").textContent(),
+            /^2 inches/,
+          );
+          // Capture the teaching pose, without a partially entered answer.
+          await page.locator('[data-motion-step="1"]').click();
         } else {
           const initial = await page.locator("#fraction-shape").boundingBox();
           await page
@@ -204,22 +286,24 @@ try {
               [],
             );
             await page.screenshot({
-              path: `docs/stills/${pack.kind === "engines" ? "" : "fair-sharing-"}ipad-${subject}.png`,
+              path: `docs/stills/${pack.kind === "engines" ? "" : `${pack.kind}-`}ipad-${subject}.png`,
               fullPage: true,
             });
           }
         }
-        if (pack.kind === "engines") {
+        if (pack.reading.check) {
           await page.locator('[data-subject="reading"]').click();
-          await page.locator('[data-engine-answer="0"]').click();
+          await page.locator('[data-reading-answer="0"]').click();
           assert.match(
-            await page.locator("#engine-reading-feedback").textContent(),
+            await page.locator("#reading-feedback").textContent(),
             /Try again/,
           );
-          await page.locator('[data-engine-answer="1"]').press("Enter");
+          await page.locator('[data-reading-answer="1"]').press("Enter");
           assert.match(
-            await page.locator("#engine-reading-feedback").textContent(),
-            /You followed the parts/,
+            await page.locator("#reading-feedback").textContent(),
+            pack.kind === "engines"
+              ? /You followed the parts/
+              : /You watched closely/,
           );
           await page.locator('[data-subject="writing"]').click();
         }
@@ -287,6 +371,62 @@ try {
         );
         await motionPage.close();
       }
+      if (pack.kind === "inchworms") {
+        const motionPage = await browser.newPage({
+          reducedMotion: "no-preference",
+        });
+        await motionPage.goto(origin);
+        const head = motionPage.locator(".inchworm-scene .worm-head");
+        const rear = motionPage.locator(".inchworm-scene .rear-anchor");
+        await motionPage.locator('[data-motion-step="1"]').click();
+        await motionPage.waitForFunction(
+          () =>
+            document
+              .querySelector(".inchworm-scene .rear-anchor")
+              .getAttribute("cx") === "214",
+        );
+        assert.equal(await head.getAttribute("cx"), "295");
+        await motionPage.locator('[data-motion-step="2"]').click();
+        await motionPage.waitForFunction(
+          () =>
+            document
+              .querySelector(".inchworm-scene .worm-head")
+              .getAttribute("cx") === "395",
+        );
+        assert.equal(await rear.getAttribute("cx"), "214");
+        await motionPage.locator('[data-motion-step="1"]').click();
+        await motionPage.locator('[data-motion-step="0"]').click();
+        await motionPage.waitForTimeout(1100);
+        assert.equal(
+          await rear.getAttribute("cx"),
+          "114",
+          "a reset cancels the loop",
+        );
+        await motionPage.locator('[data-motion-step="2"]').click();
+        await motionPage.locator('[data-subject="reading"]').click();
+        await motionPage.locator('[data-subject="math"]').click();
+        assert.equal(
+          await head.getAttribute("cx"),
+          "395",
+          "leaving settles motion",
+        );
+        await motionPage.locator('[data-motion-step="1"]').click();
+        await motionPage.emulateMedia({ reducedMotion: "reduce" });
+        await motionPage.waitForFunction(
+          () =>
+            document
+              .querySelector(".inchworm-scene .rear-anchor")
+              .getAttribute("cx") === "214",
+        );
+        assert.equal(await head.getAttribute("cx"), "295");
+        if (engine === chromium) {
+          await motionPage.setViewportSize({ width: 820, height: 1180 });
+          await motionPage.locator(".inchworm-lab").screenshot({
+            path: "docs/stills/inchworms-ipad-loop.png",
+          });
+        }
+        await motionPage.close();
+      }
       const noJS = await browser.newContext({ javaScriptEnabled: false });
       const page = await noJS.newPage();
       await page.goto(origin);
@@ -300,7 +440,7 @@ try {
         ).status(),
         200,
       );
-      if (pack.kind === "engines") {
+      if (pack.motion) {
         assert.equal(await page.locator(".motion-fallback").count(), 3);
         for (const caption of await page.locator(".motion-fallback").all())
           assert.equal(await caption.isVisible(), true);
