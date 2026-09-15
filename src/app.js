@@ -40,6 +40,15 @@ $$("[data-finish]").forEach((button) =>
     }
   }),
 );
+if ($("#lesson-content")) {
+  const content = JSON.parse($("#lesson-content").textContent);
+  $$("[data-reading-answer]").forEach((button) => {
+    button.addEventListener("click", () => {
+      $("#reading-feedback").textContent =
+        content.feedback[Number(button.dataset.readingAnswer)];
+    });
+  });
+}
 if (document.body.dataset.kind === "fair-sharing") {
   let parts = 1;
   let selected = new Set([0]);
@@ -119,7 +128,7 @@ if (document.body.dataset.kind === "fair-sharing") {
   );
   draw();
 } else if (document.body.dataset.kind === "engines") {
-  const content = JSON.parse($("#engine-content").textContent);
+  const content = JSON.parse($("#lesson-content").textContent);
   const mechanism = $(".mechanism");
   let motionFrame;
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
@@ -165,12 +174,6 @@ if (document.body.dataset.kind === "fair-sharing") {
       }
     });
   });
-  $$("[data-engine-answer]").forEach((button) => {
-    button.addEventListener("click", () => {
-      $("#engine-reading-feedback").textContent =
-        content.feedback[Number(button.dataset.engineAnswer)];
-    });
-  });
   document.body.classList.add("engine-interactive");
   let turns = 0;
   const updateTurns = () => {
@@ -194,7 +197,7 @@ if (document.body.dataset.kind === "fair-sharing") {
     $("#turn-pairs").replaceChildren();
     updateTurns();
   });
-} else {
+} else if (document.body.dataset.kind !== "inchworms") {
   const updateCount = () => {
     const count = $$('.count-word[aria-pressed="true"]').length;
     $("#count-feedback").textContent =

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "kind": "inchworms",
+  "gradeLevel": 2,
+  "ageRange": [7, 8],
+  "topic": "inch worms",
+  "title": "A loop becomes a step",
+  "question": "How does a worm with no legs like ours walk across a leaf?",
+  "idea": "An inchworm grips in front, pulls its rear up into a loop, then stretches forward. Tiny moves take it somewhere new.",
+  "motion": {
+    "title": "Watch a little step",
+    "intro": "AT THE EDGE OF A LEAF",
+    "steps": [
+      {
+        "label": "Grip",
+        "text": "The front legs grip the leaf. The front stays put while the rear gets ready to move."
+      },
+      {
+        "label": "Loop",
+        "text": "The front holds on. The rear pulls up close. The middle rises into a loop, like a little hump."
+      },
+      {
+        "label": "Stretch",
+        "text": "Now the rear grips. The front lets go and stretches forward. The front grips again. One little step!"
+      }
+    ],
+    "caption": "A close-up drawing of one step. A filled dot marks the end holding on during that move. It is not drawn to life size.",
+    "gesture": "Try it with a finger: rest the tip, bend into a hump, then reach forward. Say: grip, loop, stretch."
+  },
+  "math": {
+    "title": "Little loops add up",
+    "parentNote": "3 min: try the taps and count by 2. 9 min: draw jumps or tens and ones. 3 min: explain. Ask: How far to the next ten? One inch per loop is our pretend model, not a measurement of a real inchworm.",
+    "intro": "Let's pretend each loop moves an inchworm 1 inch. These are made-up distances for our math game.",
+    "tasks": [
+      "Jo's pretend inchworm goes 24 inches, then 18 more. How far in all? Draw jumps or tens and ones.",
+      "It has gone 42 inches. Jo wants it to reach 60. How many more inches? Show your thinking.",
+      "Count by 2 inches. Say the numbers. Fill the spaces."
+    ],
+    "extension": "How can adding help you check how many more inches it needs?",
+    "workspaces": ["24 + 18 = ______ inches", "60 - 42 = ______ inches"],
+    "hints": [
+      "Split 18 into 6 and 12. Add 6 to 24 to reach 30. Now add the 12 that are left. Draw the two jumps.",
+      "Count up from 42 to 50, then to 60. How many inches are in those two jumps together?"
+    ],
+    "countSequence": [2, 4, null, null, 10, null, 14, null, 18, null]
+  },
+  "reading": {
+    "title": "The little leaf walker",
+    "parentNote": "3 min: try loop, grip, and stretch. 7 min: read together, then reread. 5 min: discuss. Ask for words in the story that helped. Read aloud or accept pointing when useful.",
+    "paragraphs": [
+      "Leo and Jo crouch by a leaf. A tiny inchworm rests on its edge. “How will it walk?” asks Leo.",
+      "“Watch the front,” says Jo. The front legs grip the leaf. The rear pulls up close. A loop rises in the middle, like a little hump.",
+      "Now the rear holds on. The front lets go. Stretch! It reaches forward and grips again. The inchworm has taken a step.",
+      "“It looks like it is measuring the leaf,” says Leo. That is how inchworms got their name. Each step is not always one inch.",
+      "“So it has no legs?” asks Leo. “It has tiny legs near the front and little gripping parts at the rear,” says Jo. “An inchworm is a caterpillar!”"
+    ],
+    "words": [
+      { "word": "loop", "meaning": "a bend that makes a hump" },
+      { "word": "grip", "meaning": "hold on tightly" },
+      { "word": "stretch", "meaning": "reach out longer" }
+    ],
+    "questions": [
+      "What holds on while the rear pulls up? Underline the words that helped you.",
+      "Why is it called an inchworm? Must each step be one inch?"
+    ],
+    "check": {
+      "prompt": "Leo says, “It has no legs, so it must slide.” What did you notice?",
+      "choices": [
+        "Yes. It only slides on its belly.",
+        "Tiny legs grip. Its body loops and stretches."
+      ],
+      "feedback": [
+        "Look again at the front legs. They grip while the rear pulls up. Try again, or show the movement with a finger.",
+        "You watched closely. Tiny front legs grip; the rear pulls up. Then the rear grips and the front stretches forward."
+      ]
+    }
+  },
+  "writing": {
+    "title": "Teach a tiny step",
+    "parentNote": "3 min: say the steps. 4 min: draw and label. 6 min: write 3 short sentences. 2 min: reread together. Accept invented spelling or take dictation. Look for the sequence before fixing capitals and end marks.",
+    "intro": "Help a friend picture an inchworm's walk. Draw a loop, then tell the three steps.",
+    "draw": "Draw an inchworm in a loop on a leaf. Label front, rear, and loop. Add an arrow to show the rear pulling up.",
+    "starter": "My inchworm explanation",
+    "frames": [
+      { "start": "First,", "hint": "What grips the leaf?" },
+      { "start": "Next,", "hint": "How does the loop form?" },
+      { "start": "Then,", "hint": "What holds on? What stretches?" }
+    ],
+    "words": ["front", "rear", "grip", "pull", "loop", "stretch", "leaf"],
+    "check": "Read your words aloud. Can your friend follow grip, loop, stretch? Check a capital and an end mark in each sentence."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "42 inches in our model. Bridge a ten: 24 + 6 = 30, then 30 + 12 = 42. Or combine tens and ones. Ask the child to explain a jump or a trade. Each pretend loop stands for 1 inch."
+    },
+    {
+      "label": "Math · 2",
+      "text": "18 more inches. Count up: 42 + 8 = 50; 50 + 10 = 60. The jumps total 18. Check: 42 + 18 = 60, so 60 - 42 = 18. Accept any sound strategy."
+    },
+    {
+      "label": "Math · 3",
+      "text": "Missing numbers: 6, 8, 12, 16, 20. Each jump adds 2 inches, or 2 pretend loops. The digital strip is a number model, not a life-size ruler or a record of real movement."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "The front legs hold on. Evidence: “The front legs grip the leaf. The rear pulls up close.” For the digital check, choose the tiny-legs answer; an inchworm does not just slide on its belly."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Its walk looks like measuring. No, each step need not be one inch. The story says, “Each step is not always one inch.” The name describes how the movement looks, not a fixed distance."
+    },
+    {
+      "label": "Writing",
+      "text": "Example: “First, the front legs grip. Next, the rear pulls up into a loop. Then, the rear grips and the front stretches.” Look for front, rear, and loop labels plus a forward arrow. Spoken explanations and invented spelling count."
+    }
+  ],
+  "parentGuidance": "An inchworm is a moth caterpillar, not an earthworm. It has true legs near the front and gripping parts called prolegs near the rear. The bare middle bends into a loop. ‘About one inch per loop’ is a kid-friendly model, not a lab claim; real steps vary. The name comes from looking like it measures. Observe gently without handling, then try the finger gesture. Pause between sessions."
+}
