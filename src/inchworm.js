@@ -24,7 +24,22 @@ export function wormPose(stage) {
     const length = Math.hypot(dx, dy);
     return `M${p.x - (dy / length) * 5} ${p.y + (dx / length) * 5} l${(dy / length) * 10} ${(-dx / length) * 10}`;
   }).join(" ");
-  return { rear, front, body, segments };
+  return {
+    rear,
+    front,
+    body,
+    segments,
+    rearLegs: `M${rear} 151v12h-7 m16-13v13h-6`,
+    frontLegs: `M${front - 23} 149l3 14h5 m3-13 3 13h5 m3-12 3 12h5`,
+    headCx: front + 3,
+    eyeCx: front + 7,
+    rearLeader: `M${rear - 5} 134l-18-18h-25`,
+    frontLeader: `M${front + 8} 129l16-21h24`,
+    rearLabelX: rear - 54,
+    frontLabelX: front + 22,
+    rearAnchorCx: rear + 2,
+    frontAnchorCx: front - 8,
+  };
 }
 
 // Browser-only: loaded as a module for inchworms packs.
@@ -39,38 +54,41 @@ if (
   let frame;
   let target = 0;
   function drawWorm(stage) {
-    const { rear, front, body, segments } = wormPose(stage);
+    const pose = wormPose(stage);
     const svg = $(".inchworm-scene svg");
     const set = (selector, attribute, value) =>
       svg.querySelector(selector).setAttribute(attribute, value);
-    set(".worm-body", "d", body);
-    set(".worm-fill", "d", body);
-    set(".worm-segments", "d", segments);
-    set(".rear-legs", "d", `M${rear} 151v12h-7 m16-13v13h-6`);
-    set(
-      ".front-legs",
-      "d",
-      `M${front - 23} 149l3 14h5 m3-13 3 13h5 m3-12 3 12h5`,
-    );
-    set(".worm-head", "cx", front + 3);
-    set(".worm-eye", "cx", front + 7);
-    set(".rear-leader", "d", `M${rear - 5} 134l-18-18h-25`);
-    set(".front-leader", "d", `M${front + 8} 129l16-21h24`);
-    set(".rear-label", "x", rear - 54);
-    set(".front-label", "x", front + 22);
-    set(".rear-anchor", "cx", rear + 2);
-    set(".front-anchor", "cx", front - 8);
+    set(".worm-body", "d", pose.body);
+    set(".worm-fill", "d", pose.body);
+    set(".worm-segments", "d", pose.segments);
+    set(".rear-legs", "d", pose.rearLegs);
+    set(".front-legs", "d", pose.frontLegs);
+    set(".worm-head", "cx", pose.headCx);
+    set(".worm-eye", "cx", pose.eyeCx);
+    set(".rear-leader", "d", pose.rearLeader);
+    set(".front-leader", "d", pose.frontLeader);
+    set(".rear-label", "x", pose.rearLabelX);
+    set(".front-label", "x", pose.frontLabelX);
+    set(".rear-anchor", "cx", pose.rearAnchorCx);
+    set(".front-anchor", "cx", pose.frontAnchorCx);
   }
   function settle() {
     cancelAnimationFrame(frame);
+    // Stretch defers stage/pose until here so CSS anchors/guides match the body.
+    $(".inchworm-scene").dataset.stage = target;
+    $(".inchworm-scene svg").dataset.pose = target;
     drawWorm(target);
   }
   $$("[data-motion-step]").forEach((button) => {
     button.addEventListener("click", () => {
       cancelAnimationFrame(frame);
       target = Number(button.dataset.motionStep);
-      $(".inchworm-scene").dataset.stage = target;
-      $(".inchworm-scene svg").dataset.pose = target;
+      // Grip/Loop update cues immediately. Stretch (2) waits for settle() so
+      // rear-hold anchors/guides do not flip while the worm still animates 1→2.
+      if (target !== 2) {
+        $(".inchworm-scene").dataset.stage = target;
+        $(".inchworm-scene svg").dataset.pose = target;
+      }
       $$("[data-motion-step]").forEach((b) =>
         b.setAttribute("aria-pressed", String(b === button)),
       );
@@ -78,8 +96,8 @@ if (
       $("#inchworm-motion-title").textContent = wormPoseTitles[target];
       // Every tap is independently understandable: Loop demonstrates 0 → 1;
       // Stretch demonstrates 1 → 2. Grip resets without reversing the animal.
-      drawWorm(target === 0 || reducedMotion.matches ? target : target - 1);
       if (target > 0 && !reducedMotion.matches) {
+        drawWorm(target - 1);
         let start;
         const tick = (time) => {
           start ??= time;
@@ -90,6 +108,8 @@ if (
           else settle();
         };
         frame = requestAnimationFrame(tick);
+      } else {
+        settle();
       }
     });
   });
