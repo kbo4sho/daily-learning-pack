@@ -21,12 +21,15 @@ jobs:
       - run: npm run test:inquiry
       - run: npm test
       - run: npm run test:browser
+      - run: npm run generate -- "inch worms"
+      - run: npm test
+      - run: npm run test:browser
       - name: Render grayscale print review pages
         run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/print-kid
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/print-key
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/inchworms-print-kid
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/inchworms-print-key
       - uses: actions/upload-artifact@v4
         if: always()
         with:

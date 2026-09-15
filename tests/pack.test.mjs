@@ -87,3 +87,53 @@ test("PDFs are US Letter, kid sheets are separate from the parent key", async ()
   assert.ok(!html.includes("GROWN-UPS ONLY"));
   assert.ok(!html.includes("Example:"));
 });
+
+test("inchworm aliases select the complete curated Grade 2 day", async () => {
+  const pack = await createPack("inch worms");
+  for (const alias of [
+    "inchworm",
+    "inchworms",
+    "inch worm",
+    "inch-worms",
+    "inch-worm",
+    "  INCH   WORMS  ",
+  ])
+    assert.deepEqual(await createPack(alias), pack);
+  assert.equal(pack.schemaVersion, 1);
+  assert.equal(pack.kind, "inchworms");
+  assert.equal(pack.gradeLevel, 2);
+  assert.deepEqual(pack.ageRange, [7, 8]);
+  assert.equal(pack.title, "A loop becomes a step");
+  assert.deepEqual(
+    pack.motion.steps.map((s) => s.label),
+    ["Grip", "Loop", "Stretch"],
+  );
+  assert.deepEqual(
+    pack.reading.words.map((w) => w.word),
+    ["loop", "grip", "stretch"],
+  );
+  assert.deepEqual(
+    pack.writing.frames.map((f) => f.start),
+    ["First,", "Next,", "Then,"],
+  );
+  assert.match(pack.math.intro, /pretend/);
+  assert.match(
+    pack.reading.paragraphs.join(" "),
+    /Each step is not always one inch/,
+  );
+  assert.match(pack.parentGuidance, /not a lab claim/);
+  assert.equal(pack.answers.length, 6);
+  assert.match(pack.answers[0].text, /42 inches/);
+  assert.match(pack.answers[1].text, /18 more inches/);
+  const html = site(pack);
+  assert.ok(html.includes('id="add-loops"'));
+  assert.ok(!html.includes('id="reset-words"'));
+  assert.ok(!html.includes('id="add-turns"'));
+  assert.ok(!html.includes('id="fraction-shape"'));
+  const print = printDocument(pack, ["math", "reading", "writing"]);
+  assert.equal((print.match(/class="engine-workspace"/g) || []).length, 2);
+  assert.equal((print.match(/class="paper-frame"/g) || []).length, 3);
+  assert.ok(!print.includes("GROWN-UPS ONLY"));
+  assert.ok(!print.includes("Example:"));
+  assert.ok(print.includes('data-kind="inchworms"'));
+});

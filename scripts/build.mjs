@@ -17,10 +17,15 @@ await rm(staging, { recursive: true, force: true });
 await mkdir(`${staging}/pdf`, { recursive: true });
 await mkdir(`${staging}/print`, { recursive: true });
 await mkdir(`${staging}/fonts`, { recursive: true });
-for (const file of ["styles.css", "app.js"])
+for (const file of ["styles.css", "inchworms.css", "app.js", "inchworm.js"])
   await copyFile(`src/${file}`, `${staging}/${file}`);
 for (const [family, file] of [
   ["fraunces", "fraunces-latin-600-normal.woff2"],
+  ["newsreader", "newsreader-latin-400-normal.woff2"],
+  ["newsreader", "newsreader-latin-500-normal.woff2"],
+  ["inter", "inter-latin-400-normal.woff2"],
+  ["inter", "inter-latin-600-normal.woff2"],
+  ["inter", "inter-latin-700-normal.woff2"],
   ["nunito-sans", "nunito-sans-latin-400-normal.woff2"],
   ["nunito-sans", "nunito-sans-latin-700-normal.woff2"],
 ])
@@ -28,7 +33,7 @@ for (const [family, file] of [
     `node_modules/@fontsource/${family}/files/${file}`,
     `${staging}/fonts/${file}`,
   );
-for (const family of ["fraunces", "nunito-sans"])
+for (const family of ["fraunces", "nunito-sans", "newsreader", "inter"])
   await copyFile(
     `node_modules/@fontsource/${family}/LICENSE`,
     `${staging}/fonts/${family}-LICENSE.txt`,
