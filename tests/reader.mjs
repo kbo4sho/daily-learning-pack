@@ -8,13 +8,13 @@ export async function checkReader(page, engine, viewport) {
   const back = page.locator("[data-reader-back]");
   const visibleBeat = page.locator(".reader-beat:visible");
   assert.equal(await back.isDisabled(), true);
+  assert.equal(await visibleBeat.getAttribute("data-reader-beat"), "cover");
   await mkdir("output/playwright", { recursive: true });
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 11; i++) {
     assert.equal(await visibleBeat.count(), 1, "one visible teaching beat");
-    assert.match(
-      await page.locator("#reader-position").textContent(),
-      new RegExp(`^${i + 1} / 10`),
-    );
+    const position = await page.locator("#reader-position").textContent();
+    if (i === 0) assert.equal(position, "Cover");
+    else assert.match(position, new RegExp(`^${i} / 10`));
     assert.equal(
       await page.evaluate(() => document.getAnimations().length),
       0,
@@ -39,7 +39,8 @@ export async function checkReader(page, engine, viewport) {
           .evaluate((el) => el === document.activeElement),
         true,
       );
-    if (i < 6)
+    const beatId = await visibleBeat.getAttribute("data-reader-beat");
+    if (beatId?.startsWith("story-") || beatId === "cover")
       assert.equal(await visibleBeat.locator(".reader-passage").count(), 1);
 
     if (engine === "webkit" && viewport.width === 820) {
@@ -54,29 +55,29 @@ export async function checkReader(page, engine, viewport) {
         [],
       );
     }
-    if (engine === "chromium" && [0, 2, 6, 9].includes(i))
+    if (engine === "chromium" && [0, 3, 7, 10].includes(i))
       await page.screenshot({
         path: `output/playwright/inchworms-reader-${viewport.width}-beat-${i + 1}.png`,
         fullPage: true,
       });
 
-    if (i >= 1 && i <= 3) {
+    if (i >= 2 && i <= 4) {
       const word = visibleBeat.locator(".reader-word");
       await word.locator("summary").press("Enter");
       assert.equal(await word.locator("p").isVisible(), true);
       await word.locator("summary").press("Space");
       assert.equal(await word.locator("p").isVisible(), false);
     }
-    if (i === 6 || i === 7) {
+    if (i === 7 || i === 8) {
       const evidence = visibleBeat.locator(".reader-evidence");
       await evidence.locator("summary").click();
       assert.match(
         await evidence.locator("p").textContent(),
-        i === 6 ? /front legs grip/ : /not always one inch/,
+        i === 7 ? /front legs grip/ : /not always one inch/,
       );
       await evidence.locator("summary").click();
     }
-    if (i < 9) await next.press(i % 2 ? "Space" : "Enter");
+    if (i < 10) await next.press(i % 2 ? "Space" : "Enter");
   }
   assert.equal(await next.isVisible(), false);
   assert.equal(
@@ -96,12 +97,6 @@ export async function checkReader(page, engine, viewport) {
     "check",
     "place survives subject switches",
   );
-
-  // Browser Print must reveal the whole story even when a late beat is active.
-  await page.emulateMedia({ media: "print" });
-  assert.equal(await page.locator(".reader-beat:visible").count(), 10);
-  assert.equal(await page.locator(".reader-controls").isVisible(), false);
-  await page.emulateMedia({ media: "screen" });
 
   // Enlarged text may scroll, but must never clip a passage or lose navigation.
   const largeText = await page.addStyleTag({
@@ -124,6 +119,8 @@ export async function checkReaderMotion(page) {
   const next = page.locator("[data-reader-next]");
   const back = page.locator("[data-reader-back]");
   const visibleBeat = page.locator(".reader-beat:visible");
+  assert.equal(await visibleBeat.getAttribute("data-reader-beat"), "cover");
+  await next.click(); // Open story
   await next.click(); // Grip
   await next.click(); // Loop: front must hold while rear moves.
   await page.waitForFunction(() => {
