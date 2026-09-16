@@ -1,0 +1,9 @@
+/* Wonder Daily field notes. The inchworms edition uses the house type and
+   paper roles on screen and in print; earlier curated editions retain theirs. */
+@font-face {
+  font-family: Newsreader;
+  src: url("./fonts/newsreader-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
