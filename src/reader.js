@@ -6,6 +6,7 @@ if (reader) {
   const beats = [...reader.querySelectorAll("[data-reader-beat]")];
   const back = reader.querySelector("[data-reader-back]");
   const next = reader.querySelector("[data-reader-next]");
+  const nextLabel = next.querySelector("[data-reader-next-label]");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let index = 0;
   let pageTurn;
@@ -30,10 +31,13 @@ if (reader) {
       beat.hidden = i !== index;
     });
     const beat = beats[index];
+    const onCover = beat.dataset.readerBeat === "cover";
     back.disabled = index === 0;
     next.hidden = index === beats.length - 1;
-    reader.querySelector("#reader-position").textContent =
-      `${index + 1} / ${beats.length}${index === beats.length - 1 ? " · The end" : ""}`;
+    if (nextLabel) nextLabel.textContent = onCover ? "Open the story" : "Next";
+    reader.querySelector("#reader-position").textContent = onCover
+      ? "Cover"
+      : `${index} / ${beats.length - 1}${index === beats.length - 1 ? " · The end" : ""}`;
 
     if (focus) {
       beat.querySelector("h3").focus({ preventScroll: true });
@@ -41,17 +45,14 @@ if (reader) {
     }
     if (!focus || reducedMotion.matches) return;
 
-    const direction = index > previous ? 1 : -1;
-    pageTurn = beat.querySelector(".reader-copy").animate(
-      [
-        {
-          opacity: 0.25,
-          transform: `perspective(1200px) translateX(${direction * 12}px) rotateY(${direction * -3}deg)`,
-        },
-        { opacity: 1, transform: "none" },
-      ],
-      { duration: 500, easing: "ease", fill: "none" },
-    );
+    // Opacity-only page enter. Worm morph below remains the teaching motion.
+    pageTurn = beat
+      .querySelector(".reader-copy")
+      .animate([{ opacity: 0.25 }, { opacity: 1 }], {
+        duration: 500,
+        easing: "ease",
+        fill: "none",
+      });
 
     const pose = Number(beat.dataset.readerPose);
     const from = Number(beats[previous].dataset.readerPose);
