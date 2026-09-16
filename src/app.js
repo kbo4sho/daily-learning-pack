@@ -2,6 +2,7 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const completed = new Set();
 function showSubject(name, focus = true) {
+  const wasReading = document.body.classList.contains("reader-open");
   $$(".lesson-panel").forEach((panel) => {
     panel.hidden = panel.id !== name;
   });
@@ -10,6 +11,10 @@ function showSubject(name, focus = true) {
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
   });
+  const reading = name === "reading" && Boolean($(".family-reader"));
+  document.body.classList.toggle("reader-open", reading);
+  document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
+  if (reading || wasReading) window.scrollTo({ top: 0, behavior: "instant" });
   if (focus) $(`#${name}-heading`).focus({ preventScroll: true });
 }
 $$(".subject-button").forEach((button) =>

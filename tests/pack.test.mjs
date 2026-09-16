@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { PDFDocument } from "pdf-lib";
 import { createPack, normalizeTopic } from "../src/pack.mjs";
-import { site, printDocument } from "../src/render.mjs";
+import { site, printDocument, esc } from "../src/render.mjs";
 
 test("engines is the complete Grade 2 default, including normalized input", async () => {
   const pack = await createPack();
@@ -147,4 +147,25 @@ test("inchworm aliases select the complete curated Grade 2 day", async () => {
   assert.ok(!print.includes("GROWN-UPS ONLY"));
   assert.ok(!print.includes("Example:"));
   assert.ok(print.includes('data-kind="inchworms"'));
+});
+
+test("inchworm reader and still print twin share every story passage", async () => {
+  const pack = await createPack("inch worms");
+  const digital = site(pack);
+  const print = printDocument(pack, ["reading"]);
+  assert.equal(pack.reading.beats.length, pack.reading.paragraphs.length);
+  for (const passage of pack.reading.paragraphs) {
+    assert.ok(digital.includes(esc(passage)));
+    assert.ok(print.includes(esc(passage)));
+  }
+  for (const { word } of pack.reading.words)
+    assert.equal(
+      pack.reading.beats.filter((beat) => beat.word === word).length,
+      1,
+    );
+  assert.ok(!print.includes("reader-beat"));
+  assert.ok(!print.includes("<script"));
+  assert.ok(!print.includes("data-reader-next"));
+  for (const topic of ["engines", "fractions as fair sharing", "weather"])
+    assert.ok(!site(await createPack(topic)).includes("reader.js"));
 });

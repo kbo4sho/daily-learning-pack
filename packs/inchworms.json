@@ -49,10 +49,19 @@
     "parentNote": "3 min: try loop, grip, and stretch. 7 min: read together, then reread. 5 min: discuss. Ask for words in the story that helped. Read aloud or accept pointing when useful.",
     "paragraphs": [
       "Leo and Jo crouch by a leaf. A tiny inchworm rests on its edge. “How will it walk?” asks Leo.",
-      "“Watch the front,” says Jo. The front legs grip the leaf. The rear pulls up close. A loop rises in the middle, like a little hump.",
+      "“Watch the front,” says Jo. The front legs grip the leaf.",
+      "The rear pulls up close. A loop rises in the middle, like a little hump.",
       "Now the rear holds on. The front lets go. Stretch! It reaches forward and grips again. The inchworm has taken a step.",
       "“It looks like it is measuring the leaf,” says Leo. That is how inchworms got their name. Each step is not always one inch.",
       "“So it has no legs?” asks Leo. “It has tiny legs near the front and little gripping parts at the rear,” says Jo. “An inchworm is a caterpillar!”"
+    ],
+    "beats": [
+      { "title": "At the edge of a leaf", "pose": 0 },
+      { "title": "First, hold on.", "pose": 0, "word": "grip" },
+      { "title": "Up comes a loop.", "pose": 1, "word": "loop" },
+      { "title": "Now, reach forward.", "pose": 2, "word": "stretch" },
+      { "title": "A measuring kind of walk", "pose": 2 },
+      { "title": "Tiny legs. A clever walk.", "pose": 0 }
     ],
     "words": [
       { "word": "loop", "meaning": "a bend that makes a hump" },

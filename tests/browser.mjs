@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
+import { checkReader, checkReaderMotion } from "./reader.mjs";
 
 const pack = JSON.parse(await readFile("dist/pack.json", "utf8"));
 assert.ok(["engines", "fair-sharing", "inchworms"].includes(pack.kind));
@@ -314,6 +315,8 @@ try {
         }
         if (pack.reading.check) {
           await page.locator('[data-subject="reading"]').click();
+          if (pack.kind === "inchworms")
+            await checkReader(page, engine.name(), viewport);
           await page.locator('[data-reading-answer="0"]').click();
           assert.match(
             await page.locator("#reading-feedback").textContent(),
@@ -332,6 +335,11 @@ try {
           .locator("#draft")
           .fill("Parts work together to make motion.");
         await page.locator('[data-subject="reading"]').click();
+        if (pack.kind === "inchworms") {
+          await page.locator("[data-reader-next]").click();
+          await page.locator("[data-reader-restart]").click();
+          await page.locator("[data-reader-next]").click();
+        }
         await page.locator(".word summary").first().click();
         assert.equal(
           await page.locator(".word").first().getAttribute("open"),
@@ -344,6 +352,10 @@ try {
         );
         for (const subject of ["math", "reading", "writing"]) {
           await page.locator(`[data-subject="${subject}"]`).click();
+          if (subject === "reading" && pack.kind === "inchworms") {
+            for (let beat = 1; beat < 9; beat++)
+              await page.locator("[data-reader-next]").click();
+          }
           await page.locator(`[data-finish="${subject}"]`).click();
         }
         assert.match(
@@ -446,6 +458,7 @@ try {
             path: "docs/stills/inchworms-ipad-loop.png",
           });
         }
+        await checkReaderMotion(motionPage);
         await motionPage.close();
       }
       const noJS = await browser.newContext({ javaScriptEnabled: false });
@@ -465,6 +478,14 @@ try {
         assert.equal(await page.locator(".motion-fallback").count(), 3);
         for (const caption of await page.locator(".motion-fallback").all())
           assert.equal(await caption.isVisible(), true);
+      }
+      if (pack.kind === "inchworms") {
+        assert.equal(await page.locator(".reader-beat:visible").count(), 10);
+        assert.equal(await page.locator(".reader-controls").isVisible(), false);
+        for (const passage of pack.reading.paragraphs)
+          assert.ok(
+            (await page.locator("#reading").textContent()).includes(passage),
+          );
       }
       await noJS.close();
     } finally {

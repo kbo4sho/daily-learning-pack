@@ -2,7 +2,7 @@ name: Build and check learning pack
 on:
   pull_request:
   push:
-    branches: [codex/daily-learning-pack-scaffold]
+    branches: [codex/daily-learning-pack-scaffold, codex/story-practices-bar]
 permissions:
   contents: read
 jobs:
