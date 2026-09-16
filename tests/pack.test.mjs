@@ -121,9 +121,10 @@ test("inchworm aliases select the complete curated Grade 2 day", async () => {
   );
   assert.match(pack.math.intro, /pretend/);
   assert.match(
-    pack.reading.paragraphs.join(" "),
+    pack.reading.beats.map((b) => b.passage).join(" "),
     /Each step is not always one inch/,
   );
+  assert.equal(pack.reading.paragraphs, undefined);
   assert.match(pack.parentGuidance, /not a lab claim/);
   assert.equal(pack.answers.length, 6);
   assert.match(pack.answers[0].text, /42 inches/);
@@ -153,10 +154,12 @@ test("inchworm reader and still print twin share every story passage", async () 
   const pack = await createPack("inch worms");
   const digital = site(pack);
   const print = printDocument(pack, ["reading"]);
-  assert.equal(pack.reading.beats.length, pack.reading.paragraphs.length);
-  for (const passage of pack.reading.paragraphs) {
-    assert.ok(digital.includes(esc(passage)));
-    assert.ok(print.includes(esc(passage)));
+  assert.equal(pack.reading.beats.length, 6);
+  assert.ok(digital.includes('data-reader-beat="cover"'));
+  for (const beat of pack.reading.beats) {
+    assert.ok(beat.passage);
+    assert.ok(digital.includes(esc(beat.passage)));
+    assert.ok(print.includes(esc(beat.passage)));
   }
   for (const { word } of pack.reading.words)
     assert.equal(
