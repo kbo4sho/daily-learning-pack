@@ -336,15 +336,28 @@ try {
           .fill("Parts work together to make motion.");
         await page.locator('[data-subject="reading"]').click();
         if (pack.kind === "inchworms") {
+          // After the check beat: Next → end (restart), Restart → cover,
+          // Next → story-0, Next → story-1 (grip word is visible there).
           await page.locator("[data-reader-next]").click();
           await page.locator("[data-reader-restart]").click();
           await page.locator("[data-reader-next]").click();
+          await page.locator("[data-reader-next]").click();
+          await page
+            .locator(".reader-beat:visible .reader-word summary")
+            .click();
+          assert.equal(
+            await page
+              .locator(".reader-beat:visible .reader-word")
+              .getAttribute("open"),
+            "",
+          );
+        } else {
+          await page.locator(".word summary").first().click();
+          assert.equal(
+            await page.locator(".word").first().getAttribute("open"),
+            "",
+          );
         }
-        await page.locator(".word summary").first().click();
-        assert.equal(
-          await page.locator(".word").first().getAttribute("open"),
-          "",
-        );
         await page.locator('[data-subject="writing"]').click();
         assert.equal(
           await page.locator("#draft").inputValue(),
@@ -353,10 +366,18 @@ try {
         for (const subject of ["math", "reading", "writing"]) {
           await page.locator(`[data-subject="${subject}"]`).click();
           if (subject === "reading" && pack.kind === "inchworms") {
-            for (let beat = 1; beat < 10; beat++)
+            // Finish lives only on the end beat; advance until it is visible.
+            const readingFinish = page.locator(
+              '.reader-beat:visible [data-finish="reading"]',
+            );
+            for (let beat = 0; beat < 12; beat++) {
+              if (await readingFinish.count()) break;
               await page.locator("[data-reader-next]").click();
+            }
+            await readingFinish.click();
+          } else {
+            await page.locator(`[data-finish="${subject}"]`).click();
           }
-          await page.locator(`[data-finish="${subject}"]`).click();
         }
         assert.match(
           await page.locator("#completion").textContent(),
