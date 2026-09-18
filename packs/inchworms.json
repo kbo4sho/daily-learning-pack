@@ -47,17 +47,54 @@
   "reading": {
     "title": "The little leaf walker",
     "parentNote": "3 min: try loop, grip, and stretch. 7 min: read together, then reread. 5 min: discuss. Ask for words in the story that helped. Read aloud or accept pointing when useful.",
-    "paragraphs": [
-      "Leo and Jo crouch by a leaf. A tiny inchworm rests on its edge. “How will it walk?” asks Leo.",
-      "“Watch the front,” says Jo. The front legs grip the leaf. The rear pulls up close. A loop rises in the middle, like a little hump.",
-      "Now the rear holds on. The front lets go. Stretch! It reaches forward and grips again. The inchworm has taken a step.",
-      "“It looks like it is measuring the leaf,” says Leo. That is how inchworms got their name. Each step is not always one inch.",
-      "“So it has no legs?” asks Leo. “It has tiny legs near the front and little gripping parts at the rear,” says Jo. “An inchworm is a caterpillar!”"
+    "beats": [
+      {
+        "title": "At the edge of a leaf",
+        "pose": 0,
+        "passage": "Leo and Jo crouch by a leaf. A tiny inchworm rests on its edge. “How will it walk?” asks Leo."
+      },
+      {
+        "title": "First, hold on.",
+        "pose": 0,
+        "word": "grip",
+        "passage": "“Watch the front,” says Jo. The front legs grip the leaf."
+      },
+      {
+        "title": "Up comes a loop.",
+        "pose": 1,
+        "word": "loop",
+        "passage": "The rear pulls up close. A loop rises in the middle, like a little hump."
+      },
+      {
+        "title": "Now, reach forward.",
+        "pose": 2,
+        "word": "stretch",
+        "passage": "Now the rear holds on. The front lets go. Stretch! It reaches forward and grips again. The inchworm has taken a step."
+      },
+      {
+        "title": "A measuring kind of walk",
+        "pose": 2,
+        "passage": "“It looks like it is measuring the leaf,” says Leo. That is how inchworms got their name. Each step is not always one inch."
+      },
+      {
+        "title": "Tiny legs. A clever walk.",
+        "pose": 0,
+        "passage": "“So it has no legs?” asks Leo. “It has tiny legs near the front and little gripping parts at the rear,” says Jo. “An inchworm is a caterpillar!”"
+      }
     ],
     "words": [
-      { "word": "loop", "meaning": "a bend that makes a hump" },
-      { "word": "grip", "meaning": "hold on tightly" },
-      { "word": "stretch", "meaning": "reach out longer" }
+      {
+        "word": "loop",
+        "meaning": "a bend that makes a hump"
+      },
+      {
+        "word": "grip",
+        "meaning": "hold on tightly"
+      },
+      {
+        "word": "stretch",
+        "meaning": "reach out longer"
+      }
     ],
     "questions": [
       "What holds on while the rear pulls up? Underline the words that helped you.",
@@ -82,9 +119,18 @@
     "draw": "Draw an inchworm in a loop on a leaf. Label front, rear, and loop. Add an arrow to show the rear pulling up.",
     "starter": "My inchworm explanation",
     "frames": [
-      { "start": "First,", "hint": "What grips the leaf?" },
-      { "start": "Next,", "hint": "How does the loop form?" },
-      { "start": "Then,", "hint": "What holds on? What stretches?" }
+      {
+        "start": "First,",
+        "hint": "What grips the leaf?"
+      },
+      {
+        "start": "Next,",
+        "hint": "How does the loop form?"
+      },
+      {
+        "start": "Then,",
+        "hint": "What holds on? What stretches?"
+      }
     ],
     "words": ["front", "rear", "grip", "pull", "loop", "stretch", "leaf"],
     "check": "Read your words aloud. Can your friend follow grip, loop, stretch? Check a capital and an end mark in each sentence."

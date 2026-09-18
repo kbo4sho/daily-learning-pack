@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { PDFDocument } from "pdf-lib";
 import { createPack, normalizeTopic } from "../src/pack.mjs";
-import { site, printDocument } from "../src/render.mjs";
+import { site, printDocument, esc } from "../src/render.mjs";
 
 test("engines is the complete Grade 2 default, including normalized input", async () => {
   const pack = await createPack();
@@ -121,9 +121,10 @@ test("inchworm aliases select the complete curated Grade 2 day", async () => {
   );
   assert.match(pack.math.intro, /pretend/);
   assert.match(
-    pack.reading.paragraphs.join(" "),
+    pack.reading.beats.map((b) => b.passage).join(" "),
     /Each step is not always one inch/,
   );
+  assert.equal(pack.reading.paragraphs, undefined);
   assert.match(pack.parentGuidance, /not a lab claim/);
   assert.equal(pack.answers.length, 6);
   assert.match(pack.answers[0].text, /42 inches/);
@@ -147,4 +148,27 @@ test("inchworm aliases select the complete curated Grade 2 day", async () => {
   assert.ok(!print.includes("GROWN-UPS ONLY"));
   assert.ok(!print.includes("Example:"));
   assert.ok(print.includes('data-kind="inchworms"'));
+});
+
+test("inchworm reader and still print twin share every story passage", async () => {
+  const pack = await createPack("inch worms");
+  const digital = site(pack);
+  const print = printDocument(pack, ["reading"]);
+  assert.equal(pack.reading.beats.length, 6);
+  assert.ok(digital.includes('data-reader-beat="cover"'));
+  for (const beat of pack.reading.beats) {
+    assert.ok(beat.passage);
+    assert.ok(digital.includes(esc(beat.passage)));
+    assert.ok(print.includes(esc(beat.passage)));
+  }
+  for (const { word } of pack.reading.words)
+    assert.equal(
+      pack.reading.beats.filter((beat) => beat.word === word).length,
+      1,
+    );
+  assert.ok(!print.includes("reader-beat"));
+  assert.ok(!print.includes("<script"));
+  assert.ok(!print.includes("data-reader-next"));
+  for (const topic of ["engines", "fractions as fair sharing", "weather"])
+    assert.ok(!site(await createPack(topic)).includes("reader.js"));
 });

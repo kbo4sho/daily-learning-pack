@@ -18,7 +18,8 @@ await mkdir(`${staging}/pdf`, { recursive: true });
 await mkdir(`${staging}/print`, { recursive: true });
 await mkdir(`${staging}/fonts`, { recursive: true });
 const assets = ["styles.css", "app.js"];
-if (pack.kind === "inchworms") assets.push("inchworms.css", "inchworm.js");
+if (pack.kind === "inchworms")
+  assets.push("inchworms.css", "inchworm.js", "reader.js");
 for (const file of assets) await copyFile(`src/${file}`, `${staging}/${file}`);
 const fonts = [
   ["fraunces", "fraunces-latin-600-normal.woff2"],
