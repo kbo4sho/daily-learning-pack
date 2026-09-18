@@ -42,6 +42,25 @@ export function wormPose(stage) {
   };
 }
 
+export function drawWormPose(svg, stage) {
+  const pose = wormPose(stage);
+  const set = (selector, attribute, value) =>
+    svg.querySelector(selector).setAttribute(attribute, value);
+  set(".worm-body", "d", pose.body);
+  set(".worm-fill", "d", pose.body);
+  set(".worm-segments", "d", pose.segments);
+  set(".rear-legs", "d", pose.rearLegs);
+  set(".front-legs", "d", pose.frontLegs);
+  set(".worm-head", "cx", pose.headCx);
+  set(".worm-eye", "cx", pose.eyeCx);
+  set(".rear-leader", "d", pose.rearLeader);
+  set(".front-leader", "d", pose.frontLeader);
+  set(".rear-label", "x", pose.rearLabelX);
+  set(".front-label", "x", pose.frontLabelX);
+  set(".rear-anchor", "cx", pose.rearAnchorCx);
+  set(".front-anchor", "cx", pose.frontAnchorCx);
+}
+
 // Browser-only: loaded as a module for inchworms packs.
 if (
   typeof document !== "undefined" &&
@@ -53,25 +72,7 @@ if (
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let frame;
   let target = 0;
-  function drawWorm(stage) {
-    const pose = wormPose(stage);
-    const svg = $(".inchworm-scene svg");
-    const set = (selector, attribute, value) =>
-      svg.querySelector(selector).setAttribute(attribute, value);
-    set(".worm-body", "d", pose.body);
-    set(".worm-fill", "d", pose.body);
-    set(".worm-segments", "d", pose.segments);
-    set(".rear-legs", "d", pose.rearLegs);
-    set(".front-legs", "d", pose.frontLegs);
-    set(".worm-head", "cx", pose.headCx);
-    set(".worm-eye", "cx", pose.eyeCx);
-    set(".rear-leader", "d", pose.rearLeader);
-    set(".front-leader", "d", pose.frontLeader);
-    set(".rear-label", "x", pose.rearLabelX);
-    set(".front-label", "x", pose.frontLabelX);
-    set(".rear-anchor", "cx", pose.rearAnchorCx);
-    set(".front-anchor", "cx", pose.frontAnchorCx);
-  }
+  const drawWorm = (stage) => drawWormPose($(".inchworm-scene svg"), stage);
   function settle() {
     cancelAnimationFrame(frame);
     // Stretch assigns stage/pose 2 here; motion Stretch begins at 1 below.
