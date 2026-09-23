@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { PDFDocument } from "pdf-lib";
 import { createPack, normalizeTopic } from "../src/pack.mjs";
 import { site, printDocument, esc } from "../src/render.mjs";
@@ -171,4 +172,98 @@ test("inchworm reader and still print twin share every story passage", async () 
   assert.ok(!print.includes("data-reader-next"));
   for (const topic of ["engines", "fractions as fair sharing", "weather"])
     assert.ok(!site(await createPack(topic)).includes("reader.js"));
+});
+
+test("bean sprout aliases select a complete Grade 2 day with generated scenic assets", async () => {
+  const pack = await createPack("bean sprout");
+  for (const alias of [
+    "bean sprouts",
+    "beansprout",
+    "beansprouts",
+    "bean-sprout",
+    "bean-sprouts",
+    "  BEAN   SPROUTS  ",
+  ])
+    assert.deepEqual(await createPack(alias), pack);
+  assert.equal(pack.kind, "beansprout");
+  assert.equal(pack.gradeLevel, 2);
+  assert.deepEqual(pack.ageRange, [7, 8]);
+  assert.equal(pack.math.tasks.length, 3);
+  assert.equal(pack.writing.frames.length, 3);
+  assert.equal(pack.answers.length, 6);
+  for (const subject of ["math", "reading", "writing"])
+    assert.ok(pack[subject].parentNote);
+  assert.match(pack.math.intro, /made-up measurements/);
+  assert.equal(
+    pack.math.measurements[1].height - pack.math.measurements[0].height,
+    6,
+  );
+  assert.equal(pack.math.measurements[2].height + 9, 32);
+  assert.equal(pack.math.dayLine.at(-1) - pack.math.dayLine[0], 8);
+  const plates = [
+    ...pack.reading.beats.map((b) => b.plate),
+    pack.math.plate,
+    pack.writing.plate,
+  ];
+  assert.equal(new Set(plates.map((p) => p.src)).size, 8);
+  const provenance = JSON.parse(
+    await readFile("assets/bean-sprout/prompts.json", "utf8"),
+  );
+  for (const plate of plates) {
+    assert.match(plate.src, /^assets\/bean-sprout\/[a-z-]+\.webp$/);
+    assert.ok(plate.alt.length > 20);
+    assert.ok(plate.caption);
+    assert.ok((await stat(plate.src)).size > 10000);
+    const generated = provenance.plates.find((p) => p.asset === plate.src);
+    assert.ok(generated?.prompt);
+    assert.equal(
+      createHash("sha256")
+        .update(await readFile(plate.src))
+        .digest("hex"),
+      generated.sha256,
+    );
+  }
+  assert.equal((await createPack()).kind, "engines");
+});
+
+test("bean reader uses beats as canon and derives a still print twin", async () => {
+  const pack = await createPack("bean sprout");
+  assert.equal(pack.reading.paragraphs, undefined);
+  assert.equal(pack.reading.questions, undefined);
+  assert.equal(pack.reading.check, undefined);
+  assert.equal(new Set(pack.reading.beats.map((b) => b.id)).size, 11);
+  assert.equal(pack.reading.beats[0].type, "cover");
+  assert.equal(pack.reading.beats.at(-1).type, "end");
+  const story = pack.reading.beats.filter((b) => b.type === "story");
+  assert.deepEqual(
+    story.map((b) => b.growthPose),
+    [0, 1, 2, 3, 4, 5],
+  );
+  const digital = site(pack);
+  const print = printDocument(pack, ["math", "reading", "writing"]);
+  assert.equal((digital.match(/data-reader-beat=/g) || []).length, 11);
+  assert.ok(digital.includes('src="./reader.js"'));
+  assert.ok(digital.includes('src="./beansprout.js"'));
+  assert.ok(digital.includes('content="noindex, nofollow"'));
+  assert.ok(!digital.includes('id="reset-words"'));
+  for (const beat of pack.reading.beats) {
+    assert.ok(digital.includes(esc(beat.passage)));
+    assert.ok(digital.includes(`src="./${beat.plate.src}"`));
+    if (["story", "question"].includes(beat.type))
+      assert.ok(print.includes(esc(beat.passage)));
+    if (beat.evidence)
+      for (const id of beat.evidence) assert.ok(story.some((b) => b.id === id));
+  }
+  for (const word of pack.reading.words)
+    assert.equal(story.filter((b) => b.word === word.word).length, 1);
+  assert.equal((print.match(/class="engine-workspace"/g) || []).length, 2);
+  assert.equal((print.match(/class="paper-frame"/g) || []).length, 3);
+  assert.ok(!print.includes("<script"));
+  assert.ok(!print.includes("reader-beat"));
+  assert.ok(!print.includes("data-reader-next"));
+  assert.ok(!print.includes("GROWN-UPS ONLY"));
+  // Changing a canonical passage must change both surfaces.
+  story[0].passage = "One source of truth for a small beginning.";
+  assert.ok(site(pack).includes(story[0].passage));
+  assert.ok(printDocument(pack, ["reading"]).includes(story[0].passage));
 });

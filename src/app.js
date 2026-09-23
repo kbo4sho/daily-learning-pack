@@ -202,7 +202,7 @@ if (document.body.dataset.kind === "fair-sharing") {
     $("#turn-pairs").replaceChildren();
     updateTurns();
   });
-} else if (document.body.dataset.kind !== "inchworms") {
+} else if (!["inchworms", "beansprout"].includes(document.body.dataset.kind)) {
   const updateCount = () => {
     const count = $$('.count-word[aria-pressed="true"]').length;
     $("#count-feedback").textContent =

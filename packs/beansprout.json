@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "kind": "beansprout",
+  "gradeLevel": 2,
+  "ageRange": [7, 8],
+  "topic": "bean sprout",
+  "title": "A seed takes its time",
+  "question": "How does a small bean become a growing plant?",
+  "idea": "Water helps a bean begin. A root reaches down, a shoot reaches up, and leaves open to the light.",
+  "math": {
+    "title": "A little taller, day by day",
+    "intro": "These are made-up measurements of one bean plant. Real plants grow at different speeds. Measure height from the soil to the top of the plant.",
+    "parentNote": "3 min: read the table. 9 min: solve with drawings or number jumps. 3 min: explain. cm means centimeters. These are pretend data, not a growth promise. No real plant or ruler is needed.",
+    "plate": {
+      "src": "assets/bean-sprout/garden-notes.webp",
+      "alt": "A young bean in a pot beside a ruler, a blank notebook, and a pencil.",
+      "caption": "Look closely. Keep a little record."
+    },
+    "measurements": [
+      {
+        "day": 4,
+        "height": 8
+      },
+      {
+        "day": 8,
+        "height": 14
+      },
+      {
+        "day": 12,
+        "height": 23
+      }
+    ],
+    "tasks": [
+      "From Day 4 to Day 8, how much taller did the plant get? Show your thinking.",
+      "On Day 12 it is 23 cm tall. Pretend it grows 9 cm more. How tall would it be?",
+      "How many days pass from Day 4 to Day 12? Count the spaces between days."
+    ],
+    "workspaces": ["14 - 8 = ______ cm", "23 + 9 = ______ cm"],
+    "hints": [
+      "Count up from 8 to 10, then from 10 to 14. How big are the two jumps together?",
+      "Split 9 into 7 and 2. Add 7 to 23 to reach 30, then add the 2 left over."
+    ],
+    "extension": "Does the table show the same amount of growth in each four-day stretch? Explain.",
+    "dayLine": [4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "reading": {
+    "title": "A seed takes its time",
+    "parentNote": "3 min: wonder over the cover. 7 min: read and revisit the six changes. 5 min: talk about the questions. Accept pointing and oral answers. Pictures show stages, not a fixed timetable.",
+    "beats": [
+      {
+        "id": "cover",
+        "type": "cover",
+        "title": "A seed takes its time",
+        "passage": "Come to the garden. Something small is beginning. Grown-up reads; little wonderer opens the story.",
+        "plate": {
+          "src": "assets/bean-sprout/cover.webp",
+          "alt": "A young bean plant and one dry seed on a sunlit garden sill.",
+          "caption": "A small beginning. A whole garden of possibility."
+        }
+      },
+      {
+        "id": "dry",
+        "type": "story",
+        "title": "A small, quiet beginning",
+        "growthPose": 0,
+        "label": "Dry seed",
+        "word": "seed coat",
+        "passage": "A dry bean rests in the soil. Its seed coat protects a tiny plant and a store of food inside. It has not begun to grow.",
+        "plate": {
+          "src": "assets/bean-sprout/dry-seed.webp",
+          "alt": "An intact ivory bean seed rests in loose garden soil.",
+          "caption": "Dry seed · a tiny plant waits inside."
+        }
+      },
+      {
+        "id": "water",
+        "type": "story",
+        "title": "A drink, then a change",
+        "growthPose": 1,
+        "label": "Soak",
+        "passage": "Water soaks into the bean. It swells. With water, air, and enough warmth, the tiny plant can begin to grow.",
+        "plate": {
+          "src": "assets/bean-sprout/soak.webp",
+          "alt": "A swollen bean seed takes in water from damp soil.",
+          "caption": "Water enters · the seed swells."
+        }
+      },
+      {
+        "id": "split",
+        "type": "story",
+        "title": "The coat opens",
+        "growthPose": 2,
+        "label": "Split",
+        "word": "sprout",
+        "passage": "The seed coat splits. A small root tip peeks out. The bean has begun to sprout. It uses food stored in its two thick seed halves.",
+        "plate": {
+          "src": "assets/bean-sprout/split.webp",
+          "alt": "The thin seed coat splits; a tiny root tip begins to emerge.",
+          "caption": "Seed coat splits · growth begins."
+        }
+      },
+      {
+        "id": "root",
+        "type": "story",
+        "title": "First, a root reaches down",
+        "growthPose": 3,
+        "label": "Root",
+        "word": "root",
+        "passage": "The root grows down. It takes in water and helps hold the young plant in place. The bean does not need to eat dirt.",
+        "plate": {
+          "src": "assets/bean-sprout/root.webp",
+          "alt": "A white root grows down from a bean seed into the soil.",
+          "caption": "Root first · down into the soil."
+        }
+      },
+      {
+        "id": "shoot",
+        "type": "story",
+        "title": "Then, a shoot reaches up",
+        "growthPose": 4,
+        "label": "Shoot",
+        "passage": "A curved shoot pushes up through the soil. It lifts the thick seed halves. Below, the root keeps growing. This happens over days, not one quick moment.",
+        "plate": {
+          "src": "assets/bean-sprout/shoot.webp",
+          "alt": "A hooked bean shoot lifts the seed halves above the soil; roots remain below.",
+          "caption": "Shoot next · up toward the light."
+        }
+      },
+      {
+        "id": "leaves",
+        "type": "story",
+        "title": "Open to the light",
+        "growthPose": 5,
+        "label": "Leaves",
+        "passage": "Green leaves open above the seed halves. With light, water, and air, the leaves make food for the plant. A small bean has become a seedling.",
+        "plate": {
+          "src": "assets/bean-sprout/first-leaves.webp",
+          "alt": "Two green leaves open above the smaller, thick seed halves; roots spread below.",
+          "caption": "True leaves open above the plump seed halves."
+        }
+      },
+      {
+        "id": "question-root",
+        "type": "question",
+        "title": "Which part comes first?",
+        "passage": "Which grows out first: the root or the shoot? Find words in the story that helped you.",
+        "evidence": ["split", "root", "shoot"],
+        "plate": {
+          "src": "assets/bean-sprout/root.webp",
+          "alt": "A white root grows down from a bean seed into the soil.",
+          "caption": "Root first · down into the soil."
+        }
+      },
+      {
+        "id": "question-food",
+        "type": "question",
+        "title": "Food for a beginning",
+        "passage": "Where does the bean get food before its green leaves open?",
+        "evidence": ["dry", "split"],
+        "plate": {
+          "src": "assets/bean-sprout/split.webp",
+          "alt": "The thin seed coat splits; a tiny root tip begins to emerge.",
+          "caption": "Seed coat splits · growth begins."
+        }
+      },
+      {
+        "id": "check",
+        "type": "check",
+        "title": "Does a plant eat dirt?",
+        "passage": "A friend says, “The bean eats dirt to grow.” Help your friend look again.",
+        "choices": [
+          "Yes. Roots eat pieces of dirt.",
+          "No. First it uses food stored in the seed."
+        ],
+        "feedback": [
+          "The root takes in water. The seed has stored food. Try again, or look back together.",
+          "You noticed the stored food. Later, green leaves make food with light, water, and air. Soil also supplies minerals."
+        ],
+        "plate": {
+          "src": "assets/bean-sprout/first-leaves.webp",
+          "alt": "Two green leaves open above the smaller, thick seed halves; roots spread below.",
+          "caption": "True leaves open above the plump seed halves."
+        }
+      },
+      {
+        "id": "end",
+        "type": "end",
+        "title": "Small changes. New life.",
+        "passage": "You followed a seed into the light. Tell someone one change you noticed, or carry the story onto your page.",
+        "plate": {
+          "src": "assets/bean-sprout/cover.webp",
+          "alt": "A young bean plant and one dry seed on a sunlit garden sill.",
+          "caption": "A small beginning. A whole garden of possibility."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "seed coat",
+        "meaning": "the outside covering that protects a seed"
+      },
+      {
+        "word": "sprout",
+        "meaning": "begin to grow from a seed"
+      },
+      {
+        "word": "root",
+        "meaning": "the part that takes in water and helps hold a plant in place"
+      }
+    ]
+  },
+  "writing": {
+    "title": "Teach a friend how it grows",
+    "intro": "Your friend has never watched a bean grow. Help them picture the changes.",
+    "plate": {
+      "src": "assets/bean-sprout/garden-notes.webp",
+      "alt": "A young bean in a pot beside a ruler, a blank notebook, and a pencil.",
+      "caption": "Look closely. Keep a little record."
+    },
+    "parentNote": "3 min: say the steps. 4 min: draw. 6 min: write three short sentences. 2 min: reread. Accept invented spelling, pointing, or dictation. Look for water, root, then shoot and leaves.",
+    "draw": "Draw three moments: a bean taking in water, a root reaching down, and a shoot with leaves. Label seed, root, and leaf.",
+    "starter": "My bean-growing explanation",
+    "frames": [
+      {
+        "start": "First,",
+        "hint": "What soaks into the bean?"
+      },
+      {
+        "start": "Next,",
+        "hint": "What comes out and grows down?"
+      },
+      {
+        "start": "Then,",
+        "hint": "What grows up? What opens?"
+      }
+    ],
+    "words": ["seed", "water", "split", "root", "shoot", "leaves", "grow"],
+    "check": "Read your steps aloud. Could your friend follow them? Check a capital and an end mark in each sentence."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "6 cm taller. Count up: 8 + 2 = 10; 10 + 4 = 14. The jumps total 6. Check: 8 + 6 = 14."
+    },
+    {
+      "label": "Math · 2",
+      "text": "32 cm. Split 9 into 7 + 2: 23 + 7 = 30, then 30 + 2 = 32. This is a pretend extension, not a prediction."
+    },
+    {
+      "label": "Math · 3",
+      "text": "8 days pass: 12 - 4 = 8. There are nine day labels but eight spaces between them. Extension: no. The two four-day stretches show 6 cm and 9 cm of growth."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "The root comes first. Evidence: “A small root tip peeks out.” Later: “A curved shoot pushes up through the soil.”"
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Food is stored in the two thick seed halves (cotyledons). Digital check: choose the stored-food answer. Roots absorb water and minerals; leaves later make food using light, water, and carbon dioxide from air."
+    },
+    {
+      "label": "Writing",
+      "text": "Example: “First, water soaks into the bean. Next, a root grows down. Then, a shoot grows up and leaves open.” Look for three moments and seed, root, and leaf labels. Spoken explanations count."
+    }
+  ],
+  "parentGuidance": "This day shows a common garden bean. Seed halves store food; true leaves unfold above them. Germination needs water, oxygen, and a suitable temperature. Later the plant needs light to keep growing. The stages overlap; timing and height vary. The pictures are enlarged illustrations, not measurements. Use the pictures today; a real growing experiment is optional. Pause between sessions."
+}

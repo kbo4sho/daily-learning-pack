@@ -35,7 +35,7 @@
   font-weight: 700;
   font-display: swap;
 }
-body[data-kind="inchworms"] {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) {
   --ink: #293b35;
   --paper: #f8f5ee;
   --stock: #fffdf8;
@@ -47,15 +47,15 @@ body[data-kind="inchworms"] {
   --sans: Inter, "Avenir Next", sans-serif;
   scrollbar-color: var(--muted) var(--paper);
 }
-body[data-kind="inchworms"] :is(h1, h2, h3) {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) :is(h1, h2, h3) {
   font-weight: 400;
   letter-spacing: -0.035em;
 }
-body[data-kind="inchworms"] .site-shell {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .site-shell {
   max-width: 1248px;
   padding-inline: 48px;
 }
-body[data-kind="inchworms"] .site-header {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .site-header {
   padding-block: 26px;
 }
 .wonder-wordmark {
@@ -68,26 +68,26 @@ body[data-kind="inchworms"] .site-header {
   letter-spacing: 0.22em;
   margin-top: 12px;
 }
-body[data-kind="inchworms"]
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
   :is(.print-link, .outline-link, .primary-button, .quiz-options button) {
   border-radius: 5px;
 }
-body[data-kind="inchworms"] .header-note {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .header-note {
   font-size: 12px;
 }
-body[data-kind="inchworms"] .day-heading {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-heading {
   padding-block: 40px 32px;
 }
-body[data-kind="inchworms"] .day-heading h1 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-heading h1 {
   font-size: clamp(40px, 5vw, 64px);
   margin: 16px 0 12px;
 }
-body[data-kind="inchworms"] .eyebrow {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .eyebrow {
   font-size: 10px;
   letter-spacing: 0.16em;
   font-weight: 600;
 }
-body[data-kind="inchworms"] .day-stamp {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-stamp {
   border: 0;
   border-left: 1px solid var(--gold);
   border-radius: 0;
@@ -96,15 +96,15 @@ body[data-kind="inchworms"] .day-stamp {
   width: 144px;
   padding-left: 24px;
 }
-body[data-kind="inchworms"] .day-stamp strong {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-stamp strong {
   font-weight: 400;
 }
-body[data-kind="inchworms"] .subject-nav {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .subject-nav {
   gap: 0;
   border-block: 1px solid var(--line);
   margin-bottom: 36px;
 }
-body[data-kind="inchworms"] .subject-button {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .subject-button {
   border: 0;
   border-bottom: 2px solid transparent;
   border-radius: 0;
@@ -112,45 +112,51 @@ body[data-kind="inchworms"] .subject-button {
   font-weight: 600;
   font-size: 18px;
 }
-body[data-kind="inchworms"] .subject-button + .subject-button {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .subject-button
+  + .subject-button {
   border-left: 1px solid var(--line);
 }
-body[data-kind="inchworms"] .subject-button.active {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .subject-button.active {
   background: #eeeade;
   border-bottom-color: var(--ink);
   color: var(--ink);
 }
-body[data-kind="inchworms"] .subject-index {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .subject-index {
   font-weight: 400;
   font-size: 30px;
 }
-body[data-kind="inchworms"] .subject-button small {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .subject-button
+  small {
   margin-top: 3px;
   font-size: 11px;
 }
-body[data-kind="inchworms"] .lesson-grid {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .lesson-grid {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   align-items: center;
   gap: 48px;
 }
-body[data-kind="inchworms"] .lesson-copy h2 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .lesson-copy h2 {
   margin-block: 16px;
   font-size: 40px;
 }
-body[data-kind="inchworms"] .lead {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .lead {
   font-size: 19px;
   line-height: 1.65;
 }
-body[data-kind="inchworms"] .concept-note {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .concept-note {
   font-size: 15px;
   gap: 0;
   padding-block: 20px;
   margin-block: 24px;
 }
-body[data-kind="inchworms"] :is(.tiny-star, .reread-note > span) {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  :is(.tiny-star, .reread-note > span) {
   display: none;
 }
-body[data-kind="inchworms"] .try-instruction {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .try-instruction {
   font-size: 15px;
   line-height: 1.65;
 }
@@ -281,7 +287,7 @@ body[data-kind="inchworms"] .try-instruction {
 .inchworm-interactive .motion-fallback {
   display: none;
 }
-body[data-kind="inchworms"] .engine-math-grid {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .engine-math-grid {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: 48px;
   padding-top: 36px;
@@ -345,28 +351,32 @@ body[data-kind="inchworms"] .engine-math-grid {
 #loop-feedback {
   min-height: 6.6em;
 }
-body[data-kind="inchworms"] .primary-button:disabled {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .primary-button:disabled {
   background: var(--muted);
   opacity: 0.75;
 }
-body[data-kind="inchworms"] .math-mission h4 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .math-mission h4 {
   font-size: 21px;
   font-weight: 600;
 }
-body[data-kind="inchworms"] .math-mission h4 > span {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .math-mission
+  h4
+  > span {
   border: 0;
   font: 400 26px/1 var(--serif);
   width: 20px;
 }
-body[data-kind="inchworms"] .math-hint p {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .math-hint p {
   background: var(--blue);
   padding: 16px;
   border-radius: 4px;
 }
-body[data-kind="inchworms"] .count-track {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .count-track {
   border-radius: 3px;
 }
-body[data-kind="inchworms"] .writing-layout {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-layout {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 48px;
 }
@@ -399,69 +409,79 @@ body[data-kind="inchworms"] .writing-layout {
   font: 400 10px var(--sans);
   margin-right: 4px;
 }
-body[data-kind="inchworms"] .writing-steps {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-steps {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 28px;
 }
-body[data-kind="inchworms"] .writing-desk {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-desk {
   background: var(--stock);
   border: 1px solid var(--line);
   border-radius: 5px;
   padding: 28px;
 }
-body[data-kind="inchworms"] .sentence-frames p {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .sentence-frames p {
   border-color: var(--line);
   padding-bottom: 14px;
   margin-top: 16px;
 }
-body[data-kind="inchworms"] .sentence-frames b {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .sentence-frames b {
   font: 400 28px var(--serif);
 }
-body[data-kind="inchworms"] .sentence-frames p span {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .sentence-frames
+  p
+  span {
   font-size: 14px;
   color: var(--muted);
 }
-body[data-kind="inchworms"] .writing-desk textarea {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .writing-desk
+  textarea {
   background: var(--stock);
   border-color: var(--line);
   line-height: 1.8;
   min-height: 240px;
   font-size: 18px;
 }
-body[data-kind="inchworms"] .writing-desk label {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-desk label {
   font-size: 25px;
 }
-body[data-kind="inchworms"] .writing-word-bank {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-word-bank {
   gap: 0;
   border-top: 1px solid var(--line);
   padding-top: 8px;
 }
-body[data-kind="inchworms"] .writing-word-bank span {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .writing-word-bank
+  span {
   background: transparent;
   padding: 6px 12px 0 0;
   font-size: 14px;
 }
-body[data-kind="inchworms"] .reread-note {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reread-note {
   background: transparent;
   border-left: 2px solid var(--gold);
   border-radius: 0;
   padding: 4px 24px;
   font-size: 16px;
 }
-body[data-kind="inchworms"] .completion:not(:empty) {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .completion:not(:empty) {
   background: var(--blue);
   border-radius: 5px;
 }
-body[data-kind="inchworms"] .lesson-panel {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .lesson-panel {
   animation: none;
 }
-body[data-kind="inchworms"] :is(button, a, summary):focus-visible,
-body[data-kind="inchworms"] textarea:focus-visible {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  :is(button, a, summary):focus-visible,
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  textarea:focus-visible {
   outline-color: #426e87;
 }
 @media (hover: hover) {
-  body[data-kind="inchworms"]
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
     :is(
       .outline-link,
       .print-link,
@@ -470,11 +490,13 @@ body[data-kind="inchworms"] textarea:focus-visible {
     ):hover {
     background: #e9e8de;
   }
-  body[data-kind="inchworms"] .primary-button:not(:disabled):hover {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
+    .primary-button:not(:disabled):hover {
     background: #40564c;
   }
-  body[data-kind="inchworms"] summary:hover,
-  body[data-kind="inchworms"] .text-button:hover {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) summary:hover,
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
+    .text-button:hover {
     text-decoration: underline;
   }
   .inchworm-lab .motion-steps button:not([aria-pressed="true"]):hover {
@@ -482,67 +504,69 @@ body[data-kind="inchworms"] textarea:focus-visible {
   }
 }
 @media (max-width: 900px) {
-  body[data-kind="inchworms"] .site-shell {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .site-shell {
     padding-inline: 28px;
   }
-  body[data-kind="inchworms"]
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
     :is(.lesson-grid, .engine-math-grid, .reading-layout, .writing-layout) {
     gap: 28px;
   }
-  body[data-kind="inchworms"] .reading-layout {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reading-layout {
     grid-template-columns: minmax(0, 1fr) 212px;
   }
   .inchworm-lab,
   .inchworm-model {
     padding: 22px;
   }
-  body[data-kind="inchworms"] .writing-desk {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .writing-desk {
     padding: 22px;
   }
-  body[data-kind="inchworms"] .word-garden {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .word-garden {
     padding: 24px 20px;
   }
 }
 @media (max-width: 650px) {
-  body[data-kind="inchworms"] .site-shell {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .site-shell {
     padding-inline: 20px;
   }
   .wonder-wordmark {
     font-size: 23px;
   }
-  body[data-kind="inchworms"] .print-link {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .print-link {
     font-size: 12px;
     padding: 10px 12px;
   }
-  body[data-kind="inchworms"] .print-link span {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .print-link span {
     margin-left: 6px;
   }
-  body[data-kind="inchworms"] .day-heading {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-heading {
     padding-block: 32px 24px;
   }
-  body[data-kind="inchworms"] .day-heading h1 {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .day-heading h1 {
     max-width: 290px;
     font-size: 45px;
   }
-  body[data-kind="inchworms"] .subject-button {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .subject-button {
     padding: 12px 8px;
     font-size: 14px;
     gap: 8px;
   }
-  body[data-kind="inchworms"] .subject-index {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .subject-index {
     font-size: 24px;
   }
-  body[data-kind="inchworms"] .subject-button small {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
+    .subject-button
+    small {
     font-size: 10px;
   }
-  body[data-kind="inchworms"]
+  body:is([data-kind="inchworms"], [data-kind="beansprout"])
     :is(.lesson-grid, .engine-math-grid, .reading-layout, .writing-layout) {
     grid-template-columns: minmax(0, 1fr);
   }
-  body[data-kind="inchworms"] .lesson-copy h2 {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .lesson-copy h2 {
     font-size: 36px;
   }
-  body[data-kind="inchworms"] .engine-math-grid {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .engine-math-grid {
     margin-top: 32px;
     padding-top: 32px;
   }
@@ -554,18 +578,20 @@ body[data-kind="inchworms"] textarea:focus-visible {
   }
 }
 /* The same field-note objects, with pure ink and physical page dimensions. */
-body.print-document[data-kind="inchworms"] {
+body.print-document:is([data-kind="inchworms"], [data-kind="beansprout"]) {
   --ink: #111;
   --line: #999;
   --stock: #fff;
   color: #111;
   font-size: 11pt;
 }
-body[data-kind="inchworms"] .paper-head h1 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .paper-head h1 {
   font-size: 32pt;
   margin-top: 16pt;
 }
-body[data-kind="inchworms"] .paper-head .eyebrow {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .paper-head
+  .eyebrow {
   font-size: 7pt;
   border-bottom-width: 0.75pt;
 }
@@ -637,15 +663,17 @@ body[data-kind="inchworms"] .paper-head .eyebrow {
   font-size: 10pt;
   line-height: 1.6;
 }
-body[data-kind="inchworms"] .answer-sheet dd {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .answer-sheet dd {
   font-size: 10.5pt;
   line-height: 1.5;
 }
-body[data-kind="inchworms"] .answer-sheet .paper-tip {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .answer-sheet
+  .paper-tip {
   font-size: 9.5pt;
 }
 @media (forced-colors: active) {
-  body[data-kind="inchworms"] {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) {
     scrollbar-color: auto;
   }
   .loop-pairs .counted {
@@ -682,7 +710,7 @@ body[data-kind="inchworms"] .answer-sheet .paper-tip {
   padding-block: 24px;
   border-bottom: 1px solid var(--line);
 }
-body[data-kind="inchworms"] .reader-header h2 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reader-header h2 {
   font-size: 24px;
   margin-top: 8px;
   letter-spacing: -0.02em;
@@ -718,7 +746,7 @@ body[data-kind="inchworms"] .reader-header h2 {
   color: var(--muted);
   margin-bottom: 16px;
 }
-body[data-kind="inchworms"] .reader-copy h3 {
+body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reader-copy h3 {
   font-size: clamp(36px, 4.5vw, 48px);
   line-height: 1.1;
   text-wrap: balance;
@@ -762,7 +790,9 @@ body[data-kind="inchworms"] .reader-copy h3 {
   border: 0;
   border-top: 1px solid var(--line);
 }
-body[data-kind="inchworms"] .reader-word summary {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .reader-word
+  summary {
   font: 400 24px/1.4 var(--serif);
   padding: 12px 0;
 }
@@ -770,7 +800,9 @@ body[data-kind="inchworms"] .reader-word summary {
   font: 400 12px/1.5 var(--sans);
   color: var(--muted);
 }
-body[data-kind="inchworms"] .reader-evidence summary {
+body:is([data-kind="inchworms"], [data-kind="beansprout"])
+  .reader-evidence
+  summary {
   font: 400 13px/1.5 var(--sans);
   padding-block: 16px;
 }
@@ -900,7 +932,7 @@ body[data-kind="inchworms"] .reader-evidence summary {
     padding-block: 20px;
     gap: 16px;
   }
-  body[data-kind="inchworms"] .reader-header h2 {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reader-header h2 {
     font-size: 20px;
   }
   .reader-header .eyebrow {
@@ -937,7 +969,7 @@ body[data-kind="inchworms"] .reader-evidence summary {
   .reader-copy {
     max-width: 600px;
   }
-  body[data-kind="inchworms"] .reader-copy h3 {
+  body:is([data-kind="inchworms"], [data-kind="beansprout"]) .reader-copy h3 {
     font-size: 40px;
   }
   .reader-letterbox .inchworm-diagram {

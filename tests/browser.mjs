@@ -5,9 +5,16 @@ import { chromium, webkit } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
 import { checkReader, checkReaderMotion } from "./reader.mjs";
+import {
+  checkBeanMath,
+  checkBeanReader,
+  checkBeanMotion,
+} from "./beansprout.mjs";
 
 const pack = JSON.parse(await readFile("dist/pack.json", "utf8"));
-assert.ok(["engines", "fair-sharing", "inchworms"].includes(pack.kind));
+assert.ok(
+  ["engines", "fair-sharing", "inchworms", "beansprout"].includes(pack.kind),
+);
 const server = await serve(resolve("dist"), 0);
 const origin = `http://127.0.0.1:${server.address().port}`;
 await mkdir("docs/stills", { recursive: true });
@@ -121,6 +128,8 @@ try {
             await page.locator("#turn-feedback").textContent(),
             /^2 turns/,
           );
+        } else if (pack.kind === "beansprout") {
+          await checkBeanMath(page);
         } else if (pack.kind === "inchworms") {
           assert.equal(
             await page
@@ -313,10 +322,12 @@ try {
             });
           }
         }
-        if (pack.reading.check) {
+        if (pack.reading.check || pack.kind === "beansprout") {
           await page.locator('[data-subject="reading"]').click();
           if (pack.kind === "inchworms")
             await checkReader(page, engine.name(), viewport);
+          if (pack.kind === "beansprout")
+            await checkBeanReader(page, engine.name(), viewport, pack);
           await page.locator('[data-reading-answer="0"]').click();
           assert.match(
             await page.locator("#reading-feedback").textContent(),
@@ -327,7 +338,9 @@ try {
             await page.locator("#reading-feedback").textContent(),
             pack.kind === "engines"
               ? /You followed the parts/
-              : /You watched closely/,
+              : pack.kind === "beansprout"
+                ? /You noticed the stored food/
+                : /You watched closely/,
           );
           await page.locator('[data-subject="writing"]').click();
         }
@@ -335,13 +348,14 @@ try {
           .locator("#draft")
           .fill("Parts work together to make motion.");
         await page.locator('[data-subject="reading"]').click();
-        if (pack.kind === "inchworms") {
+        if (["inchworms", "beansprout"].includes(pack.kind)) {
           // After the check beat: Next → end (restart), Restart → cover,
           // Next → story-0, Next → story-1 (grip word is visible there).
           await page.locator("[data-reader-next]").click();
           await page.locator("[data-reader-restart]").click();
           await page.locator("[data-reader-next]").click();
-          await page.locator("[data-reader-next]").click();
+          if (pack.kind === "inchworms")
+            await page.locator("[data-reader-next]").click();
           await page
             .locator(".reader-beat:visible .reader-word summary")
             .click();
@@ -365,7 +379,10 @@ try {
         );
         for (const subject of ["math", "reading", "writing"]) {
           await page.locator(`[data-subject="${subject}"]`).click();
-          if (subject === "reading" && pack.kind === "inchworms") {
+          if (
+            subject === "reading" &&
+            ["inchworms", "beansprout"].includes(pack.kind)
+          ) {
             // Finish lives only on the end beat; advance until it is visible.
             const readingFinish = page.locator(
               '.reader-beat:visible [data-finish="reading"]',
@@ -482,6 +499,14 @@ try {
         await checkReaderMotion(motionPage);
         await motionPage.close();
       }
+      if (pack.kind === "beansprout") {
+        const motionPage = await browser.newPage({
+          reducedMotion: "no-preference",
+        });
+        await motionPage.goto(origin);
+        await checkBeanMotion(motionPage);
+        await motionPage.close();
+      }
       const noJS = await browser.newContext({ javaScriptEnabled: false });
       const page = await noJS.newPage();
       await page.goto(origin);
@@ -500,7 +525,7 @@ try {
         for (const caption of await page.locator(".motion-fallback").all())
           assert.equal(await caption.isVisible(), true);
       }
-      if (pack.kind === "inchworms") {
+      if (["inchworms", "beansprout"].includes(pack.kind)) {
         assert.equal(await page.locator(".reader-beat:visible").count(), 11);
         assert.equal(await page.locator(".reader-controls").isVisible(), false);
         for (const beat of pack.reading.beats)

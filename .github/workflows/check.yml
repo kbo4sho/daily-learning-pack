@@ -30,6 +30,13 @@ jobs:
           sudo apt-get install -y poppler-utils
           pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/inchworms-print-kid
           pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/inchworms-print-key
+      - run: npm run generate -- "bean sprout"
+      - run: npm test
+      - run: npm run test:browser
+      - name: Render bean sprout grayscale review pages
+        run: |
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/beansprout-print-kid
+          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/beansprout-print-key
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,3 +44,4 @@ jobs:
           path: |
             dist/
             docs/stills/
+            output/playwright/

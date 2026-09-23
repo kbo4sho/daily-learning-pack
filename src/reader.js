@@ -1,4 +1,5 @@
 import { drawWormPose } from "./inchworm.js";
+import { drawGrowthPose } from "./growth.js";
 
 // Progressive enhancement: without JS every passage remains in reading order.
 const reader = document.querySelector(".family-reader");
@@ -18,6 +19,11 @@ if (reader) {
     const beat = beats[index];
     if (beat.dataset.readerPose !== undefined)
       drawWormPose(beat.querySelector("svg"), Number(beat.dataset.readerPose));
+    if (beat.dataset.growthPose !== undefined)
+      drawGrowthPose(
+        beat.querySelector('[aria-current="step"] svg'),
+        Number(beat.dataset.growthPose),
+      );
   }
 
   function showBeat(destination, focus = true) {
@@ -45,7 +51,7 @@ if (reader) {
     }
     if (!focus || reducedMotion.matches) return;
 
-    // Opacity-only page enter. Worm morph below remains the teaching motion.
+    // Opacity-only page enter. The diagram morph is separate teaching motion.
     pageTurn = beat
       .querySelector(".reader-copy")
       .animate([{ opacity: 0.25 }, { opacity: 1 }], {
@@ -54,21 +60,30 @@ if (reader) {
         fill: "none",
       });
 
-    const pose = Number(beat.dataset.readerPose);
-    const from = Number(beats[previous].dataset.readerPose);
-    // Forward story turns teach the movement in the same letterbox: the front
-    // stays fixed for the loop, then the rear stays fixed for the stretch.
-    // Back/restart never makes the animal appear to walk backwards.
+    const isGrowth = beat.dataset.growthPose !== undefined;
+    const pose = Number(
+      isGrowth ? beat.dataset.growthPose : beat.dataset.readerPose,
+    );
+    const from = Number(
+      isGrowth
+        ? beats[previous].dataset.growthPose
+        : beats[previous].dataset.readerPose,
+    );
+    const drawPose = isGrowth ? drawGrowthPose : drawWormPose;
+    // Only consecutive forward poses morph. Back/restart remain still, so
+    // animals never walk backwards and seedlings never seem to shrink.
     if (index === previous + 1 && pose > 0 && pose === from + 1) {
-      const svg = beat.querySelector("svg");
-      drawWormPose(svg, from);
+      const svg = beat.querySelector(
+        isGrowth ? '[aria-current="step"] svg' : "svg",
+      );
+      drawPose(svg, from);
       let start;
       const tick = (time) => {
         start ??= time;
         const progress = Math.min((time - start) / 500, 1);
-        drawWormPose(svg, from + (1 - Math.cos(progress * Math.PI)) / 2);
+        drawPose(svg, from + (1 - Math.cos(progress * Math.PI)) / 2);
         if (progress < 1) frame = requestAnimationFrame(tick);
-        else drawWormPose(svg, pose);
+        else drawPose(svg, pose);
       };
       frame = requestAnimationFrame(tick);
     }

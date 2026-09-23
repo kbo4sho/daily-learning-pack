@@ -4,6 +4,12 @@ export const DEFAULT_TOPIC = "engines";
 export const DEFAULT_GRADE_LEVEL = 2;
 export const DEFAULT_AGE_RANGE = [7, 8];
 const curatedPacks = {
+  "bean sprout": "beansprout.json",
+  "bean sprouts": "beansprout.json",
+  beansprout: "beansprout.json",
+  beansprouts: "beansprout.json",
+  "bean-sprout": "beansprout.json",
+  "bean-sprouts": "beansprout.json",
   engines: "engines.json",
   "inch worms": "inchworms.json",
   inchworms: "inchworms.json",
