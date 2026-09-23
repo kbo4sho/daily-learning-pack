@@ -1,0 +1,53 @@
+{
+  "generatedBeforeLearningContent": true,
+  "review": "All four accepted plates inspected before pack authoring. First wake attempt rejected for photorealistic/3D drift; accepted revision 2 anchors style. PNG originals retained; JPEG copies are encoding-only for browser/PDF weight.",
+  "assets": [
+    {
+      "path": "assets/curiosity-bean/01-wake.png",
+      "sha256": "02f4e1d910b1d8607f52d4872fdc3d34dee3b91aee9499be3556511c5f1b00a7",
+      "bytes": 3265821
+    },
+    {
+      "path": "assets/curiosity-bean/01-wake.jpg",
+      "sha256": "a01c5833dff89f24d376e451702657887877ee679da179e46a1644ecb349cc42",
+      "bytes": 434714
+    },
+    {
+      "path": "assets/curiosity-bean/02-root.png",
+      "sha256": "fd7fc907d85a397e5cced4ec16b81300490730b48c1d6f53c14f524a0ea43548",
+      "bytes": 2896827
+    },
+    {
+      "path": "assets/curiosity-bean/02-root.jpg",
+      "sha256": "d6b21e337888c3b9ca75e0d0dbd9676721d91a18d60d74f8dfe2b2935e0d1128",
+      "bytes": 500394
+    },
+    {
+      "path": "assets/curiosity-bean/03-leaf.png",
+      "sha256": "08816a37da8f5f07a62464097e2286b59c2682f45c7e338aa95f5388d3f48bc7",
+      "bytes": 2710938
+    },
+    {
+      "path": "assets/curiosity-bean/03-leaf.jpg",
+      "sha256": "b8c67e74e40e1180ec1423b816edb1292ee48d6365debe62a5967503252304df",
+      "bytes": 449947
+    },
+    {
+      "path": "assets/curiosity-bean/04-notice.png",
+      "sha256": "cc85bb1cf066abfd14ba071264e93098920cfe57a4b73496277c86c1fced67f8",
+      "bytes": 2681056
+    },
+    {
+      "path": "assets/curiosity-bean/04-notice.jpg",
+      "sha256": "25b77296d6bbf1d45886eb65b07e403a91605d4a87d1c6e3751c5ae6afbc3896",
+      "bytes": 420870
+    }
+  ],
+  "jpegEncoding": "sips JPEG quality 78; 1536\u00d71024; no crop, repainting, or content edits",
+  "acceptedGenerationSources": {
+    "wake": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-70942a05-81f3-40f8-a6c8-c7e83565e0e1.png",
+    "root": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-680f9f64-09c4-423b-8faf-d600178e4bf4.png",
+    "leaf": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-f2496712-e651-47ab-b97e-c018129f217e.png",
+    "notice": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-68113c7d-6d24-4af6-98b6-21900f51b56e.png"
+  }
+}
