@@ -45,9 +45,10 @@
   ],
   "jpegEncoding": "sips JPEG quality 78; 1536\u00d71024; no crop, repainting, or content edits",
   "acceptedGenerationSources": {
-    "wake": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-70942a05-81f3-40f8-a6c8-c7e83565e0e1.png",
-    "root": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-680f9f64-09c4-423b-8faf-d600178e4bf4.png",
-    "leaf": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-f2496712-e651-47ab-b97e-c018129f217e.png",
-    "notice": "/Users/kevinbolander/.codex/generated_images/01a0cea3-2ca9-7510-9065-c04896a7d4de/exec-68113c7d-6d24-4af6-98b6-21900f51b56e.png"
-  }
+    "wake": "codex-imagegen/exec-70942a05-81f3-40f8-a6c8-c7e83565e0e1.png",
+    "root": "codex-imagegen/exec-680f9f64-09c4-423b-8faf-d600178e4bf4.png",
+    "leaf": "codex-imagegen/exec-f2496712-e651-47ab-b97e-c018129f217e.png",
+    "notice": "codex-imagegen/exec-68113c7d-6d24-4af6-98b6-21900f51b56e.png"
+  },
+  "generationNote": "Absolute local Codex imagegen paths scrubbed; basenames retained for traceability within the session that produced the plates."
 }
