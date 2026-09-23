@@ -873,17 +873,33 @@ body.reader-open .daily-header {
 }
 .curiosity-sheet .paper-head h1 {
   font:
-    32pt/1.08 Newsreader,
+    28pt/1.08 Newsreader,
     Georgia,
     serif;
-  margin: 8pt 0;
+  margin: 8pt 0 6pt;
+  letter-spacing: -0.02em;
 }
 .curiosity-sheet .paper-head {
-  margin-bottom: 14pt;
+  margin-bottom: 10pt;
+}
+.curiosity-sheet .paper-head .eyebrow {
+  font-size: 7pt;
+  letter-spacing: 0.16em;
+  border-bottom: 0.6pt solid #111;
+  padding-bottom: 8pt;
+}
+.curiosity-sheet .paper-topic {
+  color: #444;
+  font-size: 9pt;
+}
+.curiosity-sheet .name-line {
+  margin: 10pt 0 0;
+  font-size: 9pt;
 }
 .curiosity-sheet .paper-intro {
-  font-size: 11pt;
-  margin: 8pt 0;
+  font-size: 10.5pt;
+  line-height: 1.4;
+  margin: 8pt 0 6pt;
 }
 .curiosity-sheet .paper-parent {
   font-size: 8pt;
@@ -914,79 +930,130 @@ body.reader-open .daily-header {
   margin: 0;
 }
 .curiosity-sheet .paper-tip {
-  font-size: 9pt;
-  line-height: 1.45;
-  margin-top: 12pt;
+  font-size: 8.5pt;
+  line-height: 1.4;
+  margin-top: 8pt;
+  color: #333;
+}
+.print-document .curiosity-sheet .curiosity-plate {
+  margin: 0;
+}
+.print-document .curiosity-sheet .curiosity-plate img {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  background: #f4f1e8;
+  border: 0.4pt solid #b9b6aa;
+  border-radius: 0;
+  filter: grayscale(1) contrast(1.08);
+}
+.print-document .curiosity-sheet .curiosity-plate figcaption {
+  font-size: 7.5pt;
+  line-height: 1.35;
+  color: #444;
+  margin-top: 5pt;
 }
 .paper-notebook {
   display: grid;
-  grid-template-columns: 140pt 1fr;
-  gap: 24pt;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.9fr);
+  gap: 12pt 18pt;
+  align-items: start;
+  padding-bottom: 10pt;
+  margin-bottom: 6pt;
+  border-bottom: 0.4pt solid #c4c1b6;
 }
-.paper-notebook svg {
-  width: 140pt;
-  height: 100pt;
+.paper-notebook .curiosity-plate figcaption {
+  max-width: 46ch;
+}
+.paper-measure .paper-intro {
+  margin: 10pt 0 0;
+  font-size: 9.5pt;
+  color: #333;
 }
 .paper-notebook .growth-table {
-  font-size: 11pt;
-  margin: 0;
+  font-size: 10.5pt;
+  margin: 2pt 0 0;
   color: #111;
 }
 .paper-notebook .growth-table caption {
-  color: #111;
-  font-size: 9pt;
+  color: #444;
+  font-size: 7.5pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.paper-notebook .growth-table th,
+.paper-notebook .growth-table td {
+  padding: 9pt 6pt;
 }
 .curiosity-sheet .task {
-  margin: 12pt 0;
+  margin: 10pt 0;
 }
 .curiosity-sheet .task > p {
-  font-size: 11pt;
-  line-height: 1.4;
-  margin: 0 0 5pt;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  margin: 0 0 4pt;
 }
 .curiosity-workspace {
-  height: 70pt;
-  border: 1px solid #aaa;
-  padding: 10pt;
+  height: 62pt;
+  border: 0.6pt solid #888;
+  padding: 8pt 10pt;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .curiosity-workspace b {
   font:
-    18pt Newsreader,
+    16pt/1.2 Newsreader,
     Georgia,
     serif;
 }
 .curiosity-workspace span {
-  font-size: 8pt;
+  font-size: 7.5pt;
   color: #444;
 }
 .paper-plate-strip {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10pt;
+  margin: 4pt 0 10pt;
+  padding-bottom: 10pt;
+  border-bottom: 0.4pt solid #c4c1b6;
 }
-.paper-plate-strip svg {
-  width: 120pt;
-  height: 85pt;
+.paper-plate-strip .curiosity-plate figcaption {
+  font:
+    11pt/1.2 Newsreader,
+    Georgia,
+    serif;
+  color: #111;
+}
+.curiosity-writing .draw-label {
+  font-size: 10pt;
+  margin: 8pt 0 6pt;
 }
 .curiosity-writing .drawing-space {
-  height: 110pt;
-  margin: 8pt 0;
+  height: 92pt;
+  margin: 0 0 6pt;
+  border-color: #888;
+  border-radius: 0;
 }
 .curiosity-writing .word-bank {
   display: block;
-  font-size: 9pt;
-  padding: 8pt 0;
-  margin: 8pt 0;
+  font-size: 8.5pt;
+  padding: 6pt 0;
+  margin: 4pt 0 8pt;
+  color: #333;
 }
 .curiosity-writing .paper-frames p {
   font-size: 10pt;
-  margin: 5pt 0 0;
+  margin: 4pt 0 0;
+}
+.curiosity-writing .paper-frames p b {
+  font:
+    13pt/1.2 Newsreader,
+    Georgia,
+    serif;
 }
 .curiosity-writing .writing-line {
-  height: 31pt;
+  height: 26pt;
 }
 @media print {
   body:not(.print-document) .daily-header,

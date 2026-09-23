@@ -59,6 +59,17 @@ test("digital story, worksheet and zine share the exact six authored beats", () 
   const kid = printDocument(pack, ["math", "reading", "writing"]);
   assert.doesNotMatch(kid, /GROWN-UPS ONLY|32 cm tall/);
   assert.doesNotMatch(print, /<img/);
+  const math = printDocument(pack, ["math"]);
+  assert.match(math, /src="\.\.\/assets\/curiosity-bean\/04-notice\.jpg"/);
+  assert.match(math, /Pretend notebook · height above soil/);
+  assert.match(math, /14 − 8 =/);
+  const writing = printDocument(pack, ["writing"]);
+  for (const file of ["01-wake", "02-root", "03-leaf"])
+    assert.match(
+      writing,
+      new RegExp(`src="\\.\\./assets/curiosity-bean/${file}\\.jpg"`),
+    );
+  assert.doesNotMatch(writing, /04-notice/);
 });
 test("one-sheet limits, quiet padding and PR #37 imposition are enforced", () => {
   assert.deepEqual(

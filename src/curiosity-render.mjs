@@ -3,7 +3,8 @@ import { esc } from "./html.mjs";
 const plate = (p, id) => p.plates.find((item) => item.id === id);
 export function plateFigure(p, id, { caption = true, prefix = "./" } = {}) {
   const art = plate(p, id);
-  return `<figure class="curiosity-plate" data-plate="${esc(id)}"><img src="${prefix}${esc(art.src)}" alt="${esc(art.alt)}" width="1536" height="1024">${caption ? `<figcaption>${esc(art.caption)}</figcaption>` : ""}</figure>`;
+  const label = caption === true ? art.caption : caption || "";
+  return `<figure class="curiosity-plate" data-plate="${esc(id)}"><img src="${prefix}${esc(art.src)}" alt="${esc(art.alt)}" width="1536" height="1024">${label ? `<figcaption>${esc(label)}</figcaption>` : ""}</figure>`;
 }
 const action = (to, label) =>
   `<a class="primary-button" href="#${to}" data-go="${to}">${label} <span aria-hidden="true">→</span></a>`;
@@ -42,7 +43,8 @@ export function curiositySite(p) {
     )}</nav><main id="daily-content" tabindex="-1">${curiosity(p)}${reader(p)}${math(p)}${writing(p)}</main><footer class="daily-footer"><p>Small discoveries. Time together.</p><details><summary>For grown-ups & print downloads</summary><p>${esc(p.parentGuidance)}</p><p>${esc(p.reading.parentNote)}</p><p>US Letter · one-sided · 100% / actual size · black-and-white safe worksheets</p><a href="./pdf/kid-worksheets.pdf">Three kid worksheets</a> · <a href="./pdf/parent-answer-key.pdf">Separate parent answer key</a><p class="small-note">Illustration explanations: ${p.sources.map((s) => `<a href="${esc(s.url)}">${esc(s.label)}</a>`).join(" · ")}</p></details><p class="small-note">Internal quality mock. Not a public launch.</p></footer></div><script id="curiosity-content" type="application/json">${JSON.stringify(p).replace(/</g, "\\u003c")}</script><script type="module" src="./curiosity.js"></script><script type="module" src="./reader.js"></script></body></html>`;
 }
 
-// Semantic, unfilled line-art twins keep the same ideas legible on a B&W printer.
+// Still-story Letter pages keep compact line-art so six beats fit. Math and
+// writing print reuse the scenic plates, grayscale-treated in CSS.
 function lineDrawing(id) {
   const seed = `<ellipse cx="120" cy="65" rx="21" ry="30"/><path d="M120 35Q105 64 120 95Q105 110 114 126"/>`;
   const sprout = `<path d="M120 98V30Q120 13 135 20Q145 30 136 34M120 85Q90 100 85 126M120 93Q147 107 153 125M120 96V136"/>`;
@@ -51,14 +53,15 @@ function lineDrawing(id) {
 }
 const lines = (n) =>
   `<div class="writing-lines">${'<div class="writing-line"></div>'.repeat(n)}</div>`;
+const PRINT_PREFIX = "../";
 export function curiosityWorksheet(p, subject) {
   const part = p[subject];
   let body;
   if (subject === "reading")
     body = `<div class="curiosity-print-story">${part.beats.map((b) => `<section><div>${lineDrawing(b.plate)}</div><div><h2>${esc(b.title)}</h2><p>${esc(b.passage)}</p></div></section>`).join("")}</div><p class="paper-tip">Talk together: ${part.questions.map(esc).join(" ")}</p>`;
   if (subject === "math")
-    body = `<div class="paper-notebook"><div>${lineDrawing("notice")}</div>${table(p)}</div><p class="paper-intro">Use the pretend notebook numbers. The picture is not a ruler.</p>${part.tasks.map((t, i) => `<section class="task"><p><b>${i + 1}.</b> ${esc(t.prompt)}</p><div class="curiosity-workspace"><b>${esc(t.equation)} ______</b><span>Draw or write your thinking.</span></div></section>`).join("")}<p class="paper-tip">${esc(part.extension)}</p>`;
+    body = `<div class="paper-notebook">${plateFigure(p, part.plate, { prefix: PRINT_PREFIX })}<div class="paper-measure">${table(p)}<p class="paper-intro">Use the pretend notebook numbers. The picture is not a ruler.</p></div></div>${part.tasks.map((t, i) => `<section class="task"><p><b>${i + 1}.</b> ${esc(t.prompt)}</p><div class="curiosity-workspace"><b>${esc(t.equation)} ______</b><span>Draw or write your thinking.</span></div></section>`).join("")}<p class="paper-tip">${esc(part.extension)}</p>`;
   if (subject === "writing")
-    body = `<p class="paper-intro">${esc(part.intro)}</p><div class="paper-plate-strip">${part.plateIds.map((id) => lineDrawing(id)).join("")}</div><p class="draw-label">${esc(part.draw)}</p><div class="drawing-space"></div><p class="word-bank">${part.words.map(esc).join(" · ")}</p><div class="paper-frames">${part.frames.map((f) => `<div><p><b>${esc(f.start)} …</b> ${esc(f.hint)}</p>${lines(1)}</div>`).join("")}</div><p class="paper-tip">${esc(part.check)}</p>`;
+    body = `<p class="paper-intro">${esc(part.intro)}</p><div class="paper-plate-strip">${part.plateIds.map((id) => plateFigure(p, id, { caption: plate(p, id).title, prefix: PRINT_PREFIX })).join("")}</div><p class="draw-label">${esc(part.draw)}</p><div class="drawing-space"></div><p class="word-bank">${part.words.map(esc).join(" · ")}</p><div class="paper-frames">${part.frames.map((f) => `<div><p><b>${esc(f.start)} …</b> ${esc(f.hint)}</p>${lines(1)}</div>`).join("")}</div><p class="paper-tip">${esc(part.check)}</p>`;
   return `<article class="sheet curiosity-sheet curiosity-${subject}"><header class="paper-head"><div class="eyebrow">WONDER DAILY <span>GRADE 2 · ${subject.toUpperCase()}</span></div><h1>${esc(part.title)}</h1><p class="paper-topic">${esc(p.title)} · Curiosity-led family day</p><div class="name-line">Name __________________________ <span>Date _______________</span></div></header><main>${body}</main><footer class="paper-parent"><b>GROWN-UP NOTE</b> ${esc(part.parentNote)}</footer></article>`;
 }
