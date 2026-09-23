@@ -1,0 +1,11 @@
+{
+  "theme": "A bean becomes: the quiet work of growing",
+  "gradeLevel": 2,
+  "process": "Theme and questions locked before generation. Reading, math and writing will be authored after all four plates exist and are inspected.",
+  "questions": [
+    {"id":"wake", "question":"What is waking up inside this little bean?"},
+    {"id":"root", "question":"How does a root find its way when it cannot see?"},
+    {"id":"leaf", "question":"What can a leaf do that a seed cannot?"},
+    {"id":"notice", "question":"How could we notice a change too slow to watch?"}
+  ]
+}
