@@ -3,3 +3,6 @@ dist/
 output/
 tmp/
 .DS_Store
+
+.vercel/
+.playwright-cli/

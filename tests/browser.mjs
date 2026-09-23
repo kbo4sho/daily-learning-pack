@@ -7,6 +7,10 @@ import { serve } from "../scripts/serve.mjs";
 import { checkReader, checkReaderMotion } from "./reader.mjs";
 
 const pack = JSON.parse(await readFile("dist/pack.json", "utf8"));
+if (pack.kind === "curiosity-bean") {
+  await import("./curiosity-browser.mjs");
+  process.exit(0);
+}
 assert.ok(["engines", "fair-sharing", "inchworms"].includes(pack.kind));
 const server = await serve(resolve("dist"), 0);
 const origin = `http://127.0.0.1:${server.address().port}`;
