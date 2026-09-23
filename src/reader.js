@@ -82,8 +82,10 @@ if (reader) {
       reader
         .querySelectorAll("details")
         .forEach((detail) => (detail.open = false));
-      reader.querySelector("#reading-feedback").textContent =
-        "Talk together, then tap an idea. You can try again.";
+      const feedback = reader.querySelector("#reading-feedback");
+      if (feedback)
+        feedback.textContent =
+          "Talk together, then tap an idea. You can try again.";
       showBeat(0);
     });
   reducedMotion.addEventListener("change", settle);

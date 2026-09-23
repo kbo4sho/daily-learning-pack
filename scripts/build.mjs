@@ -1,4 +1,4 @@
-import { mkdir, rm, writeFile, copyFile } from "node:fs/promises";
+import { mkdir, rm, writeFile, copyFile, cp } from "node:fs/promises";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
@@ -18,6 +18,27 @@ await mkdir(`${staging}/pdf`, { recursive: true });
 await mkdir(`${staging}/print`, { recursive: true });
 await mkdir(`${staging}/fonts`, { recursive: true });
 const assets = ["styles.css", "app.js"];
+if (pack.kind === "curiosity-bean") {
+  assets.push(
+    "curiosity.css",
+    "curiosity.js",
+    "reader.js",
+    "inchworm.js",
+    "zine.js",
+  );
+  await mkdir(`${staging}/assets/curiosity-bean`, { recursive: true });
+  for (const art of pack.plates)
+    await copyFile(art.src, `${staging}/${art.src}`);
+  await mkdir(`${staging}/vendor`, { recursive: true });
+  await copyFile(
+    "node_modules/pdf-lib/dist/pdf-lib.min.js",
+    `${staging}/vendor/pdf-lib.min.js`,
+  );
+  await copyFile(
+    "node_modules/pdf-lib/LICENSE.md",
+    `${staging}/vendor/pdf-lib-LICENSE.md`,
+  );
+}
 if (pack.kind === "inchworms")
   assets.push("inchworms.css", "inchworm.js", "reader.js");
 for (const file of assets) await copyFile(`src/${file}`, `${staging}/${file}`);
@@ -26,7 +47,7 @@ const fonts = [
   ["nunito-sans", "nunito-sans-latin-400-normal.woff2"],
   ["nunito-sans", "nunito-sans-latin-700-normal.woff2"],
 ];
-if (pack.kind === "inchworms")
+if (["inchworms", "curiosity-bean"].includes(pack.kind))
   fonts.push(
     ["newsreader", "newsreader-latin-400-normal.woff2"],
     ["newsreader", "newsreader-latin-500-normal.woff2"],
@@ -39,10 +60,9 @@ for (const [family, file] of fonts)
     `node_modules/@fontsource/${family}/files/${file}`,
     `${staging}/fonts/${file}`,
   );
-const fontFamilies =
-  pack.kind === "inchworms"
-    ? ["fraunces", "nunito-sans", "newsreader", "inter"]
-    : ["fraunces", "nunito-sans"];
+const fontFamilies = ["inchworms", "curiosity-bean"].includes(pack.kind)
+  ? ["fraunces", "nunito-sans", "newsreader", "inter"]
+  : ["fraunces", "nunito-sans"];
 for (const family of fontFamilies)
   await copyFile(
     `node_modules/@fontsource/${family}/LICENSE`,
@@ -91,7 +111,6 @@ try {
 }
 await mkdir("output/pdf", { recursive: true });
 await rm("dist", { recursive: true, force: true });
-const { cp } = await import("node:fs/promises");
 await cp(staging, "dist", { recursive: true });
 for (const name of Object.keys(documents))
   await copyFile(`${staging}/pdf/${name}.pdf`, `output/pdf/${name}.pdf`);

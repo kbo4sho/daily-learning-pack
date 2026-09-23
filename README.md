@@ -151,3 +151,26 @@ pdftoppm -scale-to 1200 -png output/pdf/parent-answer-key.pdf tmp/pdfs/key
 ```
 
 Inspect every rendered page after changing print content or layout. Build artifacts are ignored by Git and recreated by the documented build; review stills and the source pack are committed.
+
+## Curiosity-led bean mock · internal dogfood
+
+This branch's `curiosity bean` (also `bean sprout`, `bean sprouts`, or `curiosity bean sprout`) opens **A bean becomes.** with four child-wonder questions and four generated Wonder Together scenic explainers. Choose a question and look together before opening its optional explanation. The accepted plates existed before the story and activities were authored. Exact generation prompts, original PNGs, JPEG display copies, and SHA-256 hashes are in [`assets/curiosity-bean/`](assets/curiosity-bean/).
+
+```sh
+npm ci
+npx playwright install chromium webkit
+npm run generate -- "curiosity bean"
+npm test
+npm run test:browser
+PORT=4175 npm run preview
+```
+
+Open **http://127.0.0.1:4175/daily-learning-pack/**. Wonder → Read together → Math → Writing all return to the same four scenes. Reading uses the existing Practices-class reader: cover/open, parent reads, child Next, six short beats, opacity-only entrance, and reduced-motion stillness. Math uses an explicitly pretend growth notebook (14 − 8, 23 + 9, and elapsed days). Writing lets the family choose a scene, borrow a frame, and draw, speak, or type. A typed draft survives section switches but is never saved or sent.
+
+**Download foldable story** sits beside the family reader controls. This working client-side PDF lightly ports [super-dad PR #37](https://github.com/kbo4sho/super-dad/pull/37). It lazily loads a locally bundled `pdf-lib`, embeds the same six story passages and their plate bindings, and makes exactly one **792 × 612 pt landscape US Letter** sheet. Top row: **5, 4, 3, 2**, upside down; bottom: **6, 7, 8, 1**, upright. Page 8 contains fold steps, a tiny center-cut diagram, and a parent-led note. Shorter stories receive quiet pause panels; more than six beats or overflowing copy fails visibly instead of silently omitting words.
+
+Print **one-sided, Letter landscape, actual size / 100%, no fit, headers and footers off**. Fold long edge to long edge and reopen; fold short edge to short edge, then in half again; reopen to eight boxes. A grown-up cuts only the solid center line across the middle two boxes. Refold lengthwise with print outside, push the ends into a cross, and wrap with page 1 in front. Physical print/fold review is still a captain check.
+
+The usual three still Letter worksheets and separate parent key remain available, using labeled, unfilled line drawings for B&W printing. Browser Print does not expand hidden story beats. Without JavaScript, all questions, scenes, and reading passages remain visible; worksheet downloads still work.
+
+`npm run build` still restores **engines**. CI checks the existing packs before generating this dogfood preview artifact. No deployment, public navigation, runtime AI, merge, or changes to PR #7 are part of this task. `noindex` is a crawler hint, not access control: keep previews local or inside the private repository's artifacts. See [`OUTCOME.md`](OUTCOME.md) for plate bindings, evidence, limits, and captain review asks.
