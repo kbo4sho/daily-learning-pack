@@ -1,0 +1,70 @@
+{
+  "tool": "Codex built-in image_gen",
+  "task": "wd-bean-sprout-astra",
+  "plates": [
+    {
+      "name": "cover",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. A quiet invitation to a garden: a low terracotta pot holds one very young bean plant with two simple true leaves and the two smaller plump seed halves below. Beside it, one ivory dry bean rests on the pale stone sill; beyond, a softly suggested kitchen garden glows in early light. Main plant and bean in central two thirds, earth and soft shadow ground the scene. One tender, immersive landscape scene.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/cover.webp",
+      "sourceGeneration": "exec-0938067a-b7b5-4027-aa32-77ea486a0466.png",
+      "sha256": "d80c240a314dec4542edf1960869c43c98e1d060d6de27c44f180c6f9b9fd8ed"
+    },
+    {
+      "name": "dry-seed",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. A macro garden field-guide view of ONE intact dry ivory bean seed resting in a shallow hollow of loose brown garden soil, no water yet. Clearly show its kidney shape and small oval hilum along the inward curve. The seed is large and central, beautifully observed, not anthropomorphic. No sprout, roots or leaves. Background resolves into warm paper and soft garden light.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/dry-seed.webp",
+      "sourceGeneration": "exec-35fb78d8-2a1c-4561-8840-b846c76545c7.png",
+      "sha256": "c38e11b4283a29ece8957b6b9c1c67498e7fc85b1d81e59115fc5d77a3b9a2d6"
+    },
+    {
+      "name": "soak",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. A macro field-guide scene of ONE swollen ivory common bean seed nestled in damp loose soil. A single clear water droplet rests against the seed coat and moisture gently darkens the soil. Coat still closed and smooth; seed fuller than a dry bean. No roots, shoots, leaves, bowls, flooding or deep standing water. Show the mechanism of water reaching a seed with quiet light and tactile clarity.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/soak.webp",
+      "sourceGeneration": "exec-a3a9904c-c564-44cc-a02a-42d52f377434.png",
+      "sha256": "3f7f91bd187a3c15ea6e05841a04a35099fe2cb0d7e1eb1ffdf5e32132dd9870"
+    },
+    {
+      "name": "split",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. Close botanical field-guide scene: ONE swollen ivory bean nestled just below the soil surface in a gently exposed earthen hollow. Its thin tan seed coat has just split along the inner seam, exposing two ivory seed halves within. Only a tiny pale root tip begins to peek from the lower inner end of the seam. No green stem or leaves yet. Render a delicate broken seed coat, not a bean chopped in half.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/split.webp",
+      "sourceGeneration": "exec-fef38edb-2446-4f99-a6ee-f418f91274a2.png",
+      "sha256": "98b966beafc2d2bfceb911f19b32d2d134eae9443b83e61820b0a8ab872e5da1"
+    },
+    {
+      "name": "root",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. Close botanical explanatory scene in a gently exposed soil cutaway. ONE sprouting ivory common bean lies just beneath the soil surface, split tan seed coat still partly attached to its two plump cotyledons. A single clear white primary root grows DOWN from its inner lower end into dark crumbly earth, with just a few tiny side rootlets. No upward green shoot or leaves yet. Root and bean fully visible, prominent against earth, garden surface near upper third.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/root.webp",
+      "sourceGeneration": "exec-65e52a61-745b-43ee-b7cc-b0733e5e130d.png",
+      "sha256": "78786f8ba779cc453c37926a9c24c00063f6146a0964a69ddedd85a301ce5bd0"
+    },
+    {
+      "name": "shoot",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. One young common bean in a gentle soil cutaway at the moment the shoot emerges: a pale green hypocotyl rises from below ground in a curved hook, lifting two closed plump ivory seed halves at its end toward/just above the soil surface. A distinct white primary root continues DOWN into loose brown soil, a few lateral rootlets. Do not attach leaves to the root; no true leaves unfolded yet. Above the soil is quiet warm garden light. Educational view with the underground connection clearly visible.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/shoot.webp",
+      "sourceGeneration": "exec-cb2688a1-c784-4fcf-9d96-9ff3b4b44264.png",
+      "sha256": "9927ebe22eaf2b9897b5fc854d8fa0a41edd474f11c78d5f76afcc931c1fa3ba"
+    },
+    {
+      "name": "first-leaves",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. One very young common bean plant in a gentle soil cutaway, upright pale green stem above soil, TWO unfolded simple oval/heart-shaped green true leaves opposite each other at the TOP of stem, and TWO smaller plump pale seed halves (cotyledons) attached LOWER on the stem above soil. White root branches downward below soil. The true leaves must look distinct from the rounded seed halves. Soft sunlight falls onto the green leaves. One accurate modest seedling, no mature vine or pods.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/first-leaves.webp",
+      "sourceGeneration": "exec-6bd59fce-a5c0-4a5e-9959-bdf524984917.png",
+      "sha256": "ba307bd986293929df666739f208ca18354655bd4227be359d6d9512b2b9ea5f"
+    },
+    {
+      "name": "garden-notes",
+      "prompt": "Use case: scientific-educational / illustration-story. Asset: one landscape 3:2 scenic plate for a Grade 2 Wonder Together family read-aloud. Hand-painted editorial botanical illustration, warm ivory cotton paper, delicate graphite contours, translucent gouache washes, muted olive greens and umber, soft natural morning light. A coherent small garden / windowsill world, rich tactile craftsmanship, calm spacious composition, exquisite picture-book field-guide quality. No typography, letters, numbers, logos, watermark, people, animals, mascots, neon, clipart, stock photography, decorative borders, montage or multiple panels. Show one main subject large enough to inspect on a phone. Botanical accuracy: common bean, Phaseolus vulgaris. One coherent quiet botanical study scene on a garden windowsill: a small young bean plant in a low terracotta pot, a plain wooden measuring ruler resting vertically next to the stem (fine tick marks only, NO numerals), and an open blank cream notebook with a graphite pencil in the foreground. Two broad simple true leaves and small seed halves lower on stem. This is an illustration inviting observation and drawing, not a data chart. Warm paper, soft morning shadows, garden suggested beyond, no people or lettering.",
+      "dimensions": [1536, 1024],
+      "asset": "assets/bean-sprout/garden-notes.webp",
+      "sourceGeneration": "exec-72b426fa-dce5-45c6-a7c8-3109b14bb4dd.png",
+      "sha256": "cc27b44fe5f061765872e4a1578eb27051aff9d43175a307b1ad7cfad9b946df"
+    }
+  ]
+}

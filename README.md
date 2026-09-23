@@ -21,6 +21,7 @@ npm run build
 ```sh
 npm run generate -- "engines"
 npm run generate -- "inch worms"
+npm run generate -- "bean sprout"
 npm run generate -- "fractions as fair sharing"
 npm run generate -- "weather"
 ```
@@ -41,9 +42,9 @@ Print the kid PDF at **100% / actual size**, one-sided, on US Letter. Everything
 
 ### What “topic in → day out” means in this scaffold
 
-- `engines`, `inch worms`, and `fractions as fair sharing` (ignoring case and extra spaces) select their carefully authored packs. No topic argument selects engines.
+- `engines`, `inch worms`, `bean sprout`, and `fractions as fair sharing` (ignoring case and extra spaces) select their carefully authored packs. No topic argument selects engines.
 - Any other topic produces a **topic inquiry pack**: count the words and letters in that topic, explore grouping, read an original question-led story about it, and write an on-topic question. All three subjects use the same input string. No second input or reference book is required.
-- Inquiry packs do **not** claim to teach factual concepts about arbitrary topics. They are usable language-and-counting activities, and a starting point for authoring a topic-specific lesson. The site and parent note label this mode. This repository contains three curated days, not a curriculum or an automatic factual lesson writer.
+- Inquiry packs do **not** claim to teach factual concepts about arbitrary topics. They are usable language-and-counting activities, and a starting point for authoring a topic-specific lesson. The site and parent note label this mode. This repository contains four curated days, not a curriculum or an automatic factual lesson writer.
 - Topics must contain letters and be 1–80 characters after whitespace normalization. The content is English; the shipped font subsets target Latin-script topics. HTML metacharacters are escaped. Generation rejects print overflow instead of delivering clipped worksheets.
 
 ## Grade 2 authoring default
@@ -77,6 +78,14 @@ Open **http://127.0.0.1:4173/daily-learning-pack/**. `inchworm`, `inchworms`, `i
 
 **Family reading (dogfood):** On the inchworms day, Reading opens with a cover invite, then one teaching beat per screen. Grown-up reads; child taps **Open the story** / **Next**. Teaching motion is the letterbox worm morph; page enter is opacity-only. Print story stays the separate B&W-safe Letter PDF (not a browser Print of the digital reader).
 
+## Bean sprout · internal dogfood
+
+`npm run generate -- "bean sprout"` (or `"bean sprouts"`), then `npm run preview`. Open **http://127.0.0.1:4173/daily-learning-pack/** and choose **Reading** to open _A seed takes its time_. This Grade 2 day reuses the inchworms/Practices family reader: a garden cover, six growth beats, two conversations, a misconception check, and a quiet ending. Grown-up reads; child taps Next. Wonder Daily stays hidden from public Wonder Together navigation; this edition also sets `noindex`. `npm run build` still restores engines.
+
+Eight Codex-generated scenic plates live in [`assets/bean-sprout/`](assets/bean-sprout/); every reader beat has a plate, with garden notes reused in math and writing. Exact prompts and asset hashes are in [`prompts.json`](assets/bean-sprout/prompts.json). Craft locks: Newsreader + Inter and paper/ink reuse the existing room; botanical gouache scenes make the changes inspectable; page enter is opacity-only; a small growth strip morphs only on forward steps and settles with reduced motion. The six story passages and questions come only from `reading.beats`; the still Letter twin derives from them, using line drawings and labels for B&W printing. Browser Print does not expand the reader.
+
+Math reads a **pretend** day/height table, solves **14 − 8** and **23 + 9**, and counts **8 elapsed days** between Day 4 and Day 12. Writing offers a three-moment drawing, labels, First/Next/Then frames, and dictation. Separate answers and parent notes explain stored seed food, later leaf food-making, and variable growth. Author references: [Illinois Extension, Germination](https://web.extension.illinois.edu/gpe/case3/c3facts3.html) and [Seed Structure](https://web.extension.illinois.edu/gpe/case3/c3facts2.html). No source or AI service is called during build or use. Run `npm test` and `npm run test:browser` after generating this day; the browser matrix covers every plate and beat, keyboard/touch, motion, elapsed-day counting, draft retention, no-JS reading, and accessibility. PR checks include this day and its grayscale print review pages.
+
 ## View locally
 
 ```sh
@@ -106,7 +115,7 @@ The deployment workflow is manual and restricted to `main`; PR checks have no de
 
 | Field                            | Contract                                                                                                                    |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `schemaVersion`, `kind`, `topic` | Version, interaction type (`engines`, `inchworms`, `fair-sharing`, or `topic-inquiry`), single source topic                 |
+| `schemaVersion`, `kind`, `topic` | Version, interaction type (`engines`, `inchworms`, `beansprout`, `fair-sharing`, or `topic-inquiry`), single source topic   |
 | `gradeLevel`, `ageRange`         | Default `2` and `[7, 8]`, included in curated packs and generated inquiry metadata                                          |
 | `title`, `question`, `idea`      | Day title, curiosity prompt, explicit core idea                                                                             |
 | `math`                           | Title, introduction, three tasks, extension, timed parent note; engines and inchworms add two `workspaces` equation prompts |
@@ -125,7 +134,7 @@ To author another curated topic later, copy the reference JSON, write and review
 - **Touch and attention matter.** Large controls, keyboard support, visible focus, announced feedback, optional gentle motion, and `prefers-reduced-motion` support. No timers, scores, or login gates.
 - **Progress is forgiving.** A child can revisit every subject. Talk, pointing, drawing, and dictation are valid ways to work. Without JavaScript, all three lessons and PDF links remain readable.
 
-Fonts are distributed under their bundled SIL Open Font Licenses in the build’s `fonts/` directory. The site uses no raster art or third-party requests.
+Fonts are distributed under their bundled SIL Open Font Licenses in the build’s `fonts/` directory. Bean sprout includes locally bundled generated WebP art; no day makes third-party requests.
 
 ## Verification
 

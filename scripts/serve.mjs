@@ -10,6 +10,7 @@ export function serve(root = resolve("dist"), port = 4173, host = "127.0.0.1") {
     ".woff2": "font/woff2",
     ".pdf": "application/pdf",
     ".png": "image/png",
+    ".webp": "image/webp",
   };
   const server = createServer(async (req, res) => {
     try {
