@@ -30,7 +30,7 @@ All four accepted **1536 × 1024** PNG originals and their JPEG delivery copies 
 - **Writing:** choose the seed, root, or leaf scene; the plate and matching sentence frame change together. Draw a part and action arrow, say the idea, then write 1–3 sentences or dictate. Word bank, read-back invitation, temporary textarea, and a quiet finish support the parent.
 - **Parent support:** each activity has pacing guidance; the separate parent answer key explains the math, story evidence, acceptable written/oral responses, and scientific simplifications. The guidance welcomes stopping early.
 
-The three existing portrait Letter worksheet outputs and separate parent key are intact. Their B&W-safe unfilled drawings retain each plate's mechanism without requiring colored or photographic printing. The still story uses exactly the same six passages. Browser Print does not expand hidden story beats.
+The three existing portrait Letter worksheet outputs and separate parent key are intact. Math and writing print lead with the committed scenic plates (notice; wake/root/leaf), captioned and grayscale-treated so the paper object matches the foldable story family. The still story keeps compact line drawings so the same six passages fit one Letter page. Browser Print does not expand hidden story beats.
 
 Author checks: [Illinois Extension on germination](https://web.extension.illinois.edu/gpe/case3/c3facts3.html), [seed structure](https://web.extension.illinois.edu/gpe/case3/c3facts2.html), [leaves](https://web.extension.illinois.edu/gpe/case1/c1facts2c.html), and [NASA on plant gravity perception](https://www.nasa.gov/ames/space-biosciences/plant-gravity-perception-spacex-13/). These are author references; no scientific source is fetched during build or use.
 
