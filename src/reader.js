@@ -19,11 +19,10 @@ if (reader) {
     const beat = beats[index];
     if (beat.dataset.readerPose !== undefined)
       drawWormPose(beat.querySelector("svg"), Number(beat.dataset.readerPose));
-    if (beat.dataset.growthPose !== undefined)
-      drawGrowthPose(
-        beat.querySelector('[aria-current="step"] svg'),
-        Number(beat.dataset.growthPose),
-      );
+    if (beat.dataset.growthPose !== undefined) {
+      const growthSvg = beat.querySelector('[aria-current="step"] svg');
+      if (growthSvg) drawGrowthPose(growthSvg, Number(beat.dataset.growthPose));
+    }
   }
 
   function showBeat(destination, focus = true) {
@@ -76,6 +75,7 @@ if (reader) {
       const svg = beat.querySelector(
         isGrowth ? '[aria-current="step"] svg' : "svg",
       );
+      if (!svg) return;
       drawPose(svg, from);
       let start;
       const tick = (time) => {

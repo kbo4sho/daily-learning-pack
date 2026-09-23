@@ -27,7 +27,8 @@ export function beanReader(p) {
             ? "THE END · A LITTLE DISCOVERY, TOGETHER"
             : "PAUSE & TALK TOGETHER";
     const evidence = b.evidence
-      ?.map((id) => p.reading.beats.find((beat) => beat.id === id).passage)
+      ?.map((id) => p.reading.beats.find((beat) => beat.id === id)?.passage)
+      .filter(Boolean)
       .join(" ");
     return `<article class="reader-beat bean-beat" data-reader-beat="${esc(b.id)}" data-beat-type="${b.type}"${b.growthPose !== undefined ? ` data-growth-pose="${b.growthPose}"` : ""} aria-labelledby="bean-beat-${i}"><div class="reader-copy"><p class="eyebrow">${eyebrow}</p><h3 id="bean-beat-${i}" tabindex="-1">${esc(b.title)}</h3>${scenicPlate(b.plate)}${b.type === "story" ? growthStrip(p, b.growthPose) : ""}<p class="reader-passage">${esc(b.passage)}</p>${word ? `<details class="word reader-word"><summary>${esc(word.word)}<span> · a word to try</span></summary><p>${esc(word.meaning)}</p></details>` : ""}${evidence ? `<details class="word reader-evidence"><summary>Look back at the story</summary><p>${esc(evidence)}</p></details>` : ""}${b.type === "cover" ? '<p class="reader-aside">One little page at a time. No need to hurry.</p>' : ""}${b.type === "check" ? `<div class="quiz-options">${b.choices.map((c, n) => `<button data-reading-answer="${n}">${esc(c)}</button>`).join("")}</div><p id="reading-feedback" class="reader-aside" aria-live="polite">Talk together, then tap an idea. You can try again.</p>` : ""}${b.type === "end" ? `<div class="reader-end-actions"><button class="primary-button" data-finish="reading" data-next="writing">On to writing <span aria-hidden="true">→</span></button><a href="./pdf/reading.pdf">Print the story ↗</a><button class="text-button" data-reader-restart>Read again</button></div>` : ""}</div></article>`;
   });
