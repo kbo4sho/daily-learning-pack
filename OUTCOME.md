@@ -11,7 +11,7 @@ Draft: **https://github.com/kbo4sho/daily-learning-pack/pull/11**
 ## Craft decisions
 
 - **Not a stacked deck, not a SaaS card grid.** Approved days stand in an `auto-fill` shelf of 236px packets. A single morning stays packet-sized and left-aligned; it does not stretch into a banner.
-- **Packet silhouette.** Tapered flap (`clip-path`) plus `filter: drop-shadow` so the cut shape actually reads (box-shadow does not follow the taper). Tear strip at the top. Plate sits in an inset window. Packets stand on a gold-edged shelf board. Gold is lot stamp + shelf hairlines only.
+- **Packet silhouette.** Manila packet paper (`#f3ead4`) on cream page so the object reads. Tapered flap (`clip-path`) plus `filter: drop-shadow` (box-shadow does not follow the taper). Kraft flap, tear strip at the top, inset plate window, gold-edged shelf board. Gold is lot stamp + shelf hairlines only.
 - **That day’s still.** Face comes from the archive row’s image fields if present, else `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock.
 - **Copy.** Killed “quiet paper, quiet ink.” House bar: “For this family. Grade 2.” Shelf: “On the shelf.” Footer keeps the house line and the dogfood / no-marketing note.
 - **Leo door stays one tap.** Large type + `./today/` button. The standing packet on the right is the same morning’s plate, decorative. Shelf packet links to the day URL.
