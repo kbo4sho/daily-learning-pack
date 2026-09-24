@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity-bean",
+  "slug": "curiosity-bean",
+  "topic": "curiosity bean",
+  "teaser": "So much can happen before we see a leaf.",
+  "aliases": [
+    "curiosity bean sprout",
+    "bean sprout",
+    "bean sprouts"
+  ],
+  "gradeLevel": 2,
+  "ageRange": [
+    7,
+    8
+  ],
+  "title": "A bean becomes.",
+  "question": "So much can happen before we see a leaf.",
+  "idea": "A bean holds a tiny plant and stored food. Roots, shoots, and leaves each have work to do.",
+  "curiosity": {
+    "intro": "Start with a question. Look for a little while. There is no hurry to know.",
+    "questions": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "question": "What is waking up inside this little bean?",
+        "notice": "Look inside the seed coat. What might those two pale halves be keeping safe?",
+        "say": "A tiny plant is already inside. The bean holds food to help it begin.",
+        "try": "Curl one hand like a seed. Slowly uncurl a finger for its first root."
+      },
+      {
+        "id": "root",
+        "plate": "root",
+        "question": "How does a root find its way when it cannot see?",
+        "notice": "Follow the white root down. Now follow the little shoot up. What do you notice?",
+        "say": "The root does not need eyes. It responds to gravity, which helps it grow down.",
+        "try": "Trace the two directions in the air: root down, shoot up."
+      },
+      {
+        "id": "leaf",
+        "plate": "leaf",
+        "question": "What can a leaf do that a seed cannot?",
+        "notice": "Find the three notes around the leaves. Where does each arrow lead?",
+        "say": "Green leaves use light, water, and part of the air to make new food. The seed began with food stored inside.",
+        "try": "Trace a path from the roots to a leaf. Then point to the light."
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "question": "How could we notice a change too slow to watch?",
+        "notice": "Find the earlier mark and today's tip. What could a drawing help us remember?",
+        "say": "We can compare notes from different days. Growth can happen too slowly for our eyes to catch it happening.",
+        "try": "Hold a finger at the earlier mark. With your other hand, show the space up to today's tip."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/curiosity-bean/01-wake.jpg",
+      "original": "assets/curiosity-bean/01-wake.png",
+      "title": "A beginning inside",
+      "alt": "Big and Little Wonderer look into an illustrated pot cutaway. A split bean holds two pale food stores and a first root pointing down.",
+      "caption": "An imagined window into the soil. The seed is enlarged to help us see."
+    },
+    {
+      "id": "root",
+      "src": "assets/curiosity-bean/02-root.jpg",
+      "original": "assets/curiosity-bean/02-root.png",
+      "title": "Two ways to grow",
+      "alt": "The same windowsill pot shows a young shoot above the soil and a long branching root below. Notes say shoot up and root down.",
+      "caption": "Roots and shoots respond to their surroundings. Plants do not need eyes."
+    },
+    {
+      "id": "leaf",
+      "src": "assets/curiosity-bean/03-leaf.jpg",
+      "original": "assets/curiosity-bean/03-leaf.png",
+      "title": "Leaves in the light",
+      "alt": "Two open green bean leaves meet arrows for light and air. A water arrow leads up the stem from roots below the soil.",
+      "caption": "Leaves make new food using light, water, and carbon dioxide from the air."
+    },
+    {
+      "id": "notice",
+      "src": "assets/curiosity-bean/04-notice.jpg",
+      "original": "assets/curiosity-bean/04-notice.png",
+      "title": "A change worth keeping",
+      "alt": "A leafy bean stands beside a measuring stick with an earlier mark below today's tip. An open notebook holds two plant sketches.",
+      "caption": "Compare from the soil level. This painted stick is not a scale ruler."
+    }
+  ],
+  "reading": {
+    "title": "The quiet work of growing",
+    "coverPlate": "wake",
+    "coverText": "A little bean. A big beginning. Grown-up reads; little wonderer turns the page.",
+    "parentNote": "About 15 min: look at the scenes, read the six short beats, then talk. Ask what changed in your child's idea. Point, speak, or pause; no independent reading required.",
+    "beats": [
+      {
+        "id": "begin",
+        "plate": "wake",
+        "title": "Small, but not empty",
+        "passage": "Little Wonderer looks at the bean. “Is anything in there?” A tiny plant is tucked inside. Stored food will help it begin.",
+        "prompt": "Point to the pale food stores."
+      },
+      {
+        "id": "directions",
+        "plate": "root",
+        "title": "Down and up",
+        "passage": "With water, air, and enough warmth, the bean starts to grow. A root comes out first. It responds to gravity and grows down. A shoot grows up.",
+        "prompt": "Trace each path with a finger."
+      },
+      {
+        "id": "food",
+        "plate": "leaf",
+        "title": "A new way to make food",
+        "passage": "Leaves open in the light. They use light, water, and carbon dioxide from the air to make food. The little plant can make more of what it needs.",
+        "prompt": "Follow the three orange notes."
+      },
+      {
+        "id": "change",
+        "plate": "notice",
+        "title": "Too slow to see?",
+        "passage": "“It looks the same,” says Little Wonderer. Big Wonderer opens their notebook. An earlier mark is lower than today's tip. Their notes help them see a change.",
+        "prompt": "What did the notebook help them remember?"
+      },
+      {
+        "id": "rethink",
+        "plate": "wake",
+        "title": "Look back at the beginning",
+        "passage": "“Did the bean need leaves to begin?” they wonder. Look inside it again. The tiny plant had stored food before it had open leaves.",
+        "prompt": "What in the picture helps explain your answer?"
+      },
+      {
+        "id": "keep",
+        "plate": "notice",
+        "title": "A question to keep",
+        "passage": "They sit together by the window. Growing takes time. “What might change next?” asks Big Wonderer. Little Wonderer has a new question to draw.",
+        "prompt": "Tell each other one thing you still wonder."
+      }
+    ],
+    "words": [
+      {
+        "word": "stored",
+        "meaning": "kept for later"
+      },
+      {
+        "word": "shoot",
+        "meaning": "a young stem and its leaves"
+      },
+      {
+        "word": "compare",
+        "meaning": "look for what is alike or different"
+      }
+    ],
+    "questions": [
+      "What helped the bean begin before its leaves opened?",
+      "How did their notes help them notice growth?"
+    ]
+  },
+  "math": {
+    "title": "How much did it grow?",
+    "plate": "notice",
+    "intro": "Look at the earlier mark in the picture. Now use these pretend notebook measurements, all taken from the soil to the plant's tip.",
+    "measurements": [
+      {
+        "day": 4,
+        "height": 8
+      },
+      {
+        "day": 8,
+        "height": 14
+      },
+      {
+        "day": 12,
+        "height": 23
+      }
+    ],
+    "tasks": [
+      {
+        "plate": "notice",
+        "prompt": "On Day 4 it was 8 cm tall. On Day 8 it was 14 cm. How much taller?",
+        "equation": "14 − 8 =",
+        "hint": "Start at 8. Hop 2 to 10, then 4 to 14.",
+        "answer": "6 cm taller. 2 + 4 = 6."
+      },
+      {
+        "plate": "notice",
+        "prompt": "On Day 12 it was 23 cm. In our number story, it later grows 9 cm more. How tall then?",
+        "equation": "23 + 9 =",
+        "hint": "Add 7 to reach 30. How much of the 9 is left?",
+        "answer": "32 cm tall. 23 + 7 + 2 = 32."
+      },
+      {
+        "plate": "notice",
+        "prompt": "How many days pass from Day 4 to Day 12? Count the spaces between days.",
+        "equation": "12 − 4 =",
+        "hint": "Day 4 to Day 5 is one day. Count forward from there.",
+        "answer": "8 days. Count the 8 gaps, not all 9 day labels."
+      }
+    ],
+    "extension": "Would every real bean grow this much? No. These numbers are invented for our math story; real growth varies.",
+    "parentNote": "About 15 min: 3 to compare the picture and table, 9 to draw or calculate, 3 to explain. Use tens-and-ones or number-line hops. Numbers are pretend; do not measure the illustration."
+  },
+  "writing": {
+    "title": "Tell the bean's small story.",
+    "intro": "Choose a scene. Look closely, say your idea, then draw or write what the picture helped you understand.",
+    "plateIds": [
+      "wake",
+      "root",
+      "leaf"
+    ],
+    "draw": "Draw the seed, root, or leaf you chose. Label one part and add an arrow to show what it does.",
+    "starter": "My words about this scene",
+    "frames": [
+      {
+        "plate": "wake",
+        "start": "Inside the bean,",
+        "hint": "What is kept there?"
+      },
+      {
+        "plate": "root",
+        "start": "The root grows",
+        "hint": "Where does it go? What does it take in?"
+      },
+      {
+        "plate": "leaf",
+        "start": "The leaf uses",
+        "hint": "What helps it make food?"
+      }
+    ],
+    "words": [
+      "seed",
+      "stored food",
+      "root",
+      "shoot",
+      "leaf",
+      "light",
+      "water"
+    ],
+    "check": "Read it together. Can you point to the part your words explain? Add a capital letter and an ending mark if you are writing.",
+    "parentNote": "About 15 min: 3 to choose and talk, 4 to draw, 6 to write 1–3 sentences, 2 to read back. Accept invented spelling, speech, or dictation. One careful idea is enough."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "6 cm taller: 14 − 8 = 6. Bridge through ten: 8 + 2 + 4 = 14."
+    },
+    {
+      "label": "Math · 2",
+      "text": "32 cm tall: 23 + 9 = 32. Add 7 to make 30, then add the remaining 2."
+    },
+    {
+      "label": "Math · 3",
+      "text": "8 elapsed days: 12 − 4 = 8. There are nine labels from 4 through 12, but only eight gaps."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "Stored food inside the seed helps the tiny plant begin, before open leaves make new food. Point to the pale halves in the first plate."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Their notebook kept an earlier height. Comparing it with today's tip made the slow change easier to notice."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a drawing, dictation, or 1–3 sentences tied to a scene. Possible idea: The leaf uses light, water, and carbon dioxide from the air to make food."
+    }
+  ],
+  "parentGuidance": "Wonder first; explanations can wait. Images are simplified, enlarged cutaways, not photographs or a timed growth record. Roots respond to gravity and other conditions; they do not think or see. Seeds need water, oxygen, and suitable warmth; the bean begins with stored food. Green leaves later make food. No real planting is required. Work together and stop when you have had enough.",
+  "sources": [
+    {
+      "label": "Illinois Extension · Germination",
+      "url": "https://web.extension.illinois.edu/gpe/case3/c3facts3.html"
+    },
+    {
+      "label": "Illinois Extension · Seed structure",
+      "url": "https://web.extension.illinois.edu/gpe/case3/c3facts2.html"
+    },
+    {
+      "label": "Illinois Extension · Leaves",
+      "url": "https://web.extension.illinois.edu/gpe/case1/c1facts2c.html"
+    },
+    {
+      "label": "NASA · Plant gravity perception",
+      "url": "https://www.nasa.gov/ames/space-biosciences/plant-gravity-perception-spacex-13/"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 name: Publish learning pack to Pages
-# Deliberately manual: opening this PR does not publish or merge anything.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,9 +19,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run site
-      - run: npm test
+      - name: Apply public archive chrome
+        run: npm run archive
+      - name: Confirm committed view artifacts
+        run: |
+          test -f dist/index.html
+          test -f dist/today/index.html
+          test -f dist/archive/index.html
+          test -f dist/.nojekyll
+          test -f src/archive.css
+          test -f src/archive-render.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

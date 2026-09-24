@@ -1,11 +1,29 @@
 import { esc } from "./html.mjs";
-import { formatArchiveDate } from "./archive.mjs";
 
+/** Public view date chrome. Same UTC en-GB format as the overnight ship. */
+export function formatArchiveDate(iso) {
+  const [year, month, day] = String(iso).split("-").map(Number);
+  if (!year || !month || !day)
+    throw new Error(`Approved pack date must be YYYY-MM-DD: ${iso}`);
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(year, month - 1, day)));
+}
+
+/**
+ * Archive landing markup. Visual design is unchanged in the generators split.
+ * Seed-packet restyle (`wd-archive-seed-packets-ship`) should edit this file
+ * and `src/archive.css` — not the private generators repo.
+ */
 export function archivePage(
   entries,
   { latest, homePrefix = "./", cssHref = "./archive.css" } = {},
 ) {
-  const today = latest || entries[0];
+  if (!latest) throw new Error("archivePage requires latest (a listed day).");
+  const today = latest;
   const earlier = entries.filter((entry) => entry.slug !== today.slug);
   const todayHref = `${homePrefix}today/`;
   const rows = entries
