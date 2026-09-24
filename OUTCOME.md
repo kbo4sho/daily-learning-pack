@@ -1,93 +1,38 @@
-# Wonder Daily — generators split ship
+# Wonder Daily — archive seed packets
 
-Task: `wd-generators-split-ship`. **Draft PR. Do not merge.**
+Task: `wd-archive-seed-packets-ship`. **Draft PR. Do not merge.**
 
-Public repo stays the view/display layer so [GitHub Pages](https://kbo4sho.github.io/daily-learning-pack/) and [`/today/`](https://kbo4sho.github.io/daily-learning-pack/today/) keep working on the free public Actions/Pages plan. Generators move to a free-tier **private** repo (private Pages would need GitHub Pro; we do not use that).
+Public view restyle only. Rebased onto public `main` after generators-split (#10) landed. No generators returned to this repo.
 
-## Private repo
+## PR
 
-**https://github.com/kbo4sho/daily-learning-generators** (private)
+Draft: **https://github.com/kbo4sho/daily-learning-pack/pull/11**
 
-Created under `kbo4sho`. `gh repo create` failed (`Resource not accessible by integration` for the cloud-agent token). GitHub MCP `create_repository` as kbo4sho succeeded. The cloud-agent `gh` token cannot clone or push the new private repo. Files were added via the GitHub MCP Contents / `push_files` APIs. **`.github/workflows/*` cannot be written** (API 404 without the `workflow` scope). YAML lives in the private repo at `docs/github-workflows/` for the captain to copy.
+## Craft decisions
 
-Generator **source is now in the private repo** (`scripts/`, `src/`, `tests/`, `packs/`, `queue/`, `archive/approved.json`, plus `scripts/sync-to-public.mjs`). Plate **binaries** still seed from public history:
+- **Not a stacked deck, not a SaaS card grid.** Approved days stand in an `auto-fill` shelf of 236px packets. A single morning stays packet-sized and left-aligned; it does not stretch into a banner.
+- **Packet silhouette.** Slight taper (`clip-path` flap), paper surface, thin ink shadow borrowed from Wonder Together Practices covers. Gold is a 1px shelf rule and the lot stamp only.
+- **That day’s still.** Face comes from the archive row’s image fields if present, else `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock.
+- **Copy.** Killed “quiet paper, quiet ink.” House bar: “For this family. Grade 2.” Shelf: “On the shelf.” Footer keeps the house line and the dogfood / no-marketing note.
+- **Leo door stays one tap.** Large type + `./today/` button. The standing packet on the right is the same morning’s plate, decorative. Shelf packet links to the day URL.
+- **Motion.** Hover/focus lifts 7px. `prefers-reduced-motion` drops the lift and all transitions.
+- **No Astra.** Existing day plates were enough.
 
-```sh
-node scripts/seed-assets-from-public.mjs   # curiosity-bean plates @ eeb5ce0
-```
+## Fail-closed latest
 
-Private **check** and **sync** CI do **not** run bootstrap. Locked path:
+`archivePage` throws unless `latest` is passed. `renderArchive` throws if `archive.json.latest` is missing or not in `days[]`. No `entries[0]` / `home[0]` fallback.
+
+## Invariants kept
+
+`noindex, nofollow`. Leo `/today/` door. No Wonder Together marketing nav. `dist/archive.json` still has the one real approved day. `npm run build` / `site` / `overnight` remain private-repo stubs.
+
+## Verify
 
 ```sh
 npm ci
-npx playwright install --with-deps chromium
-node scripts/seed-assets-from-public.mjs
-npm run site
+npm run archive
 npm test
+npm run preview   # http://127.0.0.1:4173/daily-learning-pack/
 ```
 
-`bash scripts/bootstrap-from-public.sh` is **empty-clone recovery only** (local empty or broken private checkout). It is not a CI step. Do not add it to `check.yml` or `sync-public-view.yml`.
-
-## Paths moved (private source of truth)
-
-| Path                                                                                                               | Why                                                 |
-| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `scripts/build.mjs`, `build-site.mjs`, `build-archive.mjs`                                                         | Site / PDF / archive generate                       |
-| `scripts/author-curiosity-pack.mjs`, `overnight-curiosity.mjs`, `intake-theme.mjs`, `editorial-curiosity-pass.mjs` | Overnight author path                               |
-| `scripts/serve.mjs`                                                                                                | Preview (copy remains public for committed `dist/`) |
-| `src/pack.mjs`, `archive.mjs`, `curiosity-render.mjs`, `render.mjs`, `site-assets.mjs`                             | Build-only Node (private)                           |
-| Kid-day `src/*.js` / subject CSS                                                                                   | Compiled into `dist/` by the private build          |
-| `tests/overnight.test.mjs`, `curiosity.test.mjs`, `pack.test.mjs`, `archive.test.mjs`, `inquiry-build.mjs`         | Generator tests                                     |
-| `queue/`, `archive/approved.json`, `packs/`, `assets/`, `docs/overnight.md`                                        | Author/overnight/registry                           |
-
-Public leftovers: thin `scripts/moved.mjs` stubs, `scripts/serve.mjs`, `scripts/render-archive.mjs`, **archive chrome source** (`src/archive-render.mjs`, `src/archive.css`, `src/html.mjs`), `tests/view.test.mjs`, committed `dist/`, stills, DESIGN.md.
-
-## Public paths that own archive markup/CSS
-
-For follow-on **`wd-archive-seed-packets-ship`** (seed-packet cards; no generator work). Visual design was **not** changed in this split.
-
-| Public path                  | Role                                                                                                             |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `src/archive-render.mjs`     | **Landing HTML template** (`archivePage`, Leo door, approved-morning rows). Edit this for card markup.           |
-| `src/archive.css`            | **Landing / card chrome CSS** (copied to `dist/archive.css` and `dist/archive/archive.css`).                     |
-| `src/fonts/`                 | Vendored Newsreader + Inter woff2 (copied to `dist/fonts` and `dist/archive/fonts`).                             |
-| `src/html.mjs`               | HTML escaping used by the landing template.                                                                      |
-| `scripts/render-archive.mjs` | Thin view rebuild: reads `dist/archive.json`, writes landings, copies CSS/fonts, strips unused root day runtime. |
-| `dist/index.html`            | Root archive landing (generated from the public template).                                                       |
-| `dist/archive/index.html`    | Nested `/archive/` copy of the same chrome.                                                                      |
-| `dist/archive.json`          | **Data only** (from private `npm run site` / sync). Do not put card layout here.                                 |
-
-`npm run archive` reapplies public chrome after a private dist sync so seed-packet edits are not locked inside `daily-learning-generators`. Pages and `check.yml` run that script. Private generators may still emit a landing for local preview; **public `src/archive-*` is the Pages source of truth.**
-
-## Connection design
-
-Preferred: private Actions workflow **Sync built view to public pack** builds `npm run site`, then `scripts/sync-to-public.mjs` opens a **draft** PR on this repo updating `dist/`. **No auto-merge.**
-
-**Captain secret still needed:** fine-grained PAT stored as `PUBLIC_VIEW_PUSH_TOKEN` on the _private_ repo (Contents + Pull requests on `daily-learning-pack` only). Exact steps: private README and `scripts/sync-to-public.md`. This agent cannot create that token.
-
-Manual fallback: copy `dist/` from a private `npm run site` onto a branch here and open a draft PR.
-
-## Public Pages
-
-`.github/workflows/pages.yml` uploads committed `dist/` (checks `index.html` + `today/index.html`). No Playwright, no `npm run site`. Push to `main` or `workflow_dispatch`.
-
-Seeded `dist/` is the archive landing + curiosity-bean `/today/` from `npm run site` at the split.
-
-## Tests
-
-- Combined tree before slim: `npm test` **28/28**.
-- Public view tree: `npm test` **5/5** (committed artifacts, stubs, public archive-chrome ownership).
-- Private assembled tree: `npm run site` then `npm test` **28/28**.
-
-## Product invariants kept
-
-No inquiry-only overnight path; no auto-merge; archive slug safety; `WD_REQUIRE_CURIOSITY` on the site path; no API key names in pack JSON; no Wonder Together marketing nav.
-
-## URLs
-
-| What                  | URL                                                    |
-| --------------------- | ------------------------------------------------------ |
-| Private generators    | https://github.com/kbo4sho/daily-learning-generators   |
-| Public view (this PR) | https://github.com/kbo4sho/daily-learning-pack/pull/10 |
-| Live Pages            | https://kbo4sho.github.io/daily-learning-pack/         |
-| Live today            | https://kbo4sho.github.io/daily-learning-pack/today/   |
+Live must keep working after #10 + this land: [archive](https://kbo4sho.github.io/daily-learning-pack/) and [`/today/`](https://kbo4sho.github.io/daily-learning-pack/today/).

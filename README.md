@@ -17,7 +17,7 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 
 `npm run build`, `generate`, `site`, `overnight`, and `author` in this tree exit with a pointer to that repo.
 
-**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. A later seed-packet restyle should edit those public files, not the private repo.
+**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. Seed-packet cards belong in those public files, not the private repo.
 
 ## How the public site is updated
 
