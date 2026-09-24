@@ -48,6 +48,10 @@ export function packetImageHref(homePrefix, slug, rel) {
   return `${homePrefix}days/${slug}/${clean}`;
 }
 
+function packetChrome() {
+  return `<span class="packet-flap" aria-hidden="true"></span><span class="packet-perforation" aria-hidden="true"></span>`;
+}
+
 function packetWindow(entry) {
   const src = entry.face?.src;
   const alt = entry.face?.alt || entry.title || "";
@@ -58,11 +62,11 @@ function packetWindow(entry) {
   return `<span class="packet-window is-typeface"><span class="packet-type">${esc(face)}</span></span>`;
 }
 
-function seedPacket(entry, { homePrefix, isLatest, href }) {
+function seedPacket(entry, { isLatest, href }) {
   const latest = isLatest ? " is-latest" : "";
   const face = entry.face?.src ? "" : " is-typeface";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
-  return `<li class="seed-packet${latest}${face}"><a href="${href}">${packetWindow(entry)}<span class="packet-perforation" aria-hidden="true"></span><span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a></li>`;
+  return `<li class="seed-packet${latest}${face}"><a class="packet-face" href="${href}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a></li>`;
 }
 
 /**
@@ -118,7 +122,7 @@ export function archivePage(
 <p class="door-actions"><a class="primary-button" href="${todayHref}">Open today’s pack <span aria-hidden="true">→</span></a></p>
 <p class="small-note">Today’s approved morning. Drafts stay off this shelf.</p>
 </div>
-<figure class="door-packet" aria-hidden="true">${doorWindow}<span class="packet-perforation"></span><span class="packet-lot">${esc(formatLotStamp(today.date))}</span></figure>
+<figure class="door-packet packet-face" aria-hidden="true">${packetChrome()}${doorWindow}<span class="packet-lot">${esc(formatLotStamp(today.date))}</span></figure>
 </section>
 <section class="packet-shelf-wrap" aria-labelledby="list-heading">
 <h2 id="list-heading">On the shelf</h2>
