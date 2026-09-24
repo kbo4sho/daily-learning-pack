@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm ci && npx playwright install-deps chromium && npx playwright install chromium",
-  "buildCommand": "npm run site",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run archive && test -f dist/index.html && test -f dist/today/index.html",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": true
