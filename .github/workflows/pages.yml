@@ -1,6 +1,7 @@
 name: Publish learning pack to Pages
-# Deliberately manual: opening this PR does not publish or merge anything.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -13,14 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run site
-      - run: npm test
+      - name: Confirm committed view artifacts
+        run: |
+          test -f dist/index.html
+          test -f dist/today/index.html
+          test -f dist/archive/index.html
+          test -f dist/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

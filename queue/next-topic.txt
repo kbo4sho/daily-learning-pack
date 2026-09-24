@@ -1,2 +1,0 @@
-# Firstmate stores the captain's 7:45pm CT theme reply on the next non-comment line.
-# Leave empty to use queue/standby.json.
