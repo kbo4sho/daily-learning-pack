@@ -105,9 +105,8 @@ export async function generateZine(pack, loadPlate, lib) {
       text("Grown-up reads. Little wonderer turns.", 56, 8, 2);
       text("GRADE 2 / DOGFOOD PREVIEW", 30, 6.5, 1, sans, muted);
     } else if (panel.kind === "story") {
-      text(panel.title, 264, 17, 2, serif);
-      await picture(panel.src, 118);
-      text(panel.passage, 104, 9.5, 7);
+      await picture(panel.src, 136);
+      text(panel.passage, 122, 9.5, 8);
     } else if (panel.kind === "pause") {
       text("A little pause.", 224, 24, 2, serif);
       text(

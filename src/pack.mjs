@@ -1,8 +1,10 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 
 export const DEFAULT_TOPIC = "engines";
 export const DEFAULT_GRADE_LEVEL = 2;
 export const DEFAULT_AGE_RANGE = [7, 8];
+/** New curiosity packs should declare 6 unique scenic plates. Astra plate-gen may stub. */
+export const CURIOSITY_PLATE_COUNT = 6;
 const curatedPacks = {
   "curiosity bean": "curiosity-bean.json",
   "curiosity bean sprout": "curiosity-bean.json",
@@ -17,6 +19,23 @@ const curatedPacks = {
   "inch-worm": "inchworms.json",
   "fractions as fair sharing": "fair-sharing.json",
 };
+export function isCuriosity(pack) {
+  return pack?.kind === "curiosity-bean" || pack?.kind === "curiosity";
+}
+export function packSlug(pack) {
+  if (pack?.slug) return pack.slug;
+  return String(pack?.topic || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+export function packTeaser(pack) {
+  return pack?.teaser || pack?.question || "";
+}
+export function topicKey(value) {
+  return String(value).toLowerCase().trim().replace(/\s+/g, " ");
+}
 export function normalizeTopic(input) {
   if (typeof input !== "string") throw new Error("Topic must be a string.");
   const topic = input.normalize("NFKC").trim().replace(/\s+/g, " ");
@@ -32,17 +51,30 @@ export function normalizeTopic(input) {
   }
   return topic;
 }
+async function resolveCuratedFile(topic) {
+  const key = topic.toLowerCase();
+  if (Object.hasOwn(curatedPacks, key)) return curatedPacks[key];
+  const dir = new URL("../packs/", import.meta.url);
+  for (const name of await readdir(dir)) {
+    if (!name.endsWith(".json")) continue;
+    const pack = JSON.parse(await readFile(new URL(name, dir), "utf8"));
+    const names = [pack.topic, pack.slug, ...(pack.aliases || [])]
+      .filter(Boolean)
+      .map((value) => topicKey(value));
+    if (names.includes(key)) return name;
+  }
+  return null;
+}
 export async function createPack(input = DEFAULT_TOPIC) {
   const topic = normalizeTopic(input);
-  const curated = Object.hasOwn(curatedPacks, topic.toLowerCase())
-    ? curatedPacks[topic.toLowerCase()]
-    : null;
+  const curated = await resolveCuratedFile(topic);
   if (curated) {
     return JSON.parse(
       await readFile(new URL(`../packs/${curated}`, import.meta.url), "utf8"),
     );
   }
   // A transparent, deterministic inquiry fallback. It asserts no facts about the topic.
+  // Overnight / public ship path must never use this. Author a curiosity pack instead.
   const words = topic.match(/\p{L}+/gu);
   const first = words[0];
   const count = [...first].length;

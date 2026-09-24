@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity-bean",
+  "slug": "curiosity-bean",
   "topic": "curiosity bean",
+  "teaser": "So much can happen before we see a leaf.",
+  "aliases": ["curiosity bean sprout", "bean sprout", "bean sprouts"],
   "gradeLevel": 2,
   "ageRange": [7, 8],
   "title": "A bean becomes.",
