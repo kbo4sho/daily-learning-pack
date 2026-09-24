@@ -1,10 +1,17 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile, readdir, stat } from "node:fs/promises";
+import { mkdtemp, readFile, readdir, stat, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { archivePage, packetImageHref } from "../src/archive-render.mjs";
+import {
+  renderArchive,
+  resolvePacketFace,
+} from "../scripts/render-archive.mjs";
 
 const KEY_NAMES = /OPENAI_API_KEY|ANTHROPIC_API_KEY|ASTRA_API_KEY/;
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const STOCK = /lorem|unsplash|placeholder\.com|picsum/i;
 
 async function read(rel) {
   return readFile(new URL(`../${rel}`, import.meta.url), "utf8");
@@ -48,6 +55,7 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.match(landing, /href="\.\/today\/"/);
   assert.match(landing, /Not a Wonder Together marketing page/);
   assert.doesNotMatch(landing, /href="https?:\/\/[^"]*wonder-together/i);
+  assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
 });
@@ -94,10 +102,11 @@ test("generator commands are stubs that point at the private repo", async () => 
   assert.equal(await exists("queue/standby.json"), false);
 });
 
-test("public view owns archive landing markup and CSS", async () => {
+test("public view owns seed-packet archive chrome", async () => {
   for (const rel of [
     "src/archive.css",
     "src/archive-render.mjs",
+    "src/archive.js",
     "src/html.mjs",
     "src/fonts/newsreader-latin-400-normal.woff2",
     "src/fonts/inter-latin-400-normal.woff2",
@@ -109,13 +118,189 @@ test("public view owns archive landing markup and CSS", async () => {
     assert.equal(await exists(rel), true, rel);
   const render = await read("src/archive-render.mjs");
   assert.match(render, /export function archivePage/);
-  assert.match(render, /archive-row/);
+  assert.match(render, /seed-packet/);
   assert.match(render, /leo-door/);
+  assert.match(render, /packet-shelf/);
+  assert.match(render, /packet-flap/);
+  assert.match(render, /data-packet-opening/);
+  assert.match(render, /Open this morning/);
+  assert.match(render, /archive\.js/);
+  assert.match(render, /requires latest/);
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
   const css = await read("src/archive.css");
   assert.match(css, /archive-shell|leo-door/);
+  assert.match(css, /packet-shelf/);
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /packet-ritual-control/);
+  assert.match(css, /data-packet-state="torn"/);
+  assert.match(css, /url\("\.\/fonts\/newsreader-latin-400-normal\.woff2"\)/);
+  assert.match(css, /url\("\.\/fonts\/inter-latin-400-normal\.woff2"\)/);
   assert.equal(await exists("dist/pack.json"), false);
   assert.equal(await exists("dist/app.js"), false);
   assert.equal(await exists("dist/archive/archive.json"), false);
+  assert.equal(await exists("dist/archive.js"), true);
+  assert.equal(await exists("dist/archive/archive.js"), true);
+});
+
+test("landing packets use that day's story plate, not stock", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const latest = json.days.find((day) => day.slug === json.latest);
+  const landing = await read("dist/index.html");
+  assert.match(landing, /data-packet-opening/);
+  assert.match(landing, /Open this morning/);
+  assert.equal(landing.match(/>Open this morning /g)?.length, 1);
+  assert.match(landing, /href="\.\/today\/"/);
+  assert.doesNotMatch(landing, STOCK);
+  const nested = await read("dist/archive/index.html");
+  assert.match(nested, /href="\.\.\/today\/"/);
+  assert.doesNotMatch(nested, STOCK);
+  const root = new URL("../dist", import.meta.url).pathname;
+  const face = await resolvePacketFace(latest, root, "./");
+  if (face?.src) {
+    assert.match(face.src, new RegExp(`days/${latest.slug}/`));
+    assert.match(
+      landing,
+      new RegExp(face.src.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    );
+    assert.match(
+      nested,
+      new RegExp(
+        face.src.replace("./", "../").replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+      ),
+    );
+  } else {
+    assert.match(landing, /packet-window is-typeface/);
+  }
+});
+
+test("reduced motion keeps the packet as the one-tap open control", async () => {
+  const css = await read("src/archive.css");
+  const reduced = css.slice(
+    css.indexOf("@media (prefers-reduced-motion: reduce)"),
+  );
+  assert.match(
+    reduced,
+    /html\.packet-ritual-ready \.packet-step-label,\s*\[data-packet-status\],\s*\.packet-perforation\s*{\s*display: none;/,
+  );
+  assert.match(reduced, /\.packet-perforation::after\s*{\s*content: none;/);
+  assert.doesNotMatch(
+    reduced,
+    /\.packet-ritual-control,\s*html\.packet-ritual-ready \.packet-step-label/,
+  );
+  assert.match(
+    reduced,
+    /\.packet-ritual-control:hover,[\s\S]*?transform: none;/,
+  );
+
+  const js = await read("src/archive.js");
+  assert.match(js, /status\.textContent = ""/);
+  assert.match(
+    js,
+    /reducedMotion\.matches\s*\? opening\.dataset\.packetOpenLabel/,
+  );
+  assert.match(js, /: opening\.dataset\.packetFirstLabel/);
+
+  const day = {
+    slug: "one-tap-day",
+    date: "2026-09-24",
+    title: "A packet to open.",
+    teaser: "Still and direct.",
+  };
+  const html = archivePage([day], { latest: day, homePrefix: "./" });
+  assert.match(
+    html,
+    /class="packet-face packet-ritual-control door-packet" href="\.\/today\/" aria-label="Open this morning: A packet to open\."/,
+  );
+  assert.match(html, /data-packet-open-label="Open this morning:/);
+  assert.match(html, /data-packet-first-label="Seed packet:/);
+  assert.match(
+    html,
+    />Open this morning <span aria-hidden="true">→<\/span><\/a>/,
+  );
+});
+
+test("packet faces fail soft to type; archivePage requires latest", () => {
+  assert.equal(packetImageHref("./", "sample-day", "https://x/a.jpg"), "");
+  assert.equal(packetImageHref("./", "sample-day", "../secret.jpg"), "");
+  const day = {
+    slug: "no-plate-day",
+    date: "2026-09-22",
+    title: "A title only.",
+    teaser: "No art on this row.",
+  };
+  assert.throws(
+    () => archivePage([day], { homePrefix: "./" }),
+    /requires latest/,
+  );
+  const html = archivePage([day], { latest: day, homePrefix: "./" });
+  assert.match(html, /packet-window is-typeface/);
+  assert.match(html, /A title only/);
+  assert.doesNotMatch(html, /<img /);
+  const previous = {
+    slug: "earlier-day",
+    date: "2026-09-21",
+    title: "An earlier title.",
+    teaser: "Back on the shelf.",
+  };
+  const history = archivePage([day, previous], {
+    latest: day,
+    homePrefix: "./",
+  });
+  assert.match(history, /class="packet-shelf"/);
+  assert.match(history, /href="\.\/days\/earlier-day\/"/);
+  assert.match(history, /Open 21 September 2026/);
+  assert.equal(history.match(/>Open this morning /g)?.length, 1);
+});
+
+test("resolvePacketFace reads plates from that day's folder", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const latest = json.days.find((day) => day.slug === json.latest);
+  const root = new URL("../dist", import.meta.url).pathname;
+  const face = await resolvePacketFace(latest, root, "./");
+  if (!face?.src) return;
+  assert.match(face.src, new RegExp(`^\\./days/${latest.slug}/`));
+  assert.doesNotMatch(face.src, /^https?:/i);
+  assert.equal(await exists(`dist/${face.src.replace("./", "")}`), true);
+});
+
+test("archive rows cannot override packet faces with declared image fields", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const latest = json.days.find((day) => day.slug === json.latest);
+  const root = new URL("../dist", import.meta.url).pathname;
+  const face = await resolvePacketFace(
+    {
+      ...latest,
+      image: "assets/declared.jpg",
+      cover: "assets/declared.jpg",
+      plateSrc: "assets/declared.jpg",
+    },
+    root,
+    "./",
+  );
+  if (!face?.src) return;
+  assert.doesNotMatch(face.src, /declared\.jpg/);
+  assert.match(face.src, new RegExp(`^\\./days/${latest.slug}/`));
+});
+
+test("renderArchive fails closed when latest is missing from days", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-archive-"));
+  await writeFile(
+    `${dir}/archive.json`,
+    JSON.stringify({
+      latest: "ghost-day",
+      days: [
+        {
+          slug: "listed-day",
+          date: "2026-09-23",
+          title: "Listed.",
+          teaser: "On the shelf.",
+        },
+      ],
+    }),
+  );
+  await assert.rejects(
+    () => renderArchive(dir),
+    /latest “ghost-day” must match a days\[\]\.slug/,
+  );
 });
