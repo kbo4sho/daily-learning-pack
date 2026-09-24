@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, writeFile, rm } from "node:fs/promises";
+import { mkdtemp, readdir, readFile, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { advanceStandbyCursor, intakeTheme } from "../scripts/intake-theme.mjs";
@@ -77,14 +77,23 @@ test("author writes a curiosity-bar stub, never inquiry-only", async () => {
   assert.equal(writing.ok, true, JSON.stringify(writing.issues));
   const inquiry = editorialCuriosityPass(await createPack("weather"));
   assert.equal(inquiry.ok, false);
-  await assert.rejects(
-    authorCuriosityPack("morning dew", { outDir: dir }),
-    /overwrite existing pack|must not clobber/i,
+  const day = new Date("2026-09-24T12:00:00.000Z");
+  const minted = await authorCuriosityPack("morning dew", {
+    outDir: dir,
+    now: day,
+  });
+  assert.ok(minted.path.endsWith("morning-dew-2026-09-24.json"));
+  assert.equal(minted.pack.slug, "morning-dew-2026-09-24");
+  await writeFile(join(dir, "curiosity-bean.json"), "{}\n");
+  const bean = await authorCuriosityPack("curiosity bean", {
+    outDir: dir,
+    now: day,
+  });
+  assert.ok(bean.path.endsWith("curiosity-bean-2026-09-24.json"));
+  const original = JSON.parse(
+    await readFile(join(dir, "morning-dew.json"), "utf8"),
   );
-  await assert.rejects(
-    authorCuriosityPack("curiosity bean", { outDir: "packs" }),
-    /overwrite existing pack|must not clobber/i,
-  );
+  assert.equal(original.slug, "morning-dew");
   await rm(dir, { recursive: true, force: true });
 });
 
@@ -141,18 +150,32 @@ test("overnight advances standby only after a successful author", async () => {
     }),
   );
   await writeFile(join(queueDir, "next-topic.txt"), "# empty\n");
-  await writeFile(join(outDir, "a-paper-boat.json"), "{}\n");
-  await assert.rejects(() => overnightCuriosity({ queueDir, outDir }));
+  await assert.rejects(() =>
+    overnightCuriosity({
+      queueDir,
+      outDir,
+      intake: {
+        topic: "123",
+        queued: false,
+        source: "queue/standby.json",
+      },
+    }),
+  );
   assert.equal(
     JSON.parse(await readFile(join(queueDir, "standby.json"), "utf8")).cursor,
     0,
   );
-  await rm(join(outDir, "a-paper-boat.json"));
+  await writeFile(join(outDir, "a-paper-boat.json"), "{}\n");
   await overnightCuriosity({ queueDir, outDir });
   assert.equal(
     JSON.parse(await readFile(join(queueDir, "standby.json"), "utf8")).cursor,
     1,
   );
+  const minted = await readdir(outDir);
+  assert.ok(
+    minted.some((name) => /^a-paper-boat-\d{4}-\d{2}-\d{2}\.json$/.test(name)),
+  );
+  assert.ok(minted.includes("a-paper-boat.json"));
   await rm(queueDir, { recursive: true, force: true });
   await rm(outDir, { recursive: true, force: true });
 });
