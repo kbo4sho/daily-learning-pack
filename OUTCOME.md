@@ -8,7 +8,16 @@ Public repo stays the view/display layer so [GitHub Pages](https://kbo4sho.githu
 
 **https://github.com/kbo4sho/daily-learning-generators** (private)
 
-Created under `kbo4sho`. `gh repo create` failed (`Resource not accessible by integration` for the cloud-agent token). GitHub MCP `create_repository` as kbo4sho succeeded. The same cloud-agent `gh` token cannot clone or push that new private repo, so the first private commit is an import workflow plus overlay; the repo’s own `GITHUB_TOKEN` copies generator paths (including binary plates) from public `eeb5ce0`.
+Created under `kbo4sho`. `gh repo create` failed (`Resource not accessible by integration` for the cloud-agent token). GitHub MCP `create_repository` as kbo4sho succeeded. The cloud-agent `gh` token cannot clone or push the new private repo. Files were added via the GitHub MCP Contents API. **`.github/workflows/*` cannot be written** (API 404 without the `workflow` scope). YAML lives in the private repo at `docs/github-workflows/` for the captain to copy.
+
+Full generator source (scripts/src/tests/packs/assets) is restored on a captain machine with:
+
+```sh
+bash scripts/bootstrap-from-public.sh   # copies from public eeb5ce0
+node scripts/seed-assets-from-public.mjs
+```
+
+Those commands are also the first steps of the documented private CI workflows.
 
 ## Paths moved (private source of truth)
 
@@ -50,9 +59,9 @@ No inquiry-only overnight path; no auto-merge; archive slug safety; `WD_REQUIRE_
 
 ## URLs
 
-| What                  | URL                                                  |
-| --------------------- | ---------------------------------------------------- |
-| Private generators    | https://github.com/kbo4sho/daily-learning-generators |
-| Public view (this PR) | (see the draft PR on this branch)                    |
-| Live Pages            | https://kbo4sho.github.io/daily-learning-pack/       |
-| Live today            | https://kbo4sho.github.io/daily-learning-pack/today/ |
+| What                  | URL                                                    |
+| --------------------- | ------------------------------------------------------ |
+| Private generators    | https://github.com/kbo4sho/daily-learning-generators   |
+| Public view (this PR) | https://github.com/kbo4sho/daily-learning-pack/pull/10 |
+| Live Pages            | https://kbo4sho.github.io/daily-learning-pack/         |
+| Live today            | https://kbo4sho.github.io/daily-learning-pack/today/   |
