@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { access, mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import {
   CURIOSITY_PLATE_COUNT,
@@ -229,6 +229,14 @@ export async function authorCuriosityPack(
   }
   const path = resolve(outDir, `${slug}.json`);
   await mkdir(outDir, { recursive: true });
+  try {
+    await access(path);
+    throw new Error(
+      `Refusing to overwrite existing pack ${path}. Overnight must not clobber a curated pack. Use a distinct topic/slug.`,
+    );
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
   await writeFile(path, JSON.stringify(pack, null, 2) + "\n");
   return { pack, path, usedKey: usedKey || null };
 }

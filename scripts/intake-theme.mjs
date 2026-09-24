@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { normalizeTopic } from "../src/pack.mjs";
 
@@ -20,13 +20,17 @@ export async function intakeTheme({ queueDir = "queue" } = {}) {
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
   }
-  const standby = JSON.parse(
-    await readFile(resolve(queueDir, "standby.json"), "utf8"),
-  );
+  const standbyPath = resolve(queueDir, "standby.json");
+  const standby = JSON.parse(await readFile(standbyPath, "utf8"));
   if (!standby.roster?.length)
     throw new Error("queue/standby.json has no roster entries.");
   const index = Number(standby.cursor || 0) % standby.roster.length;
   const item = standby.roster[index];
+  const nextCursor = (index + 1) % standby.roster.length;
+  await writeFile(
+    standbyPath,
+    JSON.stringify({ ...standby, cursor: nextCursor }, null, 2) + "\n",
+  );
   return {
     topic: normalizeTopic(item.topic),
     source: "queue/standby.json",

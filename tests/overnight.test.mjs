@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, writeFile, rm } from "node:fs/promises";
+import { mkdtemp, readFile, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { intakeTheme } from "../scripts/intake-theme.mjs";
@@ -18,17 +18,31 @@ test("intake prefers queue/next-topic.txt over the standby roster", async () => 
     join(dir, "standby.json"),
     JSON.stringify({
       cursor: 0,
-      roster: [{ topic: "a paper boat" }],
+      roster: [{ topic: "a paper boat" }, { topic: "shadows at noon" }],
     }),
   );
   await writeFile(join(dir, "next-topic.txt"), "\n# comment\nmorning dew\n");
   const queued = await intakeTheme({ queueDir: dir });
   assert.equal(queued.topic, "morning dew");
   assert.equal(queued.source, "queue/next-topic.txt");
+  assert.equal(
+    JSON.parse(await readFile(join(dir, "standby.json"), "utf8")).cursor,
+    0,
+  );
   await writeFile(join(dir, "next-topic.txt"), "\n\n");
   const standby = await intakeTheme({ queueDir: dir });
   assert.equal(standby.topic, "a paper boat");
   assert.equal(standby.source, "queue/standby.json");
+  assert.equal(
+    JSON.parse(await readFile(join(dir, "standby.json"), "utf8")).cursor,
+    1,
+  );
+  const rotated = await intakeTheme({ queueDir: dir });
+  assert.equal(rotated.topic, "shadows at noon");
+  assert.equal(
+    JSON.parse(await readFile(join(dir, "standby.json"), "utf8")).cursor,
+    0,
+  );
   await rm(dir, { recursive: true, force: true });
 });
 
@@ -50,6 +64,14 @@ test("author writes a curiosity-bar stub, never inquiry-only", async () => {
   assert.equal(writing.ok, true, JSON.stringify(writing.issues));
   const inquiry = editorialCuriosityPass(await createPack("weather"));
   assert.equal(inquiry.ok, false);
+  await assert.rejects(
+    authorCuriosityPack("morning dew", { outDir: dir }),
+    /overwrite existing pack|must not clobber/i,
+  );
+  await assert.rejects(
+    authorCuriosityPack("curiosity bean", { outDir: "packs" }),
+    /overwrite existing pack|must not clobber/i,
+  );
   await rm(dir, { recursive: true, force: true });
 });
 
