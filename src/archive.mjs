@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import {
+  assertSafePackSlug,
   createPack,
   isCuriosity,
   loadPackBySlug,
@@ -37,6 +38,7 @@ export async function approvedEntries(registryUrl) {
     if (row.status && row.status !== "approved") continue;
     if (!row.topic || !row.date || !row.slug)
       throw new Error("Each approved row needs slug, date, and topic.");
+    assertSafePackSlug(row.slug);
     let pack;
     try {
       pack = await loadPackBySlug(row.slug);

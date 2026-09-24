@@ -11,7 +11,12 @@ import {
   latestEntry,
 } from "../src/archive.mjs";
 import { archivePage } from "../src/archive-render.mjs";
-import { packSlug, createPack } from "../src/pack.mjs";
+import {
+  assertSafePackSlug,
+  createPack,
+  loadPackBySlug,
+  packSlug,
+} from "../src/pack.mjs";
 import { writeDay } from "../scripts/build-archive.mjs";
 
 const entries = await approvedEntries();
@@ -55,6 +60,43 @@ test("approved registry refuses inquiry fallback and slug mismatch", async () =>
     () => approvedEntries(pathToFileURL(mismatch)),
     /slug mismatch/,
   );
+  await rm(dir, { recursive: true, force: true });
+});
+
+test("approved registry and loadPackBySlug reject path-unsafe slugs", async () => {
+  for (const slug of ["../secret", "foo/bar", "..", "Foo", "has space", ""]) {
+    assert.throws(() => assertSafePackSlug(slug), /path segment/);
+    await assert.rejects(() => loadPackBySlug(slug), /path segment/);
+  }
+  assert.equal(assertSafePackSlug("curiosity-bean"), "curiosity-bean");
+  assert.equal(
+    assertSafePackSlug("morning-dew-2026-09-24-2"),
+    "morning-dew-2026-09-24-2",
+  );
+  const dir = await mkdtemp(join(tmpdir(), "wd-slug-"));
+  const unsafe = join(dir, "unsafe.json");
+  await writeFile(
+    unsafe,
+    JSON.stringify({
+      packs: [
+        {
+          slug: "../etc",
+          date: "2026-09-24",
+          topic: "curiosity bean",
+          status: "approved",
+        },
+      ],
+    }),
+  );
+  await assert.rejects(
+    () => approvedEntries(pathToFileURL(unsafe)),
+    /path segment/,
+  );
+  const archiveSrc = await readFile(
+    new URL("../scripts/build-archive.mjs", import.meta.url),
+    "utf8",
+  );
+  assert.match(archiveSrc, /assertSafePackSlug\(entry\.slug\)/);
   await rm(dir, { recursive: true, force: true });
 });
 

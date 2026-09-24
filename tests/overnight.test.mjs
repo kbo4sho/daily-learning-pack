@@ -10,7 +10,12 @@ import {
   editorialCuriosityPass,
   writingQualityPass,
 } from "../scripts/editorial-curiosity-pass.mjs";
-import { createPack, parsePackArgs } from "../src/pack.mjs";
+import {
+  assertRequiredCuriosity,
+  createPack,
+  parsePackArgs,
+  resolvePackFile,
+} from "../src/pack.mjs";
 import { curiosityWorksheet, lineDrawing } from "../src/curiosity-render.mjs";
 
 test("intake prefers queue/next-topic.txt over the standby roster", async () => {
@@ -205,6 +210,67 @@ test("generate --pack loads the minted file, not the curated topic match", async
   assert.doesNotMatch(
     overnightSrc,
     /generate", "--", intake\.topic|generate", "--", authored\.pack\.topic/,
+  );
+  await rm(dir, { recursive: true, force: true });
+});
+
+test("WD_REQUIRE_CURIOSITY rejects engines, inchworms, and inquiry", async () => {
+  const require = { WD_REQUIRE_CURIOSITY: "1" };
+  const engines = await createPack("engines");
+  const inchworms = await createPack("inch worms");
+  const inquiry = await createPack("weather");
+  const bean = await createPack("curiosity bean");
+  assert.throws(
+    () => assertRequiredCuriosity(engines, require),
+    /requires a curiosity pack, not engines/,
+  );
+  assert.throws(
+    () => assertRequiredCuriosity(inchworms, require),
+    /requires a curiosity pack, not inchworms/,
+  );
+  assert.throws(
+    () => assertRequiredCuriosity(inquiry, require),
+    /requires a curiosity pack, not topic-inquiry/,
+  );
+  assert.doesNotThrow(() => assertRequiredCuriosity(bean, require));
+  assert.doesNotThrow(() => assertRequiredCuriosity(engines, {}));
+  const buildSrc = await readFile(
+    new URL("../scripts/build.mjs", import.meta.url),
+    "utf8",
+  );
+  assert.match(buildSrc, /assertRequiredCuriosity\(pack\)/);
+  assert.doesNotMatch(
+    buildSrc,
+    /pack\.kind === "topic-inquiry" && process\.env\.WD_REQUIRE_CURIOSITY/,
+  );
+});
+
+test("bare topic prefers the non-dated pack and requires --pack when mints collide", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-resolve-"));
+  const day = new Date("2026-09-24T12:00:00.000Z");
+  await authorCuriosityPack("morning dew", { outDir: dir });
+  await authorCuriosityPack("morning dew", { outDir: dir, now: day });
+  assert.equal(await resolvePackFile("morning dew", dir), "morning-dew.json");
+  assert.equal(
+    (await createPack("morning dew", { packsDir: dir })).slug,
+    "morning-dew",
+  );
+  assert.equal(
+    await resolvePackFile("morning-dew-2026-09-24", dir),
+    "morning-dew-2026-09-24.json",
+  );
+  const minted = JSON.parse(
+    await readFile(join(dir, "morning-dew-2026-09-24.json"), "utf8"),
+  );
+  minted.slug = "morning-dew-2026-09-24-2";
+  await writeFile(
+    join(dir, "morning-dew-2026-09-24-2.json"),
+    JSON.stringify(minted, null, 2) + "\n",
+  );
+  await rm(join(dir, "morning-dew.json"));
+  await assert.rejects(
+    () => resolvePackFile("morning dew", dir),
+    /Pass --pack packs\/<file>\.json/,
   );
   await rm(dir, { recursive: true, force: true });
 });

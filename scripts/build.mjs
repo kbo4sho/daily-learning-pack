@@ -2,17 +2,19 @@ import { mkdir, rm, writeFile, copyFile, cp } from "node:fs/promises";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
-import { createPack, isCuriosity, parsePackArgs } from "../src/pack.mjs";
+import {
+  assertRequiredCuriosity,
+  createPack,
+  isCuriosity,
+  parsePackArgs,
+} from "../src/pack.mjs";
 import { site, printDocument } from "../src/render.mjs";
 import { copyRuntime } from "../src/site-assets.mjs";
 import { writeArchive } from "./build-archive.mjs";
 
 const { packPath, topic } = parsePackArgs(process.argv.slice(2));
 const pack = await createPack(topic, { packPath });
-if (pack.kind === "topic-inquiry" && process.env.WD_REQUIRE_CURIOSITY === "1")
-  throw new Error(
-    "Overnight/public ship path cannot generate inquiry-only packs. Author a curiosity pack first.",
-  );
+assertRequiredCuriosity(pack);
 // Validate before replacing the previous output. Build in a disposable staging directory.
 const staging = resolve("tmp/build");
 await rm(staging, { recursive: true, force: true });
