@@ -41,6 +41,7 @@ test("Curiosity questions and plates lead; every activity binds to committed art
   assert.ok(html.indexOf('id="curiosity"') < html.indexOf('id="reading"'));
   assert.ok(html.indexOf('id="reading"') < html.indexOf('id="math"'));
   assert.match(html, /noindex, nofollow/);
+  assert.match(html, /href="\.\/archive\/"/);
   assert.doesNotMatch(html, /src="https?:/);
 });
 test("digital story, worksheet and zine share the exact six authored beats", () => {
@@ -59,6 +60,9 @@ test("digital story, worksheet and zine share the exact six authored beats", () 
   const kid = printDocument(pack, ["math", "reading", "writing"]);
   assert.doesNotMatch(kid, /GROWN-UPS ONLY|32 cm tall/);
   assert.doesNotMatch(print, /<img/);
+  assert.doesNotMatch(print, /<h2>/);
+  for (const beat of pack.reading.beats)
+    assert.doesNotMatch(print, new RegExp(`<h2>${esc(beat.title)}`));
   const math = printDocument(pack, ["math"]);
   assert.match(math, /src="\.\.\/assets\/curiosity-bean\/04-notice\.jpg"/);
   assert.match(math, /Pretend notebook · height above soil/);

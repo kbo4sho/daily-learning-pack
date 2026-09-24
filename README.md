@@ -87,6 +87,25 @@ Open **http://127.0.0.1:4173/daily-learning-pack/**. The project prefix intentio
 
 For an actual iPad on the same Wi-Fi, run `HOST=0.0.0.0 npm run preview`, then open `http://YOUR-MAC-LAN-IP:4173/daily-learning-pack/` in Safari. The preview is temporary; stop it with Ctrl-C. Digital writing stays in memory while switching subjects and disappears on reload. There is no storage or submission.
 
+## Public archive (Leo’s morning door)
+
+Approved days are listed on a quiet parent-led landing (Newsreader + Inter, paper and ink). The list is generated at build time from [`archive/approved.json`](archive/approved.json). The first live row is the curiosity-bean dogfood morning.
+
+| Path                                                        | Purpose                                    |
+| ----------------------------------------------------------- | ------------------------------------------ |
+| `/` after `npm run site`, or `/archive/` after any generate | Archive index: date, title, teaser, link   |
+| `/today/`                                                   | Latest approved pack · Leo’s one-tap entry |
+| `/days/<slug>/`                                             | That day’s pack experience                 |
+
+```sh
+npm run generate -- "curiosity bean"
+npm run preview
+```
+
+Open [http://127.0.0.1:4173/daily-learning-pack/archive/](http://127.0.0.1:4173/daily-learning-pack/archive/). `npm run site` puts the same landing at the site root for Vercel / Pages. Operational notes, overnight fire, and production promote: [`docs/overnight.md`](docs/overnight.md).
+
+**Preferred public host:** Vercel project `wonder-daily` (`vercel.json` → `npm run site`). This repository does not force a production deploy. After a human merges, promote `main` in the Vercel dashboard if production does not auto-update. Fallback: GitHub Pages as below. Wonder Daily is not added to public Wonder Together marketing navigation.
+
 ## GitHub Pages
 
 This PR does **not** merge, publish, enable Pages, or push to main. PR checks upload a downloadable `daily-learning-pack-preview` artifact containing the built site, PDFs, and screenshots.
@@ -96,7 +115,7 @@ When you choose to publish after review:
 1. Merge the reviewed PR yourself.
 2. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
 3. In **Actions → Publish learning pack to Pages → Run workflow**, select `main`.
-4. The expected project URL is **https://kbo4sho.github.io/daily-learning-pack/**. It is not live merely because the build exists.
+4. The workflow runs `npm run site`. The expected project URL is **https://kbo4sho.github.io/daily-learning-pack/** (archive at `/`, latest pack at `/today/`). It is not live merely because the build exists.
 
 The deployment workflow is manual and restricted to `main`; PR checks have no deployment permissions. A private repository needs a plan that supports private-repo Pages (for a personal account, GitHub Pro). A public Pages site can be viewed without a login even when its source repository is private. See [GitHub’s custom Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [Pages visibility](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#limits-on-use-of-github-pages). No repository settings are changed by this scaffold.
 

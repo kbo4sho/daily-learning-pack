@@ -35,7 +35,8 @@
 * {
   box-sizing: border-box;
 }
-body[data-kind="curiosity-bean"] {
+body[data-kind="curiosity-bean"],
+body[data-kind="curiosity"] {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
@@ -159,6 +160,17 @@ img {
 .dogfood-note small {
   display: block;
   font-size: 0.66rem;
+}
+.archive-door {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.archive-door:hover {
+  color: var(--ink);
 }
 .print-link {
   font-size: 0.78rem;
@@ -924,6 +936,7 @@ body.reader-open .daily-header {
     serif;
   margin: 0 0 4pt;
 }
+.curiosity-print-story .story-moment,
 .curiosity-print-story p {
   font-size: 10.5pt;
   line-height: 1.45;

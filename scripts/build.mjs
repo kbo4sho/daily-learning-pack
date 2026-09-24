@@ -2,72 +2,25 @@ import { mkdir, rm, writeFile, copyFile, cp } from "node:fs/promises";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
-import { createPack } from "../src/pack.mjs";
+import {
+  assertRequiredCuriosity,
+  createPack,
+  isCuriosity,
+  parsePackArgs,
+} from "../src/pack.mjs";
 import { site, printDocument } from "../src/render.mjs";
+import { copyRuntime } from "../src/site-assets.mjs";
+import { writeArchive } from "./build-archive.mjs";
 
-const args = process.argv.slice(2);
-if (args.length > 1)
-  throw new Error(
-    'Pass one quoted topic string: npm run generate -- "weather"',
-  );
-const pack = await createPack(args[0]);
+const { packPath, topic } = parsePackArgs(process.argv.slice(2));
+const pack = await createPack(topic, { packPath });
+assertRequiredCuriosity(pack);
 // Validate before replacing the previous output. Build in a disposable staging directory.
 const staging = resolve("tmp/build");
 await rm(staging, { recursive: true, force: true });
 await mkdir(`${staging}/pdf`, { recursive: true });
 await mkdir(`${staging}/print`, { recursive: true });
-await mkdir(`${staging}/fonts`, { recursive: true });
-const assets = ["styles.css", "app.js"];
-if (pack.kind === "curiosity-bean") {
-  assets.push(
-    "curiosity.css",
-    "curiosity.js",
-    "reader.js",
-    "inchworm.js",
-    "zine.js",
-  );
-  await mkdir(`${staging}/assets/curiosity-bean`, { recursive: true });
-  for (const art of pack.plates)
-    await copyFile(art.src, `${staging}/${art.src}`);
-  await mkdir(`${staging}/vendor`, { recursive: true });
-  await copyFile(
-    "node_modules/pdf-lib/dist/pdf-lib.min.js",
-    `${staging}/vendor/pdf-lib.min.js`,
-  );
-  await copyFile(
-    "node_modules/pdf-lib/LICENSE.md",
-    `${staging}/vendor/pdf-lib-LICENSE.md`,
-  );
-}
-if (pack.kind === "inchworms")
-  assets.push("inchworms.css", "inchworm.js", "reader.js");
-for (const file of assets) await copyFile(`src/${file}`, `${staging}/${file}`);
-const fonts = [
-  ["fraunces", "fraunces-latin-600-normal.woff2"],
-  ["nunito-sans", "nunito-sans-latin-400-normal.woff2"],
-  ["nunito-sans", "nunito-sans-latin-700-normal.woff2"],
-];
-if (["inchworms", "curiosity-bean"].includes(pack.kind))
-  fonts.push(
-    ["newsreader", "newsreader-latin-400-normal.woff2"],
-    ["newsreader", "newsreader-latin-500-normal.woff2"],
-    ["inter", "inter-latin-400-normal.woff2"],
-    ["inter", "inter-latin-600-normal.woff2"],
-    ["inter", "inter-latin-700-normal.woff2"],
-  );
-for (const [family, file] of fonts)
-  await copyFile(
-    `node_modules/@fontsource/${family}/files/${file}`,
-    `${staging}/fonts/${file}`,
-  );
-const fontFamilies = ["inchworms", "curiosity-bean"].includes(pack.kind)
-  ? ["fraunces", "nunito-sans", "newsreader", "inter"]
-  : ["fraunces", "nunito-sans"];
-for (const family of fontFamilies)
-  await copyFile(
-    `node_modules/@fontsource/${family}/LICENSE`,
-    `${staging}/fonts/${family}-LICENSE.txt`,
-  );
+await copyRuntime(staging, pack);
 await writeFile(`${staging}/index.html`, site(pack));
 await writeFile(`${staging}/pack.json`, JSON.stringify(pack, null, 2) + "\n");
 await writeFile(`${staging}/.nojekyll`, "");
@@ -109,9 +62,19 @@ try {
 } finally {
   await browser.close();
 }
+const landing = process.env.WD_LANDING === "root" ? "root" : "archive";
+await writeArchive(staging, {
+  generatedPack: pack,
+  landing,
+  pdfSource: `${staging}/pdf`,
+});
 await mkdir("output/pdf", { recursive: true });
 await rm("dist", { recursive: true, force: true });
 await cp(staging, "dist", { recursive: true });
 for (const name of Object.keys(documents))
   await copyFile(`${staging}/pdf/${name}.pdf`, `output/pdf/${name}.pdf`);
 console.log(`Built “${pack.topic}” (${pack.kind}) → dist/ and output/pdf/`);
+if (isCuriosity(pack))
+  console.log(
+    `Archive (${landing}) includes approved days and Leo’s /today/ entry.`,
+  );
