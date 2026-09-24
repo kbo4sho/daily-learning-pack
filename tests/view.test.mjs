@@ -30,11 +30,14 @@ async function walkJson(dir, acc = []) {
 }
 
 test("committed archive landing and Leo’s /today/ are present", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const latest = json.days.find((day) => day.slug === json.latest);
+  assert.ok(latest, "archive.json.latest must name a listed day");
   for (const rel of [
     "dist/index.html",
     "dist/today/index.html",
     "dist/archive/index.html",
-    "dist/days/curiosity-bean/index.html",
+    `dist/days/${latest.slug}/index.html`,
     "dist/archive.json",
     "dist/.nojekyll",
     "dist/archive.css",
@@ -42,24 +45,28 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
     assert.equal(await exists(rel), true, rel);
   const landing = await read("dist/index.html");
   assert.match(landing, /Wonder Daily · Mornings/);
-  assert.match(landing, /A bean becomes/);
   assert.match(landing, /href="\.\/today\/"/);
   assert.match(landing, /Not a Wonder Together marketing page/);
   assert.doesNotMatch(landing, /href="https?:\/\/[^"]*wonder-together/i);
-  const today = await read("dist/today/index.html");
-  assert.match(today, /A bean becomes/);
-  assert.match(today, /id="curiosity"/);
+  const todayPack = JSON.parse(await read("dist/today/pack.json"));
+  assert.equal(todayPack.slug, latest.slug);
 });
 
-test("archive.json points at the approved curiosity-bean morning", async () => {
+test("archive.json lists approved mornings structurally", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
-  assert.equal(json.latest, "curiosity-bean");
   assert.equal(json.leoEntry, "./today/");
   assert.ok(json.days.length >= 1);
+  const slugs = json.days.map((day) => day.slug);
+  assert.ok(slugs.includes(json.latest), "latest slug exists as a day");
   for (const day of json.days) {
     assert.match(day.slug, SLUG);
     assert.doesNotMatch(day.slug, /[./]/);
     assert.match(day.date, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(
+      await exists(`dist/days/${day.slug}/index.html`),
+      true,
+      day.slug,
+    );
   }
 });
 
@@ -92,7 +99,12 @@ test("public view owns archive landing markup and CSS", async () => {
     "src/archive.css",
     "src/archive-render.mjs",
     "src/html.mjs",
+    "src/fonts/newsreader-latin-400-normal.woff2",
+    "src/fonts/inter-latin-400-normal.woff2",
+    "src/fonts/inter-latin-600-normal.woff2",
     "scripts/render-archive.mjs",
+    "dist/fonts/newsreader-latin-400-normal.woff2",
+    "dist/archive/fonts/newsreader-latin-400-normal.woff2",
   ])
     assert.equal(await exists(rel), true, rel);
   const render = await read("src/archive-render.mjs");
@@ -103,4 +115,7 @@ test("public view owns archive landing markup and CSS", async () => {
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
   const css = await read("src/archive.css");
   assert.match(css, /archive-shell|leo-door/);
+  assert.equal(await exists("dist/pack.json"), false);
+  assert.equal(await exists("dist/app.js"), false);
+  assert.equal(await exists("dist/archive/archive.json"), false);
 });
