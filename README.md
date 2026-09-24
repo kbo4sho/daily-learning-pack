@@ -17,12 +17,14 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 
 `npm run build`, `generate`, `site`, `overnight`, and `author` in this tree exit with a pointer to that repo.
 
+**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. A later seed-packet restyle should edit those public files, not the private repo.
+
 ## How the public site is updated
 
 1. Private generators run `npm run site` (archive at `dist/index.html`, latest approved pack at `dist/today/`).
 2. Private Actions **Sync built view to public pack** (or the manual steps in that repo’s `scripts/sync-to-public.md`) opens a **draft** PR here that updates committed `dist/`.
 3. A human merges. **No auto-merge.**
-4. GitHub Pages on `main` deploys `dist/` as-is. It does **not** run `npm run site`.
+4. GitHub Pages on `main` runs `npm run archive` (public chrome only) and deploys `dist/`. It does **not** run `npm run site`.
 
 Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **private** repo (Contents + Pull requests on this public repo only). This view repo does not hold that secret. First-time private checkout: [`docs/private-generators.md`](docs/private-generators.md).
 
@@ -40,7 +42,7 @@ Open [http://127.0.0.1:4173/daily-learning-pack/](http://127.0.0.1:4173/daily-le
 
 ## GitHub Pages
 
-Workflow: `.github/workflows/pages.yml`. On push to `main` (and manual **workflow_dispatch**), it checks that `dist/index.html` and `dist/today/index.html` exist, uploads `dist/`, and deploys. No `npm run site`, no Chromium.
+Workflow: `.github/workflows/pages.yml`. On push to `main` (and manual **workflow_dispatch**), it runs `npm run archive` (copy public landing CSS/HTML onto `dist/archive.json`), checks that `dist/index.html` and `dist/today/index.html` exist, uploads `dist/`, and deploys. No `npm run site`, no Chromium.
 
 Expected URL: [https://kbo4sho.github.io/daily-learning-pack/](https://kbo4sho.github.io/daily-learning-pack/).
 

@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci",
-  "buildCommand": "test -f dist/index.html && test -f dist/today/index.html",
+  "buildCommand": "npm run archive && test -f dist/index.html && test -f dist/today/index.html",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": true

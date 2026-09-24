@@ -11,14 +11,14 @@
     "build": "node scripts/moved.mjs",
     "generate": "node scripts/moved.mjs",
     "site": "node scripts/moved.mjs",
-    "archive": "node scripts/moved.mjs",
+    "archive": "node scripts/render-archive.mjs",
     "overnight": "node scripts/moved.mjs",
     "author": "node scripts/moved.mjs",
     "editorial": "node scripts/moved.mjs",
     "preview": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
-    "format": "prettier --write \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md",
-    "format:check": "prettier --check \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md"
+    "format": "prettier --write \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md",
+    "format:check": "prettier --check \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md"
   },
   "devDependencies": {
     "prettier": "3.6.2"

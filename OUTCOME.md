@@ -21,17 +21,33 @@ Those commands are also the first steps of the documented private CI workflows.
 
 ## Paths moved (private source of truth)
 
-| Path                                                                                                                     | Why                                                 |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| `scripts/build.mjs`, `build-site.mjs`, `build-archive.mjs`                                                               | Site / PDF / archive generate                       |
-| `scripts/author-curiosity-pack.mjs`, `overnight-curiosity.mjs`, `intake-theme.mjs`, `editorial-curiosity-pass.mjs`       | Overnight author path                               |
-| `scripts/serve.mjs`                                                                                                      | Preview (copy remains public for committed `dist/`) |
-| `src/pack.mjs`, `archive.mjs`, `archive-render.mjs`, `curiosity-render.mjs`, `render.mjs`, `site-assets.mjs`, `html.mjs` | Build-only Node                                     |
-| `src/*.js`, `src/*.css`                                                                                                  | Compiled into `dist/` by the private build          |
-| `tests/overnight.test.mjs`, `curiosity.test.mjs`, `pack.test.mjs`, `archive.test.mjs`, `inquiry-build.mjs`               | Generator tests                                     |
-| `queue/`, `archive/approved.json`, `packs/`, `assets/`, `docs/overnight.md`                                              | Author/overnight/registry                           |
+| Path                                                                                                               | Why                                                 |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| `scripts/build.mjs`, `build-site.mjs`, `build-archive.mjs`                                                         | Site / PDF / archive generate                       |
+| `scripts/author-curiosity-pack.mjs`, `overnight-curiosity.mjs`, `intake-theme.mjs`, `editorial-curiosity-pass.mjs` | Overnight author path                               |
+| `scripts/serve.mjs`                                                                                                | Preview (copy remains public for committed `dist/`) |
+| `src/pack.mjs`, `archive.mjs`, `curiosity-render.mjs`, `render.mjs`, `site-assets.mjs`                             | Build-only Node (private)                           |
+| Kid-day `src/*.js` / subject CSS                                                                                   | Compiled into `dist/` by the private build          |
+| `tests/overnight.test.mjs`, `curiosity.test.mjs`, `pack.test.mjs`, `archive.test.mjs`, `inquiry-build.mjs`         | Generator tests                                     |
+| `queue/`, `archive/approved.json`, `packs/`, `assets/`, `docs/overnight.md`                                        | Author/overnight/registry                           |
 
-Public leftovers: thin `scripts/moved.mjs` stubs, `scripts/serve.mjs`, `tests/view.test.mjs`, committed `dist/`, stills, DESIGN.md.
+Public leftovers: thin `scripts/moved.mjs` stubs, `scripts/serve.mjs`, `scripts/render-archive.mjs`, **archive chrome source** (`src/archive-render.mjs`, `src/archive.css`, `src/html.mjs`), `tests/view.test.mjs`, committed `dist/`, stills, DESIGN.md.
+
+## Public paths that own archive markup/CSS
+
+For follow-on **`wd-archive-seed-packets-ship`** (seed-packet cards; no generator work). Visual design was **not** changed in this split.
+
+| Public path                  | Role                                                                                                                                     |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/archive-render.mjs`     | **Landing HTML template** (`archivePage`, Leo door, approved-morning rows). Edit this for card markup.                                   |
+| `src/archive.css`            | **Landing / card chrome CSS** (copied to `dist/archive.css` and `dist/archive/archive.css`).                                             |
+| `src/html.mjs`               | HTML escaping used by the landing template.                                                                                              |
+| `scripts/render-archive.mjs` | Thin view rebuild: reads `dist/archive.json`, writes `dist/index.html` + `dist/archive/index.html`, copies CSS. No Playwright, no packs. |
+| `dist/index.html`            | Root archive landing (generated from the public template).                                                                               |
+| `dist/archive/index.html`    | Nested `/archive/` copy of the same chrome.                                                                                              |
+| `dist/archive.json`          | **Data only** (from private `npm run site` / sync). Do not put card layout here.                                                         |
+
+`npm run archive` reapplies public chrome after a private dist sync so seed-packet edits are not locked inside `daily-learning-generators`. Pages and `check.yml` run that script. Private generators may still emit a landing for local preview; **public `src/archive-*` is the Pages source of truth.**
 
 ## Connection design
 
