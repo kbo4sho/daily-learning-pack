@@ -79,16 +79,28 @@ test("generator commands are stubs that point at the private repo", async () => 
   assert.match(stub, /daily-learning-generators/);
   assert.match(stub, /view\/display layer/);
   const pkg = JSON.parse(await read("package.json"));
-  for (const name of [
-    "build",
-    "generate",
-    "site",
-    "archive",
-    "overnight",
-    "author",
-  ])
+  for (const name of ["build", "generate", "site", "overnight", "author"])
     assert.match(pkg.scripts[name], /moved\.mjs/);
+  assert.match(pkg.scripts.archive, /render-archive\.mjs/);
   assert.equal(await exists("scripts/build.mjs"), false);
   assert.equal(await exists("src/pack.mjs"), false);
   assert.equal(await exists("queue/standby.json"), false);
+});
+
+test("public view owns archive landing markup and CSS", async () => {
+  for (const rel of [
+    "src/archive.css",
+    "src/archive-render.mjs",
+    "src/html.mjs",
+    "scripts/render-archive.mjs",
+  ])
+    assert.equal(await exists(rel), true, rel);
+  const render = await read("src/archive-render.mjs");
+  assert.match(render, /export function archivePage/);
+  assert.match(render, /archive-row/);
+  assert.match(render, /leo-door/);
+  assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
+  assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
+  const css = await read("src/archive.css");
+  assert.match(css, /archive-shell|leo-door/);
 });

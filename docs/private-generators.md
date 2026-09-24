@@ -27,3 +27,5 @@ Fine-grained PAT, free, no GitHub Pro:
 Then run **Sync built view to public pack**. It opens a **draft** PR here. No auto-merge.
 
 Manual fallback: private `scripts/sync-to-public.md`.
+
+After a dist sync lands here, `npm run archive` reapplies **public** landing chrome (`src/archive-render.mjs`, `src/archive.css`) so archive restyles stay in this view repo.
