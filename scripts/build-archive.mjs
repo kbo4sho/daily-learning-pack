@@ -2,7 +2,7 @@ import { copyFile, cp, mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { approvedEntries, archiveJson, latestEntry } from "../src/archive.mjs";
 import { archivePage } from "../src/archive-render.mjs";
-import { packSlug } from "../src/pack.mjs";
+import { assertSafePackSlug, packSlug } from "../src/pack.mjs";
 import { site } from "../src/render.mjs";
 import { ARCHIVE_FONTS, copyFonts, copyRuntime } from "../src/site-assets.mjs";
 
@@ -36,6 +36,7 @@ export async function writeArchive(
   await mkdir(`${root}/today`, { recursive: true });
 
   for (const entry of entries) {
+    assertSafePackSlug(entry.slug);
     const dest = `${root}/days/${entry.slug}`;
     const isGenerated = generatedPack && packSlug(generatedPack) === entry.slug;
     await writeDay(dest, entry.pack, {

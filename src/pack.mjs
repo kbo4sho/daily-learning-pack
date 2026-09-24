@@ -1,10 +1,13 @@
 import { readdir, readFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
 
 export const DEFAULT_TOPIC = "engines";
 export const DEFAULT_GRADE_LEVEL = 2;
 export const DEFAULT_AGE_RANGE = [7, 8];
 /** New curiosity packs should declare 6 unique scenic plates. Astra plate-gen may stub. */
 export const CURIOSITY_PLATE_COUNT = 6;
+export const PACK_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const DATED_PACK_STEM = /-\d{4}-\d{2}-\d{2}(?:-\d+)?$/;
 const curatedPacks = {
   "curiosity bean": "curiosity-bean.json",
   "curiosity bean sprout": "curiosity-bean.json",
@@ -21,6 +24,19 @@ const curatedPacks = {
 };
 export function isCuriosity(pack) {
   return pack?.kind === "curiosity-bean" || pack?.kind === "curiosity";
+}
+export function assertRequiredCuriosity(pack, env = process.env) {
+  if (env.WD_REQUIRE_CURIOSITY === "1" && !isCuriosity(pack))
+    throw new Error(
+      `Overnight/public ship path requires a curiosity pack, not ${pack?.kind || "an unknown kind"}. Author a curiosity pack first.`,
+    );
+}
+export function assertSafePackSlug(slug) {
+  if (!PACK_SLUG_PATTERN.test(String(slug || "")))
+    throw new Error(
+      `Pack slug “${slug}” must be a single lowercase path segment (letters, numbers, hyphens).`,
+    );
+  return slug;
 }
 export function packSlug(pack) {
   if (pack?.slug) return pack.slug;
@@ -51,19 +67,65 @@ export function normalizeTopic(input) {
   }
   return topic;
 }
-async function resolveCuratedFile(topic) {
-  const key = topic.toLowerCase();
-  if (Object.hasOwn(curatedPacks, key)) return curatedPacks[key];
-  const dir = new URL("../packs/", import.meta.url);
+function packsDirUrl(packsDir) {
+  if (!packsDir) return new URL("../packs/", import.meta.url);
+  if (packsDir instanceof URL) return packsDir;
+  const href = String(packsDir).endsWith("/") ? packsDir : `${packsDir}/`;
+  return String(href).startsWith("file:") ? new URL(href) : pathToFileURL(href);
+}
+
+function packFileStem(name) {
+  return name.replace(/\.json$/, "");
+}
+
+function isDatedPackStem(stem) {
+  return DATED_PACK_STEM.test(stem);
+}
+
+function ambiguousPackError(topic, names) {
+  return new Error(
+    `Topic “${topic}” matches more than one pack (${names.join(", ")}). Pass --pack packs/<file>.json.`,
+  );
+}
+
+export async function resolvePackFile(
+  topic,
+  packsDir = new URL("../packs/", import.meta.url),
+) {
+  const key = topicKey(topic);
+  const defaultDir = new URL("../packs/", import.meta.url).href;
+  const dir = packsDirUrl(packsDir);
+  if (dir.href === defaultDir && Object.hasOwn(curatedPacks, key))
+    return curatedPacks[key];
+  const matches = [];
   for (const name of await readdir(dir)) {
     if (!name.endsWith(".json")) continue;
     const pack = JSON.parse(await readFile(new URL(name, dir), "utf8"));
-    const names = [pack.topic, pack.slug, ...(pack.aliases || [])]
+    const stem = packFileStem(name);
+    const names = [pack.topic, pack.slug, stem, ...(pack.aliases || [])]
       .filter(Boolean)
       .map((value) => topicKey(value));
-    if (names.includes(key)) return name;
+    if (names.includes(key)) matches.push({ name, pack, stem });
   }
-  return null;
+  if (!matches.length) return null;
+  const exact = matches.filter(
+    (item) =>
+      topicKey(item.stem) === key || topicKey(item.pack.slug || "") === key,
+  );
+  if (exact.length === 1) return exact[0].name;
+  if (exact.length > 1)
+    throw ambiguousPackError(
+      topic,
+      exact.map((item) => item.name),
+    );
+  const bases = matches.filter((item) => !isDatedPackStem(item.stem));
+  if (bases.length === 1) return bases[0].name;
+  if (matches.length > 1)
+    throw ambiguousPackError(
+      topic,
+      matches.map((item) => item.name),
+    );
+  return matches[0].name;
 }
 export function parsePackArgs(args) {
   let packPath;
@@ -90,18 +152,19 @@ export async function loadPackFile(packPath) {
 }
 
 export async function loadPackBySlug(slug) {
-  return loadPackFile(new URL(`../packs/${slug}.json`, import.meta.url));
+  return loadPackFile(
+    new URL(`../packs/${assertSafePackSlug(slug)}.json`, import.meta.url),
+  );
 }
 
-export async function createPack(input = DEFAULT_TOPIC, { packPath } = {}) {
+export async function createPack(
+  input = DEFAULT_TOPIC,
+  { packPath, packsDir } = {},
+) {
   if (packPath) return loadPackFile(packPath);
   const topic = normalizeTopic(input);
-  const curated = await resolveCuratedFile(topic);
-  if (curated) {
-    return JSON.parse(
-      await readFile(new URL(`../packs/${curated}`, import.meta.url), "utf8"),
-    );
-  }
+  const curated = await resolvePackFile(topic, packsDir);
+  if (curated) return loadPackFile(new URL(curated, packsDirUrl(packsDir)));
   // A transparent, deterministic inquiry fallback. It asserts no facts about the topic.
   // Overnight / public ship path must never use this. Author a curiosity pack instead.
   const words = topic.match(/\p{L}+/gu);
