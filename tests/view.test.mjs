@@ -106,6 +106,7 @@ test("public view owns seed-packet archive chrome", async () => {
   for (const rel of [
     "src/archive.css",
     "src/archive-render.mjs",
+    "src/archive.js",
     "src/html.mjs",
     "src/fonts/newsreader-latin-400-normal.woff2",
     "src/fonts/inter-latin-400-normal.woff2",
@@ -121,6 +122,9 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.match(render, /leo-door/);
   assert.match(render, /packet-shelf/);
   assert.match(render, /packet-flap/);
+  assert.match(render, /data-packet-opening/);
+  assert.match(render, /Open this morning/);
+  assert.match(render, /archive\.js/);
   assert.match(render, /requires latest/);
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
@@ -128,19 +132,24 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.match(css, /archive-shell|leo-door/);
   assert.match(css, /packet-shelf/);
   assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /packet-ritual-control/);
+  assert.match(css, /data-packet-state="torn"/);
   assert.match(css, /url\("\.\/fonts\/newsreader-latin-400-normal\.woff2"\)/);
   assert.match(css, /url\("\.\/fonts\/inter-latin-400-normal\.woff2"\)/);
   assert.equal(await exists("dist/pack.json"), false);
   assert.equal(await exists("dist/app.js"), false);
   assert.equal(await exists("dist/archive/archive.json"), false);
+  assert.equal(await exists("dist/archive.js"), true);
+  assert.equal(await exists("dist/archive/archive.js"), true);
 });
 
 test("landing packets use that day's story plate, not stock", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
   const latest = json.days.find((day) => day.slug === json.latest);
   const landing = await read("dist/index.html");
-  assert.match(landing, /class="packet-shelf"/);
-  assert.match(landing, /class="seed-packet is-latest"/);
+  assert.match(landing, /data-packet-opening/);
+  assert.match(landing, /Open this morning/);
+  assert.equal(landing.match(/>Open this morning /g)?.length, 1);
   assert.match(landing, /href="\.\/today\/"/);
   assert.doesNotMatch(landing, STOCK);
   const nested = await read("dist/archive/index.html");
@@ -182,6 +191,20 @@ test("packet faces fail soft to type; archivePage requires latest", () => {
   assert.match(html, /packet-window is-typeface/);
   assert.match(html, /A title only/);
   assert.doesNotMatch(html, /<img /);
+  const previous = {
+    slug: "earlier-day",
+    date: "2026-09-21",
+    title: "An earlier title.",
+    teaser: "Back on the shelf.",
+  };
+  const history = archivePage([day, previous], {
+    latest: day,
+    homePrefix: "./",
+  });
+  assert.match(history, /class="packet-shelf"/);
+  assert.match(history, /href="\.\/days\/earlier-day\/"/);
+  assert.match(history, /Open 21 September 2026/);
+  assert.equal(history.match(/>Open this morning /g)?.length, 1);
 });
 
 test("resolvePacketFace reads plates from that day's folder", async () => {
@@ -193,6 +216,25 @@ test("resolvePacketFace reads plates from that day's folder", async () => {
   assert.match(face.src, new RegExp(`^\\./days/${latest.slug}/`));
   assert.doesNotMatch(face.src, /^https?:/i);
   assert.equal(await exists(`dist/${face.src.replace("./", "")}`), true);
+});
+
+test("archive rows cannot override packet faces with declared image fields", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const latest = json.days.find((day) => day.slug === json.latest);
+  const root = new URL("../dist", import.meta.url).pathname;
+  const face = await resolvePacketFace(
+    {
+      ...latest,
+      image: "assets/declared.jpg",
+      cover: "assets/declared.jpg",
+      plateSrc: "assets/declared.jpg",
+    },
+    root,
+    "./",
+  );
+  if (!face?.src) return;
+  assert.doesNotMatch(face.src, /declared\.jpg/);
+  assert.match(face.src, new RegExp(`^\\./days/${latest.slug}/`));
 });
 
 test("renderArchive fails closed when latest is missing from days", async () => {
