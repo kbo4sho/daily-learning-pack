@@ -4,23 +4,25 @@ Display-only public repo. Generators: **https://github.com/kbo4sho/daily-learnin
 
 ## After cloning the private repo
 
-Generator source is already on that repo. Seed plate binaries, then build:
+Generator source is already on that repo. Healthy checkout — no bootstrap:
 
 ```sh
-node scripts/seed-assets-from-public.mjs   # curiosity-bean plates from public eeb5ce0
 npm ci
-npx playwright install chromium
+npx playwright install --with-deps chromium
+node scripts/seed-assets-from-public.mjs   # curiosity-bean plates from public eeb5ce0
 npm run site
 npm test
 ```
 
-Recovery overlay (safe to re-run; does not overwrite private README / package.json / sync scripts):
+Private check/sync CI uses that same path. It does **not** run bootstrap.
 
-```sh
-bash scripts/bootstrap-from-public.sh
-```
+## Recovery only (empty or broken local clone)
 
-Copy `docs/github-workflows/*.yml` → `.github/workflows/`.
+`bash scripts/bootstrap-from-public.sh` overlays generator source from public `eeb5ce0` when a local clone is empty or broken. It does not overwrite private README / package.json / PATHS / OUTCOME / sync / seed scripts.
+
+**LOCKED — recovery only.** Do not add `bootstrap-from-public.sh` to `check.yml` or `sync-public-view.yml` when copying YAML into `.github/workflows/`.
+
+Copy `docs/github-workflows/*.yml` → `.github/workflows/` as published (no bootstrap step).
 
 ## Secret
 
