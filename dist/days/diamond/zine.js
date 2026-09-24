@@ -18,8 +18,8 @@ export const ZINE_FOLD_STEPS = [
 ];
 export const ZINE_PLATE_MAX_PX = 720;
 export const ZINE_FONT_FILES = {
-  serif: "fonts/newsreader-latin-400-normal.woff2",
-  sans: "fonts/inter-latin-400-normal.woff2",
+  serif: "fonts/newsreader-latin-400-normal.woff",
+  sans: "fonts/inter-latin-400-normal.woff",
 };
 export function zinePanels(pack) {
   if (pack.reading.beats.length > 6)
@@ -68,10 +68,10 @@ export async function generateZine(
   content.registerFontkit(fontkit);
   const [serif, sans] = await Promise.all([
     loadFont(ZINE_FONT_FILES.serif).then((bytes) =>
-      content.embedFont(bytes, { subset: false }),
+      content.embedFont(bytes, { subset: true }),
     ),
     loadFont(ZINE_FONT_FILES.sans).then((bytes) =>
-      content.embedFont(bytes, { subset: false }),
+      content.embedFont(bytes, { subset: true }),
     ),
   ]);
   const ink = rgb(0.16, 0.23, 0.21);
