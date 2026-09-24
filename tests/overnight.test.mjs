@@ -10,8 +10,8 @@ import {
   editorialCuriosityPass,
   writingQualityPass,
 } from "../scripts/editorial-curiosity-pass.mjs";
-import { createPack } from "../src/pack.mjs";
-import { curiosityWorksheet } from "../src/curiosity-render.mjs";
+import { createPack, parsePackArgs } from "../src/pack.mjs";
+import { curiosityWorksheet, lineDrawing } from "../src/curiosity-render.mjs";
 
 test("intake prefers queue/next-topic.txt over the standby roster", async () => {
   const dir = await mkdtemp(join(tmpdir(), "wd-queue-"));
@@ -178,6 +178,60 @@ test("overnight advances standby only after a successful author", async () => {
   assert.ok(minted.includes("a-paper-boat.json"));
   await rm(queueDir, { recursive: true, force: true });
   await rm(outDir, { recursive: true, force: true });
+});
+
+test("generate --pack loads the minted file, not the curated topic match", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-pack-arg-"));
+  const day = new Date("2026-09-24T12:00:00.000Z");
+  await authorCuriosityPack("curiosity bean", { outDir: dir });
+  const minted = await authorCuriosityPack("curiosity bean", {
+    outDir: dir,
+    now: day,
+  });
+  assert.equal(minted.pack.slug, "curiosity-bean-2026-09-24");
+  const args = parsePackArgs(["--pack", minted.path]);
+  assert.equal(args.packPath, minted.path);
+  const viaPack = await createPack(args.topic, { packPath: args.packPath });
+  assert.equal(viaPack.slug, "curiosity-bean-2026-09-24");
+  assert.equal(viaPack.kind, "curiosity");
+  const byTopic = await createPack("curiosity bean");
+  assert.equal(byTopic.slug, "curiosity-bean");
+  assert.equal(byTopic.kind, "curiosity-bean");
+  const overnightSrc = await readFile(
+    new URL("../scripts/overnight-curiosity.mjs", import.meta.url),
+    "utf8",
+  );
+  assert.match(overnightSrc, /"--pack", authored\.path/);
+  assert.doesNotMatch(
+    overnightSrc,
+    /generate", "--", intake\.topic|generate", "--", authored\.pack\.topic/,
+  );
+  await rm(dir, { recursive: true, force: true });
+});
+
+test("overnight line drawings cover all six plate ids and never print undefined", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-draw-"));
+  const { pack } = await authorCuriosityPack("morning dew", { outDir: dir });
+  const ids = pack.plates.map((p) => p.id);
+  assert.deepEqual(ids, [
+    "wake",
+    "reach",
+    "change",
+    "notice",
+    "return",
+    "keep",
+  ]);
+  const letter = curiosityWorksheet(pack, "reading");
+  assert.doesNotMatch(letter, /undefined/);
+  for (const id of ids) {
+    const svg = lineDrawing(id);
+    assert.doesNotMatch(svg, /undefined/);
+    assert.match(svg, /aria-label="[^"]+"/);
+    assert.match(svg, /<text[^>]*>[^<]+<\/text>/);
+  }
+  assert.doesNotMatch(lineDrawing("not-a-plate"), /undefined/);
+  assert.match(lineDrawing("not-a-plate"), /a quiet look/);
+  await rm(dir, { recursive: true, force: true });
 });
 
 test("bean letter story is image+moment with no per-beat H2", async () => {

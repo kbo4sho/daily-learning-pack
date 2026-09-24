@@ -6,11 +6,18 @@ import { packSlug } from "../src/pack.mjs";
 import { site } from "../src/render.mjs";
 import { ARCHIVE_FONTS, copyFonts, copyRuntime } from "../src/site-assets.mjs";
 
-export async function writeDay(dest, pack, { archiveHref, pdfSource } = {}) {
+export async function writeDay(
+  dest,
+  pack,
+  { archiveHref, pdfSource, print = Boolean(pdfSource) } = {},
+) {
   await mkdir(dest, { recursive: true });
   await writeFile(
     `${dest}/index.html`,
-    site(pack, { archiveHref: archiveHref || "../../archive/" }),
+    site(pack, {
+      archiveHref: archiveHref || "../../archive/",
+      print,
+    }),
   );
   await writeFile(`${dest}/pack.json`, JSON.stringify(pack, null, 2) + "\n");
   await copyRuntime(dest, pack);
@@ -34,15 +41,16 @@ export async function writeArchive(
     await writeDay(dest, entry.pack, {
       archiveHref: "../../archive/",
       pdfSource: isGenerated ? pdfSource : null,
+      print: Boolean(isGenerated && pdfSource),
     });
   }
 
+  const todayHasPdf =
+    generatedPack && packSlug(generatedPack) === latest.slug && pdfSource;
   await writeDay(`${root}/today`, latest.pack, {
     archiveHref: "../archive/",
-    pdfSource:
-      generatedPack && packSlug(generatedPack) === latest.slug
-        ? pdfSource
-        : null,
+    pdfSource: todayHasPdf ? pdfSource : null,
+    print: Boolean(todayHasPdf),
   });
 
   const nested = archivePage(entries, {
