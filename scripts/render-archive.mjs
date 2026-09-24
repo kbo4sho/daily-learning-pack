@@ -64,8 +64,11 @@ export async function renderArchive(root = resolve("dist")) {
   const entries = json.days;
   if (!Array.isArray(entries) || !entries.length)
     throw new Error("dist/archive.json must list at least one day.");
-  const latest =
-    entries.find((entry) => entry.slug === json.latest) || entries[0];
+  const latest = entries.find((entry) => entry.slug === json.latest);
+  if (!latest)
+    throw new Error(
+      `dist/archive.json latest “${json.latest}” must match a days[].slug.`,
+    );
   await mkdir(`${root}/archive`, { recursive: true });
   await writeFile(
     `${root}/index.html`,

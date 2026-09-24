@@ -22,7 +22,8 @@ export function archivePage(
   entries,
   { latest, homePrefix = "./", cssHref = "./archive.css" } = {},
 ) {
-  const today = latest || entries[0];
+  if (!latest) throw new Error("archivePage requires latest (a listed day).");
+  const today = latest;
   const earlier = entries.filter((entry) => entry.slug !== today.slug);
   const todayHref = `${homePrefix}today/`;
   const rows = entries
