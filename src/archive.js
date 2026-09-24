@@ -22,10 +22,12 @@ function reset(opening) {
   const control = opening.querySelector(".packet-ritual-control");
   const instruction = opening.querySelector("[data-packet-instruction]");
   const number = opening.querySelector(".packet-step-number");
+  const status = opening.querySelector("[data-packet-status]");
   const title = opening.dataset.packetTitle;
   const destination = opening.dataset.packetDestination;
   instruction.textContent = "Press packet · lift flap";
   number.textContent = "1 of 3";
+  status.textContent = "";
   control.setAttribute(
     "aria-label",
     `Seed packet: ${title} Step 1 of 3: lift the flap. Destination: ${destination}.`,
@@ -66,3 +68,5 @@ reducedMotion.addEventListener("change", () => {
   for (const opening of document.querySelectorAll("[data-packet-opening]"))
     reset(opening);
 });
+
+document.documentElement.classList.add("packet-ritual-ready");

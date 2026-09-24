@@ -12,10 +12,10 @@ Draft: **https://github.com/kbo4sho/daily-learning-pack/pull/11**
 
 - **Not a stacked deck, not a SaaS card grid.** Approved days stand in an `auto-fill` shelf of 248px packets. A single morning stays packet-sized and left-aligned; it does not stretch into a banner.
 - **Packet silhouette.** Manila packet paper (`#f3ead4`) on cream page so the object reads. Tapered flap (`clip-path`) plus `filter: drop-shadow` (box-shadow does not follow the taper). Kraft flap, tear strip at the top, inset plate window, gold-edged shelf board. Gold is lot stamp + shelf hairlines only.
-- **That day’s still.** Face comes from the archive row’s image fields if present, else `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock. Root `pack.json` / `assets/` are gone; packets do not read them.
+- **That day’s still.** Face comes only through `faceFromPack`, using `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Archive-row declared image fields are ignored. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock. Root `pack.json` / `assets/` are gone; packets do not read them.
 - **Copy.** Killed “quiet paper, quiet ink.” House bar: “For this family. Grade 2.” Shelf: “On the shelf.” Footer keeps the house line and the dogfood / no-marketing note.
-- **Leo door stays one tap.** Large type + `./today/` button. The standing packet on the right is the same morning’s plate, decorative. Shelf packet links to the day URL.
-- **Motion.** Hover/focus lifts 8px. `prefers-reduced-motion` drops the lift and all transitions.
+- **Packet ritual.** The door packet and shelf packets are the three-press ritual controls. Each packet keeps an always-visible direct link (“Open this morning” / dated equivalent) with a real destination. Ritual-only step chrome stays hidden until `archive.js` successfully enhances the page, so the no-JS packet remains an ordinary link.
+- **Motion.** Hover/focus lifts 8px. The reduced-motion packet visibility choice remains an open captain decision (hide packet vs packet-as-Open); this auto-fix does not change the current behavior.
 - **Fonts.** Packet CSS uses vendored `src/fonts/` (Newsreader + Inter). `npm run archive` copies them to `dist/fonts` and `dist/archive/fonts`.
 - **No Astra.** Existing day plates were enough.
 
