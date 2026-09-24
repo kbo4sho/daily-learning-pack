@@ -24,7 +24,7 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 3. A human merges. **No auto-merge.**
 4. GitHub Pages on `main` deploys `dist/` as-is. It does **not** run `npm run site`.
 
-Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **private** repo (Contents + Pull requests on this public repo only). This view repo does not hold that secret.
+Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **private** repo (Contents + Pull requests on this public repo only). This view repo does not hold that secret. First-time private checkout: [`docs/private-generators.md`](docs/private-generators.md).
 
 ## Preview committed artifacts
 
