@@ -80,51 +80,29 @@ finish.addEventListener("click", () => {
 const download = document.querySelector("#fold-download");
 const status = document.querySelector("#fold-status");
 download.hidden = false;
-let library;
-function loadPdfLibrary() {
-  if (globalThis.PDFLib) return Promise.resolve(globalThis.PDFLib);
-  if (library) return library;
-  library = new Promise((resolve, reject) => {
+const scriptLibraries = new Map();
+function loadScriptGlobal(src, globalName, message) {
+  if (globalThis[globalName]) return Promise.resolve(globalThis[globalName]);
+  if (scriptLibraries.has(src)) return scriptLibraries.get(src);
+  const library = new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = "./vendor/pdf-lib.min.js";
+    script.src = src;
     const fail = () => {
       clearTimeout(timer);
       script.remove();
-      library = undefined;
-      reject(new Error("PDF library unavailable"));
+      scriptLibraries.delete(src);
+      reject(new Error(message));
     };
     const timer = setTimeout(fail, 15000);
     script.onload = () => {
       clearTimeout(timer);
-      resolve(globalThis.PDFLib);
+      resolve(globalThis[globalName]);
     };
     script.onerror = fail;
     document.head.append(script);
   });
+  scriptLibraries.set(src, library);
   return library;
-}
-let fontkitLibrary;
-function loadFontkitLibrary() {
-  if (globalThis.fontkit) return Promise.resolve(globalThis.fontkit);
-  if (fontkitLibrary) return fontkitLibrary;
-  fontkitLibrary = new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = "./vendor/fontkit.umd.min.js";
-    const fail = () => {
-      clearTimeout(timer);
-      script.remove();
-      fontkitLibrary = undefined;
-      reject(new Error("Font library unavailable"));
-    };
-    const timer = setTimeout(fail, 15000);
-    script.onload = () => {
-      clearTimeout(timer);
-      resolve(globalThis.fontkit);
-    };
-    script.onerror = fail;
-    document.head.append(script);
-  });
-  return fontkitLibrary;
 }
 async function fetchAsset(src, message) {
   const response = await fetch(`./${src}`, {
@@ -169,8 +147,16 @@ download.addEventListener("click", async () => {
   status.textContent = "Making your little book…";
   try {
     const [pdfLib, fontkit] = await Promise.all([
-      loadPdfLibrary(),
-      loadFontkitLibrary(),
+      loadScriptGlobal(
+        "./vendor/pdf-lib.min.js",
+        "PDFLib",
+        "PDF library unavailable",
+      ),
+      loadScriptGlobal(
+        "./vendor/fontkit.umd.min.js",
+        "fontkit",
+        "Font library unavailable",
+      ),
     ]);
     const bytes = await generateZine(content, loadPlate, pdfLib, {
       fontkit,
