@@ -91,7 +91,7 @@ export function archivePage(
     .join("");
   const lead = earlier.length
     ? "Finished mornings, stood up like packets on a shelf. Open one when you want that day back."
-    : "The first packet is the bean morning. Later approved days will stand beside it.";
+    : "The first approved morning stands here. Later days will stand beside it.";
   const doorWindow = packetWindow(today);
   return `<!doctype html>
 <html lang="en">

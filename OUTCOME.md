@@ -1,8 +1,8 @@
 # Wonder Daily — archive seed packets
 
-Task: `wd-archive-seed-packets-ship`. **Draft PR. Do not merge.**
+Task: `wd-archive-seed-packets-ship`. **Draft PR. Do not merge.** No craft-approve yet.
 
-Public view restyle only. Rebased onto public `main` after generators-split (#10) landed. No generators returned to this repo.
+Public view restyle only. Rebased onto public `main` tip `337206438dba832755e2aaaf557560dea2c87efc` (generators-split #10). No generators returned to this repo.
 
 ## PR
 
@@ -10,21 +10,26 @@ Draft: **https://github.com/kbo4sho/daily-learning-pack/pull/11**
 
 ## Craft decisions
 
-- **Not a stacked deck, not a SaaS card grid.** Approved days stand in an `auto-fill` shelf of 236px packets. A single morning stays packet-sized and left-aligned; it does not stretch into a banner.
+- **Not a stacked deck, not a SaaS card grid.** Approved days stand in an `auto-fill` shelf of 248px packets. A single morning stays packet-sized and left-aligned; it does not stretch into a banner.
 - **Packet silhouette.** Manila packet paper (`#f3ead4`) on cream page so the object reads. Tapered flap (`clip-path`) plus `filter: drop-shadow` (box-shadow does not follow the taper). Kraft flap, tear strip at the top, inset plate window, gold-edged shelf board. Gold is lot stamp + shelf hairlines only.
-- **That day’s still.** Face comes from the archive row’s image fields if present, else `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock.
+- **That day’s still.** Face comes from the archive row’s image fields if present, else `dist/days/{slug}/pack.json` `reading.coverPlate` / first plate. Remote URLs and `..` paths are rejected. Missing art fails to a sage typographic face of the title — never lorem or stock. Root `pack.json` / `assets/` are gone; packets do not read them.
 - **Copy.** Killed “quiet paper, quiet ink.” House bar: “For this family. Grade 2.” Shelf: “On the shelf.” Footer keeps the house line and the dogfood / no-marketing note.
 - **Leo door stays one tap.** Large type + `./today/` button. The standing packet on the right is the same morning’s plate, decorative. Shelf packet links to the day URL.
-- **Motion.** Hover/focus lifts 7px. `prefers-reduced-motion` drops the lift and all transitions.
+- **Motion.** Hover/focus lifts 8px. `prefers-reduced-motion` drops the lift and all transitions.
+- **Fonts.** Packet CSS uses vendored `src/fonts/` (Newsreader + Inter). `npm run archive` copies them to `dist/fonts` and `dist/archive/fonts`.
 - **No Astra.** Existing day plates were enough.
 
 ## Fail-closed latest
 
 `archivePage` throws unless `latest` is passed. `renderArchive` throws if `archive.json.latest` is missing or not in `days[]`. No `entries[0]` / `home[0]` fallback.
 
-## Invariants kept
+## Split review-fix contracts kept
 
-`noindex, nofollow`. Leo `/today/` door. No Wonder Together marketing nav. `dist/archive.json` still has the one real approved day. `npm run build` / `site` / `overnight` remain private-repo stubs.
+- Single `dist/archive.json` (nested `dist/archive/archive.json` stripped)
+- Unused root day runtime removed
+- Mirrored `dist/archive/archive.css` + `dist/archive/fonts` left as the split has them (open captain question)
+- View tests are structural (no dogfood copy pins)
+- Private-generator captain notes stay as landed on `main` (bootstrap is recovery-only)
 
 ## Verify
 
