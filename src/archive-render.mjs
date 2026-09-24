@@ -36,7 +36,7 @@ export function formatLotStamp(iso) {
 }
 
 /**
- * Turn a pack-relative or archive-declared plate path into a landing href.
+ * Turn a pack-relative plate path into a landing href.
  * Rejects remote URLs and parent traversal so packets never load stock hosts.
  */
 export function packetImageHref(homePrefix, slug, rel) {
@@ -62,29 +62,54 @@ function packetWindow(entry) {
   return `<span class="packet-window is-typeface"><span class="packet-type">${esc(face)}</span></span>`;
 }
 
-function seedPacket(entry, { isLatest, href }) {
+function openingCopy(entry, isLatest) {
+  const destination = isLatest ? "this morning" : formatArchiveDate(entry.date);
+  return {
+    destination,
+    direct: isLatest ? "Open this morning" : `Open ${destination}`,
+    first: `Seed packet: ${entry.title} Step 1 of 3: lift the flap. Destination: ${destination}.`,
+  };
+}
+
+function packetOpening(entry, { isLatest, href, position = "shelf" }) {
   const latest = isLatest ? " is-latest" : "";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
-  return `<li class="seed-packet${latest}"><a class="packet-face" href="${href}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a></li>`;
+  const copy = openingCopy(entry, isLatest);
+  return `<div class="packet-opening${latest}" data-packet-opening data-packet-title="${esc(entry.title)}" data-packet-destination="${esc(copy.destination)}" data-packet-state="sealed">
+<a class="packet-face packet-ritual-control${position === "door" ? " door-packet" : ""}" href="${href}" aria-label="${esc(copy.first)}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a>
+<p class="packet-step-label" aria-hidden="true"><span class="packet-step-number">1 of 3</span><span data-packet-instruction>Press packet · lift flap</span></p>
+<span class="sr-only" role="status" aria-live="polite" data-packet-status></span>
+<a class="packet-skip" href="${href}">${esc(copy.direct)} <span aria-hidden="true">→</span></a>
+</div>`;
+}
+
+function seedPacket(entry, { isLatest, href }) {
+  const latest = isLatest ? " is-latest" : "";
+  return `<li class="seed-packet${latest}">${packetOpening(entry, { isLatest, href })}</li>`;
 }
 
 /**
  * Archive landing. Seed-packet shelf, not a stacked list.
- * Faces come from render-archive (pack plates / declared image fields).
+ * Faces come from render-archive pack plates.
  */
 export function archivePage(
   entries,
-  { latest, homePrefix = "./", cssHref = "./archive.css" } = {},
+  {
+    latest,
+    homePrefix = "./",
+    cssHref = "./archive.css",
+    jsHref = "./archive.js",
+  } = {},
 ) {
   if (!latest) throw new Error("archivePage requires latest (a listed day).");
   const today = latest;
   const earlier = entries.filter((entry) => entry.slug !== today.slug);
   const todayHref = `${homePrefix}today/`;
-  const packets = entries
+  const packets = earlier
     .map((entry) =>
       seedPacket(entry, {
         homePrefix,
-        isLatest: entry.slug === today.slug,
+        isLatest: false,
         href: `${homePrefix}days/${esc(entry.slug)}/`,
       }),
     )
@@ -92,7 +117,13 @@ export function archivePage(
   const lead = earlier.length
     ? "Finished mornings, stood up like packets on a shelf. Open one when you want that day back."
     : "The first approved morning stands here. Later days will stand beside it.";
-  const doorWindow = packetWindow(today);
+  const shelf = earlier.length
+    ? `<section class="packet-shelf-wrap" aria-labelledby="list-heading">
+<h2 id="list-heading">On the shelf</h2>
+<p class="list-lead">${lead}</p>
+<ol class="packet-shelf">${packets}</ol>
+</section>`
+    : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -103,6 +134,7 @@ export function archivePage(
 <title>Wonder Daily · Mornings</title>
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="${cssHref}">
+<script src="${jsHref}" defer></script>
 </head>
 <body data-kind="archive">
 <a class="skip" href="#mornings">Skip to the mornings</a>
@@ -114,20 +146,15 @@ export function archivePage(
 <main id="mornings">
 <section class="leo-door" aria-labelledby="today-heading">
 <div class="door-copy">
-<p class="eyebrow">LEO · ONE TAP</p>
+<p class="eyebrow">LEO · THIS MORNING</p>
 <p class="door-date"><time datetime="${esc(today.date)}">${esc(formatArchiveDate(today.date))}</time></p>
 <h1 id="today-heading">${esc(today.title)}</h1>
 <p class="door-teaser">${esc(today.teaser)}</p>
-<p class="door-actions"><a class="primary-button" href="${todayHref}">Open today’s pack <span aria-hidden="true">→</span></a></p>
 <p class="small-note">Today’s approved morning. Drafts stay off this shelf.</p>
 </div>
-<figure class="door-packet packet-face" aria-hidden="true">${packetChrome()}${doorWindow}<span class="packet-lot">${esc(formatLotStamp(today.date))}</span></figure>
+${packetOpening({ ...today, face: today.face }, { isLatest: true, href: todayHref, position: "door" })}
 </section>
-<section class="packet-shelf-wrap" aria-labelledby="list-heading">
-<h2 id="list-heading">On the shelf</h2>
-<p class="list-lead">${lead}</p>
-<ol class="packet-shelf">${packets}</ol>
-</section>
+${shelf}
 </main>
 <footer class="archive-footer">
 <p>Small discoveries. Time together.</p>

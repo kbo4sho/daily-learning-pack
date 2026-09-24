@@ -10,17 +10,6 @@ import {
 import { resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 
-const IMAGE = /\.(?:jpe?g|png|webp)$/i;
-const DECLARED = [
-  "image",
-  "cover",
-  "plate",
-  "src",
-  "coverSrc",
-  "plateSrc",
-  "imageSrc",
-];
-
 async function readable(path) {
   try {
     await access(path);
@@ -28,22 +17,6 @@ async function readable(path) {
   } catch {
     return false;
   }
-}
-
-function declaredPath(entry) {
-  for (const key of DECLARED) {
-    const value = entry[key];
-    if (typeof value === "string" && value.trim()) return value.trim();
-  }
-  return "";
-}
-
-function declaredAlt(entry) {
-  for (const key of ["imageAlt", "alt", "coverAlt", "plateAlt"]) {
-    const value = entry[key];
-    if (typeof value === "string" && value.trim()) return value.trim();
-  }
-  return "";
 }
 
 async function faceFromPack(root, entry, homePrefix) {
@@ -70,21 +43,11 @@ async function faceFromPack(root, entry, homePrefix) {
 }
 
 /**
- * Prefer declared story fields on the archive row, then that day's pack plates.
+ * Prefer that day's pack cover plate, then its first plate.
  * Missing art fails soft (typographic packet). Never invents days or remote art.
  * Plates live under dist/days/{slug}/ — not the removed root pack.json/assets.
  */
 export async function resolvePacketFace(entry, root, homePrefix = "./") {
-  const declared = declaredPath(entry);
-  if (declared) {
-    const src = packetImageHref(homePrefix, entry.slug, declared);
-    if (src && IMAGE.test(src)) {
-      const disk = resolve(root, src.replace(homePrefix, "./"));
-      if (await readable(disk)) {
-        return { src, alt: declaredAlt(entry) || entry.title || "" };
-      }
-    }
-  }
   return faceFromPack(root, entry, homePrefix);
 }
 
@@ -195,6 +158,8 @@ export async function renderArchive(root = resolve("dist")) {
   );
   await copyFile("src/archive.css", `${root}/archive.css`);
   await copyFile("src/archive.css", `${root}/archive/archive.css`);
+  await copyFile("src/archive.js", `${root}/archive.js`);
+  await copyFile("src/archive.js", `${root}/archive/archive.js`);
   await copyArchiveFonts(root);
   await dropRootDayRuntime(root);
   return { latest, count: entries.length };
