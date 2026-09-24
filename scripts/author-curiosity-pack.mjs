@@ -14,6 +14,26 @@ function slugify(topic) {
   return packSlug({ topic });
 }
 
+async function pathExists(path) {
+  try {
+    await access(path);
+    return true;
+  } catch (error) {
+    if (error.code === "ENOENT") return false;
+    throw error;
+  }
+}
+
+// Collision scheme: keep packs/<slug>.json; mint packs/<slug>-YYYY-MM-DD.json (UTC ISO date), then -2, -3 for same-day reruns.
+export async function uniquePackSlug(base, outDir, now = new Date()) {
+  if (!(await pathExists(resolve(outDir, `${base}.json`)))) return base;
+  const day = now.toISOString().slice(0, 10);
+  let candidate = `${base}-${day}`;
+  for (let n = 2; await pathExists(resolve(outDir, `${candidate}.json`)); n++)
+    candidate = `${base}-${day}-${n}`;
+  return candidate;
+}
+
 function plateId(index) {
   return ["wake", "reach", "change", "notice", "return", "keep"][index];
 }
@@ -215,10 +235,11 @@ function stubPack(topic, { slug = slugify(topic) } = {}) {
 
 export async function authorCuriosityPack(
   topicInput,
-  { outDir = "packs" } = {},
+  { outDir = "packs", now = new Date() } = {},
 ) {
   const topic = normalizeTopic(topicInput);
-  const slug = slugify(topic);
+  await mkdir(outDir, { recursive: true });
+  const slug = await uniquePackSlug(slugify(topic), outDir, now);
   const usedKey = API_KEYS.find((name) => process.env[name]);
   const pack = stubPack(topic, { slug });
   if (usedKey)
@@ -226,15 +247,10 @@ export async function authorCuriosityPack(
       `API key ${usedKey} is present; writing a curiosity-bar stub. The key name is not stored in pack JSON.`,
     );
   const path = resolve(outDir, `${slug}.json`);
-  await mkdir(outDir, { recursive: true });
-  try {
-    await access(path);
-    throw new Error(
-      `Refusing to overwrite existing pack ${path}. Overnight must not clobber a curated pack. Use a distinct topic/slug.`,
+  if (slug !== slugify(topic))
+    console.log(
+      `Existing pack ${slugify(topic)}.json; minting ${slug}.json so the curated file is not overwritten.`,
     );
-  } catch (error) {
-    if (error.code !== "ENOENT") throw error;
-  }
   await writeFile(path, JSON.stringify(pack, null, 2) + "\n");
   return { pack, path, usedKey: usedKey || null };
 }
