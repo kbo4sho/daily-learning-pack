@@ -7,7 +7,7 @@ import { serve } from "../scripts/serve.mjs";
 import { checkReader, checkReaderMotion } from "./reader.mjs";
 
 const pack = JSON.parse(await readFile("dist/pack.json", "utf8"));
-if (pack.kind === "curiosity-bean") {
+if (pack.kind === "curiosity-bean" || pack.kind === "curiosity") {
   await import("./curiosity-browser.mjs");
   process.exit(0);
 }
