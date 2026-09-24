@@ -8,16 +8,15 @@ Public repo stays the view/display layer so [GitHub Pages](https://kbo4sho.githu
 
 **https://github.com/kbo4sho/daily-learning-generators** (private)
 
-Created under `kbo4sho`. `gh repo create` failed (`Resource not accessible by integration` for the cloud-agent token). GitHub MCP `create_repository` as kbo4sho succeeded. The cloud-agent `gh` token cannot clone or push the new private repo. Files were added via the GitHub MCP Contents API. **`.github/workflows/*` cannot be written** (API 404 without the `workflow` scope). YAML lives in the private repo at `docs/github-workflows/` for the captain to copy.
+Created under `kbo4sho`. `gh repo create` failed (`Resource not accessible by integration` for the cloud-agent token). GitHub MCP `create_repository` as kbo4sho succeeded. The cloud-agent `gh` token cannot clone or push the new private repo. Files were added via the GitHub MCP Contents / `push_files` APIs. **`.github/workflows/*` cannot be written** (API 404 without the `workflow` scope). YAML lives in the private repo at `docs/github-workflows/` for the captain to copy.
 
-Full generator source (scripts/src/tests/packs/assets) is restored on a captain machine with:
+Generator **source is now in the private repo** (`scripts/`, `src/`, `tests/`, `packs/`, `queue/`, `archive/approved.json`, plus `scripts/sync-to-public.mjs`). Plate **binaries** still seed from public history:
 
 ```sh
-bash scripts/bootstrap-from-public.sh   # copies from public eeb5ce0
-node scripts/seed-assets-from-public.mjs
+node scripts/seed-assets-from-public.mjs   # curiosity-bean plates @ eeb5ce0
 ```
 
-Those commands are also the first steps of the documented private CI workflows.
+`bash scripts/bootstrap-from-public.sh` is a recovery overlay from the same SHA (does not overwrite private README / package.json / sync scripts). Those commands remain the first steps of the documented private CI workflows.
 
 ## Paths moved (private source of truth)
 
@@ -66,8 +65,8 @@ Seeded `dist/` is the archive landing + curiosity-bean `/today/` from `npm run s
 ## Tests
 
 - Combined tree before slim: `npm test` **28/28**.
-- Public view tree: `npm test` (committed artifact + stub checks).
-- Private tree: `npm test` after import (same generator suite).
+- Public view tree: `npm test` **5/5** (committed artifacts, stubs, public archive-chrome ownership).
+- Private assembled tree: `npm run site` then `npm test` **28/28**.
 
 ## Product invariants kept
 

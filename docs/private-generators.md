@@ -4,13 +4,20 @@ Display-only public repo. Generators: **https://github.com/kbo4sho/daily-learnin
 
 ## After cloning the private repo
 
+Generator source is already on that repo. Seed plate binaries, then build:
+
 ```sh
-bash scripts/bootstrap-from-public.sh
-node scripts/seed-assets-from-public.mjs
+node scripts/seed-assets-from-public.mjs   # curiosity-bean plates from public eeb5ce0
 npm ci
 npx playwright install chromium
 npm run site
 npm test
+```
+
+Recovery overlay (safe to re-run; does not overwrite private README / package.json / sync scripts):
+
+```sh
+bash scripts/bootstrap-from-public.sh
 ```
 
 Copy `docs/github-workflows/*.yml` → `.github/workflows/`.
