@@ -64,9 +64,8 @@ function packetWindow(entry) {
 
 function seedPacket(entry, { isLatest, href }) {
   const latest = isLatest ? " is-latest" : "";
-  const face = entry.face?.src ? "" : " is-typeface";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
-  return `<li class="seed-packet${latest}${face}"><a class="packet-face" href="${href}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a></li>`;
+  return `<li class="seed-packet${latest}"><a class="packet-face" href="${href}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a></li>`;
 }
 
 /**

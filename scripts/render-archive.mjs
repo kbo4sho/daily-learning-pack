@@ -72,6 +72,7 @@ async function faceFromPack(root, entry, homePrefix) {
 /**
  * Prefer declared story fields on the archive row, then that day's pack plates.
  * Missing art fails soft (typographic packet). Never invents days or remote art.
+ * Plates live under dist/days/{slug}/ — not the removed root pack.json/assets.
  */
 export async function resolvePacketFace(entry, root, homePrefix = "./") {
   const declared = declaredPath(entry);
@@ -87,14 +88,30 @@ export async function resolvePacketFace(entry, root, homePrefix = "./") {
   return faceFromPack(root, entry, homePrefix);
 }
 
-async function withFaces(entries, root, homePrefix) {
+async function withFaces(entries, root) {
   return Promise.all(
     entries.map(async (entry) => ({
       ...entry,
-      face: await resolvePacketFace(entry, root, homePrefix),
+      face: await resolvePacketFace(entry, root, "./"),
     })),
   );
 }
+
+function nestFaces(entries) {
+  return entries.map((entry) => {
+    const src = entry.face?.src;
+    if (!src) return entry;
+    return { ...entry, face: { ...entry.face, src: src.replace("./", "../") } };
+  });
+}
+
+function facedLatest(faced, slug) {
+  const match = faced.find((entry) => entry.slug === slug);
+  if (!match)
+    throw new Error(`Faced latest “${slug}” missing after plate resolve.`);
+  return match;
+}
+
 
 /**
  * Re-apply public archive chrome onto committed dist data.
@@ -157,14 +174,10 @@ export async function renderArchive(root = resolve("dist")) {
       `dist/archive.json latest “${json.latest}” must match a days[].slug.`,
     );
   await mkdir(`${root}/archive`, { recursive: true });
-  const home = await withFaces(entries, root, "./");
-  const nested = await withFaces(entries, root, "../");
-  const homeLatest = home.find((entry) => entry.slug === latest.slug);
-  const nestedLatest = nested.find((entry) => entry.slug === latest.slug);
-  if (!homeLatest || !nestedLatest)
-    throw new Error(
-      `Faced latest “${latest.slug}” missing after plate resolve.`,
-    );
+  const home = await withFaces(entries, root);
+  const nested = nestFaces(home);
+  const homeLatest = facedLatest(home, latest.slug);
+  const nestedLatest = facedLatest(nested, latest.slug);
   await writeFile(
     `${root}/index.html`,
     archivePage(home, {
