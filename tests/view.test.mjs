@@ -96,7 +96,7 @@ test("generator commands are stubs that point at the private repo", async () => 
   const pkg = JSON.parse(await read("package.json"));
   for (const name of ["build", "generate", "site", "overnight", "author"])
     assert.match(pkg.scripts[name], /moved\.mjs/);
-  assert.match(pkg.scripts.archive, /render-archive.mjs/);
+  assert.match(pkg.scripts.archive, /render-archive\.mjs/);
   assert.equal(await exists("scripts/build.mjs"), false);
   assert.equal(await exists("src/pack.mjs"), false);
   assert.equal(await exists("queue/standby.json"), false);
