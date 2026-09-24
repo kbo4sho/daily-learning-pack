@@ -120,6 +120,7 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.match(render, /seed-packet/);
   assert.match(render, /leo-door/);
   assert.match(render, /packet-shelf/);
+  assert.match(render, /packet-flap/);
   assert.match(render, /requires latest/);
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
