@@ -221,12 +221,10 @@ export async function authorCuriosityPack(
   const slug = slugify(topic);
   const usedKey = API_KEYS.find((name) => process.env[name]);
   const pack = stubPack(topic, { slug });
-  if (usedKey) {
-    pack.authoring.apiKeyPresent = usedKey;
-    pack.authoring.todo.unshift(
-      `API key ${usedKey} is present, but this scaffold still writes a curiosity-bar stub. Do not fall back to inquiry-only.`,
+  if (usedKey)
+    console.log(
+      `API key ${usedKey} is present; writing a curiosity-bar stub. The key name is not stored in pack JSON.`,
     );
-  }
   const path = resolve(outDir, `${slug}.json`);
   await mkdir(outDir, { recursive: true });
   try {

@@ -1,6 +1,10 @@
 import { access } from "node:fs/promises";
 import { spawn } from "node:child_process";
-import { intakeTheme } from "./intake-theme.mjs";
+import {
+  advanceStandbyCursor,
+  clearQueuedTheme,
+  intakeTheme,
+} from "./intake-theme.mjs";
 import { authorCuriosityPack } from "./author-curiosity-pack.mjs";
 import {
   editorialCuriosityPass,
@@ -35,14 +39,18 @@ export async function platesReady(pack) {
 }
 
 export async function overnightCuriosity(options = {}) {
-  const intake = options.intake || (await intakeTheme());
+  const queueDir = options.queueDir || "queue";
+  const outDir = options.outDir || "packs";
+  const intake = options.intake || (await intakeTheme({ queueDir }));
   console.log(`Intake: “${intake.topic}” from ${intake.source}`);
   if (!intake.queued)
     console.log(
       "No captain theme in queue/next-topic.txt. Using standby roster.",
     );
 
-  const authored = await authorCuriosityPack(intake.topic);
+  const authored = await authorCuriosityPack(intake.topic, { outDir });
+  if (intake.queued) await clearQueuedTheme({ queueDir });
+  else await advanceStandbyCursor({ queueDir });
   console.log(
     `Authored ${authored.path} at Curiosity bar (${authored.pack.kind}).`,
   );
