@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "diamond",
+  "topic": "diamond",
+  "aliases": [
+    "diamonds",
+    "diamond formation",
+    "diamond sparkle",
+    "diamond hardness",
+    "curiosity diamond"
+  ],
+  "gradeLevel": 2,
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 2 · DIAMOND / EARTH & LIGHT",
+  "title": "A diamond's story.",
+  "teaser": "A deep beginning. A borrowed flash of light.",
+  "question": "How can a stone hold a flash of light?",
+  "idea": "A natural diamond is a carbon crystal that grew deep underground. Its strong structure resists scratches. Cut faces change the paths of light.",
+  "curiosity": {
+    "intro": "Choose a question with your grown-up. Let your eyes wander before you open the explanation.",
+    "carryForward": "Read together. Count parts of a model. Give a discovery your own words.",
+    "questions": [
+      {
+        "id": "begin",
+        "plate": "deep",
+        "question": "How could a diamond begin where sunlight cannot reach?",
+        "notice": "Find the tiny landscape at the top. How far below it is the pale crystal? What might the inward arrows mean?",
+        "say": "Natural diamonds grow from carbon deep underground, where it is very hot and the pressure is enormous. The arrows stand for that squeeze. Their story stretches far back in Earth's past.",
+        "try": "Trace from the painted tree down to the crystal. Imagine all the rock above it. This model cannot show the real distance."
+      },
+      {
+        "id": "pattern",
+        "plate": "pattern",
+        "question": "What could something so tiny be made of?",
+        "notice": "Look at the small stone, then the big model. Follow a rod from one ball to the next. Where could the pattern keep going?",
+        "say": "A diamond is made of carbon atoms, too small for our eyes to see. They join in a repeating pattern. The balls and rods help us picture it; a diamond does not contain little wooden sticks.",
+        "try": "Choose one ball in the picture. Trace a connection to a neighbor, then another. Say one thing this model helps you imagine."
+      },
+      {
+        "id": "hard",
+        "plate": "hard",
+        "question": "Does hard mean nothing can hurt it?",
+        "notice": "Compare the two surface drawings in the notebook. Which looks scratched? Find the numbers beside the minerals.",
+        "say": "Hardness tells us how well a mineral resists scratches. Diamond is number 10 on the Mohs scale; talc is number 1. But a diamond can still chip or break. Hard does not mean unbreakable.",
+        "try": "Draw a smooth patch and a scratched patch on paper. Tell each other what changed. We can explore the idea without scratching any real objects."
+      },
+      {
+        "id": "light",
+        "plate": "light",
+        "question": "Where does the sparkle come from?",
+        "notice": "Start at the lamp. Follow the orange path into the model and back out. Where does its direction change?",
+        "say": "Light can bend as it enters a diamond and bounce inside it. Carefully cut, flat faces help send light back toward our eyes. As the stone, light, or viewer moves, bright flashes appear and disappear.",
+        "try": "Trace the painted light path in the air. Imagine the lamp going dark. Would the diamond make its own light?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "deep",
+      "src": "assets/diamond/01-deep.jpg",
+      "original": "assets/diamond/01-deep.png",
+      "title": "A beginning below",
+      "alt": "Big and Little Wonderer study a museum cutaway with a pale diamond deep beneath a landscape. Two orange arrows squeeze inward through warm-colored rock.",
+      "caption": "An imagined window into deep rock. The diamond is enlarged; layers and distances are simplified."
+    },
+    {
+      "id": "pattern",
+      "src": "assets/diamond/02-pattern.jpg",
+      "original": "assets/diamond/02-pattern.png",
+      "title": "A hidden pattern",
+      "alt": "A large ball-and-rod model stands beside a small rough diamond. Big and Little look at connected grey balls labeled carbon and a repeating pattern.",
+      "caption": "A simplified model of connected carbon atoms. Real atoms are much too small to see here."
+    },
+    {
+      "id": "journey",
+      "src": "assets/diamond/03-journey.jpg",
+      "original": "assets/diamond/03-journey.png",
+      "title": "Carried toward daylight",
+      "alt": "The pair follow orange upward arrows through a dark, tapering channel in a museum rock cutaway. An enlarged rough diamond sits inside the channel.",
+      "caption": "Long ago, some volcanic eruptions carried already-formed diamonds upward. This model is not to scale."
+    },
+    {
+      "id": "hard",
+      "src": "assets/diamond/04-hard.jpg",
+      "original": "assets/diamond/04-hard.png",
+      "title": "Hard, and still worth care",
+      "alt": "Big and Little look at talc labeled 1 and a diamond labeled 10 in a mineral cabinet. A notebook compares a scratched surface with a smooth one.",
+      "caption": "Mohs numbers rank scratch resistance. A 10 is not ten times as hard as a 1, and does not mean unbreakable."
+    },
+    {
+      "id": "light",
+      "src": "assets/diamond/05-light.jpg",
+      "original": "assets/diamond/05-light.png",
+      "title": "A path for light",
+      "alt": "A lamp lights an enlarged cut-diamond model. An orange ray enters the top, turns at the two lower sloping faces, and leaves through the top as the pair watch.",
+      "caption": "One simplified light path through a cut diamond. The model and angles are drawn to help us follow."
+    },
+    {
+      "id": "notice",
+      "src": "assets/diamond/06-notice.jpg",
+      "original": "assets/diamond/06-notice.png",
+      "title": "Something to look at again",
+      "alt": "Big and Little share an open notebook by a window. A diamond sketch has an orange light path and two eye positions; a real specimen rests behind glass nearby.",
+      "caption": "Their sketch keeps an observation. A drawing can help us remember where we looked."
+    }
+  ],
+  "reading": {
+    "title": "From deep dark to daylight",
+    "coverPlate": "deep",
+    "coverText": "A stone. A flash. A question to follow together.",
+    "parentNote": "About 15 min: choose a wonder, read the six short moments, then revisit a picture. Read aloud for Leo; pointing, talking, and pausing all count. Let the question come before the explanation.",
+    "beats": [
+      {
+        "id": "begin",
+        "plate": "deep",
+        "title": "Before the sparkle",
+        "passage": "Little Wonderer peers at the deep rock. “No sunshine down there!” Long ago, far below the ground, heat and enormous pressure helped carbon grow into a diamond crystal. Its beginning took a long time.",
+        "prompt": "What might the arrows be showing?"
+      },
+      {
+        "id": "connections",
+        "plate": "pattern",
+        "title": "Too small to see",
+        "passage": "At the next table, a model towers over the stone. Its balls stand for tiny carbon atoms. “Neighbors!” says Little Wonderer. Strong connections hold them in a repeating pattern. A diamond keeps that pattern inside.",
+        "prompt": "Follow a connection with your finger."
+      },
+      {
+        "id": "journey",
+        "plate": "journey",
+        "title": "An old journey",
+        "passage": "“Then how did it get up here?” Little Wonderer follows an arrow. Long after diamonds formed, some volcanic eruptions carried them upward in rising rock. Big Wonderer traces the path beside Little's finger.",
+        "prompt": "Which came first: growing deep down or traveling up?"
+      },
+      {
+        "id": "care",
+        "plate": "hard",
+        "title": "A different kind of strong",
+        "passage": "The next label says 10. Diamond sits at the top of the Mohs scratch scale. “Nothing can hurt it?” Little asks. “It can still chip,” says Big Wonderer. Hard to scratch does not mean impossible to break.",
+        "prompt": "What did Little's first idea leave out?"
+      },
+      {
+        "id": "borrowed",
+        "plate": "light",
+        "title": "The light comes along",
+        "passage": "A lamp shines on the cut-diamond model. Light bends as it enters, bounces inside, and comes out again. The flat, cut faces guide its path. Little Wonderer follows the orange line. “The light came from somewhere else!”",
+        "prompt": "Trace from the lamp to the way out."
+      },
+      {
+        "id": "keep",
+        "plate": "notice",
+        "title": "One more look",
+        "passage": "Little shifts sideways. One face dims; another catches the light. Together, they sketch two places to look from. “What if the light moved?” Little asks. Big Wonderer leaves room for the question.",
+        "prompt": "Keep that question, or tell each other your own."
+      }
+    ],
+    "words": [
+      {
+        "word": "pressure",
+        "meaning": "a push against something; here, rock squeezing from all around"
+      },
+      {
+        "word": "crystal",
+        "meaning": "a solid with tiny parts arranged in a repeating pattern"
+      },
+      {
+        "word": "resist",
+        "meaning": "hold up against something, such as a scratch"
+      },
+      {
+        "word": "facet",
+        "meaning": "one of the flat faces on a cut diamond"
+      }
+    ],
+    "questions": [
+      "Why did Little change the idea that nothing could hurt a diamond?",
+      "Where did the light in the model's bright path begin?"
+    ]
+  },
+  "math": {
+    "title": "Parts for a pattern",
+    "actionLabel": "Count parts of a model",
+    "eyebrow": "BUILD A NUMBER STORY · ABOUT 15 MIN",
+    "plate": "pattern",
+    "intro": "The rods in the picture connect the model's balls. Imagine preparing rods for a new model. Use the pretend tray counts below.",
+    "table": {
+      "caption": "Pretend model supplies · rods",
+      "columnLabel": "Tray",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rowLabel": "Rods",
+      "values": [
+        18,
+        7
+      ]
+    },
+    "printNote": "Use these invented supply counts. Do not count the rods in the painting.",
+    "tasks": [
+      {
+        "plate": "pattern",
+        "label": "PUT TWO TRAYS TOGETHER",
+        "prompt": "Tray A has 18 rods. Tray B has 7. How many rods altogether?",
+        "equation": "18 + 7 =",
+        "hint": "Add 2 to reach 20. How much of the 7 is left?",
+        "answer": "25 rods. 18 + 2 + 5 = 25."
+      },
+      {
+        "plate": "pattern",
+        "label": "SET SOME ASIDE",
+        "prompt": "You have 25 rods. Set 9 aside for later. How many can you use now?",
+        "equation": "25 − 9 =",
+        "hint": "Take away 5 to reach 20. Then take away 4 more.",
+        "answer": "16 rods. 25 − 5 − 4 = 16."
+      },
+      {
+        "plate": "pattern",
+        "label": "MAKE EQUAL GROUPS",
+        "prompt": "Draw 3 separate groups with 4 rods in each. How many rods did you draw?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Make four pencil marks in each group. Count 4, 8, then how many?",
+        "answer": "12 rods in all. Three groups of four make twelve."
+      }
+    ],
+    "extension": "These are invented supply counts, not a count of atoms in a diamond. Try drawing a different way to group 12 rods.",
+    "parentNote": "About 15 min: 3 to explore the model and table, 9 to draw or calculate, 3 to explain. Use pencil marks or number-line hops; no loose model pieces needed. Accept a spoken strategy. Mohs ranks are not used as amounts in these sums."
+  },
+  "writing": {
+    "title": "Give one discovery a home.",
+    "intro": "Choose a picture. Say what surprised you. Then draw or write one idea that you want to keep.",
+    "plateIds": [
+      "deep",
+      "hard",
+      "light"
+    ],
+    "draw": "Draw one detail from your scene. Add an arrow or a label to help someone understand it.",
+    "starter": "My words about this discovery",
+    "frames": [
+      {
+        "plate": "deep",
+        "start": "Deep underground,",
+        "hint": "What helped the diamond crystal grow?"
+      },
+      {
+        "plate": "hard",
+        "start": "A diamond is hard to scratch, but",
+        "hint": "What could still happen to it?"
+      },
+      {
+        "plate": "light",
+        "start": "The light",
+        "hint": "Where does its path begin? Where does it go?"
+      }
+    ],
+    "words": [
+      "carbon",
+      "crystal",
+      "heat",
+      "pressure",
+      "scratch",
+      "light",
+      "facet"
+    ],
+    "check": "Read it together. Point to the detail your words explain. If you are writing, check the first capital and the ending mark.",
+    "parentNote": "About 15 min: 3 to choose and talk, 4 to draw, 6 for 1–3 sentences, 2 to read back. One careful idea is enough. Accept invented spelling, speech, or dictation. Help Leo keep his own phrasing."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "25 rods: 18 + 7 = 25. Split 7 into 2 and 5 to bridge through 20."
+    },
+    {
+      "label": "Math · 2",
+      "text": "16 rods are ready to use: 25 − 9 = 16. Taking away 5 and then 4 is one way."
+    },
+    {
+      "label": "Math · 3",
+      "text": "12 rods: 4 + 4 + 4 = 12. Look for three separate groups with four marks in each."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "Little learned that a diamond can chip. Scratch resistance and resistance to breaking are different properties."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "The light starts at the lamp. The diamond changes its path; it does not make the ordinary reflected sparkle by itself."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a labeled drawing, dictation, or 1–3 sentences grounded in a scene. For example: Light goes into the diamond. It changes direction and comes back out."
+    }
+  ],
+  "parentGuidance": "Wonder first; explanations can wait. These museum scenes are imagined models, not photographs. Earth layers, atom connections, ray angles, and diamond sizes are simplified. We focus on natural diamonds: carbon crystallizes under deep-Earth heat and pressure, and later eruptions can carry it upward. A diamond's age is not a stopwatch for its growth; growth histories vary. The model balls represent carbon atoms, whose strong repeating connections help explain hardness. Mohs 10 ranks scratch resistance, not toughness or a tenfold amount. Diamonds can chip or break. Bending light is refraction; bouncing light is reflection. A skilled cutter makes facets that direct light; a rough crystal need not look like a cut diamond. Some light escapes in other directions; the orange line shows just one simplified path. Keep the scientific words optional. All activities can happen with pictures, talk, and drawing. No real diamonds, scratch tests, or tools are needed. Pause whenever you have had enough.",
+  "sources": [
+    {
+      "label": "GIA · Carbon and diamond structure",
+      "url": "https://www.gia.edu/diamond-description"
+    },
+    {
+      "label": "Smithsonian · Deep-Earth diamond formation",
+      "url": "https://naturalhistory.si.edu/education/teaching-resources/earth-science/gems-and-minerals-beauties-and-building-blocks"
+    },
+    {
+      "label": "GIA · Natural diamond origins and transport",
+      "url": "https://www.gia.edu/gia-news-research/difference-between-natural-laboratory-grown-diamonds"
+    },
+    {
+      "label": "GIA · Hardness and toughness",
+      "url": "https://www.gia.edu/diamond-care-cleaning"
+    },
+    {
+      "label": "GIA · Light, facets, and sparkle",
+      "url": "https://4cs.gia.edu/en-us/blog/light-affects-diamond-cut-appearance/"
+    }
+  ]
+}
