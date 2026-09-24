@@ -5,7 +5,7 @@ const entries = await approvedEntries();
 const latest = latestEntry(entries);
 const child = spawn("node", ["scripts/build.mjs", latest.topic], {
   stdio: "inherit",
-  env: { ...process.env, WD_LANDING: "root" },
+  env: { ...process.env, WD_LANDING: "root", WD_REQUIRE_CURIOSITY: "1" },
 });
 child.on("exit", (code) => {
   if (code)

@@ -14,8 +14,7 @@ export async function writeDay(dest, pack, { archiveHref, pdfSource } = {}) {
   );
   await writeFile(`${dest}/pack.json`, JSON.stringify(pack, null, 2) + "\n");
   await copyRuntime(dest, pack);
-  if (pdfSource)
-    await cp(pdfSource, `${dest}/pdf`, { recursive: true }).catch(() => {});
+  if (pdfSource) await cp(pdfSource, `${dest}/pdf`, { recursive: true });
 }
 
 export async function writeArchive(

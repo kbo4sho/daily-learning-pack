@@ -7,9 +7,12 @@ import {
   writingQualityPass,
 } from "./editorial-curiosity-pass.mjs";
 
-function run(command, args) {
+function run(command, args, extraEnv = {}) {
   return new Promise((resolvePromise) => {
-    const child = spawn(command, args, { stdio: "inherit" });
+    const child = spawn(command, args, {
+      stdio: "inherit",
+      env: { ...process.env, ...extraEnv },
+    });
     child.on("exit", (code) => resolvePromise(code ?? 1));
   });
 }
@@ -74,7 +77,9 @@ export async function overnightCuriosity(options = {}) {
       "\nPlate files are missing. Brick Astra plate-gen is stubbed. Skipping generate so we do not ship empty art or fall back to inquiry-only.",
     );
   } else {
-    const code = await run("npm", ["run", "generate", "--", intake.topic]);
+    const code = await run("npm", ["run", "generate", "--", intake.topic], {
+      WD_REQUIRE_CURIOSITY: "1",
+    });
     generated = code === 0;
     if (!generated)
       console.log(

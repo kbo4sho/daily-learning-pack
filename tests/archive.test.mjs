@@ -1,6 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile, access } from "node:fs/promises";
+import { mkdtemp, readFile, access, writeFile, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 import {
   approvedEntries,
   archiveJson,
@@ -8,10 +11,52 @@ import {
   latestEntry,
 } from "../src/archive.mjs";
 import { archivePage } from "../src/archive-render.mjs";
-import { packSlug } from "../src/pack.mjs";
+import { packSlug, createPack } from "../src/pack.mjs";
+import { writeDay } from "../scripts/build-archive.mjs";
 
 const entries = await approvedEntries();
 const latest = latestEntry(entries);
+
+test("approved registry refuses inquiry fallback and slug mismatch", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-archive-"));
+  const inquiry = join(dir, "inquiry.json");
+  await writeFile(
+    inquiry,
+    JSON.stringify({
+      packs: [
+        {
+          slug: "weather",
+          date: "2026-09-24",
+          topic: "weather",
+          status: "approved",
+        },
+      ],
+    }),
+  );
+  await assert.rejects(
+    () => approvedEntries(pathToFileURL(inquiry)),
+    /not a curiosity pack|cannot publish inquiry/,
+  );
+  const mismatch = join(dir, "mismatch.json");
+  await writeFile(
+    mismatch,
+    JSON.stringify({
+      packs: [
+        {
+          slug: "wrong-slug",
+          date: "2026-09-23",
+          topic: "curiosity bean",
+          status: "approved",
+        },
+      ],
+    }),
+  );
+  await assert.rejects(
+    () => approvedEntries(pathToFileURL(mismatch)),
+    /slug mismatch/,
+  );
+  await rm(dir, { recursive: true, force: true });
+});
 
 test("approved registry seeds the curiosity-bean dogfood morning", () => {
   assert.equal(entries.length >= 1, true);
@@ -42,6 +87,19 @@ test("archive landing lists date, title, teaser, and Leo’s one-tap door", () =
   assert.equal(json.latest, "curiosity-bean");
   assert.equal(json.leoEntry, "./today/");
   assert.equal(json.days[0].slug, "curiosity-bean");
+});
+
+test("day write fails when PDF copy cannot complete", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-day-"));
+  const pack = await createPack("curiosity bean");
+  await assert.rejects(
+    () =>
+      writeDay(join(dir, "day"), pack, {
+        pdfSource: join(dir, "missing-pdfs"),
+      }),
+    /ENOENT|no such file|not found/i,
+  );
+  await rm(dir, { recursive: true, force: true });
 });
 
 test("generate/build writes archive HTML, JSON, today, and the approved day", async () => {

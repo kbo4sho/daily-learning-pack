@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { createPack, packSlug, packTeaser } from "./pack.mjs";
+import { createPack, isCuriosity, packSlug, packTeaser } from "./pack.mjs";
 
 export function formatArchiveDate(iso) {
   const [year, month, day] = String(iso).split("-").map(Number);
@@ -32,8 +32,16 @@ export async function approvedEntries(registryUrl) {
     if (!row.topic || !row.date || !row.slug)
       throw new Error("Each approved row needs slug, date, and topic.");
     const pack = await createPack(row.topic);
+    if (!isCuriosity(pack))
+      throw new Error(
+        `Approved pack “${row.slug}” resolved to ${pack.kind}, not a curiosity pack. Public archive cannot publish inquiry.`,
+      );
+    if (packSlug(pack) !== row.slug)
+      throw new Error(
+        `Approved pack slug mismatch: registry has “${row.slug}” but pack resolves to “${packSlug(pack)}”.`,
+      );
     entries.push({
-      slug: row.slug || packSlug(pack),
+      slug: row.slug,
       date: row.date,
       topic: pack.topic,
       title: pack.title,
