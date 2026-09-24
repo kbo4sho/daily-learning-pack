@@ -451,7 +451,7 @@ details > p {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .reader-print-alternative {
   display: none;
@@ -928,10 +928,6 @@ body.reader-open .daily-header {
 .curiosity-print-story svg {
   width: 84pt;
   height: 62pt;
-}
-.curiosity-print-story .curiosity-plate img {
-  width: 84pt;
-  height: 56pt;
 }
 .curiosity-print-story h2 {
   font:
