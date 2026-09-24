@@ -421,25 +421,25 @@ html.packet-ritual-ready .packet-step-label {
     animation: none !important;
     transition: none !important;
   }
-  .packet-ritual-control,
   html.packet-ritual-ready .packet-step-label,
-  [data-packet-status] {
+  [data-packet-status],
+  .packet-perforation {
     display: none;
   }
   .packet-perforation::after {
     content: none;
   }
-  .packet-opening {
-    width: auto;
+  .packet-ritual-control:hover,
+  .packet-ritual-control:focus-visible,
+  .packet-opening[data-packet-state="flap-lifted"] .packet-ritual-control,
+  .packet-opening[data-packet-state="torn"] .packet-ritual-control {
+    transform: none;
+    filter: drop-shadow(0 1px 0 rgba(41, 59, 53, 0.1))
+      drop-shadow(0 16px 24px rgba(41, 59, 53, 0.16));
   }
-  .packet-skip {
-    min-height: 48px;
-    margin-top: 0;
-    padding: 0 18px;
-    border-radius: var(--radius);
-    background: var(--ink);
-    color: var(--surface);
-    font-size: 0.86rem;
-    text-decoration: none;
+  .packet-opening[data-packet-state="flap-lifted"] .packet-flap,
+  .packet-opening[data-packet-state="torn"] .packet-flap,
+  .packet-opening[data-packet-state="torn"] .packet-window {
+    transform: none;
   }
 }

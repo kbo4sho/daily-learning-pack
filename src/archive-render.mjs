@@ -64,9 +64,11 @@ function packetWindow(entry) {
 
 function openingCopy(entry, isLatest) {
   const destination = isLatest ? "this morning" : formatArchiveDate(entry.date);
+  const direct = isLatest ? "Open this morning" : `Open ${destination}`;
   return {
     destination,
-    direct: isLatest ? "Open this morning" : `Open ${destination}`,
+    direct,
+    directLabel: `${direct}: ${entry.title}`,
     first: `Seed packet: ${entry.title} Step 1 of 3: lift the flap. Destination: ${destination}.`,
   };
 }
@@ -75,8 +77,8 @@ function packetOpening(entry, { isLatest, href, position = "shelf" }) {
   const latest = isLatest ? " is-latest" : "";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
   const copy = openingCopy(entry, isLatest);
-  return `<div class="packet-opening${latest}" data-packet-opening data-packet-title="${esc(entry.title)}" data-packet-destination="${esc(copy.destination)}" data-packet-state="sealed">
-<a class="packet-face packet-ritual-control${position === "door" ? " door-packet" : ""}" href="${href}" aria-label="${esc(copy.first)}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a>
+  return `<div class="packet-opening${latest}" data-packet-opening data-packet-title="${esc(entry.title)}" data-packet-destination="${esc(copy.destination)}" data-packet-open-label="${esc(copy.directLabel)}" data-packet-first-label="${esc(copy.first)}" data-packet-state="sealed">
+<a class="packet-face packet-ritual-control${position === "door" ? " door-packet" : ""}" href="${href}" aria-label="${esc(copy.directLabel)}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a>
 <p class="packet-step-label" aria-hidden="true"><span class="packet-step-number">1 of 3</span><span data-packet-instruction>Press packet · lift flap</span></p>
 <span class="sr-only" role="status" aria-live="polite" data-packet-status></span>
 <a class="packet-skip" href="${href}">${esc(copy.direct)} <span aria-hidden="true">→</span></a>

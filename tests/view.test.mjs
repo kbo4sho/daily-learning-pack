@@ -174,6 +174,52 @@ test("landing packets use that day's story plate, not stock", async () => {
   }
 });
 
+test("reduced motion keeps the packet as the one-tap open control", async () => {
+  const css = await read("src/archive.css");
+  const reduced = css.slice(
+    css.indexOf("@media (prefers-reduced-motion: reduce)"),
+  );
+  assert.match(
+    reduced,
+    /html\.packet-ritual-ready \.packet-step-label,\s*\[data-packet-status\],\s*\.packet-perforation\s*{\s*display: none;/,
+  );
+  assert.match(reduced, /\.packet-perforation::after\s*{\s*content: none;/);
+  assert.doesNotMatch(
+    reduced,
+    /\.packet-ritual-control,\s*html\.packet-ritual-ready \.packet-step-label/,
+  );
+  assert.match(
+    reduced,
+    /\.packet-ritual-control:hover,[\s\S]*?transform: none;/,
+  );
+
+  const js = await read("src/archive.js");
+  assert.match(js, /status\.textContent = ""/);
+  assert.match(
+    js,
+    /reducedMotion\.matches\s*\? opening\.dataset\.packetOpenLabel/,
+  );
+  assert.match(js, /: opening\.dataset\.packetFirstLabel/);
+
+  const day = {
+    slug: "one-tap-day",
+    date: "2026-09-24",
+    title: "A packet to open.",
+    teaser: "Still and direct.",
+  };
+  const html = archivePage([day], { latest: day, homePrefix: "./" });
+  assert.match(
+    html,
+    /class="packet-face packet-ritual-control door-packet" href="\.\/today\/" aria-label="Open this morning: A packet to open\."/,
+  );
+  assert.match(html, /data-packet-open-label="Open this morning:/);
+  assert.match(html, /data-packet-first-label="Seed packet:/);
+  assert.match(
+    html,
+    />Open this morning <span aria-hidden="true">→<\/span><\/a>/,
+  );
+});
+
 test("packet faces fail soft to type; archivePage requires latest", () => {
   assert.equal(packetImageHref("./", "sample-day", "https://x/a.jpg"), "");
   assert.equal(packetImageHref("./", "sample-day", "../secret.jpg"), "");
