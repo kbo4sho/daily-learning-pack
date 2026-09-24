@@ -16,7 +16,17 @@ Generator **source is now in the private repo** (`scripts/`, `src/`, `tests/`, `
 node scripts/seed-assets-from-public.mjs   # curiosity-bean plates @ eeb5ce0
 ```
 
-`bash scripts/bootstrap-from-public.sh` is a recovery overlay from the same SHA (does not overwrite private README / package.json / sync scripts). Those commands remain the first steps of the documented private CI workflows.
+Private **check** and **sync** CI do **not** run bootstrap. Locked path:
+
+```sh
+npm ci
+npx playwright install --with-deps chromium
+node scripts/seed-assets-from-public.mjs
+npm run site
+npm test
+```
+
+`bash scripts/bootstrap-from-public.sh` is **empty-clone recovery only** (local empty or broken private checkout). It is not a CI step. Do not add it to `check.yml` or `sync-public-view.yml`.
 
 ## Paths moved (private source of truth)
 
