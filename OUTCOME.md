@@ -36,15 +36,16 @@ Public leftovers: thin `scripts/moved.mjs` stubs, `scripts/serve.mjs`, `scripts/
 
 For follow-on **`wd-archive-seed-packets-ship`** (seed-packet cards; no generator work). Visual design was **not** changed in this split.
 
-| Public path                  | Role                                                                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/archive-render.mjs`     | **Landing HTML template** (`archivePage`, Leo door, approved-morning rows). Edit this for card markup.                                   |
-| `src/archive.css`            | **Landing / card chrome CSS** (copied to `dist/archive.css` and `dist/archive/archive.css`).                                             |
-| `src/html.mjs`               | HTML escaping used by the landing template.                                                                                              |
-| `scripts/render-archive.mjs` | Thin view rebuild: reads `dist/archive.json`, writes `dist/index.html` + `dist/archive/index.html`, copies CSS. No Playwright, no packs. |
-| `dist/index.html`            | Root archive landing (generated from the public template).                                                                               |
-| `dist/archive/index.html`    | Nested `/archive/` copy of the same chrome.                                                                                              |
-| `dist/archive.json`          | **Data only** (from private `npm run site` / sync). Do not put card layout here.                                                         |
+| Public path                  | Role                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `src/archive-render.mjs`     | **Landing HTML template** (`archivePage`, Leo door, approved-morning rows). Edit this for card markup.           |
+| `src/archive.css`            | **Landing / card chrome CSS** (copied to `dist/archive.css` and `dist/archive/archive.css`).                     |
+| `src/fonts/`                 | Vendored Newsreader + Inter woff2 (copied to `dist/fonts` and `dist/archive/fonts`).                             |
+| `src/html.mjs`               | HTML escaping used by the landing template.                                                                      |
+| `scripts/render-archive.mjs` | Thin view rebuild: reads `dist/archive.json`, writes landings, copies CSS/fonts, strips unused root day runtime. |
+| `dist/index.html`            | Root archive landing (generated from the public template).                                                       |
+| `dist/archive/index.html`    | Nested `/archive/` copy of the same chrome.                                                                      |
+| `dist/archive.json`          | **Data only** (from private `npm run site` / sync). Do not put card layout here.                                 |
 
 `npm run archive` reapplies public chrome after a private dist sync so seed-packet edits are not locked inside `daily-learning-generators`. Pages and `check.yml` run that script. Private generators may still emit a landing for local preview; **public `src/archive-*` is the Pages source of truth.**
 
