@@ -16,45 +16,45 @@
     8
   ],
   "editionLabel": "GRADE 2 · DIAMOND / EARTH & LIGHT",
-  "title": "A diamond's story.",
-  "teaser": "A deep beginning. A borrowed flash of light.",
-  "question": "How can a stone hold a flash of light?",
-  "idea": "A natural diamond is a carbon crystal that grew deep underground. Its strong structure resists scratches. Cut faces change the paths of light.",
+  "title": "The flash that wouldn't stay.",
+  "teaser": "Little follows one quick flash from deep rock to borrowed light.",
+  "question": "Where does a diamond's flash come from?",
+  "idea": "A natural diamond is a carbon crystal that grew deep underground. It does not make its own light. On a cut diamond, facets change the paths of light and send some of it toward our eyes.",
   "curiosity": {
-    "intro": "Choose a question with your grown-up. Let your eyes wander before you open the explanation.",
-    "carryForward": "Read together. Count parts of a model. Give a discovery your own words.",
+    "intro": "Choose a question with your grown-up. Look for clues in the picture before you open the explanation.",
+    "carryForward": "Follow Little's question through the story. Then count a model and keep one discovery in your own words.",
     "questions": [
       {
         "id": "begin",
         "plate": "deep",
-        "question": "How could a diamond begin where sunlight cannot reach?",
-        "notice": "Find the tiny landscape at the top. How far below it is the pale crystal? What might the inward arrows mean?",
-        "say": "Natural diamonds grow from carbon deep underground, where it is very hot and the pressure is enormous. The arrows stand for that squeeze. Their story stretches far back in Earth's past.",
-        "try": "Trace from the painted tree down to the crystal. Imagine all the rock above it. This model cannot show the real distance."
+        "question": "Could a diamond flash where no light can reach it?",
+        "notice": "Find the tiny landscape, the crystal, and the two orange arrows. What looks bright? What looks dark?",
+        "say": "Natural diamonds grew from carbon deep underground, where it was very hot and the pressure was enormous. With no light reaching it, a diamond there could not send a flash to anyone's eyes.",
+        "try": "Cover the crystal in the picture with one finger, then uncover it. Tell your grown-up where you would search next for the flash."
       },
       {
         "id": "pattern",
         "plate": "pattern",
-        "question": "What could something so tiny be made of?",
-        "notice": "Look at the small stone, then the big model. Follow a rod from one ball to the next. Where could the pattern keep going?",
-        "say": "A diamond is made of carbon atoms, too small for our eyes to see. They join in a repeating pattern. The balls and rods help us picture it; a diamond does not contain little wooden sticks.",
-        "try": "Choose one ball in the picture. Trace a connection to a neighbor, then another. Say one thing this model helps you imagine."
+        "question": "Could the diamond's tiny pattern be making the flash?",
+        "notice": "Look from the small stone to the large model. Follow one rod to the next. Do you see a lamp or another source of light?",
+        "say": "A diamond is made mostly of carbon atoms joined in a repeating pattern. The balls and rods help us picture parts far too small to see, but the pattern is not a hidden lamp.",
+        "try": "Trace three connections with your finger. Say what this model explains—and what it still does not explain."
       },
       {
-        "id": "hard",
-        "plate": "hard",
-        "question": "Does hard mean nothing can hurt it?",
-        "notice": "Compare the two surface drawings in the notebook. Which looks scratched? Find the numbers beside the minerals.",
-        "say": "Hardness tells us how well a mineral resists scratches. Diamond is number 10 on the Mohs scale; talc is number 1. But a diamond can still chip or break. Hard does not mean unbreakable.",
-        "try": "Draw a smooth patch and a scratched patch on paper. Tell each other what changed. We can explore the idea without scratching any real objects."
-      },
-      {
-        "id": "light",
+        "id": "borrowed",
         "plate": "light",
-        "question": "Where does the sparkle come from?",
-        "notice": "Start at the lamp. Follow the orange path into the model and back out. Where does its direction change?",
-        "say": "Light can bend as it enters a diamond and bounce inside it. Carefully cut, flat faces help send light back toward our eyes. As the stone, light, or viewer moves, bright flashes appear and disappear.",
-        "try": "Trace the painted light path in the air. Imagine the lamp going dark. Would the diamond make its own light?"
+        "question": "Which thing in this picture starts the bright path?",
+        "notice": "Begin at the orange line. Follow it backward until you cannot go any farther. Where did you land?",
+        "say": "The path begins at the lamp. Light bends when it enters the diamond and can bounce inside. Carefully cut facets help send some of that borrowed light back toward our eyes.",
+        "try": "Trace the whole path from lamp to diamond to eye. Imagine the lamp switched off. What part of the path would disappear?"
+      },
+      {
+        "id": "keep",
+        "plate": "notice",
+        "question": "Why might the flash move when Little moves?",
+        "notice": "Find the two eye positions in the sketch. Follow each line toward the drawn diamond. What changed?",
+        "say": "A flash reaches our eyes only along certain paths. When the light, diamond, or viewer moves, a bright facet can dim while another one flashes.",
+        "try": "Point to one eye position, then the other. Pretend you are Little and tell where you would look next."
       }
     ]
   },
@@ -63,98 +63,98 @@
       "id": "deep",
       "src": "assets/diamond/01-deep.jpg",
       "original": "assets/diamond/01-deep.png",
-      "title": "A beginning below",
+      "title": "No sun down here",
       "alt": "Big and Little Wonderer study a museum cutaway with a pale diamond deep beneath a landscape. Two orange arrows squeeze inward through warm-colored rock.",
-      "caption": "An imagined window into deep rock. The diamond is enlarged; layers and distances are simplified."
+      "caption": "An imagined window into the diamond's dark beginning. The crystal is enlarged; layers and distances are simplified."
     },
     {
       "id": "pattern",
       "src": "assets/diamond/02-pattern.jpg",
       "original": "assets/diamond/02-pattern.png",
-      "title": "A hidden pattern",
+      "title": "A pattern, not a lantern",
       "alt": "A large ball-and-rod model stands beside a small rough diamond. Big and Little look at connected grey balls labeled carbon and a repeating pattern.",
-      "caption": "A simplified model of connected carbon atoms. Real atoms are much too small to see here."
+      "caption": "The model reveals a repeating carbon pattern—not a hidden source of light. Real atoms are much too small to see."
     },
     {
       "id": "journey",
       "src": "assets/diamond/03-journey.jpg",
       "original": "assets/diamond/03-journey.png",
-      "title": "Carried toward daylight",
+      "title": "The long way to daylight",
       "alt": "The pair follow orange upward arrows through a dark, tapering channel in a museum rock cutaway. An enlarged rough diamond sits inside the channel.",
-      "caption": "Long ago, some volcanic eruptions carried already-formed diamonds upward. This model is not to scale."
+      "caption": "Long ago, some volcanic eruptions carried already-formed diamonds out of deep darkness. This model is not to scale."
     },
     {
       "id": "hard",
       "src": "assets/diamond/04-hard.jpg",
       "original": "assets/diamond/04-hard.png",
-      "title": "Hard, and still worth care",
+      "title": "The strong-stone surprise",
       "alt": "Big and Little look at talc labeled 1 and a diamond labeled 10 in a mineral cabinet. A notebook compares a scratched surface with a smooth one.",
-      "caption": "Mohs numbers rank scratch resistance. A 10 is not ten times as hard as a 1, and does not mean unbreakable."
+      "caption": "Mohs numbers rank scratch resistance. Even a diamond at 10 can chip or break; hard does not mean unbreakable."
     },
     {
       "id": "light",
       "src": "assets/diamond/05-light.jpg",
       "original": "assets/diamond/05-light.png",
-      "title": "A path for light",
+      "title": "Where the flash begins",
       "alt": "A lamp lights an enlarged cut-diamond model. An orange ray enters the top, turns at the two lower sloping faces, and leaves through the top as the pair watch.",
-      "caption": "One simplified light path through a cut diamond. The model and angles are drawn to help us follow."
+      "caption": "The lamp begins this simplified path. Cut facets change the light's direction and send some of it back out."
     },
     {
       "id": "notice",
       "src": "assets/diamond/06-notice.jpg",
       "original": "assets/diamond/06-notice.png",
-      "title": "Something to look at again",
+      "title": "The flash moves",
       "alt": "Big and Little share an open notebook by a window. A diamond sketch has an orange light path and two eye positions; a real specimen rests behind glass nearby.",
-      "caption": "Their sketch keeps an observation. A drawing can help us remember where we looked."
+      "caption": "Little's two viewing spots turn a quick flash into an observation they can keep."
     }
   ],
   "reading": {
-    "title": "From deep dark to daylight",
+    "title": "The flash that wouldn't stay",
     "coverPlate": "deep",
-    "coverText": "A stone. A flash. A question to follow together.",
-    "parentNote": "About 15 min: choose a wonder, read the six short moments, then revisit a picture. Read aloud for Leo; pointing, talking, and pausing all count. Let the question come before the explanation.",
+    "coverText": "Little sees one quick flash. Where did it come from?",
+    "parentNote": "About 15 min: read the six short scenes as one question-chase, then revisit a picture. Read aloud for Leo; pointing, talking, and pausing all count. Let Little's guesses breathe before the explanation.",
     "beats": [
       {
         "id": "begin",
         "plate": "deep",
-        "title": "Before the sparkle",
-        "passage": "Little Wonderer peers at the deep rock. “No sunshine down there!” Long ago, far below the ground, heat and enormous pressure helped carbon grow into a diamond crystal. Its beginning took a long time.",
-        "prompt": "What might the arrows be showing?"
+        "title": "No sun down here",
+        "passage": "A flash winks from a museum case. “The diamond makes light!” says Little Wonderer. Big points to its deep beginning. Heat and huge pressure helped carbon grow into a crystal far underground—without lamp or sun. “Then where does the flash come from?”",
+        "prompt": "What did Little guess? What clue makes that guess wobble?"
       },
       {
         "id": "connections",
         "plate": "pattern",
-        "title": "Too small to see",
-        "passage": "At the next table, a model towers over the stone. Its balls stand for tiny carbon atoms. “Neighbors!” says Little Wonderer. Strong connections hold them in a repeating pattern. A diamond keeps that pattern inside.",
-        "prompt": "Follow a connection with your finger."
+        "title": "A pattern, not a lantern",
+        "passage": "“Maybe light hides in the tiny parts,” Little says. Balls and rods stand for carbon atoms and their connections. The pattern repeats through a diamond—but it is no lantern. “We found the stone,” says Big, “not the flash.”",
+        "prompt": "Follow the pattern. What question is still chasing them?"
       },
       {
         "id": "journey",
         "plate": "journey",
-        "title": "An old journey",
-        "passage": "“Then how did it get up here?” Little Wonderer follows an arrow. Long after diamonds formed, some volcanic eruptions carried them upward in rising rock. Big Wonderer traces the path beside Little's finger.",
-        "prompt": "Which came first: growing deep down or traveling up?"
+        "title": "The long way to daylight",
+        "passage": "Little traces an arrow up. “To meet light, it had to leave the dark!” Long after some diamonds formed, volcanic eruptions carried them toward the surface. “Now it can meet light,” says Little. Big nods. “But meeting light is not making it.”",
+        "prompt": "Why did Little need the diamond to reach the surface?"
       },
       {
         "id": "care",
         "plate": "hard",
-        "title": "A different kind of strong",
-        "passage": "The next label says 10. Diamond sits at the top of the Mohs scratch scale. “Nothing can hurt it?” Little asks. “It can still chip,” says Big Wonderer. Hard to scratch does not mean impossible to break.",
-        "prompt": "What did Little's first idea leave out?"
+        "title": "The strong-stone surprise",
+        "passage": "A label marked 10 stops Little. Diamond tops the Mohs scratch scale. “So nothing can hurt it?” Big explains that a diamond can still chip or break. “Hard to scratch is not unbreakable,” Little says, “and it still doesn't explain the flash.”",
+        "prompt": "How did the number 10 almost pull Little off the trail?"
       },
       {
         "id": "borrowed",
         "plate": "light",
-        "title": "The light comes along",
-        "passage": "A lamp shines on the cut-diamond model. Light bends as it enters, bounces inside, and comes out again. The flat, cut faces guide its path. Little Wonderer follows the orange line. “The light came from somewhere else!”",
-        "prompt": "Trace from the lamp to the way out."
+        "title": "A borrowed beam",
+        "passage": "At the last model, a lamp clicks on. “There!” Little cries. Light enters the diamond, bends, bounces, and comes out again. Cut, flat faces called facets guide its path. Little follows the line. “The diamond sends borrowed light back!”",
+        "prompt": "Trace the beam. Where does the flash truly begin?"
       },
       {
         "id": "keep",
         "plate": "notice",
-        "title": "One more look",
-        "passage": "Little shifts sideways. One face dims; another catches the light. Together, they sketch two places to look from. “What if the light moved?” Little asks. Big Wonderer leaves room for the question.",
-        "prompt": "Keep that question, or tell each other your own."
+        "title": "The flash that won't stay",
+        "passage": "Little shifts. One bright face dims; another flashes. “Found you!” The flash was not stored in the stone. It happens when light, cut facets, and watching eyes meet along the right paths. Little sketches both spots, leaving room for a new question.",
+        "prompt": "Move your finger between the two eye spots. What changed?"
       }
     ],
     "words": [
@@ -167,8 +167,8 @@
         "meaning": "a solid with tiny parts arranged in a repeating pattern"
       },
       {
-        "word": "resist",
-        "meaning": "hold up against something, such as a scratch"
+        "word": "reflect",
+        "meaning": "send light back from a surface"
       },
       {
         "word": "facet",
@@ -176,8 +176,8 @@
       }
     ],
     "questions": [
-      "Why did Little change the idea that nothing could hurt a diamond?",
-      "Where did the light in the model's bright path begin?"
+      "What did Little first think made the flash? Which clue changed that idea?",
+      "At the end, what had to meet for Little to see a flash?"
     ]
   },
   "math": {
@@ -230,8 +230,8 @@
     "parentNote": "About 15 min: 3 to explore the model and table, 9 to draw or calculate, 3 to explain. Use pencil marks or number-line hops; no loose model pieces needed. Accept a spoken strategy. Mohs ranks are not used as amounts in these sums."
   },
   "writing": {
-    "title": "Give one discovery a home.",
-    "intro": "Choose a picture. Say what surprised you. Then draw or write one idea that you want to keep.",
+    "title": "Keep a clue from the chase.",
+    "intro": "Choose a picture from Little's search for the flash. Say what changed Little's mind. Then draw or write one idea you want to keep.",
     "plateIds": [
       "deep",
       "hard",
@@ -252,8 +252,8 @@
       },
       {
         "plate": "light",
-        "start": "The light",
-        "hint": "Where does its path begin? Where does it go?"
+        "start": "The flash begins when",
+        "hint": "What gives the light? How do the facets and watching eyes help?"
       }
     ],
     "words": [
@@ -283,11 +283,11 @@
     },
     {
       "label": "Reading · 1",
-      "text": "Little learned that a diamond can chip. Scratch resistance and resistance to breaking are different properties."
+      "text": "Little first thought the diamond made light. The deep, dark beginning had no sunlight or lamp, and the later model showed that the bright path starts at a lamp."
     },
     {
       "label": "Reading · 2",
-      "text": "The light starts at the lamp. The diamond changes its path; it does not make the ordinary reflected sparkle by itself."
+      "text": "Light from the lamp, the diamond's cut facets, and Little's viewing position had to line up. The facets changed the light's path and sent some light toward Little's eyes."
     },
     {
       "label": "Writing",
