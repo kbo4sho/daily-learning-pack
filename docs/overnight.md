@@ -55,7 +55,7 @@ Sequence the script prints (and enforces as far as files allow):
 2. **Author** — `scripts/author-curiosity-pack.mjs` writes `packs/<slug>.json` at the Curiosity bar (6 scenic plate slots). If that file already exists, mint `packs/<slug>-YYYY-MM-DD.json` (UTC; then `-2`, `-3` the same day). No API key → high-quality stub + TODOs. Never inquiry-only. Never overwrite a curated pack.
 3. **Editorial gate** — no tip-hand labels; story spreads are image + moment; no per-segment H2 on Letter or fold.
 4. **Writing-quality gate** — interesting vocab, fresh phrasing for Leo.
-5. **Generate** — `npm run generate -- "<topic>"` only if plates exist on disk. Brick Astra plate-gen is stubbed; missing art skips generate on purpose.
+5. **Generate** — `npm run generate -- --pack packs/<slug>.json` (the authored file, including a date-suffixed mint) only if plates exist on disk. Brick Astra plate-gen is stubbed; missing art skips generate on purpose. Never generate by topic alone after a mint — `createPack(topic)` would rebuild the curated match.
 6. **Draft PR** — open a draft, let CI run, **ping Firstmate for captain craft-approve**. Do not auto-merge.
 
 Manual generate of the current dogfood day still works:

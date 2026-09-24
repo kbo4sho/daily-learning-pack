@@ -2,17 +2,13 @@ import { mkdir, rm, writeFile, copyFile, cp } from "node:fs/promises";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
-import { createPack, isCuriosity } from "../src/pack.mjs";
+import { createPack, isCuriosity, parsePackArgs } from "../src/pack.mjs";
 import { site, printDocument } from "../src/render.mjs";
 import { copyRuntime } from "../src/site-assets.mjs";
 import { writeArchive } from "./build-archive.mjs";
 
-const args = process.argv.slice(2);
-if (args.length > 1)
-  throw new Error(
-    'Pass one quoted topic string: npm run generate -- "weather"',
-  );
-const pack = await createPack(args[0]);
+const { packPath, topic } = parsePackArgs(process.argv.slice(2));
+const pack = await createPack(topic, { packPath });
 if (pack.kind === "topic-inquiry" && process.env.WD_REQUIRE_CURIOSITY === "1")
   throw new Error(
     "Overnight/public ship path cannot generate inquiry-only packs. Author a curiosity pack first.",

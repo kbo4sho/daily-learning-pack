@@ -65,7 +65,36 @@ async function resolveCuratedFile(topic) {
   }
   return null;
 }
-export async function createPack(input = DEFAULT_TOPIC) {
+export function parsePackArgs(args) {
+  let packPath;
+  let topic;
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === "--pack") {
+      packPath = args[++i];
+      if (!packPath) throw new Error("Pass --pack packs/<file>.json");
+      continue;
+    }
+    if (topic !== undefined)
+      throw new Error(
+        "Pass one quoted topic or --pack packs/<file>.json: npm run generate -- --pack packs/morning-dew-2026-09-24.json",
+      );
+    topic = args[i];
+  }
+  return { packPath, topic };
+}
+
+export async function loadPackFile(packPath) {
+  const pack = JSON.parse(await readFile(packPath, "utf8"));
+  if (!pack?.kind) throw new Error(`Pack file ${packPath} is missing a kind.`);
+  return pack;
+}
+
+export async function loadPackBySlug(slug) {
+  return loadPackFile(new URL(`../packs/${slug}.json`, import.meta.url));
+}
+
+export async function createPack(input = DEFAULT_TOPIC, { packPath } = {}) {
+  if (packPath) return loadPackFile(packPath);
   const topic = normalizeTopic(input);
   const curated = await resolveCuratedFile(topic);
   if (curated) {

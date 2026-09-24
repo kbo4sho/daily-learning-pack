@@ -85,9 +85,11 @@ export async function overnightCuriosity(options = {}) {
       "\nPlate files are missing. Brick Astra plate-gen is stubbed. Skipping generate so we do not ship empty art or fall back to inquiry-only.",
     );
   } else {
-    const code = await run("npm", ["run", "generate", "--", intake.topic], {
-      WD_REQUIRE_CURIOSITY: "1",
-    });
+    const code = await run(
+      "npm",
+      ["run", "generate", "--", "--pack", authored.path],
+      { WD_REQUIRE_CURIOSITY: "1" },
+    );
     generated = code === 0;
     if (!generated)
       console.log(

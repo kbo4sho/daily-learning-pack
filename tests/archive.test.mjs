@@ -102,6 +102,23 @@ test("day write fails when PDF copy cannot complete", async () => {
   await rm(dir, { recursive: true, force: true });
 });
 
+test("archived day without PDFs omits print hrefs", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-print-"));
+  const pack = await createPack("curiosity bean");
+  await writeDay(join(dir, "old"), pack);
+  const hidden = await readFile(join(dir, "old", "index.html"), "utf8");
+  assert.doesNotMatch(hidden, /\.\/pdf\//);
+  assert.doesNotMatch(hidden, /Print today/);
+  assert.doesNotMatch(hidden, /Print story/);
+  assert.doesNotMatch(hidden, /Print math page/);
+  assert.doesNotMatch(hidden, /Print writing page/);
+  await writeDay(join(dir, "fresh"), pack, { print: true });
+  const shown = await readFile(join(dir, "fresh", "index.html"), "utf8");
+  assert.match(shown, /\.\/pdf\/kid-worksheets\.pdf/);
+  assert.match(shown, /Print today/);
+  await rm(dir, { recursive: true, force: true });
+});
+
 test("generate/build writes archive HTML, JSON, today, and the approved day", async () => {
   await access("dist/archive/index.html");
   await access("dist/archive.json");
