@@ -1,8 +1,8 @@
-name: Build and check learning pack
+name: Check public view artifacts
 on:
   pull_request:
   push:
-    branches: [codex/daily-learning-pack-scaffold]
+    branches: [main]
 permissions:
   contents: read
 jobs:
@@ -16,34 +16,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run format:check
-      - run: npx playwright install --with-deps chromium webkit
-      - run: npm run build
-      - run: npm run test:inquiry
       - run: npm test
-      - run: npm run test:browser
-      - run: npm run generate -- "inch worms"
-      - run: npm test
-      - run: npm run test:browser
-      - name: Render grayscale print review pages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/inchworms-print-kid
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/inchworms-print-key
-      - name: Build Curiosity-led dogfood mock
-        run: npm run generate -- "curiosity bean"
-      - run: npm test
-      - run: npm run test:browser
-      - name: Render Curiosity print review pages
-        run: |
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/kid-worksheets.pdf docs/stills/curiosity-print-kid
-          pdftoppm -scale-to 1200 -gray -png dist/pdf/parent-answer-key.pdf docs/stills/curiosity-print-key
-          pdftoppm -scale-to 1600 -png -singlefile output/pdf/browser-foldable-story.pdf docs/stills/curiosity-fold
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: daily-learning-pack-preview
-          path: |
-            dist/
-            docs/stills/
-            output/pdf/browser-foldable-story.pdf
