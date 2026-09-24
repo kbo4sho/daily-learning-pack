@@ -16,6 +16,11 @@ export const ZINE_FOLD_STEPS = [
   "Refold long edge to long edge, print outside. Push ends together to open a diamond, then a cross.",
   "Wrap into a book with page 1 in front. Read pages 1 to 8 together.",
 ];
+export const ZINE_PLATE_MAX_PX = 720;
+export const ZINE_FONT_FILES = {
+  serif: "fonts/newsreader-latin-400-normal.woff2",
+  sans: "fonts/inter-latin-400-normal.woff2",
+};
 export function zinePanels(pack) {
   if (pack.reading.beats.length > 6)
     throw new Error("One sheet holds at most six story beats.");
@@ -51,12 +56,24 @@ export function wrapText(text, font, size, width) {
   if (line) lines.push(line);
   return lines;
 }
-export async function generateZine(pack, loadPlate, lib) {
-  const { PDFDocument, StandardFonts, degrees, rgb, PrintScaling } = lib;
+export async function generateZine(
+  pack,
+  loadPlate,
+  lib,
+  { fontkit, loadFont },
+) {
+  const { PDFDocument, degrees, rgb, PrintScaling } = lib;
   const panels = zinePanels(pack);
   const content = await PDFDocument.create();
-  const serif = await content.embedFont(StandardFonts.TimesRoman);
-  const sans = await content.embedFont(StandardFonts.Helvetica);
+  content.registerFontkit(fontkit);
+  const [serif, sans] = await Promise.all([
+    loadFont(ZINE_FONT_FILES.serif).then((bytes) =>
+      content.embedFont(bytes, { subset: false }),
+    ),
+    loadFont(ZINE_FONT_FILES.sans).then((bytes) =>
+      content.embedFont(bytes, { subset: false }),
+    ),
+  ]);
   const ink = rgb(0.16, 0.23, 0.21);
   const muted = rgb(0.35, 0.39, 0.36);
   const images = new Map();
@@ -119,7 +136,7 @@ export async function generateZine(pack, loadPlate, lib) {
       text("Make a little book.", 260, 18, 2, serif);
       let y = 234;
       for (const [i, step] of ZINE_FOLD_STEPS.entries())
-        y = text(`${i + 1}. ${step}`, y, 7.8, 5) - 6;
+        y = text(`${i + 1}. ${step}`, y, 7.8, 5) - 4;
       if (y < 77) throw new Error("Fold instructions overlap the cut diagram.");
       const x = 55,
         dy = 49,
@@ -206,5 +223,5 @@ export async function generateZine(pack, loadPlate, lib) {
     thickness: 0.65,
     color: muted,
   });
-  return pdf.save();
+  return pdf.save({ useObjectStreams: false });
 }
