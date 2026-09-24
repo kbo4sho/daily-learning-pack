@@ -100,7 +100,7 @@ export async function generateZine(pack, loadPlate, lib) {
     text("WONDER TOGETHER / DAILY", 284, 6.5, 1, sans, muted);
     if (panel.kind === "cover") {
       text(pack.title, 246, 27, 2, serif);
-      text("The quiet work of growing", 193, 11, 2, serif);
+      text(pack.reading.title, 193, 11, 2, serif);
       await picture(panel.src, 72);
       text("Grown-up reads. Little wonderer turns.", 56, 8, 2);
       text("GRADE 2 / DOGFOOD PREVIEW", 30, 6.5, 1, sans, muted);
