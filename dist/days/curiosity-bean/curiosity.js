@@ -13,7 +13,7 @@ function showPanel(name, focus = true) {
     else link.removeAttribute("aria-current");
   });
   document.body.classList.toggle("reader-open", name === "reading");
-  document.title = `${{ curiosity: "A bean becomes.", reading: "Read together", math: "Math", writing: "Writing" }[name]} · Wonder Daily · Dogfood`;
+  document.title = `${{ curiosity: content.title, reading: "Read together", math: "Math", writing: "Writing" }[name]} · Wonder Daily · Dogfood`;
   document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
   if (focus) {
     document.querySelector(`#${name}-heading`).focus({ preventScroll: true });
@@ -127,7 +127,7 @@ download.addEventListener("click", async () => {
     );
     const link = document.createElement("a");
     link.href = url;
-    link.download = "a-bean-becomes-foldable-story.pdf";
+    link.download = `${content.slug || "curiosity"}-foldable-story.pdf`;
     document.body.append(link);
     link.click();
     link.remove();
