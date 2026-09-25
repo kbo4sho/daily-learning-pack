@@ -78,6 +78,29 @@ test("archive.json lists approved mornings structurally", async () => {
   }
 });
 
+test("every archived morning retains its five working print downloads", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  for (const day of json.days) {
+    const html = await read(`dist/days/${day.slug}/index.html`);
+    for (const name of [
+      "math",
+      "reading",
+      "writing",
+      "kid-worksheets",
+      "parent-answer-key",
+    ]) {
+      const rel = `dist/days/${day.slug}/pdf/${name}.pdf`;
+      const bytes = await readFile(new URL(`../${rel}`, import.meta.url));
+      assert.equal(bytes.subarray(0, 5).toString(), "%PDF-", rel);
+      assert.ok(bytes.length > 1_000, rel);
+      assert.ok(
+        html.includes(`./pdf/${name}.pdf`),
+        `${day.slug} links ${name}`,
+      );
+    }
+  }
+});
+
 test("committed pack JSON never includes API key names", async () => {
   const files = await walkJson(new URL("../dist", import.meta.url).pathname);
   assert.ok(files.some((f) => f.endsWith("pack.json")));

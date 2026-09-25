@@ -451,7 +451,7 @@ details > p {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .reader-print-alternative {
   display: none;
@@ -849,8 +849,12 @@ body.reader-open .daily-header {
   .reader-passage {
     font-size: 1.4rem;
   }
+  .reader-words {
+    padding: 0 8px;
+  }
   .reader-words h3 {
     font-size: 2.4rem;
+    margin: 8px 0 12px;
   }
   .fold-control {
     margin-bottom: 16px;
@@ -928,6 +932,10 @@ body.reader-open .daily-header {
 .curiosity-print-story svg {
   width: 84pt;
   height: 62pt;
+}
+.curiosity-print-story .curiosity-plate img {
+  width: 84pt;
+  height: 56pt;
 }
 .curiosity-print-story h2 {
   font:
@@ -1100,6 +1108,15 @@ body.reader-open .daily-header {
 #fold-status:empty {
   display: none;
 }
+/* Leave room for the final-page actions in the stacked tablet reader. */
+@media (min-width: 651px) and (max-width: 1000px) {
+  .family-reader .curiosity-plate {
+    max-width: 560px;
+  }
+  .family-reader .reader-controls {
+    padding: 16px 0;
+  }
+}
 @media (max-width: 650px) {
   body.reader-open .daily-header {
     min-height: 60px;
@@ -1108,7 +1125,21 @@ body.reader-open .daily-header {
     padding: 2px 0;
   }
   .family-reader .curiosity-plate {
-    max-width: 300px;
+    max-width: 260px;
+  }
+  .family-reader .reader-copy {
+    gap: 12px;
+  }
+  .family-reader .reader-words > .eyebrow {
+    display: none;
+  }
+  .family-reader .reader-words h3 {
+    margin: 4px 0 8px;
+  }
+  .family-reader .reader-end-actions .primary-button {
+    font-size: 0.75rem;
+    padding: 10px 14px;
+    gap: 10px;
   }
   .family-reader .fold-control {
     gap: 0 12px;
@@ -1124,7 +1155,7 @@ body.reader-open .daily-header {
     font-size: 1.25rem;
   }
   .family-reader .reader-controls {
-    margin-top: 16px;
+    margin-top: 12px;
     padding: 12px 0;
   }
   .family-reader .reader-aside {

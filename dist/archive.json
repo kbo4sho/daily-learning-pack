@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T16:14:11.334Z",
-  "latest": "diamond",
+  "generatedAt": "2026-09-25T14:44:28.676Z",
+  "latest": "how-pianos-work",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "how-pianos-work",
+      "date": "2026-09-25",
+      "topic": "how pianos work",
+      "title": "The note inside.",
+      "teaser": "Little follows a tiny tap into a room full of sound.",
+      "href": "./days/how-pianos-work/",
+      "latest": true
+    },
     {
       "slug": "diamond",
       "date": "2026-09-24",
@@ -11,7 +20,7 @@
       "title": "The flash that wouldn't stay.",
       "teaser": "Little follows one quick flash from deep rock to borrowed light.",
       "href": "./days/diamond/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "curiosity-bean",
