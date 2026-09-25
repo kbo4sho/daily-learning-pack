@@ -968,7 +968,8 @@ body.reader-open .daily-header {
   background: #f4f1e8;
   border: 0.4pt solid #b9b6aa;
   border-radius: 0;
-  filter: grayscale(1) contrast(1.08);
+  /* No CSS filter: Skia emits /SMask soft-masks for filtered images and
+     many consumer printers silently drop those jobs. Pre-grayscale art if needed. */
 }
 .print-document .curiosity-sheet .curiosity-plate figcaption {
   font-size: 7.5pt;
@@ -1080,20 +1081,40 @@ body.reader-open .daily-header {
   height: 26pt;
 }
 @media print {
+  /* Browser Print of the live day must not spool the interactive DOM (multi-MB
+     plates). Point parents at the prebuilt Letter PDFs instead. */
   body:not(.print-document) .daily-header,
   body:not(.print-document) .daily-nav,
   body:not(.print-document) .fold-control,
   body:not(.print-document) .reader-controls,
-  body:not(.print-document) .daily-footer {
-    display: none;
+  body:not(.print-document) .daily-footer,
+  body:not(.print-document) .reader-stage,
+  body:not(.print-document) .question-scene,
+  body:not(.print-document) .writing-scene,
+  body:not(.print-document) .writing-scenes,
+  body:not(.print-document) .curiosity-plate,
+  body:not(.print-document) .activity-art,
+  body:not(.print-document) .scene-choices,
+  body:not(.print-document) .wonder-scenes,
+  body:not(.print-document) .math-tasks {
+    display: none !important;
   }
-  body:not(.print-document) .reader-print-alternative {
-    display: block;
-    font-size: 10pt;
-    margin-top: 18pt;
+  body:not(.print-document) .reader-print-alternative,
+  body:not(.print-document) .print-link,
+  body:not(.print-document) .activity-footer a[href*="pdf/"] {
+    display: block !important;
+    font-size: 11pt;
+    margin-top: 12pt;
   }
   body:not(.print-document) .daily-shell {
-    padding: 0;
+    padding: 18pt;
+  }
+  body:not(.print-document)::before {
+    content: "Use Print today / Print story / Print math / Print writing (or Download foldable). Those open Letter PDFs that print cleanly.";
+    display: block;
+    font: 12pt/1.4 Inter, Arial, sans-serif;
+    margin: 0 0 14pt;
+    color: #111;
   }
   .print-document {
     background: white !important;
