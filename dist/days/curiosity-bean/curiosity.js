@@ -1,5 +1,3 @@
-import { generateZine, ZINE_PLATE_MAX_PX } from "./zine.js";
-
 const content = JSON.parse(
   document.querySelector("#curiosity-content").textContent,
 );
@@ -13,7 +11,7 @@ function showPanel(name, focus = true) {
     else link.removeAttribute("aria-current");
   });
   document.body.classList.toggle("reader-open", name === "reading");
-  document.title = `${{ curiosity: "A bean becomes.", reading: "Read together", math: "Math", writing: "Writing" }[name]} · Wonder Daily · Dogfood`;
+  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing" }[name]} · Wonder Daily · Dogfood`;
   document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
   if (focus) {
     document.querySelector(`#${name}-heading`).focus({ preventScroll: true });
@@ -80,99 +78,23 @@ finish.addEventListener("click", () => {
 const download = document.querySelector("#fold-download");
 const status = document.querySelector("#fold-status");
 download.hidden = false;
-const scriptLibraries = new Map();
-function loadScriptGlobal(src, globalName, message) {
-  if (globalThis[globalName]) return Promise.resolve(globalThis[globalName]);
-  if (scriptLibraries.has(src)) return scriptLibraries.get(src);
-  const library = new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = src;
-    const fail = () => {
-      clearTimeout(timer);
-      script.remove();
-      scriptLibraries.delete(src);
-      reject(new Error(message));
-    };
-    const timer = setTimeout(fail, 15000);
-    script.onload = () => {
-      clearTimeout(timer);
-      resolve(globalThis[globalName]);
-    };
-    script.onerror = fail;
-    document.head.append(script);
-  });
-  scriptLibraries.set(src, library);
-  return library;
-}
-async function fetchAsset(src, message) {
-  const response = await fetch(`./${src}`, {
-    signal: AbortSignal.timeout(15000),
-  });
-  if (!response.ok) throw new Error(message);
-  return response;
-}
-async function loadPlate(src) {
-  const response = await fetchAsset(src, "A story picture could not be loaded");
-  const bitmap = await createImageBitmap(await response.blob());
-  try {
-    const width = Math.min(bitmap.width, ZINE_PLATE_MAX_PX);
-    const height = Math.round((bitmap.height * width) / bitmap.width);
-    const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-    const context = canvas.getContext("2d");
-    if (!context) throw new Error("A story picture could not be prepared");
-    context.fillStyle = "#fff";
-    context.fillRect(0, 0, width, height);
-    context.drawImage(bitmap, 0, 0, width, height);
-    const blob = await new Promise((resolve, reject) =>
-      canvas.toBlob(
-        (result) =>
-          result
-            ? resolve(result)
-            : reject(new Error("A story picture could not be prepared")),
-        "image/jpeg",
-        0.88,
-      ),
-    );
-    return new Uint8Array(await blob.arrayBuffer());
-  } finally {
-    bitmap.close();
-  }
-}
 download.addEventListener("click", async () => {
   if (download.disabled) return;
   download.disabled = true;
   download.setAttribute("aria-busy", "true");
-  status.textContent = "Making your little book…";
+  status.textContent = "Getting your little book…";
   try {
-    const [pdfLib, fontkit] = await Promise.all([
-      loadScriptGlobal(
-        "./vendor/pdf-lib.min.js",
-        "PDFLib",
-        "PDF library unavailable",
-      ),
-      loadScriptGlobal(
-        "./vendor/fontkit.umd.min.js",
-        "fontkit",
-        "Font library unavailable",
-      ),
-    ]);
-    const bytes = await generateZine(content, loadPlate, pdfLib, {
-      fontkit,
-      loadFont: async (src) =>
-        new Uint8Array(
-          await (
-            await fetchAsset(src, "A print font could not be loaded")
-          ).arrayBuffer(),
-        ),
+    const response = await fetch("./pdf/foldable.pdf", {
+      signal: AbortSignal.timeout(15000),
     });
+    if (!response.ok) throw new Error("missing foldable");
+    const bytes = await response.arrayBuffer();
     const url = URL.createObjectURL(
       new Blob([bytes], { type: "application/pdf" }),
     );
     const link = document.createElement("a");
     link.href = url;
-    link.download = "a-bean-becomes-foldable-story.pdf";
+    link.download = `${content.slug || "curiosity"}-foldable-story.pdf`;
     document.body.append(link);
     link.click();
     link.remove();
@@ -181,7 +103,7 @@ download.addEventListener("click", async () => {
       "Your book is ready. Print settings and fold steps are on page 8.";
   } catch {
     status.textContent =
-      "The book could not be made. Check your connection and try Download foldable story again. The Print story link is also available.";
+      "The book could not be downloaded. Check your connection and try Download foldable story again. The Print story link is also available.";
   } finally {
     download.disabled = false;
     download.removeAttribute("aria-busy");
