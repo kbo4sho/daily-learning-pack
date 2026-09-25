@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T14:44:28.676Z",
-  "latest": "how-pianos-work",
+  "generatedAt": "2026-09-25T16:15:38.983Z",
+  "latest": "curiosity-inchworms",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "curiosity-inchworms",
+      "date": "2026-09-26",
+      "topic": "inchworms",
+      "title": "A loop goes somewhere.",
+      "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
+      "href": "./days/curiosity-inchworms/",
+      "latest": true
+    },
     {
       "slug": "how-pianos-work",
       "date": "2026-09-25",
@@ -11,7 +20,7 @@
       "title": "The note inside.",
       "teaser": "Little follows a tiny tap into a room full of sound.",
       "href": "./days/how-pianos-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "diamond",
