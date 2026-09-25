@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "curiosity-inchworms",
+  "topic": "inchworms",
+  "aliases": [
+    "inchworm",
+    "inch worms",
+    "inch worm",
+    "inch-worms",
+    "inch-worm",
+    "curiosity inchworms",
+    "curiosity inchworm",
+    "how inchworms move"
+  ],
+  "gradeLevel": 2,
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 2 · INCHWORMS / GRIP & MOTION",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "A loop goes somewhere.",
+  "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
+  "question": "How does an inchworm turn a loop into a step?",
+  "idea": "An inchworm is a geometer moth caterpillar. Its front legs grip as its rear moves forward, raising a loop. Then its rear prolegs grip while its front reaches ahead. A long middle without walking legs makes this alternating movement especially clear.",
+  "curiosity": {
+    "intro": "Choose a question. Look for a clue in the picture, then test your first idea against the explanation.",
+    "carryForward": "Follow the grips through the story. Use a leaf vein as evidence, work out a pretend journey, and explain a discovery in your own words.",
+    "questions": [
+      {
+        "id": "loop",
+        "plate": "loop",
+        "question": "Why does the middle rise into a loop?",
+        "notice": "Find the head at the right. Follow the body back to the rear feet. Where is there empty space underneath?",
+        "say": "The front legs hold the leaf while the rear comes closer. The long middle bends upward into a loop. Inchworms have jointed legs near the head and fleshy gripping parts called prolegs near the rear, with a long gap between. They do not walk on a row of legs along that middle.",
+        "try": "Draw a long curved line with its two ends close together. Imagine the front end stays in one place as the rear comes closer. Which part must bend?"
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "question": "What holds on while the head reaches?",
+        "notice": "The front is lifted. Trace the body to the far left. Which feet still touch the leaf?",
+        "say": "Now the rear prolegs anchor the body: they hold it in place. The front reaches ahead as the middle straightens. When the front legs grip again, the rear can catch up. The two ends take turns holding on. That repeating sequence carries the caterpillar across a leaf.",
+        "try": "Point to the rear grip. Predict what might happen if it slipped while the front was still reaching. Use a detail from the picture to explain."
+      },
+      {
+        "id": "clue",
+        "plate": "clue",
+        "question": "How could a leaf vein show it moved?",
+        "notice": "Compare the two leaf sketches. Each dot records the head. Find the same Y-shaped vein fork in both. What changed?",
+        "say": "A bent body alone does not tell us how far the animal traveled. The first head mark is before the fork; the later mark is beyond it. The fork is a reference point, a place to compare positions against. Those changed positions are evidence for movement. They do not tell us its speed without times.",
+        "try": "Draw a Y and put a dot before it. Draw the same Y again with a dot beyond it. Explain how the two drawings support the idea that the head moved."
+      },
+      {
+        "id": "moth",
+        "plate": "moth",
+        "question": "Will this caterpillar always crawl?",
+        "notice": "Find three life stages in the notebook. How does the last shape differ from the first?",
+        "say": "An inchworm is a caterpillar, the young stage of a geometer moth. It grows, becomes a pupa, then changes into a moth. This big change in body form is metamorphosis. It takes time; this scene imagines a later stage. A moth has six jointed legs. The caterpillar's fleshy prolegs do not remain.",
+        "try": "Follow the notebook arrows: caterpillar, pupa, moth. Name one body feature that changes. What extra observation would help you learn how long the change takes?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "leaf",
+      "src": "assets/curiosity-inchworms/01-leaf.jpg",
+      "original": "assets/curiosity-inchworms/01-leaf.png",
+      "title": "A traveling arch",
+      "alt": "An enlarged green inchworm arches over a sunlit leaf, head at right and rear grips at left. Big and Little watch from the garden path; a dew drop rests below.",
+      "caption": "An imagined close view of a leaf journey. The caterpillar is enlarged; the picture is not a ruler."
+    },
+    {
+      "id": "loop",
+      "src": "assets/curiosity-inchworms/02-loop.jpg",
+      "original": "assets/curiosity-inchworms/02-loop.png",
+      "title": "The rear catches up",
+      "alt": "The inchworm's front legs hold near a leaf vein at right. Its legless middle forms an arch; an orange arrow near the rear points toward the front.",
+      "caption": "Front grips; rear comes closer. Notice the long legless middle rather than counting the partly hidden feet."
+    },
+    {
+      "id": "reach",
+      "src": "assets/curiosity-inchworms/03-reach.jpg",
+      "original": "assets/curiosity-inchworms/03-reach.png",
+      "title": "A grip, then a reach",
+      "alt": "The rear prolegs grip a leaf at left while the inchworm's long body straightens and its head reaches right. The little front legs are lifted; an orange arrow points ahead.",
+      "caption": "Rear grips; front reaches. This simplified still picture shows one moment in a repeating movement."
+    },
+    {
+      "id": "clue",
+      "src": "assets/curiosity-inchworms/04-clue.jpg",
+      "original": "assets/curiosity-inchworms/04-clue.png",
+      "title": "The leaf keeps a clue",
+      "alt": "Big and Little study a living leaf beside a notebook. In two sketches of the same vein fork, the head-position dot is first before the fork and later beyond it.",
+      "caption": "Two imagined observations of the same leaf. Compare the head marks against the same fork."
+    },
+    {
+      "id": "measure",
+      "src": "assets/curiosity-inchworms/05-measure.jpg",
+      "original": "assets/curiosity-inchworms/05-measure.png",
+      "title": "A pretend leaf journey",
+      "alt": "Little holds a pencil above a notebook leaf drawing with a winding orange route and pencil dots. Big watches beside Little; an inchworm loops along a nearby leafy twig.",
+      "caption": "A drawing model for a journey. Use the invented table distances, not the picture's size or dot spacing."
+    },
+    {
+      "id": "moth",
+      "src": "assets/curiosity-inchworms/06-moth.jpg",
+      "original": "assets/curiosity-inchworms/06-moth.png",
+      "title": "A later shape",
+      "alt": "A gray-brown geometer moth rests on a twig at dusk. Beside Big and Little, a notebook shows caterpillar, pupa and moth sketches joined by orange arrows.",
+      "caption": "An imagined later life stage. The notebook skips time; this change does not happen during one evening."
+    }
+  ],
+  "reading": {
+    "title": "A loop goes somewhere",
+    "coverPlate": "leaf",
+    "coverText": "A green arch rises. A head reaches. Follow the tiny grips that carry an inchworm across a leaf.",
+    "parentNote": "About 15 minutes. Support pronunciation when useful, then let Little revisit a picture and explain the mechanism. Evidence and inference are deliberately a small step beyond a basic sequence retell. All kid-facing directions address Little; the same story appears on screen, Letter and foldable.",
+    "beats": [
+      {
+        "id": "leaf",
+        "plate": "leaf",
+        "title": "A traveling arch",
+        "passage": "A green arch rises on a leaf. “A tiny bridge!” says Little. Then the arch flattens and the head reaches ahead. Big watches beside the path. This is an inchworm, a kind of caterpillar. How can bending help it get somewhere?",
+        "prompt": "Keep a first guess. Which parts touch the leaf?"
+      },
+      {
+        "id": "loop",
+        "plate": "loop",
+        "title": "The rear catches up",
+        "passage": "The front legs grip the leaf. The rear comes closer, lifting the long middle into a loop. Near the rear are fleshy grips called prolegs. “No walking legs under that middle!” Little notices. With its ends closer, the body must bend.",
+        "prompt": "Which end holds still while the loop rises?"
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "A grip, then a reach",
+        "passage": "Now the prolegs anchor the rear: they hold it in place. The front reaches ahead as the body straightens. Once the front grips, the rear can catch up again. “One end holds while the other moves,” Little says. A loop becomes a journey.",
+        "prompt": "Predict what could happen if the rear grip slipped during the reach."
+      },
+      {
+        "id": "clue",
+        "plate": "clue",
+        "title": "The leaf keeps a clue",
+        "passage": "Little sketches the head before a vein fork, then beyond it. The changed positions are evidence: clues that can support an idea. “It traveled past the fork!” That is an inference, an idea drawn from clues. The same leaf vein makes the comparison fair.",
+        "prompt": "Why is a changed head position stronger evidence than just a bent body?"
+      },
+      {
+        "id": "measure",
+        "plate": "measure",
+        "title": "A pretend leaf journey",
+        "passage": "“Does every loop go one inch?” Little asks. The name sounds like measuring, but real steps vary. Little draws a pretend route instead. Its distances are invented. A model helps answer a math question without pretending the leaf picture is a ruler.",
+        "prompt": "What would you need to measure a real journey?"
+      },
+      {
+        "id": "moth",
+        "plate": "moth",
+        "title": "A later shape",
+        "passage": "Little imagines a later chapter. The caterpillar becomes a pupa, then changes into a moth. This change of body form is metamorphosis. It takes time. Little sketches the stages. “A new shape after all those loops!”",
+        "prompt": "Which stage comes between caterpillar and moth?"
+      }
+    ],
+    "words": [
+      {
+        "word": "prolegs",
+        "meaning": "fleshy gripping parts on a caterpillar's body, different from its jointed front legs"
+      },
+      {
+        "word": "anchor",
+        "meaning": "hold something in place"
+      },
+      {
+        "word": "evidence",
+        "meaning": "observations or clues that can support an idea"
+      },
+      {
+        "word": "inference",
+        "meaning": "an idea drawn from evidence"
+      },
+      {
+        "word": "metamorphosis",
+        "meaning": "a big change in body form as an animal develops"
+      }
+    ],
+    "questions": [
+      "What evidence shows the head traveled rather than only bending in place? Why compare it with the same vein fork?",
+      "During the reach, what anchors the rear? Predict what could happen if that grip slipped, and explain why."
+    ]
+  },
+  "math": {
+    "title": "How much leaf is left?",
+    "actionLabel": "Follow a leaf journey",
+    "eyebrow": "ADD, SUBTRACT & EXPLAIN · ABOUT 15 MIN",
+    "plate": "measure",
+    "intro": "Imagine a 32-millimeter route on a leaf. A pretend inchworm travels 12 mm, then 9 mm. A millimeter is a small unit of length; mm is its short name. Use the table to work out the journey.",
+    "table": {
+      "caption": "Pretend journey distances · millimeters",
+      "columnLabel": "Part",
+      "columns": [
+        "Whole route",
+        "First stretch",
+        "Next stretch"
+      ],
+      "rowLabel": "Length (mm)",
+      "values": [
+        32,
+        12,
+        9
+      ]
+    },
+    "printNote": "A pretend journey: mm means millimeters. Use these numbers; do not measure the painting or assume one loop equals one inch.",
+    "tasks": [
+      {
+        "plate": "measure",
+        "label": "COMBINE TWO STRETCHES",
+        "prompt": "The inchworm travels 12 mm, then 9 mm. How far has it traveled in all?",
+        "equation": "12 + 9 =",
+        "hint": "Add 8 to reach 20, then add the last 1.",
+        "answer": "21 mm. 12 + 8 + 1 = 21."
+      },
+      {
+        "plate": "measure",
+        "label": "FIND WHAT IS LEFT",
+        "challenge": "multi-step",
+        "prompt": "The whole route is 32 mm. After the 12 mm and 9 mm stretches, how far is left? Show both steps.",
+        "equation": "32 − (12 + 9) =",
+        "hint": "First add the two stretches. Then subtract that total from the whole route.",
+        "answer": "11 mm left. First 12 + 9 = 21. Then 32 − 21 = 11."
+      },
+      {
+        "plate": "measure",
+        "label": "CHANGE THE ROUTE",
+        "challenge": "multi-step",
+        "prompt": "Extend the 32 mm route by 8 mm. After traveling the same 21 mm, how far is left on this longer route?",
+        "equation": "(32 + 8) − 21 =",
+        "hint": "Find the new whole route first. Then subtract the distance already traveled.",
+        "answer": "19 mm left. 32 + 8 = 40; 40 − 21 = 19."
+      }
+    ],
+    "extension": "Explain why adding 8 mm to the route also adds 8 mm to the distance left, if the traveled distance stays the same.",
+    "parentNote": "About 15 minutes. Use a bar model or number-line hops. Read parentheses as 'do this part first'; two separate number sentences are equally useful. The table and route are invented, not measured observations, species speeds, or loop lengths. The final explanation checks that Little connects the two results: 11 + 8 = 19."
+  },
+  "writing": {
+    "title": "Explain a tiny grip.",
+    "intro": "Choose a scene. Write two linked sentences: one observation, then an explanation using because. Draw a detail that supports your idea.",
+    "plateIds": [
+      "loop",
+      "reach",
+      "clue"
+    ],
+    "draw": "Draw the detail you noticed. Add an arrow to show movement or a dot to show position.",
+    "starter": "My evidence and explanation",
+    "frames": [
+      {
+        "plate": "loop",
+        "start": "The middle rises because",
+        "hint": "What happens when the rear gets closer to the gripping front?"
+      },
+      {
+        "plate": "reach",
+        "start": "The rear grip matters because",
+        "hint": "What keeps the body in place while the front reaches?"
+      },
+      {
+        "plate": "clue",
+        "start": "I infer that it moved because",
+        "hint": "Compare the head with the same vein fork in both sketches."
+      }
+    ],
+    "words": [
+      "prolegs",
+      "anchor",
+      "loop",
+      "reach",
+      "evidence",
+      "inference",
+      "because"
+    ],
+    "check": "Reread your words. Does the detail support your explanation? Check the first capital and each ending mark.",
+    "parentNote": "About 15 minutes. Welcome Little's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to Little."
+  },
+  "answers": [
+    {
+      "label": "Math · 1",
+      "text": "21 mm traveled: 12 + 9 = 21. A bridge-through-ten strategy is 12 + 8 + 1."
+    },
+    {
+      "label": "Math · 2",
+      "text": "11 mm left. First combine the traveled stretches: 12 + 9 = 21. Then subtract from the whole: 32 − 21 = 11. Accept two number sentences or a labeled bar model."
+    },
+    {
+      "label": "Math · 3",
+      "text": "19 mm left: 32 + 8 = 40 mm; 40 − 21 = 19 mm. Or add 8 to the earlier remainder: 11 + 8 = 19. The traveled distance stays 21 mm."
+    },
+    {
+      "label": "Reading · 1",
+      "text": "The head was before the fork and later beyond it. The same body part changed position beside the same reference point. An arch alone shows shape, not travel. Times would be needed to find speed."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Rear prolegs anchor the body. If they slip before the front grips, the body could slide. Accept a reasoned prediction; it need not claim the animal must fall."
+    },
+    {
+      "label": "Writing",
+      "text": "Look for observation plus explanation: The front feet are lifted. The rear prolegs hold because the front cannot grip yet. Or: The head mark passed the fork, so I infer movement. Drawing or dictation can preserve this reasoning."
+    }
+  ],
+  "parentGuidance": "These are imagined, enlarged scenes, not an identified species or exact leg-count diagrams. Inchworms are geometer moth caterpillars, not earthworms. They generally have three pairs of jointed front legs and two or three pairs of rear prolegs, with a long legless middle; details vary. Tiny hooks on prolegs help grip. Front legs anchor during looping; rear prolegs anchor during extension. Caterpillar, pupa and moth are stages separated by time; timing varies. The pictured winged moth is a possible adult form, though some females have reduced or absent wings. Most inchworms eat plant material, often leaves. The name suggests measuring, not exactly one-inch steps. Compare the same head against the same vein; position evidence alone gives no speed. All millimeter distances are invented and independent of loop count or art scale. Observe a leaf in place if desired; handling or raising animals is unnecessary. Support pronunciation, invented spelling or dictation as useful. Keep adult guidance in this key or collapsed details.",
+  "sources": [
+    {
+      "label": "NC State Entomology · Geometer moth caterpillars and looping movement",
+      "url": "https://genent.cals.ncsu.edu/insect-identification/order-lepidoptera/family-geometridae/"
+    },
+    {
+      "label": "University of Michigan Animal Diversity Web · Geometridae movement, development and feeding",
+      "url": "https://animaldiversity.org/accounts/Geometridae/"
+    },
+    {
+      "label": "University of Kentucky Entomology · Cankerworms and variation in rear prolegs",
+      "url": "https://entomology.ca.uky.edu/sites/entomology.ca.uky.edu/files/ef401_0.pdf"
+    }
+  ],
+  "authoring": {
+    "status": "complete",
+    "bar": "curiosity",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-gen",
+    "audience": "Little",
+    "pipeline": "task-87 authorCuriosityPack scaffold, then inspected scenic plates and authored content",
+    "craftApproval": "Skipped per explicit task-88 instruction; draft PR delivery only."
+  }
+}

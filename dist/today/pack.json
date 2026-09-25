@@ -1,325 +1,334 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-pianos-work",
-  "topic": "how pianos work",
+  "slug": "curiosity-inchworms",
+  "topic": "inchworms",
   "aliases": [
-    "piano",
-    "pianos",
-    "how a piano works",
-    "piano sound",
-    "piano mechanisms",
-    "curiosity piano"
+    "inchworm",
+    "inch worms",
+    "inch worm",
+    "inch-worms",
+    "inch-worm",
+    "curiosity inchworms",
+    "curiosity inchworm",
+    "how inchworms move"
   ],
   "gradeLevel": 2,
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 2 · PIANOS / SOUND & MOTION",
-  "title": "The note inside.",
-  "teaser": "Little follows a tiny tap into a room full of sound.",
-  "question": "Where does a piano's note come from?",
-  "idea": "In an acoustic piano, pressing a key moves a mechanism that sends a felt-covered hammer against strings. The strings vibrate. A wooden bridge carries their motion to the soundboard, which moves more air so we can hear the note well.",
+  "editionLabel": "GRADE 2 · INCHWORMS / GRIP & MOTION",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "A loop goes somewhere.",
+  "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
+  "question": "How does an inchworm turn a loop into a step?",
+  "idea": "An inchworm is a geometer moth caterpillar. Its front legs grip as its rear moves forward, raising a loop. Then its rear prolegs grip while its front reaches ahead. A long middle without walking legs makes this alternating movement especially clear.",
   "curiosity": {
-    "intro": "Choose a question with your grown-up. Look for a clue in the picture before you open the explanation.",
-    "carryForward": "Follow Little's note through the story. Then compare two drawn lengths and keep a discovery in your own words.",
+    "intro": "Choose a question. Look for a clue in the picture, then test your first idea against the explanation.",
+    "carryForward": "Follow the grips through the story. Use a leaf vein as evidence, work out a pretend journey, and explain a discovery in your own words.",
     "questions": [
       {
-        "id": "inside",
-        "plate": "keys",
-        "question": "Where could a note be hiding?",
-        "notice": "Find Little's hand and the orange arrow. One key moves only a little. Where would you look for what happens next?",
-        "say": "The piano is not a box of stored notes. Pressing a key starts moving parts inside. In an acoustic piano, those parts send a small hammer toward metal strings. The next picture lets us look at a model of that hidden motion.",
-        "try": "Pretend the tabletop is a piano key. Lower one finger quietly, then lift it. Tell your grown-up what you imagine moving inside."
+        "id": "loop",
+        "plate": "loop",
+        "question": "Why does the middle rise into a loop?",
+        "notice": "Find the head at the right. Follow the body back to the rear feet. Where is there empty space underneath?",
+        "say": "The front legs hold the leaf while the rear comes closer. The long middle bends upward into a loop. Inchworms have jointed legs near the head and fleshy gripping parts called prolegs near the rear, with a long gap between. They do not walk on a row of legs along that middle.",
+        "try": "Draw a long curved line with its two ends close together. Imagine the front end stays in one place as the rear comes closer. Which part must bend?"
       },
       {
-        "id": "ring",
-        "plate": "strings",
-        "question": "How can a string keep singing after one tap?",
-        "notice": "Find the gap between the hammer and the string. Look for the two faint orange traces. What might they help us imagine?",
-        "say": "A hammer taps the string and falls away. The string keeps moving back and forth very quickly. That motion is vibration. The orange traces exaggerate the movement; they are not extra strings. The vibration gradually fades unless something stops it sooner.",
-        "try": "Move one finger a tiny distance back and forth in the air. Let it become still. Say when your pretend string could make sound."
+        "id": "reach",
+        "plate": "reach",
+        "question": "What holds on while the head reaches?",
+        "notice": "The front is lifted. Trace the body to the far left. Which feet still touch the leaf?",
+        "say": "Now the rear prolegs anchor the body: they hold it in place. The front reaches ahead as the middle straightens. When the front legs grip again, the rear can catch up. The two ends take turns holding on. That repeating sequence carries the caterpillar across a leaf.",
+        "try": "Point to the rear grip. Predict what might happen if it slipped while the front was still reaching. Use a detail from the picture to explain."
       },
       {
-        "id": "room",
-        "plate": "soundboard",
-        "question": "How does a thin string fill a room with sound?",
-        "notice": "Find the narrow raised bridge and the broad wooden board. Where do the strings meet the bridge? Follow the orange mark into the wood.",
-        "say": "A thin string alone moves little air. Its vibration passes through the bridge into the soundboard. This broad wooden board vibrates too, moving more air. The moving air carries sound to our ears. The wood helps us hear a small string's motion.",
-        "try": "Trace the path with your finger: string, bridge, soundboard. Finish by pointing toward your ear. What helped the motion reach you?"
+        "id": "clue",
+        "plate": "clue",
+        "question": "How could a leaf vein show it moved?",
+        "notice": "Compare the two leaf sketches. Each dot records the head. Find the same Y-shaped vein fork in both. What changed?",
+        "say": "A bent body alone does not tell us how far the animal traveled. The first head mark is before the fork; the later mark is beyond it. The fork is a reference point, a place to compare positions against. Those changed positions are evidence for movement. They do not tell us its speed without times.",
+        "try": "Draw a Y and put a dot before it. Draw the same Y again with a dot beyond it. Explain how the two drawings support the idea that the head moved."
       },
       {
-        "id": "pitch",
-        "plate": "pitch",
-        "question": "Why do the two ends of a piano sound different?",
-        "notice": "The display has two strings. Trace each from one support to the other. What is different about the distance between the supports?",
-        "say": "Pitch means how high or low a note sounds. With other things the same, a longer string gives a lower pitch and a shorter one gives a higher pitch. Tightening the same string raises its pitch; loosening it lowers the pitch. In a piano, length, thickness, and tension work together. Low notes are toward the player's left; high notes are toward the right.",
-        "try": "Use your voice to make a comfortable low hum, then a higher hum. Keep both gentle. Can a high sound be quiet too?"
+        "id": "moth",
+        "plate": "moth",
+        "question": "Will this caterpillar always crawl?",
+        "notice": "Find three life stages in the notebook. How does the last shape differ from the first?",
+        "say": "An inchworm is a caterpillar, the young stage of a geometer moth. It grows, becomes a pupa, then changes into a moth. This big change in body form is metamorphosis. It takes time; this scene imagines a later stage. A moth has six jointed legs. The caterpillar's fleshy prolegs do not remain.",
+        "try": "Follow the notebook arrows: caterpillar, pupa, moth. Name one body feature that changes. What extra observation would help you learn how long the change takes?"
       }
     ]
   },
   "plates": [
     {
-      "id": "keys",
-      "src": "assets/how-pianos-work/01-keys.jpg",
-      "original": "assets/how-pianos-work/01-keys.png",
-      "title": "One small press",
-      "alt": "Little Wonderer sits at a walnut grand piano and presses a white key beneath a small orange arrow. Big stands close beside the bench in a sunlit music museum.",
-      "caption": "A tiny movement begins a question. This imagined museum piano is an acoustic piano, with strings inside."
+      "id": "leaf",
+      "src": "assets/curiosity-inchworms/01-leaf.jpg",
+      "original": "assets/curiosity-inchworms/01-leaf.png",
+      "title": "A traveling arch",
+      "alt": "An enlarged green inchworm arches over a sunlit leaf, head at right and rear grips at left. Big and Little watch from the garden path; a dew drop rests below.",
+      "caption": "An imagined close view of a leaf journey. The caterpillar is enlarged; the picture is not a ruler."
     },
     {
-      "id": "action",
-      "src": "assets/how-pianos-work/02-action.jpg",
-      "original": "assets/how-pianos-work/02-action.png",
-      "title": "A hidden tap",
-      "alt": "Big and Little study an enlarged wooden key-action model. A long key tilts on a pivot; connected parts lift a felt hammer toward a horizontal string above it.",
-      "caption": "An enlarged, simplified grand-piano action. The key starts linked parts moving; the hammer taps and comes away."
+      "id": "loop",
+      "src": "assets/curiosity-inchworms/02-loop.jpg",
+      "original": "assets/curiosity-inchworms/02-loop.png",
+      "title": "The rear catches up",
+      "alt": "The inchworm's front legs hold near a leaf vein at right. Its legless middle forms an arch; an orange arrow near the rear points toward the front.",
+      "caption": "Front grips; rear comes closer. Notice the long legless middle rather than counting the partly hidden feet."
     },
     {
-      "id": "strings",
-      "src": "assets/how-pianos-work/03-strings.jpg",
-      "original": "assets/how-pianos-work/03-strings.png",
-      "title": "After the tap",
-      "alt": "A taut string spans two fixed supports on a museum table. A felt hammer sits below it with a clear gap. Faint orange traces show back-and-forth motion as Big and Little watch.",
-      "caption": "One string, shown with exaggerated motion traces. Real piano-string vibrations are much smaller and faster than this drawing can show."
+      "id": "reach",
+      "src": "assets/curiosity-inchworms/03-reach.jpg",
+      "original": "assets/curiosity-inchworms/03-reach.png",
+      "title": "A grip, then a reach",
+      "alt": "The rear prolegs grip a leaf at left while the inchworm's long body straightens and its head reaches right. The little front legs are lifted; an orange arrow points ahead.",
+      "caption": "Rear grips; front reaches. This simplified still picture shows one moment in a repeating movement."
     },
     {
-      "id": "soundboard",
-      "src": "assets/how-pianos-work/04-soundboard.jpg",
-      "original": "assets/how-pianos-work/04-soundboard.png",
-      "title": "The wood joins in",
-      "alt": "The pair look at a broad pale wooden soundboard in a cutaway display. Strings meet a raised wooden bridge; an orange mark continues from the bridge into the board.",
-      "caption": "The bridge carries vibration into the soundboard. This cutaway leaves out parts so we can notice the connection."
+      "id": "clue",
+      "src": "assets/curiosity-inchworms/04-clue.jpg",
+      "original": "assets/curiosity-inchworms/04-clue.png",
+      "title": "The leaf keeps a clue",
+      "alt": "Big and Little study a living leaf beside a notebook. In two sketches of the same vein fork, the head-position dot is first before the fork and later beyond it.",
+      "caption": "Two imagined observations of the same leaf. Compare the head marks against the same fork."
     },
     {
-      "id": "pitch",
-      "src": "assets/how-pianos-work/05-pitch.jpg",
-      "original": "assets/how-pianos-work/05-pitch.png",
-      "title": "Two lengths to notice",
-      "alt": "Big and Little examine two separate taut strings on a wooden display. Orange brackets labeled longer and shorter follow the distance between each string's supports.",
-      "caption": "A comparison model, not two measured piano strings. Compare length while imagining the material, thickness, and tension stay the same."
+      "id": "measure",
+      "src": "assets/curiosity-inchworms/05-measure.jpg",
+      "original": "assets/curiosity-inchworms/05-measure.png",
+      "title": "A pretend leaf journey",
+      "alt": "Little holds a pencil above a notebook leaf drawing with a winding orange route and pencil dots. Big watches beside Little; an inchworm loops along a nearby leafy twig.",
+      "caption": "A drawing model for a journey. Use the invented table distances, not the picture's size or dot spacing."
     },
     {
-      "id": "quiet",
-      "src": "assets/how-pianos-work/06-quiet.jpg",
-      "original": "assets/how-pianos-work/06-quiet.png",
-      "title": "Keep the path",
-      "alt": "Big and Little share a notebook near the quiet piano. Little holds a pencil above sketches of a key, a hammer, strings, and a wooden board joined by orange arrows.",
-      "caption": "Little's sketch keeps a path through the piano. What small connection could you add?"
+      "id": "moth",
+      "src": "assets/curiosity-inchworms/06-moth.jpg",
+      "original": "assets/curiosity-inchworms/06-moth.png",
+      "title": "A later shape",
+      "alt": "A gray-brown geometer moth rests on a twig at dusk. Beside Big and Little, a notebook shows caterpillar, pupa and moth sketches joined by orange arrows.",
+      "caption": "An imagined later life stage. The notebook skips time; this change does not happen during one evening."
     }
   ],
   "reading": {
-    "title": "The note inside",
-    "coverPlate": "keys",
-    "coverText": "One key moves. A note rings out. Little follows it inside.",
-    "parentNote": "About 15 min: share the six short scenes, then revisit a picture. Read aloud for Little; pointing, talking, and pausing count. Let Little's first guess hang in the air before following the clues. The foldable carries the same story.",
+    "title": "A loop goes somewhere",
+    "coverPlate": "leaf",
+    "coverText": "A green arch rises. A head reaches. Follow the tiny grips that carry an inchworm across a leaf.",
+    "parentNote": "About 15 minutes. Support pronunciation when useful, then let Little revisit a picture and explain the mechanism. Evidence and inference are deliberately a small step beyond a basic sequence retell. All kid-facing directions address Little; the same story appears on screen, Letter and foldable.",
     "beats": [
       {
-        "id": "inside",
-        "plate": "keys",
-        "title": "One small press",
-        "passage": "One key sinks beneath Little's hand. A note rings through the museum. “Was it hiding in there?” Little asks. Big listens beside the bench. The key hardly moved. Something inside the piano must have done much more.",
-        "prompt": "What would you look for inside? Keep your guess for the next picture."
+        "id": "leaf",
+        "plate": "leaf",
+        "title": "A traveling arch",
+        "passage": "A green arch rises on a leaf. “A tiny bridge!” says Little. Then the arch flattens and the head reaches ahead. Big watches beside the path. This is an inchworm, a kind of caterpillar. How can bending help it get somewhere?",
+        "prompt": "Keep a first guess. Which parts touch the leaf?"
       },
       {
-        "id": "tap",
-        "plate": "action",
-        "title": "A hidden tap",
-        "passage": "An enormous model gives them a peek. A key tips; connected parts lift a felt-covered hammer. Tap! The hammer strikes a string and comes away. “A tiny hammer?” Little whispers. This team of moving parts is called the action.",
-        "prompt": "Follow the model from key to hammer. Why might the hammer need to come away?"
+        "id": "loop",
+        "plate": "loop",
+        "title": "The rear catches up",
+        "passage": "The front legs grip the leaf. The rear comes closer, lifting the long middle into a loop. Near the rear are fleshy grips called prolegs. “No walking legs under that middle!” Little notices. With its ends closer, the body must bend.",
+        "prompt": "Which end holds still while the loop rises?"
       },
       {
-        "id": "ring",
-        "plate": "strings",
-        "title": "After the tap",
-        "passage": "The hammer has fallen back, but the string is not still. It quivers: back and forth, back and forth. That quick motion is vibration. “The tap is over,” Little says, “but the moving isn't!” How can such a thin string sound so big?",
-        "prompt": "Find the gap. What keeps moving after the hammer's tap?"
+        "id": "reach",
+        "plate": "reach",
+        "title": "A grip, then a reach",
+        "passage": "Now the prolegs anchor the rear: they hold it in place. The front reaches ahead as the body straightens. Once the front grips, the rear can catch up again. “One end holds while the other moves,” Little says. A loop becomes a journey.",
+        "prompt": "Predict what could happen if the rear grip slipped during the reach."
       },
       {
-        "id": "wood",
-        "plate": "soundboard",
-        "title": "The wood joins in",
-        "passage": "Little follows a string to a wooden bridge. The bridge carries vibration into a broad soundboard. That wood vibrates too, moving more air. The air carries sound to listening ears. “The wood joins in!” Little says. A thin string has a roomy helper.",
-        "prompt": "Trace the connection into the wood. What does the soundboard help move?"
+        "id": "clue",
+        "plate": "clue",
+        "title": "The leaf keeps a clue",
+        "passage": "Little sketches the head before a vein fork, then beyond it. The changed positions are evidence: clues that can support an idea. “It traveled past the fork!” That is an inference, an idea drawn from clues. The same leaf vein makes the comparison fair.",
+        "prompt": "Why is a changed head position stronger evidence than just a bent body?"
       },
       {
-        "id": "pitch",
-        "plate": "pitch",
-        "title": "Two lengths to notice",
-        "passage": "Two strings stretch across another model. One is longer. If everything else stays the same, the longer string vibrates more slowly and sounds lower. The shorter one sounds higher. “Different voices!” says Little. How high or low a note sounds is its pitch.",
-        "prompt": "Point to the string you predict would sound lower. What must stay the same for this comparison?"
+        "id": "measure",
+        "plate": "measure",
+        "title": "A pretend leaf journey",
+        "passage": "“Does every loop go one inch?” Little asks. The name sounds like measuring, but real steps vary. Little draws a pretend route instead. Its distances are invented. A model helps answer a math question without pretending the leaf picture is a ruler.",
+        "prompt": "What would you need to measure a real journey?"
       },
       {
-        "id": "keep",
-        "plate": "quiet",
-        "title": "Keep the path",
-        "passage": "With the pedal up, Little releases a middle key. A felt damper hushes its strings. Little sketches key, hammer, strings, wood. “The note wasn't hiding. We set things moving!” Big leaves room for one more why.",
-        "prompt": "What changed Little's first guess? What connection could you add to the sketch?"
+        "id": "moth",
+        "plate": "moth",
+        "title": "A later shape",
+        "passage": "Little imagines a later chapter. The caterpillar becomes a pupa, then changes into a moth. This change of body form is metamorphosis. It takes time. Little sketches the stages. “A new shape after all those loops!”",
+        "prompt": "Which stage comes between caterpillar and moth?"
       }
     ],
     "words": [
       {
-        "word": "action",
-        "meaning": "the connected moving parts that send a piano hammer toward its strings"
+        "word": "prolegs",
+        "meaning": "fleshy gripping parts on a caterpillar's body, different from its jointed front legs"
       },
       {
-        "word": "vibration",
-        "meaning": "a quick back-and-forth motion"
+        "word": "anchor",
+        "meaning": "hold something in place"
       },
       {
-        "word": "pitch",
-        "meaning": "how high or low a sound seems to our ears"
+        "word": "evidence",
+        "meaning": "observations or clues that can support an idea"
       },
       {
-        "word": "tension",
-        "meaning": "the pulling force that keeps a string stretched tight"
+        "word": "inference",
+        "meaning": "an idea drawn from evidence"
+      },
+      {
+        "word": "metamorphosis",
+        "meaning": "a big change in body form as an animal develops"
       }
     ],
     "questions": [
-      "What did Little first guess about the note? Which moving parts helped change that guess?",
-      "How does vibration get from a string to the air? Name the two wooden helpers."
+      "What evidence shows the head traveled rather than only bending in place? Why compare it with the same vein fork?",
+      "During the reach, what anchors the rear? Predict what could happen if that grip slipped, and explain why."
     ]
   },
   "math": {
-    "title": "Longer by how much?",
-    "actionLabel": "Compare two drawn lengths",
-    "eyebrow": "COMPARE & COMBINE · ABOUT 15 MIN",
-    "plate": "pitch",
-    "intro": "Little wants two string lines for a drawing. Imagine line A is 24 centimeters long and line B is 9 centimeters long. Use the pretend lengths in the table.",
+    "title": "How much leaf is left?",
+    "actionLabel": "Follow a leaf journey",
+    "eyebrow": "ADD, SUBTRACT & EXPLAIN · ABOUT 15 MIN",
+    "plate": "measure",
+    "intro": "Imagine a 32-millimeter route on a leaf. A pretend inchworm travels 12 mm, then 9 mm. A millimeter is a small unit of length; mm is its short name. Use the table to work out the journey.",
     "table": {
-      "caption": "Pretend drawing lengths · centimeters",
-      "columnLabel": "Line",
+      "caption": "Pretend journey distances · millimeters",
+      "columnLabel": "Part",
       "columns": [
-        "A",
-        "B"
+        "Whole route",
+        "First stretch",
+        "Next stretch"
       ],
-      "rowLabel": "Length (cm)",
+      "rowLabel": "Length (mm)",
       "values": [
-        24,
+        32,
+        12,
         9
       ]
     },
-    "printNote": "These are invented drawing lengths. Do not measure the painting or real piano strings.",
+    "printNote": "A pretend journey: mm means millimeters. Use these numbers; do not measure the painting or assume one loop equals one inch.",
     "tasks": [
       {
-        "plate": "pitch",
-        "label": "FIND THE DIFFERENCE",
-        "prompt": "Line A is 24 cm long. Line B is 9 cm long. How much longer is A?",
-        "equation": "24 − 9 =",
-        "hint": "Hop from 9 to 10, then to 20, then to 24. Add your hops.",
-        "answer": "15 cm longer. 1 + 10 + 4 = 15."
+        "plate": "measure",
+        "label": "COMBINE TWO STRETCHES",
+        "prompt": "The inchworm travels 12 mm, then 9 mm. How far has it traveled in all?",
+        "equation": "12 + 9 =",
+        "hint": "Add 8 to reach 20, then add the last 1.",
+        "answer": "21 mm. 12 + 8 + 1 = 21."
       },
       {
-        "plate": "pitch",
-        "label": "JOIN THE LENGTHS",
-        "prompt": "Imagine drawing A and B end to end. What is their total length?",
-        "equation": "24 + 9 =",
-        "hint": "Add 6 to reach 30. How much of the 9 is left?",
-        "answer": "33 cm. 24 + 6 + 3 = 33."
+        "plate": "measure",
+        "label": "FIND WHAT IS LEFT",
+        "challenge": "multi-step",
+        "prompt": "The whole route is 32 mm. After the 12 mm and 9 mm stretches, how far is left? Show both steps.",
+        "equation": "32 − (12 + 9) =",
+        "hint": "First add the two stretches. Then subtract that total from the whole route.",
+        "answer": "11 mm left. First 12 + 9 = 21. Then 32 − 21 = 11."
       },
       {
-        "plate": "pitch",
-        "label": "SHORTEN A DRAWING",
-        "prompt": "Little erases 6 cm from line A. How long is that line now?",
-        "equation": "24 − 6 =",
-        "hint": "Take away 4 to reach 20, then take away 2 more.",
-        "answer": "18 cm. 24 − 4 − 2 = 18."
+        "plate": "measure",
+        "label": "CHANGE THE ROUTE",
+        "challenge": "multi-step",
+        "prompt": "Extend the 32 mm route by 8 mm. After traveling the same 21 mm, how far is left on this longer route?",
+        "equation": "(32 + 8) − 21 =",
+        "hint": "Find the new whole route first. Then subtract the distance already traveled.",
+        "answer": "19 mm left. 32 + 8 = 40; 40 − 21 = 19."
       }
     ],
-    "extension": "Sketch two bars that start at the same place. Show which part is the extra 15 cm. A sketch need not be actual size.",
-    "parentNote": "About 15 min: 3 to read the table, 9 to sketch or calculate, 3 to explain. A centimeter is a unit of length; cm is its short name. Use number-line hops or bar sketches, and accept a spoken strategy. The table supplies all numbers. These lengths do not predict exact piano notes. No instrument or measuring tools are needed."
+    "extension": "Explain why adding 8 mm to the route also adds 8 mm to the distance left, if the traveled distance stays the same.",
+    "parentNote": "About 15 minutes. Use a bar model or number-line hops. Read parentheses as 'do this part first'; two separate number sentences are equally useful. The table and route are invented, not measured observations, species speeds, or loop lengths. The final explanation checks that Little connects the two results: 11 + 8 = 19."
   },
   "writing": {
-    "title": "Give the note a path.",
-    "intro": "Choose one picture from Little's search. Tell what moves and what happens next. Draw or write a clue that helped you understand the note.",
+    "title": "Explain a tiny grip.",
+    "intro": "Choose a scene. Write two linked sentences: one observation, then an explanation using because. Draw a detail that supports your idea.",
     "plateIds": [
-      "action",
-      "soundboard",
-      "pitch"
+      "loop",
+      "reach",
+      "clue"
     ],
-    "draw": "Draw one detail from your scene. Add an arrow or a label to show a movement or a difference.",
-    "starter": "My words about this discovery",
+    "draw": "Draw the detail you noticed. Add an arrow to show movement or a dot to show position.",
+    "starter": "My evidence and explanation",
     "frames": [
       {
-        "plate": "action",
-        "start": "When a key moves,",
-        "hint": "What does the action help the hammer do?"
+        "plate": "loop",
+        "start": "The middle rises because",
+        "hint": "What happens when the rear gets closer to the gripping front?"
       },
       {
-        "plate": "soundboard",
-        "start": "The soundboard helps because",
-        "hint": "How does the broad wood help move air?"
+        "plate": "reach",
+        "start": "The rear grip matters because",
+        "hint": "What keeps the body in place while the front reaches?"
       },
       {
-        "plate": "pitch",
-        "start": "If only the string's length changes,",
-        "hint": "Which length could make the lower sound?"
+        "plate": "clue",
+        "start": "I infer that it moved because",
+        "hint": "Compare the head with the same vein fork in both sketches."
       }
     ],
     "words": [
-      "key",
-      "hammer",
-      "string",
-      "vibration",
-      "bridge",
-      "soundboard",
-      "pitch"
+      "prolegs",
+      "anchor",
+      "loop",
+      "reach",
+      "evidence",
+      "inference",
+      "because"
     ],
-    "check": "Read it together and point to the detail your words explain. If you are writing, check the first capital and the ending mark.",
-    "parentNote": "About 15 min: 3 to choose and talk, 4 to draw, 6 for 1–3 sentences, 2 to read back. One careful idea is enough. Welcome speech, dictation, invented spelling, or a labeled drawing. Write Little's words as he says them, then read them back together."
+    "check": "Reread your words. Does the detail support your explanation? Check the first capital and each ending mark.",
+    "parentNote": "About 15 minutes. Welcome Little's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to Little."
   },
   "answers": [
     {
       "label": "Math · 1",
-      "text": "15 cm longer: 24 − 9 = 15. Counting up from 9 in hops of 1, 10, and 4 is one strategy."
+      "text": "21 mm traveled: 12 + 9 = 21. A bridge-through-ten strategy is 12 + 8 + 1."
     },
     {
       "label": "Math · 2",
-      "text": "33 cm in all: 24 + 9 = 33. Split 9 into 6 and 3 to bridge through 30."
+      "text": "11 mm left. First combine the traveled stretches: 12 + 9 = 21. Then subtract from the whole: 32 − 21 = 11. Accept two number sentences or a labeled bar model."
     },
     {
       "label": "Math · 3",
-      "text": "18 cm remains: 24 − 6 = 18. Take away 4, then 2. Each task begins with the original table lengths."
+      "text": "19 mm left: 32 + 8 = 40 mm; 40 − 21 = 19 mm. Or add 8 to the earlier remainder: 11 + 8 = 19. The traveled distance stays 21 mm."
     },
     {
       "label": "Reading · 1",
-      "text": "Little first guessed the note was hiding inside. The key and action moved a hammer, which struck strings. The vibrating strings and soundboard made the sound as they moved."
+      "text": "The head was before the fork and later beyond it. The same body part changed position beside the same reference point. An arch alone shows shape, not travel. Times would be needed to find speed."
     },
     {
       "label": "Reading · 2",
-      "text": "The bridge carries a string's vibration into the soundboard. The broad soundboard vibrates and moves air, which carries sound to our ears."
+      "text": "Rear prolegs anchor the body. If they slip before the front grips, the body could slide. Accept a reasoned prediction; it need not claim the animal must fall."
     },
     {
       "label": "Writing",
-      "text": "Accept a scene-based drawing, dictation, or 1–3 sentences. For example: The hammer taps a string and comes away. The string keeps vibrating. For pitch comparisons, keep the other string conditions the same."
+      "text": "Look for observation plus explanation: The front feet are lifted. The rear prolegs hold because the front cannot grip yet. Or: The head mark passed the fork, so I infer movement. Drawing or dictation can preserve this reasoning."
     }
   ],
-  "parentGuidance": "Wonder first; explanations can wait. This is an acoustic piano; digital pianos usually make sound electronically through speakers. Museum models omit parts and exaggerate motion. They are not building plans or exact key/string counts. The action lets the hammer rebound while a key stays down. The bridge carries string vibration into the soundboard, which moves more air using energy from the strike. Pitch depends on vibration rate; loudness depends largely on vibration size. Compare string lengths with material, thickness, and tension unchanged: longer gives lower pitch; shorter gives higher. For the same string and vibrating length, tighter gives higher and looser gives lower. Real pianos combine length, thickness, and tension; low strings are longer and heavier. Pressing harder mainly changes loudness. Many notes use two or three strings. With the sustain pedal up, dampers return as keys are released; the highest strings often lack dampers. The story uses a middle key. Add the missing bridge or air to Little's sketch. Pictures, gentle humming, talking, and drawing are enough. Do not open a piano, touch or tighten strings, or build these models. Welcome dictation and stop whenever you have had enough.",
+  "parentGuidance": "These are imagined, enlarged scenes, not an identified species or exact leg-count diagrams. Inchworms are geometer moth caterpillars, not earthworms. They generally have three pairs of jointed front legs and two or three pairs of rear prolegs, with a long legless middle; details vary. Tiny hooks on prolegs help grip. Front legs anchor during looping; rear prolegs anchor during extension. Caterpillar, pupa and moth are stages separated by time; timing varies. The pictured winged moth is a possible adult form, though some females have reduced or absent wings. Most inchworms eat plant material, often leaves. The name suggests measuring, not exactly one-inch steps. Compare the same head against the same vein; position evidence alone gives no speed. All millimeter distances are invented and independent of loop count or art scale. Observe a leaf in place if desired; handling or raising animals is unnecessary. Support pronunciation, invented spelling or dictation as useful. Keep adult guidance in this key or collapsed details.",
   "sources": [
     {
-      "label": "Yamaha instrument guide · Hammers, bridges and the soundboard",
-      "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism002.html"
+      "label": "NC State Entomology · Geometer moth caterpillars and looping movement",
+      "url": "https://genent.cals.ncsu.edu/insect-identification/order-lepidoptera/family-geometridae/"
     },
     {
-      "label": "Yamaha instrument guide · The action and dampers",
-      "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism003.html"
+      "label": "University of Michigan Animal Diversity Web · Geometridae movement, development and feeding",
+      "url": "https://animaldiversity.org/accounts/Geometridae/"
     },
     {
-      "label": "Yamaha instrument guide · String lengths, thicknesses and groups",
-      "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism004.html"
-    },
-    {
-      "label": "UNSW Physics · String vibration, length, tension and pitch (grown-up background)",
-      "url": "https://www.phys.unsw.edu.au/jw/strings.html"
-    },
-    {
-      "label": "Yamaha · Piano mechanisms, sustain pedal and highest-note exceptions",
-      "url": "https://hub.yamaha.com/pianos/p-acoustic/how-does-a-piano-work/"
-    },
-    {
-      "label": "Yamaha instrument guide · Acoustic and digital sound mechanisms",
-      "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/selection/selection002.html"
+      "label": "University of Kentucky Entomology · Cankerworms and variation in rear prolegs",
+      "url": "https://entomology.ca.uky.edu/sites/entomology.ca.uky.edu/files/ef401_0.pdf"
     }
-  ]
+  ],
+  "authoring": {
+    "status": "complete",
+    "bar": "curiosity",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-gen",
+    "audience": "Little",
+    "pipeline": "task-87 authorCuriosityPack scaffold, then inspected scenic plates and authored content",
+    "craftApproval": "Skipped per explicit task-88 instruction; draft PR delivery only."
+  }
 }
