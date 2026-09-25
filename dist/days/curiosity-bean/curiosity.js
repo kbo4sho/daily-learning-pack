@@ -1,4 +1,4 @@
-import { generateZine } from "./zine.js";
+import { generateZine, ZINE_PLATE_MAX_PX } from "./zine.js";
 
 const content = JSON.parse(
   document.querySelector("#curiosity-content").textContent,
@@ -80,28 +80,65 @@ finish.addEventListener("click", () => {
 const download = document.querySelector("#fold-download");
 const status = document.querySelector("#fold-status");
 download.hidden = false;
-let library;
-function loadPdfLibrary() {
-  if (globalThis.PDFLib) return Promise.resolve(globalThis.PDFLib);
-  if (library) return library;
-  library = new Promise((resolve, reject) => {
+const scriptLibraries = new Map();
+function loadScriptGlobal(src, globalName, message) {
+  if (globalThis[globalName]) return Promise.resolve(globalThis[globalName]);
+  if (scriptLibraries.has(src)) return scriptLibraries.get(src);
+  const library = new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = "./vendor/pdf-lib.min.js";
+    script.src = src;
     const fail = () => {
       clearTimeout(timer);
       script.remove();
-      library = undefined;
-      reject(new Error("PDF library unavailable"));
+      scriptLibraries.delete(src);
+      reject(new Error(message));
     };
     const timer = setTimeout(fail, 15000);
     script.onload = () => {
       clearTimeout(timer);
-      resolve(globalThis.PDFLib);
+      resolve(globalThis[globalName]);
     };
     script.onerror = fail;
     document.head.append(script);
   });
+  scriptLibraries.set(src, library);
   return library;
+}
+async function fetchAsset(src, message) {
+  const response = await fetch(`./${src}`, {
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!response.ok) throw new Error(message);
+  return response;
+}
+async function loadPlate(src) {
+  const response = await fetchAsset(src, "A story picture could not be loaded");
+  const bitmap = await createImageBitmap(await response.blob());
+  try {
+    const width = Math.min(bitmap.width, ZINE_PLATE_MAX_PX);
+    const height = Math.round((bitmap.height * width) / bitmap.width);
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("A story picture could not be prepared");
+    context.fillStyle = "#fff";
+    context.fillRect(0, 0, width, height);
+    context.drawImage(bitmap, 0, 0, width, height);
+    const blob = await new Promise((resolve, reject) =>
+      canvas.toBlob(
+        (result) =>
+          result
+            ? resolve(result)
+            : reject(new Error("A story picture could not be prepared")),
+        "image/jpeg",
+        0.88,
+      ),
+    );
+    return new Uint8Array(await blob.arrayBuffer());
+  } finally {
+    bitmap.close();
+  }
 }
 download.addEventListener("click", async () => {
   if (download.disabled) return;
@@ -109,19 +146,27 @@ download.addEventListener("click", async () => {
   download.setAttribute("aria-busy", "true");
   status.textContent = "Making your little book…";
   try {
-    const pdfLib = await loadPdfLibrary();
-    const bytes = await generateZine(
-      content,
-      async (src) => {
-        const response = await fetch(`./${src}`, {
-          signal: AbortSignal.timeout(15000),
-        });
-        if (!response.ok)
-          throw new Error("A story picture could not be loaded");
-        return new Uint8Array(await response.arrayBuffer());
-      },
-      pdfLib,
-    );
+    const [pdfLib, fontkit] = await Promise.all([
+      loadScriptGlobal(
+        "./vendor/pdf-lib.min.js",
+        "PDFLib",
+        "PDF library unavailable",
+      ),
+      loadScriptGlobal(
+        "./vendor/fontkit.umd.min.js",
+        "fontkit",
+        "Font library unavailable",
+      ),
+    ]);
+    const bytes = await generateZine(content, loadPlate, pdfLib, {
+      fontkit,
+      loadFont: async (src) =>
+        new Uint8Array(
+          await (
+            await fetchAsset(src, "A print font could not be loaded")
+          ).arrayBuffer(),
+        ),
+    });
     const url = URL.createObjectURL(
       new Blob([bytes], { type: "application/pdf" }),
     );
