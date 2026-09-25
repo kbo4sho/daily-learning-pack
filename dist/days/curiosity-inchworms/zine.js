@@ -83,23 +83,43 @@ export async function generateZine(
   lib,
   { fontkit, loadFont },
 ) {
-  const { PDFDocument, degrees, rgb, PrintScaling } = lib;
+  const {
+    PDFDocument,
+    PrintScaling,
+    popGraphicsState,
+    pushGraphicsState,
+    rgb,
+    rotateDegrees,
+    translate,
+  } = lib;
   const panels = zinePanels(pack);
-  const content = await PDFDocument.create();
-  content.registerFontkit(fontkit);
+  const pdf = await PDFDocument.create();
+  pdf.registerFontkit(fontkit);
+  pdf.setTitle(`${pack.title} - foldable family story`);
+  pdf.setAuthor("Wonder Together");
+  pdf.catalog.getOrCreateViewerPreferences().setPrintScaling(PrintScaling.None);
+  const sheet = pdf.addPage([792, 612]);
   const [serif, sans] = await Promise.all([
     loadFont(ZINE_FONT_FILES.serif).then((bytes) =>
-      content.embedFont(bytes, { subset: true }),
+      pdf.embedFont(bytes, { subset: true }),
     ),
     loadFont(ZINE_FONT_FILES.sans).then((bytes) =>
-      content.embedFont(bytes, { subset: true }),
+      pdf.embedFont(bytes, { subset: true }),
     ),
   ]);
   const ink = rgb(0.16, 0.23, 0.21);
   const muted = rgb(0.35, 0.39, 0.36);
   const images = new Map();
-  for (const [index, panel] of panels.entries()) {
-    const page = content.addPage([198, 306]);
+  for (const [slotIndex, slot] of ZINE_IMPOSITION.entries()) {
+    const panelIndex = slot.panel - 1;
+    const panel = panels[panelIndex];
+    const x = (slotIndex % 4) * 198;
+    const y = slotIndex < 4 ? 306 : 0;
+    sheet.pushOperators(
+      pushGraphicsState(),
+      translate(x + (slot.rotation ? 198 : 0), y + (slot.rotation ? 306 : 0)),
+      rotateDegrees(slot.rotation),
+    );
     const text = (
       value,
       y,
@@ -110,9 +130,11 @@ export async function generateZine(
     ) => {
       const lines = wrapText(value, font, size, 162);
       if (lines.length > maxLines)
-        throw new Error(`Panel ${index + 1}: copy exceeds its print area.`);
+        throw new Error(
+          `Panel ${panelIndex + 1}: copy exceeds its print area.`,
+        );
       lines.forEach((line, i) =>
-        page.drawText(line, {
+        sheet.drawText(line, {
           x: 18,
           y: y - i * size * 1.25,
           size,
@@ -128,12 +150,12 @@ export async function generateZine(
         const bytes = await loadPlate(src);
         image =
           bytes[0] === 0x89
-            ? await content.embedPng(bytes)
-            : await content.embedJpg(bytes);
+            ? await pdf.embedPng(bytes)
+            : await pdf.embedJpg(bytes);
         images.set(src, image);
       }
       const size = image.scaleToFit(162, height);
-      page.drawImage(image, { x: (198 - size.width) / 2, y, ...size });
+      sheet.drawImage(image, { x: (198 - size.width) / 2, y, ...size });
     };
     text("WONDER TOGETHER / DAILY", 284, 6.5, 1, sans, muted);
     if (panel.kind === "cover") {
@@ -163,7 +185,7 @@ export async function generateZine(
         dy = 49,
         w = 88,
         h = 24;
-      page.drawRectangle({
+      sheet.drawRectangle({
         x,
         y: dy,
         width: w,
@@ -172,19 +194,19 @@ export async function generateZine(
         borderColor: muted,
       });
       for (let col = 1; col < 4; col++)
-        page.drawLine({
+        sheet.drawLine({
           start: { x: x + (col * w) / 4, y: dy },
           end: { x: x + (col * w) / 4, y: dy + h },
           thickness: 0.4,
           color: muted,
         });
-      page.drawLine({
+      sheet.drawLine({
         start: { x, y: dy + h / 2 },
         end: { x: x + w, y: dy + h / 2 },
         thickness: 0.4,
         color: muted,
       });
-      page.drawLine({
+      sheet.drawLine({
         start: { x: x + w / 4, y: dy + h / 2 },
         end: { x: x + (3 * w) / 4, y: dy + h / 2 },
         thickness: 2,
@@ -192,29 +214,14 @@ export async function generateZine(
       });
       text(ZINE_INSTRUCTION_NOTE, 36, 6.8, 3, sans, muted);
     }
-    page.drawText(String(index + 1), {
+    sheet.drawText(String(panelIndex + 1), {
       x: 176,
       y: 18,
       size: 7,
       font: sans,
       color: muted,
     });
-  }
-  const pdf = await PDFDocument.create();
-  pdf.setTitle(`${pack.title} - foldable family story`);
-  pdf.setAuthor("Wonder Together");
-  pdf.catalog.getOrCreateViewerPreferences().setPrintScaling(PrintScaling.None);
-  const sheet = pdf.addPage([792, 612]);
-  await content.flush();
-  const embedded = await pdf.embedPages(content.getPages());
-  for (const [i, slot] of ZINE_IMPOSITION.entries()) {
-    const x = (i % 4) * 198,
-      y = i < 4 ? 306 : 0;
-    sheet.drawPage(embedded[slot.panel - 1], {
-      x: x + (slot.rotation ? 198 : 0),
-      y: y + (slot.rotation ? 306 : 0),
-      rotate: degrees(slot.rotation),
-    });
+    sheet.pushOperators(popGraphicsState());
   }
   for (const x of [198, 396, 594])
     sheet.drawLine({
