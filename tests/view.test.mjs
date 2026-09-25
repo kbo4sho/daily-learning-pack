@@ -101,6 +101,24 @@ test("every archived morning retains its five working print downloads", async ()
   }
 });
 
+test("every curiosity day ships the direct-draw foldable runtime", async () => {
+  const paths = [
+    "dist/today/zine.js",
+    "dist/days/curiosity-inchworms/zine.js",
+    "dist/days/diamond/zine.js",
+    "dist/days/curiosity-bean/zine.js",
+    "dist/days/how-pianos-work/zine.js",
+  ];
+  const runtimes = await Promise.all(paths.map(read));
+  for (const [index, runtime] of runtimes.entries()) {
+    assert.doesNotMatch(runtime, /\.embedPages\s*\(/, paths[index]);
+    assert.doesNotMatch(runtime, /\.drawPage\s*\(/, paths[index]);
+    assert.match(runtime, /pushGraphicsState\(\)/, paths[index]);
+    assert.match(runtime, /rotateDegrees\(slot\.rotation\)/, paths[index]);
+  }
+  for (const runtime of runtimes.slice(1)) assert.equal(runtime, runtimes[0]);
+});
+
 test("committed pack JSON never includes API key names", async () => {
   const files = await walkJson(new URL("../dist", import.meta.url).pathname);
   assert.ok(files.some((f) => f.endsWith("pack.json")));
