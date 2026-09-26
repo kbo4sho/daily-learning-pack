@@ -152,12 +152,12 @@ img {
   font: 600 0.57rem/2.5 var(--font-body);
   letter-spacing: 0.24em;
 }
-.dogfood-note {
+.family-note {
   margin-left: auto;
   color: var(--muted);
   font-size: 0.78rem;
 }
-.dogfood-note small {
+.family-note small {
   display: block;
   font-size: 0.66rem;
 }
@@ -259,11 +259,48 @@ img {
   background: var(--sage);
   color: var(--ink);
 }
+.curiosity-plate {
+  margin: 0;
+}
 .curiosity-plate img {
   aspect-ratio: 3/2;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
   background: var(--sage);
-  border-radius: 2px;
+  border-radius: 0;
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 78%,
+      rgba(0, 0, 0, 0.45) 92%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 3%,
+      #000 97%,
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 78%,
+      rgba(0, 0, 0, 0.45) 92%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 3%,
+      #000 97%,
+      transparent 100%
+    );
+  mask-composite: intersect;
 }
 .curiosity-plate figcaption {
   font-size: 0.64rem;
@@ -693,7 +730,7 @@ body.reader-open .daily-header {
   .brand {
     font-size: 1.5rem;
   }
-  .dogfood-note {
+  .family-note {
     display: none;
   }
   .print-link {
@@ -1112,7 +1149,10 @@ body.reader-open .daily-header {
   body:not(.print-document)::before {
     content: "Use Print today / Print story / Print math / Print writing (or Download foldable). Those open Letter PDFs that print cleanly.";
     display: block;
-    font: 12pt/1.4 Inter, Arial, sans-serif;
+    font:
+      12pt/1.4 Inter,
+      Arial,
+      sans-serif;
     margin: 0 0 14pt;
     color: #111;
   }
@@ -1185,4 +1225,52 @@ body.reader-open .daily-header {
   .family-reader .reader-aside {
     margin-top: 10px;
   }
+}
+
+
+/* Six-task math Letter sheet: keep one page without skimping readability. */
+.curiosity-sheet.dense .paper-notebook {
+  grid-template-columns: 70pt 1fr;
+  gap: 6pt;
+  padding-bottom: 4pt;
+}
+.curiosity-sheet.dense .paper-notebook .curiosity-plate img {
+  max-height: 58pt;
+}
+.curiosity-sheet.dense .paper-intro {
+  font-size: 8pt;
+  line-height: 1.25;
+  margin: 2pt 0 0;
+}
+.curiosity-sheet.dense .growth-table th,
+.curiosity-sheet.dense .growth-table td,
+.curiosity-sheet.dense .paper-notebook .growth-table th,
+.curiosity-sheet.dense .paper-notebook .growth-table td {
+  padding: 3pt 4pt;
+  font-size: 8pt;
+}
+.curiosity-sheet.dense .task {
+  margin: 4pt 0;
+}
+.curiosity-sheet.dense .task > p {
+  font-size: 9pt;
+  line-height: 1.25;
+  margin: 0 0 2pt;
+}
+.curiosity-sheet.dense .curiosity-workspace {
+  height: 28pt;
+  padding: 4pt 6pt;
+}
+.curiosity-sheet.dense .curiosity-workspace b {
+  font-size: 12pt;
+}
+.curiosity-sheet.dense .paper-head h1 {
+  font-size: 16pt;
+  margin: 2pt 0;
+}
+.curiosity-sheet.dense .paper-head {
+  padding-bottom: 4pt;
+}
+.curiosity-sheet.dense .name-line {
+  margin-top: 2pt;
 }
