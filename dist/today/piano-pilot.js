@@ -123,7 +123,7 @@ export async function loadPianoPilotAssets(
 ) {
   if (!Array.isArray(paths))
     throw new Error("Piano pilot asset list must be an array.");
-  // JPEG A: empty list means no gated preload (SVG + day plates carry the stage).
+  // JPEG A: empty list means no gated preload. Workbench art loads normally.
   if (paths.length === 0) return [];
   let timer;
   try {
@@ -141,41 +141,67 @@ export async function loadPianoPilotAssets(
   }
 }
 
+const WORKBENCH_ART = "./assets/piano-workbench/diorama.jpg";
+const CLEAN_ART = "./assets/piano-workbench/clean.jpg";
+const PART_VIEWS = {
+  key: "315 495 740 165",
+  hammer: "895 175 375 265",
+  string: "1185 70 170 590",
+};
+
 function pieceGraphic(part) {
-  if (part === "key")
-    return `<svg viewBox="0 0 112 68" aria-hidden="true"><rect class="piece-fill" x="9" y="20" width="88" height="27" rx="4"/><circle cx="74" cy="34" r="4"/><path d="M97 20l7 7v20l-7-1"/></svg>`;
-  if (part === "hammer")
-    return `<svg viewBox="0 0 112 68" aria-hidden="true"><path d="M23 54L70 18"/><rect class="piece-fill" x="64" y="9" width="30" height="21" rx="8"/><circle cx="23" cy="54" r="5"/></svg>`;
-  return `<svg viewBox="0 0 112 68" aria-hidden="true"><path d="M56 7v54"/><path class="piece-trace" d="M44 9q24 8 0 17t0 17t0 17M68 9q-24 8 0 17t0 17t0 17"/></svg>`;
+  return `<svg viewBox="${PART_VIEWS[part]}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><image href="${WORKBENCH_ART}" width="1536" height="1024"/></svg>`;
 }
 
-function mechanismGraphic(mode) {
+function baseMarkup(content, step) {
+  return `<div class="piano-base"><svg class="piano-base-grain" viewBox="40 722 1455 207" preserveAspectRatio="none" aria-hidden="true"><image href="${WORKBENCH_ART}" width="1536" height="1024"/></svg><div class="piano-base-content">${content}<ol class="piano-progress" aria-label="Our little exploration">${["Predict", "Place", "Press", "Notice"].map((label, i) => `<li${i === step ? ' aria-current="step"' : ""}><span aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>${label}</li>`).join("")}</ol></div></div>`;
+}
+
+export function pianoPilotEntryMarkup() {
+  return `<div class="piano-entry" data-piano-entry><div class="piano-entry-picture"><img src="${WORKBENCH_ART}" data-piano-art alt="Big and Little Wonderer study a wooden piano model together. One ivory key connects to a felt hammer beside a copper string." width="1536" height="1024" loading="lazy"><p class="piano-entry-inscription">A small press.<br><em>A little wonder.</em></p></div>${baseMarkup('<div class="piano-base-invitation"><p>Follow a note from<br> <strong>key to hammer to string.</strong></p><button class="piano-brass-button" type="button" data-piano-open>Try together · Piano <span aria-hidden="true">↗</span></button></div>', 0)}</div>`;
+}
+
+function mechanismGraphic(mode, state = null) {
   const result = mode === "result" || mode === "reduced";
   const animating = mode === "animating";
-  const accessibleName =
-    mode === "ready"
-      ? "A simplified piano action with a key, linked hammer, and string at rest."
-      : "A simplified piano action with a key, linked hammer, rebound gap, and vibrating string.";
-  return `<div class="piano-mechanism-wrap">
-    <svg class="piano-mechanism${animating ? " is-animating" : ""}" data-motion="${mode}" viewBox="0 0 720 320" role="img" aria-labelledby="piano-mechanism-title">
+  const layered = result || animating;
+  const accessibleName = !layered
+    ? "A simplified piano action with a key, linked hammer, and string at rest."
+    : "A simplified piano action with a key, linked hammer, rebound gap, and vibrating string.";
+  const labels = PARTS.map((part, index) => {
+    const filled = state?.placements[part];
+    const content = `<span class="piano-label-number" aria-hidden="true">${filled ? "✓" : index + 1}</span>${PART_LABELS[part]}`;
+    return state
+      ? `<button type="button" class="piano-label piano-label-${part} piano-place${filled ? " is-placed" : ""}" data-piano-place="${part}" aria-label="${PART_LABELS[part]} place, ${filled ? `filled. Activate to return the ${part}.` : "empty."}">${content}</button>`
+      : `<span class="piano-label piano-label-${part}">${content}</span>`;
+  }).join("");
+  // Art is an ungated, generated diorama. Clip paths lift the actual wooden/felt
+  // parts from its master plate; the clean plate lets them move without ghosts.
+  return `<div class="piano-mechanism-wrap"><div class="piano-scene">
+    <svg class="piano-mechanism${animating ? " is-animating" : ""}" data-motion="${mode}" viewBox="0 0 1536 740" role="img" aria-labelledby="piano-mechanism-title">
       <title id="piano-mechanism-title">${accessibleName}</title>
-      <path class="mechanism-bed" d="M36 267H684"/>
-      <g class="mechanism-key"><rect x="46" y="200" width="252" height="54" rx="7"/><circle cx="205" cy="227" r="7"/><text x="84" y="234">Key</text></g>
-      <g class="mechanism-link"><path d="M263 219L440 181"/><circle cx="440" cy="181" r="7"/></g>
-      <g class="mechanism-hammer"><path d="M440 181L548 112"/><rect x="539" y="91" width="45" height="42" rx="14"/><text x="431" y="221">Hammer</text></g>
-      <g class="mechanism-string"><path d="M620 48V266"/><text x="635" y="164">String</text></g>
-      <g class="vibration-traces${result ? " is-visible" : ""}" aria-hidden="true"><path d="M604 57q26 18 0 36t0 36t0 36t0 36t0 36"/><path d="M636 57q-26 18 0 36t0 36t0 36t0 36t0 36"/></g>
-      <path class="rebound-gap${result ? " is-visible" : ""}" d="M588 81v54" aria-hidden="true"/>
+      <defs>
+        <clipPath id="piano-key-clip"><path d="M338 590L342 549Q344 541 353 539L368 532H527L537 537L985 557Q1007 560 1008 587Q1007 615 988 617L779 608Q769 574 748 576Q721 576 715 605L523 594Z"/></clipPath>
+        <clipPath id="piano-hammer-clip"><path d="M934 382L1165 288Q1136 242 1154 223Q1175 195 1203 215Q1231 236 1237 300L1240 331L1228 338L1229 350L1218 354L1212 343L1204 346L1176 308L937 405Z"/></clipPath>
+        <clipPath id="piano-link-clip"><path d="M936 405H970L973 529Q977 549 959 550L991 554V565L910 559V532L934 534Z"/></clipPath>
+        <filter id="piano-warm-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+      </defs>
+      <image data-piano-art href="${layered ? CLEAN_ART : WORKBENCH_ART}" width="1536" height="1024"/>
+      ${layered ? `<g class="mechanism-key"><image href="${WORKBENCH_ART}" width="1536" height="1024" clip-path="url(#piano-key-clip)"/></g><g class="mechanism-link"><image href="${WORKBENCH_ART}" width="1536" height="1024" clip-path="url(#piano-link-clip)"/></g><g class="mechanism-hammer"><image data-piano-art href="${WORKBENCH_ART}" width="1536" height="1024" clip-path="url(#piano-hammer-clip)"/></g>` : ""}
+      <g class="piano-leaders" aria-hidden="true"><path d="M512 433L512 477L441 551M1350 526V480L1267 455"/><circle cx="441" cy="551" r="5"/><path class="hammer-leader" d="M932 212H1090L1167 256"/><circle class="hammer-leader-dot" cx="1167" cy="256" r="5"/><circle cx="1267" cy="455" r="5"/></g>
+      ${layered ? `<g class="piano-energy" aria-hidden="true"><path class="energy-key" d="M436 552V579H755L960 592"/><path class="energy-hammer" d="M960 542V415L1170 320"/><path class="energy-string" d="M1265 175V568"/></g><g class="vibration-traces${result ? " is-visible" : ""}" aria-hidden="true"><path d="M1266 169Q1223 218 1266 268T1266 367T1266 466T1266 566"/><path d="M1266 169Q1309 218 1266 268T1266 367T1266 466T1266 566"/><path class="vibration-halo" d="M1266 169Q1309 218 1266 268T1266 367T1266 466T1266 566" filter="url(#piano-warm-glow)"/></g><path class="rebound-gap${result ? " is-visible" : ""}" d="M1239 367V379M1239 373H1264M1264 367V379" aria-hidden="true"/>${result ? '<path class="piano-gap-leader" d="M1250 373L1110 488H940" aria-hidden="true"/>' : ""}` : ""}
     </svg>
-  </div>`;
+    <div class="piano-places"${state ? ' role="group" aria-label="Matching places on the piano"' : ' aria-hidden="true"'}>${labels}</div>
+    ${result ? '<span class="piano-gap-note">Room to vibrate</span>' : ""}
+  </div></div>`;
 }
 
 function sequenceLabels() {
-  return `<ol class="piano-sequence" aria-label="Cause and effect sequence"><li>Key moves</li><li>Hammer taps and comes away</li><li>String vibrates</li></ol>`;
+  return `<ol class="piano-sequence" aria-label="Cause and effect sequence">${["Key moves", "Hammer taps and comes away", "String vibrates"].map((label, index) => `<li>${pieceGraphic(PARTS[index])}<span><b aria-hidden="true">0${index + 1}</b>${label}</span></li>`).join("")}</ol>`;
 }
 
 function predictionStage() {
-  return `<div class="piano-predict"><div><p class="piano-parent-note">Read the question, then leave room for a guess.</p><h3 id="piano-stage-heading" tabindex="-1">What will happen to the string when we press this key?</h3><button class="primary-button" type="button" data-piano-action="arrange">Arrange together</button></div><div class="piano-predict-stage">${mechanismGraphic("ready")}<img class="piano-predict-context" src="./assets/how-pianos-work/01-keys.jpg" alt="Big and Little look at the keys of an acoustic piano together." width="1536" height="1024"></div></div>`;
+  return `<div class="piano-predict"><div class="piano-stage-copy"><p class="piano-parent-note">Read the question, then leave room for a guess.</p><h3 id="piano-stage-heading" tabindex="-1">What will happen to the string when we press this key?</h3></div><div class="piano-workbench">${mechanismGraphic("ready")}${baseMarkup('<div class="piano-base-invitation"><p>Look inside.<br> <strong>What might move first?</strong></p><button class="piano-brass-button" type="button" data-piano-action="arrange">Arrange together <span aria-hidden="true">→</span></button></div>', 0)}</div><div class="piano-context-note"><img class="piano-predict-context" src="./assets/how-pianos-work/01-keys.jpg" alt="Big and Little look at the keys of an acoustic piano together." width="1536" height="1024"><p>The same little idea,<br> inside a much bigger piano.</p></div></div>`;
 }
 
 function loadingStage() {
@@ -186,34 +212,30 @@ function arrangementStage(state) {
   const tray = PARTS.map((part) => {
     const placed = state.placements[part];
     if (placed)
-      return `<span class="piano-piece-slot" aria-hidden="true"></span>`;
-    return `<button type="button" class="piano-piece" data-piano-piece="${part}" aria-label="${PART_LABELS[part]}, picture piece.${state.selected === part ? " Selected." : ""}" aria-pressed="${state.selected === part}">${pieceGraphic(part)}<span>${PART_LABELS[part]}</span></button>`;
+      return `<span class="piano-piece-slot" aria-hidden="true">${pieceGraphic(part)}<span>In place <b>✓</b></span></span>`;
+    return `<button type="button" class="piano-piece" data-piano-piece="${part}" aria-label="${PART_LABELS[part]}, picture piece.${state.selected === part ? " Selected." : ""}" aria-pressed="${state.selected === part}">${pieceGraphic(part)}<span>${PART_LABELS[part]}<b aria-hidden="true">${state.selected === part ? "↑" : "+"}</b></span></button>`;
   }).join("");
-  const places = PARTS.map((part, index) => {
-    const filled = state.placements[part];
-    return `<li>${index ? '<span class="causal-arrow" aria-hidden="true">→</span>' : ""}<button type="button" class="piano-place" data-piano-place="${part}" aria-label="${PART_LABELS[part]} place, ${filled ? `filled. Activate to return the ${part}.` : "empty."}">${filled ? pieceGraphic(part) : '<span class="place-shape" aria-hidden="true"></span>'}<span>${PART_LABELS[part]}</span></button></li>`;
-  }).join("");
-  return `<div class="piano-arrange"><h3 id="piano-stage-heading" tabindex="-1">Choose a picture, then its matching place.</h3><p class="piano-instruction" data-piano-feedback>${state.feedback === ARRANGE_INSTRUCTION ? "" : state.feedback}</p><div class="piano-tray" role="group" aria-label="Picture pieces">${tray}</div><ol class="piano-places" aria-label="Matching places in causal order">${places}</ol><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
+  return `<div class="piano-arrange"><div class="piano-stage-copy"><p class="piano-parent-note">Find three little parts inside the piano.</p><h3 id="piano-stage-heading" tabindex="-1">Choose a picture, then its matching place.</h3><p class="piano-instruction" data-piano-feedback>${state.feedback === ARRANGE_INSTRUCTION ? "Tap a picture below. Match it to a label above." : state.feedback}</p></div><div class="piano-workbench">${mechanismGraphic("ready", state)}${baseMarkup(`<div class="piano-tray" role="group" aria-label="Picture pieces">${tray}</div>`, 1)}</div><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
 }
 
 function readyStage() {
-  return `<div class="piano-ready"><div><p class="piano-parent-note">When you are both ready, invite a press.</p><h3 id="piano-stage-heading" tabindex="-1">Press the key</h3></div><div class="piano-effect-control">${mechanismGraphic("ready")}<button type="button" class="piano-key-trigger" data-piano-action="press">Press the key</button></div><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
+  return `<div class="piano-ready"><div class="piano-stage-copy"><p class="piano-parent-note">When you are both ready, invite a press.</p><h3 id="piano-stage-heading" tabindex="-1">Press the key</h3><p class="piano-instruction">Follow the movement, all the way to the string.</p></div><div class="piano-workbench piano-effect-control">${mechanismGraphic("ready")}${baseMarkup('<div class="piano-keyboard"><span class="piano-neighbor-key" aria-hidden="true"></span><button type="button" class="piano-key-trigger" data-piano-action="press"><span>Press the key</span><span class="piano-key-arrow" aria-hidden="true">↓</span></button><span class="piano-neighbor-key" aria-hidden="true"></span></div>', 2)}</div><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
 }
 
 function heldResultMarkup(state, { interactive = false } = {}) {
   const motion = state.reducedMotion ? "reduced" : "result";
   const advance = interactive
-    ? `<button class="primary-button" type="button" data-piano-action="talk-together">Talk together</button>`
+    ? `<button class="primary-button" type="button" data-piano-action="talk-together">Talk together <span aria-hidden="true">→</span></button>`
     : "";
   const parentNote = interactive
     ? `<p class="piano-parent-note">Leave the picture still while you notice together.</p>`
     : "";
-  return `<div class="piano-notice${interactive ? "" : " piano-notice-held"}">${parentNote}<h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic(motion)}${sequenceLabels()}<p class="piano-simplification">A simplified model. Motion is enlarged.</p>${advance}</div>`;
+  return `<div class="piano-notice${interactive ? "" : " piano-notice-held"}"><div class="piano-stage-copy">${parentNote}<h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3></div><div class="piano-workbench">${mechanismGraphic(motion)}${baseMarkup(sequenceLabels(), 3)}</div><div class="piano-notice-footer"><p class="piano-simplification">A simplified model. Motion is enlarged.</p>${advance}</div></div>`;
 }
 
 function noticeStage(state) {
   if (state.phase === "N1")
-    return `<div class="piano-notice"><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic("animating")}</div>`;
+    return `<div class="piano-notice"><div class="piano-stage-copy"><p class="piano-parent-note">Follow one small movement.</p><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3></div><div class="piano-workbench is-running">${mechanismGraphic("animating")}${baseMarkup(sequenceLabels(), 2)}</div></div>`;
   return heldResultMarkup(state, { interactive: true });
 }
 
@@ -223,7 +245,8 @@ export function pianoPilotStageMarkup(state) {
   if (state.phase === "A1") return arrangementStage(state);
   if (state.phase === "A2") return readyStage();
   if (state.phase === "N1" || state.phase === "N2") return noticeStage(state);
-  if (state.phase === "E1") return heldResultMarkup(state, { interactive: false });
+  if (state.phase === "E1")
+    return heldResultMarkup(state, { interactive: false });
   return "";
 }
 
@@ -254,18 +277,28 @@ function startPianoPilot(panel) {
     });
   }
 
+  let focusRun = 0;
+  function focusSoon(findTarget) {
+    const run = ++focusRun;
+    const active = document.activeElement;
+    requestAnimationFrame(() => {
+      // A queued focus must not steal a faster keyboard/touch user's next
+      // target. Only the latest render may restore focus after DOM replacement.
+      if (
+        run === focusRun &&
+        (document.activeElement === active ||
+          document.activeElement === document.body)
+      )
+        findTarget()?.focus({ preventScroll: true });
+    });
+  }
+
   function focusStage() {
-    requestAnimationFrame(() =>
-      stage
-        .querySelector("#piano-stage-heading")
-        ?.focus({ preventScroll: true }),
-    );
+    focusSoon(() => stage.querySelector("#piano-stage-heading"));
   }
 
   function focusControl(selector) {
-    requestAnimationFrame(() =>
-      stage.querySelector(selector)?.focus({ preventScroll: true }),
-    );
+    focusSoon(() => stage.querySelector(selector));
   }
 
   function render({ focus = false } = {}) {
@@ -290,21 +323,15 @@ function startPianoPilot(panel) {
     }
     if (focus) {
       if (heldReference)
-        requestAnimationFrame(() =>
-          panel
-            .querySelector("#piano-explain-heading")
-            ?.focus({ preventScroll: true }),
-        );
+        focusSoon(() => panel.querySelector("#piano-explain-heading"));
       else if (!outsideStage) focusStage();
       else
-        requestAnimationFrame(() =>
-          panel
-            .querySelector(
-              state.phase === "T1"
-                ? "#piano-talk-heading"
-                : "#piano-unavailable-heading",
-            )
-            ?.focus({ preventScroll: true }),
+        focusSoon(() =>
+          panel.querySelector(
+            state.phase === "T1"
+              ? "#piano-talk-heading"
+              : "#piano-unavailable-heading",
+          ),
         );
     }
   }
@@ -319,7 +346,7 @@ function startPianoPilot(panel) {
     const thisRun = ++loadRun;
     try {
       // JPEG A: skip gated JPEG preload when data-piano-assets is absent/empty.
-      // Stage uses inline SVG; 01-keys remains ungated P1 secondary context.
+      // Workbench art and 01-keys load normally, without delaying arrangement.
       if (assets.length > 0) await loadPianoPilotAssets(assets);
       if (thisRun !== loadRun || state.phase !== "L1") return;
       state = reducePianoPilotState(state, { type: "ASSETS_READY" });
@@ -368,16 +395,29 @@ function startPianoPilot(panel) {
         if (state.phase === "N1") {
           settleTimer = setTimeout(
             () => send({ type: "SETTLE" }, { focus: true }),
-            2400,
+            3200,
           );
         }
       }
-      if (event.type === "EXIT")
-        requestAnimationFrame(() => entryButton.focus({ preventScroll: true }));
+      if (event.type === "EXIT") focusSoon(() => entryButton);
     } catch {
       failOpen();
     }
   }
+
+  // A failed essential image is a real failure, not a preload requirement.
+  // Optional day-context art and slow downloads never divert the activity.
+  panel.addEventListener(
+    "error",
+    (event) => {
+      if (
+        event.target.matches?.("[data-piano-art]") &&
+        !["D0", "F1", "T1", "E1"].includes(state.phase)
+      )
+        failOpen();
+    },
+    true,
+  );
 
   panel.addEventListener("click", (event) => {
     const button = event.target.closest("button");
