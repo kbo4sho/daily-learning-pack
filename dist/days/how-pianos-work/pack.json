@@ -22,7 +22,7 @@
   "question": "Where does a piano's note come from?",
   "idea": "In an acoustic piano, pressing a key moves a mechanism that sends a felt-covered hammer against strings. The strings vibrate. A wooden bridge carries their motion to the soundboard, which moves more air so we can hear the note well.",
   "curiosity": {
-    "intro": "Choose a question with your grown-up. Look for a clue in the picture before you open the explanation.",
+    "intro": "Choose a question together. Look for a clue in the picture before you open the explanation.",
     "carryForward": "Follow Little's note through the story. Then compare two drawn lengths and keep a discovery in your own words.",
     "questions": [
       {
@@ -31,7 +31,7 @@
         "question": "Where could a note be hiding?",
         "notice": "Find Little's hand and the orange arrow. One key moves only a little. Where would you look for what happens next?",
         "say": "The piano is not a box of stored notes. Pressing a key starts moving parts inside. In an acoustic piano, those parts send a small hammer toward metal strings. The next picture lets us look at a model of that hidden motion.",
-        "try": "Pretend the tabletop is a piano key. Lower one finger quietly, then lift it. Tell your grown-up what you imagine moving inside."
+        "try": "Pretend the tabletop is a piano key. Lower one finger quietly, then lift it. Say what you imagine moving inside."
       },
       {
         "id": "ring",
@@ -126,7 +126,7 @@
         "id": "tap",
         "plate": "action",
         "title": "A hidden tap",
-        "passage": "An enormous model gives them a peek. A key tips; connected parts lift a felt-covered hammer. Tap! The hammer strikes a string and comes away. “A tiny hammer?” Little whispers. This team of moving parts is called the action.",
+        "passage": "An enormous model gives them a peek. A key tips; connected parts lift a felt-covered hammer. Tap! The hammer strikes a string and comes away. “A tiny hammer?” Little whispers. This team of moving parts is called the action — the key's small press becomes a tap.",
         "prompt": "Follow the model from key to hammer. Why might the hammer need to come away?"
       },
       {
@@ -140,7 +140,7 @@
         "id": "wood",
         "plate": "soundboard",
         "title": "The wood joins in",
-        "passage": "Little follows a string to a wooden bridge. The bridge carries vibration into a broad soundboard. That wood vibrates too, moving more air. The air carries sound to listening ears. “The wood joins in!” Little says. A thin string has a roomy helper.",
+        "passage": "Little follows the same string to a wooden bridge. The bridge carries vibration into a broad soundboard. That wood vibrates too, moving more air. The air carries sound to listening ears. “The wood joins in!” Little says. A thin string has a roomy helper.",
         "prompt": "Trace the connection into the wood. What does the soundboard help move?"
       },
       {
@@ -179,7 +179,38 @@
     "questions": [
       "What did Little first guess about the note? Which moving parts helped change that guess?",
       "How does vibration get from a string to the air? Name the two wooden helpers."
-    ]
+    ],
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "Little follows one note: a key press starts the action, a hammer taps a string, vibration travels bridge to soundboard into air, length shapes pitch, and a damper lets Little keep the path.",
+      "beatIntents": [
+        {
+          "plate": "keys",
+          "intent": "Museum key press; Little wonders where the note came from."
+        },
+        {
+          "plate": "action",
+          "intent": "Enlarged action model: key tips linked parts; felt hammer taps and rebounds."
+        },
+        {
+          "plate": "strings",
+          "intent": "After the tap, one string keeps vibrating; motion traces exaggerate the quiver."
+        },
+        {
+          "plate": "soundboard",
+          "intent": "Bridge carries vibration into the broad soundboard so more air moves."
+        },
+        {
+          "plate": "pitch",
+          "intent": "Two comparison strings: longer lower, shorter higher when else is equal."
+        },
+        {
+          "plate": "quiet",
+          "intent": "Damper hushes; Little sketches the path and revises the hiding guess."
+        }
+      ]
+    }
   },
   "math": {
     "title": "Longer by how much?",
@@ -310,7 +341,7 @@
       "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism004.html"
     },
     {
-      "label": "UNSW Physics · String vibration, length, tension and pitch (grown-up background)",
+      "label": "UNSW Physics · String vibration, length, tension and pitch (background)",
       "url": "https://www.phys.unsw.edu.au/jw/strings.html"
     },
     {
