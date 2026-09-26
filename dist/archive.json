@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T16:15:38.983Z",
-  "latest": "curiosity-inchworms",
+  "generatedAt": "2026-09-26T15:07:39.262Z",
+  "latest": "how-code-turns-into-lesson",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "how-code-turns-into-lesson",
+      "date": "2026-09-27",
+      "topic": "how code turns into a lesson",
+      "title": "From marks to a morning.",
+      "teaser": "Little follows tiny ordered jobs until a blank page becomes a lesson.",
+      "href": "./days/how-code-turns-into-lesson/",
+      "latest": true
+    },
     {
       "slug": "curiosity-inchworms",
       "date": "2026-09-26",
@@ -11,7 +20,7 @@
       "title": "A loop goes somewhere.",
       "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
       "href": "./days/curiosity-inchworms/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-pianos-work",
