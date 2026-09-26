@@ -1,0 +1,513 @@
+.piano-pilot {
+  --paper: #f7f3eb;
+  --surface: #fffcf6;
+  --ink: #30271f;
+  --muted: #6d6257;
+  --radius: 8px;
+  --piano-paper: #f7f3eb;
+  --piano-surface: #fffcf6;
+  --piano-ink: #30271f;
+  --piano-muted: #6d6257;
+  --piano-info: #dce7eb;
+  --piano-info-ink: #416573;
+  margin: 48px 0 8px;
+  padding: 28px;
+  color: var(--piano-ink);
+  background: var(--piano-surface);
+  border: 1px solid color-mix(in srgb, var(--piano-ink) 18%, transparent);
+  border-radius: 12px;
+  font-family: Inter, Arial, sans-serif;
+}
+.piano-pilot :focus-visible {
+  outline: 2px solid var(--piano-info-ink);
+  outline-offset: 3px;
+}
+.piano-pilot h2,
+.piano-pilot h3 {
+  font-family: Newsreader, Georgia, serif;
+}
+.piano-pilot-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px 28px;
+  align-items: start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--piano-ink) 18%, transparent);
+}
+.piano-pilot-header h2 {
+  margin-top: 7px;
+  font-size: clamp(1.9rem, 4vw, 2.65rem);
+}
+.piano-pilot-header > div > p:last-child {
+  max-width: 63ch;
+  margin-top: 10px;
+  color: var(--piano-muted);
+  font-size: 0.9rem;
+}
+.piano-dogfood {
+  justify-self: end;
+  padding: 7px 10px;
+  color: var(--piano-info-ink);
+  background: var(--piano-info);
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+}
+.piano-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+}
+.piano-entry p {
+  max-width: 52ch;
+  color: var(--piano-muted);
+  font-size: 0.9rem;
+}
+.piano-stage {
+  min-height: 340px;
+  padding-top: 24px;
+}
+.piano-stage h3,
+.piano-talk-through h3,
+.piano-explanation h3 {
+  font-size: clamp(1.65rem, 3.5vw, 2.45rem);
+  max-width: 30ch;
+}
+.piano-parent-note,
+.piano-simplification {
+  color: var(--piano-muted);
+  font-size: 0.82rem;
+}
+.piano-parent-note {
+  margin-bottom: 8px;
+}
+.piano-predict {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(260px, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+.piano-predict h3 {
+  margin-bottom: 24px;
+}
+.piano-predict img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.piano-loading {
+  min-height: 280px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  text-align: center;
+}
+.piano-loading span {
+  width: 44px;
+  height: 5px;
+  background: var(--piano-info-ink);
+  border-radius: 8px;
+  animation: piano-loading 1s ease-in-out infinite alternate;
+}
+@keyframes piano-loading {
+  to {
+    transform: scaleX(1.8);
+  }
+}
+.piano-arrange > h3 {
+  margin-bottom: 6px;
+}
+.piano-instruction {
+  min-height: 28px;
+  color: var(--piano-info-ink);
+  font-weight: 600;
+}
+.piano-tray {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 28px;
+}
+.piano-piece,
+.piano-piece-slot,
+.piano-place {
+  min-height: 98px;
+  padding: 10px;
+  color: var(--piano-ink);
+  background: var(--piano-paper);
+  border: 1px solid color-mix(in srgb, var(--piano-ink) 34%, transparent);
+  border-radius: 8px;
+  font-weight: 600;
+}
+.piano-piece-slot {
+  display: block;
+  border-style: dashed;
+  opacity: 0.45;
+}
+.piano-piece:hover,
+.piano-place:hover {
+  border-color: var(--piano-ink);
+}
+.piano-piece[aria-pressed="true"] {
+  background: var(--piano-info);
+  border: 2px solid var(--piano-info-ink);
+}
+.piano-piece svg,
+.piano-place svg {
+  width: 100%;
+  height: 54px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.piano-piece .piece-fill,
+.piano-place .piece-fill {
+  fill: var(--piano-surface);
+}
+.piano-piece .piece-trace,
+.piano-place .piece-trace {
+  stroke-width: 1.5;
+}
+.piano-places {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+.piano-places li {
+  position: relative;
+}
+.piano-place {
+  width: 100%;
+  background: var(--piano-surface);
+  border-style: dashed;
+}
+.piano-place .place-shape {
+  display: block;
+  height: 54px;
+  margin-bottom: 4px;
+  border: 1px dashed color-mix(in srgb, var(--piano-ink) 35%, transparent);
+  border-radius: 8px;
+}
+.causal-arrow {
+  position: absolute;
+  left: -24px;
+  top: 34px;
+  color: var(--piano-muted);
+}
+.piano-ready > div:first-child {
+  margin-bottom: 14px;
+}
+.piano-effect-control {
+  position: relative;
+}
+.piano-key-trigger {
+  position: absolute;
+  left: 4.5%;
+  bottom: 13%;
+  width: 36%;
+  min-height: 74px;
+  padding: 12px;
+  color: var(--piano-surface);
+  background: var(--piano-ink);
+  border: 1px solid var(--piano-ink);
+  border-radius: 8px;
+  font-weight: 600;
+}
+.piano-key-trigger:hover {
+  background: var(--piano-muted);
+}
+.piano-mechanism-wrap {
+  position: relative;
+  max-width: 840px;
+  margin: 8px auto;
+  background: var(--piano-paper);
+  border-radius: 12px;
+}
+.piano-mechanism {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--piano-ink);
+  overflow: visible;
+}
+.piano-mechanism text {
+  fill: currentColor;
+  stroke: none;
+  font:
+    600 15px Inter,
+    Arial,
+    sans-serif;
+}
+.mechanism-bed,
+.mechanism-link path,
+.mechanism-hammer path,
+.mechanism-string path,
+.vibration-traces path,
+.rebound-gap {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mechanism-bed {
+  stroke-width: 2;
+}
+.mechanism-key rect,
+.mechanism-hammer rect {
+  fill: var(--piano-surface);
+  stroke: currentColor;
+  stroke-width: 3;
+}
+.mechanism-key circle,
+.mechanism-link circle {
+  fill: currentColor;
+}
+.mechanism-link path,
+.mechanism-hammer path {
+  stroke-width: 9;
+}
+.mechanism-string path {
+  stroke-width: 4;
+}
+.mechanism-key,
+.mechanism-link,
+.mechanism-hammer,
+.vibration-traces {
+  transform-box: fill-box;
+}
+.vibration-traces {
+  opacity: 0;
+}
+.vibration-traces path {
+  stroke-width: 2;
+}
+.vibration-traces.is-visible {
+  opacity: 0.64;
+}
+.rebound-gap {
+  opacity: 0;
+  stroke: var(--piano-info-ink);
+  stroke-width: 2;
+  stroke-dasharray: 3 5;
+}
+.rebound-gap.is-visible {
+  opacity: 1;
+}
+.piano-mechanism.is-animating .mechanism-key {
+  transform-origin: 205px 227px;
+  animation: piano-key 0.65s ease-out both;
+}
+.piano-mechanism.is-animating .mechanism-link {
+  animation: piano-link 0.75s 0.2s ease-out both;
+}
+.piano-mechanism.is-animating .mechanism-hammer {
+  transform-origin: 440px 181px;
+  animation: piano-hammer 1.1s 0.48s ease-out both;
+}
+.piano-mechanism.is-animating .vibration-traces {
+  animation: piano-vibrate 1.2s 1.08s ease-out both;
+}
+@keyframes piano-key {
+  45%,
+  100% {
+    transform: rotate(4deg);
+  }
+}
+@keyframes piano-link {
+  45%,
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes piano-hammer {
+  42% {
+    transform: rotate(16deg);
+  }
+  72%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes piano-vibrate {
+  0% {
+    opacity: 0;
+  }
+  18%,
+  78% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0.58;
+  }
+}
+.piano-notice > h3 {
+  margin-bottom: 12px;
+}
+.piano-sequence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 18px 0 12px;
+  padding: 0;
+  list-style: none;
+  counter-reset: sequence;
+}
+.piano-sequence li {
+  position: relative;
+  min-height: 52px;
+  padding: 12px;
+  background: var(--piano-info);
+  border-radius: 8px;
+  color: var(--piano-info-ink);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+}
+.piano-sequence li + li::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  color: var(--piano-muted);
+}
+.piano-simplification {
+  margin-bottom: 18px;
+}
+.piano-external-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--piano-ink) 18%, transparent);
+}
+.piano-talk-through,
+.piano-explanation {
+  padding: 24px 0 4px;
+}
+.piano-unavailable {
+  padding: 14px;
+  margin-bottom: 20px;
+  color: var(--piano-info-ink);
+  background: var(--piano-info);
+  border-radius: 8px;
+}
+.piano-talk-through ol {
+  display: grid;
+  gap: 12px;
+  max-width: 78ch;
+  padding-left: 24px;
+}
+.piano-talk-through li {
+  padding-left: 5px;
+}
+.piano-talk-through > p:last-child {
+  margin-top: 18px;
+}
+.piano-explanation > p {
+  max-width: 65ch;
+  margin-top: 12px;
+}
+.piano-teaching-sentence {
+  padding: 14px;
+  background: var(--piano-paper);
+  border-radius: 8px;
+}
+.piano-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 650px) {
+  .piano-pilot {
+    margin-top: 32px;
+    padding: 20px;
+  }
+  .piano-pilot-header {
+    grid-template-columns: 1fr;
+  }
+  .piano-dogfood {
+    justify-self: start;
+    grid-row: 1;
+  }
+  .piano-entry,
+  .piano-predict {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .piano-entry .primary-button {
+    width: 100%;
+  }
+  .piano-predict img {
+    grid-row: 1;
+  }
+  .piano-tray,
+  .piano-places,
+  .piano-sequence {
+    grid-template-columns: 1fr;
+  }
+  .piano-piece,
+  .piano-place {
+    min-height: 82px;
+  }
+  .piano-piece svg,
+  .piano-place svg,
+  .piano-place .place-shape {
+    height: 44px;
+  }
+  .causal-arrow {
+    left: 50%;
+    top: -29px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .piano-places {
+    gap: 32px;
+  }
+  .piano-sequence li + li::before {
+    left: 50%;
+    top: -24px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .piano-key-trigger {
+    min-height: 52px;
+    font-size: 0.72rem;
+  }
+  .piano-mechanism text {
+    font-size: 18px;
+  }
+  .piano-external-actions {
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .piano-pilot *,
+  .piano-pilot *::before,
+  .piano-pilot *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (forced-colors: active) {
+  .piano-piece[aria-pressed="true"],
+  .piano-sequence li,
+  .piano-dogfood,
+  .piano-unavailable {
+    border: 2px solid CanvasText;
+  }
+}

@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-26T15:07:39.262Z",
-  "latest": "how-code-turns-into-lesson",
+  "generatedAt": "2026-09-26T18:55:33.132Z",
+  "latest": "how-pianos-work",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "how-pianos-work",
+      "date": "2026-09-28",
+      "topic": "how pianos work",
+      "title": "The note inside.",
+      "teaser": "Little follows a tiny tap into a room full of sound.",
+      "href": "./days/how-pianos-work/",
+      "latest": true
+    },
     {
       "slug": "how-code-turns-into-lesson",
       "date": "2026-09-27",
@@ -11,7 +20,7 @@
       "title": "From marks to a morning.",
       "teaser": "Little follows tiny ordered jobs until a blank page becomes a lesson.",
       "href": "./days/how-code-turns-into-lesson/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "curiosity-inchworms",
@@ -20,15 +29,6 @@
       "title": "A loop goes somewhere.",
       "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
       "href": "./days/curiosity-inchworms/",
-      "latest": false
-    },
-    {
-      "slug": "how-pianos-work",
-      "date": "2026-09-25",
-      "topic": "how pianos work",
-      "title": "The note inside.",
-      "teaser": "Little follows a tiny tap into a room full of sound.",
-      "href": "./days/how-pianos-work/",
       "latest": false
     },
     {
