@@ -169,7 +169,7 @@ function sequenceLabels() {
 }
 
 function predictionStage() {
-  return `<div class="piano-predict"><div><p class="piano-parent-note">Read the question, then leave room for a guess.</p><h3 id="piano-stage-heading" tabindex="-1">What will happen to the string when we press this key?</h3><button class="primary-button" type="button" data-piano-action="arrange">Arrange together</button></div><img src="./assets/how-pianos-work/01-keys.jpg" alt="Big and Little look at the keys of an acoustic piano together." width="1536" height="1024"></div>`;
+  return `<div class="piano-predict"><div><p class="piano-parent-note">Read the question, then leave room for a guess.</p><h3 id="piano-stage-heading" tabindex="-1">What will happen to the string when we press this key?</h3><button class="primary-button" type="button" data-piano-action="arrange">Arrange together</button></div><div class="piano-predict-stage">${mechanismGraphic("ready")}<img class="piano-predict-context" src="./assets/how-pianos-work/01-keys.jpg" alt="Big and Little look at the keys of an acoustic piano together." width="1536" height="1024"></div></div>`;
 }
 
 function loadingStage() {
@@ -328,8 +328,10 @@ function startPianoPilot(panel) {
         clearTimeout(settleTimer);
       }
       render(options);
-      if (event.type === "SELECT")
+      if (event.type === "SELECT") {
         focusControl(`[data-piano-piece="${event.part}"]`);
+        if (state.selected) announce(state.feedback);
+      }
       if (event.type === "PLACE") {
         const returned = before.placements[event.part] && !before.selected;
         const matched = before.selected === event.part;
@@ -339,20 +341,22 @@ function startPianoPilot(panel) {
           const next = PARTS.find((part) => !state.placements[part]);
           if (next) focusControl(`[data-piano-piece="${next}"]`);
         } else focusControl(`[data-piano-place="${event.part}"]`);
+        if (matched) {
+          announce(
+            state.phase === "A2"
+              ? "The three parts are in place. The key is ready to press."
+              : `${PART_LABELS[event.part]} placed.`,
+          );
+        } else if (before.selected && before.selected !== event.part) {
+          announce(state.feedback);
+        }
       }
       if (event.type === "ARRANGE") prepareStage();
-      if (event.type === "PLACE" && before.selected === event.part) {
-        announce(
-          state.phase === "A2"
-            ? "The three parts are in place. The key is ready to press."
-            : `${PART_LABELS[event.part]} placed.`,
-        );
-      }
       if (event.type === "PRESS") {
         announce(RESULT_ANNOUNCEMENT);
         if (state.phase === "N1") {
           settleTimer = setTimeout(
-            () => send({ type: "SETTLE" }, { focus: false }),
+            () => send({ type: "SETTLE" }, { focus: true }),
             2400,
           );
         }
