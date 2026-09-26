@@ -58,6 +58,22 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
+  assert.equal(latest.slug, "how-pianos-work");
+  const today = await read("dist/today/index.html");
+  assert.match(today, /id="piano-pilot"/);
+  assert.match(today, /class="piano-dogfood">DOGFOOD</);
+  assert.doesNotMatch(today, /INTERNAL\s*\/\s*DOGFOOD/);
+  assert.match(today, /piano-pilot\.js/);
+  assert.equal(await exists("dist/today/piano-pilot.css"), true);
+  assert.equal(await exists("dist/today/piano-pilot.js"), true);
+  const pianoDay = await read("dist/days/how-pianos-work/index.html");
+  assert.match(pianoDay, /id="piano-pilot"/);
+  assert.equal(
+    await exists("dist/days/how-code-turns-into-lesson/index.html"),
+    true,
+  );
+  const codeDay = await read("dist/days/how-code-turns-into-lesson/index.html");
+  assert.doesNotMatch(codeDay, /id="piano-pilot"/);
 });
 
 test("archive.json lists approved mornings structurally", async () => {
