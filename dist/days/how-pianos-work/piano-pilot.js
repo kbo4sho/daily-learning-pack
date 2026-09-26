@@ -121,8 +121,10 @@ export async function loadPianoPilotAssets(
   paths,
   { loadImage = browserImageLoader, timeoutMs = 10_000 } = {},
 ) {
-  if (!Array.isArray(paths) || paths.length === 0)
-    throw new Error("Piano pilot requires reviewed art.");
+  if (!Array.isArray(paths))
+    throw new Error("Piano pilot asset list must be an array.");
+  // JPEG A: empty list means no gated preload (SVG + day plates carry the stage).
+  if (paths.length === 0) return [];
   let timer;
   try {
     return await Promise.race([
@@ -316,7 +318,9 @@ function startPianoPilot(panel) {
   async function prepareStage() {
     const thisRun = ++loadRun;
     try {
-      await loadPianoPilotAssets(assets);
+      // JPEG A: skip gated JPEG preload when data-piano-assets is absent/empty.
+      // Stage uses inline SVG; 01-keys remains ungated P1 secondary context.
+      if (assets.length > 0) await loadPianoPilotAssets(assets);
       if (thisRun !== loadRun || state.phase !== "L1") return;
       state = reducePianoPilotState(state, { type: "ASSETS_READY" });
       render({ focus: true });

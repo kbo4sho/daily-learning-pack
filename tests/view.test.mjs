@@ -64,10 +64,13 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.match(today, /class="piano-dogfood">DOGFOOD</);
   assert.doesNotMatch(today, /INTERNAL\s*\/\s*DOGFOOD/);
   assert.match(today, /piano-pilot\.js/);
+  // JPEG A: no L1 data-piano-assets preload gate on 02/03.
+  assert.doesNotMatch(today, /data-piano-assets/);
   assert.equal(await exists("dist/today/piano-pilot.css"), true);
   assert.equal(await exists("dist/today/piano-pilot.js"), true);
   const pianoDay = await read("dist/days/how-pianos-work/index.html");
   assert.match(pianoDay, /id="piano-pilot"/);
+  assert.doesNotMatch(pianoDay, /data-piano-assets/);
   assert.equal(
     await exists("dist/days/how-code-turns-into-lesson/index.html"),
     true,
