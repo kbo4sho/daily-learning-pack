@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-code-turns-into-lesson",
+  "topic": "how code turns into a lesson",
+  "aliases": [
+    "code",
+    "how code works",
+    "code into lesson",
+    "how does code turn into a daily lesson",
+    "programming for kids",
+    "instructions become a lesson",
+    "curiosity code"
+  ],
+  "gradeLevel": 2,
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 2 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "From marks to a morning.",
+  "teaser": "Little follows tiny ordered jobs until a blank page becomes a lesson.",
+  "question": "How can quiet marks on a screen turn into something you can learn?",
+  "idea": "Code is a careful list of tiny jobs. When those jobs run in order, they can build pictures and words — and those become a lesson you can use.",
+  "curiosity": {
+    "intro": "Choose a question. Look for a clue in the picture, then test your first idea against the explanation.",
+    "carryForward": "Follow the marks through the story. Use order as evidence, work out a pretend job list, and explain a discovery in your own words.",
+    "questions": [
+      {
+        "id": "marks",
+        "plate": "marks",
+        "question": "What could these quiet marks be for?",
+        "notice": "Look at the screen. Are the marks scattered, or lined up? Find where Little's eyes rest first.",
+        "say": "The marks look like a secret language. They are instructions — tiny written jobs a machine can follow. Alone, one mark does almost nothing. Together in a list, they can build something new.",
+        "try": "Point to one mark, then the next. What changes if you skip one in the middle?"
+      },
+      {
+        "id": "sequence",
+        "plate": "sequence",
+        "question": "Why does the order of the jobs matter?",
+        "notice": "Find the numbered steps on the notebook. Which job comes first? Which comes last?",
+        "say": "A sequence is a careful order. Job 1 must finish before job 2 begins. If you draw the picture after you place the words, the page looks different than if you reverse those jobs. Order is part of the plan.",
+        "try": "Say three morning jobs out of order. What goes wrong? Put them back in a sequence that works."
+      },
+      {
+        "id": "follow",
+        "plate": "follow",
+        "question": "What happens when each job is followed?",
+        "notice": "Watch the path from the list to the blank page. Where does a new shape first appear?",
+        "say": "A helper — here, a quiet computer — follows each instruction exactly. One job places a line. The next adds a color wash. The next lays down a word. The page transforms: it changes from blank to pictured.",
+        "try": "Trace the orange path from one job to the page. Which job left the first mark you can see?"
+      },
+      {
+        "id": "appear",
+        "plate": "appear",
+        "question": "How do we know the jobs worked?",
+        "notice": "Compare the blank page on the left with the finished page on the right. What new evidence appears?",
+        "say": "Evidence is a clue you can point to. The blank page had no picture and no sentence. The finished page shows both. That difference is evidence the instructions ran. We infer — we build an idea — that the ordered jobs made the change.",
+        "try": "Name two details that were missing before and are present now. Why are two details stronger than one?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "marks",
+      "src": "assets/how-code-turns-into-lesson/01-marks.jpg",
+      "original": "assets/how-code-turns-into-lesson/01-marks.png",
+      "title": "Quiet marks",
+      "alt": "Little Wonderer studies a soft screen of neat code-like marks beside Big Wonderer in a warm study.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    },
+    {
+      "id": "sequence",
+      "src": "assets/how-code-turns-into-lesson/02-sequence.jpg",
+      "original": "assets/how-code-turns-into-lesson/02-sequence.png",
+      "title": "Jobs in order",
+      "alt": "Big and Little study a notebook with jobs numbered 1, 2, and 3: a sprout outline, a sage color wash, and word-like marks.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    },
+    {
+      "id": "follow",
+      "src": "assets/how-code-turns-into-lesson/03-follow.jpg",
+      "original": "assets/how-code-turns-into-lesson/03-follow.png",
+      "title": "Each job runs",
+      "alt": "A thin orange path leads from notebook job 1 through the computer to the first stem and leaf outline on an otherwise blank page.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    },
+    {
+      "id": "appear",
+      "src": "assets/how-code-turns-into-lesson/04-appear.jpg",
+      "original": "assets/how-code-turns-into-lesson/04-appear.png",
+      "title": "A page appears",
+      "alt": "Big and Little compare a blank sheet on the left with a finished sheet on the right showing a sage sprout, word-like marks, and a small picture puzzle.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    },
+    {
+      "id": "lesson",
+      "src": "assets/how-code-turns-into-lesson/05-lesson.jpg",
+      "original": "assets/how-code-turns-into-lesson/05-lesson.png",
+      "title": "Marks mean a lesson",
+      "alt": "Little revisits the first marks while a finished morning lesson sheet rests nearby.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    },
+    {
+      "id": "wonder",
+      "src": "assets/how-code-turns-into-lesson/06-wonder.jpg",
+      "original": "assets/how-code-turns-into-lesson/06-wonder.png",
+      "title": "Keep one question",
+      "alt": "Big and Little sit with the finished sprout lesson beside a notebook where 1, 2, and 3 lead to a single orange question mark.",
+      "caption": "An imagined window. The picture is enlarged to help us see."
+    }
+  ],
+  "reading": {
+    "title": "A story of ordered jobs",
+    "coverPlate": "marks",
+    "coverText": "Six close looks. One hidden path from marks to a morning lesson.",
+    "parentNote": "About 15 min: look, read six short beats, then talk. No independent reading required.",
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "Little follows quiet code marks through ordered jobs, a running helper, a page that appears as evidence, a revised guess that the marks meant a lesson, and one open wonder about other transforms.",
+      "beatIntents": [
+        {
+          "plate": "marks",
+          "intent": "Sunlit study; Little notices neat code-like marks on a screen and wonders what they are for."
+        },
+        {
+          "plate": "sequence",
+          "intent": "Notebook shows three tiny jobs in a clear numbered order; order itself is the clue."
+        },
+        {
+          "plate": "follow",
+          "intent": "Each job runs: orange path from list to blank page; a first shape begins to appear."
+        },
+        {
+          "plate": "appear",
+          "intent": "Evidence plate: blank page beside finished page with picture and words; compare to trust the change."
+        },
+        {
+          "plate": "lesson",
+          "intent": "Return to the first marks beside the finished morning lesson; revise the guess — the marks meant make a lesson."
+        },
+        {
+          "plate": "wonder",
+          "intent": "Keep the finished lesson and one precise open question about what else ordered jobs could become."
+        }
+      ]
+    },
+    "beats": [
+      {
+        "id": "marks",
+        "plate": "marks",
+        "title": "Quiet marks",
+        "passage": "Little Wonderer leans toward a soft screen. The marks are neat, not scribbles. “Are they a secret?” Big Wonderer waits. One mark alone does almost nothing. A list of marks can be instructions — tiny jobs written so a machine can follow them.",
+        "prompt": "Which detail makes the marks look planned instead of accidental?"
+      },
+      {
+        "id": "sequence",
+        "plate": "sequence",
+        "title": "Jobs in order",
+        "passage": "On the notebook, three jobs sit in a line: first, next, then last. That careful order is a sequence. If the last job ran first, the page would look wrong. Little copies the order with a finger. The plan lives in the sequence, not in any single mark.",
+        "prompt": "What can go wrong if two jobs switch places?"
+      },
+      {
+        "id": "follow",
+        "plate": "follow",
+        "title": "Each job runs",
+        "passage": "A quiet helper follows job one, then job two, then job three. A line lands. A wash of color follows. A word settles into place. The blank page transforms — it changes because each instruction ran in turn. Little watches the path from list to paper.",
+        "prompt": "Which job left the first mark you can point to on the page?"
+      },
+      {
+        "id": "appear",
+        "plate": "appear",
+        "title": "A page appears",
+        "passage": "Left: a blank page. Right: a picture and a short sentence. That difference is evidence the jobs worked. Little builds an inference: the ordered instructions made the finished page. One detail could be luck. Two matching changes are harder to ignore.",
+        "prompt": "Which two details are the strongest evidence that a change happened?"
+      },
+      {
+        "id": "lesson",
+        "plate": "lesson",
+        "title": "Marks mean a lesson",
+        "passage": "Little returns to the first screen of marks. Beside it rests a finished morning sheet — a lesson ready to use. The earlier guess (“secret scribbles”) no longer fits. The marks were a plan to transform instructions into something you can learn.",
+        "prompt": "How did comparing the first marks with the finished sheet change Little's idea?"
+      },
+      {
+        "id": "wonder",
+        "plate": "wonder",
+        "title": "Keep one question",
+        "passage": "The lesson is here: words, a picture, a puzzle to try. Code became a daily morning. Little keeps one precise question: What else could a careful sequence of jobs become? Another picture? A song of clicks? The next list is waiting.",
+        "prompt": "What new evidence could support or challenge the idea that order matters?"
+      }
+    ],
+    "words": [
+      {
+        "word": "instructions",
+        "meaning": "tiny written jobs a machine can follow"
+      },
+      {
+        "word": "sequence",
+        "meaning": "a careful order where one step comes before the next"
+      },
+      {
+        "word": "transform",
+        "meaning": "to change from one form into another"
+      },
+      {
+        "word": "evidence",
+        "meaning": "clues you can point to that support an idea"
+      }
+    ],
+    "questions": [
+      "Which two details are the strongest evidence that the instructions changed the blank page? Explain why.",
+      "How did comparing the first marks with the finished lesson change Little's inference?"
+    ]
+  },
+  "math": {
+    "title": "A pretend job list to count",
+    "plate": "appear",
+    "intro": "Use these pretend notebook numbers about building a lesson page. The picture is not a timer.",
+    "measurements": [
+      {
+        "day": 1,
+        "height": 12
+      },
+      {
+        "day": 2,
+        "height": 19
+      },
+      {
+        "day": 3,
+        "height": 31
+      }
+    ],
+    "tasks": [
+      {
+        "plate": "appear",
+        "label": "COMPARE TWO INTERVALS",
+        "challenge": "multi-step",
+        "prompt": "Job counts grow across three pretend mornings: 12, then 19, then 31. Find the change from morning 1 to 2 and from morning 2 to 3. Which change is greater, and by how much?",
+        "equation": "19 − 12 = ___; 31 − 19 = ___; ___ − ___ =",
+        "hint": "Find both changes first. Then subtract the smaller change from the greater one.",
+        "answer": "7, then 12; the second change is 5 greater. 19 − 12 = 7, 31 − 19 = 12, and 12 − 7 = 5."
+      },
+      {
+        "plate": "appear",
+        "label": "JOIN THE JOBS",
+        "challenge": "multi-step",
+        "prompt": "One sequence uses 14 picture jobs and 9 word jobs. After that, 6 check jobs still wait. How many jobs are done before the checks? How many jobs in all?",
+        "equation": "14 + 9 = ___; ___ + 6 =",
+        "hint": "Add the picture and word jobs first. Then add the checks.",
+        "answer": "23 jobs before checks; 29 in all. 14 + 9 = 23, and 23 + 6 = 29."
+      },
+      {
+        "plate": "appear",
+        "label": "TEST A CLAIM",
+        "prompt": "Someone says the total change from morning 1 to morning 3 is 18. Use the table to decide whether the claim is true and correct it.",
+        "equation": "31 − 12 =",
+        "hint": "Subtract the first value from the last value. Compare your result with 18.",
+        "answer": "The claim is false. The total change is 19 because 31 − 12 = 19."
+      }
+    ],
+    "extension": "Would every real lesson need exactly these job counts? No. These numbers are invented for our math story.",
+    "parentNote": "About 15 min. Numbers are pretend. Do not count pixels in the illustration as data."
+  },
+  "writing": {
+    "title": "Explain a tiny transform.",
+    "intro": "Choose a scene. Write two linked sentences: one observation, then an explanation using because. Draw a detail that supports your idea.",
+    "plateIds": [
+      "sequence",
+      "follow",
+      "appear"
+    ],
+    "draw": "Draw the detail you noticed. Add an arrow to show order or a path from job to page.",
+    "starter": "My evidence and explanation",
+    "frames": [
+      {
+        "plate": "sequence",
+        "start": "The order matters because",
+        "hint": "What changes if two jobs switch places?"
+      },
+      {
+        "plate": "follow",
+        "start": "The page begins to change because",
+        "hint": "Which job left the first mark you can see?"
+      },
+      {
+        "plate": "appear",
+        "start": "I infer that the jobs worked because",
+        "hint": "Compare the blank page with the finished page."
+      }
+    ],
+    "words": [
+      "instructions",
+      "sequence",
+      "transform",
+      "evidence",
+      "inference",
+      "order",
+      "because"
+    ],
+    "check": "Reread your words. Does the detail support your explanation? Check the first capital and each ending mark.",
+    "parentNote": "About 15 minutes. Welcome Leo's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to Leo."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Strong evidence pairs: blank vs pictured page; missing vs present sentence; first marks vs finished lesson sheet. Two matching changes beat one lonely detail."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Little first wondered if the marks were a secret. Comparing them with the finished morning lesson revised the inference: the marks were a plan to build a lesson."
+    },
+    {
+      "label": "Math · 1",
+      "text": "19 − 12 = 7; 31 − 19 = 12; 12 − 7 = 5 (second change greater by 5)."
+    },
+    {
+      "label": "Math · 2",
+      "text": "14 + 9 = 23 before checks; 23 + 6 = 29 in all."
+    },
+    {
+      "label": "Math · 3",
+      "text": "Claim false; 31 − 12 = 19."
+    },
+    {
+      "label": "Writing · sample",
+      "text": "Sample: The blank page had no picture. I infer the jobs worked because the finished page shows a picture and a sentence."
+    }
+  ],
+  "parentGuidance": "These are imagined, enlarged scenes about how ordered instructions (code) can become a printed lesson — not a coding tutorial, IDE walkthrough, or claim about any one programming language. 'Instructions,' 'sequence,' and 'transform' are kid-sized models. The helper/computer is schematic. Job counts and morning totals are invented for math and independent of art scale. Screens and notebooks in the plates are props, not real interfaces to copy. Support pronunciation, invented spelling or dictation as useful. Keep adult guidance in this key or collapsed details.",
+  "sources": [
+    {
+      "label": "Family craft model",
+      "note": "Wonder Daily curiosity bar: mechanism, evidence→inference, supported vocabulary, multi-step math."
+    }
+  ],
+  "authoring": {
+    "status": "complete",
+    "bar": "curiosity",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-gen",
+    "audience": "Leo",
+    "pipeline": "task-99: locked reading.outline before plate image_gen (task-98 gate); Astra plates; Skia foldable; Leo-only kid surfaces",
+    "craftApproval": "Skipped per captain ship word for task 99 when adversarial clean; draft PRs then merge."
+  }
+}
