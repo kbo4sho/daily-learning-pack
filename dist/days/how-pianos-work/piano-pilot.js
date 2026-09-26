@@ -150,9 +150,13 @@ function pieceGraphic(part) {
 function mechanismGraphic(mode) {
   const result = mode === "result" || mode === "reduced";
   const animating = mode === "animating";
+  const accessibleName =
+    mode === "ready"
+      ? "A simplified piano action with a key, linked hammer, and string at rest."
+      : "A simplified piano action with a key, linked hammer, rebound gap, and vibrating string.";
   return `<div class="piano-mechanism-wrap">
     <svg class="piano-mechanism${animating ? " is-animating" : ""}" data-motion="${mode}" viewBox="0 0 720 320" role="img" aria-labelledby="piano-mechanism-title">
-      <title id="piano-mechanism-title">A simplified piano action with a key, linked hammer, rebound gap, and vibrating string.</title>
+      <title id="piano-mechanism-title">${accessibleName}</title>
       <path class="mechanism-bed" d="M36 267H684"/>
       <g class="mechanism-key"><rect x="46" y="200" width="252" height="54" rx="7"/><circle cx="205" cy="227" r="7"/><text x="84" y="234">Key</text></g>
       <g class="mechanism-link"><path d="M263 219L440 181"/><circle cx="440" cy="181" r="7"/></g>
@@ -187,7 +191,7 @@ function arrangementStage(state) {
     const filled = state.placements[part];
     return `<li>${index ? '<span class="causal-arrow" aria-hidden="true">→</span>' : ""}<button type="button" class="piano-place" data-piano-place="${part}" aria-label="${PART_LABELS[part]} place, ${filled ? `filled. Activate to return the ${part}.` : "empty."}">${filled ? pieceGraphic(part) : '<span class="place-shape" aria-hidden="true"></span>'}<span>${PART_LABELS[part]}</span></button></li>`;
   }).join("");
-  return `<div class="piano-arrange"><h3 id="piano-stage-heading" tabindex="-1">Choose a picture, then its matching place.</h3><p class="piano-instruction" data-piano-feedback aria-live="polite">${state.feedback === ARRANGE_INSTRUCTION ? "" : state.feedback}</p><div class="piano-tray" role="group" aria-label="Picture pieces">${tray}</div><ol class="piano-places" aria-label="Matching places in causal order">${places}</ol><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
+  return `<div class="piano-arrange"><h3 id="piano-stage-heading" tabindex="-1">Choose a picture, then its matching place.</h3><p class="piano-instruction" data-piano-feedback>${state.feedback === ARRANGE_INSTRUCTION ? "" : state.feedback}</p><div class="piano-tray" role="group" aria-label="Picture pieces">${tray}</div><ol class="piano-places" aria-label="Matching places in causal order">${places}</ol><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
 }
 
 function readyStage() {
@@ -396,14 +400,14 @@ function startPianoPilot(panel) {
   document.addEventListener("visibilitychange", () => {
     if (document.hidden && state.phase === "N1") {
       clearTimeout(settleTimer);
-      send({ type: "SETTLE" });
+      send({ type: "SETTLE" }, { focus: true });
     }
   });
   reducedMotion.addEventListener?.("change", (event) => {
     send({ type: "MOTION_PREFERENCE", reducedMotion: event.matches });
     if (event.matches && state.phase === "N1") {
       clearTimeout(settleTimer);
-      send({ type: "SETTLE" });
+      send({ type: "SETTLE" }, { focus: true });
     }
   });
   render();
