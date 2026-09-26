@@ -45,15 +45,12 @@ export function zineKidCopy(pack) {
     pack.reading.title,
     pack.reading.coverText,
     ZINE_COVER_LINE,
-    pack.reading.coverWink || "",
+    "Wonder Daily",
     ...pack.reading.beats.flatMap((beat) => [
       beat.title,
       beat.passage,
       beat.prompt,
-      beat.wink || "",
     ]),
-    "Even loops take a breath.",
-    "Fold once. Giggle once.",
     "A little pause.",
     "Look back at a picture. What do you notice now? You can rest here or begin again.",
     "Make a little book.",
@@ -161,7 +158,7 @@ export async function generateZine(
       const size = image.scaleToFit(162, height);
       sheet.drawImage(image, { x: (198 - size.width) / 2, y, ...size });
     };
-    text("WONDER TOGETHER / DAILY", 284, 6.5, 1, sans, muted);
+    text("WONDER DAILY", 284, 6.5, 1, sans, muted);
     if (panel.kind === "cover") {
       text(pack.title, 246, 27, 2, serif);
       text(pack.reading.title, 193, 11, 2, serif);
