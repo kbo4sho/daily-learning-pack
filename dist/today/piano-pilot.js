@@ -199,7 +199,10 @@ function heldResultMarkup(state, { interactive = false } = {}) {
   const advance = interactive
     ? `<button class="primary-button" type="button" data-piano-action="talk-together">Talk together</button>`
     : "";
-  return `<div class="piano-notice${interactive ? "" : " piano-notice-held"}"><p class="piano-parent-note">Leave the picture still while you notice together.</p><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic(motion)}${sequenceLabels()}<p class="piano-simplification">A simplified model. Motion is enlarged.</p>${advance}</div>`;
+  const parentNote = interactive
+    ? `<p class="piano-parent-note">Leave the picture still while you notice together.</p>`
+    : "";
+  return `<div class="piano-notice${interactive ? "" : " piano-notice-held"}">${parentNote}<h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic(motion)}${sequenceLabels()}<p class="piano-simplification">A simplified model. Motion is enlarged.</p>${advance}</div>`;
 }
 
 function noticeStage(state) {
