@@ -34,7 +34,7 @@
         "question": "How does a root find its way when it cannot see?",
         "notice": "Follow the white root down. Now follow the little shoot up. What do you notice?",
         "say": "The root does not need eyes. It responds to gravity, which helps it grow down.",
-        "try": "Trace the two directions in the air: root down, shoot up."
+        "try": "Follow the two directions in the air: root down, shoot up."
       },
       {
         "id": "leaf",
@@ -42,7 +42,7 @@
         "question": "What can a leaf do that a seed cannot?",
         "notice": "Find the three notes around the leaves. Where does each arrow lead?",
         "say": "Green leaves use light, water, and part of the air to make new food. The seed began with food stored inside.",
-        "try": "Trace a path from the roots to a leaf. Then point to the light."
+        "try": "Follow a path from the roots to a leaf. Then point to the light."
       },
       {
         "id": "notice",
@@ -91,50 +91,56 @@
   "reading": {
     "title": "The quiet work of growing",
     "coverPlate": "wake",
-    "coverText": "A little bean. A big beginning. Grown-up reads; little wonderer turns the page.",
+    "coverText": "A little bean. A big beginning. Follow the first root into the dark.",
     "parentNote": "About 15 min: look at the scenes, read the six short beats, then talk. Ask what changed in your child's idea. Point, speak, or pause; no independent reading required.",
     "beats": [
       {
         "id": "begin",
         "plate": "wake",
         "title": "Small, but not empty",
-        "passage": "Little Wonderer looks at the bean. “Is anything in there?” A tiny plant is tucked inside. Stored food will help it begin.",
-        "prompt": "Point to the pale food stores."
+        "passage": "A bean rests in an open hand. “Is anything in there?” Inside, a tiny plant waits. Stored food will help it begin before leaves can cook new food.",
+        "prompt": "Where are the pale food stores in the picture?",
+        "wink": "Breakfast was packed before sprouts."
       },
       {
         "id": "directions",
         "plate": "root",
         "title": "Down and up",
-        "passage": "With water, air, and enough warmth, the bean starts to grow. A root comes out first. It responds to gravity and grows down. A shoot grows up.",
-        "prompt": "Trace each path with a finger."
+        "passage": "With water, air, and enough warmth, a root tips out first. It grows down with gravity. A shoot climbs toward light. Two directions from one quiet start.",
+        "prompt": "Which way does the root go? Which way does the shoot go?",
+        "wink": "Roots read gravity like a map."
       },
       {
         "id": "food",
         "plate": "leaf",
         "title": "A new way to make food",
-        "passage": "Leaves open in the light. They use light, water, and carbon dioxide from the air to make food. The little plant can make more of what it needs.",
-        "prompt": "Follow the three orange notes."
+        "passage": "Leaves unfold in the light. They use light, water, and carbon dioxide from the air to make food. Now the plant can make more of what it needs.",
+        "prompt": "What three things do the orange notes name?",
+        "wink": "Leaves open a quiet kitchen."
       },
       {
         "id": "change",
         "plate": "notice",
         "title": "Too slow to see?",
-        "passage": "“It looks the same,” says Little Wonderer. Big Wonderer opens their notebook. An earlier mark is lower than today's tip. Their notes help them see a change.",
-        "prompt": "What did the notebook help them remember?"
+        "passage": "“It looks the same,” says Little Wonderer. Big Wonderer opens the notebook. Yesterday’s mark sits lower than today’s tip. Notes catch slow change.",
+        "prompt": "What did the notebook help them notice?",
+        "wink": "The notebook remembers what eyes forget."
       },
       {
         "id": "rethink",
         "plate": "wake",
         "title": "Look back at the beginning",
-        "passage": "“Did the bean need leaves to begin?” they wonder. Look inside it again. The tiny plant had stored food before it had open leaves.",
-        "prompt": "What in the picture helps explain your answer?"
+        "passage": "They look back at the beginning. Did the bean need open leaves to start? Inside, the tiny plant already had stored food — a lunch packed before the first leaf.",
+        "prompt": "What in the picture helps explain your answer?",
+        "wink": "The beginning still had lunch inside."
       },
       {
         "id": "keep",
         "plate": "notice",
         "title": "A question to keep",
-        "passage": "They sit together by the window. Growing takes time. “What might change next?” asks Big Wonderer. Little Wonderer has a new question to draw.",
-        "prompt": "Tell each other one thing you still wonder."
+        "passage": "They sit by the window. Growing takes time. “What might change next?” Little Wonderer keeps a new question for tomorrow.",
+        "prompt": "What is one thing you still wonder?",
+        "wink": "Save one question for tomorrow’s window."
       }
     ],
     "words": [
@@ -154,12 +160,13 @@
     "questions": [
       "What helped the bean begin before its leaves opened?",
       "How did their notes help them notice growth?"
-    ]
+    ],
+    "coverWink": "Tiny seed. Big secret."
   },
   "math": {
     "title": "How much did it grow?",
     "plate": "notice",
-    "intro": "Look at the earlier mark in the picture. Now use these pretend notebook measurements, all taken from the soil to the plant's tip.",
+    "intro": "Use the pretend notebook heights. Centimeters are length units; cm is the short name. The picture is not a ruler — trust the table numbers.",
     "measurements": [
       {
         "day": 4,
@@ -177,24 +184,48 @@
     "tasks": [
       {
         "plate": "notice",
-        "prompt": "On Day 4 it was 8 cm tall. On Day 8 it was 14 cm. How much taller?",
+        "prompt": "Day 4: 8 cm. Day 8: 15 cm. How many cm did it grow in between?",
         "equation": "14 − 8 =",
-        "hint": "Start at 8. Hop 2 to 10, then 4 to 14.",
+        "hint": "Take the Day 4 height away from the Day 8 height.",
         "answer": "6 cm taller. 2 + 4 = 6."
       },
       {
         "plate": "notice",
-        "prompt": "On Day 12 it was 23 cm. In our number story, it later grows 9 cm more. How tall then?",
+        "prompt": "Day 12: 23 cm. From Day 8 to Day 12, how many cm did it grow?",
         "equation": "23 + 9 =",
-        "hint": "Add 7 to reach 30. How much of the 9 is left?",
+        "hint": "Start with 23. Subtract the Day 8 height.",
         "answer": "32 cm tall. 23 + 7 + 2 = 32."
       },
       {
         "plate": "notice",
-        "prompt": "How many days pass from Day 4 to Day 12? Count the spaces between days.",
+        "prompt": "How many days from Day 4 to Day 12?",
         "equation": "12 − 4 =",
-        "hint": "Day 4 to Day 5 is one day. Count forward from there.",
+        "hint": "Count the days between the two dates. Or subtract 4 from 12.",
         "answer": "8 days. Count the 8 gaps, not all 9 day labels."
+      },
+      {
+        "plate": "notice",
+        "label": "TOTAL GROWTH",
+        "prompt": "From Day 4 (8 cm) to Day 12 (23 cm), how many cm of growth in all?",
+        "equation": "23 − 8 =",
+        "hint": "Subtract the earlier height from the later height.",
+        "answer": "15"
+      },
+      {
+        "plate": "notice",
+        "label": "TWO EQUAL DAYS",
+        "prompt": "It grows 4 cm one day and 4 cm the next. How much growth together?",
+        "equation": "4 + 4 =",
+        "hint": "Add the two days of growth.",
+        "answer": "8"
+      },
+      {
+        "plate": "notice",
+        "label": "DAYS LEFT IN A WEEK",
+        "prompt": "You watch for 7 days. You already watched 3. How many days are left?",
+        "equation": "7 − 3 =",
+        "hint": "Take 3 away from 7.",
+        "answer": "4"
       }
     ],
     "extension": "Would every real bean grow this much? No. These numbers are invented for our math story; real growth varies.",
@@ -236,7 +267,7 @@
       "light",
       "water"
     ],
-    "check": "Read it together. Can you point to the part your words explain? Add a capital letter and an ending mark if you are writing.",
+    "check": "Read your words aloud. Can you point to the part they explain? Add a capital letter and an ending mark if you are writing.",
     "parentNote": "About 15 min: 3 to choose and talk, 4 to draw, 6 to write 1–3 sentences, 2 to read back. Accept invented spelling, speech, or dictation. One careful idea is enough."
   },
   "answers": [
