@@ -1,9 +1,4 @@
 .piano-pilot {
-  --paper: #f7f3eb;
-  --surface: #fffcf6;
-  --ink: #30271f;
-  --muted: #6d6257;
-  --radius: 8px;
   --piano-paper: #f7f3eb;
   --piano-surface: #fffcf6;
   --piano-ink: #30271f;
@@ -217,14 +212,15 @@
   width: 36%;
   min-height: 74px;
   padding: 12px;
-  color: var(--piano-surface);
-  background: var(--piano-ink);
-  border: 1px solid var(--piano-ink);
+  color: var(--piano-ink);
+  background: transparent;
+  border: 2px solid var(--piano-ink);
   border-radius: 8px;
   font-weight: 600;
+  cursor: pointer;
 }
 .piano-key-trigger:hover {
-  background: var(--piano-muted);
+  background: color-mix(in srgb, var(--piano-ink) 10%, transparent);
 }
 .piano-mechanism-wrap {
   position: relative;
