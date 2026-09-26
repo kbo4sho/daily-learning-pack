@@ -10,13 +10,13 @@ export const ZINE_IMPOSITION = [
   { panel: 1, rotation: 0 },
 ];
 export const ZINE_FOLD_STEPS = [
-  "Print one-sided: US Letter, landscape, actual size / 100%. No fit. Headers/footers off.",
+  "Print one-sided: US Letter, portrait, actual size / 100%. No fit. Headers/footers off.",
   "Fold long edge to long edge; reopen. Fold short edge to short edge, then in half again. Open: eight boxes.",
   "Cut only the solid center line across the middle two boxes. Keep the outer boxes joined.",
   "Refold long edge to long edge, print outside. Push ends together to open a diamond, then a cross.",
   "Wrap into a book with page 1 in front. Follow pages 1 to 8.",
 ];
-export const ZINE_COVER_LINE = "Six small moments. One question to keep.";
+export const ZINE_COVER_LINE = "One leaf. Six steps. A story that keeps going.";
 export const ZINE_INSTRUCTION_NOTE =
   "Pictures are simplified and not to scale. Look closely, wonder, and pause whenever you like.";
 export const ZINE_PLATE_MAX_PX = 720;
@@ -45,11 +45,15 @@ export function zineKidCopy(pack) {
     pack.reading.title,
     pack.reading.coverText,
     ZINE_COVER_LINE,
+    pack.reading.coverWink || "",
     ...pack.reading.beats.flatMap((beat) => [
       beat.title,
       beat.passage,
       beat.prompt,
+      beat.wink || "",
     ]),
+    "Even loops take a breath.",
+    "Fold once. Giggle once.",
     "A little pause.",
     "Look back at a picture. What do you notice now? You can rest here or begin again.",
     "Make a little book.",
@@ -163,7 +167,7 @@ export async function generateZine(
       text(pack.reading.title, 193, 11, 2, serif);
       await picture(panel.src, 72);
       text(ZINE_COVER_LINE, 56, 8, 2);
-      text("GRADE 2 / DOGFOOD PREVIEW", 30, 6.5, 1, sans, muted);
+      text("GRADE 2", 30, 6.5, 1, sans, muted);
     } else if (panel.kind === "story") {
       await picture(panel.src, 136);
       text(panel.passage, 122, 9.5, 8);

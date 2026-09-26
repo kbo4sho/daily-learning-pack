@@ -40,9 +40,9 @@
         "id": "reach",
         "plate": "reach",
         "question": "What holds on while the head reaches?",
-        "notice": "The front is lifted. Trace the body to the far left. Which feet still touch the leaf?",
+        "notice": "The front is lifted. Follow the body to the far left. Which feet still touch the leaf?",
         "say": "Now the rear prolegs anchor the body: they hold it in place. The front reaches ahead as the middle straightens. When the front legs grip again, the rear can catch up. The two ends take turns holding on. That repeating sequence carries the caterpillar across a leaf.",
-        "try": "Point to the rear grip. Predict what might happen if it slipped while the front was still reaching. Use a detail from the picture to explain."
+        "try": "Look at the rear grip. What might happen if it slipped while the front was still reaching? Use a detail from the picture to explain."
       },
       {
         "id": "clue",
@@ -115,50 +115,56 @@
   "reading": {
     "title": "A loop goes somewhere",
     "coverPlate": "leaf",
-    "coverText": "A green arch rises. A head reaches. Follow the tiny grips that carry an inchworm across a leaf.",
+    "coverText": "A green arch rises on a leaf. A head reaches. Follow the tiny grips that carry one inchworm across.",
     "parentNote": "About 15 minutes. Support pronunciation when useful, then let Leo revisit a picture and explain the mechanism. Evidence and inference are deliberately a small step beyond a basic sequence retell. All kid-facing directions address Leo; the same story appears on screen, Letter and foldable.",
     "beats": [
       {
         "id": "leaf",
         "plate": "leaf",
-        "title": "A traveling arch",
-        "passage": "A green arch rises on a leaf. “A tiny bridge!” says Little. Then the arch flattens and the head reaches ahead. Big watches beside the path. This is an inchworm, a kind of caterpillar. How can bending help it get somewhere?",
-        "prompt": "Keep a first guess. Which parts touch the leaf?"
+        "title": "The arch begins",
+        "passage": "Little spots a green arch on the leaf. “A tiny bridge!” The arch flattens, and a small head reaches past a vein. Big watches from the path. Bending is how this caterpillar starts a trip across the same leaf vein.",
+        "prompt": "Which parts are touching the leaf right now?",
+        "wink": "Bridges this small skip the toll."
       },
       {
         "id": "loop",
         "plate": "loop",
         "title": "The rear catches up",
-        "passage": "The front legs grip the leaf. The rear comes closer, lifting the long middle into a loop. Near the rear are fleshy grips called prolegs. “No walking legs under that middle!” Little notices. With its ends closer, the body must bend.",
-        "prompt": "Which end holds still while the loop rises?"
+        "passage": "Front grips hold the leaf. The rear slides closer and the long middle lifts into a tall loop. Soft grips near the rear are prolegs — fleshy holders, not jointed walking legs. “No walking legs under that middle,” Little says.",
+        "prompt": "Which end stays put while the loop rises?",
+        "wink": "Middle of the road: no feet on duty."
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A grip, then a reach",
-        "passage": "Now the prolegs anchor the rear: they hold it in place. The front reaches ahead as the body straightens. Once the front grips, the rear can catch up again. “One end holds while the other moves,” Little says. A loop becomes a journey.",
-        "prompt": "Predict what could happen if the rear grip slipped during the reach."
+        "title": "Hold, then reach",
+        "passage": "The prolegs anchor the rear: they hold it in place. The front stretches ahead as the body straightens. When the front grips again, the rear can follow. One end holds; the other moves. Loop by loop, the leaf gets shorter.",
+        "prompt": "What might go wrong if the rear slipped mid-reach?",
+        "wink": "Hold still. Then steal a step."
       },
       {
         "id": "clue",
         "plate": "clue",
-        "title": "The leaf keeps a clue",
-        "passage": "Little sketches the head before a vein fork, then beyond it. The changed positions are evidence: clues that can support an idea. “It traveled past the fork!” That is an inference, an idea drawn from clues. The same leaf vein makes the comparison fair.",
-        "prompt": "Why is a changed head position stronger evidence than just a bent body?"
+        "title": "A clue on the leaf",
+        "passage": "Little draws the head before a vein fork, then after it on the same leaf vein. The two marks are evidence — clues that can support an idea. “It passed the fork!” That idea is an inference: an idea drawn from evidence.",
+        "prompt": "Why is a moved head a stronger clue than a bent body alone?",
+        "wink": "The fork remembers who visited."
       },
       {
         "id": "measure",
         "plate": "measure",
-        "title": "A pretend leaf journey",
-        "passage": "“Does every loop go one inch?” Little asks. The name sounds like measuring, but real steps vary. Little draws a pretend route instead. Its distances are invented. A model helps answer a math question without pretending the leaf picture is a ruler.",
-        "prompt": "What would you need to measure a real journey?"
+        "title": "A pretend leaf route",
+        "passage": "“Does every loop go one inch?” Little asks. The name sounds like a ruler, but real steps vary. So Little invents a pretend route with made-up distances. A model can answer a math question without turning the picture into a measuring stick.",
+        "prompt": "What would you need to measure a real leaf trip?",
+        "wink": "Pretend millimeters still add up."
       },
       {
         "id": "moth",
         "plate": "moth",
         "title": "A later shape",
-        "passage": "Little imagines a later chapter. The caterpillar becomes a pupa, then changes into a moth. This change of body form is metamorphosis. It takes time. Little sketches the stages. “A new shape after all those loops!”",
-        "prompt": "Which stage comes between caterpillar and moth?"
+        "passage": "Little imagines later chapters. The caterpillar becomes a pupa, then a moth. That change of body form is metamorphosis, and it takes time. “A new shape after all those loops,” Little grins.",
+        "prompt": "Which stage sits between caterpillar and moth?",
+        "wink": "Plot twist: wings later."
       }
     ],
     "words": [
@@ -186,14 +192,15 @@
     "questions": [
       "What evidence shows the head traveled rather than only bending in place? Why compare it with the same vein fork?",
       "During the reach, what anchors the rear? Predict what could happen if that grip slipped, and explain why."
-    ]
+    ],
+    "coverWink": "Psst — the leaf is the map."
   },
   "math": {
     "title": "How much leaf is left?",
     "actionLabel": "Follow a leaf journey",
     "eyebrow": "ADD, SUBTRACT & EXPLAIN · ABOUT 15 MIN",
     "plate": "measure",
-    "intro": "Imagine a 32-millimeter route on a leaf. A pretend inchworm travels 12 mm, then 9 mm. A millimeter is a small unit of length; mm is its short name. Use the table to work out the journey.",
+    "intro": "Imagine a 32-millimeter route on a leaf. A pretend inchworm walks 12 mm, then 9 mm. A millimeter is a tiny length unit; mm is the short name. Use the table. Show your thinking.",
     "table": {
       "caption": "Pretend journey distances · millimeters",
       "columnLabel": "Part",
@@ -209,36 +216,61 @@
         9
       ]
     },
-    "printNote": "A pretend journey: mm means millimeters. Use these numbers; do not measure the painting or assume one loop equals one inch.",
+    "printNote": "Use the table numbers. The picture is not a ruler.",
     "tasks": [
       {
         "plate": "measure",
-        "label": "COMBINE TWO STRETCHES",
-        "prompt": "The inchworm travels 12 mm, then 9 mm. How far has it traveled in all?",
+        "label": "ADD TWO PARTS",
+        "prompt": "Walk 12 mm, then 9 mm. How far in all?",
         "equation": "12 + 9 =",
-        "hint": "Add 8 to reach 20, then add the last 1.",
-        "answer": "21 mm. 12 + 8 + 1 = 21."
+        "hint": "Add 12 and 9. You can make a ten first if that helps.",
+        "answer": "21 mm"
       },
       {
         "plate": "measure",
-        "label": "FIND WHAT IS LEFT",
-        "challenge": "multi-step",
-        "prompt": "The whole route is 32 mm. After the 12 mm and 9 mm stretches, how far is left? Show both steps.",
+        "label": "HOW MUCH IS LEFT",
+        "prompt": "Route is 32 mm. After 12 mm and 9 mm, how much is left? Show both steps.",
         "equation": "32 − (12 + 9) =",
-        "hint": "First add the two stretches. Then subtract that total from the whole route.",
-        "answer": "11 mm left. First 12 + 9 = 21. Then 32 − 21 = 11."
+        "hint": "First add 12 and 9. Then take that sum away from 32.",
+        "answer": "11 mm left. First 12 + 9 = 21. Then 32 − 21 = 11.",
+        "challenge": "multi-step"
       },
       {
         "plate": "measure",
-        "label": "CHANGE THE ROUTE",
-        "challenge": "multi-step",
-        "prompt": "Extend the 32 mm route by 8 mm. After traveling the same 21 mm, how far is left on this longer route?",
+        "label": "A LONGER ROUTE",
+        "prompt": "Add 8 mm to the 32 mm route. After a 21 mm walk, how much is left?",
         "equation": "(32 + 8) − 21 =",
-        "hint": "Find the new whole route first. Then subtract the distance already traveled.",
-        "answer": "19 mm left. 32 + 8 = 40; 40 − 21 = 19."
+        "hint": "Make the new whole first (32 + 8). Then subtract 21.",
+        "answer": "19 mm left. First 32 + 8 = 40. Then 40 − 21 = 19.",
+        "challenge": "multi-step"
+      },
+      {
+        "plate": "measure",
+        "label": "THREE LITTLE WALKS",
+        "prompt": "A trip goes 7 mm, then 6 mm, then 5 mm. How far in all?",
+        "equation": "7 + 6 + 5 =",
+        "hint": "Add any two first, then add the last number.",
+        "answer": "18 mm"
+      },
+      {
+        "plate": "measure",
+        "label": "COMPARE TWO TRIPS",
+        "prompt": "Trip A: 12+9 mm. Trip B: 7+6+5 mm. Which is longer, and by how much?",
+        "equation": "(12 + 9) − (7 + 6 + 5) =",
+        "hint": "Find each total. Subtract the smaller total from the bigger one.",
+        "answer": "The first trip is longer by 3 mm. 21 − 18 = 3.",
+        "challenge": "multi-step"
+      },
+      {
+        "plate": "measure",
+        "label": "SHARE THE LEFT-OVER",
+        "prompt": "11 mm left. Two friends share it as evenly as they can. How much each, and how much left over?",
+        "equation": "11 ÷ 2 =",
+        "hint": "How many groups of 2 fit in 11? What is left?",
+        "answer": "5 mm each, with 1 mm left over."
       }
     ],
-    "extension": "Explain why adding 8 mm to the route also adds 8 mm to the distance left, if the traveled distance stays the same.",
+    "extension": "Keep using mm. Show each step.",
     "parentNote": "About 15 minutes. Use a bar model or number-line hops. Read parentheses as 'do this part first'; two separate number sentences are equally useful. The table and route are invented, not measured observations, species speeds, or loop lengths. The final explanation checks that Leo connects the two results: 11 + 8 = 19."
   },
   "writing": {
