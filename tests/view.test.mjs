@@ -61,7 +61,8 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.equal(latest.slug, "how-pianos-work");
   const today = await read("dist/today/index.html");
   assert.match(today, /id="piano-pilot"/);
-  assert.match(today, /INTERNAL \/ DOGFOOD/);
+  assert.match(today, /class="piano-dogfood">DOGFOOD</);
+  assert.doesNotMatch(today, /INTERNAL\s*\/\s*DOGFOOD/);
   assert.match(today, /piano-pilot\.js/);
   assert.equal(await exists("dist/today/piano-pilot.css"), true);
   assert.equal(await exists("dist/today/piano-pilot.js"), true);

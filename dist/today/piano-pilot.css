@@ -65,6 +65,10 @@
   min-height: 340px;
   padding-top: 24px;
 }
+.piano-pilot[data-piano-state="E1"] .piano-stage {
+  pointer-events: none;
+}
+/* E1 .piano-notice-held: static N2 pointing reference; actions live in Daily explanation. */
 .piano-stage h3,
 .piano-talk-through h3,
 .piano-explanation h3 {

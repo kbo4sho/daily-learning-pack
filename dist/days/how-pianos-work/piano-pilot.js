@@ -194,18 +194,27 @@ function readyStage() {
   return `<div class="piano-ready"><div><p class="piano-parent-note">When you are both ready, invite a press.</p><h3 id="piano-stage-heading" tabindex="-1">Press the key</h3></div><div class="piano-effect-control">${mechanismGraphic("ready")}<button type="button" class="piano-key-trigger" data-piano-action="press">Press the key</button></div><button class="text-button" type="button" data-piano-action="back">Back to prediction</button></div>`;
 }
 
+function heldResultMarkup(state, { interactive = false } = {}) {
+  const motion = state.reducedMotion ? "reduced" : "result";
+  const advance = interactive
+    ? `<button class="primary-button" type="button" data-piano-action="talk-together">Talk together</button>`
+    : "";
+  return `<div class="piano-notice${interactive ? "" : " piano-notice-held"}"><p class="piano-parent-note">Leave the picture still while you notice together.</p><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic(motion)}${sequenceLabels()}<p class="piano-simplification">A simplified model. Motion is enlarged.</p>${advance}</div>`;
+}
+
 function noticeStage(state) {
   if (state.phase === "N1")
     return `<div class="piano-notice"><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic("animating")}</div>`;
-  return `<div class="piano-notice"><p class="piano-parent-note">Leave the picture still while you notice together.</p><h3 id="piano-stage-heading" tabindex="-1">The hammer taps and comes away. The string vibrates.</h3>${mechanismGraphic(state.reducedMotion ? "reduced" : "result")}${sequenceLabels()}<p class="piano-simplification">A simplified model. Motion is enlarged.</p><button class="primary-button" type="button" data-piano-action="talk-together">Talk together</button></div>`;
+  return heldResultMarkup(state, { interactive: true });
 }
 
-function stageMarkup(state) {
+export function pianoPilotStageMarkup(state) {
   if (state.phase === "P1") return predictionStage();
   if (state.phase === "L1") return loadingStage();
   if (state.phase === "A1") return arrangementStage(state);
   if (state.phase === "A2") return readyStage();
   if (state.phase === "N1" || state.phase === "N2") return noticeStage(state);
+  if (state.phase === "E1") return heldResultMarkup(state, { interactive: false });
   return "";
 }
 
@@ -253,7 +262,8 @@ function startPianoPilot(panel) {
   function render({ focus = false } = {}) {
     panel.dataset.pianoState = state.phase;
     const closed = state.phase === "D0";
-    const outsideStage = ["D0", "T1", "F1", "E1"].includes(state.phase);
+    const outsideStage = ["D0", "T1", "F1"].includes(state.phase);
+    const heldReference = state.phase === "E1";
     entry.hidden = !closed;
     stage.hidden = outsideStage;
     external.hidden = closed;
@@ -262,19 +272,28 @@ function startPianoPilot(panel) {
     talkThrough.hidden = state.phase !== "T1";
     talkControl.hidden = state.phase === "T1";
     explanation.hidden = state.phase !== "E1";
-    if (!outsideStage) stage.innerHTML = stageMarkup(state);
-    else stage.innerHTML = "";
+    if (!outsideStage) {
+      stage.innerHTML = pianoPilotStageMarkup(state);
+      stage.toggleAttribute("inert", heldReference);
+    } else {
+      stage.innerHTML = "";
+      stage.removeAttribute("inert");
+    }
     if (focus) {
-      if (!outsideStage) focusStage();
+      if (heldReference)
+        requestAnimationFrame(() =>
+          panel
+            .querySelector("#piano-explain-heading")
+            ?.focus({ preventScroll: true }),
+        );
+      else if (!outsideStage) focusStage();
       else
         requestAnimationFrame(() =>
           panel
             .querySelector(
               state.phase === "T1"
                 ? "#piano-talk-heading"
-                : state.phase === "F1"
-                  ? "#piano-unavailable-heading"
-                  : "#piano-explain-heading",
+                : "#piano-unavailable-heading",
             )
             ?.focus({ preventScroll: true }),
         );
