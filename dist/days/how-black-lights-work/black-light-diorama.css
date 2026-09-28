@@ -1,0 +1,600 @@
+/* Scope the six-surface craft to this one dogfood day. */
+body[data-day="how-black-lights-work"] .daily-nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+}
+body[data-day="how-black-lights-work"] .daily-nav a {
+  padding: 16px 8px;
+  text-align: center;
+}
+.bl-title-note {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #70654d;
+  margin-top: 20px;
+}
+.bl-title-plate {
+  margin: 0 0 24px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bl-title-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+}
+.bl-visual-notes {
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid #d9d1c1;
+}
+.bl-visual-notes summary,
+.bl-art-context summary {
+  min-height: 48px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.bl-panel {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.bl-dogfood {
+  font:
+    600 10px Inter,
+    sans-serif;
+  letter-spacing: 0.12em;
+  border: 1px solid #aa9877;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.bl-stage-copy {
+  max-width: 700px;
+  margin: 24px 0;
+}
+.bl-stage-copy h3 {
+  font:
+    400 clamp(26px, 3.5vw, 42px) / 1.12 Newsreader,
+    serif;
+  margin: 8px 0;
+}
+.bl-bench {
+  border: 1px solid #5d503b;
+  background: #151b21;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px #31231518;
+}
+.bl-apparatus {
+  position: relative;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 48% 58%, #353736, #111820 72%);
+}
+.bl-panel:not([hidden]) .bl-apparatus {
+  background-image:
+    linear-gradient(#1017225c, #10172218),
+    url("./assets/black-light-diorama/clean.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bl-drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+}
+.bl-pointer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5eddb;
+  color: #342f26;
+  border: 1px solid #c7b896;
+  border-radius: 5px;
+  font:
+    600 clamp(11px, 1.5vw, 15px) / 1.25 Inter,
+    sans-serif;
+  padding: 10px 12px;
+  min-height: 48px;
+  max-width: 29%;
+  text-align: center;
+  box-shadow: 0 4px 14px #080c1429;
+}
+.bl-pointer::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 27px;
+  background: #e8d8b8;
+  top: 100%;
+  left: 50%;
+}
+.bl-pointer-lamp {
+  left: 9%;
+  top: 7%;
+}
+.bl-pointer-coating {
+  right: 7%;
+  top: 10%;
+}
+.bl-pointer-star {
+  left: 38%;
+  top: 32%;
+}
+.bl-pointer-star::after {
+  height: 35px;
+}
+.bl-pointer-coating::after {
+  height: 44px;
+}
+.bl-pointer[data-bl] {
+  border: 1px dashed #80663b;
+  cursor: pointer;
+}
+.bl-pointer[data-bl]:hover {
+  background: #fff9e9;
+  box-shadow: 0 0 0 3px #c7ac7066;
+}
+.bl-comparison-label {
+  position: absolute;
+  left: 70%;
+  bottom: 5%;
+  color: #f6ead2;
+  font-size: 12px;
+}
+.bl-green-halo,
+.bl-visible-rays,
+.bl-uv-path {
+  opacity: 0;
+}
+[data-lit="true"] .bl-green-halo,
+[data-lit="true"] .bl-visible-rays,
+[data-lit="true"] .bl-uv-path {
+  opacity: 1;
+}
+[data-lit="true"] .bl-lamp-face {
+  fill: #655889;
+}
+[data-lit="true"] .bl-star,
+[data-lit="true"] .bl-coating {
+  fill: #c6f592;
+  filter: drop-shadow(0 0 10px #abf27c80);
+}
+[data-motion="once"] .bl-uv-path {
+  animation: bl-arrive 1s ease both;
+}
+[data-motion="once"] .bl-star,
+[data-motion="once"] .bl-coating {
+  animation: bl-reglow 2.4s ease both;
+}
+[data-motion="once"] .bl-visible-rays,
+[data-motion="once"] .bl-green-halo {
+  animation: bl-arrive 1.1s 0.8s ease both;
+}
+@keyframes bl-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bl-reglow {
+  0%,
+  22% {
+    fill: #c3b694;
+    filter: none;
+  }
+  65%,
+  100% {
+    fill: #c6f592;
+    filter: drop-shadow(0 0 10px #abf27c80);
+  }
+}
+.bl-control-base {
+  padding: 24px 32px 30px;
+  border-top: 1px solid #9a7852;
+  background: linear-gradient(105deg, #483529, #2e251f 60%, #47372a);
+  color: #fbf2df;
+  min-height: 166px;
+}
+.bl-control-base > p {
+  margin: 0 0 16px;
+  font-size: 16px;
+}
+.bl-control-base button {
+  font:
+    600 14px/1.35 Inter,
+    sans-serif;
+  cursor: pointer;
+  min-height: 48px;
+  border-radius: 6px;
+  padding: 14px 18px;
+  border: 1px solid #c6b595;
+}
+.bl-primary,
+.bl-activate {
+  background: linear-gradient(#f8efd8, #d9c6a0);
+  color: #352b1d;
+  box-shadow: 0 3px 0 #957851;
+}
+.bl-secondary {
+  color: #fbf2df;
+  background: transparent;
+  margin-left: 12px;
+}
+.bl-activate {
+  min-height: 78px !important;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.bl-switch {
+  width: 24px;
+  height: 34px;
+  border-radius: 5px;
+  background: linear-gradient(#fff8e9 52%, #c1af88 53%);
+  border: 1px solid #8f7f62;
+  box-shadow: 0 2px 4px #352d2960;
+}
+.bl-tray {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.bl-tray button {
+  background: #ede2c9;
+  color: #382d21;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+.bl-tray button[aria-pressed="true"] {
+  outline: 3px solid #cfc7ef;
+  outline-offset: 2px;
+}
+.bl-tray button:disabled {
+  background: #322922;
+  color: #d8cbae;
+  border-color: #776349;
+  cursor: default;
+}
+.bl-piece-icon {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 auto;
+  background: #776955;
+  display: block;
+}
+.bl-icon-lamp {
+  border-radius: 3px 3px 12px 12px;
+  background: #454651;
+  border-bottom: 5px solid #9c8fb6;
+}
+.bl-icon-coating {
+  border-radius: 50%;
+  border: 4px dotted #ebe2c5;
+}
+.bl-icon-star {
+  clip-path: polygon(
+    50% 0,
+    62% 34%,
+    100% 38%,
+    71% 61%,
+    81% 100%,
+    50% 77%,
+    19% 100%,
+    29% 61%,
+    0 38%,
+    38% 34%
+  );
+}
+.bl-model-note {
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 730px;
+  color: #625b4d;
+  margin: 16px 0;
+}
+.bl-status {
+  min-height: 48px;
+  font-size: 14px;
+  max-width: 760px;
+}
+.bl-external {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 12px 0 30px;
+  align-items: center;
+}
+.bl-external .text-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.bl-explain,
+.bl-talk {
+  background: #eee8dc;
+  border-left: 2px solid #a28957;
+  padding: 24px;
+  margin: 24px 0;
+  max-width: 800px;
+}
+.bl-explain h3,
+.bl-talk h3 {
+  font:
+    400 30px/1.15 Newsreader,
+    serif;
+  margin: 0 0 16px;
+}
+.bl-talk li {
+  margin-bottom: 14px;
+}
+.bl-path {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 24px;
+}
+.bl-path li {
+  flex: 1;
+  padding-right: 12px;
+}
+.bl-art-context {
+  max-width: 640px;
+  border-top: 1px solid #d9d1c1;
+}
+.bl-art-context img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.bl-art-context p {
+  font-size: 13px;
+}
+.bl-quiz {
+  max-width: 760px;
+}
+.bl-quiz fieldset {
+  border: 0;
+  border-top: 1px solid #d9d1c1;
+  padding: 26px 0;
+  margin: 0;
+}
+.bl-quiz legend {
+  font:
+    400 26px/1.2 Newsreader,
+    serif;
+  float: left;
+  width: 100%;
+  margin: 0 0 16px;
+}
+.bl-quiz label {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #cfc4ae;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bl-quiz input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #685737;
+}
+.bl-quiz label:has(input:checked) {
+  background: #ede4ce;
+  border-color: #87704b;
+}
+.bl-quiz details {
+  border-top: 1px solid #d9d1c1;
+  padding-top: 20px;
+}
+.bl-quiz summary {
+  padding: 12px 0;
+  min-height: 48px;
+  cursor: pointer;
+}
+.bl-quiz dd {
+  margin: 0 0 16px;
+}
+.bl-foldable {
+  max-width: 760px;
+}
+.bl-foldable .primary-button {
+  margin: 16px 0;
+}
+.bl-foldable ol {
+  line-height: 1.8;
+}
+body[data-day="how-black-lights-work"] .growth-table {
+  font-size: clamp(11px, 1.25vw, 14px);
+  table-layout: fixed;
+}
+body[data-day="how-black-lights-work"] .growth-table th,
+body[data-day="how-black-lights-work"] .growth-table td {
+  padding: 9px 2px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 650px) {
+  body[data-day="how-black-lights-work"] .daily-nav {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0;
+  }
+  body[data-day="how-black-lights-work"] .daily-nav a {
+    padding: 11px 5px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+  body[data-day="how-black-lights-work"].reader-open .daily-nav {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  body[data-day="how-black-lights-work"].reader-open .daily-nav a {
+    font-size: 10px;
+    padding: 12px 2px;
+  }
+  .bl-control-base {
+    padding: 20px 16px;
+    min-height: 150px;
+  }
+  .bl-pointer {
+    font-size: 10px;
+    padding: 6px 7px;
+    min-height: 44px;
+    max-width: 30%;
+  }
+  .bl-pointer::after {
+    height: 14px;
+  }
+  .bl-pointer-lamp {
+    left: 5%;
+    top: 4%;
+  }
+  .bl-pointer-coating {
+    right: 3%;
+    top: 8%;
+  }
+  .bl-pointer-star {
+    left: 36%;
+    top: 28%;
+  }
+  .bl-pointer-coating::after {
+    height: 30px;
+  }
+  .bl-drawing {
+    min-height: 270px;
+  }
+  .bl-comparison-label {
+    font-size: 10px;
+    bottom: 12%;
+    left: 73%;
+  }
+  .bl-tray {
+    gap: 7px;
+  }
+  .bl-tray button {
+    padding: 12px 5px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    min-height: 92px;
+  }
+  .bl-secondary {
+    margin: 12px 0 0;
+  }
+  .bl-notice > div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bl-path {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+  }
+  .bl-path li {
+    margin-bottom: 8px;
+  }
+  .bl-stage-copy h3 {
+    font-size: 28px;
+  }
+  .bl-external {
+    gap: 12px;
+  }
+  .bl-model-note {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bl-panel *,
+  .bl-panel *::before,
+  .bl-panel *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  .bl-panel,
+  .bl-quiz,
+  .bl-foldable {
+    break-before: page;
+  }
+  .bl-external,
+  .bl-art-context,
+  .bl-control-base button {
+    display: none !important;
+  }
+  .bl-bench {
+    box-shadow: none;
+  }
+  .bl-drawing {
+    max-height: 350px;
+  }
+}
+
+/* Leaders align with the lamp, coating lens and star in SVG coordinates. */
+.bl-pointer-lamp {
+  left: 29%;
+  top: 3%;
+  transform: translateX(-50%);
+}
+.bl-pointer-coating {
+  left: 73%;
+  right: auto;
+  top: 14%;
+  transform: translateX(-50%);
+}
+.bl-pointer-star {
+  left: 48%;
+  top: 33%;
+  transform: translateX(-50%);
+}
+.bl-pointer-lamp::after {
+  height: 42px;
+}
+.bl-pointer-star::after {
+  height: 60px;
+}
+@media (max-width: 650px) {
+  .bl-pointer-lamp {
+    top: 4%;
+  }
+  .bl-pointer-coating {
+    top: 10%;
+  }
+  .bl-pointer-star {
+    top: 31%;
+  }
+  .bl-pointer-lamp::after {
+    height: 25px;
+  }
+  .bl-pointer-star::after {
+    height: 24px;
+  }
+  .bl-pointer-coating::after {
+    height: 22px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  body[data-day="how-black-lights-work"] .family-reader .curiosity-plate {
+    max-width: 540px;
+  }
+}
