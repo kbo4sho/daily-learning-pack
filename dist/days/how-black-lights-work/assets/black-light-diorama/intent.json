@@ -1,0 +1,20 @@
+{
+  "theme": "how black lights work",
+  "audience": "Parent-led Grade 2 internal dogfood",
+  "choices": [
+    "Quiet museum mystery; Big and Little share attention.",
+    "Warm ink, paper, walnut and rare brass; glow color describes the material.",
+    "Generated apparatus and clean backdrop support an SVG mechanism with real HTML controls.",
+    "UV paths in the model are explicitly symbolic; art is not a building plan."
+  ],
+  "assets": [
+    {
+      "name": "diorama-source",
+      "intent": "Generated full apparatus reference with UV lamp, coated glowing star, plain star and quiet observers. Optional context for the live SVG model."
+    },
+    {
+      "name": "clean-source",
+      "intent": "Empty walnut museum backdrop for the code-drawn apparatus. No mechanism state is baked into this image."
+    }
+  ]
+}

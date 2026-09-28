@@ -58,16 +58,45 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-pianos-work");
+  assert.equal(latest.slug, "how-black-lights-work");
+  assert.equal(latest.date, "2026-09-28");
+  assert.deepEqual(
+    json.days.map((day) => day.slug),
+    [
+      "how-black-lights-work",
+      "how-code-turns-into-lesson",
+      "curiosity-inchworms",
+      "how-pianos-work",
+      "diamond",
+      "curiosity-bean",
+    ],
+  );
   const today = await read("dist/today/index.html");
-  assert.match(today, /id="piano-pilot"/);
-  assert.match(today, /class="piano-dogfood">DOGFOOD</);
-  assert.doesNotMatch(today, /INTERNAL\s*\/\s*DOGFOOD/);
-  assert.match(today, /piano-pilot\.js/);
-  // JPEG A: no L1 data-piano-assets preload gate on 02/03.
-  assert.doesNotMatch(today, /data-piano-assets/);
-  assert.equal(await exists("dist/today/piano-pilot.css"), true);
-  assert.equal(await exists("dist/today/piano-pilot.js"), true);
+  for (const surface of [
+    "curiosity",
+    "math",
+    "reading",
+    "diorama",
+    "quiz",
+    "foldable",
+  ])
+    assert.ok(today.includes(`data-go="${surface}"`));
+  assert.match(today, /bl-dogfood">DOGFOOD/);
+  assert.match(today, /black-light-diorama\.js/);
+  assert.match(today, /Visual &amp; asset notes/);
+  assert.equal(await exists("dist/today/black-light-diorama.css"), true);
+  assert.equal(await exists("dist/today/black-light-diorama.js"), true);
+  assert.equal(todayPack.plates.length, 6);
+  assert.equal(todayPack.quiz.questions.length, 4);
+  for (const [i, q] of todayPack.quiz.questions.entries())
+    assert.equal(
+      todayPack.answers.find((a) => a.label === `Quiz · ${i + 1}`).text,
+      q.answer,
+    );
+  const fold = await readFile(
+    new URL("../dist/today/pdf/foldable.pdf", import.meta.url),
+  );
+  assert.ok(fold.length < 1_000_000);
   const pianoDay = await read("dist/days/how-pianos-work/index.html");
   assert.match(pianoDay, /id="piano-pilot"/);
   assert.doesNotMatch(pianoDay, /data-piano-assets/);

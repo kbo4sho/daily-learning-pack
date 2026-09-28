@@ -1,0 +1,42 @@
+{
+  "theme": "how black lights work",
+  "audience": "Parent-led Grade 2 internal dogfood",
+  "choices": [
+    "Quiet museum mystery; Big and Little share attention.",
+    "Warm ink, paper, walnut and rare brass; glow color describes the material.",
+    "Generated apparatus and clean backdrop support an SVG mechanism with real HTML controls.",
+    "UV paths in the model are explicitly symbolic; art is not a building plan."
+  ],
+  "assets": [
+    {
+      "name": "01-mystery",
+      "plate": "mystery",
+      "intent": "Wonder at matching shapes with different glow."
+    },
+    {
+      "name": "02-beyond-violet",
+      "plate": "beyond",
+      "intent": "Ritter finds unseen light through a material change."
+    },
+    {
+      "name": "03-new-name",
+      "plate": "name",
+      "intent": "Stokes gives fluorescence a name, without claiming he invented black lights."
+    },
+    {
+      "name": "04-lamp",
+      "plate": "lamp",
+      "intent": "Distinguish invisible UV-A from visible violet leakage."
+    },
+    {
+      "name": "05-material",
+      "plate": "material",
+      "intent": "Coating absorbs UV-A and emits visible green light."
+    },
+    {
+      "name": "06-keep",
+      "plate": "keep",
+      "intent": "Prompt stopping of fluorescence resolves the tiny-lights guess."
+    }
+  ]
+}
