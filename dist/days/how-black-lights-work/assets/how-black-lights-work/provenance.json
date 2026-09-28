@@ -1,0 +1,102 @@
+{
+  "tool": "built-in image_gen",
+  "localArtModelsUsed": false,
+  "date": "2026-09-28",
+  "acceptedPlateCount": 6,
+  "generatedBeforeLearningContent": false,
+  "workflow": "Story arc and art intent established first; full learning content authored alongside image generation and finalized after visual review.",
+  "delivery": "JPEG quality 86, 1536 x 1024. PNG originals retained in generators only.",
+  "review": "All accepted images visually inspected. Material plate revised to remove green lamp emission; invisible UV is not a visible beam.",
+  "assets": [
+    {
+      "path": "assets/how-black-lights-work/01-mystery.png",
+      "bytes": 2308462,
+      "sha256": "a47e94726c2155bc9ce8e3a4636847d8aa272298777ce75703d3cd9b3c2b4709"
+    },
+    {
+      "path": "assets/how-black-lights-work/01-mystery.jpg",
+      "bytes": 435348,
+      "sha256": "9f087c519d9bba8be657bbcf9d1ab08fbc1d29aae8a4f7ab033ca3ed7f3bba26"
+    },
+    {
+      "path": "assets/how-black-lights-work/02-beyond-violet.png",
+      "bytes": 2818339,
+      "sha256": "69a0aea674b77560de91fcf5695ee0c6e8c9819d6fb5f9c27720296d81a18dc5"
+    },
+    {
+      "path": "assets/how-black-lights-work/02-beyond-violet.jpg",
+      "bytes": 619387,
+      "sha256": "3932d8a4962b5d076edf31be938a602e927dcdddb7caa1f945c12cf15a2857c2"
+    },
+    {
+      "path": "assets/how-black-lights-work/03-new-name.png",
+      "bytes": 2688471,
+      "sha256": "08f7d105b2a75177e7d9ad866f1de236f4720ab096e382073aa49f33fa63a703"
+    },
+    {
+      "path": "assets/how-black-lights-work/03-new-name.jpg",
+      "bytes": 560072,
+      "sha256": "29de8cbf85bb6a66fda05cc4feb4336c2bb35ffb85af4b126dc04c01611711fa"
+    },
+    {
+      "path": "assets/how-black-lights-work/04-lamp.png",
+      "bytes": 2627996,
+      "sha256": "96dfac4e0689c9bc977fffb729530a08a83f14e832bb430a752ab2a1f27b9a66"
+    },
+    {
+      "path": "assets/how-black-lights-work/04-lamp.jpg",
+      "bytes": 562477,
+      "sha256": "0b22431d164124afa40285edd23661cc0892b05da74ebe9aaffa57b28f8e6a46"
+    },
+    {
+      "path": "assets/how-black-lights-work/05-material.png",
+      "bytes": 2204856,
+      "sha256": "1e992e2bf27c925c3b3558235f7bd4a49baf769f27cdd87512d9637f349a7f93"
+    },
+    {
+      "path": "assets/how-black-lights-work/05-material.jpg",
+      "bytes": 450493,
+      "sha256": "8966737238cf8af0df14870518f99f38ca47d2e0eefd54a24a6626e52a29e702"
+    },
+    {
+      "path": "assets/how-black-lights-work/06-keep.png",
+      "bytes": 2502970,
+      "sha256": "f189e69bea2cb10e4ce9b72c26a9076b6b7883afecaaaf0a03b57ef62b67f56d"
+    },
+    {
+      "path": "assets/how-black-lights-work/06-keep.jpg",
+      "bytes": 517171,
+      "sha256": "f5e740486856ef6507f655fe5e662a4e6e82673e05da873bd8eadf7ad4192260"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/01-mystery.jpg",
+      "bytes": 108044,
+      "sha256": "60affb871b010200df2a79b90ad446d7accf0869524ca84736f91249a69562cf"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/02-beyond-violet.jpg",
+      "bytes": 158086,
+      "sha256": "3d12d66a4b32e302b70416eb672701017b229d2bdeb8a6201387b6ffdf93c8f1"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/03-new-name.jpg",
+      "bytes": 130580,
+      "sha256": "904be9278709e069aa956e67b0e8845867bdf91c6a278f4491c03b54935e96c2"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/04-lamp.jpg",
+      "bytes": 138822,
+      "sha256": "9a3ed5a3bc08c4b7bdfe2aea7d4eaef250529933078a93f51b3c421f1734907a"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/05-material.jpg",
+      "bytes": 122923,
+      "sha256": "dedd8f0d43d7773458aacf36fddaafbaddcfd7923e96ec46c589c7a4ab04f0a3"
+    },
+    {
+      "path": "assets/how-black-lights-work/fold/06-keep.jpg",
+      "bytes": 128641,
+      "sha256": "c7ec5d34816de0d9aa4a06ac6b628a1a92d56f79387092f5a2775cc947fb5da1"
+    }
+  ]
+}

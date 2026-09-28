@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-26T18:55:33.132Z",
-  "latest": "how-pianos-work",
+  "generatedAt": "2026-09-28T18:11:12.812Z",
+  "latest": "how-black-lights-work",
   "leoEntry": "./today/",
   "days": [
     {
-      "slug": "how-pianos-work",
+      "slug": "how-black-lights-work",
       "date": "2026-09-28",
-      "topic": "how pianos work",
-      "title": "The note inside.",
-      "teaser": "Little follows a tiny tap into a room full of sound.",
-      "href": "./days/how-pianos-work/",
+      "topic": "how black lights work",
+      "title": "The light we cannot see.",
+      "teaser": "Two paper stars send Little searching beyond the rainbow.",
+      "href": "./days/how-black-lights-work/",
       "latest": true
     },
     {
@@ -29,6 +29,15 @@
       "title": "A loop goes somewhere.",
       "teaser": "A leaf vein helps Little see how a loop becomes a journey.",
       "href": "./days/curiosity-inchworms/",
+      "latest": false
+    },
+    {
+      "slug": "how-pianos-work",
+      "date": "2026-09-25",
+      "topic": "how pianos work",
+      "title": "The note inside.",
+      "teaser": "Little follows a tiny tap into a room full of sound.",
+      "href": "./days/how-pianos-work/",
       "latest": false
     },
     {
