@@ -11,7 +11,7 @@ function showPanel(name, focus = true) {
     else link.removeAttribute("aria-current");
   });
   document.body.classList.toggle("reader-open", name === "reading");
-  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing" }[name]} · Wonder Daily`;
+  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing", diorama: "Diorama", quiz: "Quiz + key", foldable: "Foldable" }[name]} · Wonder Daily`;
   document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
   if (focus) {
     document.querySelector(`#${name}-heading`).focus({ preventScroll: true });

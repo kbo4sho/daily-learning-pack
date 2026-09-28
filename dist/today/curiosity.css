@@ -1227,7 +1227,6 @@ body.reader-open .daily-header {
   }
 }
 
-
 /* Six-task math Letter sheet: keep one page without skimping readability. */
 .curiosity-sheet.dense .paper-notebook {
   grid-template-columns: 70pt 1fr;
@@ -1273,4 +1272,22 @@ body.reader-open .daily-header {
 }
 .curiosity-sheet.dense .name-line {
   margin-top: 2pt;
+}
+
+/* The seven-position spectrum needs a full-width table in the Letter sheet. */
+.black-light-sheet.curiosity-math .paper-notebook {
+  grid-template-columns: 112pt minmax(0, 1fr);
+  gap: 14pt;
+}
+.black-light-sheet.curiosity-math .growth-table {
+  table-layout: fixed;
+  font-size: 8pt;
+}
+.black-light-sheet.curiosity-math .growth-table th,
+.black-light-sheet.curiosity-math .growth-table td {
+  padding: 8pt 1pt;
+  overflow-wrap: anywhere;
+}
+.black-light-sheet.curiosity-math .paper-measure .paper-intro {
+  font-size: 9pt;
 }
