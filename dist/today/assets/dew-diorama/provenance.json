@@ -1,0 +1,20 @@
+{
+  "generator": "built-in image_gen",
+  "generatedAt": "2026-09-29",
+  "localArtModelsUsed": false,
+  "transformations": "PNG originals copied unchanged; JPEG delivery; 720px JPEG fold derivatives for scenic plates only",
+  "assets": [
+    {
+      "file": "diorama.jpg",
+      "sha256": "f7eb129b50f522eca17a363e67259c73a0a2d2cbc04b4b3fcda0b00fa6f318a3",
+      "bytes": 473405,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "diorama.png",
+      "sha256": "221d01adc521dfc814e625c46291401d0bbd1a4e641f51e2b005f26da024e4d0",
+      "bytes": 2782005,
+      "dimensions": [1536, 1024]
+    }
+  ]
+}
