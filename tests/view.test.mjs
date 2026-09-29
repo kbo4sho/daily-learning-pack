@@ -97,11 +97,9 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 6);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
-  for (const [i, q] of todayPack.quiz.questions.entries())
-    assert.equal(
-      todayPack.answers.find((a) => a.label === `Quiz · ${i + 1}`).text,
-      q.answer,
-    );
+  assert.ok(!todayPack.answers.some((a) => a.label.startsWith("Quiz")));
+  for (const q of todayPack.quiz.questions)
+    assert.ok(today.includes(q.answer), "web quiz uses its canonical answer");
   const fold = await readFile(
     new URL("../dist/today/pdf/foldable.pdf", import.meta.url),
   );

@@ -225,8 +225,7 @@
     "yourTurn": {
       "title": "Your turn",
       "prompt": "Write one command sentence for the leaf’s story. Tell what to do.",
-      "example": "Example: First cool the leaf, then wait for tiny drops.",
-      "lines": 2
+      "example": "Example: First cool the leaf, then wait for tiny drops."
     }
   },
   "math": {
@@ -399,22 +398,6 @@
     {
       "label": "Writing",
       "text": "Accept one sensible command sentence, spoken, dictated, or written. Example: “First cool the leaf, then wait for tiny drops.” The notebook describes nature; it does not control the weather."
-    },
-    {
-      "label": "Quiz · 1",
-      "text": "Water vapor is invisible water in a gas form."
-    },
-    {
-      "label": "Quiz · 2",
-      "text": "The leaf gives off heat to the open sky and can become colder than the surrounding air."
-    },
-    {
-      "label": "Quiz · 3",
-      "text": "Some vapor condenses into liquid dew right on the leaf. At the dew point, the air is cool enough for condensation."
-    },
-    {
-      "label": "Quiz · 4",
-      "text": "Liquid dew evaporates into invisible water vapor. The water changes form; it is not gone forever."
     }
   ],
   "parentGuidance": "Leo is 7, in Grade 2. Follow his questions and welcome dictation. Dew forms on cool surfaces; it does not fall like rain. “Air holds vapor” is kid-sized language: the air is not a sponge. Cooling to the dew point allows vapor to condense. Clear skies favor radiative cooling; clouds and wind can reduce it, but do not guarantee a dry leaf. All math counts and diorama temperatures are pretend. No experiment is required. A cold glass is an analogy, not a required activity.",
@@ -435,7 +418,7 @@
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Leo is age 7, Grade 2. New Curiosity packs require exactly six math tasks, one per skill: addition-regrouping, subtraction-regrouping, two-step, equal-groups, missing-addend, pattern-sequencing. Numbers and results stay within 100. Each task asks one clear question and includes a hint, numeric answer, and short worked step. Equal groups needs repeated-addition support. The pattern follows the story's step-by-step instructions idea. Explain precise vocabulary in context; welcome speech and dictation.",
+    "learningRule": "Leo is age 7, Grade 2. New Curiosity packs require exactly six math tasks, one per skill: addition-regrouping, subtraction-regrouping, two-step, equal-groups, missing-addend, pattern-sequencing. Numbers and results stay within 100. Each task asks one clear question and includes a hint, numeric answer, and short worked step. Equal groups needs repeated-addition support. Tie the pattern or sequence to the day's theme. Explain precise vocabulary in context; welcome speech and dictation.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
