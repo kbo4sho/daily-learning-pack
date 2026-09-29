@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T18:11:12.812Z",
-  "latest": "how-black-lights-work",
+  "generatedAt": "2026-09-29T17:28:36.916Z",
+  "latest": "morning-dew",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "morning-dew",
+      "date": "2026-09-29",
+      "topic": "morning dew",
+      "title": "The drops that did not fall.",
+      "teaser": "A wet leaf and a dry path send Little looking for drops that never fell.",
+      "href": "./days/morning-dew/",
+      "latest": true
+    },
     {
       "slug": "how-black-lights-work",
       "date": "2026-09-28",
@@ -11,7 +20,7 @@
       "title": "The light we cannot see.",
       "teaser": "Two paper stars send Little searching beyond the rainbow.",
       "href": "./days/how-black-lights-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-code-turns-into-lesson",
