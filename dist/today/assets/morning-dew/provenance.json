@@ -1,0 +1,116 @@
+{
+  "generator": "built-in image_gen",
+  "generatedAt": "2026-09-29",
+  "localArtModelsUsed": false,
+  "transformations": "PNG originals copied unchanged; JPEG delivery; 720px JPEG fold derivatives for scenic plates only",
+  "assets": [
+    {
+      "file": "01-wake-fold.jpg",
+      "sha256": "fef76be06d7b2b8b41885d36e623f1e9dae7053be5c5908fd63c9b7f45258c9a",
+      "bytes": 128261,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "01-wake.jpg",
+      "sha256": "31dd9fcc61a5a16d7ef1a24ff89aa3157a1890f4779807c4d522b7a615961572",
+      "bytes": 573133,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "01-wake.png",
+      "sha256": "a648835baeb90b6e5ed24cc6d53eca9c190bd33ad94408252e34f58536f53b29",
+      "bytes": 3255754,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "02-reach-fold.jpg",
+      "sha256": "ed65e150597f0b4eceb100b6ba5f5db24175bf73c2161659d4f2dbee8c5b7e18",
+      "bytes": 116762,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "02-reach.jpg",
+      "sha256": "b4a201a1727b3a8ecfd0b17e4bb5e3bbf490da318daa4f5e85f41994ef287c91",
+      "bytes": 546991,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "02-reach.png",
+      "sha256": "bd738ec2c066beab7ac218d5acc87ed9a336e2943a50117c510aac0efec1fdae",
+      "bytes": 3157477,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "03-change-fold.jpg",
+      "sha256": "3abde1139604bc0fb47f8461b4db66ac5be1dd9e316d81b4e54ae3b535c58c16",
+      "bytes": 96972,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "03-change.jpg",
+      "sha256": "0b104fe505e1648b7a2c7461a3b0ec6b44d462238914641340cd57984f53cc4c",
+      "bytes": 439787,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "03-change.png",
+      "sha256": "31f9b5fc402083b9b5cd0f0e4e91625838b26f0a328d4293b29d4dcbecc9911e",
+      "bytes": 2922590,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "04-notice-fold.jpg",
+      "sha256": "7ad7e635657107fb3ab8c0a71a36ec3a6efbae7162474dae68a46d0f3448280c",
+      "bytes": 126165,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "04-notice.jpg",
+      "sha256": "afd3a93b2bba92860d15d2be99097c644e3bac70ac7292e1f317e29323c74a4e",
+      "bytes": 511618,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "04-notice.png",
+      "sha256": "d1423c3f3245933edccea9153fb0e19d02d5a96fe342b4077f45d8d2698226fd",
+      "bytes": 3053733,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "05-return-fold.jpg",
+      "sha256": "5a69c2cbbd53e979fd37c29b16a9345ec889de86dfc876f0898f811319b097e4",
+      "bytes": 121289,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "05-return.jpg",
+      "sha256": "a92bebde3711bcebdd5e71ac74404d91565dab685c2d2506890abd3dd2edc3fc",
+      "bytes": 505020,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "05-return.png",
+      "sha256": "0de94db202a576e40409aaf85e12306f31e79eea2f4a9c11bb3e2dbe61d97e69",
+      "bytes": 3038746,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "06-keep-fold.jpg",
+      "sha256": "c60c1a46a5d7f0ed108a4495752fdc37c9b5900e5335811e8cdfc57666ff072d",
+      "bytes": 112049,
+      "dimensions": [720, 480]
+    },
+    {
+      "file": "06-keep.jpg",
+      "sha256": "f52be88325c5aab54f764614face4058f73422fb9ea6706d323d28be5eb8bb70",
+      "bytes": 470098,
+      "dimensions": [1536, 1024]
+    },
+    {
+      "file": "06-keep.png",
+      "sha256": "925a0bb78e401e30999dde3cef25953d46149f956f24ae66171c3a8476b7a02c",
+      "bytes": 2855895,
+      "dimensions": [1536, 1024]
+    }
+  ]
+}
