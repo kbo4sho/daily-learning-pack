@@ -58,11 +58,12 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-black-lights-work");
-  assert.equal(latest.date, "2026-09-28");
+  assert.equal(latest.slug, "morning-dew");
+  assert.equal(latest.date, "2026-09-29");
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "morning-dew",
       "how-black-lights-work",
       "how-code-turns-into-lesson",
       "curiosity-inchworms",
@@ -81,11 +82,19 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
     "foldable",
   ])
     assert.ok(today.includes(`data-go="${surface}"`));
-  assert.match(today, /bl-dogfood">DOGFOOD/);
-  assert.match(today, /black-light-diorama\.js/);
+  assert.match(today, /dew-dogfood">DOGFOOD/);
+  assert.match(today, /dew-diorama\.js/);
   assert.match(today, /Visual &amp; asset notes/);
-  assert.equal(await exists("dist/today/black-light-diorama.css"), true);
-  assert.equal(await exists("dist/today/black-light-diorama.js"), true);
+  assert.equal(await exists("dist/today/dew-diorama.css"), true);
+  assert.equal(await exists("dist/today/dew-diorama.js"), true);
+  assert.equal(todayPack.targetAge, 7);
+  assert.equal(todayPack.gradeLevel, 2);
+  assert.equal(todayPack.math.tasks.length, 6);
+  assert.deepEqual(
+    todayPack.math.tasks.map((t) => t.answer),
+    [85, 34, 26, 24, 33, 27],
+  );
+  assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 6);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
   for (const [i, q] of todayPack.quiz.questions.entries())
