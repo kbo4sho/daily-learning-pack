@@ -63,10 +63,7 @@ async function withFaces(entries, root) {
       const pack = await readDayPack(root, entry);
       return {
         ...entry,
-        gradeLevel:
-          Number.isInteger(pack?.gradeLevel) && pack.gradeLevel > 0
-            ? pack.gradeLevel
-            : undefined,
+        gradeLevel: pack?.gradeLevel,
         face: await faceFromPack(root, entry, "./", pack),
       };
     }),

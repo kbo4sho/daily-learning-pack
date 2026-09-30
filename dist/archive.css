@@ -156,7 +156,7 @@ img {
 .packet-shelf {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: 40px;
   list-style: none;
   padding: 0;
@@ -318,6 +318,18 @@ img {
   font-size: 0.7rem;
   line-height: 1.65;
   color: var(--muted);
+}
+/* Shelf packets share their row height; the door keeps its natural height. */
+.seed-packet,
+.seed-packet .seed-packet-link,
+.seed-packet .packet-face {
+  display: grid;
+}
+.seed-packet .packet-note {
+  margin-bottom: 20px;
+}
+.seed-packet .packet-small-print {
+  margin-top: auto;
 }
 .packet-small-print time {
   white-space: nowrap;
