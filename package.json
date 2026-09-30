@@ -18,9 +18,11 @@
     "preview": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
     "format": "prettier --write \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md",
-    "format:check": "prettier --check \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md"
+    "format:check": "prettier --check \"src/**/*.{js,mjs,css}\" \"scripts/*.mjs\" \"tests/*.mjs\" \"*.json\" \".github/workflows/*.yml\" README.md OUTCOME.md",
+    "test:browser": "node tests/archive-browser.mjs"
   },
   "devDependencies": {
+    "playwright": "^1.63.0",
     "prettier": "3.6.2"
   }
 }
