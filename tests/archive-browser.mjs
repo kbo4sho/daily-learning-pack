@@ -1,12 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdir, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import { serve } from "../scripts/serve.mjs";
 
 const root = resolve("dist");
-const qa = resolve(process.env.ARCHIVE_QA_DIR || "output/archive-qa");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
 const days = [
   archive.days.find((day) => day.slug === archive.latest),
@@ -28,7 +27,6 @@ const packets = days.map((day, index) => ({
     .replace(",", "")}`,
   path: `/daily-learning-pack/${index === 0 ? "today" : `days/${day.slug}`}/`,
 }));
-await mkdir(qa, { recursive: true });
 
 async function ready(page, url) {
   await page.goto(url);
@@ -137,21 +135,6 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
               assert.ok(focus.offset >= 2);
               assert.equal(focus.clip, "none");
               assert.notEqual(focus.overflow, "hidden");
-              if (routeName === "archive" && index === 0 && key === "Enter") {
-                await page.screenshot({
-                  path: `${qa}/focused-packet${engine === "webkit" ? "-webkit" : ""}.png`,
-                });
-                const box = await link.boundingBox();
-                await page.screenshot({
-                  path: `${qa}/packet-detail-${engine}.png`,
-                  clip: {
-                    x: box.x - 12,
-                    y: box.y - 12,
-                    width: box.width + 24,
-                    height: box.height + 24,
-                  },
-                });
-              }
               await opensPack(page, packets[index], () =>
                 page.keyboard.press(key),
               );
@@ -160,135 +143,115 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
         }
       }
       for (const width of [320, 390, 820, 1440]) {
-        await t.test(
-          `${routeName}: ${width}px layout and screenshot`,
-          async () => {
-            await page.setViewportSize({ width, height: 1000 });
-            await ready(page, url);
-            const layout = await page.evaluate(() => {
-              const rect = (el) => {
-                const r = el.getBoundingClientRect();
-                return {
-                  left: r.left,
-                  right: r.right,
-                  top: r.top,
-                  bottom: r.bottom,
-                  width: r.width,
-                };
-              };
-              const links = [
-                ...document.querySelectorAll("a.seed-packet-link"),
-              ];
+        await t.test(`${routeName}: ${width}px layout`, async () => {
+          await page.setViewportSize({ width, height: 1000 });
+          await ready(page, url);
+          const layout = await page.evaluate(() => {
+            const rect = (el) => {
+              const r = el.getBoundingClientRect();
               return {
-                viewport: innerWidth,
-                scroll: document.documentElement.scrollWidth,
-                columns: getComputedStyle(
-                  document.querySelector(".packet-shelf"),
-                ).gridTemplateColumns.split(" ").length,
-                packets: links.map((link) => ({
-                  box: rect(link),
-                  clip: getComputedStyle(link.querySelector(".packet-face"))
-                    .clipPath,
-                  text: [
-                    ...link.querySelectorAll(
-                      ".packet-cultivar, .packet-small-print, .packet-note, .packet-house",
-                    ),
-                  ].map((el) => {
-                    const range = document.createRange();
-                    range.selectNodeContents(el);
-                    return {
-                      name: el.className,
-                      box: rect(el),
-                      scroll: el.scrollWidth,
-                      client: el.clientWidth,
-                      lines: [...range.getClientRects()].map((r) => ({
-                        left: r.left,
-                        right: r.right,
-                        top: r.top,
-                        bottom: r.bottom,
-                      })),
-                    };
-                  }),
-                })),
+                left: r.left,
+                right: r.right,
+                top: r.top,
+                bottom: r.bottom,
+                width: r.width,
               };
-            });
+            };
+            const links = [...document.querySelectorAll("a.seed-packet-link")];
+            return {
+              viewport: innerWidth,
+              scroll: document.documentElement.scrollWidth,
+              columns: getComputedStyle(
+                document.querySelector(".packet-shelf"),
+              ).gridTemplateColumns.split(" ").length,
+              packets: links.map((link) => ({
+                box: rect(link),
+                clip: getComputedStyle(link.querySelector(".packet-face"))
+                  .clipPath,
+                text: [
+                  ...link.querySelectorAll(
+                    ".packet-cultivar, .packet-small-print, .packet-note, .packet-house",
+                  ),
+                ].map((el) => {
+                  const range = document.createRange();
+                  range.selectNodeContents(el);
+                  return {
+                    name: el.className,
+                    box: rect(el),
+                    scroll: el.scrollWidth,
+                    client: el.clientWidth,
+                    lines: [...range.getClientRects()].map((r) => ({
+                      left: r.left,
+                      right: r.right,
+                      top: r.top,
+                      bottom: r.bottom,
+                    })),
+                  };
+                }),
+              })),
+            };
+          });
+          assert.ok(
+            layout.scroll <= layout.viewport,
+            "no horizontal page overflow",
+          );
+          assert.ok(
+            width < 640
+              ? layout.columns === 1
+              : width < 1000
+                ? [2, 3].includes(layout.columns)
+                : [3, 4].includes(layout.columns),
+          );
+          for (const packet of layout.packets) {
             assert.ok(
-              layout.scroll <= layout.viewport,
-              "no horizontal page overflow",
+              packet.box.left >= 0 && packet.box.right <= width,
+              "packet within viewport",
             );
-            assert.ok(
-              width < 640
-                ? layout.columns === 1
-                : width < 1000
-                  ? [2, 3].includes(layout.columns)
-                  : [3, 4].includes(layout.columns),
+            assert.ok(packet.box.width <= 352, "packet width is capped");
+            assert.match(
+              packet.clip,
+              /^polygon\(/,
+              "crimp silhouette supported",
             );
-            for (const packet of layout.packets) {
+            for (const text of packet.text) {
               assert.ok(
-                packet.box.left >= 0 && packet.box.right <= width,
-                "packet within viewport",
+                text.scroll <= text.client + 1,
+                `${text.name} does not overflow`,
               );
-              assert.ok(packet.box.width <= 352, "packet width is capped");
-              assert.match(
-                packet.clip,
-                /^polygon\(/,
-                "crimp silhouette supported",
-              );
-              for (const text of packet.text) {
+              for (const r of [text.box, ...text.lines]) {
                 assert.ok(
-                  text.scroll <= text.client + 1,
-                  `${text.name} does not overflow`,
+                  r.left >= packet.box.left && r.right <= packet.box.right + 1,
+                  `${text.name} fits packet horizontally`,
                 );
-                for (const r of [text.box, ...text.lines]) {
-                  assert.ok(
-                    r.left >= packet.box.left &&
-                      r.right <= packet.box.right + 1,
-                    `${text.name} fits packet horizontally`,
-                  );
-                  assert.ok(
-                    r.top >= packet.box.top &&
-                      r.bottom <= packet.box.bottom + 1,
-                    `${text.name} fits packet vertically`,
-                  );
-                  assert.ok(
-                    r.left >= 0 && r.right <= width + 1,
-                    `${text.name} fits viewport horizontally`,
-                  );
-                }
+                assert.ok(
+                  r.top >= packet.box.top && r.bottom <= packet.box.bottom + 1,
+                  `${text.name} fits packet vertically`,
+                );
+                assert.ok(
+                  r.left >= 0 && r.right <= width + 1,
+                  `${text.name} fits viewport horizontally`,
+                );
               }
             }
-            // Scroll each packet into view and confirm its text can be seen in full.
-            for (const link of await page.locator("a.seed-packet-link").all()) {
+          }
+          // Scroll each packet into view and confirm its text can be seen in full.
+          for (const link of await page.locator("a.seed-packet-link").all()) {
+            await link.evaluate((el) => el.scrollIntoView({ block: "center" }));
+            assert.equal(
               await link.evaluate((el) =>
-                el.scrollIntoView({ block: "center" }),
-              );
-              assert.equal(
-                await link.evaluate((el) =>
-                  [
-                    ...el.querySelectorAll(
-                      ".packet-cultivar, .packet-small-print",
-                    ),
-                  ].every((text) => {
-                    const r = text.getBoundingClientRect();
-                    return r.top >= 0 && r.bottom <= innerHeight;
-                  }),
-                ),
-                true,
-              );
-            }
-            await page.evaluate(() => scrollTo(0, 0));
-            const suffix =
-              routeName === "root"
-                ? `-root-${engine}`
-                : engine === "webkit"
-                  ? "-webkit"
-                  : "";
-            await page.screenshot({
-              path: `${qa}/after-${width}${suffix}.png`,
-              fullPage: true,
-            });
-          },
-        );
+                [
+                  ...el.querySelectorAll(
+                    ".packet-cultivar, .packet-small-print",
+                  ),
+                ].every((text) => {
+                  const r = text.getBoundingClientRect();
+                  return r.top >= 0 && r.bottom <= innerHeight;
+                }),
+              ),
+              true,
+            );
+          }
+        });
       }
       await context.close();
 

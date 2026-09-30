@@ -40,7 +40,7 @@ npm run preview
 
 Open [http://127.0.0.1:4173/daily-learning-pack/](http://127.0.0.1:4173/daily-learning-pack/). For an iPad on the same Wi-Fi: `HOST=0.0.0.0 npm run preview`.
 
-Browser checks: `npx playwright install chromium webkit`, then `npm run test:browser`. Screenshots go to `output/archive-qa/` (override with `ARCHIVE_QA_DIR`). CI runs the same Chromium and WebKit suite.
+Browser checks: `npx playwright install chromium webkit`, then `npm run test:browser`. CI runs the same Chromium and WebKit suite.
 
 ## GitHub Pages
 
