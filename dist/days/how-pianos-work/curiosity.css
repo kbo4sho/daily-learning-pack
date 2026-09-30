@@ -786,19 +786,14 @@ body.reader-open .daily-header {
   .daily-shell {
     padding: 0 20px;
   }
-  /* Brand, All mornings and Print stay on one row on phones. */
   .daily-header {
     min-height: 84px;
     gap: 12px;
-    flex-wrap: nowrap;
   }
   .brand {
     font-size: 1.5rem;
-    min-width: 0;
   }
-  .archive-door {
-    white-space: nowrap;
-  }
+  /* Narrow enough that brand, All mornings and Print share one row at 390px. */
   .print-menu summary {
     padding: 0 10px;
     font-size: 0.72rem;
@@ -933,11 +928,6 @@ body.reader-open .daily-header {
   }
   .daily-footer > p:last-child {
     margin-top: 12px;
-  }
-}
-@media (max-width: 420px) {
-  .daily-header {
-    gap: 8px;
   }
 }
 @media (min-width: 1001px) and (max-height: 850px) {
