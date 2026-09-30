@@ -1,6 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, readdir, stat, writeFile } from "node:fs/promises";
+import {
+  mkdir,
+  mkdtemp,
+  readFile,
+  readdir,
+  rm,
+  stat,
+  writeFile,
+} from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
@@ -217,9 +225,8 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.match(render, /seed-packet/);
   assert.match(render, /leo-door/);
   assert.match(render, /packet-shelf/);
-  assert.match(render, /packet-flap/);
-  assert.match(render, /data-packet-opening/);
-  assert.match(render, /Open this morning/);
+  assert.match(render, /packet-seal/);
+  assert.match(render, /seed-packet-link/);
   assert.match(render, /archive\.js/);
   assert.match(render, /requires latest/);
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
@@ -228,8 +235,7 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.match(css, /archive-shell|leo-door/);
   assert.match(css, /packet-shelf/);
   assert.match(css, /prefers-reduced-motion/);
-  assert.match(css, /packet-ritual-control/);
-  assert.match(css, /data-packet-state="torn"/);
+  assert.match(css, /seed-packet-link/);
   assert.match(css, /url\("\.\/fonts\/newsreader-latin-400-normal\.woff2"\)/);
   assert.match(css, /url\("\.\/fonts\/inter-latin-400-normal\.woff2"\)/);
   assert.equal(await exists("dist/pack.json"), false);
@@ -243,9 +249,8 @@ test("landing packets use that day's story plate, not stock", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
   const latest = json.days.find((day) => day.slug === json.latest);
   const landing = await read("dist/index.html");
-  assert.match(landing, /data-packet-opening/);
-  assert.match(landing, /Open this morning/);
-  assert.equal(landing.match(/>Open this morning /g)?.length, 1);
+  assert.match(landing, /seed-packet-link door-packet/);
+  assert.equal(landing.match(/class="packet-mark"/g)?.length, 1);
   assert.match(landing, /href="\.\/today\/"/);
   assert.doesNotMatch(landing, STOCK);
   const nested = await read("dist/archive/index.html");
@@ -270,49 +275,89 @@ test("landing packets use that day's story plate, not stock", async () => {
   }
 });
 
-test("reduced motion keeps the packet as the one-tap open control", async () => {
+test("every packet is one named native link without ritual chrome", async () => {
+  const { days, latest } = JSON.parse(await read("dist/archive.json"));
+  const ordered = [
+    days.find((day) => day.slug === latest),
+    ...days.filter((day) => day.slug !== latest),
+  ];
+  for (const [file, prefix] of [
+    ["dist/index.html", "./"],
+    ["dist/archive/index.html", "../"],
+  ]) {
+    const html = await read(file);
+    const packets = [
+      ...html.matchAll(/<a class="seed-packet-link[^"]*"[\s\S]*?<\/a>/g),
+    ].map(([packet]) => packet);
+    assert.equal(packets.length, days.length);
+    assert.equal(
+      (html.match(/<a /g) || []).length,
+      days.length + 1,
+      "only the skip-to-content link is outside the packets",
+    );
+    for (const [i, packet] of packets.entries()) {
+      const day = ordered[i];
+      const title = day.title.replace(/\.$/, "");
+      const date = new Intl.DateTimeFormat("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+      })
+        .format(new Date(`${day.date}T12:00:00Z`))
+        .replace(",", "");
+      const escape = (text) =>
+        text
+          .replaceAll("&", "&amp;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      assert.ok(
+        packet.includes(
+          `href="${prefix}${i === 0 ? "today" : `days/${day.slug}`}/"`,
+        ),
+      );
+      assert.ok(
+        packet.includes(`aria-label="${escape(`Open ${title}, ${date}`)}"`),
+      );
+      assert.ok(
+        packet.includes(`class="packet-cultivar">${escape(title)}</span>`),
+      );
+      assert.equal((packet.match(/<a /g) || []).length, 1);
+      assert.doesNotMatch(packet, /<(button|input|select|textarea)\b/);
+      assert.equal((packet.match(/tabindex="0"/g) || []).length, 1);
+      for (const [img] of packet.matchAll(/<img [^>]+>/g))
+        assert.match(img, /alt=""/);
+      const pack = JSON.parse(await read(`dist/days/${day.slug}/pack.json`));
+      if (Number.isInteger(pack.gradeLevel) && pack.gradeLevel > 0)
+        assert.ok(packet.includes(`Grade ${pack.gradeLevel}`));
+      else assert.doesNotMatch(packet, /Grade/);
+    }
+    assert.match(html, /name="robots" content="noindex, nofollow"/);
+    assert.doesNotMatch(
+      html,
+      /packet-ritual|data-packet-|packet-step|packet-skip|packet-perforation|tear.strip|aria-live|role="status"|[123] of 3|Open this morning|Press packet/i,
+    );
+  }
+});
+
+test("reduced motion disables transforms and transitions; JS only adds Space", async () => {
   const css = await read("src/archive.css");
   const reduced = css.slice(
     css.indexOf("@media (prefers-reduced-motion: reduce)"),
   );
-  assert.match(
-    reduced,
-    /html\.packet-ritual-ready \.packet-step-label,\s*\[data-packet-status\],\s*\.packet-perforation\s*{\s*display: none;/,
-  );
-  assert.match(reduced, /\.packet-perforation::after\s*{\s*content: none;/);
-  assert.doesNotMatch(
-    reduced,
-    /\.packet-ritual-control,\s*html\.packet-ritual-ready \.packet-step-label/,
-  );
-  assert.match(
-    reduced,
-    /\.packet-ritual-control:hover,[\s\S]*?transform: none;/,
-  );
-
+  assert.match(reduced, /transform: none !important/);
+  assert.match(reduced, /transition: none !important/);
+  const linkRule = css.match(/\.seed-packet-link \{([^}]+)\}/)[1];
+  assert.doesNotMatch(linkRule, /clip-path|mask|overflow:\s*hidden/);
   const js = await read("src/archive.js");
-  assert.match(js, /status\.textContent = ""/);
-  assert.match(
+  assert.match(js, /event\.key === " "/);
+  assert.match(js, /event\.target\.click\(\)/);
+  assert.doesNotMatch(
     js,
-    /reducedMotion\.matches\s*\? opening\.dataset\.packetOpenLabel/,
-  );
-  assert.match(js, /: opening\.dataset\.packetFirstLabel/);
-
-  const day = {
-    slug: "one-tap-day",
-    date: "2026-09-24",
-    title: "A packet to open.",
-    teaser: "Still and direct.",
-  };
-  const html = archivePage([day], { latest: day, homePrefix: "./" });
-  assert.match(
-    html,
-    /class="packet-face packet-ritual-control door-packet" href="\.\/today\/" aria-label="Open this morning: A packet to open\."/,
-  );
-  assert.match(html, /data-packet-open-label="Open this morning:/);
-  assert.match(html, /data-packet-first-label="Seed packet:/);
-  assert.match(
-    html,
-    />Open this morning <span aria-hidden="true">→<\/span><\/a>/,
+    /dataset|matchMedia|classList|setTimeout|addEventListener\("click"/,
   );
 });
 
@@ -345,8 +390,8 @@ test("packet faces fail soft to type; archivePage requires latest", () => {
   });
   assert.match(history, /class="packet-shelf"/);
   assert.match(history, /href="\.\/days\/earlier-day\/"/);
-  assert.match(history, /Open 21 September 2026/);
-  assert.equal(history.match(/>Open this morning /g)?.length, 1);
+  assert.match(history, /Open An earlier title, Monday 21 September 2026/);
+  assert.equal(history.match(/class="packet-mark"/g)?.length, 1);
 });
 
 test("resolvePacketFace reads plates from that day's folder", async () => {
@@ -399,4 +444,58 @@ test("renderArchive fails closed when latest is missing from days", async () => 
     () => renderArchive(dir),
     /latest “ghost-day” must match a days\[\]\.slug/,
   );
+});
+
+test("renderArchive uses only each pack’s positive integer grade, even without art", async (t) => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-packet-grades-"));
+  t.after(() => rm(dir, { recursive: true, force: true }));
+  const grades = [4, undefined, 0, -1, 2.5, "2", null];
+  const days = grades.map((grade, index) => ({
+    slug: `grade-${index}`,
+    date: "2026-09-29",
+    title: `Morning ${index}.`,
+    teaser: "A small discovery.",
+    gradeLevel: 9,
+  }));
+  days.push({
+    slug: "missing-pack",
+    date: "2026-09-28",
+    title: "No pack.",
+    teaser: "A title only.",
+    gradeLevel: 9,
+  });
+  days.push({
+    slug: "invalid-pack",
+    date: "2026-09-27",
+    title: "Unreadable pack.",
+    teaser: "A title only.",
+    gradeLevel: 9,
+  });
+  await writeFile(
+    `${dir}/archive.json`,
+    JSON.stringify({ latest: days[0].slug, days }),
+  );
+  for (const [i, gradeLevel] of grades.entries()) {
+    await mkdir(`${dir}/days/${days[i].slug}`, { recursive: true });
+    await writeFile(
+      `${dir}/days/${days[i].slug}/pack.json`,
+      JSON.stringify({ gradeLevel }),
+    );
+  }
+  await mkdir(`${dir}/days/invalid-pack`, { recursive: true });
+  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
+  await renderArchive(dir);
+  for (const file of ["index.html", "archive/index.html"]) {
+    const html = await readFile(`${dir}/${file}`, "utf8");
+    const packets = [
+      ...html.matchAll(/<a class="seed-packet-link[^"]*"[\s\S]*?<\/a>/g),
+    ].map(([packet]) => packet);
+    assert.equal(packets.length, days.length);
+    assert.match(packets[0], /Grade 4/);
+    assert.match(packets[0], /is-typeface/);
+    for (const packet of packets.slice(1)) {
+      assert.doesNotMatch(packet, /Grade/);
+      assert.match(packet, /is-typeface/);
+    }
+  }
 });

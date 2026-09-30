@@ -1,38 +1,17 @@
 import { esc } from "./html.mjs";
 
 /** Public view date chrome. Same UTC en-GB format as the overnight ship. */
-export function formatArchiveDate(iso) {
+export function formatArchiveDate(iso, compact = false) {
   const [year, month, day] = String(iso).split("-").map(Number);
   if (!year || !month || !day)
     throw new Error(`Approved pack date must be YYYY-MM-DD: ${iso}`);
   return new Intl.DateTimeFormat("en-GB", {
+    weekday: compact ? "short" : "long",
     day: "numeric",
-    month: "long",
+    month: compact ? "short" : "long",
     year: "numeric",
     timeZone: "UTC",
   }).format(new Date(Date.UTC(year, month - 1, day)));
-}
-
-/** Compact lot stamp for a packet face. UTC, like the long date. */
-export function formatLotStamp(iso) {
-  const [year, month, day] = String(iso).split("-").map(Number);
-  if (!year || !month || !day)
-    throw new Error(`Approved pack date must be YYYY-MM-DD: ${iso}`);
-  const months = [
-    "JAN",
-    "FEB",
-    "MAR",
-    "APR",
-    "MAY",
-    "JUN",
-    "JUL",
-    "AUG",
-    "SEP",
-    "OCT",
-    "NOV",
-    "DEC",
-  ];
-  return `LOT ${String(day).padStart(2, "0")} ${months[month - 1]} ${year}`;
 }
 
 /**
@@ -48,46 +27,36 @@ export function packetImageHref(homePrefix, slug, rel) {
   return `${homePrefix}days/${slug}/${clean}`;
 }
 
-function packetChrome() {
-  return `<span class="packet-flap" aria-hidden="true"></span><span class="packet-perforation" aria-hidden="true"></span>`;
-}
-
 function packetWindow(entry) {
   const src = entry.face?.src;
-  const alt = entry.face?.alt || entry.title || "";
   if (src) {
-    return `<span class="packet-window"><img src="${esc(src)}" alt="${esc(alt)}" width="720" height="480"></span>`;
+    return `<span class="packet-window"><img src="${esc(src)}" alt="" width="720" height="480"></span>`;
   }
   const face = String(entry.title || entry.topic || "").replace(/\.$/, "");
   return `<span class="packet-window is-typeface"><span class="packet-type">${esc(face)}</span></span>`;
 }
 
-function openingCopy(entry, isLatest) {
-  const destination = isLatest ? "this morning" : formatArchiveDate(entry.date);
-  const direct = isLatest ? "Open this morning" : `Open ${destination}`;
-  return {
-    destination,
-    direct,
-    directLabel: `${direct}: ${entry.title}`,
-    first: `Seed packet: ${entry.title} Step 1 of 3: lift the flap. Destination: ${destination}.`,
-  };
-}
-
-function packetOpening(entry, { isLatest, href, position = "shelf" }) {
-  const latest = isLatest ? " is-latest" : "";
+function packetLink(entry, { isLatest, href, position = "shelf" }) {
+  const title = String(entry.title).trim().replace(/\.$/, "");
+  const label = `Open ${title}, ${formatArchiveDate(entry.date).replace(",", "")}`;
+  const grade =
+    Number.isInteger(entry.gradeLevel) && entry.gradeLevel > 0
+      ? ` · Grade ${entry.gradeLevel}`
+      : "";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
-  const copy = openingCopy(entry, isLatest);
-  return `<div class="packet-opening${latest}" data-packet-opening data-packet-title="${esc(entry.title)}" data-packet-destination="${esc(copy.destination)}" data-packet-open-label="${esc(copy.directLabel)}" data-packet-first-label="${esc(copy.first)}" data-packet-state="sealed">
-<a class="packet-face packet-ritual-control${position === "door" ? " door-packet" : ""}" href="${href}" aria-label="${esc(copy.directLabel)}">${packetChrome()}${packetWindow(entry)}<span class="packet-lot"><time datetime="${esc(entry.date)}">${esc(formatLotStamp(entry.date))}</time></span><span class="packet-cultivar">${esc(entry.title)}</span><span class="packet-note">${esc(entry.teaser)}</span>${mark}</a>
-<p class="packet-step-label" aria-hidden="true"><span class="packet-step-number">1 of 3</span><span data-packet-instruction>Press packet · lift flap</span></p>
-<span class="sr-only" role="status" aria-live="polite" data-packet-status></span>
-<a class="packet-skip" href="${href}">${esc(copy.direct)} <span aria-hidden="true">→</span></a>
-</div>`;
+  // Explicit tab stops also include these links in WebKit's default Tab order.
+  return `<a class="seed-packet-link${position === "door" ? " door-packet" : ""}" href="${href}" tabindex="0" aria-label="${esc(label)}">
+<span class="packet-face"><span class="packet-seal" aria-hidden="true"></span><span class="packet-print">
+<span class="packet-house">Packed for time together</span>
+${packetWindow(entry)}
+<span class="packet-cultivar">${esc(title)}</span>
+<span class="packet-note">${esc(entry.teaser)}</span>
+<span class="packet-small-print">Wonder Daily · <time datetime="${esc(entry.date)}">${esc(formatArchiveDate(entry.date, true).replace(",", ""))}</time>${grade}</span>
+${mark}</span></span></a>`;
 }
 
-function seedPacket(entry, { isLatest, href }) {
-  const latest = isLatest ? " is-latest" : "";
-  return `<li class="seed-packet${latest}">${packetOpening(entry, { isLatest, href })}</li>`;
+function seedPacket(entry, { href }) {
+  return `<li class="seed-packet">${packetLink(entry, { href })}</li>`;
 }
 
 /**
@@ -110,14 +79,12 @@ export function archivePage(
   const packets = earlier
     .map((entry) =>
       seedPacket(entry, {
-        homePrefix,
-        isLatest: false,
         href: `${homePrefix}days/${esc(entry.slug)}/`,
       }),
     )
     .join("");
   const lead = earlier.length
-    ? "Finished mornings, stood up like packets on a shelf. Open one when you want that day back."
+    ? "Small discoveries, kept for another day. Choose a packet to revisit a morning together."
     : "The first approved morning stands here. Later days will stand beside it.";
   const shelf = earlier.length
     ? `<section class="packet-shelf-wrap" aria-labelledby="list-heading">
@@ -139,7 +106,7 @@ export function archivePage(
 <script src="${jsHref}" defer></script>
 </head>
 <body data-kind="archive">
-<a class="skip" href="#mornings">Skip to the mornings</a>
+<a class="skip" href="#mornings" tabindex="0">Skip to the mornings</a>
 <div class="archive-shell">
 <header class="archive-header">
 <p class="brand">Wonder Together<span>WONDER DAILY</span></p>
@@ -154,7 +121,7 @@ export function archivePage(
 <p class="door-teaser">${esc(today.teaser)}</p>
 <p class="small-note">Today’s approved morning. Drafts stay off this shelf.</p>
 </div>
-${packetOpening({ ...today, face: today.face }, { isLatest: true, href: todayHref, position: "door" })}
+${packetLink(today, { isLatest: true, href: todayHref, position: "door" })}
 </section>
 ${shelf}
 </main>
