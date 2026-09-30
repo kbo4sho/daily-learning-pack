@@ -1205,7 +1205,7 @@ body.reader-open .daily-header {
     padding: 18pt;
   }
   body:not(.print-document)::before {
-    content: "Use Print today / Print story / Print math / Print writing (or Download foldable). Those open Letter PDFs that print cleanly.";
+    content: "Use the Print menu at the top of the page: Print today, or one sheet at a time. Those open Letter PDFs that print cleanly.";
     display: block;
     font:
       12pt/1.4 Inter,
