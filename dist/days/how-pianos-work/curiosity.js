@@ -11,7 +11,7 @@ function showPanel(name, focus = true) {
     else link.removeAttribute("aria-current");
   });
   document.body.classList.toggle("reader-open", name === "reading");
-  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing" }[name]} · Wonder Daily`;
+  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing", diorama: "Diorama", quiz: "Quiz + key", foldable: "Foldable" }[name]} · Wonder Daily`;
   document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
   if (focus) {
     document.querySelector(`#${name}-heading`).focus({ preventScroll: true });
@@ -25,6 +25,20 @@ links.forEach((link) =>
   }),
 );
 showPanel("curiosity", false);
+
+// The header print menu closes on Escape (focus back to its button) or an outside click.
+const printMenu = document.querySelector(".print-menu");
+if (printMenu) {
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !printMenu.open) return;
+    printMenu.open = false;
+    printMenu.querySelector("summary").focus();
+  });
+  document.addEventListener("click", (event) => {
+    if (printMenu.open && !printMenu.contains(event.target))
+      printMenu.open = false;
+  });
+}
 
 function sceneChooser(linkSelector, articleSelector, key) {
   const options = [...document.querySelectorAll(linkSelector)];
@@ -103,7 +117,7 @@ download.addEventListener("click", async () => {
       "Your book is ready. Print settings and fold steps are on page 8.";
   } catch {
     status.textContent =
-      "The book could not be downloaded. Check your connection and try Download foldable story again. The Print story link is also available.";
+      "The book could not be downloaded. Check your connection and try Download foldable story again, or use Print → Reading pages at the top.";
   } finally {
     download.disabled = false;
     download.removeAttribute("aria-busy");

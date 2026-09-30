@@ -152,15 +152,6 @@ img {
   font: 600 0.57rem/2.5 var(--font-body);
   letter-spacing: 0.24em;
 }
-.family-note {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-.family-note small {
-  display: block;
-  font-size: 0.66rem;
-}
 .archive-door {
   font-size: 0.72rem;
   color: var(--muted);
@@ -172,12 +163,83 @@ img {
 .archive-door:hover {
   color: var(--ink);
 }
-.print-link {
-  font-size: 0.78rem;
-  margin-left: 24px;
+.print-menu {
+  position: relative;
+  margin-left: auto;
+}
+.print-menu summary {
   min-height: 44px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 0.78rem/1 var(--font-body);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  list-style: none;
+}
+.print-menu summary::-webkit-details-marker {
+  display: none;
+}
+.print-menu summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.print-menu[open] summary,
+.print-menu summary:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.print-menu summary:focus-visible,
+.print-menu a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.print-menu ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 30;
+  min-width: 232px;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgb(41 59 53 / 0.12);
+}
+.print-menu li + li {
+  border-top: 1px solid var(--line);
+}
+.print-menu li:first-child a {
+  font-weight: 600;
+}
+.print-menu a {
+  display: block;
+  min-height: 44px;
+  padding: 12px 18px;
+  color: var(--ink);
+  font: 400 0.84rem/1.3 var(--font-body);
+  text-decoration: none;
+}
+.print-menu a:hover {
+  background: var(--sage);
+}
+.print-menu small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
 }
 .daily-nav {
   display: flex;
@@ -730,12 +792,9 @@ body.reader-open .daily-header {
   .brand {
     font-size: 1.5rem;
   }
-  .family-note {
-    display: none;
-  }
-  .print-link {
-    margin-left: auto;
-    font-size: 0.7rem;
+  .print-menu summary {
+    padding: 0 14px;
+    font-size: 0.72rem;
   }
   .daily-nav {
     justify-content: space-between;
@@ -1137,7 +1196,6 @@ body.reader-open .daily-header {
     display: none !important;
   }
   body:not(.print-document) .reader-print-alternative,
-  body:not(.print-document) .print-link,
   body:not(.print-document) .activity-footer a[href*="pdf/"] {
     display: block !important;
     font-size: 11pt;
@@ -1147,7 +1205,7 @@ body.reader-open .daily-header {
     padding: 18pt;
   }
   body:not(.print-document)::before {
-    content: "Use Print today / Print story / Print math / Print writing (or Download foldable). Those open Letter PDFs that print cleanly.";
+    content: "Use the Print menu at the top of the page: Print today, or one sheet at a time. Those open Letter PDFs that print cleanly.";
     display: block;
     font:
       12pt/1.4 Inter,
@@ -1227,7 +1285,6 @@ body.reader-open .daily-header {
   }
 }
 
-
 /* Six-task math Letter sheet: keep one page without skimping readability. */
 .curiosity-sheet.dense .paper-notebook {
   grid-template-columns: 70pt 1fr;
@@ -1273,4 +1330,22 @@ body.reader-open .daily-header {
 }
 .curiosity-sheet.dense .name-line {
   margin-top: 2pt;
+}
+
+/* The seven-position spectrum needs a full-width table in the Letter sheet. */
+.black-light-sheet.curiosity-math .paper-notebook {
+  grid-template-columns: 112pt minmax(0, 1fr);
+  gap: 14pt;
+}
+.black-light-sheet.curiosity-math .growth-table {
+  table-layout: fixed;
+  font-size: 8pt;
+}
+.black-light-sheet.curiosity-math .growth-table th,
+.black-light-sheet.curiosity-math .growth-table td {
+  padding: 8pt 1pt;
+  overflow-wrap: anywhere;
+}
+.black-light-sheet.curiosity-math .paper-measure .paper-intro {
+  font-size: 9pt;
 }
