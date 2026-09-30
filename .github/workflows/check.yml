@@ -18,3 +18,5 @@ jobs:
       - run: npm run format:check
       - run: npm run archive
       - run: npm test
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run test:browser

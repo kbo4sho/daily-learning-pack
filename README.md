@@ -17,7 +17,7 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 
 `npm run build`, `generate`, `site`, `overnight`, and `author` in this tree exit with a pointer to that repo.
 
-**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. Seed-packet cards belong in those public files, not the private repo.
+**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. Each heirloom seed packet is one native link: Leo’s door opens `today/`, and shelf packets open their own day. The tiny `src/archive.js` adds Space-key activation; clicking and Enter also work without JavaScript.
 
 ## How the public site is updated
 
@@ -30,7 +30,7 @@ Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **pr
 
 ## Preview committed artifacts
 
-Requires **Node.js 22+**. No Playwright, fonts toolchain, or pack authoring.
+Requires **Node.js 22+**. Previewing committed pages needs no browser installation, fonts toolchain, or pack authoring.
 
 ```sh
 npm ci
@@ -39,6 +39,8 @@ npm run preview
 ```
 
 Open [http://127.0.0.1:4173/daily-learning-pack/](http://127.0.0.1:4173/daily-learning-pack/). For an iPad on the same Wi-Fi: `HOST=0.0.0.0 npm run preview`.
+
+Browser checks: `npx playwright install chromium webkit`, then `npm run test:browser`. Screenshots go to `output/archive-qa/` (override with `ARCHIVE_QA_DIR`). CI runs the same Chromium and WebKit suite.
 
 ## GitHub Pages
 
