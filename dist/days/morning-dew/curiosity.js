@@ -117,7 +117,7 @@ download.addEventListener("click", async () => {
       "Your book is ready. Print settings and fold steps are on page 8.";
   } catch {
     status.textContent =
-      "The book could not be downloaded. Check your connection and try Download foldable story again. The Print story link is also available.";
+      "The book could not be downloaded. Check your connection and try Download foldable story again, or use Print → Reading pages at the top.";
   } finally {
     download.disabled = false;
     download.removeAttribute("aria-busy");
