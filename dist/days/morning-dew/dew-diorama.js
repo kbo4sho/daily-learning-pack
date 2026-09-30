@@ -163,7 +163,7 @@ export function dewMechanism(state) {
   <p class="dew-result">${result}</p></div>`;
 }
 export function dewTalkThrough() {
-  return `<h3 tabindex="-1" id="dew-talk-heading">Follow the leaf’s instructions</h3><ol><li><b>Predict.</b> Could the leaf get wet even if no rain falls?</li><li><b>Arrange in words.</b> Imagine a clear, calm night, a leaf, and air holding invisible water vapor.</li><li><b>Let the night pass.</b> The leaf gives off heat to the sky. It can become colder than the air. Air touching it cools too.</li><li><b>Notice.</b> When that air cools to its dew point, vapor condenses into liquid dew on the leaf. Sunrise warms the leaf; dew evaporates back into vapor.</li></ol><p>Say a command for each step: Cool the leaf. Wait for air to touch it. Look for tiny drops. Warm the leaf.</p><p>No experiment is needed. <a href="./pdf/foldable.pdf">Open the foldable story</a>.</p>`;
+  return `<h3 tabindex="-1" id="dew-talk-heading">Follow the leaf’s instructions</h3><ol><li><b>Predict.</b> Could the leaf get wet even if no rain falls?</li><li><b>Arrange in words.</b> Imagine a clear, calm night, a leaf, and air holding invisible water vapor.</li><li><b>Let the night pass.</b> The leaf gives off heat to the sky. It can become colder than the air. Air touching it cools too.</li><li><b>Notice.</b> When that air cools to its dew point, vapor condenses into liquid dew on the leaf. Sunrise warms the leaf; dew evaporates back into vapor.</li></ol><p>Say a command for each step: Cool the leaf. Wait for air to touch it. Look for tiny drops. Warm the leaf.</p><p>No experiment is needed.</p>`;
 }
 function conditions(state) {
   return `<div class="dew-conditions">${[

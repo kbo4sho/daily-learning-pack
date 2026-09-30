@@ -26,6 +26,20 @@ links.forEach((link) =>
 );
 showPanel("curiosity", false);
 
+// The header print menu closes on Escape (focus back to its button) or an outside click.
+const printMenu = document.querySelector(".print-menu");
+if (printMenu) {
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !printMenu.open) return;
+    printMenu.open = false;
+    printMenu.querySelector("summary").focus();
+  });
+  document.addEventListener("click", (event) => {
+    if (printMenu.open && !printMenu.contains(event.target))
+      printMenu.open = false;
+  });
+}
+
 function sceneChooser(linkSelector, articleSelector, key) {
   const options = [...document.querySelectorAll(linkSelector)];
   const articles = [...document.querySelectorAll(articleSelector)];
