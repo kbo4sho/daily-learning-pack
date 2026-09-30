@@ -19,11 +19,17 @@ async function readable(path) {
   }
 }
 
-async function faceFromPack(root, entry, homePrefix) {
+async function readDayPack(root, entry) {
   const packPath = `${root}/days/${entry.slug}/pack.json`;
-  if (!(await readable(packPath))) return null;
   try {
-    const pack = JSON.parse(await readFile(packPath, "utf8"));
+    return JSON.parse(await readFile(packPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+async function faceFromPack(root, entry, homePrefix, pack) {
+  try {
     const plates = Array.isArray(pack.plates) ? pack.plates : [];
     const coverId = pack.reading?.coverPlate;
     const plate =
@@ -48,15 +54,19 @@ async function faceFromPack(root, entry, homePrefix) {
  * Plates live under dist/days/{slug}/ — not the removed root pack.json/assets.
  */
 export async function resolvePacketFace(entry, root, homePrefix = "./") {
-  return faceFromPack(root, entry, homePrefix);
+  return faceFromPack(root, entry, homePrefix, await readDayPack(root, entry));
 }
 
 async function withFaces(entries, root) {
   return Promise.all(
-    entries.map(async (entry) => ({
-      ...entry,
-      face: await resolvePacketFace(entry, root, "./"),
-    })),
+    entries.map(async (entry) => {
+      const pack = await readDayPack(root, entry);
+      return {
+        ...entry,
+        gradeLevel: pack?.gradeLevel,
+        face: await faceFromPack(root, entry, "./", pack),
+      };
+    }),
   );
 }
 
