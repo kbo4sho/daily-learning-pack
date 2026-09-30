@@ -197,6 +197,7 @@ img {
 .print-menu summary:hover {
   background: var(--ink);
   color: var(--paper);
+  text-decoration: none;
 }
 .print-menu summary:focus-visible,
 .print-menu a:focus-visible {
@@ -792,8 +793,9 @@ body.reader-open .daily-header {
   .brand {
     font-size: 1.5rem;
   }
+  /* Narrow enough that brand, All mornings and Print share one row at 390px. */
   .print-menu summary {
-    padding: 0 14px;
+    padding: 0 10px;
     font-size: 0.72rem;
   }
   .daily-nav {
