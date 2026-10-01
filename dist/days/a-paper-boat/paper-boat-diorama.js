@@ -252,7 +252,7 @@ export function boatStage(state) {
 }
 // Grown-ups note text; the kid-facing panel carries no model disclaimer.
 export const BOAT_MODEL_NOTE =
-  "The boat is a cutaway model with made-up penny limits and sped-up time, not a capacity test. The dashed line shows water level; arrows show water’s upward push. Real results depend on paper, folds, tipping, and time; a crayon or wax coat slows soaking. No experiment is needed; for an optional real try, use a tub or sink with an adult nearby.";
+  "The boat is a cutaway model with made-up penny limits and sped-up time, not a capacity test. The dashed line shows water level; arrows show water’s upward push. Real results depend on paper, folds, tipping, and time; a crayon or wax coat slows soaking.";
 export function boatPanel({ next = "" } = {}) {
   return `<section id="diorama" class="daily-panel boat-panel" aria-labelledby="diorama-heading"><header class="activity-heading"><h2 id="diorama-heading" tabindex="-1">A small voyage in a tub</h2></header><div data-boat-stage></div><div class="boat-explain" data-boat-explain hidden><h3>Show what held the boat up.</h3><p>Welcome words, pointing, or a sketch. Connect shape → water pushed aside → water pushing up. Then explain what load or soaking changed.</p><p>You can stop here.</p></div><p class="boat-status" data-boat-status role="status" aria-live="polite" aria-atomic="true"></p><div class="boat-external" data-boat-external hidden><button class="text-button" data-boat="TALK">Talk it through</button><button class="text-button" data-boat="RESET">Try another voyage</button></div><div class="boat-talk" data-boat-static>${boatTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
 }
