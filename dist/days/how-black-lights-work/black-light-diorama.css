@@ -1,7 +1,7 @@
 /* Scope the six-surface craft to this one dogfood day. */
 body[data-day="how-black-lights-work"] .daily-nav {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 0;
 }
 body[data-day="how-black-lights-work"] .daily-nav a {
@@ -434,7 +434,7 @@ body[data-day="how-black-lights-work"] .growth-table td {
 }
 @media (max-width: 650px) {
   body[data-day="how-black-lights-work"] .daily-nav {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 0;
   }
   body[data-day="how-black-lights-work"] .daily-nav a {
@@ -443,11 +443,11 @@ body[data-day="how-black-lights-work"] .growth-table td {
     min-height: 44px;
   }
   body[data-day="how-black-lights-work"].reader-open .daily-nav {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
   body[data-day="how-black-lights-work"].reader-open .daily-nav a {
     font-size: 10px;
-    padding: 12px 2px;
+    padding: 12px 1px;
   }
   .bl-control-base {
     padding: 20px 16px;

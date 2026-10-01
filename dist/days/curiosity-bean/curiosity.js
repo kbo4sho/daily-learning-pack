@@ -11,7 +11,7 @@ function showPanel(name, focus = true) {
     else link.removeAttribute("aria-current");
   });
   document.body.classList.toggle("reader-open", name === "reading");
-  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing", diorama: "Diorama", quiz: "Quiz + key", foldable: "Foldable" }[name]} · Wonder Daily`;
+  document.title = `${{ curiosity: content.title, reading: "Story", math: "Math", writing: "Writing", diorama: "Diorama", quiz: "Quiz", foldable: "Foldable" }[name]} · Wonder Daily`;
   document.dispatchEvent(new CustomEvent("subjectchange", { detail: name }));
   if (focus) {
     document.querySelector(`#${name}-heading`).focus({ preventScroll: true });
@@ -82,6 +82,22 @@ window.addEventListener("beforeunload", (event) => {
   event.preventDefault();
   event.returnValue = "";
 });
+// Quiz: immediate, gentle feedback. The key stays in the content data.
+for (const fieldset of document.querySelectorAll("[data-quiz]")) {
+  const question = content.quiz?.questions?.find(
+    (q) => q.id === fieldset.dataset.quiz,
+  );
+  const feedback = fieldset.querySelector("[data-quiz-feedback]");
+  if (!question || !feedback) continue;
+  fieldset.addEventListener("change", (event) => {
+    if (event.target.type !== "radio") return;
+    const right = Number(event.target.value) === question.answerIndex;
+    fieldset.dataset.result = right ? "right" : "try-again";
+    feedback.textContent = right
+      ? `Yes! ${question.answer}`
+      : "Not quite. Look back at the pictures and try another answer.";
+  });
+}
 const finish = document.querySelector("#finish-day");
 finish.hidden = false;
 finish.addEventListener("click", () => {
