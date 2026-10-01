@@ -94,7 +94,9 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
     assert.ok(today.includes(`data-go="${surface}"`));
   // TASK 127: no dev chrome on kid pages; hedges sit in one grown-ups note.
   const kidToday = today.split('<footer class="daily-footer">')[0];
-  assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes|<figcaption/);
+  assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes/);
+  for (const [, cap] of kidToday.matchAll(/<figcaption>([^<]*)</g))
+    assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
   assert.match(today, /About the pictures and numbers\./);
   assert.match(today, /data-quiz-feedback aria-live="polite"/);
   assert.match(today, /paper-boat-diorama\.js/);
