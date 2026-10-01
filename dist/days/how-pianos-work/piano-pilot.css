@@ -530,13 +530,8 @@
   padding: 22px 36px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 18px;
-}
-.piano-simplification {
-  color: var(--piano-muted);
-  font-size: 0.74rem;
-  line-height: 1.6;
 }
 .piano-arrange > .text-button,
 .piano-ready > .text-button {

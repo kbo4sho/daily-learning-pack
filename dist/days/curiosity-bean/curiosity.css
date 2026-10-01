@@ -473,6 +473,30 @@ details > p {
 .daily-footer > p:last-child {
   font-size: 0.64rem;
 }
+.grown-up-notes {
+  font-size: 0.85rem;
+}
+/* Quiz feedback: plain text, no motion; the space is reserved so nothing jumps. */
+.quiz-feedback {
+  clear: both;
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+fieldset[data-result="right"] .quiz-feedback {
+  color: #3d5a33;
+}
+fieldset[data-result="try-again"] .quiz-feedback {
+  color: #7a461c;
+}
+.math-task-prompt {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 42ch;
+}
+.task-number {
+  margin-right: 0.15em;
+}
 .reader-header {
   display: flex;
   align-items: center;
@@ -1350,4 +1374,19 @@ body.reader-open .daily-header {
 }
 .black-light-sheet.curiosity-math .paper-measure .paper-intro {
   font-size: 9pt;
+}
+/* Six-surface days: seven tabs do not fit one row on the narrowest phones, so
+   the reader keeps two rows there. "nav." outranks the per-day 650px rules,
+   which load after this file. */
+@media (max-width: 360px) {
+  body[data-surfaces="six"].reader-open nav.daily-nav,
+  body[data-day="how-black-lights-work"].reader-open nav.daily-nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body[data-surfaces="six"].reader-open nav.daily-nav a,
+  body[data-day="how-black-lights-work"].reader-open nav.daily-nav a {
+    font-size: 11px;
+    padding: 8px 2px;
+    min-height: 44px;
+  }
 }
