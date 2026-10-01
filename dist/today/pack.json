@@ -1,153 +1,150 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "morning-dew",
-  "topic": "morning dew",
-  "teaser": "Quiet water on a leaf. Follow the night’s hidden steps.",
-  "aliases": [
-    "dew",
-    "morning-dew",
-    "morning dew"
-  ],
-  "targetAge": 7,
-  "gradeLevel": 2,
+  "slug": "a-paper-boat",
+  "topic": "a paper boat",
+  "teaser": "Fold, float, and notice what holds.",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 2 · MORNING DEW",
+  "editionLabel": "GRADE 3 · A PAPER BOAT",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "The drops that did not fall.",
-  "question": "No rain fell. Why is this leaf wet?",
-  "idea": "Water vapor in the air can condense into dew on a cool leaf. Sunrise warms the leaf, and the drops evaporate.",
+  "title": "What holds a paper boat?",
+  "question": "What holds a paper boat above the bottom of the tub?",
+  "idea": "A folded boat pushes water aside. Water pushes up, balancing its weight until too much load or soaking lets water in.",
   "curiosity": {
-    "intro": "Follow one small clue. Make a guess, then look again.",
-    "carryForward": "Read the leaf’s story, follow a counting command, and try a night in the dew diorama.",
+    "intro": "A flat sheet. A waiting penny. What might a few folds change?",
+    "carryForward": "Follow Little’s folding commands, solve six boat counts, and compare shapes in the diorama.",
     "questions": [
       {
         "id": "wake",
         "plate": "wake",
-        "question": "Can a leaf get wet without rain?",
-        "notice": "Look at the drops on the leaf and the nearby spider web.",
-        "say": "Yes. Air holds invisible water vapor. Dew forms right on a cool surface when that vapor condenses into liquid drops. It does not fall from the sky like rain.",
-        "try": "Point to where the drops sit. Imagine a drop growing there, instead of falling down."
-      },
-      {
-        "id": "reach",
-        "plate": "reach",
-        "question": "How does a leaf cool during the night?",
-        "notice": "The leaf faces a wide, clear sky. The grass is still.",
-        "say": "Surfaces give off heat to the sky. On a clear, calm night, a leaf can lose heat and get colder than the air around it. Clouds and wind can slow that cooling.",
-        "try": "Trace the leaf’s edge. Say the first command: “Cool the leaf.”"
+        "question": "Can the shape of paper help it carry a penny?",
+        "notice": "Compare the flat sheet with the folded boat in the next scene.",
+        "say": "Folded walls and a broad, flat bottom make a space that keeps water out. The air inside is part of what floats. A flat sheet may rest on water briefly, but it has no walls to protect that space when a load pushes it down.",
+        "try": "Imagine folding the sides up. Which part would keep water out?"
       },
       {
         "id": "change",
         "plate": "change",
-        "question": "Where was the water before we saw drops?",
-        "notice": "The air above the leaf looks clear. New beads cling to the leaf.",
-        "say": "The water was invisible vapor in the air. Air touching the cool leaf cools too. At its dew point, it is cool enough that it cannot keep all its water invisible. Some vapor condenses into liquid dew.",
-        "try": "Imagine clear air touching this leaf. Use “condense” to tell what changed."
+        "question": "What is holding the boat up?",
+        "notice": "Look where the water meets the boat. The bottom of the tub is far below.",
+        "say": "The boat displaces water: it pushes water aside. Water pushes up with a force as big as the weight of the water pushed aside. The boat floats when that upward push equals the boat’s weight.",
+        "try": "Use your voice to follow the steps: push water aside, feel water push up, float."
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "question": "Why does the waterline climb?",
+        "notice": "The pennies are inside. The water reaches higher on the sides.",
+        "say": "Pennies add load, the weight the boat carries. To balance that extra weight, the boat sinks lower and pushes aside more water. Too much load, or a tip, lets water spill over the sides and swamp the boat.",
+        "try": "Predict what would happen to the waterline if Little removed a penny."
       },
       {
         "id": "keep",
         "plate": "keep",
-        "question": "Where do the drops go after sunrise?",
-        "notice": "Sunlight reaches the leaf. Fewer drops remain.",
-        "say": "As the sun warms the leaf, liquid water evaporates back into invisible vapor. The water changes form; it does not vanish forever. A cold glass can collect drops on its outside for the same condensation reason: that water comes from the surrounding air.",
-        "try": "Say two commands in order: “Warm the leaf. Watch the drops shrink.”"
+        "question": "Why can’t a paper boat float forever?",
+        "notice": "The damp paper has sagged. Its crisp folds are softer.",
+        "say": "Paper is made of tiny plant fibers that absorb water. Wet paper gets heavier and softer and loses its shape. A crayon or wax coat slows the soaking, but it does not make the boat last forever.",
+        "try": "Choose one command for another voyage, such as “Watch the waterline.”"
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/morning-dew/01-wake.jpg",
-      "original": "assets/morning-dew/01-wake.png",
-      "foldSrc": "assets/morning-dew/01-wake-fold.jpg",
-      "title": "A quiet puzzle",
-      "alt": "Big and Little Wonderer study tiny drops on a broad green leaf beside a beaded spider web before sunrise.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/01-wake.jpg",
+      "original": "assets/a-paper-boat/01-wake.png",
+      "foldSrc": "assets/a-paper-boat/01-wake-fold.jpg",
+      "title": "A sheet with a secret",
+      "alt": "Big and Little Wonderer study an ivory sheet beside a blue-gray water tub and a few copper pennies.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     },
     {
       "id": "reach",
-      "src": "assets/morning-dew/02-reach.jpg",
-      "original": "assets/morning-dew/02-reach.png",
-      "foldSrc": "assets/morning-dew/02-reach-fold.jpg",
-      "title": "The open night",
-      "alt": "The same broad leaf rests under a clear night sky, with grass and a fine spider web nearby.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/02-reach.jpg",
+      "original": "assets/a-paper-boat/02-reach.png",
+      "foldSrc": "assets/a-paper-boat/02-reach-fold.jpg",
+      "title": "The folding commands",
+      "alt": "Little Wonderer creases ivory paper beside a finished open paper boat, with Big Wonderer nearby.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     },
     {
       "id": "change",
-      "src": "assets/morning-dew/03-change.jpg",
-      "original": "assets/morning-dew/03-change.png",
-      "foldSrc": "assets/morning-dew/03-change-fold.jpg",
-      "title": "Water we cannot see",
-      "alt": "A close view of tiny new droplets clinging to the surface of the same leaf; the air above it is clear.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/03-change.jpg",
+      "original": "assets/a-paper-boat/03-change.png",
+      "foldSrc": "assets/a-paper-boat/03-change-fold.jpg",
+      "title": "The first voyage",
+      "alt": "An empty ivory paper boat floats in the blue-gray tub; Big and Little Wonderer lean close.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     },
     {
       "id": "notice",
-      "src": "assets/morning-dew/04-notice.jpg",
-      "original": "assets/morning-dew/04-notice.png",
-      "foldSrc": "assets/morning-dew/04-notice-fold.jpg",
-      "title": "Beads on a thread",
-      "alt": "Dew beads shine along a spider web beside the broad leaf, with Big and Little Wonderer looking closely.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/04-notice.jpg",
+      "original": "assets/a-paper-boat/04-notice.png",
+      "foldSrc": "assets/a-paper-boat/04-notice-fold.jpg",
+      "title": "A climbing line",
+      "alt": "Copper pennies sit inside the same boat, which rests lower in the water but still has dry upper sides.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     },
     {
       "id": "return",
-      "src": "assets/morning-dew/05-return.jpg",
-      "original": "assets/morning-dew/05-return.png",
-      "foldSrc": "assets/morning-dew/05-return-fold.jpg",
-      "title": "Little’s instructions",
-      "alt": "Little Wonderer studies an open notebook beside the wet leaf while Big Wonderer shares the view.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/05-return.jpg",
+      "original": "assets/a-paper-boat/05-return.png",
+      "foldSrc": "assets/a-paper-boat/05-return-fold.jpg",
+      "title": "One penny too many",
+      "alt": "Water spills over a low side of the overloaded paper boat as Big and Little Wonderer watch.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     },
     {
       "id": "keep",
-      "src": "assets/morning-dew/06-keep.jpg",
-      "original": "assets/morning-dew/06-keep.png",
-      "foldSrc": "assets/morning-dew/06-keep-fold.jpg",
-      "title": "Back into the air",
-      "alt": "Warm sunrise reaches the same leaf; only a few dew beads remain as Big and Little Wonderer look on.",
-      "caption": "An imagined close look. Drops are enlarged; the picture is not counting data."
+      "src": "assets/a-paper-boat/06-keep.jpg",
+      "original": "assets/a-paper-boat/06-keep.png",
+      "foldSrc": "assets/a-paper-boat/06-keep-fold.jpg",
+      "title": "A soft ending",
+      "alt": "The damp, sagging paper boat rests on a cloth beside the tub and Little Wonderer’s notebook.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
     }
   ],
   "reading": {
-    "title": "Little’s instructions for dew",
+    "title": "What holds a paper boat?",
     "coverPlate": "wake",
-    "coverText": "A wet leaf. A dry path. Little Wonderer follows the night’s hidden instructions to solve a morning mystery.",
-    "foldableTitle": "A little book of morning dew.",
-    "parentNote": "Age 7 / Grade 2. Read six short scenes at Little’s pace. Pause for a guess, then connect each new word to the leaf. Welcome shared reading and spoken answers.",
+    "coverText": "Little follows a list of folds. A penny waits beside the tub. Will one sheet of paper carry it?",
+    "foldableTitle": "A little book of folding and floating.",
+    "parentNote": "Age 8 / Grade 3 reading. Read six scenes at Little’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little Wonderer investigates a leaf wet without rain, traces night cooling and condensation, records the steps like a program, then sees sunrise reverse the change through evaporation.",
+      "arc": "Little follows folding commands, discovers that water supports the boat, tests a penny load, then sees swamping and soaking reveal why a paper voyage cannot last forever.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "Discover wet leaf and web before sunrise despite no rain; establish the mystery."
+          "intent": "Establish a flat ivory sheet, tub, pennies, and Little’s question about carrying a load."
         },
         {
           "plate": "reach",
-          "intent": "Reconstruct clear calm night and leaf cooling to open sky; instruction 1."
+          "intent": "Show deliberate folding in sequence, open walls and broad bottom; a program-like list of commands."
         },
         {
           "plate": "change",
-          "intent": "Close view shows onset of dew, with invisible vapor explained in prose; instruction 2."
+          "intent": "Reveal the boat afloat in the tub, with the water’s upward push explained in prose."
         },
         {
           "plate": "notice",
-          "intent": "Inspect drops formed on leaf and nearby web; condensation and instruction 3."
+          "intent": "Compare the same boat under a small penny load: lower hull and higher waterline."
         },
         {
           "plate": "return",
-          "intent": "Little records ordered commands in a notebook; connect instructions with a program."
+          "intent": "Show water entering over an overloaded rim: a finite limit, not a magic floating material."
         },
         {
           "plate": "keep",
-          "intent": "Sunrise warms the same leaf; remaining beads shrink by evaporation; instruction 4."
+          "intent": "End with damp sagging paper and saved commands; connect absorb to plant fibers and a new question."
         }
       ]
     },
@@ -155,270 +152,272 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A quiet puzzle",
-        "passage": "Before sunrise, Little Wonderer found tiny drops on a leaf. A spider web beside it wore shining beads. “Did I miss the rain?” Little asked. The path was dry. Big Wonderer knelt beside the leaf. “Let’s follow the clues back through the night.”",
-        "prompt": "Which clue makes the drops a mystery?"
+        "title": "A sheet with a secret",
+        "passage": "Little Wonderer set a sheet of paper beside a tub. “Could this carry a penny?” Big Wonderer put down a short list of folding commands. Little traced the first line. The paper was flat and flimsy. Somehow, those steps would have to give it a new shape.",
+        "prompt": "What makes Little unsure the paper can carry a penny?"
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "The open night",
-        "passage": "The night had been clear and calm. The leaf gave off heat to the open sky. It cooled and could get colder than the air around it. Little began a list of nature’s instructions: “1. Cool the leaf.” Nothing had fallen from the sky.",
-        "prompt": "Where did the leaf give off heat?"
+        "title": "The folding commands",
+        "passage": "“Fold the paper in half. Fold the corners down.” Little followed each command in order. More folds made an open boat with walls and a broad bottom. “Like a program,” Little said, “each step helps the next one work.” Now came the test. Would the folds hold?",
+        "prompt": "Why might the order of the folds matter?"
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Water we cannot see",
-        "passage": "Air holds water vapor, water in a gas form we cannot see. Air touching the cool leaf cooled too. At the dew point, it was cool enough that it could not keep all its water invisible. Little added: “2. Wait for the air to touch it.”",
-        "prompt": "What water was already in the air?"
+        "title": "The first voyage",
+        "passage": "Little lowered the boat into the tub. It floated: it stayed at the water’s surface. The boat pushed water aside, or displaced it. Water pushed back up. That push equaled the weight of the displaced water. When the upward push balanced the boat’s weight, the boat stopped sinking lower.",
+        "prompt": "What balances the weight of the floating boat?"
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Beads on a thread",
-        "passage": "Tiny drops formed right on the leaf. Water vapor had begun to condense: it changed from a gas into liquid water. That water was dew. The cool spider web held beads too. “3. Look for tiny drops,” Little wrote. “They formed here. They did not fall like rain!”",
-        "prompt": "Where did these drops form?"
+        "title": "A climbing line",
+        "passage": "Little added a penny, then another. This load was the weight the boat carried. The boat sank lower, displacing more water. Its waterline, where water met the paper, climbed up the sides. Folded walls kept water out. The broad bottom and air-filled space inside helped the boat displace enough water.",
+        "prompt": "Why does adding pennies change the waterline?"
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Little’s instructions",
-        "passage": "Little checked the order: cool the leaf, let air touch it, then notice dew. “My commands are like a little program,” Little said. “But nature does not read my notebook!” Big smiled. The instructions helped Little explain the changes, one step at a time.",
-        "prompt": "Why does the order of the commands matter?"
+        "title": "One penny too many",
+        "passage": "“Add one penny. Watch the waterline,” Little wrote. Then one more penny made the rim dip under. Water spilled inside. The boat was swamped! A flat sheet had no walls to protect an air-filled space. Shape mattered, and even this folded boat could not carry an endless load.",
+        "prompt": "Which clue shows that the boat has too much load?"
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Back into the air",
-        "passage": "Sunrise warmed the leaf. The beads grew smaller as water began to evaporate: it changed from liquid back into invisible vapor. Little added one last command: “4. Warm the leaf.” The water was not gone forever. It had returned to the air. What would the next night bring?",
-        "prompt": "Where can the water go after sunrise?"
+        "title": "A soft ending",
+        "passage": "Later, the boat sagged. Paper’s tiny plant fibers absorb water: they take it in. Wet paper grows heavy and soft until its folds lose their shape. A crayon or wax coat slows soaking. Little saved the commands. “Could my next boat last longer?”",
+        "prompt": "What could Little change in another test?"
       }
     ],
     "words": [
       {
-        "word": "water vapor",
-        "meaning": "water in a gas form that we cannot see"
+        "word": "float",
+        "meaning": "stay at the surface of water"
       },
       {
-        "word": "dew point",
-        "meaning": "the temperature where cooling air becomes cool enough for water vapor to condense"
+        "word": "displace",
+        "meaning": "push water aside to make room"
       },
       {
-        "word": "condense",
-        "meaning": "change from a gas into liquid drops"
+        "word": "waterline",
+        "meaning": "the line where the water meets the boat"
       },
       {
-        "word": "evaporate",
-        "meaning": "change from liquid water into water vapor"
+        "word": "load",
+        "meaning": "the weight a boat carries"
+      },
+      {
+        "word": "absorb",
+        "meaning": "take water into a material"
       },
       {
         "word": "command",
-        "meaning": "a sentence that tells what to do, such as “Cool the leaf.”"
+        "meaning": "a sentence that tells what to do"
       }
     ],
     "questions": [
-      "What two clues made Little wonder if the drops came from rain?",
-      "Why did Little put “Cool the leaf” before “Look for tiny drops”?",
-      "What happened to the water when sunrise warmed the leaf?"
+      "What pushed up on the boat, and what did the boat push aside?",
+      "Why did the waterline climb when Little added pennies? Use the word load.",
+      "How did soaking change the paper, and what might slow that change?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for the leaf’s story. Tell what to do.",
-      "example": "Example: First cool the leaf, then wait for tiny drops."
+      "prompt": "Write one command sentence for Little’s boat. Tell what to do.",
+      "example": "Example: First fold the paper in half, then fold the corners down."
     }
   },
   "math": {
-    "title": "Six clues to count",
+    "title": "Six boat counts",
     "plate": "notice",
-    "intro": "These are pretend counts from Little’s notebook. Solve one question at a time. Real drops do not form in neat rows or grow by a fixed counting rule.",
+    "intro": "These are pretend counts from Little’s boat notebook. Follow each short counting command. They do not predict how many pennies a real boat holds or how long it floats.",
     "tasks": [
       {
         "skill": "addition-regrouping",
         "operands": [
-          38,
-          47
+          28,
+          17
         ],
-        "prompt": "Little counts 38 dew drops on one leaf and 47 on another. How many drops are there altogether?",
-        "equation": "38 + 47 =",
+        "prompt": "Little gathers 28 pennies, then 17 more beside the tub. How many pennies are ready?",
+        "equation": "28 + 17 =",
         "hint": "Add 8 and 7 ones. Trade 10 ones for 1 ten.",
-        "answer": 85,
-        "worked": "38 + 47 = 85. 8 + 7 = 15; 3 tens + 4 tens + 1 ten = 8 tens.",
+        "answer": 45,
+        "worked": "8 + 7 = 15. Add 2 tens, 1 ten, and the new ten: 28 + 17 = 45.",
         "plate": "notice",
         "label": "TASK 1"
       },
       {
         "skill": "subtraction-regrouping",
         "operands": [
-          72,
-          38
+          52,
+          26
         ],
-        "prompt": "A spider web has 72 dew beads. After sunrise, 38 evaporate. How many beads remain?",
-        "equation": "72 − 38 =",
-        "hint": "Trade 1 ten for 10 ones. Subtract 8 from 12, then subtract the tens.",
-        "answer": 34,
-        "worked": "72 − 38 = 34. Regroup as 6 tens and 12 ones: 12 − 8 = 4; 6 − 3 = 3.",
+        "prompt": "Little has 52 pennies beside the tub and puts 26 away. How many remain?",
+        "equation": "52 − 26 =",
+        "hint": "Trade 1 ten for 10 ones. Subtract 6 from 12, then subtract the tens.",
+        "answer": 26,
+        "worked": "52 is 4 tens and 12 ones. 12 − 6 = 6; 4 − 2 = 2. So 52 − 26 = 26.",
         "plate": "notice",
         "label": "TASK 2"
       },
       {
-        "skill": "two-step",
-        "challenge": "multi-step",
+        "skill": "addition-regrouping",
         "operands": [
-          28,
-          17,
-          19
+          36,
+          27
         ],
-        "prompt": "A leaf has 28 drops. Then 17 more form, and later 19 evaporate. How many drops remain?",
-        "equation": "28 + 17 − 19 =",
-        "hint": "First find how many drops there are after 17 form. Then subtract 19.",
-        "answer": 26,
-        "worked": "28 + 17 = 45; 45 − 19 = 26.",
+        "prompt": "Little counts 36 folds across several boats, then 27 more folds. How many folds in all?",
+        "equation": "36 + 27 =",
+        "hint": "Add 6 and 7 ones. Regroup 13 ones as 1 ten and 3 ones.",
+        "answer": 63,
+        "worked": "6 + 7 = 13. 3 tens + 2 tens + 1 ten = 6 tens. So 36 + 27 = 63.",
         "plate": "notice",
         "label": "TASK 3"
       },
       {
-        "skill": "equal-groups",
+        "skill": "subtraction-regrouping",
         "operands": [
-          4,
-          6
+          71,
+          38
         ],
-        "prompt": "Little draws 4 rows of dew beads with 6 beads in each row. How many beads does Little draw?",
-        "equation": "4 × 6 =",
-        "hint": "Draw four equal rows. Add 6 + 6 + 6 + 6.",
-        "answer": 24,
-        "worked": "6 + 6 + 6 + 6 = 24, so 4 × 6 = 24.",
+        "prompt": "Little draws 71 drops beside a boat sketch, then erases 38. How many drawn drops remain?",
+        "equation": "71 − 38 =",
+        "hint": "Regroup 71 as 6 tens and 11 ones before subtracting.",
+        "answer": 33,
+        "worked": "11 − 8 = 3; 6 − 3 = 3. So 71 − 38 = 33.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "missing-addend",
+        "skill": "addition-regrouping",
         "operands": [
-          27,
-          60
+          24,
+          19
         ],
-        "prompt": "Little has drawn 27 drops and wants 60 in the notebook. How many more drops must Little draw?",
-        "equation": "27 + ___ = 60",
-        "hint": "Count up from 27 to 30. Then count from 30 to 60.",
-        "answer": 33,
-        "worked": "27 + 3 = 30; 30 + 30 = 60. 3 + 30 = 33 more drops.",
+        "prompt": "Little draws 24 waterline marks, then follows “Add 19 marks.” How many marks are drawn?",
+        "equation": "24 + 19 =",
+        "hint": "Add 4 and 9 ones. Trade 10 ones for 1 ten.",
+        "answer": 43,
+        "worked": "4 + 9 = 13. 2 tens + 1 ten + 1 ten = 4 tens. So 24 + 19 = 43.",
         "plate": "notice",
         "label": "TASK 5"
       },
       {
-        "skill": "pattern-sequencing",
-        "sequence": [
-          12,
-          17,
-          22
+        "skill": "subtraction-regrouping",
+        "operands": [
+          63,
+          28
         ],
-        "step": 5,
-        "prompt": "Follow Little’s drawing command: add 5 drops each time. The counts are 12, 17, 22. What count comes next?",
-        "equation": "12, 17, 22, ___",
-        "hint": "Repeat the same instruction: add 5 to the last count.",
-        "answer": 27,
-        "worked": "22 + 5 = 27. The instruction adds 5 at each step.",
+        "prompt": "A pretend boat voyage lasts 63 minutes. After 28 minutes, how many minutes remain?",
+        "equation": "63 − 28 =",
+        "hint": "Regroup 63 as 5 tens and 13 ones. Then subtract 28.",
+        "answer": 35,
+        "worked": "13 − 8 = 5; 5 − 2 = 3. So 63 − 28 = 35.",
         "plate": "notice",
         "label": "TASK 6"
       }
     ],
-    "extension": "The command “add 5 drops” makes a drawing pattern. Nature does not follow these pretend numbers.",
-    "parentNote": "Age 7 / Grade 2 stretch. Six tasks cover the learning contract. Offer counters, tens-and-ones sketches, or oral reasoning. Pause between pages; completing all six at once is optional.",
-    "eyebrow": "PRETEND DEW COUNTS · SIX CHALLENGES",
+    "extension": "Choose one equation and say its command in words: add or subtract. Follow the command one step at a time.",
+    "parentNote": "Age 8; Grade 2 math, number-crunch template. Six two-digit regrouping equations. Offer tens-and-ones sketches, counters, spoken reasoning, or a pause between pages.",
+    "eyebrow": "PRETEND BOAT COUNTS · SIX CHALLENGES",
     "actionLabel": "Follow a counting command",
+    "printNote": "All numbers are pretend. Show your tens and ones or write your steps.",
     "table": {
-      "caption": "Little’s drawing instructions · pretend counts",
-      "columnLabel": "Step",
+      "caption": "Little’s counting commands · pretend notebook",
+      "columnLabel": "Command",
       "columns": [
-        "1",
-        "2",
-        "3"
+        "Gather",
+        "Put away",
+        "Draw"
       ],
-      "rowLabel": "Drops",
+      "rowLabel": "Try",
       "values": [
-        12,
-        17,
-        22
+        "Add pennies",
+        "Subtract pennies",
+        "Add marks"
       ]
-    },
-    "printNote": "All numbers are pretend. Draw, use tens and ones, or show your steps."
+    }
   },
   "writing": {
-    "title": "Give the leaf an instruction.",
-    "intro": "Choose one scene below. Write one command sentence for the leaf’s story. You may add a second step.",
+    "title": "Give the boat an instruction.",
+    "intro": "Choose one scene. Write one clear command sentence for Little’s boat. You may add a second step.",
     "plateIds": [
       "reach",
       "notice",
       "keep"
     ],
-    "draw": "Draw the leaf before or after your command. Add one label.",
-    "starter": "My instruction for the leaf",
+    "draw": "Draw the boat before or after your command. Add one label.",
+    "starter": "My instruction for the boat",
     "frames": [
       {
         "plate": "reach",
         "start": "First,",
-        "hint": "tell the leaf what to do before dew forms"
+        "hint": "tell how to begin folding"
       },
       {
         "plate": "notice",
         "start": "Then,",
-        "hint": "tell what to notice on the cool leaf"
+        "hint": "tell what to add or watch"
       },
       {
         "plate": "keep",
-        "start": "After sunrise,",
-        "hint": "tell what to watch as the leaf warms"
+        "start": "Next time,",
+        "hint": "tell what to change or compare"
       }
     ],
     "words": [
-      "leaf",
-      "water vapor",
-      "condense",
-      "dew",
-      "evaporate",
+      "fold",
+      "boat",
+      "tub",
+      "penny",
+      "waterline",
+      "load",
+      "absorb",
       "first",
       "then"
     ],
-    "check": "Read your sentence. Does it tell what to do, using a command such as Cool, Wait, Look, or Watch?",
-    "parentNote": "Accept Little’s spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First cool the leaf, then wait for tiny drops.”"
+    "check": "Read your sentence. Does it tell what to do, using a command such as Fold, Add, Watch, or Compare?",
+    "parentNote": "Accept Little’s spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First fold the paper in half, then fold the corners down.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The leaf and spider web were wet, but the path was dry and no rain had fallen. These clues made Little investigate another source of water."
+      "text": "Water pushed up on the boat. The boat pushed water aside, or displaced it. When the upward push balanced the boat’s weight, it floated."
     },
     {
       "label": "Reading · 2",
-      "text": "The leaf must become cool enough first. Air touching it cools; water vapor can then condense into drops. Cooling comes before noticing dew."
+      "text": "Pennies increased the load. The boat sank lower to displace more water, so water reached higher on its sides."
     },
     {
       "label": "Reading · 3",
-      "text": "The drops evaporated: liquid water changed back into invisible water vapor in the air."
+      "text": "Plant fibers absorbed water. The paper became heavier and softer and lost its shape. A crayon or wax coat might slow soaking."
     },
     {
       "label": "Writing",
-      "text": "Accept one sensible command sentence, spoken, dictated, or written. Example: “First cool the leaf, then wait for tiny drops.” The notebook describes nature; it does not control the weather."
+      "text": "Accept one sensible command, spoken, dictated, or written. Example: “First fold the paper in half, then fold the corners down.” A clear two-step sequence is welcome."
     }
   ],
-  "parentGuidance": "Little is 7, in Grade 2. Follow his questions and welcome dictation. Dew forms on cool surfaces; it does not fall like rain. “Air holds vapor” is kid-sized language: the air is not a sponge. Cooling to the dew point allows vapor to condense. Clear skies favor radiative cooling; clouds and wind can reduce it, but do not guarantee a dry leaf. All math counts and diorama temperatures are pretend. No experiment is required. A cold glass is an analogy, not a required activity.",
+  "parentGuidance": "Little is age 8: Grade 3 reading and Grade 2 math. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
   "sources": [
     {
-      "label": "NOAA / National Weather Service · dew and frost development",
-      "url": "https://www.weather.gov/source/zhu/ZHU_Training_Page/fog_stuff/Dew_Frost/Dew_Frost.htm"
+      "label": "OpenStax · Archimedes’ principle and buoyancy",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/14-4-archimedes-principle-and-buoyancy"
     },
     {
-      "label": "USGS Water Science School · condensation",
-      "url": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle"
+      "label": "American Chemical Society · build a model boat",
+      "url": "https://www.acs.org/content/dam/acsorg/education/k-8/inquiry-in-action/second-grade/g2-l1.4-model-boat.pdf"
     },
     {
-      "label": "USGS Water Science School · evaporation",
-      "url": "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle"
+      "label": "Science Buddies · shape, load, and floating boats",
+      "url": "https://www.sciencebuddies.org/stem-activities/aluminum-foil-boats-float"
     }
   ],
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Little is age 7, Grade 2. New Curiosity packs require exactly six math tasks, one per skill: addition-regrouping, subtraction-regrouping, two-step, equal-groups, missing-addend, pattern-sequencing. Numbers and results stay within 100. Each task asks one clear question and includes a hint, numeric answer, and short worked step. Equal groups needs repeated-addition support. Tie the pattern or sequence to the day's theme. Explain precise vocabulary in context; welcome speech and dictation.",
+    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
@@ -426,66 +425,66 @@
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "dew"
+    "diorama": "paper-boat"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "MORNING DEW · 2026-09-29",
-    "subtitle": "A leaf, a quiet night, and water we could not see."
+    "edition": "A PAPER BOAT · 2026-10-01",
+    "subtitle": "One sheet, a tub of water, and a small voyage."
   },
   "visualNotes": {
-    "intent": "Six imagined garden scenes follow one broad leaf, a nearby spider web, and Big and Little Wonderer from a puzzling wet morning through the night’s hidden steps to sunrise.",
-    "grownUpNote": "Water vapor is invisible. Enlarged drops are an illustration aid; the math counts are invented. The diorama’s temperatures and timing are a simplified model, not a weather forecast.",
-    "prompts": "assets/morning-dew/prompts.json",
-    "provenance": "assets/morning-dew/provenance.json"
+    "intent": "Six imagined scenes follow Little Wonderer folding one ivory paper boat, floating it in a blue-gray tub, adding copper pennies, and noticing its soft wet sides.",
+    "grownUpNote": "Pictures are story scenes, not measured data or a complete folding guide. The code-drawn diorama is a simplified comparison with sped-up time; real paper and boats vary.",
+    "prompts": "assets/a-paper-boat/prompts.json",
+    "provenance": "assets/a-paper-boat/provenance.json"
   },
   "quiz": {
     "title": "Four clues to keep",
-    "intro": "Think about the same leaf. Choose one answer for each clue.",
+    "intro": "Think about Little’s boat. Choose one answer for each clue.",
     "questions": [
       {
-        "id": "vapor",
-        "prompt": "What is water vapor?",
+        "id": "push",
+        "prompt": "What holds a floating boat up?",
         "choices": [
-          "Water in a gas form we cannot see",
-          "Tiny pieces of leaf",
-          "Rain waiting on the ground"
+          "The bottom of the tub",
+          "Water pushing up as the boat pushes water aside",
+          "Paper pulling itself upward"
         ],
-        "answer": "Water vapor is invisible water in a gas form.",
-        "answerIndex": 0
+        "answerIndex": 1,
+        "answer": "Water pushes up. The push equals the weight of the displaced water. A floating boat displaces enough water for that push to balance its weight."
       },
       {
-        "id": "cooling",
-        "prompt": "What helps the leaf cool on a clear, calm night?",
+        "id": "shape",
+        "prompt": "How do folded walls and a broad bottom help?",
         "choices": [
-          "Heat leaving the leaf for the open sky",
-          "Dew falling from a cloud",
-          "The leaf making its own ice"
+          "They keep water out and make an air-filled space that can displace water",
+          "They stop water from pushing up",
+          "They make paper unable to absorb water"
         ],
-        "answer": "The leaf gives off heat to the open sky and can become colder than the surrounding air.",
-        "answerIndex": 0
+        "answerIndex": 0,
+        "answer": "The walls keep water out. The broad bottom and air-filled space let the boat displace enough water to support its weight."
       },
       {
-        "id": "condense",
-        "prompt": "What happens when air touching the leaf cools to its dew point?",
+        "id": "load",
+        "prompt": "What happens to the waterline when Little adds pennies?",
         "choices": [
-          "All the water disappears",
-          "Some water vapor condenses into liquid drops on the leaf",
-          "Rain must fall from the sky"
+          "It always drops lower on the boat",
+          "It cannot change",
+          "It climbs up the sides as the boat sinks lower"
         ],
-        "answer": "Some vapor condenses into liquid dew right on the leaf. At the dew point, the air is cool enough for condensation.",
-        "answerIndex": 1
+        "answerIndex": 2,
+        "answer": "The load grows. The boat sinks lower and displaces more water, so the waterline climbs. Too much load can let water spill in."
       },
       {
-        "id": "evaporate",
-        "prompt": "What happens as sunrise warms the dew?",
+        "id": "soaking",
+        "prompt": "Why does the paper boat soften over time?",
         "choices": [
-          "The drops turn into invisible water vapor",
-          "The drops turn into pieces of leaf",
-          "The drops must rise as tiny liquid balls"
+          "The paper’s plant fibers absorb water",
+          "The pennies turn into paper",
+          "Water stops having weight"
         ],
-        "answer": "Liquid dew evaporates into invisible water vapor. The water changes form; it is not gone forever.",
-        "answerIndex": 0
+        "answerIndex": 0,
+        "answer": "Tiny plant fibers absorb water. Wet paper becomes heavier and softer and can lose its shape. A crayon or wax coat slows soaking."
       }
     ]
   }

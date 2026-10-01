@@ -1,0 +1,37 @@
+{
+  "topic": "a paper boat",
+  "outlineLockedBeforeImages": true,
+  "arc": "Little follows folding commands, discovers that water supports the boat, tests a penny load, then sees swamping and soaking reveal why a paper voyage cannot last forever.",
+  "choices": [
+    "One ivory open boat, one blue-gray tub, copper pennies throughout.",
+    "Warm paper and ink with rare gold; calm editorial composition.",
+    "Big and Little are the same nonhuman pebble guides as morning dew.",
+    "No embedded text or answer diagrams; story and code supply the mechanism."
+  ],
+  "plates": [
+    {
+      "plate": "wake",
+      "intent": "Establish a flat ivory sheet, tub, pennies, and Little’s question about carrying a load."
+    },
+    {
+      "plate": "reach",
+      "intent": "Show deliberate folding in sequence, open walls and broad bottom; a program-like list of commands."
+    },
+    {
+      "plate": "change",
+      "intent": "Reveal the boat afloat in the tub, with the water’s upward push explained in prose."
+    },
+    {
+      "plate": "notice",
+      "intent": "Compare the same boat under a small penny load: lower hull and higher waterline."
+    },
+    {
+      "plate": "return",
+      "intent": "Show water entering over an overloaded rim: a finite limit, not a magic floating material."
+    },
+    {
+      "plate": "keep",
+      "intent": "End with damp sagging paper and saved commands; connect absorb to plant fibers and a new question."
+    }
+  ]
+}

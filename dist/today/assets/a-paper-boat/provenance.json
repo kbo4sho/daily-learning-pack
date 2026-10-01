@@ -1,0 +1,118 @@
+{
+  "generator": "built-in image_gen",
+  "localArtModelsUsed": false,
+  "generatedOn": "2026-10-01",
+  "outlineLockedBeforeImages": true,
+  "originals": "PNG outputs retained unchanged; JPG and <=720px fold deliveries converted with Pillow.",
+  "prompts": "prompts.json",
+  "assets": [
+    {
+      "file": "01-wake.png",
+      "sha256": "f4de3bf9f74de2759d5027c939c22c0c96fd56a1f3e9ad53a5e2b3bd246c973a",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "01-wake.jpg",
+      "sha256": "82b4a1106a6995574a32c55ff5605c82fc9a7eb7d01d8c18c0b51022b693ee0b",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "01-wake-fold.jpg",
+      "sha256": "481914ba327b71d2223c1008e26d4d0b50558a3ac9ef3e5cd21d3a505aa357ed",
+      "width": 720,
+      "height": 480
+    },
+    {
+      "file": "02-reach.png",
+      "sha256": "abfbbf11d50c111c93edacca323f6d9f072df9f79e62e89c5f9496d667bb198e",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "02-reach.jpg",
+      "sha256": "b93507e97ee2ae25deb6cbd4d98bb2c8ec50e04696bf2c8efd0b9705c59834cb",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "02-reach-fold.jpg",
+      "sha256": "60381ecc20dd29835ff82f99bde9c5928c0d6f76f440af6e3a690bd9abe01d15",
+      "width": 720,
+      "height": 480
+    },
+    {
+      "file": "03-change.png",
+      "sha256": "a388458f57411c7354cab303148bb0c46c1161909a54773675dc946a376ab561",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "03-change.jpg",
+      "sha256": "dcb7dd41df5bcfc3555bd8dec8444e2dd01e6bcc955d08cf79506736e7460f71",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "03-change-fold.jpg",
+      "sha256": "3b53af5d26eec496a2ed194ba6fa71cc8ca687bfdc344cb4c187a792e2b9b776",
+      "width": 720,
+      "height": 480
+    },
+    {
+      "file": "04-notice.png",
+      "sha256": "0702a0ba68c3d334df9f3d9c13ba0fa5fddf595a9362f120d61d7fe3bbdf2805",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "04-notice.jpg",
+      "sha256": "4fe622b8540dc00e40b6b923eeae748a759c400f3dfe0b1037d703570a5e3432",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "04-notice-fold.jpg",
+      "sha256": "d0770eba9e90748cc5e2597f7a8cf66fe9c7ccad09512feeaf606cff83653399",
+      "width": 720,
+      "height": 480
+    },
+    {
+      "file": "05-return.png",
+      "sha256": "82199b848ab6b3ba4075fb1d066937b183df8d1cb61c7885078b9e11e1eb3e78",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "05-return.jpg",
+      "sha256": "d82c087ba6c54ced124bb0fad138b86dd4f7ec90bb01e00f6d5315b7743015a5",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "05-return-fold.jpg",
+      "sha256": "8f21653fb410c8e537f443fbb7e7a98ff7f3f699b71804ecb507c8f588921810",
+      "width": 720,
+      "height": 480
+    },
+    {
+      "file": "06-keep.png",
+      "sha256": "265f49d49a22ecd78433c112a44ed31ffafcfb446eeb2055337c91a51750b7ec",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "06-keep.jpg",
+      "sha256": "a8f6bcbacf403d584102157e927b399b5af000ca808efe301787f8aca44b6a87",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "06-keep-fold.jpg",
+      "sha256": "b3544c224d9c4fea328149a5a9dcb71c3d892bd54f927e5530b34d240490e5a8",
+      "width": 720,
+      "height": 480
+    }
+  ]
+}
