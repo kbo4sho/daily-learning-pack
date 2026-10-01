@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "a-paper-boat",
+  "topic": "a paper boat",
+  "teaser": "Fold, float, and notice what holds.",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · A PAPER BOAT",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "What holds a paper boat?",
+  "question": "What holds a paper boat above the bottom of the tub?",
+  "idea": "A folded boat pushes water aside. Water pushes up, balancing its weight until too much load or soaking lets water in.",
+  "curiosity": {
+    "intro": "A flat sheet. A waiting penny. What might a few folds change?",
+    "carryForward": "Follow Little’s folding commands, solve six boat counts, and compare shapes in the diorama.",
+    "questions": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "question": "Can the shape of paper help it carry a penny?",
+        "notice": "Compare the flat sheet with the folded boat in the next scene.",
+        "say": "Folded walls and a broad, flat bottom make a space that keeps water out. The air inside is part of what floats. A flat sheet may rest on water briefly, but it has no walls to protect that space when a load pushes it down.",
+        "try": "Imagine folding the sides up. Which part would keep water out?"
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "question": "What is holding the boat up?",
+        "notice": "Look where the water meets the boat. The bottom of the tub is far below.",
+        "say": "The boat displaces water: it pushes water aside. Water pushes up with a force as big as the weight of the water pushed aside. The boat floats when that upward push equals the boat’s weight.",
+        "try": "Use your voice to follow the steps: push water aside, feel water push up, float."
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "question": "Why does the waterline climb?",
+        "notice": "The pennies are inside. The water reaches higher on the sides.",
+        "say": "Pennies add load, the weight the boat carries. To balance that extra weight, the boat sinks lower and pushes aside more water. Too much load, or a tip, lets water spill over the sides and swamp the boat.",
+        "try": "Predict what would happen to the waterline if Little removed a penny."
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "question": "Why can’t a paper boat float forever?",
+        "notice": "The damp paper has sagged. Its crisp folds are softer.",
+        "say": "Paper is made of tiny plant fibers that absorb water. Wet paper gets heavier and softer and loses its shape. A crayon or wax coat slows the soaking, but it does not make the boat last forever.",
+        "try": "Choose one command for another voyage, such as “Watch the waterline.”"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/a-paper-boat/01-wake.jpg",
+      "original": "assets/a-paper-boat/01-wake.png",
+      "foldSrc": "assets/a-paper-boat/01-wake-fold.jpg",
+      "title": "A sheet with a secret",
+      "alt": "Big and Little Wonderer study an ivory sheet beside a blue-gray water tub and a few copper pennies.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    },
+    {
+      "id": "reach",
+      "src": "assets/a-paper-boat/02-reach.jpg",
+      "original": "assets/a-paper-boat/02-reach.png",
+      "foldSrc": "assets/a-paper-boat/02-reach-fold.jpg",
+      "title": "The folding commands",
+      "alt": "Little Wonderer creases ivory paper beside a finished open paper boat, with Big Wonderer nearby.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    },
+    {
+      "id": "change",
+      "src": "assets/a-paper-boat/03-change.jpg",
+      "original": "assets/a-paper-boat/03-change.png",
+      "foldSrc": "assets/a-paper-boat/03-change-fold.jpg",
+      "title": "The first voyage",
+      "alt": "An empty ivory paper boat floats in the blue-gray tub; Big and Little Wonderer lean close.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    },
+    {
+      "id": "notice",
+      "src": "assets/a-paper-boat/04-notice.jpg",
+      "original": "assets/a-paper-boat/04-notice.png",
+      "foldSrc": "assets/a-paper-boat/04-notice-fold.jpg",
+      "title": "A climbing line",
+      "alt": "Copper pennies sit inside the same boat, which rests lower in the water but still has dry upper sides.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    },
+    {
+      "id": "return",
+      "src": "assets/a-paper-boat/05-return.jpg",
+      "original": "assets/a-paper-boat/05-return.png",
+      "foldSrc": "assets/a-paper-boat/05-return-fold.jpg",
+      "title": "One penny too many",
+      "alt": "Water spills over a low side of the overloaded paper boat as Big and Little Wonderer watch.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    },
+    {
+      "id": "keep",
+      "src": "assets/a-paper-boat/06-keep.jpg",
+      "original": "assets/a-paper-boat/06-keep.png",
+      "foldSrc": "assets/a-paper-boat/06-keep-fold.jpg",
+      "title": "A soft ending",
+      "alt": "The damp, sagging paper boat rests on a cloth beside the tub and Little Wonderer’s notebook.",
+      "caption": "An imagined scene. Penny counts and time in the lessons are pretend."
+    }
+  ],
+  "reading": {
+    "title": "What holds a paper boat?",
+    "coverPlate": "wake",
+    "coverText": "Little follows a list of folds. A penny waits beside the tub. Will one sheet of paper carry it?",
+    "foldableTitle": "A little book of folding and floating.",
+    "parentNote": "Age 8 / Grade 3 reading. Read six scenes at Leo’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "Little follows folding commands, discovers that water supports the boat, tests a penny load, then sees swamping and soaking reveal why a paper voyage cannot last forever.",
+      "beatIntents": [
+        {
+          "plate": "wake",
+          "intent": "Establish a flat ivory sheet, tub, pennies, and Little’s question about carrying a load."
+        },
+        {
+          "plate": "reach",
+          "intent": "Show deliberate folding in sequence, open walls and broad bottom; a program-like list of commands."
+        },
+        {
+          "plate": "change",
+          "intent": "Reveal the boat afloat in the tub, with the water’s upward push explained in prose."
+        },
+        {
+          "plate": "notice",
+          "intent": "Compare the same boat under a small penny load: lower hull and higher waterline."
+        },
+        {
+          "plate": "return",
+          "intent": "Show water entering over an overloaded rim: a finite limit, not a magic floating material."
+        },
+        {
+          "plate": "keep",
+          "intent": "End with damp sagging paper and saved commands; connect absorb to plant fibers and a new question."
+        }
+      ]
+    },
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A sheet with a secret",
+        "passage": "Little Wonderer set a sheet of paper beside a tub. “Could this carry a penny?” Big Wonderer put down a short list of folding commands. Little traced the first line. The paper was flat and flimsy. Somehow, those steps would have to give it a new shape.",
+        "prompt": "What makes Little unsure the paper can carry a penny?"
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "The folding commands",
+        "passage": "“Fold the paper in half. Fold the corners down.” Little followed each command in order. More folds made an open boat with walls and a broad bottom. “Like a program,” Little said, “each step helps the next one work.” Now came the test. Would the folds hold?",
+        "prompt": "Why might the order of the folds matter?"
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "The first voyage",
+        "passage": "Little lowered the boat into the tub. It floated: it stayed at the water’s surface. The boat pushed water aside, or displaced it. Water pushed back up. That push equaled the weight of the displaced water. When the upward push balanced the boat’s weight, the boat stopped sinking lower.",
+        "prompt": "What balances the weight of the floating boat?"
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A climbing line",
+        "passage": "Little added a penny, then another. This load was the weight the boat carried. The boat sank lower, displacing more water. Its waterline, where water met the paper, climbed up the sides. Folded walls kept water out. The broad bottom and air-filled space inside helped the boat displace enough water.",
+        "prompt": "Why does adding pennies change the waterline?"
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "One penny too many",
+        "passage": "“Add one penny. Watch the waterline,” Little wrote. Then one more penny made the rim dip under. Water spilled inside. The boat was swamped! A flat sheet had no walls to protect an air-filled space. Shape mattered, and even this folded boat could not carry an endless load.",
+        "prompt": "Which clue shows that the boat has too much load?"
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "A soft ending",
+        "passage": "Later, the boat sagged. Paper’s tiny plant fibers absorb water: they take it in. Wet paper grows heavy and soft until its folds lose their shape. A crayon or wax coat slows soaking. Little saved the commands. “Could my next boat last longer?”",
+        "prompt": "What could Little change in another test?"
+      }
+    ],
+    "words": [
+      {
+        "word": "float",
+        "meaning": "stay at the surface of water"
+      },
+      {
+        "word": "displace",
+        "meaning": "push water aside to make room"
+      },
+      {
+        "word": "waterline",
+        "meaning": "the line where the water meets the boat"
+      },
+      {
+        "word": "load",
+        "meaning": "the weight a boat carries"
+      },
+      {
+        "word": "absorb",
+        "meaning": "take water into a material"
+      },
+      {
+        "word": "command",
+        "meaning": "a sentence that tells what to do"
+      }
+    ],
+    "questions": [
+      "What pushed up on the boat, and what did the boat push aside?",
+      "Why did the waterline climb when Little added pennies? Use the word load.",
+      "How did soaking change the paper, and what might slow that change?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one command sentence for Little’s boat. Tell what to do.",
+      "example": "Example: First fold the paper in half, then fold the corners down."
+    }
+  },
+  "math": {
+    "title": "Six boat counts",
+    "plate": "notice",
+    "intro": "These are pretend counts from Little’s boat notebook. Follow each short counting command. They do not predict how many pennies a real boat holds or how long it floats.",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          28,
+          17
+        ],
+        "prompt": "Little gathers 28 pennies, then 17 more beside the tub. How many pennies are ready?",
+        "equation": "28 + 17 =",
+        "hint": "Add 8 and 7 ones. Trade 10 ones for 1 ten.",
+        "answer": 45,
+        "worked": "8 + 7 = 15. Add 2 tens, 1 ten, and the new ten: 28 + 17 = 45.",
+        "plate": "notice",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          52,
+          26
+        ],
+        "prompt": "Little has 52 pennies beside the tub and puts 26 away. How many remain?",
+        "equation": "52 − 26 =",
+        "hint": "Trade 1 ten for 10 ones. Subtract 6 from 12, then subtract the tens.",
+        "answer": 26,
+        "worked": "52 is 4 tens and 12 ones. 12 − 6 = 6; 4 − 2 = 2. So 52 − 26 = 26.",
+        "plate": "notice",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          36,
+          27
+        ],
+        "prompt": "Little counts 36 folds across several boats, then 27 more folds. How many folds in all?",
+        "equation": "36 + 27 =",
+        "hint": "Add 6 and 7 ones. Regroup 13 ones as 1 ten and 3 ones.",
+        "answer": 63,
+        "worked": "6 + 7 = 13. 3 tens + 2 tens + 1 ten = 6 tens. So 36 + 27 = 63.",
+        "plate": "notice",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          71,
+          38
+        ],
+        "prompt": "Little draws 71 drops beside a boat sketch, then erases 38. How many drawn drops remain?",
+        "equation": "71 − 38 =",
+        "hint": "Regroup 71 as 6 tens and 11 ones before subtracting.",
+        "answer": 33,
+        "worked": "11 − 8 = 3; 6 − 3 = 3. So 71 − 38 = 33.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          24,
+          19
+        ],
+        "prompt": "Little draws 24 waterline marks, then follows “Add 19 marks.” How many marks are drawn?",
+        "equation": "24 + 19 =",
+        "hint": "Add 4 and 9 ones. Trade 10 ones for 1 ten.",
+        "answer": 43,
+        "worked": "4 + 9 = 13. 2 tens + 1 ten + 1 ten = 4 tens. So 24 + 19 = 43.",
+        "plate": "notice",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          63,
+          28
+        ],
+        "prompt": "A pretend boat voyage lasts 63 minutes. After 28 minutes, how many minutes remain?",
+        "equation": "63 − 28 =",
+        "hint": "Regroup 63 as 5 tens and 13 ones. Then subtract 28.",
+        "answer": 35,
+        "worked": "13 − 8 = 5; 5 − 2 = 3. So 63 − 28 = 35.",
+        "plate": "notice",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one equation and say its command in words: add or subtract. Follow the command one step at a time.",
+    "parentNote": "Age 8; Grade 2 math, number-crunch template. Six two-digit regrouping equations. Offer tens-and-ones sketches, counters, spoken reasoning, or a pause between pages.",
+    "eyebrow": "PRETEND BOAT COUNTS · SIX CHALLENGES",
+    "actionLabel": "Follow a counting command",
+    "printNote": "All numbers are pretend. Show your tens and ones or write your steps.",
+    "table": {
+      "caption": "Little’s counting commands · pretend notebook",
+      "columnLabel": "Command",
+      "columns": [
+        "Gather",
+        "Put away",
+        "Draw"
+      ],
+      "rowLabel": "Try",
+      "values": [
+        "Add pennies",
+        "Subtract pennies",
+        "Add marks"
+      ]
+    }
+  },
+  "writing": {
+    "title": "Give the boat an instruction.",
+    "intro": "Choose one scene. Write one clear command sentence for Little’s boat. You may add a second step.",
+    "plateIds": [
+      "reach",
+      "notice",
+      "keep"
+    ],
+    "draw": "Draw the boat before or after your command. Add one label.",
+    "starter": "My instruction for the boat",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "First,",
+        "hint": "tell how to begin folding"
+      },
+      {
+        "plate": "notice",
+        "start": "Then,",
+        "hint": "tell what to add or watch"
+      },
+      {
+        "plate": "keep",
+        "start": "Next time,",
+        "hint": "tell what to change or compare"
+      }
+    ],
+    "words": [
+      "fold",
+      "boat",
+      "tub",
+      "penny",
+      "waterline",
+      "load",
+      "absorb",
+      "first",
+      "then"
+    ],
+    "check": "Read your sentence. Does it tell what to do, using a command such as Fold, Add, Watch, or Compare?",
+    "parentNote": "Accept Leo’s spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First fold the paper in half, then fold the corners down.”"
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Water pushed up on the boat. The boat pushed water aside, or displaced it. When the upward push balanced the boat’s weight, it floated."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Pennies increased the load. The boat sank lower to displace more water, so water reached higher on its sides."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "Plant fibers absorbed water. The paper became heavier and softer and lost its shape. A crayon or wax coat might slow soaking."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept one sensible command, spoken, dictated, or written. Example: “First fold the paper in half, then fold the corners down.” A clear two-step sequence is welcome."
+    }
+  ],
+  "parentGuidance": "Leo is age 8: Grade 3 reading and Grade 2 math. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
+  "sources": [
+    {
+      "label": "OpenStax · Archimedes’ principle and buoyancy",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/14-4-archimedes-principle-and-buoyancy"
+    },
+    {
+      "label": "American Chemical Society · build a model boat",
+      "url": "https://www.acs.org/content/dam/acsorg/education/k-8/inquiry-in-action/second-grade/g2-l1.4-model-boat.pdf"
+    },
+    {
+      "label": "Science Buddies · shape, load, and floating boats",
+      "url": "https://www.sciencebuddies.org/stem-activities/aluminum-foil-boats-float"
+    }
+  ],
+  "authoring": {
+    "status": "authored",
+    "bar": "curiosity",
+    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-generation",
+    "todo": []
+  },
+  "surfaces": {
+    "layout": "six",
+    "diorama": "paper-boat"
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "A PAPER BOAT · 2026-10-01",
+    "subtitle": "One sheet, a tub of water, and a small voyage."
+  },
+  "visualNotes": {
+    "intent": "Six imagined scenes follow Little Wonderer folding one ivory paper boat, floating it in a blue-gray tub, adding copper pennies, and noticing its soft wet sides.",
+    "grownUpNote": "Pictures are story scenes, not measured data or a complete folding guide. The code-drawn diorama is a simplified comparison with sped-up time; real paper and boats vary.",
+    "prompts": "assets/a-paper-boat/prompts.json",
+    "provenance": "assets/a-paper-boat/provenance.json"
+  },
+  "quiz": {
+    "title": "Four clues to keep",
+    "intro": "Think about Little’s boat. Choose one answer for each clue.",
+    "questions": [
+      {
+        "id": "push",
+        "prompt": "What holds a floating boat up?",
+        "choices": [
+          "The bottom of the tub",
+          "Water pushing up as the boat pushes water aside",
+          "Paper pulling itself upward"
+        ],
+        "answerIndex": 1,
+        "answer": "Water pushes up. The push equals the weight of the displaced water. A floating boat displaces enough water for that push to balance its weight."
+      },
+      {
+        "id": "shape",
+        "prompt": "How do folded walls and a broad bottom help?",
+        "choices": [
+          "They keep water out and make an air-filled space that can displace water",
+          "They stop water from pushing up",
+          "They make paper unable to absorb water"
+        ],
+        "answerIndex": 0,
+        "answer": "The walls keep water out. The broad bottom and air-filled space let the boat displace enough water to support its weight."
+      },
+      {
+        "id": "load",
+        "prompt": "What happens to the waterline when Little adds pennies?",
+        "choices": [
+          "It always drops lower on the boat",
+          "It cannot change",
+          "It climbs up the sides as the boat sinks lower"
+        ],
+        "answerIndex": 2,
+        "answer": "The load grows. The boat sinks lower and displaces more water, so the waterline climbs. Too much load can let water spill in."
+      },
+      {
+        "id": "soaking",
+        "prompt": "Why does the paper boat soften over time?",
+        "choices": [
+          "The paper’s plant fibers absorb water",
+          "The pennies turn into paper",
+          "Water stops having weight"
+        ],
+        "answerIndex": 0,
+        "answer": "Tiny plant fibers absorb water. Wet paper becomes heavier and softer and can lose its shape. A crayon or wax coat slows soaking."
+      }
+    ]
+  }
+}
