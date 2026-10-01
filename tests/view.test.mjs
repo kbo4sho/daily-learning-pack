@@ -89,11 +89,17 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
     "diorama",
     "quiz",
     "foldable",
+    "writing",
   ])
     assert.ok(today.includes(`data-go="${surface}"`));
-  assert.match(today, /boat-dogfood">DOGFOOD/);
+  // TASK 127: no dev chrome on kid pages; hedges sit in one grown-ups note.
+  const kidToday = today.split('<footer class="daily-footer">')[0];
+  assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes/);
+  for (const [, cap] of kidToday.matchAll(/<figcaption>([^<]*)</g))
+    assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
+  assert.match(today, /About the pictures and numbers\./);
+  assert.match(today, /data-quiz-feedback aria-live="polite"/);
   assert.match(today, /paper-boat-diorama\.js/);
-  assert.match(today, /Visual &amp; asset notes/);
   assert.equal(await exists("dist/today/paper-boat-diorama.css"), true);
   assert.equal(await exists("dist/today/paper-boat-diorama.js"), true);
   assert.equal(todayPack.targetAge, 8);
