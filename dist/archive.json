@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T17:28:36.916Z",
-  "latest": "morning-dew",
+  "generatedAt": "2026-10-01T17:30:41.141Z",
+  "latest": "a-paper-boat",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "a-paper-boat",
+      "date": "2026-10-01",
+      "topic": "a paper boat",
+      "title": "What holds a paper boat?",
+      "teaser": "Fold, float, and notice what holds.",
+      "href": "./days/a-paper-boat/",
+      "latest": true
+    },
     {
       "slug": "morning-dew",
       "date": "2026-09-29",
@@ -11,7 +20,7 @@
       "title": "The drops that did not fall.",
       "teaser": "A wet leaf and a dry path send Little looking for drops that never fell.",
       "href": "./days/morning-dew/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-black-lights-work",

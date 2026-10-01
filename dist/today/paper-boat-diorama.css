@@ -1,0 +1,418 @@
+.boat-panel {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.boat-dogfood {
+  font:
+    600 10px Inter,
+    sans-serif;
+  letter-spacing: 0.12em;
+  border: 1px solid #aa9877;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin-left: 12px;
+}
+.boat-stage-copy {
+  max-width: 760px;
+  margin: 24px 0;
+}
+.boat-stage-copy h3 {
+  font:
+    400 clamp(27px, 3.5vw, 42px) / 1.12 Newsreader,
+    serif;
+  margin: 8px 0;
+}
+.boat-bench {
+  border: 1px solid #5d503b;
+  background: #14232b;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px #31231518;
+}
+.boat-apparatus {
+  position: relative;
+  isolation: isolate;
+  padding-top: 8px;
+  background: radial-gradient(ellipse at 48% 58%, #344348, #101925 80%);
+}
+.boat-drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.boat-pointer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5eddb;
+  color: #342f26;
+  border: 1px solid #c7b896;
+  border-radius: 5px;
+  font:
+    600 clamp(11px, 1.5vw, 15px) / 1.25 Inter,
+    sans-serif;
+  padding: 10px 12px;
+  min-height: 48px;
+  max-width: 30%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.boat-pointer::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 32px;
+  background: #eadbbd;
+  top: 100%;
+  left: 50%;
+}
+.boat-pointer[data-boat] {
+  border-style: dashed;
+  cursor: pointer;
+}
+.boat-pointer[data-boat]:hover {
+  background: #fffaf0;
+  box-shadow: 0 0 0 3px #c7ac7066;
+}
+.boat-gauges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 12px 24px;
+  gap: 12px;
+  color: #e4e7dd;
+}
+.boat-gauges span {
+  padding: 10px;
+  border-top: 1px solid #73857c;
+  font-size: 13px;
+}
+.boat-gauges b {
+  display: block;
+  font:
+    400 30px/1.4 Newsreader,
+    serif;
+  color: #fff1d5;
+}
+.boat-result {
+  text-align: center;
+  color: #f9eacf;
+  margin: 0;
+  padding: 0 12px 20px;
+  font:
+    400 25px/1.2 Newsreader,
+    serif;
+}
+[data-motion="once"] .boat-hull {
+  animation: boat-settle 1.8s ease-out;
+}
+[data-motion="once"] .boat-push {
+  animation: boat-push 1.8s ease-out;
+}
+@keyframes boat-settle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes boat-push {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.boat-control-base {
+  padding: 24px 32px 30px;
+  border-top: 1px solid #9a7852;
+  background: linear-gradient(105deg, #483529, #2e251f 60%, #47372a);
+  color: #fbf2df;
+  min-height: 160px;
+}
+.boat-control-base > p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.boat-control-base button {
+  font:
+    600 14px/1.35 Inter,
+    sans-serif;
+  cursor: pointer;
+  min-height: 48px;
+  border-radius: 6px;
+  padding: 14px 18px;
+  border: 1px solid #c6b595;
+}
+.boat-primary {
+  background: linear-gradient(#f8efd8, #d9c6a0);
+  color: #352b1d;
+  box-shadow: 0 3px 0 #957851;
+}
+.boat-secondary {
+  color: #fbf2df;
+  background: transparent;
+}
+.boat-activate {
+  min-height: 70px !important;
+  width: 100%;
+  max-width: 450px;
+}
+.boat-tray {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.boat-tray button {
+  background: #ede2c9;
+  color: #382d21;
+}
+.boat-tray button[aria-pressed="true"] {
+  outline: 3px solid #cddde0;
+  outline-offset: 2px;
+}
+.boat-tray button:disabled {
+  background: #322922;
+  color: #d8cbae;
+  border-color: #776349;
+}
+.boat-conditions {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.boat-conditions fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+.boat-conditions legend {
+  padding: 0 0 10px;
+  font-size: 13px;
+}
+.boat-conditions button {
+  background: transparent;
+  color: #f8eddb;
+}
+.boat-conditions button[aria-pressed="true"] {
+  background: #f2e5c8;
+  color: #302a20;
+  box-shadow: inset 0 -3px #af9667;
+}
+.boat-notice {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.boat-model-note {
+  font-size: 12px;
+  line-height: 1.65;
+  max-width: 800px;
+  color: #625b4d;
+  margin: 18px 0;
+}
+.boat-status {
+  min-height: 48px;
+  font-size: 14px;
+  max-width: 760px;
+}
+.boat-external {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin: 12px 0 30px;
+}
+.boat-external .text-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.boat-explain,
+.boat-talk {
+  background: #eee8dc;
+  border-left: 2px solid #a28957;
+  padding: 24px;
+  margin: 24px 0;
+  max-width: 800px;
+}
+.boat-explain h3,
+.boat-talk h3 {
+  font:
+    400 30px/1.15 Newsreader,
+    serif;
+  margin: 0 0 16px;
+}
+.boat-talk li {
+  margin-bottom: 14px;
+}
+.boat-path {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 24px;
+}
+.boat-path li {
+  flex: 1;
+  padding-right: 12px;
+}
+@media (max-width: 650px) {
+  .boat-control-base {
+    padding: 20px 16px;
+  }
+  .boat-pointer {
+    font-size: 10px;
+    padding: 6px 7px;
+    min-height: 44px;
+  }
+  .boat-tray {
+    gap: 7px;
+  }
+  .boat-tray button {
+    padding: 12px 5px;
+    font-size: 12px;
+    min-height: 72px;
+  }
+  .boat-gauges {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .boat-gauges span {
+    font-size: 11px;
+    padding: 8px 2px;
+  }
+  .boat-gauges b {
+    font-size: 26px;
+  }
+  .boat-result {
+    font-size: 22px;
+  }
+  .boat-notice {
+    flex-direction: column;
+  }
+  .boat-path {
+    display: block;
+    font-size: 14px;
+    margin: 0;
+  }
+  .boat-path li {
+    margin-bottom: 8px;
+  }
+  .boat-external {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boat-panel *,
+  .boat-panel *::before,
+  .boat-panel *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.boat-pointer-tub {
+  left: 13%;
+  top: 20%;
+}
+.boat-pointer-boat {
+  left: 49%;
+  top: 4%;
+}
+.boat-pointer-pennies {
+  left: 86%;
+  top: 55%;
+}
+.boat-pointer-waterline {
+  left: 17%;
+  top: 34%;
+}
+.boat-pointer-push {
+  left: 48%;
+  top: 61%;
+}
+.boat-pointer-push::after {
+  top: auto;
+  bottom: 100%;
+  height: 26px;
+}
+.boat-conditions output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  font:
+    400 30px Newsreader,
+    serif;
+}
+.boat-conditions button {
+  min-width: 48px;
+}
+.boat-conditions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.boat-conditions fieldset {
+  flex-wrap: wrap;
+}
+.boat-pointer-pennies::after {
+  height: 60px;
+}
+.boat-pointer-boat::after {
+  height: clamp(70px, 10vw, 140px);
+}
+@media (max-width: 650px) {
+  .boat-apparatus {
+    padding-top: 64px;
+  }
+  .boat-pointer-tub {
+    top: 4px;
+    left: 16%;
+  }
+  .boat-pointer-boat {
+    top: 4px;
+    left: 49%;
+  }
+  .boat-pointer-pennies {
+    top: 53%;
+    left: 86%;
+  }
+  .boat-pointer-tub::after {
+    height: 72px;
+  }
+  .boat-pointer-boat::after {
+    height: 100px;
+  }
+  .boat-pointer-pennies::after {
+    height: 12px;
+  }
+  .boat-pointer-waterline {
+    top: 34%;
+    left: 18%;
+    min-height: 30px;
+    padding: 5px;
+  }
+  .boat-pointer-waterline::after {
+    height: 12px;
+  }
+  .boat-pointer-push {
+    top: 55%;
+    left: 49%;
+    min-height: 30px;
+    max-width: 50%;
+    padding: 5px;
+  }
+  .boat-pointer-push::after {
+    height: 17px;
+  }
+  .boat-gauges b {
+    font-size: 22px;
+  }
+}
