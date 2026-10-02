@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T17:30:41.141Z",
-  "latest": "a-paper-boat",
+  "generatedAt": "2026-10-02T02:24:44.191Z",
+  "latest": "tiny-guests",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "tiny-guests",
+      "date": "2026-10-02",
+      "topic": "tiny guests",
+      "title": "Tiny Guests",
+      "teaser": "A whole cell, a tiny package, and the kindness of soap.",
+      "href": "./days/tiny-guests/",
+      "latest": true
+    },
     {
       "slug": "a-paper-boat",
       "date": "2026-10-01",
@@ -11,7 +20,7 @@
       "title": "What holds a paper boat?",
       "teaser": "Fold, float, and notice what holds.",
       "href": "./days/a-paper-boat/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "morning-dew",
