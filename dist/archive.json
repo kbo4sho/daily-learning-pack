@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T02:24:44.191Z",
-  "latest": "tiny-guests",
+  "generatedAt": "2026-10-03T02:07:02.880Z",
+  "latest": "shadows-at-noon",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "shadows-at-noon",
+      "date": "2026-10-03",
+      "topic": "shadows at noon",
+      "title": "Shadows at Noon",
+      "teaser": "A short, sharp shadow. Measure and wonder.",
+      "href": "./days/shadows-at-noon/",
+      "latest": true
+    },
     {
       "slug": "tiny-guests",
       "date": "2026-10-02",
@@ -11,7 +20,7 @@
       "title": "Tiny Guests",
       "teaser": "A whole cell, a tiny package, and the kindness of soap.",
       "href": "./days/tiny-guests/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "a-paper-boat",

@@ -1,0 +1,61 @@
+{
+  "tool": "built-in image_gen",
+  "useCase": "illustration-story",
+  "plates": [
+    {
+      "plate": "wake",
+      "original": "01-wake.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "prompt": "Use case: illustration-story. Create ONE landscape 1536x1024 scenic illustration for Wonder Together, Shadows at Noon, plate 01 and title-card art. A quiet gift-quality illustrated miniature world, tactile matte mineral and paper textures, warm cream limestone garden path, muted sage yard and blurred cottage garden. Big Wonderer and Little Wonderer are simple NONHUMAN PEBBLE GUIDES: smooth rounded warm-gray and ivory upright capsule bodies, tiny black dot eyes, tiny horizontal mouth dash, simple short oval arms and feet, no clothes, hair, fur, snouts, tails or teddy seams. Big is 1.6 times Little's height, beside and slightly behind Little. Both look down with gentle curiosity. Main concept central: a thin straight blunt wooden stick stands absolutely vertical in a small hole in the garden path; low MORNING sunlight arrives from upper left and the stick casts ONE clearly attached long narrow shadow to lower right, substantially longer than the stick height. The stick, entire shadow, and curious pair all fit within central 75% for crop safety. A piece of ivory chalk and closed linen notebook sit nearby. Cinematic quiet, believable geometry, restrained ink-dark shadow, rare honey light, rich yet understated materials. A scenic image with no text, no title, no labels, no panels, no inset diagram, no border, no tip-hand. No characters looking at the sun; no visible sun needed. Not photoreal humans or a stock cartoon. Intended alongside Newsreader and Inter typography added by code. Same scene will be revisited at noon in later plates.",
+      "reference": null,
+      "sha256": "58393e1d9713b41da5c2f10f31a9db14d17aa552e81ddc3d7eeadbb1f495c34d"
+    },
+    {
+      "plate": "reach",
+      "original": "02-reach.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-c33ecb32-8a3e-4ec8-b442-3d76b5ac6e87.png",
+      "prompt": "Create ONE distinct landscape 1536x1024 scenic illustration for Wonder Together Shadows at Noon. Use the reference solely for the exact pebble Big and Little Wonderer character design, tactile luxury material style, same vertical wooden stick, linen notebook and pale limestone garden path. Big warm gray, Little ivory, minimal dot eyes and mouth dash, no clothes/fur/teddy traits. Quiet gentle parent-child attention directed at the ground. Editorial warmth, restrained sage, cream paper, ink shadows, honey-gold sunlight. All teaching objects within central 75% for fold crop safety. NO text, titles, numbers, captions, arrows, panels, borders or tip-hand. New composition, not a duplicate. Plate 02. Ground-level close composition of Little leaning beside the TIP of the long morning shadow, holding a short ivory chalk and making ONE tiny white mark across its end. Big waits behind with the linen notebook. The same vertical wooden stick remains farther left, and its entire long narrow shadow connects base to chalk-marked tip at lower right. Low morning sunlight from upper left. Show the complete stick and tip within central area. Make measurement by marking unmistakable.",
+      "reference": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "272260b737266d2946e89cb44b1ff99df6b877cbbe7efa93f18572ef65c9ee94"
+    },
+    {
+      "plate": "change",
+      "original": "03-change.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-93c02c95-8611-48a6-b59c-eab64fb6ace5.png",
+      "prompt": "Create ONE distinct landscape 1536x1024 scenic illustration for Wonder Together Shadows at Noon. Use the reference solely for the exact pebble Big and Little Wonderer character design, tactile luxury material style, same vertical wooden stick, linen notebook and pale limestone garden path. Big warm gray, Little ivory, minimal dot eyes and mouth dash, no clothes/fur/teddy traits. Quiet gentle parent-child attention directed at the ground. Editorial warmth, restrained sage, cream paper, ink shadows, honey-gold sunlight. All teaching objects within central 75% for fold crop safety. NO text, titles, numbers, captions, arrows, panels, borders or tip-hand. New composition, not a duplicate. Plate 03. Return to the same path at NOON, different wider elevated viewpoint. Sunlight now comes from high above and slightly left. The same vertical stick is central and casts ONE SHORT CRISP NARROW shadow attached to its base extending a short distance right, only about one-third of its visible height. A small earlier white chalk mark remains much farther to the right with NO dark long shadow leading to it. Big and Little stand beside each other left of stick, looking down at the little shadow. Noon clean warm light, pale open path. Physically coherent short shadow is the main teaching detail.",
+      "reference": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "3e5e51b480ccc44341bdbe965b413b9cb0999448636c2ae57a40691b4a086865"
+    },
+    {
+      "plate": "notice",
+      "original": "04-notice.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-563c92f6-92f7-479f-95aa-906afe602c86.png",
+      "prompt": "Create ONE distinct landscape 1536x1024 scenic illustration for Wonder Together Shadows at Noon. Use the reference solely for the exact pebble Big and Little Wonderer character design, tactile luxury material style, same vertical wooden stick, linen notebook and pale limestone garden path. Big warm gray, Little ivory, minimal dot eyes and mouth dash, no clothes/fur/teddy traits. Quiet gentle parent-child attention directed at the ground. Editorial warmth, restrained sage, cream paper, ink shadows, honey-gold sunlight. All teaching objects within central 75% for fold crop safety. NO text, titles, numbers, captions, arrows, panels, borders or tip-hand. New composition, not a duplicate. Plate 04. Fresh close still-life viewpoint on the stick's light and shadow relationship at NOON. Main subject the thin vertical blunt wooden stick, sunlit LEFT face golden, right face slightly darker, on pale stone. ONE short distinct attached shadow extends RIGHT away from the light, its length about one-third of stick's visible height. The sunlight source is high upper-left, outside frame. Big and Little are small quiet guides in the back left, watching the ground. No chalk ruler yet. Linen notebook closed nearby. Frame stick and whole short shadow clearly. NO rays or arrows; accurate physical lighting.",
+      "reference": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "5c132b676dc0b725cf259e54de489d50df9b45c18f84dc8c499c71337cbb2fd9"
+    },
+    {
+      "plate": "return",
+      "original": "05-return.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-44282383-0164-4913-be38-9b7fa327bcd2.png",
+      "prompt": "Edit this illustration to correct ONLY the measurement geometry. Keep the characters, garden, style, notebook, framing, and central vertical stick. The stick must have exactly ONE shadow: the short dark horizontal shadow extending RIGHT from its base. REMOVE the diagonal dark shadow extending down and right completely, replacing it with sunlit limestone matching the ground. Move the wooden measuring ruler DOWN so its left end begins exactly at the vertical stick base, lying parallel just below the single horizontal shadow; its right end stops at the shadow tip. Shorten ruler to that exact short length, retain plain tick marks, no numbers. Put ONE small white chalk tick at the short shadow's right tip. Keep a distant earlier white chalk tick farther right. There is only one sun high at upper left. No extra dark lines from stick base. All other elements unchanged. This teaches accurate comparison of a noon shadow.",
+      "reference": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "a1d2d9122157ee9f3b5df5ed944c56a41aa0727580ab91c161d02908d2f6b95d"
+    },
+    {
+      "plate": "keep",
+      "original": "06-keep.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-343c3e0b-31e3-4006-a687-9dd05512a0f7.png",
+      "prompt": "Create ONE distinct landscape 1536x1024 scenic illustration for Wonder Together Shadows at Noon. Use the reference solely for the exact pebble Big and Little Wonderer character design, tactile luxury material style, same vertical wooden stick, linen notebook and pale limestone garden path. Big warm gray, Little ivory, minimal dot eyes and mouth dash, no clothes/fur/teddy traits. Quiet gentle parent-child attention directed at the ground. Editorial warmth, restrained sage, cream paper, ink shadows, honey-gold sunlight. All teaching objects within central 75% for fold crop safety. NO text, titles, numbers, captions, arrows, panels, borders or tip-hand. New composition, not a duplicate. Plate 06. New tender closing composition: Big and Little sit close together beside the garden path, looking down at an open linen notebook resting in front of them. Its page has exactly TWO simple charcoal lines side by side, one clearly long and one clearly short, and no writing or numbers. The same vertical wooden stick stands nearby in the middle distance on sunlit path, with ONE short attached noon shadow to its right. Ivory chalk beside the notebook. Warm quiet midday light, subtle garden bokeh, luxurious tactile paper, optimistic outdoor curiosity. Main emphasis on the notebook evidence and shared wonder.",
+      "reference": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "ed582ce3de4293b9c945b5ebe6f868e9be9cc752313239eb0abec65908d64962"
+    }
+  ],
+  "rejectedIterations": [
+    {
+      "prompt": "Create ONE distinct landscape 1536x1024 scenic illustration for Wonder Together Shadows at Noon. Use the reference solely for the exact pebble Big and Little Wonderer character design, tactile luxury material style, same vertical wooden stick, linen notebook and pale limestone garden path. Big warm gray, Little ivory, minimal dot eyes and mouth dash, no clothes/fur/teddy traits. Quiet gentle parent-child attention directed at the ground. Editorial warmth, restrained sage, cream paper, ink shadows, honey-gold sunlight. All teaching objects within central 75% for fold crop safety. NO text, titles, numbers, captions, arrows, panels, borders or tip-hand. New composition, not a duplicate. Plate 05. New oblique overhead view on a noon measurement. Little holds a flat wooden measuring ruler on the ground beside a SHORT shadow, ruler starting exactly at the standing stick's base and extending right to its tip. Plain evenly spaced ticks, NO numbers or text. Big holds an open linen notebook nearby. ONE short, sharp dark shadow extends right from vertical stick; small white chalk mark at short tip. An earlier morning chalk tick is farther right with no long dark shadow. Clear sunlit left face. Keep ruler separated from shadow so they can be distinguished. Quiet focus on comparing two chalk marks.",
+      "path": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-7a75f047-6c1c-44f0-930a-9192ad32a932.png",
+      "reason": "Two shadows from the same stick; ruler does not begin at its base."
+    }
+  ]
+}
