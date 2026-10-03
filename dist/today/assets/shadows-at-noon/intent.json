@@ -1,0 +1,41 @@
+{
+  "topic": "shadows at noon",
+  "title": "Shadows at Noon",
+  "designLocks": [
+    "Warm limestone, linen paper, muted sage, ink shadow and rare honey-gold light.",
+    "Same gray Big and ivory Little pebble guides throughout; shared attention stays on the ground.",
+    "One coherent scenic image per beat, with no embedded type; Newsreader and Inter remain in the renderer.",
+    "Same standing stick, chalk and notebook connect the six moments."
+  ],
+  "outline": {
+    "status": "locked",
+    "beforeImages": true,
+    "arc": "Little saves a long morning shadow, returns to find a short noon shadow, follows the direction of the light, compares two lengths, and keeps a clue in a notebook.",
+    "beatIntents": [
+      {
+        "plate": "wake",
+        "intent": "Establish the same vertical wooden stick in a pale garden path, a long morning shadow, Big and Little, chalk, and linen notebook; begin with a question."
+      },
+      {
+        "plate": "reach",
+        "intent": "Little saves the long shadow tip with one chalk mark; use a closer ground-level composition with the same unmoved stick."
+      },
+      {
+        "plate": "change",
+        "intent": "Return at noon to the same stick; show a short crisp shadow and the earlier chalk mark farther away."
+      },
+      {
+        "plate": "notice",
+        "intent": "Focus on the mechanism: light on one side of the vertical stick, short shadow on the opposite side; Big and Little attend to the ground."
+      },
+      {
+        "plate": "return",
+        "intent": "Compare morning and noon chalk marks with the same wooden measuring stick; notebook records the evidence."
+      },
+      {
+        "plate": "keep",
+        "intent": "Close with two simple notebook lines and the short shadow beside the pair; invite a new question."
+      }
+    ]
+  }
+}

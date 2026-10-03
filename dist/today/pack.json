@@ -1,150 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "tiny-guests",
-  "topic": "tiny guests",
-  "teaser": "A whole cell, a tiny package, and the kindness of soap.",
+  "slug": "shadows-at-noon",
+  "topic": "shadows at noon",
+  "teaser": "A short, sharp shadow. Measure and wonder.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "story-problems",
+  "mathTemplate": "pattern-detective",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · TINY GUESTS",
+  "editionLabel": "GRADE 3 · SHADOWS AT NOON",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Tiny Guests",
-  "question": "How are bacteria and viruses different?",
-  "idea": "Bacteria are whole living cells. Viruses carry instructions and need a living cell to make copies. Soap, scrubbing, and rinsing help lift germs away.",
+  "title": "Shadows at Noon",
+  "question": "Why is a shadow shorter at noon?",
+  "idea": "Around noon, the sun is near its highest point for the day. A standing stick casts a shorter shadow than when the sun is lower.",
   "curiosity": {
-    "intro": "Two tiny guests. One big question. What makes them different?",
-    "carryForward": "Meet a cell and a package of instructions. Follow the soap, then keep a kind habit.",
+    "intro": "One stick. Two chalk marks. Why did the shadow change?",
+    "carryForward": "Follow the sunlight, compare the lengths, and keep a small clue.",
     "questions": [
       {
         "id": "reach",
         "plate": "reach",
-        "question": "Could a tiny guest be a helper?",
-        "notice": "A yogurt cup sits beside the oval guest in the book.",
-        "say": "Bacteria are whole living cells. Many help us: some live in our gut and help with food, and others help make yogurt. Some can make people unwell. We can welcome the helpers and keep our hands clean.",
-        "try": "Say one place where helpful bacteria can live."
+        "question": "How can we save a shadow’s length?",
+        "notice": "Little puts a chalk mark at the long shadow’s tip.",
+        "say": "A shadow forms where an object blocks sunlight. Mark its tip, then measure from the standing stick to the mark. Small, even footsteps or a measuring stick can help you compare lengths.",
+        "try": "Say where a shadow measurement should begin and end."
       },
       {
         "id": "change",
         "plate": "change",
-        "question": "What does a virus need to make copies?",
-        "notice": "Compare the oval cell with the smaller round package and its coiled thread.",
-        "say": "A virus is not a cell. It is a tiny package of instructions in a coat. It must borrow a living cell’s machinery to make copies. Bacteria are much bigger than viruses, but both are too small to see with just your eyes.",
-        "try": "Finish this thought: Instructions need something to carry them out, just as a virus needs…"
+        "question": "Why is the noon shadow so short?",
+        "notice": "The same standing stick now has a short, sharp shadow.",
+        "say": "Around noon, the sun is near its highest point in the sky for the day. Light reaches the ground from higher above, so the stick’s shadow stays closer to its base. A lower morning or afternoon sun makes a longer shadow.",
+        "try": "Compare the short shadow with the earlier chalk mark."
       },
       {
         "id": "notice",
         "plate": "notice",
-        "question": "How does soap help the water?",
-        "notice": "Little rubs the lather over both mitten hands. The towel waits beside the sink.",
-        "say": "Soap can pull apart the oily outer layers of many germs. Soap and scrubbing also lift germs off skin so running water can rinse them away. Plain water rinses off some, but soap helps remove more. Scrub for about 20 seconds, then rinse and dry.",
-        "try": "Say the commands in order: Wet. Add soap. Scrub. Rinse. Dry."
+        "question": "Which way does a shadow point?",
+        "notice": "One side of the stick is bright. The shadow is on the other side.",
+        "say": "The bright side faces the sun. The stick blocks some sunlight, leaving a shadow that points away from the light. You can learn from the ground without looking at the sun.",
+        "try": "Point from the bright side, past the stick, toward the shadow."
       },
       {
         "id": "keep",
         "plate": "keep",
-        "question": "What can your body remember?",
-        "notice": "Little keeps a guest’s shape in the notebook.",
-        "say": "Your immune system is your body’s team of defenders. Some learn to recognize germs and remember their features next time. Antibiotics are different: these medicines work on bacteria but not viruses. Each kind of help has its own job.",
-        "try": "Tell how learning a shape could help you recognize it again."
+        "question": "What clue can a short shadow give us?",
+        "notice": "Little keeps a long line and a short line in the notebook.",
+        "say": "A short noon shadow is a clue that the sun is high. Compare the same standing stick in the same place, using the same unit. Chalk marks and notes help us remember what changed. Measuring can lead to another question.",
+        "try": "Ask one new question about tomorrow’s shadow."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/tiny-guests/01-wake.jpg",
-      "original": "assets/tiny-guests/01-wake.png",
-      "foldSrc": "assets/tiny-guests/01-wake-fold.jpg",
-      "title": "Guests beyond our eyes",
-      "alt": "Big and Little Wonderer study a magnifier and an open book beside an ivory sink and amber soap bottle.",
-      "caption": "Bacteria and viruses are too small to see with just your eyes."
+      "src": "assets/shadows-at-noon/01-wake.jpg",
+      "original": "assets/shadows-at-noon/01-wake.png",
+      "foldSrc": "assets/shadows-at-noon/01-wake-fold.jpg",
+      "title": "A morning question",
+      "alt": "Big and Little Wonderer study a standing wooden stick and its long morning shadow on a pale garden path.",
+      "caption": "A lower sun makes a longer shadow."
     },
     {
       "id": "reach",
-      "src": "assets/tiny-guests/02-reach.jpg",
-      "original": "assets/tiny-guests/02-reach.png",
-      "foldSrc": "assets/tiny-guests/02-reach-fold.jpg",
-      "title": "A whole little cell",
-      "alt": "Little studies a soft oval bacterium on a book page beside a yogurt cup, with Big nearby.",
-      "caption": "Many bacteria help us. Some help make yogurt."
+      "src": "assets/shadows-at-noon/02-reach.jpg",
+      "original": "assets/shadows-at-noon/02-reach.png",
+      "foldSrc": "assets/shadows-at-noon/02-reach-fold.jpg",
+      "title": "Save the tip",
+      "alt": "Little marks the tip of the long stick shadow with chalk while Big watches beside a linen notebook.",
+      "caption": "Mark the tip, then measure from the stick to the mark."
     },
     {
       "id": "change",
-      "src": "assets/tiny-guests/03-change.jpg",
-      "original": "assets/tiny-guests/03-change.png",
-      "foldSrc": "assets/tiny-guests/03-change-fold.jpg",
-      "title": "Instructions in a coat",
-      "alt": "Big and Little compare a large oval bacterium with a smaller round virus and its curled thread of instructions in their open book.",
-      "caption": "A bacterium is a whole cell. A virus carries instructions in a coat."
+      "src": "assets/shadows-at-noon/03-change.jpg",
+      "original": "assets/shadows-at-noon/03-change.png",
+      "foldSrc": "assets/shadows-at-noon/03-change-fold.jpg",
+      "title": "A smaller patch",
+      "alt": "Big and Little return to the same stick at noon and find a short, crisp shadow near its base.",
+      "caption": "Around noon, the sun is near its highest point for the day."
     },
     {
       "id": "notice",
-      "src": "assets/tiny-guests/04-notice.jpg",
-      "original": "assets/tiny-guests/04-notice.png",
-      "foldSrc": "assets/tiny-guests/04-notice-fold.jpg",
-      "title": "A kind habit",
-      "alt": "Little rubs soapy mitten hands over the ivory sink while Big waits beside a folded linen towel.",
-      "caption": "Soap loosens germs. Scrubbing and rinsing carry them away."
+      "src": "assets/shadows-at-noon/04-notice.jpg",
+      "original": "assets/shadows-at-noon/04-notice.png",
+      "foldSrc": "assets/shadows-at-noon/04-notice-fold.jpg",
+      "title": "Follow the light",
+      "alt": "A close view shows sunlight reaching one side of the stick and the short shadow stretching away on the other side.",
+      "caption": "The bright side faces the sun. The shadow points away from the light."
     },
     {
       "id": "return",
-      "src": "assets/tiny-guests/05-return.jpg",
-      "original": "assets/tiny-guests/05-return.png",
-      "foldSrc": "assets/tiny-guests/05-return-fold.jpg",
-      "title": "Different tiny guests",
-      "alt": "Big and Little compare two guest sketches at a warm wooden desk beside the closed soap bottle and a magnifier.",
-      "caption": "Antibiotics work on bacteria, but not on viruses."
+      "src": "assets/shadows-at-noon/05-return.jpg",
+      "original": "assets/shadows-at-noon/05-return.png",
+      "foldSrc": "assets/shadows-at-noon/05-return-fold.jpg",
+      "title": "Compare the marks",
+      "alt": "Little uses a wooden measuring stick beside the noon shadow while Big holds the linen notebook; the earlier chalk mark remains farther away.",
+      "caption": "Use the same unit to compare the morning and noon lengths."
     },
     {
       "id": "keep",
-      "src": "assets/tiny-guests/06-keep.jpg",
-      "original": "assets/tiny-guests/06-keep.png",
-      "foldSrc": "assets/tiny-guests/06-keep-fold.jpg",
-      "title": "A clue to remember",
-      "alt": "Little draws a round guest shape in a small notebook beside Big, with the tidy sink and linen towel behind them.",
-      "caption": "Your body’s defenders can learn and remember germs."
+      "src": "assets/shadows-at-noon/06-keep.jpg",
+      "original": "assets/shadows-at-noon/06-keep.png",
+      "foldSrc": "assets/shadows-at-noon/06-keep-fold.jpg",
+      "title": "A clue to keep",
+      "alt": "Big and Little sit beside the garden path with a notebook showing long and short lines; the standing stick casts a short noon shadow nearby.",
+      "caption": "A short noon shadow is a clue that the sun is high."
     }
   ],
   "reading": {
-    "title": "A little book of tiny guests",
+    "title": "The shadow that changed",
     "coverPlate": "wake",
-    "coverText": "Little has a magnifier and a question. Can two tiny guests be very different?",
-    "foldableTitle": "A little book of tiny guests",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at cell, bacteria, virus, antibiotic, and immune system.",
+    "coverText": "One standing stick. Two chalk marks. What changed while Little was away?",
+    "foldableTitle": "The shadow that changed",
+    "foldableCoverLine": "A short shadow. A high sun.",
+    "foldableNote": "Measure, notice, and pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little wonders about unseen guests, discovers a helpful whole cell and a smaller package of instructions, follows soap-and-rinse commands, compares antibiotics, and keeps a clue about defenders remembering.",
+      "arc": "Little saves a long morning shadow, returns to find a short noon shadow, follows the direction of the light, compares two lengths, and keeps a clue in a notebook.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "Establish the cozy sink, amber soap, linen towel, magnifier, book and question; the ordinary magnifier does not reveal actual germs."
+          "intent": "Establish the same vertical wooden stick in a pale garden path, a long morning shadow, Big and Little, chalk, and linen notebook; begin with a question."
         },
         {
           "plate": "reach",
-          "intent": "Discover helpful bacteria through a yogurt cup and a large soft oval cell on a book page; keep the whole-cell idea clear."
+          "intent": "Little saves the long shadow tip with one chalk mark; use a closer ground-level composition with the same unmoved stick."
         },
         {
           "plate": "change",
-          "intent": "Compare a much smaller round virus with the bacterium, and reveal its coiled instructions; a cell supplies the machinery."
+          "intent": "Return at noon to the same stick; show a short crisp shadow and the earlier chalk mark farther away."
         },
         {
           "plate": "notice",
-          "intent": "Return to the sink for soap, a gentle scrub, rinse and dry; Little follows command sentences."
+          "intent": "Focus on the mechanism: light on one side of the vertical stick, short shadow on the opposite side; Big and Little attend to the ground."
         },
         {
           "plate": "return",
-          "intent": "Revisit the paired book sketches to ask why antibiotics work on bacteria but not viruses; show no medicine or treatment action."
+          "intent": "Compare morning and noon chalk marks with the same wooden measuring stick; notebook records the evidence."
         },
         {
           "plate": "keep",
-          "intent": "End with Little saving a guest shape in a notebook, echoing defenders learning and remembering, with a kind habit to keep."
+          "intent": "Close with two simple notebook lines and the short shadow beside the pair; invite a new question."
         }
       ]
     },
@@ -152,266 +154,276 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "Guests beyond our eyes",
-        "passage": "Little Wonderer held a magnifier beside the sink. “Can I see the tiny guests on my hands?” “Germs are far too small for just our eyes,” said Big. “Even that magnifier cannot show them.” They opened a book. Bacteria and viruses waited on its pages. Were these tiny guests alike?",
-        "prompt": "Why did Little need the book as well as the magnifier?"
+        "title": "A morning question",
+        "passage": "Little Wonderer found a long shape beside a standing stick. It was a shadow: a place where the stick blocked sunlight, the light from the sun. “Will it stay this long?” Little asked. Big set a linen notebook beside the garden path. They had a question to keep.",
+        "prompt": "What made the shadow?"
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A whole little cell",
-        "passage": "Little paused at a yogurt cup. “Are all bacteria a problem?” “Many are helpers,” said Big. “Some live happily in your gut and help with food. Others help make yogurt. Some can make people unwell.” A bacterium is one whole living cell: a tiny unit with the parts it needs to live.",
-        "prompt": "What makes a bacterium a whole living cell?"
+        "title": "Save the tip",
+        "passage": "Little took a piece of chalk, a soft stick for making marks. “First mark the tip,” said Big. Little drew a small line where the shadow ended. To measure is to find how long something is. They counted small, even footsteps from the wooden stick to the chalk.",
+        "prompt": "Why did Little mark the tip?"
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Instructions in a coat",
-        "passage": "The next guest was much smaller. A virus is a tiny package of instructions in a coat, not a cell. It cannot make copies alone. It must borrow a living cell’s machinery: the parts that do the work. “Like a program saying ‘copy me’?” asked Little. “Instructions that need a cell,” said Big.",
-        "prompt": "Why can’t a virus follow its instructions alone?"
+        "title": "A smaller patch",
+        "passage": "At noon, the middle of the day, they came back. The wooden stick had stayed in place, but its shadow had changed. “It is short and sharp!” said Little. Around noon, the sun is near its highest point for the day. The morning shadow had reached much farther.",
+        "prompt": "What changed between morning and noon?"
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A kind habit",
-        "passage": "Back at the sink, Little made a soft lather. Soap can pull apart the oily outer layers of many germs. It also loosens germs from skin. “Wet. Add soap. Scrub for 20 seconds. Rinse. Dry,” Little said. Water carried the loosened guests away. A small habit could do a lot.",
-        "prompt": "What do soap, scrubbing, and rinsing do?"
+        "title": "Follow the light",
+        "passage": "“Which way does it point?” asked Big. Little studied the ground. Sunlight reached one side of the stick. The shadow stretched away on the other side. The bright side faced the sun; the shadow pointed away from the light. Little traced its edge without looking up at the sun.",
+        "prompt": "Which way does a shadow point?"
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Different tiny guests",
-        "passage": "“Does one medicine work on both guests?” Little asked. Big shook their head. “An antibiotic is a medicine that works on bacteria. It does not work on viruses, because they do not have the same cell parts.” Little compared the two shapes again. Different tiny guests needed different kinds of help.",
-        "prompt": "Why doesn’t an antibiotic work on a virus?"
+        "title": "Compare the marks",
+        "passage": "Little marked the new tip with chalk. This time, they used a measuring stick to check both lengths. They began at the same standing stick and used the same unit each time. The noon length was shorter. “The stick stayed the same,” Little said. “The sun’s height changed.”",
+        "prompt": "Why use the same unit each time?"
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A clue to remember",
-        "passage": "“Your immune system is your body’s team of defenders,” said Big. “Some learn to recognize germs and remember them next time.” Little saved a shape in the notebook, then a command: “Rinse your hands well.” What other kind habits could Little keep?",
-        "prompt": "How does remembering help?"
+        "title": "A clue to keep",
+        "passage": "In the notebook, Little drew a long line for morning and a short line for noon. Later, when the sun was lower, the shadow would grow longer again. A short noon shadow was a clue to a high sun. “What will we notice tomorrow?” Little asked.",
+        "prompt": "What could Little compare tomorrow?"
       }
     ],
     "words": [
       {
-        "word": "bacteria",
-        "meaning": "tiny living things, each made of one whole cell"
+        "word": "noon",
+        "meaning": "the middle of the day, when the sun is near its highest point"
       },
       {
-        "word": "cell",
-        "meaning": "a tiny unit that living things are made of"
+        "word": "shadow",
+        "meaning": "a place where an object blocks light"
       },
       {
-        "word": "virus",
-        "meaning": "a package of instructions in a coat that needs a cell to make copies"
+        "word": "measure",
+        "meaning": "find a length using a unit, such as a small step or a centimeter"
       },
       {
-        "word": "soap",
-        "meaning": "a cleaner that loosens germs and can pull apart oily layers"
+        "word": "chalk",
+        "meaning": "a soft stick that leaves a mark on a path or board"
       },
       {
-        "word": "antibiotic",
-        "meaning": "a medicine that works on bacteria, not viruses"
+        "word": "stick",
+        "meaning": "a thin piece of wood"
       },
       {
-        "word": "immune system",
-        "meaning": "your body’s defenders, including cells that can learn and remember"
+        "word": "sunlight",
+        "meaning": "light that comes from the sun"
       }
     ],
     "questions": [
-      "How is a bacterium different from a virus?",
-      "How do soap, scrubbing, and rinsing work together?",
-      "What can some of your body’s defenders remember, and why does it help?"
+      "Why was the same stick’s shadow shorter at noon?",
+      "Which side of the stick has the shadow, compared with the light?",
+      "How could you compare a morning shadow with a noon shadow?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for washing hands.",
-      "example": "Example: First wet your hands, then scrub with soap for 20 seconds."
-    },
-    "foldableCoverLine": "Two tiny guests. One kind habit.",
-    "foldableNote": "Look closely, wonder, and pause whenever you like."
+      "prompt": "Write one command sentence about measuring a shadow.",
+      "example": "Example: First stand the stick, then mark the tip of the shadow."
+    }
   },
   "math": {
-    "title": "Six small stories to solve",
-    "plate": "notice",
-    "intro": "Count bubbles, yogurt cups, and little drawings. Choose addition or subtraction for each story.",
+    "title": "Follow six number trails",
+    "plate": "return",
+    "intro": "Look for a step of 2, 5, or 10. Fill the one missing number in each trail.",
     "tasks": [
       {
-        "skill": "one-step-add",
-        "operands": [
-          28,
-          17
+        "skill": "skip-next",
+        "sequence": [
+          2,
+          4,
+          6,
+          8
         ],
-        "prompt": "Little draws 28 soap bubbles, then draws 17 more. How many bubbles are on the page?",
-        "equation": "28 + 17 =",
-        "hint": "Add the tens and ones. You may trade 10 ones for a ten.",
-        "answer": 45,
-        "worked": "28 + 17 = 45. Add 10 to reach 38, then add 7 to reach 45.",
-        "plate": "notice",
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Little counts chalk marks in twos along the path. What number comes next?",
+        "equation": "2, 4, 6, ___",
+        "hint": "Add 2 each time.",
+        "answer": 8,
+        "worked": "2, 4, 6, 8. Add 2 to 6 to reach 8.",
+        "plate": "return",
         "label": "TASK 1"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          20,
-          8
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
         ],
-        "prompt": "Little plans to scrub for 20 seconds. So far, 8 seconds have passed. How many seconds of scrubbing remain?",
-        "equation": "20 − 8 =",
-        "hint": "Count up from 8 to 20, or subtract 8 from 20.",
-        "answer": 12,
-        "worked": "20 − 8 = 12. After 8 seconds, 12 seconds remain.",
-        "plate": "notice",
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Big labels a measuring stick in fives. What number comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Add 5 to each number.",
+        "answer": 20,
+        "worked": "5, 10, 15, 20. Add 5 to 15 to reach 20.",
+        "plate": "return",
         "label": "TASK 2"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          24,
-          18
+        "skill": "skip-next",
+        "sequence": [
+          10,
+          20,
+          30,
+          40
         ],
-        "prompt": "A breakfast shelf has 24 yogurt cups. Big adds 18 cups. How many yogurt cups are on the shelf now?",
-        "equation": "24 + 18 =",
-        "hint": "Add 10 cups, then add 8 more cups.",
-        "answer": 42,
-        "worked": "24 + 18 = 42. First reach 34, then add 8 to reach 42.",
-        "plate": "notice",
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Little counts minutes after a morning shadow check in tens. What number comes next?",
+        "equation": "10, 20, 30, ___",
+        "hint": "Count by tens from 10.",
+        "answer": 40,
+        "worked": "10, 20, 30, 40. Add 10 to 30 to reach 40.",
+        "plate": "return",
         "label": "TASK 3"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          52,
-          16
+        "skill": "skip-missing",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
         ],
-        "prompt": "Little draws 52 helpful bacteria in a notebook and colors 16 of them. How many drawings still need color?",
-        "equation": "52 − 16 =",
-        "hint": "Subtract 10 first, then subtract 6.",
-        "answer": 36,
-        "worked": "52 − 16 = 36. Subtract 10 to reach 42, then subtract 6 to reach 36.",
-        "plate": "notice",
+        "step": 2,
+        "blankIndex": 1,
+        "prompt": "Little records path paces in twos. What number is missing?",
+        "equation": "12, ___, 16, 18",
+        "hint": "Find the number 2 after 12 and 2 before 16.",
+        "answer": 14,
+        "worked": "12, 14, 16, 18. The missing number is 14.",
+        "plate": "return",
         "label": "TASK 4"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
           35,
-          27
+          40
         ],
-        "prompt": "One book page shows 35 helpful bacteria. Another page shows 27. How many bacteria are shown on the two pages?",
-        "equation": "35 + 27 =",
-        "hint": "Add 20, then add 7.",
-        "answer": 62,
-        "worked": "35 + 27 = 62. Add 20 to reach 55, then add 7 to reach 62.",
-        "plate": "notice",
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "Chalk marks show lengths in steps of five. What number is missing?",
+        "equation": "25, 30, ___, 40",
+        "hint": "Add 5 to 30, then check the next step.",
+        "answer": 35,
+        "worked": "25, 30, 35, 40. The missing number is 35.",
+        "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          63,
-          25
+        "skill": "skip-missing",
+        "sequence": [
+          40,
+          50,
+          60,
+          70
         ],
-        "prompt": "Little has 63 bubble stickers and uses 25 on a handwashing poster. How many stickers are left?",
-        "equation": "63 − 25 =",
-        "hint": "Subtract 20, then subtract 5.",
-        "answer": 38,
-        "worked": "63 − 25 = 38. Subtract 20 to reach 43, then subtract 5 to reach 38.",
-        "plate": "notice",
+        "step": 10,
+        "blankIndex": 0,
+        "prompt": "Big lists notebook lengths in tens. What number is missing at the start?",
+        "equation": "___, 50, 60, 70",
+        "hint": "Count back 10 from 50.",
+        "answer": 40,
+        "worked": "40, 50, 60, 70. The missing number is 40.",
+        "plate": "return",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one story. Explain why you added or subtracted.",
-    "parentNote": "Age 8 / Grade 2 math. Six one-step story problems within 100, with three additions and three subtractions. Offer counters, tens-and-ones drawings, or spoken reasoning.",
-    "eyebrow": "SIX SMALL STORIES",
-    "actionLabel": "Solve one story at a time",
-    "printNote": "Show your thinking with a drawing, numbers, or words."
+    "extension": "Choose one trail. Tell how you found its step.",
+    "parentNote": "Age 8 / Grade 2 math. Six skip-counting sequences use steps of 2, 5, and 10. These number trails practice counting; they do not claim that shadows change at a steady rate. Welcome spoken reasoning or marks on paper.",
+    "eyebrow": "SIX NUMBER TRAILS",
+    "actionLabel": "Find the step, then fill the gap",
+    "printNote": "Show your thinking with numbers, marks, or words."
   },
   "writing": {
-    "title": "Give a kind habit its words",
-    "intro": "Write one clear command sentence about washing hands. You can say it first.",
+    "title": "Give a measurement its words",
+    "intro": "Write one clear command sentence about measuring a shadow. Say it first if you like.",
     "plateIds": [
-      "wake",
-      "notice",
+      "reach",
+      "return",
       "keep"
     ],
-    "draw": "Draw one handwashing step. Add one label.",
-    "starter": "My handwashing command",
+    "draw": "Draw the stick, its shadow, and a chalk mark. Add one label.",
+    "starter": "My shadow-measuring command",
     "frames": [
       {
-        "plate": "wake",
+        "plate": "reach",
         "start": "First,",
-        "hint": "tell how to begin"
+        "hint": "tell how to stand the stick or mark the tip"
       },
       {
-        "plate": "notice",
+        "plate": "return",
         "start": "Then,",
-        "hint": "tell how to use soap and scrub"
+        "hint": "tell how to measure from the stick to the mark"
       },
       {
         "plate": "keep",
         "start": "At the end,",
-        "hint": "tell how to rinse or dry"
+        "hint": "tell how to save or compare the length"
       }
     ],
     "words": [
-      "wet",
-      "soap",
-      "scrub",
-      "rinse",
-      "dry",
-      "hands",
+      "stand",
+      "stick",
+      "mark",
+      "tip",
+      "shadow",
+      "measure",
       "first",
       "then"
     ],
-    "check": "Read your sentence. Does it tell what to do, with a command such as Wet, Scrub, Rinse, or Dry?",
-    "parentNote": "Accept a spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First wet your hands, then scrub with soap for 20 seconds.”"
+    "check": "Does your sentence tell what to do, with a command such as Stand, Mark, Measure, or Compare?",
+    "parentNote": "Accept a spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First stand the stick, then mark the tip of the shadow.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "A bacterium is a whole living cell. A virus is smaller and is not a cell; it carries instructions in a coat and needs a living cell’s machinery to make copies."
+      "text": "The sun was higher around noon, so the same standing stick cast a shorter shadow."
     },
     {
       "label": "Reading · 2",
-      "text": "Soap can pull apart oily layers of many germs and helps loosen them from skin. Scrubbing helps lift them, and running water carries them away."
+      "text": "The shadow points away from the light. The bright side of the stick faces the sun."
     },
     {
       "label": "Reading · 3",
-      "text": "Some defenders remember a germ’s features. Remembering can help them recognize the same germ faster next time."
+      "text": "Leave the stick standing in the same place. Mark each shadow tip, measure from the stick with the same unit, and compare the lengths."
     },
     {
       "label": "Writing",
-      "text": "Accept one sensible command, spoken, dictated, or written. Example: “First wet your hands, then scrub with soap for 20 seconds.”"
+      "text": "Accept one sensible command, spoken, dictated, or written. Example: “First stand the stick, then mark the tip of the shadow.”"
     }
   ],
-  "parentGuidance": "Little is age 8: Grade 3 reading and Grade 2 math. Grown-ups and doctors decide about medicine. Many bacteria are helpful. Soap disrupts oily membranes of susceptible germs; it does not break apart every bacterium or every virus. Scrubbing and rinsing remove germs too. The diorama compares a bacterium and a virus with an oily outer layer; its removal amounts are qualitative, not measured. Antibiotics differ in which bacteria they affect and do not act on viruses. Immune memory helps recognition but is not a promise of complete protection.",
+  "parentGuidance": "Age 8, Grade 3 reading, and Grade 2 math. This story uses a sunny yard at middle latitudes. Solar noon is when the sun reaches its highest point that day; it need not be 12:00 by the clock. For the same vertical stick on level ground, that gives the shortest daytime shadow. Height varies with place and season; noon is not always overhead. Clear sunlight gives a distinct edge; clouds can soften it. The diorama isolates sun height and light direction, with equal chalk spaces for comparison, not a clock or local forecast. The number trails do not model a steady rate of shadow change. For an optional outdoor try, use a stable blunt stick beside a path with an adult, and study the ground rather than looking at the sun.",
   "sources": [
     {
-      "label": "NIH · bacteria and viruses",
-      "url": "https://nigms.nih.gov/image-gallery/6597"
+      "label": "NOAA · solar noon and a standing stick",
+      "url": "https://www.noaa.gov/jetstream/global/learning-lesson-shadow-knows-ii"
     },
     {
-      "label": "NIH · helpful bacteria",
-      "url": "https://www.nccih.nih.gov/health/probiotics-usefulness-and-safety"
-    },
-    {
-      "label": "NHGRI · a virus and its instructions",
-      "url": "https://www.genome.gov/genetics-glossary/Virus"
-    },
-    {
-      "label": "CDC · soap, scrubbing, and rinsing",
-      "url": "https://www.cdc.gov/clean-hands/faq/index.html"
-    },
-    {
-      "label": "NIH · immune memory",
-      "url": "https://www.nih.gov/news-events/nih-research-matters/lasting-immunity-found-after-recovery-covid-19"
+      "label": "NASA · the noon sun and the seasons",
+      "url": "https://pwg.gsfc.nasa.gov/stargaze/Snavigat.htm"
     }
   ],
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template story-problems: Six one-step word problems, each asking one question. Exactly two structured operands; both addition and subtraction appear. No two-step problems. Prose may spell out quantities or include context such as the day number.",
+    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template pattern-detective: Six skip-counting sequences of at least three terms with exactly one blank. Steps are 2, 5, or 10; all three steps appear. At least one skip-missing task puts the blank before the final term. Store the complete sequence, step, and blankIndex; skip-next blanks the last term.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
@@ -419,65 +431,65 @@
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "tiny-guests"
+    "diorama": "shadows-at-noon"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "TINY GUESTS · 2026-10-02",
-    "subtitle": "A whole cell. A tiny package. A kind habit."
+    "edition": "SHADOWS AT NOON · 2026-10-03",
+    "subtitle": "A short shadow. A high sun."
   },
   "visualNotes": {
-    "intent": "Six cozy scenes follow Big and Little Wonderer from a sink to a book of tiny guests and back to a kind handwashing habit.",
-    "prompts": "assets/tiny-guests/prompts.json",
-    "provenance": "assets/tiny-guests/provenance.json"
+    "intent": "Six quiet outdoor scenes follow the same standing stick, chalk marks, and linen notebook from a long morning shadow to a short noon shadow.",
+    "prompts": "assets/shadows-at-noon/prompts.json",
+    "provenance": "assets/shadows-at-noon/provenance.json"
   },
   "quiz": {
-    "title": "Four clues to keep",
-    "intro": "Think about the tiny guests and each kind of help.",
+    "title": "Four shadow clues",
+    "intro": "Think about the sun, the stick, and the two chalk marks.",
     "questions": [
       {
-        "id": "cell",
-        "prompt": "Which tiny guest is a whole living cell?",
+        "id": "noon",
+        "prompt": "In this sunny yard, what happens to the same stick’s shadow around noon?",
         "choices": [
-          "A virus",
-          "A bacterium",
-          "Both are whole cells"
+          "It becomes longer as the sun rises",
+          "It is shorter when the sun is high",
+          "It always disappears"
         ],
         "answerIndex": 1,
-        "answer": "A bacterium is a whole living cell. A virus is a package of instructions in a coat and needs a living cell to make copies."
+        "answer": "Around noon, the sun is near its highest point for the day, so the same standing stick has a shorter shadow."
       },
       {
-        "id": "soap",
-        "prompt": "How do soap, scrubbing, and rinsing work together?",
+        "id": "height",
+        "prompt": "What happens to the shadow when the sun is lower?",
         "choices": [
-          "Soap makes germs big enough to see",
-          "Water turns germs into bubbles",
-          "Soap loosens germs, scrubbing lifts them, and water rinses them away"
+          "The shadow always stays the same",
+          "The stick must become taller",
+          "The shadow becomes longer"
         ],
         "answerIndex": 2,
-        "answer": "Soap can pull apart oily outer layers of many germs. Soap and scrubbing also lift germs off skin so water can rinse them away. Scrub for about 20 seconds."
+        "answer": "A lower sun makes a longer shadow from the same standing stick."
       },
       {
-        "id": "antibiotic",
-        "prompt": "Which tiny guests can antibiotics work on?",
+        "id": "direction",
+        "prompt": "Which way does a shadow point?",
         "choices": [
-          "Bacteria",
-          "Viruses",
-          "Bacteria and viruses in the same way"
+          "Away from the light",
+          "Toward the light",
+          "Always toward your feet"
         ],
         "answerIndex": 0,
-        "answer": "Antibiotics work on bacteria, but not on viruses. Viruses do not have the same cell parts. Grown-ups and doctors decide about medicine."
+        "answer": "A shadow points away from the light. The bright side of the stick faces the sun."
       },
       {
-        "id": "remember",
-        "prompt": "What can some of your body’s defenders do?",
+        "id": "measure",
+        "prompt": "How can Little compare morning and noon shadows?",
         "choices": [
-          "Turn viruses into bacteria",
-          "Learn a germ’s features and remember them",
-          "Make every germ a helpful guest"
+          "Move the stick to a new place each time",
+          "Mark both tips and measure from the same stick with the same unit",
+          "Guess from the color of the chalk"
         ],
         "answerIndex": 1,
-        "answer": "Some defenders in your immune system learn to recognize germs and remember their features. That can help them recognize the same germs faster next time."
+        "answer": "Keep the stick standing in the same place. Mark each tip and measure from the stick with the same unit, then compare the lengths."
       }
     ]
   }
