@@ -1,0 +1,48 @@
+{
+  "tool": "built-in image_gen",
+  "outlineLockedBeforeImages": true,
+  "generatedDate": "2026-10-03",
+  "noLocalModels": true,
+  "titleCard": "01-wake.jpg also supplies titleCard.plate wake",
+  "delivery": "sips JPEG quality 88; fold derivatives width 720",
+  "plates": [
+    {
+      "plate": "wake",
+      "original": "01-wake.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-765a6bf1-3747-4544-a01f-48715acbd9ee.png",
+      "sha256": "58393e1d9713b41da5c2f10f31a9db14d17aa552e81ddc3d7eeadbb1f495c34d"
+    },
+    {
+      "plate": "reach",
+      "original": "02-reach.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-c33ecb32-8a3e-4ec8-b442-3d76b5ac6e87.png",
+      "sha256": "272260b737266d2946e89cb44b1ff99df6b877cbbe7efa93f18572ef65c9ee94"
+    },
+    {
+      "plate": "change",
+      "original": "03-change.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-93c02c95-8611-48a6-b59c-eab64fb6ace5.png",
+      "sha256": "3e5e51b480ccc44341bdbe965b413b9cb0999448636c2ae57a40691b4a086865"
+    },
+    {
+      "plate": "notice",
+      "original": "04-notice.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-563c92f6-92f7-479f-95aa-906afe602c86.png",
+      "sha256": "5c132b676dc0b725cf259e54de489d50df9b45c18f84dc8c499c71337cbb2fd9"
+    },
+    {
+      "plate": "return",
+      "original": "05-return.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-44282383-0164-4913-be38-9b7fa327bcd2.png",
+      "sha256": "a1d2d9122157ee9f3b5df5ed944c56a41aa0727580ab91c161d02908d2f6b95d"
+    },
+    {
+      "plate": "keep",
+      "original": "06-keep.png",
+      "generatedPath": "/Users/kevinbolander/.codex/generated_images/01a0ff74-8a5d-7813-91c8-b3f69f6a4ea2/exec-343c3e0b-31e3-4006-a687-9dd05512a0f7.png",
+      "sha256": "ed582ce3de4293b9c945b5ebe6f868e9be9cc752313239eb0abec65908d64962"
+    }
+  ],
+  "apparatus": "SVG code; no raster apparatus art needed",
+  "review": "All six inspected. Plate 05 regenerated to remove a second shadow and align the measuring stick."
+}
