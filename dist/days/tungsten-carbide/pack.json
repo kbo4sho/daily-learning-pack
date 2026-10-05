@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "tungsten-carbide",
+  "topic": "tungsten carbide",
+  "teaser": "A tiny pen ball opens a big question: hard, tough, or both?",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "pattern-detective",
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · TUNGSTEN CARBIDE",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "Tungsten Carbide",
+  "question": "Can something be very hard, but still break?",
+  "idea": "Hard means resisting scratches and dents. Tough means resisting cracks and breaks. A small hard carbide tip and a tougher steel body can work together.",
+  "curiosity": {
+    "intro": "A little piece can have a very particular job. What job needs hard? What job needs tough?",
+    "carryForward": "Follow a pen ball, a soap scratch and a snowy path. Keep two useful words.",
+    "questions": [
+      {
+        "id": "reach",
+        "plate": "reach",
+        "question": "What is hiding at the end of a pen?",
+        "notice": "Look for the tiny round ball where ink meets paper.",
+        "say": "The tiny ball in many ballpoint pens is tungsten carbide. It rolls ink onto paper and resists wear. People make this material by joining tungsten with carbon, then pressing powder and heating it very hot. This heating step is called sintering. Usually, a little cobalt metal binds the grains together: cemented carbide.",
+        "try": "Trace the rolling ball in the picture, then point to the line it leaves."
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "question": "What can a scratch tell us?",
+        "notice": "Big moves the craft stick across soap on a tray. Little watches and records.",
+        "say": "A harder thing can scratch a softer thing. Hard means resisting scratches and dents. Tungsten carbide is one of the hardest materials people make. It is also heavy for its size. The soap test lets Little see a surface give way.",
+        "try": "Predict what mark Big’s craft stick will leave in the soap. Record what you notice."
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "question": "Does hard always mean tough?",
+        "notice": "Compare the chalk pieces with the eraser bending in Big’s hands.",
+        "say": "Tough means resisting cracks or breaks when bumped, bent or dropped. Hard and tough are different. Chalk snaps when bent; an eraser can bend back. Tungsten carbide is very hard but less tough than steel. It is brittle enough to chip if knocked hard.",
+        "try": "Say which test gives a clue about a surface, and which gives a clue about breaking."
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "question": "Why give a hard tip a tough body?",
+        "notice": "Little’s sketch joins a small tip to a larger body.",
+        "say": "Engineers often join a carbide tip to a tougher steel body, as on saw teeth and some masonry drill bits. The tip resists wear while the steel takes bumps. Carbide also appears in some ski-pole and hiking-pole tips and ice-grip studs. Choose a material for its job: hard, tough, or both.",
+        "try": "Choose a job for the tip, then a job for the body."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/tungsten-carbide/01-wake.jpg",
+      "original": "assets/tungsten-carbide/01-wake.png",
+      "foldSrc": "assets/tungsten-carbide/01-wake-fold.jpg",
+      "title": "A small tip, a big question",
+      "alt": "Big and Little Wonderer study a gray carbide tip joined to a steel tooth, resting on linen beside a pen and notebook.",
+      "caption": "A hard tip and a tough body can do different jobs."
+    },
+    {
+      "id": "reach",
+      "src": "assets/tungsten-carbide/02-reach.jpg",
+      "original": "assets/tungsten-carbide/02-reach.png",
+      "foldSrc": "assets/tungsten-carbide/02-reach-fold.jpg",
+      "title": "The ball inside a pen",
+      "alt": "A magnifier rests over the round ball at a pen tip as Big and Little lean toward the notebook.",
+      "caption": "Many ballpoint pens have a tiny tungsten-carbide ball."
+    },
+    {
+      "id": "change",
+      "src": "assets/tungsten-carbide/03-change.jpg",
+      "original": "assets/tungsten-carbide/03-change.png",
+      "foldSrc": "assets/tungsten-carbide/03-change-fold.jpg",
+      "title": "A line in the soap",
+      "alt": "Big holds soap on a tray and draws a wooden craft stick across it while Little records the mark.",
+      "caption": "A harder object can leave a scratch in a softer one."
+    },
+    {
+      "id": "notice",
+      "src": "assets/tungsten-carbide/04-notice.jpg",
+      "original": "assets/tungsten-carbide/04-notice.png",
+      "foldSrc": "assets/tungsten-carbide/04-notice-fold.jpg",
+      "title": "A bend and a break",
+      "alt": "Two chalk pieces rest on a tray while Big gently bends a rubber eraser and Little watches from beside a notebook.",
+      "caption": "Chalk can snap. A rubber eraser can bend back."
+    },
+    {
+      "id": "return",
+      "src": "assets/tungsten-carbide/05-return.jpg",
+      "original": "assets/tungsten-carbide/05-return.png",
+      "foldSrc": "assets/tungsten-carbide/05-return-fold.jpg",
+      "title": "A little grip in the snow",
+      "alt": "Big and Little pause on a snowy path with hiking poles planted beside them.",
+      "caption": "Small carbide pole tips can grip icy ground."
+    },
+    {
+      "id": "keep",
+      "src": "assets/tungsten-carbide/06-keep.jpg",
+      "original": "assets/tungsten-carbide/06-keep.png",
+      "foldSrc": "assets/tungsten-carbide/06-keep-fold.jpg",
+      "title": "Hard, tough, or both",
+      "alt": "Little sketches a hard tip and a steel body in a notebook while Big sits beside the tidy test tray.",
+      "caption": "Choose a material for the job it needs to do."
+    }
+  ],
+  "reading": {
+    "title": "A little book of very hard things",
+    "coverPlate": "wake",
+    "coverText": "A tiny tip starts a question. What is the difference between hard and tough?",
+    "foldableTitle": "A little book of very hard things",
+    "foldableCoverLine": "Very hard. Not always tough.",
+    "foldableNote": "Look closely, test gently with a grown-up, and pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "A resting carbide tip starts a question; a pen reveals its everyday use; a soap scratch and chalk/eraser comparison separate hard from tough; pole tips and a steel-backed tooth show how engineers choose materials.",
+      "beatIntents": [
+        {
+          "plate": "wake",
+          "intent": "Introduce a resting carbide-tipped tooth on linen and the question of hard versus tough; no tool is operated or held."
+        },
+        {
+          "plate": "reach",
+          "intent": "Discover the rolling carbide ball in an ordinary pen; prose explains joining tungsten with carbon, pressing powder and heating, with a cobalt binder."
+        },
+        {
+          "plate": "change",
+          "intent": "Big performs a gentle craft-stick scratch on soap over a tray; Little only predicts, watches and records."
+        },
+        {
+          "plate": "notice",
+          "intent": "Compare two already separated chalk pieces with Big gently bending an eraser; no flying pieces, powder cloud or child handling."
+        },
+        {
+          "plate": "return",
+          "intent": "Follow the pair onto a calm snowy path, with pole tips planted into the ground; small carbide tips serve a specific job."
+        },
+        {
+          "plate": "keep",
+          "intent": "Return to the shared notebook and compare a hard carbide tip with the tougher steel body supporting it; leave a material-choice question open."
+        }
+      ]
+    },
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A small tip, a big question",
+        "passage": "A gray tip rested on a cloth. “Could that little piece do a big job?” asked Little Wonderer. “It is tungsten carbide,” said Big. “A material is what something is made of. This one is heavy for its size and very hard. But being hard does not mean it can never break.”",
+        "prompt": "What might hard tell us about this little tip?"
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "The ball inside a pen",
+        "passage": "Little found another clue in a pen. Many ballpoint pens have a tiny tungsten-carbide ball that rolls ink onto paper. People make carbide by joining tungsten, a metal, with carbon. They press the powder and heat it very hot. A little cobalt metal usually holds the grains together, like glue.",
+        "prompt": "Why could a pen ball need to resist wear?"
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "A line in the soap",
+        "passage": "Big set soap and a wooden craft stick on a tray. Little guessed what would happen, then watched. Big gently drew the stick across the soap. A scratch appeared: a small line dug into the surface. Hard means resisting scratches and dents. The soap gave way to the harder stick.",
+        "prompt": "What did the scratch show about the soap?"
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A bend and a break",
+        "passage": "Would a hard surface also resist breaking? Big gently bent chalk over the tray. It snapped. A rubber eraser bent and came back. Tough means resisting cracks and breaks from bumps or bends. Brittle things can chip or crack. Tungsten carbide is very hard, but a strong knock can chip it.",
+        "prompt": "How are resisting scratches and resisting breaks different?"
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A little grip in the snow",
+        "passage": "On a snowy walk, Little noticed the tips of their hiking poles. The tip is the small end that meets the ground. Some pole tips and ice-grip studs use carbide to bite into ice. “The hard part is only a tiny piece!” Little said. “Just where it is useful,” said Big.",
+        "prompt": "Why put carbide just at a pole’s tip?"
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Hard, tough, or both",
+        "passage": "Back at the notebook, Big showed a saw-tooth picture. A small carbide tip joined a steel body. The hard tip resists wear; the tougher steel takes bumps without cracking as easily. “Two materials, two jobs,” Little said. “Do I need it hard, tough, or both?”",
+        "prompt": "Why might one object need two materials?"
+      }
+    ],
+    "words": [
+      {
+        "word": "hard",
+        "meaning": "able to resist scratches and dents"
+      },
+      {
+        "word": "tough",
+        "meaning": "able to resist cracking or breaking from bumps and bends"
+      },
+      {
+        "word": "brittle",
+        "meaning": "able to chip or crack instead of bending much"
+      },
+      {
+        "word": "scratch",
+        "meaning": "a small line dug into a surface"
+      },
+      {
+        "word": "tip",
+        "meaning": "the small end of something"
+      },
+      {
+        "word": "material",
+        "meaning": "what something is made of"
+      },
+      {
+        "word": "tungsten",
+        "meaning": "a heavy metal used to make tungsten carbide"
+      },
+      {
+        "word": "carbon",
+        "meaning": "an element that joins with tungsten to make tungsten carbide"
+      }
+    ],
+    "questions": [
+      "What is the difference between hard and tough?",
+      "What happened to the chalk and the eraser when Big bent them?",
+      "Why can a carbide tip and a steel body be a useful pair?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one command for the soap test.",
+      "example": "Example: Ask Big to hold the soap and gently drag the craft stick across it."
+    }
+  },
+  "math": {
+    "title": "Patterns at the workbench",
+    "plate": "keep",
+    "intro": "Count by 2, 5 or 10. Find the same-sized step in each pattern.",
+    "tasks": [
+      {
+        "skill": "skip-next",
+        "sequence": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Little counts pens with tiny balls in pairs. What count comes next?",
+        "equation": "2, 4, 6, ___",
+        "hint": "Count on by 2 from the number before the blank.",
+        "answer": 8,
+        "worked": "6 + 2 = 8. The pattern grows by 2 each time.",
+        "plate": "keep",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "A closed drill-bit case has slots grouped in fives. What slot count comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Count on by 5 from the number before the blank.",
+        "answer": 20,
+        "worked": "15 + 5 = 20. The pattern grows by 5 each time.",
+        "plate": "keep",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          10,
+          20,
+          30,
+          40
+        ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Little counts drawn saw teeth in tens. What count comes next?",
+        "equation": "10, 20, 30, ___",
+        "hint": "Count on by 10 from the number before the blank.",
+        "answer": 40,
+        "worked": "30 + 10 = 40. The pattern grows by 10 each time.",
+        "plate": "keep",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
+        ],
+        "step": 2,
+        "blankIndex": 1,
+        "prompt": "Little counts pole marks along a snowy path in twos. What count is missing?",
+        "equation": "12, ___, 16, 18",
+        "hint": "Count on by 2 from the number before the blank.",
+        "answer": 14,
+        "worked": "12 + 2 = 14. The pattern grows by 2 each time.",
+        "plate": "keep",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          20,
+          25,
+          30,
+          35
+        ],
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "Little groups scratch-test notes in fives. What count is missing?",
+        "equation": "20, 25, ___, 35",
+        "hint": "Count on by 5 from the number before the blank.",
+        "answer": 30,
+        "worked": "25 + 5 = 30. The pattern grows by 5 each time.",
+        "plate": "keep",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          60,
+          70,
+          80,
+          90
+        ],
+        "step": 10,
+        "blankIndex": 1,
+        "prompt": "A workshop notebook counts packed pens in tens. What count is missing?",
+        "equation": "60, ___, 80, 90",
+        "hint": "Count on by 10 from the number before the blank.",
+        "answer": 70,
+        "worked": "60 + 10 = 70. The pattern grows by 10 each time.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose a pattern and say its step. How could you check a missing count?",
+    "parentNote": "Age 8 / Grade 2 math. Six skip-counting patterns within 100, with steps 2, 5 and 10. Say counts aloud or draw equal groups.",
+    "eyebrow": "SIX COUNTING PATTERNS",
+    "actionLabel": "Find each missing count",
+    "printNote": "Show the equal steps with numbers or small jumps."
+  },
+  "writing": {
+    "title": "Give the test its words",
+    "intro": "Write one command about the soap test. Say it first if you like.",
+    "plateIds": [
+      "change",
+      "notice",
+      "keep"
+    ],
+    "draw": "Draw the scratch Big made in the soap. Add a label.",
+    "starter": "My soap-test command",
+    "frames": [
+      {
+        "plate": "change",
+        "start": "Ask Big to,",
+        "hint": "name one gentle step with the soap and craft stick"
+      },
+      {
+        "plate": "notice",
+        "start": "Watch,",
+        "hint": "tell what to notice while Big leads the test"
+      },
+      {
+        "plate": "keep",
+        "start": "Record,",
+        "hint": "tell what mark to save in the notebook"
+      }
+    ],
+    "words": [
+      "ask",
+      "watch",
+      "record",
+      "soap",
+      "scratch",
+      "craft stick",
+      "hard",
+      "tough"
+    ],
+    "check": "Does your sentence tell what to do? Keep one clear command.",
+    "parentNote": "Accept a spoken command, dictation, invented spelling or writing. Big is the grown-up in the story. The grown-up handles all test items; the child predicts, watches and records."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Hard is resistance to scratches and dents. Tough is resistance to cracking and breaking. One does not guarantee the other."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Chalk snapped, while the rubber eraser bent back. This compares how they respond to bending, not their scratch hardness."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "A hard carbide tip resists wear. A tougher steel body supports it and takes bumps."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept one sensible command, spoken, dictated or written. Example: Ask Big to hold the soap and gently drag the craft stick across it."
+    }
+  ],
+  "parentGuidance": "Age 8 / Grade 3 reading and Grade 2 math. A grown-up leads every step of the optional household test; the child watches, predicts and records. Work over a tray and keep faces back. Use only soap, a smooth wooden craft stick, chalk and a flexible rubber eraser. The grown-up holds the soap and gently drags the craft stick across it, then separately bends chalk gently over the tray and bends the eraser. Stop if extra force is needed; keep crumbs on the tray. No knives, nails, glass, ceramic tiles, files, drills, saws or sharp tools; use nothing that makes shards. Never touch real saw blades or drill bits. Do not scratch with a pen tip or any tungsten carbide. WC is tungsten joined with carbon; carbide is manufactured, rather than mined as a finished tool material. Pressing and sintering usually use a cobalt binder, not household glue. Hardness and toughness vary with grain size, binder and grade. The bench gives qualitative comparisons, not measured tests or a promise that every bump chips carbide. Its scratch contact is a carbide point; on carbide it leaves no visible mark under the shown light contact. Its bump is strong enough to reveal different responses. The chalk/eraser activity is a separate bending comparison, not a ranking of toughness by measurement. Materials differ in softness as well as brittleness. Tools stay resting in pictures. Welcome dictation and a pause at any time.",
+  "sources": [
+    {
+      "label": "CERATIZIT · making cemented carbide",
+      "url": "https://ceratizit.com/int/en/cemented-carbide-to-products/production.html"
+    },
+    {
+      "label": "CERATIZIT · hardness and toughness",
+      "url": "https://ceratizit.com/int/en/cemented-carbide-to-products/cemented-carbide.html"
+    },
+    {
+      "label": "BIC · the ball in a pen",
+      "url": "https://us.bic.com/en_us/bic-soft-feel-retractable-ball-point-pen-medium-black-ink-36-pack.html"
+    },
+    {
+      "label": "LEKI · pole tips",
+      "url": "https://www.leki.co.uk/customer-care/helpdesk"
+    }
+  ],
+  "authoring": {
+    "status": "authored",
+    "bar": "curiosity",
+    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template pattern-detective: Six skip-counting sequences of at least three terms with exactly one blank. Steps are 2, 5, or 10; all three steps appear. At least one skip-missing task puts the blank before the final term. Store the complete sequence, step, and blankIndex; skip-next blanks the last term.",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-generation",
+    "todo": []
+  },
+  "surfaces": {
+    "layout": "six",
+    "diorama": "tungsten-carbide"
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "TUNGSTEN CARBIDE · 2026-10-05",
+    "subtitle": "Very hard. Not always tough."
+  },
+  "visualNotes": {
+    "intent": "Six quiet workshop and snowy-walk scenes compare hard surfaces with tough bodies. Big leads the household test while Little predicts and records.",
+    "prompts": "assets/tungsten-carbide/prompts.json",
+    "provenance": "assets/tungsten-carbide/provenance.json"
+  },
+  "quiz": {
+    "title": "Four workshop clues",
+    "intro": "Keep the clues about hard, tough and two materials working together.",
+    "questions": [
+      {
+        "id": "hard",
+        "prompt": "What does hard mean?",
+        "choices": [
+          "Easy to bend",
+          "Resists scratches and dents",
+          "Cannot ever break"
+        ],
+        "answerIndex": 1,
+        "answer": "Hard means resisting scratches and dents. A very hard material can still chip or crack."
+      },
+      {
+        "id": "tough",
+        "prompt": "What does tough mean?",
+        "choices": [
+          "Always heavy",
+          "Always shiny",
+          "Resists cracking or breaking from bumps and bends"
+        ],
+        "answerIndex": 2,
+        "answer": "Tough means resisting cracks or breaks from bumps, bends or drops. Tough and hard are different properties."
+      },
+      {
+        "id": "pair",
+        "prompt": "Why put a carbide tip on a steel body?",
+        "choices": [
+          "The hard tip resists wear and the tougher steel takes bumps",
+          "Steel makes the tip soft",
+          "The tip needs to bend like an eraser"
+        ],
+        "answerIndex": 0,
+        "answer": "The small carbide tip resists wear. The tougher steel body supports it and takes bumps without cracking as easily."
+      },
+      {
+        "id": "pen",
+        "prompt": "Where does tungsten carbide hide in many ballpoint pens?",
+        "choices": [
+          "In the paper",
+          "In the tiny rolling ball at the tip",
+          "In the ink’s color"
+        ],
+        "answerIndex": 1,
+        "answer": "Many ballpoint pens use a tiny tungsten-carbide ball at the tip. The hard ball rolls ink onto paper and resists wear."
+      }
+    ]
+  }
+}

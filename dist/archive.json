@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T02:24:44.191Z",
-  "latest": "tiny-guests",
+  "generatedAt": "2026-10-05T02:10:44.578Z",
+  "latest": "tungsten-carbide",
   "leoEntry": "./today/",
   "days": [
+    {
+      "slug": "tungsten-carbide",
+      "date": "2026-10-05",
+      "topic": "tungsten carbide",
+      "title": "Tungsten Carbide",
+      "teaser": "A tiny pen ball opens a big question: hard, tough, or both?",
+      "href": "./days/tungsten-carbide/",
+      "latest": true
+    },
     {
       "slug": "tiny-guests",
       "date": "2026-10-02",
@@ -11,7 +20,7 @@
       "title": "Tiny Guests",
       "teaser": "A whole cell, a tiny package, and the kindness of soap.",
       "href": "./days/tiny-guests/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "a-paper-boat",
