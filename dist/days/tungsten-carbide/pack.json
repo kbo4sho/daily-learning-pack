@@ -42,7 +42,7 @@
         "plate": "notice",
         "question": "Does hard always mean tough?",
         "notice": "Compare the chalk pieces with the eraser bending in Big’s hands.",
-        "say": "Tough means resisting cracks or breaks when bumped, bent or dropped. Hard and tough are different. Chalk snaps when bent; an eraser can bend back. Tungsten carbide is very hard but less tough than steel. It is brittle enough to chip if knocked hard.",
+        "say": "Tough means resisting cracks or breaks when bumped, bent or dropped. Hard and tough are different. Chalk is brittle: it snaps when bent. An eraser is tough: it bends back. Tungsten carbide is very hard but less tough than steel. It is brittle enough to chip if knocked hard.",
         "try": "Say which test gives a clue about a surface, and which gives a clue about breaking."
       },
       {
@@ -117,7 +117,7 @@
     "coverText": "A tiny tip starts a question. What is the difference between hard and tough?",
     "foldableTitle": "A little book of very hard things",
     "foldableCoverLine": "Very hard. Not always tough.",
-    "foldableNote": "Look closely, test gently with a grown-up, and pause whenever you like.",
+    "foldableNote": "Predict, watch a grown-up test, and pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
     "outline": {
       "status": "locked",
@@ -176,7 +176,7 @@
         "id": "notice",
         "plate": "notice",
         "title": "A bend and a break",
-        "passage": "Would a hard surface also resist breaking? Big gently bent chalk over the tray. It snapped. A rubber eraser bent and came back. Tough means resisting cracks and breaks from bumps or bends. Brittle things can chip or crack. Tungsten carbide is very hard, but a strong knock can chip it.",
+        "passage": "Does every material bend before it breaks? Big gently bent chalk over the tray. It snapped: chalk is brittle. A rubber eraser bent and came back: it is tough. Tough means resisting cracks and breaks from bumps or bends. Tungsten carbide is very hard, but brittle, so a strong knock can chip it.",
         "prompt": "How are resisting scratches and resisting breaks different?"
       },
       {
@@ -372,17 +372,17 @@
     "frames": [
       {
         "plate": "change",
-        "start": "Ask Big to,",
+        "start": "Ask Big to",
         "hint": "name one gentle step with the soap and craft stick"
       },
       {
         "plate": "notice",
-        "start": "Watch,",
+        "start": "Watch the",
         "hint": "tell what to notice while Big leads the test"
       },
       {
         "plate": "keep",
-        "start": "Record,",
+        "start": "Record the",
         "hint": "tell what mark to save in the notebook"
       }
     ],
