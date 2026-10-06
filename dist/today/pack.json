@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "tungsten-carbide",
-  "topic": "tungsten carbide",
-  "teaser": "A tiny pen ball opens a big question: hard, tough, or both?",
+  "slug": "shadows-at-noon",
+  "topic": "shadows at noon",
+  "teaser": "One stick. Two chalk marks. A smaller shadow at noon.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "pattern-detective",
+  "mathTemplate": "groups-and-arrays",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · TUNGSTEN CARBIDE",
+  "editionLabel": "GRADE 3 · SHADOWS AT NOON",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Tungsten Carbide",
-  "question": "Can something be very hard, but still break?",
-  "idea": "Hard means resisting scratches and dents. Tough means resisting cracks and breaks. A small hard carbide tip and a tougher steel body can work together.",
+  "title": "Shadows at Noon",
+  "question": "Why is a shadow shorter at noon?",
+  "idea": "Around noon, the sun is near its highest point for the day. A standing stick casts a shorter shadow than when the sun is lower.",
   "curiosity": {
-    "intro": "A little piece can have a very particular job. What job needs hard? What job needs tough?",
-    "carryForward": "Follow a pen ball, a soap scratch and a snowy path. Keep two useful words.",
+    "intro": "One stick. Two chalk marks. Why did the shadow change?",
+    "carryForward": "Follow the sunlight, compare the lengths, and keep a small clue.",
     "questions": [
       {
         "id": "reach",
         "plate": "reach",
-        "question": "What is hiding at the end of a pen?",
-        "notice": "Look for the tiny round ball where ink meets paper.",
-        "say": "The tiny ball in many ballpoint pens is tungsten carbide. It rolls ink onto paper and resists wear. People make this material by joining tungsten with carbon, then pressing powder and heating it very hot. This heating step is called sintering. Usually, a little cobalt metal binds the grains together: cemented carbide.",
-        "try": "Trace the rolling ball in the picture, then point to the line it leaves."
+        "question": "How can we save a shadow’s length?",
+        "notice": "Little puts a chalk mark at the long shadow’s tip.",
+        "say": "A shadow forms where an object blocks sunlight. Mark its tip, then measure from the standing stick to the mark. Use the same measuring stick and unit to compare both lengths.",
+        "try": "With Big, measure from the stick’s base to its shadow tip. Keep your eyes on the ground; never look at the sun."
       },
       {
         "id": "change",
         "plate": "change",
-        "question": "What can a scratch tell us?",
-        "notice": "Big moves the craft stick across soap on a tray. Little watches and records.",
-        "say": "A harder thing can scratch a softer thing. Hard means resisting scratches and dents. Tungsten carbide is one of the hardest materials people make. It is also heavy for its size. The soap test lets Little see a surface give way.",
-        "try": "Predict what mark Big’s craft stick will leave in the soap. Record what you notice."
+        "question": "Why is the noon shadow so short?",
+        "notice": "The same standing stick now has a short, crisp shadow.",
+        "say": "Around noon, the sun is near its highest point in the sky for the day. Light reaches the ground from higher above, so the stick’s shadow stays closer to its base. A lower morning or afternoon sun makes a longer shadow.",
+        "try": "Compare the short shadow with the earlier chalk mark."
       },
       {
         "id": "notice",
         "plate": "notice",
-        "question": "Does hard always mean tough?",
-        "notice": "Compare the chalk pieces with the eraser bending in Big’s hands.",
-        "say": "Tough means resisting cracks or breaks when bumped, bent or dropped. Hard and tough are different. Chalk is brittle: it snaps when bent. An eraser is tough: it bends back. Tungsten carbide is very hard but less tough than steel. It is brittle enough to chip if knocked hard.",
-        "try": "Say which test gives a clue about a surface, and which gives a clue about breaking."
+        "question": "Which way does a shadow point?",
+        "notice": "One side of the stick is bright. The shadow is on the other side.",
+        "say": "The bright side faces the sun. The stick blocks some sunlight, leaving a shadow that points away from the light. Follow the shadow along the ground.",
+        "try": "Point from the bright side, past the stick, toward the shadow."
       },
       {
         "id": "keep",
         "plate": "keep",
-        "question": "Why give a hard tip a tough body?",
-        "notice": "Little’s sketch joins a small tip to a larger body.",
-        "say": "Engineers often join a carbide tip to a tougher steel body, as on saw teeth and some masonry drill bits. The tip resists wear while the steel takes bumps. Carbide also appears in some ski-pole and hiking-pole tips and ice-grip studs. Choose a material for its job: hard, tough, or both.",
-        "try": "Choose a job for the tip, then a job for the body."
+        "question": "What clue can a short shadow give us?",
+        "notice": "Little keeps a long line and a short line in the notebook.",
+        "say": "A short noon shadow is a clue that the sun is high. Compare the same standing stick in the same place, using the same unit. Chalk marks and notes help us remember what changed. Measuring can lead to another question.",
+        "try": "Ask one new question about tomorrow’s shadow."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/tungsten-carbide/01-wake.jpg",
-      "original": "assets/tungsten-carbide/01-wake.png",
-      "foldSrc": "assets/tungsten-carbide/01-wake-fold.jpg",
-      "title": "A small tip, a big question",
-      "alt": "Big and Little Wonderer study a gray carbide tip joined to a steel tooth, resting on linen beside a pen and notebook.",
-      "caption": "A hard tip and a tough body can do different jobs."
+      "src": "assets/shadows-at-noon/01-wake.jpg",
+      "original": "assets/shadows-at-noon/01-wake.png",
+      "foldSrc": "assets/shadows-at-noon/01-wake-fold.jpg",
+      "title": "A morning question",
+      "alt": "Big and Little Wonderer study a standing wooden stick and its long morning shadow on a pale garden path.",
+      "caption": "A lower sun makes a longer shadow."
     },
     {
       "id": "reach",
-      "src": "assets/tungsten-carbide/02-reach.jpg",
-      "original": "assets/tungsten-carbide/02-reach.png",
-      "foldSrc": "assets/tungsten-carbide/02-reach-fold.jpg",
-      "title": "The ball inside a pen",
-      "alt": "A magnifier rests over the round ball at a pen tip as Big and Little lean toward the notebook.",
-      "caption": "Many ballpoint pens have a tiny tungsten-carbide ball."
+      "src": "assets/shadows-at-noon/02-reach.jpg",
+      "original": "assets/shadows-at-noon/02-reach.png",
+      "foldSrc": "assets/shadows-at-noon/02-reach-fold.jpg",
+      "title": "Save the tip",
+      "alt": "Little marks the tip of the long stick shadow with chalk while Big watches beside a linen notebook.",
+      "caption": "Mark the tip, then measure from the stick to the mark."
     },
     {
       "id": "change",
-      "src": "assets/tungsten-carbide/03-change.jpg",
-      "original": "assets/tungsten-carbide/03-change.png",
-      "foldSrc": "assets/tungsten-carbide/03-change-fold.jpg",
-      "title": "A line in the soap",
-      "alt": "Big holds soap on a tray and draws a wooden craft stick across it while Little records the mark.",
-      "caption": "A harder object can leave a scratch in a softer one."
+      "src": "assets/shadows-at-noon/03-change.jpg",
+      "original": "assets/shadows-at-noon/03-change.png",
+      "foldSrc": "assets/shadows-at-noon/03-change-fold.jpg",
+      "title": "A smaller patch",
+      "alt": "Big and Little return to the same stick at noon and find a short, crisp shadow near its base.",
+      "caption": "Around noon, the sun is near its highest point for the day."
     },
     {
       "id": "notice",
-      "src": "assets/tungsten-carbide/04-notice.jpg",
-      "original": "assets/tungsten-carbide/04-notice.png",
-      "foldSrc": "assets/tungsten-carbide/04-notice-fold.jpg",
-      "title": "A bend and a break",
-      "alt": "Two chalk pieces rest on a tray while Big gently bends a rubber eraser and Little watches from beside a notebook.",
-      "caption": "Chalk can snap. A rubber eraser can bend back."
+      "src": "assets/shadows-at-noon/04-notice.jpg",
+      "original": "assets/shadows-at-noon/04-notice.png",
+      "foldSrc": "assets/shadows-at-noon/04-notice-fold.jpg",
+      "title": "Follow the light",
+      "alt": "A close view shows sunlight reaching one side of the stick and the short shadow stretching away on the other side.",
+      "caption": "The bright side faces the sun. The shadow points away from the light."
     },
     {
       "id": "return",
-      "src": "assets/tungsten-carbide/05-return.jpg",
-      "original": "assets/tungsten-carbide/05-return.png",
-      "foldSrc": "assets/tungsten-carbide/05-return-fold.jpg",
-      "title": "A little grip in the snow",
-      "alt": "Big and Little pause on a snowy path with hiking poles planted beside them.",
-      "caption": "Small carbide pole tips can grip icy ground."
+      "src": "assets/shadows-at-noon/05-return.jpg",
+      "original": "assets/shadows-at-noon/05-return.png",
+      "foldSrc": "assets/shadows-at-noon/05-return-fold.jpg",
+      "title": "Compare the marks",
+      "alt": "Little uses a wooden measuring stick beside the noon shadow while Big holds the linen notebook; the earlier chalk mark remains farther away.",
+      "caption": "Use the same unit to compare the morning and noon lengths."
     },
     {
       "id": "keep",
-      "src": "assets/tungsten-carbide/06-keep.jpg",
-      "original": "assets/tungsten-carbide/06-keep.png",
-      "foldSrc": "assets/tungsten-carbide/06-keep-fold.jpg",
-      "title": "Hard, tough, or both",
-      "alt": "Little sketches a hard tip and a steel body in a notebook while Big sits beside the tidy test tray.",
-      "caption": "Choose a material for the job it needs to do."
+      "src": "assets/shadows-at-noon/06-keep.jpg",
+      "original": "assets/shadows-at-noon/06-keep.png",
+      "foldSrc": "assets/shadows-at-noon/06-keep-fold.jpg",
+      "title": "A clue to keep",
+      "alt": "Big and Little sit beside the garden path with a notebook showing long and short lines; the standing stick casts a short noon shadow nearby.",
+      "caption": "A short noon shadow is a clue that the sun is high."
     }
   ],
   "reading": {
-    "title": "A little book of very hard things",
+    "title": "The shadow that changed",
     "coverPlate": "wake",
-    "coverText": "A tiny tip starts a question. What is the difference between hard and tough?",
-    "foldableTitle": "A little book of very hard things",
-    "foldableCoverLine": "Very hard. Not always tough.",
-    "foldableNote": "Predict, watch a grown-up test, and pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
+    "coverText": "One standing stick. Two chalk marks. What changed while Little was away?",
+    "foldableTitle": "The shadow that changed",
+    "foldableCoverLine": "A short shadow. A high sun.",
+    "foldableNote": "Measure, notice, and pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "A resting carbide tip starts a question; a pen reveals its everyday use; a soap scratch and chalk/eraser comparison separate hard from tough; pole tips and a steel-backed tooth show how engineers choose materials.",
+      "arc": "Little saves a long morning shadow, returns to find a short noon shadow, follows the direction of the light, compares two lengths, and keeps a clue in a notebook.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "Introduce a resting carbide-tipped tooth on linen and the question of hard versus tough; no tool is operated or held."
+          "intent": "Establish the same vertical wooden stick in a pale garden path, a long morning shadow, Big and Little, chalk, and linen notebook; begin with a question."
         },
         {
           "plate": "reach",
-          "intent": "Discover the rolling carbide ball in an ordinary pen; prose explains joining tungsten with carbon, pressing powder and heating, with a cobalt binder."
+          "intent": "Little saves the long shadow tip with one chalk mark; use a closer ground-level composition with the same unmoved stick."
         },
         {
           "plate": "change",
-          "intent": "Big performs a gentle craft-stick scratch on soap over a tray; Little only predicts, watches and records."
+          "intent": "Return at noon to the same stick; show a short crisp shadow and the earlier chalk mark farther away."
         },
         {
           "plate": "notice",
-          "intent": "Compare two already separated chalk pieces with Big gently bending an eraser; no flying pieces, powder cloud or child handling."
+          "intent": "Focus on the mechanism: light on one side of the vertical stick, short shadow on the opposite side; Big and Little attend to the ground."
         },
         {
           "plate": "return",
-          "intent": "Follow the pair onto a calm snowy path, with pole tips planted into the ground; small carbide tips serve a specific job."
+          "intent": "Compare morning and noon chalk marks with the same wooden measuring stick; notebook records the evidence."
         },
         {
           "plate": "keep",
-          "intent": "Return to the shared notebook and compare a hard carbide tip with the tougher steel body supporting it; leave a material-choice question open."
+          "intent": "Close with two simple notebook lines and the short shadow beside the pair; invite a new question."
         }
       ]
     },
@@ -154,292 +154,240 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A small tip, a big question",
-        "passage": "A gray tip rested on a cloth. “Could that little piece do a big job?” asked Little Wonderer. “It is tungsten carbide,” said Big. “A material is what something is made of. This one is heavy for its size and very hard. But being hard does not mean it can never break.”",
-        "prompt": "What might hard tell us about this little tip?"
+        "title": "A morning question",
+        "passage": "Little Wonderer found a long shape beside a standing stick. It was a shadow: a place where the stick blocked sunlight, the light from the sun. “Will it stay this long?” Little asked. Big set a linen notebook beside the garden path. They had a question to keep.",
+        "prompt": "What made the shadow?"
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "The ball inside a pen",
-        "passage": "Little found another clue in a pen. Many ballpoint pens have a tiny tungsten-carbide ball that rolls ink onto paper. People make carbide by joining tungsten, a metal, with carbon. They press the powder and heat it very hot. A little cobalt metal usually holds the grains together, like glue.",
-        "prompt": "Why could a pen ball need to resist wear?"
+        "title": "Save the tip",
+        "passage": "Little took a piece of chalk, a soft stick for making marks. “First mark the tip,” said Big. Little drew a small line where the shadow ended. To measure is to find how long something is. They used a measuring stick from the wooden stick’s base to the chalk.",
+        "prompt": "Why did Little mark the tip?"
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A line in the soap",
-        "passage": "Big set soap and a wooden craft stick on a tray. Little guessed what would happen, then watched. Big gently drew the stick across the soap. A scratch appeared: a small line dug into the surface. Hard means resisting scratches and dents. The soap gave way to the harder stick.",
-        "prompt": "What did the scratch show about the soap?"
+        "title": "A smaller patch",
+        "passage": "At noon, the middle of the day, they came back. The wooden stick had stayed in place, but its shadow had changed. “It is short and crisp!” said Little. Around noon, the sun is near its highest point for the day. The morning shadow had reached much farther.",
+        "prompt": "What changed between morning and noon?"
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A bend and a break",
-        "passage": "Does every material bend before it breaks? Big gently bent chalk over the tray. It snapped: chalk is brittle. A rubber eraser bent and came back: it is tough. Tough means resisting cracks and breaks from bumps or bends. Tungsten carbide is very hard, but brittle, so a strong knock can chip it.",
-        "prompt": "How are resisting scratches and resisting breaks different?"
+        "title": "Follow the light",
+        "passage": "“Which way does it point?” asked Big. Little studied the ground. Sunlight reached one side of the stick. The shadow stretched away on the other side. The bright side faced the sun; the shadow pointed away from the light. Little traced its edge along the ground with one finger.",
+        "prompt": "Which way does a shadow point?"
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A little grip in the snow",
-        "passage": "On a snowy walk, Little noticed the tips of their hiking poles. The tip is the small end that meets the ground. Some pole tips and ice-grip studs use carbide to bite into ice. “The hard part is only a tiny piece!” Little said. “Just where it is useful,” said Big.",
-        "prompt": "Why put carbide just at a pole’s tip?"
+        "title": "Compare the marks",
+        "passage": "Little marked the new tip with chalk. They used the same measuring stick to check both lengths. They began at the same standing stick and used the same unit each time. The noon length was shorter. “The stick stayed the same,” Little said. “The sun’s height changed.”",
+        "prompt": "Why use the same unit each time?"
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Hard, tough, or both",
-        "passage": "Back at the notebook, Big showed a saw-tooth picture. A small carbide tip joined a steel body. The hard tip resists wear; the tougher steel takes bumps without cracking as easily. “Two materials, two jobs,” Little said. “Do I need it hard, tough, or both?”",
-        "prompt": "Why might one object need two materials?"
+        "title": "A clue to keep",
+        "passage": "In the notebook, Little drew a long line for morning and a short line for noon. Later, when the sun was lower, the shadow would grow longer again. A short noon shadow was a clue to a high sun. “What will we notice tomorrow?” Little asked.",
+        "prompt": "What could Little compare tomorrow?"
       }
     ],
     "words": [
       {
-        "word": "hard",
-        "meaning": "able to resist scratches and dents"
+        "word": "noon",
+        "meaning": "the middle of the day, when the sun is near its highest point"
       },
       {
-        "word": "tough",
-        "meaning": "able to resist cracking or breaking from bumps and bends"
+        "word": "shadow",
+        "meaning": "a place where an object blocks light"
       },
       {
-        "word": "brittle",
-        "meaning": "able to chip or crack instead of bending much"
+        "word": "measure",
+        "meaning": "find a length using a unit, such as a small step or a centimeter"
       },
       {
-        "word": "scratch",
-        "meaning": "a small line dug into a surface"
+        "word": "chalk",
+        "meaning": "a soft stick that leaves a mark on a path or board"
       },
       {
-        "word": "tip",
-        "meaning": "the small end of something"
+        "word": "stick",
+        "meaning": "a thin piece of wood"
       },
       {
-        "word": "material",
-        "meaning": "what something is made of"
-      },
-      {
-        "word": "tungsten",
-        "meaning": "a heavy metal used to make tungsten carbide"
-      },
-      {
-        "word": "carbon",
-        "meaning": "an element that joins with tungsten to make tungsten carbide"
+        "word": "sunlight",
+        "meaning": "light that comes from the sun"
       }
     ],
     "questions": [
-      "What is the difference between hard and tough?",
-      "What happened to the chalk and the eraser when Big bent them?",
-      "Why can a carbide tip and a steel body be a useful pair?"
+      "Why was the same stick’s shadow shorter at noon?",
+      "Which side of the stick has the shadow, compared with the light?",
+      "How could you compare a morning shadow with a noon shadow?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command for the soap test.",
-      "example": "Example: Ask Big to hold the soap and gently drag the craft stick across it."
+      "prompt": "Write one command sentence about measuring a shadow.",
+      "example": "Example: Measure from the stick’s base to the shadow tip with the same unit."
     }
   },
   "math": {
-    "title": "Patterns at the workbench",
-    "plate": "keep",
-    "intro": "Count by 2, 5 or 10. Find the same-sized step in each pattern.",
+    "title": "Count equal groups in the sunshine",
+    "plate": "return",
+    "intro": "Each group has the same number. Add the equal groups or rows to find the total.",
     "tasks": [
       {
-        "skill": "skip-next",
-        "sequence": [
-          2,
-          4,
-          6,
-          8
-        ],
-        "step": 2,
-        "blankIndex": 3,
-        "prompt": "Little counts pens with tiny balls in pairs. What count comes next?",
-        "equation": "2, 4, 6, ___",
-        "hint": "Count on by 2 from the number before the blank.",
-        "answer": 8,
-        "worked": "6 + 2 = 8. The pattern grows by 2 each time.",
-        "plate": "keep",
+        "skill": "array",
+        "rows": 2,
+        "columns": 3,
+        "prompt": "Little draws 2 rows of chalk marks on the path, with 3 marks in each row. How many chalk marks are there?",
+        "equation": "3 + 3 =",
+        "hint": "Add one row at a time: 3 + 3.",
+        "answer": 6,
+        "worked": "3 + 3 = 6. Two rows of 3 make 6 chalk marks.",
+        "plate": "return",
         "label": "TASK 1"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "step": 5,
-        "blankIndex": 3,
-        "prompt": "A closed drill-bit case has slots grouped in fives. What slot count comes next?",
-        "equation": "5, 10, 15, ___",
-        "hint": "Count on by 5 from the number before the blank.",
-        "answer": 20,
-        "worked": "15 + 5 = 20. The pattern grows by 5 each time.",
-        "plate": "keep",
+        "skill": "equal-groups",
+        "rows": 3,
+        "columns": 4,
+        "prompt": "Big sets out 3 groups of measuring pebbles, with 4 pebbles in each group. How many pebbles are there altogether?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Add the 3 equal groups: 4 + 4 + 4.",
+        "answer": 12,
+        "worked": "4 + 4 + 4 = 12. Three groups of 4 make 12 measuring pebbles.",
+        "plate": "return",
         "label": "TASK 2"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          10,
-          20,
-          30,
-          40
-        ],
-        "step": 10,
-        "blankIndex": 3,
-        "prompt": "Little counts drawn saw teeth in tens. What count comes next?",
-        "equation": "10, 20, 30, ___",
-        "hint": "Count on by 10 from the number before the blank.",
-        "answer": 40,
-        "worked": "30 + 10 = 40. The pattern grows by 10 each time.",
-        "plate": "keep",
+        "skill": "array",
+        "rows": 4,
+        "columns": 2,
+        "prompt": "Little lays sticks in 4 rows in the sunny yard, with 2 sticks in each row. How many sticks are there?",
+        "equation": "2 + 2 + 2 + 2 =",
+        "hint": "Add the sticks in each row: 2 + 2 + 2 + 2.",
+        "answer": 8,
+        "worked": "2 + 2 + 2 + 2 = 8. Four rows of 2 make 8 sticks.",
+        "plate": "return",
         "label": "TASK 3"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          12,
-          14,
-          16,
-          18
-        ],
-        "step": 2,
-        "blankIndex": 1,
-        "prompt": "Little counts pole marks along a snowy path in twos. What count is missing?",
-        "equation": "12, ___, 16, 18",
-        "hint": "Count on by 2 from the number before the blank.",
-        "answer": 14,
-        "worked": "12 + 2 = 14. The pattern grows by 2 each time.",
-        "plate": "keep",
+        "skill": "array",
+        "rows": 2,
+        "columns": 5,
+        "prompt": "A shadow notebook has 2 rows of boxes, with 5 boxes in each row. How many boxes are there?",
+        "equation": "5 + 5 =",
+        "hint": "Add the 2 rows: 5 + 5.",
+        "answer": 10,
+        "worked": "5 + 5 = 10. Two rows of 5 make 10 notebook boxes.",
+        "plate": "return",
         "label": "TASK 4"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          20,
-          25,
-          30,
-          35
-        ],
-        "step": 5,
-        "blankIndex": 2,
-        "prompt": "Little groups scratch-test notes in fives. What count is missing?",
-        "equation": "20, 25, ___, 35",
-        "hint": "Count on by 5 from the number before the blank.",
-        "answer": 30,
-        "worked": "25 + 5 = 30. The pattern grows by 5 each time.",
-        "plate": "keep",
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 3,
+        "prompt": "Little draws 5 groups of shadow-tip dots in the notebook, with 3 dots in each group. How many dots are there?",
+        "equation": "3 + 3 + 3 + 3 + 3 =",
+        "hint": "Add the 5 equal groups: 3 + 3 + 3 + 3 + 3.",
+        "answer": 15,
+        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five groups of 3 make 15 shadow-tip dots.",
+        "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          60,
-          70,
-          80,
-          90
-        ],
-        "step": 10,
-        "blankIndex": 1,
-        "prompt": "A workshop notebook counts packed pens in tens. What count is missing?",
-        "equation": "60, ___, 80, 90",
-        "hint": "Count on by 10 from the number before the blank.",
-        "answer": 70,
-        "worked": "60 + 10 = 70. The pattern grows by 10 each time.",
-        "plate": "keep",
+        "skill": "array",
+        "rows": 5,
+        "columns": 5,
+        "prompt": "Big draws 5 rows of chalk circles beside the shadow, with 5 circles in each row. How many circles are there?",
+        "equation": "5 + 5 + 5 + 5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5 + 5 + 5 + 5.",
+        "answer": 25,
+        "worked": "5 + 5 + 5 + 5 + 5 = 25. Five rows of 5 make 25 chalk circles.",
+        "plate": "return",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose a pattern and say its step. How could you check a missing count?",
-    "parentNote": "Age 8 / Grade 2 math. Six skip-counting patterns within 100, with steps 2, 5 and 10. Say counts aloud or draw equal groups.",
-    "eyebrow": "SIX COUNTING PATTERNS",
-    "actionLabel": "Find each missing count",
-    "printNote": "Show the equal steps with numbers or small jumps."
+    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
+    "parentNote": "Age 8 / Grade 2 math. Six equal-group and array tasks use repeated addition. Rows and columns are each 2–5. Welcome drawings, spoken reasoning, or arranging small objects. Use the quantities in each question, rather than counting painted details.",
+    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
+    "actionLabel": "Add each equal group or row",
+    "printNote": "Show your thinking with numbers, marks, or words."
   },
   "writing": {
-    "title": "Give the test its words",
-    "intro": "Write one command about the soap test. Say it first if you like.",
+    "title": "Give a measurement its words",
+    "intro": "Write one clear command sentence about measuring a shadow. Say it first if you like.",
     "plateIds": [
-      "change",
-      "notice",
+      "reach",
+      "return",
       "keep"
     ],
-    "draw": "Draw the scratch Big made in the soap. Add a label.",
-    "starter": "My soap-test command",
+    "draw": "Draw the stick, its shadow, and a chalk mark. Add one label.",
+    "starter": "My shadow-measuring command",
     "frames": [
       {
-        "plate": "change",
-        "start": "Ask Big to",
-        "hint": "name one gentle step with the soap and craft stick"
+        "plate": "reach",
+        "start": "First,",
+        "hint": "tell how to stand the stick or mark the tip"
       },
       {
-        "plate": "notice",
-        "start": "Watch the",
-        "hint": "tell what to notice while Big leads the test"
+        "plate": "return",
+        "start": "Then,",
+        "hint": "tell how to measure from the stick to the mark"
       },
       {
         "plate": "keep",
-        "start": "Record the",
-        "hint": "tell what mark to save in the notebook"
+        "start": "At the end,",
+        "hint": "tell how to save or compare the length"
       }
     ],
     "words": [
-      "ask",
-      "watch",
-      "record",
-      "soap",
-      "scratch",
-      "craft stick",
-      "hard",
-      "tough"
+      "stand",
+      "stick",
+      "mark",
+      "tip",
+      "shadow",
+      "measure",
+      "first",
+      "then"
     ],
-    "check": "Does your sentence tell what to do? Keep one clear command.",
-    "parentNote": "Accept a spoken command, dictation, invented spelling or writing. Big is the grown-up in the story. The grown-up handles all test items; the child predicts, watches and records."
+    "check": "Does your sentence tell what to do, with a command such as Stand, Mark, Measure, or Compare?",
+    "parentNote": "Accept a spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “Measure from the stick’s base to the shadow tip with the same unit.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Hard is resistance to scratches and dents. Tough is resistance to cracking and breaking. One does not guarantee the other."
+      "text": "The sun was higher around noon, so the same standing stick cast a shorter shadow."
     },
     {
       "label": "Reading · 2",
-      "text": "Chalk snapped, while the rubber eraser bent back. This compares how they respond to bending, not their scratch hardness."
+      "text": "The shadow points away from the light. The bright side of the stick faces the sun."
     },
     {
       "label": "Reading · 3",
-      "text": "A hard carbide tip resists wear. A tougher steel body supports it and takes bumps."
+      "text": "Leave the stick standing in the same place. Mark each shadow tip, measure from the stick with the same unit, and compare the lengths."
     },
     {
       "label": "Writing",
-      "text": "Accept one sensible command, spoken, dictated or written. Example: Ask Big to hold the soap and gently drag the craft stick across it."
+      "text": "Accept one sensible command, spoken, dictated, or written. Example: “Measure from the stick’s base to the shadow tip with the same unit.”"
     }
   ],
-  "parentGuidance": "Age 8 / Grade 3 reading and Grade 2 math. A grown-up leads every step of the optional household test; the child watches, predicts and records. Work over a tray and keep faces back. Use only soap, a smooth wooden craft stick, chalk and a flexible rubber eraser. The grown-up holds the soap and gently drags the craft stick across it, then separately bends chalk gently over the tray and bends the eraser. Stop if extra force is needed; keep crumbs on the tray. No knives, nails, glass, ceramic tiles, files, drills, saws or sharp tools; use nothing that makes shards. Never touch real saw blades or drill bits. Do not scratch with a pen tip or any tungsten carbide. WC is tungsten joined with carbon; carbide is manufactured, rather than mined as a finished tool material. Pressing and sintering usually use a cobalt binder, not household glue. Hardness and toughness vary with grain size, binder and grade. The bench gives qualitative comparisons, not measured tests or a promise that every bump chips carbide. Its scratch contact is a carbide point; on carbide it leaves no visible mark under the shown light contact. Its bump is strong enough to reveal different responses. The chalk/eraser activity is a separate bending comparison, not a ranking of toughness by measurement. Materials differ in softness as well as brittleness. Tools stay resting in pictures. Welcome dictation and a pause at any time.",
+  "parentGuidance": "Age 8, Grade 3 reading, and Grade 2 math. This story uses a sunny yard at middle latitudes. Solar noon is when the sun reaches its highest point that day; it need not be 12:00 by the clock. For the same vertical stick on level ground, that gives the shortest daytime shadow. The sun’s height varies with place and season; in Illinois it is never directly overhead. Clear sunlight gives a distinct edge; clouds can soften it. The diorama isolates sun height and light direction, with equal chalk spaces for comparison, not a clock or local forecast. The math counts equal groups and rows of garden and notebook objects. For an optional outdoor try, an adult helps place a stable blunt stick beside a path. Enjoy watching the shadow on the ground; never look at the sun.",
   "sources": [
     {
-      "label": "CERATIZIT · making cemented carbide",
-      "url": "https://ceratizit.com/int/en/cemented-carbide-to-products/production.html"
+      "label": "NOAA · solar noon and a standing stick",
+      "url": "https://www.noaa.gov/jetstream/global/learning-lesson-shadow-knows-ii"
     },
     {
-      "label": "CERATIZIT · hardness and toughness",
-      "url": "https://ceratizit.com/int/en/cemented-carbide-to-products/cemented-carbide.html"
-    },
-    {
-      "label": "BIC · the ball in a pen",
-      "url": "https://corporate.bic.com/en-us/bic-m10-anniversary-70"
-    },
-    {
-      "label": "LEKI · pole tips",
-      "url": "https://www.leki.co.uk/customer-care/helpdesk"
+      "label": "NASA · the noon sun and the seasons",
+      "url": "https://pwg.gsfc.nasa.gov/stargaze/Snavigat.htm"
     }
   ],
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template pattern-detective: Six skip-counting sequences of at least three terms with exactly one blank. Steps are 2, 5, or 10; all three steps appear. At least one skip-missing task puts the blank before the final term. Store the complete sequence, step, and blankIndex; skip-next blanks the last term.",
+    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template groups-and-arrays: Six equal-group/array tasks, both skills present. Store rows and columns, each 2–5. Equation is rows copies of columns joined by + and ending in =, never multiplication. Hint shows a repeated sum.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
@@ -447,65 +395,65 @@
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "tungsten-carbide"
+    "diorama": "shadows-at-noon"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "TUNGSTEN CARBIDE · 2026-10-05",
-    "subtitle": "Very hard. Not always tough."
+    "edition": "SHADOWS AT NOON · 2026-10-06",
+    "subtitle": "A short shadow. A high sun."
   },
   "visualNotes": {
-    "intent": "Six quiet workshop and snowy-walk scenes compare hard surfaces with tough bodies. Big leads the household test while Little predicts and records.",
-    "prompts": "assets/tungsten-carbide/prompts.json",
-    "provenance": "assets/tungsten-carbide/provenance.json"
+    "intent": "Six quiet outdoor scenes follow the same standing stick, chalk marks, and linen notebook from a long morning shadow to a short noon shadow.",
+    "prompts": "assets/shadows-at-noon/prompts.json",
+    "provenance": "assets/shadows-at-noon/provenance.json"
   },
   "quiz": {
-    "title": "Four workshop clues",
-    "intro": "Keep the clues about hard, tough and two materials working together.",
+    "title": "Four shadow clues",
+    "intro": "Think about the sun, the stick, and the two chalk marks.",
     "questions": [
       {
-        "id": "hard",
-        "prompt": "What does hard mean?",
+        "id": "noon",
+        "prompt": "In this sunny yard, what happens to the same stick’s shadow around noon?",
         "choices": [
-          "Easy to bend",
-          "Resists scratches and dents",
-          "Cannot ever break"
+          "It becomes longer as the sun rises",
+          "It is shorter when the sun is high",
+          "It always disappears"
         ],
         "answerIndex": 1,
-        "answer": "Hard means resisting scratches and dents. A very hard material can still chip or crack."
+        "answer": "Around noon, the sun is near its highest point for the day, so the same standing stick has a shorter shadow."
       },
       {
-        "id": "tough",
-        "prompt": "What does tough mean?",
+        "id": "height",
+        "prompt": "What happens to the shadow when the sun is lower?",
         "choices": [
-          "Always heavy",
-          "Always shiny",
-          "Resists cracking or breaking from bumps and bends"
+          "The shadow always stays the same",
+          "The stick must become taller",
+          "The shadow becomes longer"
         ],
         "answerIndex": 2,
-        "answer": "Tough means resisting cracks or breaks from bumps, bends or drops. Tough and hard are different properties."
+        "answer": "A lower sun makes a longer shadow from the same standing stick."
       },
       {
-        "id": "pair",
-        "prompt": "Why put a carbide tip on a steel body?",
+        "id": "direction",
+        "prompt": "Which way does a shadow point?",
         "choices": [
-          "The hard tip resists wear and the tougher steel takes bumps",
-          "Steel makes the tip soft",
-          "The tip needs to bend like an eraser"
+          "Away from the light",
+          "Toward the light",
+          "Always toward your feet"
         ],
         "answerIndex": 0,
-        "answer": "The small carbide tip resists wear. The tougher steel body supports it and takes bumps without cracking as easily."
+        "answer": "A shadow points away from the light. The bright side of the stick faces the sun."
       },
       {
-        "id": "pen",
-        "prompt": "Where does tungsten carbide hide in many ballpoint pens?",
+        "id": "measure",
+        "prompt": "How can Little compare morning and noon shadows?",
         "choices": [
-          "In the paper",
-          "In the tiny rolling ball at the tip",
-          "In the ink’s color"
+          "Move the stick to a new place each time",
+          "Mark both tips and measure from the same stick with the same unit",
+          "Guess from the color of the chalk"
         ],
         "answerIndex": 1,
-        "answer": "Many ballpoint pens use a tiny tungsten-carbide ball at the tip. The hard ball rolls ink onto paper and resists wear."
+        "answer": "Keep the stick standing in the same place. Mark each tip and measure from the stick with the same unit, then compare the lengths."
       }
     ]
   }
