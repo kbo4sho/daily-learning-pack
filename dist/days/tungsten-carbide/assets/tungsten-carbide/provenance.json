@@ -1,0 +1,127 @@
+{
+  "generator": "built-in image_gen",
+  "localArtModelsUsed": false,
+  "outlineLockedBeforeGeneration": true,
+  "generatedAt": "2026-10-05T02:07:30.744908+00:00",
+  "originalSourceDirectory": "/Users/kevinbolander/.codex/generated_images/01a109c7-84db-7272-9b69-470bd84a25ea",
+  "selectedSources": [
+    "exec-971c39f1-00c5-468f-8380-8e69efc0e2f2.png",
+    "exec-44017828-b1e4-47a3-8cc0-8c50e33a1247.png",
+    "exec-bf4cadfc-4a84-4d89-aed8-8169680f48d5.png",
+    "exec-227dd9a3-8017-4cfa-8271-d949012201cf.png",
+    "exec-84c4913b-c3e9-4a28-b173-fed8e7dc621d.png",
+    "exec-436f8bbb-3ed2-4bf7-bf9b-dfb91b5f386d.png"
+  ],
+  "derivatives": "PNG originals retained; JPG delivery quality 91; fold JPG maximum 720px quality 87. No local generative art model.",
+  "review": "Six distinct scenes visually reviewed. Big leads the soap test and eraser comparison; Little observes and records. All tools rest.",
+  "assets": [
+    {
+      "file": "01-wake-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "6f9acf6f1f83ca37540e3aa20b4105f7783d367a7153f1697421cbdf05731af0"
+    },
+    {
+      "file": "01-wake.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "166774794181408b3a1faa7c02547ecfc257f72df79f964c815053d5de8f1808"
+    },
+    {
+      "file": "01-wake.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "05e2c8146b171b437cf1d46c887d6650715f54fdca4e7d953bda8d815a734f1c"
+    },
+    {
+      "file": "02-reach-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "4773c2b3f11365bd4d2117dc34f9abf0785b11a82bb320650372cfe57b0a27aa"
+    },
+    {
+      "file": "02-reach.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b646b758f7d71c4f0943b62501902348b2acb85ac185910083ce5e46ebbe4f90"
+    },
+    {
+      "file": "02-reach.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6ff3b545d746f267bc28ebeec959fec8056efef6c80e8895ad57abe1af53cd21"
+    },
+    {
+      "file": "03-change-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "790dd314e225c4c5ef03e4c87a3f92865b80e979ff65907e030b886a694f3957"
+    },
+    {
+      "file": "03-change.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e6e698555c78259f55829aa5beab164995ffcae78bf5f9ccbc7214f08e255052"
+    },
+    {
+      "file": "03-change.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "aaca8c47bc126824fa1d5d4109e1f72a03f125121f6baa97e95a0d4d98fa4de1"
+    },
+    {
+      "file": "04-notice-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "ee602f2a9a196fa976f2f0eec4925d32479f86590c765a783b8496f22304edd6"
+    },
+    {
+      "file": "04-notice.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "623758923cdfe3b0112d86eea6050de23007e3ef139936c597af461879f8d6d0"
+    },
+    {
+      "file": "04-notice.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5fd504928ac46cbfe5f8963d8d1cd6a72d1a004b6d4296270d6554e63ad8fbf3"
+    },
+    {
+      "file": "05-return-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "be6751cffb4be224480578981c10ef891f0b42362dc0f5ff9efbe61d24b1e9d9"
+    },
+    {
+      "file": "05-return.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "93fda2412e3a3a3420a0ebdd6b81641b600eba4efe8f38a9d1a0afbb994b0d72"
+    },
+    {
+      "file": "05-return.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0d14d4c652cf5ec8cbd0345447db6e69c1018832236a8f39a5e8d85451e4b404"
+    },
+    {
+      "file": "06-keep-fold.jpg",
+      "width": 720,
+      "height": 480,
+      "sha256": "87b69bc19889f5215fc60e05b5085555c050a654e8b44406d94402e5fb5554c9"
+    },
+    {
+      "file": "06-keep.jpg",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "95c406aa4635ed89178689348755527378def45db24492937d49f7936bbd01e6"
+    },
+    {
+      "file": "06-keep.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1a1dc67788a9aaf909de5fad4b6face392ee3341edb29b06431a986123ed797b"
+    }
+  ]
+}
