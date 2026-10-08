@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "shadows-at-noon",
-  "topic": "shadows at noon",
-  "teaser": "One stick. Two chalk marks. A smaller shadow at noon.",
+  "slug": "a-kitchen-sponge",
+  "topic": "a kitchen sponge",
+  "teaser": "Tiny holes. A little water. Where does a squeeze send it?",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "groups-and-arrays",
+  "mathTemplate": "compare-and-round",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · SHADOWS AT NOON",
+  "editionLabel": "GRADE 3 · A KITCHEN SPONGE",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Shadows at Noon",
-  "question": "Why is a shadow shorter at noon?",
-  "idea": "Around noon, the sun is near its highest point for the day. A standing stick casts a shorter shadow than when the sun is lower.",
+  "title": "A Kitchen Sponge",
+  "question": "Where does the water go, and how much can one sponge hold?",
+  "idea": "A sponge has connected spaces that draw in water. A squeeze makes those spaces smaller and pushes water out.",
   "curiosity": {
-    "intro": "One stick. Two chalk marks. Why did the shadow change?",
-    "carryForward": "Follow the sunlight, compare the lengths, and keep a small clue.",
+    "intro": "A little spill disappears into a sponge. Where did the water go?",
+    "carryForward": "Follow the water into the holes, into the cup, and into a new question.",
     "questions": [
       {
-        "id": "reach",
+        "id": "holes",
+        "plate": "wake",
+        "question": "What is inside all those holes?",
+        "notice": "The magnifier makes the sponge’s open spaces easier to notice.",
+        "say": "A kitchen sponge has pores: tiny holes leading into connected spaces. Water can travel through these spaces, like little tunnels. Most kitchen sponges are made by people from cellulose, a plant fibre, or foam. Many sea sponges are simple animals; this kitchen sponge is a made object.",
+        "try": "Find two holes, then imagine a path between spaces inside."
+      },
+      {
+        "id": "soak",
         "plate": "reach",
-        "question": "How can we save a shadow’s length?",
-        "notice": "Little puts a chalk mark at the long shadow’s tip.",
-        "say": "A shadow forms where an object blocks sunlight. Mark its tip, then measure from the standing stick to the mark. Use the same measuring stick and unit to compare both lengths.",
-        "try": "With Big, measure from the stick’s base to its shadow tip. Keep your eyes on the ground; never look at the sun."
+        "question": "How does water move into the sponge?",
+        "notice": "The sponge’s wet edge grows darker as it touches water.",
+        "say": "Water clings to the sponge’s walls and creeps along narrow gaps. We call this spreading wicking. To absorb means to take water in. Some water is held inside the connected spaces, so you cannot see all of it from outside.",
+        "try": "With Big leading, use a new, clean sponge, a tray, two clear cups, and a measuring spoon. Dip, lift, and squeeze over the empty cup. Wipe up drips so the floor stays dry."
       },
       {
-        "id": "change",
+        "id": "squeeze",
         "plate": "change",
-        "question": "Why is the noon shadow so short?",
-        "notice": "The same standing stick now has a short, crisp shadow.",
-        "say": "Around noon, the sun is near its highest point in the sky for the day. Light reaches the ground from higher above, so the stick’s shadow stays closer to its base. A lower morning or afternoon sun makes a longer shadow.",
-        "try": "Compare the short shadow with the earlier chalk mark."
+        "question": "Why does a squeeze bring the water back?",
+        "notice": "Drops fall from the squeezed sponge into the cup.",
+        "say": "Squeezing presses the sponge’s walls closer together. There is less room inside, so water is pushed out. Let go, and the springy material opens back up. It can soak up water again.",
+        "try": "Compare the sponge’s shape during a squeeze and after you let go."
       },
       {
-        "id": "notice",
+        "id": "compare",
         "plate": "notice",
-        "question": "Which way does a shadow point?",
-        "notice": "One side of the stick is bright. The shadow is on the other side.",
-        "say": "The bright side faces the sun. The stick blocks some sunlight, leaving a shadow that points away from the light. Follow the shadow along the ground.",
-        "try": "Point from the bright side, past the stick, toward the shadow."
-      },
-      {
-        "id": "keep",
-        "plate": "keep",
-        "question": "What clue can a short shadow give us?",
-        "notice": "Little keeps a long line and a short line in the notebook.",
-        "say": "A short noon shadow is a clue that the sun is high. Compare the same standing stick in the same place, using the same unit. Chalk marks and notes help us remember what changed. Measuring can lead to another question.",
-        "try": "Ask one new question about tomorrow’s shadow."
+        "question": "Would a damp sponge soak up a spill faster?",
+        "notice": "Two same-size pieces meet equal little spills for the same time.",
+        "say": "A damp sponge often starts soaking faster than a bone-dry one. Damp means a little wet, not full of water. Compare fairly: use the same kind and size of sponge, equal amounts of water, and the same time. Look at how much of each spill is left.",
+        "try": "Predict which spill will shrink faster, then compare what is left."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/shadows-at-noon/01-wake.jpg",
-      "original": "assets/shadows-at-noon/01-wake.png",
-      "foldSrc": "assets/shadows-at-noon/01-wake-fold.jpg",
-      "title": "A morning question",
-      "alt": "Big and Little Wonderer study a standing wooden stick and its long morning shadow on a pale garden path.",
-      "caption": "A lower sun makes a longer shadow."
+      "src": "assets/a-kitchen-sponge/01-wake.jpg",
+      "original": "assets/a-kitchen-sponge/01-wake.png",
+      "foldSrc": "assets/a-kitchen-sponge/01-wake-fold.jpg",
+      "title": "A question full of holes",
+      "alt": "Big and Little Wonderer look through a brass magnifier at the holes in a golden kitchen sponge on a tray.",
+      "caption": "Tiny holes lead into connected spaces."
     },
     {
       "id": "reach",
-      "src": "assets/shadows-at-noon/02-reach.jpg",
-      "original": "assets/shadows-at-noon/02-reach.png",
-      "foldSrc": "assets/shadows-at-noon/02-reach-fold.jpg",
-      "title": "Save the tip",
-      "alt": "Little marks the tip of the long stick shadow with chalk while Big watches beside a linen notebook.",
-      "caption": "Mark the tip, then measure from the stick to the mark."
+      "src": "assets/a-kitchen-sponge/02-reach.jpg",
+      "original": "assets/a-kitchen-sponge/02-reach.png",
+      "foldSrc": "assets/a-kitchen-sponge/02-reach-fold.jpg",
+      "title": "Water finds a way",
+      "alt": "Big lowers a kitchen sponge into a shallow water dish on the tray while Little watches the darker wet edge.",
+      "caption": "Water clings to the walls and creeps into narrow gaps."
     },
     {
       "id": "change",
-      "src": "assets/shadows-at-noon/03-change.jpg",
-      "original": "assets/shadows-at-noon/03-change.png",
-      "foldSrc": "assets/shadows-at-noon/03-change-fold.jpg",
-      "title": "A smaller patch",
-      "alt": "Big and Little return to the same stick at noon and find a short, crisp shadow near its base.",
-      "caption": "Around noon, the sun is near its highest point for the day."
+      "src": "assets/a-kitchen-sponge/03-change.jpg",
+      "original": "assets/a-kitchen-sponge/03-change.png",
+      "foldSrc": "assets/a-kitchen-sponge/03-change-fold.jpg",
+      "title": "A squeeze into the cup",
+      "alt": "Big gently squeezes a sponge over a clear cup on the tray while Little watches water fall into the cup.",
+      "caption": "A squeeze makes the spaces smaller and pushes water out."
     },
     {
       "id": "notice",
-      "src": "assets/shadows-at-noon/04-notice.jpg",
-      "original": "assets/shadows-at-noon/04-notice.png",
-      "foldSrc": "assets/shadows-at-noon/04-notice-fold.jpg",
-      "title": "Follow the light",
-      "alt": "A close view shows sunlight reaching one side of the stick and the short shadow stretching away on the other side.",
-      "caption": "The bright side faces the sun. The shadow points away from the light."
+      "src": "assets/a-kitchen-sponge/04-notice.jpg",
+      "original": "assets/a-kitchen-sponge/04-notice.png",
+      "foldSrc": "assets/a-kitchen-sponge/04-notice-fold.jpg",
+      "title": "Two little spills",
+      "alt": "Big and Little compare two same-size sponge pieces with equal small spills in two dishes on a tray, with a notebook nearby.",
+      "caption": "Same-size pieces, the same water, and the same time make a fair test."
     },
     {
       "id": "return",
-      "src": "assets/shadows-at-noon/05-return.jpg",
-      "original": "assets/shadows-at-noon/05-return.png",
-      "foldSrc": "assets/shadows-at-noon/05-return-fold.jpg",
-      "title": "Compare the marks",
-      "alt": "Little uses a wooden measuring stick beside the noon shadow while Big holds the linen notebook; the earlier chalk mark remains farther away.",
-      "caption": "Use the same unit to compare the morning and noon lengths."
+      "src": "assets/a-kitchen-sponge/05-return.jpg",
+      "original": "assets/a-kitchen-sponge/05-return.png",
+      "foldSrc": "assets/a-kitchen-sponge/05-return-fold.jpg",
+      "title": "Open again",
+      "alt": "A released sponge rests open on the tray beside a clear cup of water, with Big and Little looking closely.",
+      "caption": "Let go, and the springy sponge opens back up."
     },
     {
       "id": "keep",
-      "src": "assets/shadows-at-noon/06-keep.jpg",
-      "original": "assets/shadows-at-noon/06-keep.png",
-      "foldSrc": "assets/shadows-at-noon/06-keep-fold.jpg",
-      "title": "A clue to keep",
-      "alt": "Big and Little sit beside the garden path with a notebook showing long and short lines; the standing stick casts a short noon shadow nearby.",
-      "caption": "A short noon shadow is a clue that the sun is high."
+      "src": "assets/a-kitchen-sponge/06-keep.jpg",
+      "original": "assets/a-kitchen-sponge/06-keep.png",
+      "foldSrc": "assets/a-kitchen-sponge/06-keep-fold.jpg",
+      "title": "A question to keep",
+      "alt": "Little draws a sponge and a cup in the shared notebook beside Big, with the water tray and magnifier nearby.",
+      "caption": "Measure, compare, and keep another question."
     }
   ],
   "reading": {
-    "title": "The shadow that changed",
+    "title": "Where did the water go?",
     "coverPlate": "wake",
-    "coverText": "One standing stick. Two chalk marks. What changed while Little was away?",
-    "foldableTitle": "The shadow that changed",
-    "foldableCoverLine": "A short shadow. A high sun.",
-    "foldableNote": "Measure, notice, and pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
+    "coverText": "A sponge takes in a little spill. A squeeze brings the water back. Follow its path.",
+    "foldableTitle": "Where did the water go?",
+    "foldableCoverLine": "Tiny holes. A big squeeze.",
+    "foldableNote": "Dip, squeeze, notice, and pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sponge, pores, soak, squeeze, spring back, and absorb to the tray experiment.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little saves a long morning shadow, returns to find a short noon shadow, follows the direction of the light, compares two lengths, and keeps a clue in a notebook.",
+      "arc": "Little follows water through a sponge’s connected spaces, sees a squeeze bring it back, compares dry and damp pieces fairly, watches the sponge reopen, and keeps a question about how much it can hold.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "Establish the same vertical wooden stick in a pale garden path, a long morning shadow, Big and Little, chalk, and linen notebook; begin with a question."
+          "intent": "Establish the warm kitchen table, a fresh golden cellulose sponge, brass magnifier, tray, two clear cups, Big and Little, and a linen notebook; focus on visible pores and the opening question."
         },
         {
           "plate": "reach",
-          "intent": "Little saves the long shadow tip with one chalk mark; use a closer ground-level composition with the same unmoved stick."
+          "intent": "Big lowers the same sponge into a shallow dish on the tray; Little notices the wet edge creeping upward. Keep the sponge in contact with the water, with no floating drops."
         },
         {
           "plate": "change",
-          "intent": "Return at noon to the same stick; show a short crisp shadow and the earlier chalk mark farther away."
+          "intent": "Big compresses the same sponge above an empty clear cup inside the tray. Water travels down into the cup; Little watches the connection between smaller spaces and released water."
         },
         {
           "plate": "notice",
-          "intent": "Focus on the mechanism: light on one side of the vertical stick, short shadow on the opposite side; Big and Little attend to the ground."
+          "intent": "Compare two same-size pieces of the same sponge with equal small puddles and equal time, one initially dry and one damp. A split tray and small timer support the comparison; no numerical results are painted."
         },
         {
           "plate": "return",
-          "intent": "Compare morning and noon chalk marks with the same wooden measuring stick; notebook records the evidence."
+          "intent": "After the squeeze, show the released sponge fully open on the tray next to the partly filled cup. The pair notice its restored shape; depict one actual sponge, no motion duplicates."
         },
         {
           "plate": "keep",
-          "intent": "Close with two simple notebook lines and the short shadow beside the pair; invite a new question."
+          "intent": "Return to the notebook with a wordless drawing of a sponge and a clear cup; Big sits beside Little. Keep the opening water question alive with the same tray and magnifier."
         }
       ]
     },
@@ -154,240 +154,257 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A morning question",
-        "passage": "Little Wonderer found a long shape beside a standing stick. It was a shadow: a place where the stick blocked sunlight, the light from the sun. “Will it stay this long?” Little asked. Big set a linen notebook beside the garden path. They had a question to keep.",
-        "prompt": "What made the shadow?"
+        "title": "A question full of holes",
+        "passage": "Little Wonderer peered through a magnifier at a kitchen sponge. A sponge is a soft material that can take in water. “It is full of holes!” Little said. “Those holes are pores,” said Big. Inside, many spaces connect like little tunnels. Little wondered where a spill would go.",
+        "prompt": "How could connected holes help water move?"
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Save the tip",
-        "passage": "Little took a piece of chalk, a soft stick for making marks. “First mark the tip,” said Big. Little drew a small line where the shadow ended. To measure is to find how long something is. They used a measuring stick from the wooden stick’s base to the chalk.",
-        "prompt": "Why did Little mark the tip?"
+        "title": "Water finds a way",
+        "passage": "Big dipped the sponge into a shallow dish. Its lower edge grew darker. Water clung to the sponge’s walls and crept into narrow gaps. This slow spreading is called wicking. To soak up, or absorb, means to take water in. The water was entering the spaces inside.",
+        "prompt": "What does the darker wet edge help Little notice?"
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A smaller patch",
-        "passage": "At noon, the middle of the day, they came back. The wooden stick had stayed in place, but its shadow had changed. “It is short and crisp!” said Little. Around noon, the sun is near its highest point for the day. The morning shadow had reached much farther.",
-        "prompt": "What changed between morning and noon?"
+        "title": "A squeeze into the cup",
+        "passage": "Big lifted the sponge over an empty cup. “Where is the water now?” asked Little. Big gave a gentle squeeze: a press from both sides. The spaces became smaller, pushing water out. Drops fell into the cup. The water had not vanished. Little could see it again.",
+        "prompt": "What evidence shows that the water did not vanish?"
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Follow the light",
-        "passage": "“Which way does it point?” asked Big. Little studied the ground. Sunlight reached one side of the stick. The shadow stretched away on the other side. The bright side faced the sun; the shadow pointed away from the light. Little traced its edge along the ground with one finger.",
-        "prompt": "Which way does a shadow point?"
+        "title": "Two little spills",
+        "passage": "Next they compared two same-size pieces. One was bone-dry; the other was damp, with a little water already inside. Each met the same small spill for the same time. The damp piece soaked up its spill faster. That often happens, but different sponges can behave differently. A fair test helps us find out.",
+        "prompt": "Why keep the piece size, water, and time the same?"
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Compare the marks",
-        "passage": "Little marked the new tip with chalk. They used the same measuring stick to check both lengths. They began at the same standing stick and used the same unit each time. The noon length was shorter. “The stick stayed the same,” Little said. “The sun’s height changed.”",
-        "prompt": "Why use the same unit each time?"
+        "title": "Open again",
+        "passage": "Big let go after another squeeze. The sponge began to spring back, returning to its open shape. Its spaces opened too, ready to take in water again. “Smaller, then open,” Little said. The sponge changed shape, but the water stayed water. Little sketched the cup beside it.",
+        "prompt": "How does springing back help the sponge soak again?"
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A clue to keep",
-        "passage": "In the notebook, Little drew a long line for morning and a short line for noon. Later, when the sun was lower, the shadow would grow longer again. A short noon shadow was a clue to a high sun. “What will we notice tomorrow?” Little asked.",
-        "prompt": "What could Little compare tomorrow?"
+        "title": "A question to keep",
+        "passage": "“Is our sponge an animal?” Little asked. “Sea sponges are simple animals,” said Big. “People make most kitchen sponges from cellulose, a plant fibre, or foam.” Little drew holes in the notebook. “How much could ours hold?”",
+        "prompt": "How is this kitchen sponge different from a sea sponge?"
       }
     ],
     "words": [
       {
-        "word": "noon",
-        "meaning": "the middle of the day, when the sun is near its highest point"
+        "word": "sponge",
+        "meaning": "a soft material full of spaces that can take in water"
       },
       {
-        "word": "shadow",
-        "meaning": "a place where an object blocks light"
+        "word": "pores",
+        "meaning": "tiny holes leading into spaces in the sponge"
       },
       {
-        "word": "measure",
-        "meaning": "find a length using a unit, such as a small step or a centimeter"
+        "word": "soak",
+        "meaning": "take water into a material"
       },
       {
-        "word": "chalk",
-        "meaning": "a soft stick that leaves a mark on a path or board"
+        "word": "squeeze",
+        "meaning": "press from the sides to make something smaller"
       },
       {
-        "word": "stick",
-        "meaning": "a thin piece of wood"
+        "word": "spring back",
+        "meaning": "return to an open shape after being pressed"
       },
       {
-        "word": "sunlight",
-        "meaning": "light that comes from the sun"
+        "word": "absorb",
+        "meaning": "take in water or another liquid"
       }
     ],
     "questions": [
-      "Why was the same stick’s shadow shorter at noon?",
-      "Which side of the stick has the shadow, compared with the light?",
-      "How could you compare a morning shadow with a noon shadow?"
+      "Where did the water go before Big squeezed the sponge?",
+      "How does a squeeze change the spaces, and what happens when Big lets go?",
+      "How could you fairly compare a dry sponge and a damp one?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence about measuring a shadow.",
-      "example": "Example: Measure from the stick’s base to the shadow tip with the same unit."
+      "prompt": "Write one command sentence about the sponge test.",
+      "example": "Example: Dip the sponge in the water, then squeeze it over the empty cup."
     }
   },
   "math": {
-    "title": "Count equal groups in the sunshine",
-    "plate": "return",
-    "intro": "Each group has the same number. Add the equal groups or rows to find the total.",
+    "title": "Compare a little water",
+    "plate": "change",
+    "intro": "For a comparison, put >, <, or = in the circle. For rounding, write the nearest ten.",
     "tasks": [
       {
-        "skill": "array",
-        "rows": 2,
-        "columns": 3,
-        "prompt": "Little draws 2 rows of chalk marks on the path, with 3 marks in each row. How many chalk marks are there?",
-        "equation": "3 + 3 =",
-        "hint": "Add one row at a time: 3 + 3.",
-        "answer": 6,
-        "worked": "3 + 3 = 6. Two rows of 3 make 6 chalk marks.",
-        "plate": "return",
+        "skill": "compare",
+        "operands": [
+          32,
+          47
+        ],
+        "symbol": "<",
+        "prompt": "Little squeezes 32 millilitres of water into one cup and 47 into another. Which symbol compares the amounts?",
+        "equation": "32 ○ 47",
+        "hint": "Compare the tens first. Three tens is less than four tens.",
+        "answer": 47,
+        "worked": "32 < 47. The greater amount is 47 millilitres.",
+        "plate": "change",
         "label": "TASK 1"
       },
       {
-        "skill": "equal-groups",
-        "rows": 3,
-        "columns": 4,
-        "prompt": "Big sets out 3 groups of measuring pebbles, with 4 pebbles in each group. How many pebbles are there altogether?",
-        "equation": "4 + 4 + 4 =",
-        "hint": "Add the 3 equal groups: 4 + 4 + 4.",
-        "answer": 12,
-        "worked": "4 + 4 + 4 = 12. Three groups of 4 make 12 measuring pebbles.",
-        "plate": "return",
+        "skill": "round-ten",
+        "operands": [
+          63
+        ],
+        "prompt": "Big measures 63 millilitres of water squeezed from a sponge. What is that amount rounded to the nearest ten?",
+        "equation": "63 → nearest ten: ___",
+        "hint": "Find the nearby tens, 60 and 70. The ones digit is less than 5.",
+        "answer": 60,
+        "worked": "63 rounds to 60. It is 3 away from 60 and 7 away from 70.",
+        "plate": "notice",
         "label": "TASK 2"
       },
       {
-        "skill": "array",
-        "rows": 4,
-        "columns": 2,
-        "prompt": "Little lays sticks in 4 rows in the sunny yard, with 2 sticks in each row. How many sticks are there?",
-        "equation": "2 + 2 + 2 + 2 =",
-        "hint": "Add the sticks in each row: 2 + 2 + 2 + 2.",
-        "answer": 8,
-        "worked": "2 + 2 + 2 + 2 = 8. Four rows of 2 make 8 sticks.",
-        "plate": "return",
+        "skill": "compare",
+        "operands": [
+          58,
+          51
+        ],
+        "symbol": ">",
+        "prompt": "A sponge soaks up 58 millilitres and a cloth soaks up 51 millilitres in a test. Which symbol compares the amounts?",
+        "equation": "58 ○ 51",
+        "hint": "The tens match. Compare 8 ones with 1 one.",
+        "answer": 58,
+        "worked": "58 > 51. The greater amount is 58 millilitres.",
+        "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "array",
-        "rows": 2,
-        "columns": 5,
-        "prompt": "A shadow notebook has 2 rows of boxes, with 5 boxes in each row. How many boxes are there?",
-        "equation": "5 + 5 =",
-        "hint": "Add the 2 rows: 5 + 5.",
-        "answer": 10,
-        "worked": "5 + 5 = 10. Two rows of 5 make 10 notebook boxes.",
-        "plate": "return",
+        "skill": "round-ten",
+        "operands": [
+          25
+        ],
+        "prompt": "Little counts 25 visible holes in a close-up sponge sketch. What is that count rounded to the nearest ten?",
+        "equation": "25 → nearest ten: ___",
+        "hint": "25 is halfway between 20 and 30. When the ones digit is 5, round up.",
+        "answer": 30,
+        "worked": "25 rounds to 30. Halfway counts round up to the next ten.",
+        "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "equal-groups",
-        "rows": 5,
-        "columns": 3,
-        "prompt": "Little draws 5 groups of shadow-tip dots in the notebook, with 3 dots in each group. How many dots are there?",
-        "equation": "3 + 3 + 3 + 3 + 3 =",
-        "hint": "Add the 5 equal groups: 3 + 3 + 3 + 3 + 3.",
-        "answer": 15,
-        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five groups of 3 make 15 shadow-tip dots.",
-        "plate": "return",
+        "skill": "compare",
+        "operands": [
+          76,
+          89
+        ],
+        "symbol": "<",
+        "prompt": "Little counts 76 drops in one cup and 89 in another after a squeeze. Which symbol compares the counts?",
+        "equation": "76 ○ 89",
+        "hint": "Compare 7 tens with 8 tens before looking at the ones.",
+        "answer": 89,
+        "worked": "76 < 89. The greater count is 89 drops.",
+        "plate": "change",
         "label": "TASK 5"
       },
       {
-        "skill": "array",
-        "rows": 5,
-        "columns": 5,
-        "prompt": "Big draws 5 rows of chalk circles beside the shadow, with 5 circles in each row. How many circles are there?",
-        "equation": "5 + 5 + 5 + 5 + 5 =",
-        "hint": "Add one row at a time: 5 + 5 + 5 + 5 + 5.",
-        "answer": 25,
-        "worked": "5 + 5 + 5 + 5 + 5 = 25. Five rows of 5 make 25 chalk circles.",
-        "plate": "return",
+        "skill": "round-ten",
+        "operands": [
+          97
+        ],
+        "prompt": "The measuring cup holds 97 millilitres from several sponge squeezes. What is that amount rounded to the nearest ten?",
+        "equation": "97 → nearest ten: ___",
+        "hint": "The nearby tens are 90 and 100. A ones digit of 7 rounds up.",
+        "answer": 100,
+        "worked": "97 rounds to 100. It is 3 away from 100 and 7 away from 90.",
+        "plate": "notice",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
-    "parentNote": "Age 8 / Grade 2 math. Six equal-group and array tasks use repeated addition. Rows and columns are each 2–5. Welcome drawings, spoken reasoning, or arranging small objects. Use the quantities in each question, rather than counting painted details.",
-    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
-    "actionLabel": "Add each equal group or row",
-    "printNote": "Show your thinking with numbers, marks, or words."
+    "extension": "Choose one answer and explain how the tens and ones helped you.",
+    "parentNote": "Age 8 / Grade 2 math. Three two-digit comparisons and three nearest-ten rounding tasks. Rounding is a requested extension. A ones digit of 5 rounds up. The comparison answer key gives the greater number and the completed comparison. These story quantities are practice data, not measurements of the paintings or sponge capacity.",
+    "eyebrow": "SIX WATER QUESTIONS",
+    "actionLabel": "Compare or round to the nearest ten",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Compare tens and ones. For rounding, locate the two nearby tens; a halfway value rounds up. Welcome spoken reasoning or a number line."
   },
   "writing": {
-    "title": "Give a measurement its words",
-    "intro": "Write one clear command sentence about measuring a shadow. Say it first if you like.",
+    "title": "Give a sponge test its words",
+    "intro": "Write one clear command for the sponge test. Say your sentence first if you like.",
     "plateIds": [
       "reach",
-      "return",
-      "keep"
+      "change",
+      "return"
     ],
-    "draw": "Draw the stick, its shadow, and a chalk mark. Add one label.",
-    "starter": "My shadow-measuring command",
+    "draw": "Draw the sponge, its holes, and the cup. Add an arrow for the water.",
+    "starter": "My sponge-test command",
     "frames": [
       {
         "plate": "reach",
         "start": "First,",
-        "hint": "tell how to stand the stick or mark the tip"
+        "hint": "tell how to dip the sponge in the dish"
+      },
+      {
+        "plate": "change",
+        "start": "Then,",
+        "hint": "tell how to squeeze it over the cup"
       },
       {
         "plate": "return",
-        "start": "Then,",
-        "hint": "tell how to measure from the stick to the mark"
-      },
-      {
-        "plate": "keep",
         "start": "At the end,",
-        "hint": "tell how to save or compare the length"
+        "hint": "tell how to let go and watch the shape"
       }
     ],
     "words": [
-      "stand",
-      "stick",
-      "mark",
-      "tip",
-      "shadow",
-      "measure",
-      "first",
-      "then"
+      "dip",
+      "lift",
+      "squeeze",
+      "cup",
+      "holes",
+      "water",
+      "release",
+      "notice"
     ],
-    "check": "Does your sentence tell what to do, with a command such as Stand, Mark, Measure, or Compare?",
-    "parentNote": "Accept a spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “Measure from the stick’s base to the shadow tip with the same unit.”"
+    "check": "Does your sentence tell what to do, with a command such as Dip, Lift, Squeeze, or Release?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One clear command is enough. Example: “Dip the sponge in the water, then squeeze it over the empty cup.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The sun was higher around noon, so the same standing stick cast a shorter shadow."
+      "text": "Water entered the connected spaces inside the sponge, clinging to the walls and spreading through narrow gaps."
     },
     {
       "label": "Reading · 2",
-      "text": "The shadow points away from the light. The bright side of the stick faces the sun."
+      "text": "A squeeze makes the spaces smaller and pushes water out. When Big lets go, the sponge springs back and its spaces open again."
     },
     {
       "label": "Reading · 3",
-      "text": "Leave the stick standing in the same place. Mark each shadow tip, measure from the stick with the same unit, and compare the lengths."
+      "text": "Use same-size pieces of the same kind of sponge, equal amounts of water, and the same time. Compare how much water is left in each spill."
     },
     {
       "label": "Writing",
-      "text": "Accept one sensible command, spoken, dictated, or written. Example: “Measure from the stick’s base to the shadow tip with the same unit.”"
+      "text": "Accept a sensible command, spoken, dictated, or written. Example: “Dip the sponge in the water, then squeeze it over the empty cup.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, and Grade 2 math. This story uses a sunny yard at middle latitudes. Solar noon is when the sun reaches its highest point that day; it need not be 12:00 by the clock. For the same vertical stick on level ground, that gives the shortest daytime shadow. The sun’s height varies with place and season; in Illinois it is never directly overhead. Clear sunlight gives a distinct edge; clouds can soften it. The diorama isolates sun height and light direction, with equal chalk spaces for comparison, not a clock or local forecast. The math counts equal groups and rows of garden and notebook objects. For an optional outdoor try, an adult helps place a stable blunt stick beside a path. Enjoy watching the shadow on the ground; never look at the sun.",
+  "parentGuidance": "Age 8, Grade 3 reading, and Grade 2 math. Lead the optional water test with a new, clean sponge, not the used dish sponge. Use a tray, two clear cups, a measuring cup or spoon, and water. Dip, lift, squeeze over a cup, and compare amounts. Wipe up drips so floors stay dry. Water enters connected pores through wetting and capillary action; cellulose fibres also take up water. Damp cellulose often wets faster than bone-dry cellulose, but materials vary. Compare same-size pieces of the same material, equal water, and equal time. For uptake speed, compare water left in the dishes. Water squeezed from a damp sponge includes water already present, so cup volume alone is not a fair measure of newly absorbed water. The diorama shows qualitative levels during one short dip, not millilitres, capacity, or guaranteed results. It keeps a small amount of water in the sponge after squeezing. Most kitchen sponges are manufactured from cellulose or foam; sea sponges are animals.",
   "sources": [
     {
-      "label": "NOAA · solar noon and a standing stick",
-      "url": "https://www.noaa.gov/jetstream/global/learning-lesson-shadow-knows-ii"
+      "label": "USGS · water clings and moves into small spaces",
+      "url": "https://www.usgs.gov/media/videos/capillary-action-and-water"
     },
     {
-      "label": "NASA · the noon sun and the seasons",
-      "url": "https://pwg.gsfc.nasa.gov/stargaze/Snavigat.htm"
+      "label": "3M · cellulose sponge holes hold water",
+      "url": "https://www.scotch-brite.com/3M/en_US/scotch-brite/uses-tips/float-test/"
+    },
+    {
+      "label": "NOAA · sea sponges are animals",
+      "url": "https://oceanexplorer.noaa.gov/ocean-fact/sponge-diversity/"
     }
   ],
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template groups-and-arrays: Six equal-group/array tasks, both skills present. Store rows and columns, each 2–5. Equation is rows copies of columns joined by + and ending in =, never multiplication. Hint shows a repeated sum.",
+    "learningRule": "Little is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template compare-and-round: Six tasks including both two-digit comparisons and nearest-ten rounding (a requested extension). Compare uses two operands, symbol >|<|=, and equation a ○ b: put the symbol in the circle and give the greater number as the numeric answer (the shared number if equal); the worked step shows the completed comparison (e.g. 47 < 74). Round-ten uses one two-digit operand and equation n → nearest ten: ___; 5 rounds up, at most 100.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
@@ -395,65 +412,65 @@
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "shadows-at-noon"
+    "diorama": "a-kitchen-sponge"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "SHADOWS AT NOON · 2026-10-06",
-    "subtitle": "A short shadow. A high sun."
+    "edition": "A KITCHEN SPONGE · 2026-10-08",
+    "subtitle": "Tiny holes. A big squeeze."
   },
   "visualNotes": {
-    "intent": "Six quiet outdoor scenes follow the same standing stick, chalk marks, and linen notebook from a long morning shadow to a short noon shadow.",
-    "prompts": "assets/shadows-at-noon/prompts.json",
-    "provenance": "assets/shadows-at-noon/provenance.json"
+    "intent": "Six new warm kitchen-table scenes follow one sponge, connected spaces, water, a squeeze, a fair comparison, and a notebook question.",
+    "prompts": "assets/a-kitchen-sponge/prompts.json",
+    "provenance": "assets/a-kitchen-sponge/provenance.json"
   },
   "quiz": {
-    "title": "Four shadow clues",
-    "intro": "Think about the sun, the stick, and the two chalk marks.",
+    "title": "Four water clues",
+    "intro": "Follow the water through the sponge and into the cup.",
     "questions": [
       {
-        "id": "noon",
-        "prompt": "In this sunny yard, what happens to the same stick’s shadow around noon?",
+        "id": "pores",
+        "prompt": "Where does water go when a kitchen sponge absorbs it?",
         "choices": [
-          "It becomes longer as the sun rises",
-          "It is shorter when the sun is high",
-          "It always disappears"
+          "It vanishes",
+          "Into the connected spaces inside",
+          "Only onto the outside"
         ],
         "answerIndex": 1,
-        "answer": "Around noon, the sun is near its highest point for the day, so the same standing stick has a shorter shadow."
+        "answer": "Water enters connected spaces inside the sponge. It clings to the walls and creeps into narrow gaps."
       },
       {
-        "id": "height",
-        "prompt": "What happens to the shadow when the sun is lower?",
+        "id": "squeeze",
+        "prompt": "Why does squeezing send water into the cup?",
         "choices": [
-          "The shadow always stays the same",
-          "The stick must become taller",
-          "The shadow becomes longer"
+          "The water turns into air",
+          "The holes grow bigger",
+          "The spaces get smaller and push water out"
         ],
         "answerIndex": 2,
-        "answer": "A lower sun makes a longer shadow from the same standing stick."
+        "answer": "Squeezing makes the spaces smaller and pushes water out. Releasing the sponge lets it spring back open."
       },
       {
-        "id": "direction",
-        "prompt": "Which way does a shadow point?",
+        "id": "fair",
+        "prompt": "How can Little compare soaking speed fairly?",
         "choices": [
-          "Away from the light",
-          "Toward the light",
-          "Always toward your feet"
+          "Use same-size pieces, equal water, and the same time",
+          "Give one piece more water and more time",
+          "Use two different sizes and guess"
         ],
         "answerIndex": 0,
-        "answer": "A shadow points away from the light. The bright side of the stick faces the sun."
+        "answer": "Use same-size pieces of the same kind of sponge, equal amounts of water, and the same time. Compare the water left in the spills."
       },
       {
-        "id": "measure",
-        "prompt": "How can Little compare morning and noon shadows?",
+        "id": "made",
+        "prompt": "Which statement describes most kitchen sponges?",
         "choices": [
-          "Move the stick to a new place each time",
-          "Mark both tips and measure from the same stick with the same unit",
-          "Guess from the color of the chalk"
+          "They are animals that live beside the sink",
+          "People make them from cellulose or foam",
+          "They have no spaces inside"
         ],
         "answerIndex": 1,
-        "answer": "Keep the stick standing in the same place. Mark each tip and measure from the stick with the same unit, then compare the lengths."
+        "answer": "Most kitchen sponges are made by people from cellulose or foam. Many sea sponges are simple animals."
       }
     ]
   }
