@@ -1,0 +1,131 @@
+{
+  "topic": "electrons",
+  "date": "2026-10-09",
+  "outlineLockedBeforeGeneration": true,
+  "originals": [
+    {
+      "id": "wake",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-f1e31302-79d4-4d96-99c4-573c2bfa3e8d.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/01-wake.png",
+          "sha256": "adb58e92eb947d0d130c7bdf8f27687daa79e9c75f49d5fa30bc0f94769da5cc"
+        },
+        "src": {
+          "path": "assets/electrons/01-wake.jpg",
+          "sha256": "f0dcbde55374b1f7d9dac7dc63ae6f2b4a87e39d6864705e0c7a67b4ca69a68f"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/01-wake-fold.jpg",
+          "sha256": "e81a5bc524331f22c088116c8c802ebe5c0f71dd59e30769ad66597d30120a01"
+        }
+      }
+    },
+    {
+      "id": "reach",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-20deb23c-ea95-4ae6-b1b8-2de3f47f1398.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/02-reach.png",
+          "sha256": "fceee4c86f49352a2831135ea6162efa331638a96e4c3dddd0caa759c4646130"
+        },
+        "src": {
+          "path": "assets/electrons/02-reach.jpg",
+          "sha256": "74350c3a812bc3c7d69aa10a92e997c579fc8c4e26795a1e8422a8c519c7d4b6"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/02-reach-fold.jpg",
+          "sha256": "c420b231a0447c07d6424d4d189fc04d7a3b3dc7f31f848c38ee47d9a56bd795"
+        }
+      }
+    },
+    {
+      "id": "change",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-6e195fd8-0777-43cb-a835-89e26ebb7194.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/03-change.png",
+          "sha256": "8061f531e6bf2fdc9443d829177c03b752cdead5f94cf48e9f3619837b43ce4c"
+        },
+        "src": {
+          "path": "assets/electrons/03-change.jpg",
+          "sha256": "0e503d68ae25b95b5f875ee54aa4c73aa28a6aeae7e102205889755a31594779"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/03-change-fold.jpg",
+          "sha256": "3216105db5afdb45834269b7baf0b87590e114ee2a877ea28a51ad4694a0a272"
+        }
+      }
+    },
+    {
+      "id": "notice",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-7d2c7d2a-d223-4e6f-b8bc-09fcbd61b153.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/04-notice.png",
+          "sha256": "308f7123046b103d090d87264a8b257b762671d4f0d75d5adc254b4e24e73726"
+        },
+        "src": {
+          "path": "assets/electrons/04-notice.jpg",
+          "sha256": "6f39d09219c59639babfef054cf53554a7bb4e0613cd8646d35f64ba015273e3"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/04-notice-fold.jpg",
+          "sha256": "58f0d232480949ce55bed6a736b624e9ab2c88bcdf3a3dbd2f81eea9553d0d15"
+        }
+      }
+    },
+    {
+      "id": "return",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-9521ea67-be67-419a-9e4c-2e88fb2917dd.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/05-return.png",
+          "sha256": "a0ed58f5c966354552aa924f79d81c8112a5f8758e2a099e9d61af9916ee68b3"
+        },
+        "src": {
+          "path": "assets/electrons/05-return.jpg",
+          "sha256": "802554453680b5404a5aca6f1d82c09532053e5fe6486b849b026fa074137772"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/05-return-fold.jpg",
+          "sha256": "9405bc6be2811f1b8ab5f6d33b88e1a97e20c5b17ddbee04cc2ef55a92290e0e"
+        }
+      }
+    },
+    {
+      "id": "keep",
+      "generator": "built-in image_gen",
+      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-4b043ee7-b979-460e-872a-261d530b8d33.png",
+      "newOriginal": true,
+      "files": {
+        "original": {
+          "path": "assets/electrons/06-keep.png",
+          "sha256": "5b29428604b97ee9a258b4a789187bab1b1dc16b6c00286d7fe90b5fc61b3715"
+        },
+        "src": {
+          "path": "assets/electrons/06-keep.jpg",
+          "sha256": "1072cfb6ae1b16b0f0d9e00ec39d2310a0e4db8185149f9558fe4bd02cbcaba4"
+        },
+        "foldSrc": {
+          "path": "assets/electrons/06-keep-fold.jpg",
+          "sha256": "fad7d4291f4858cb5ec0220f59b434d2607f1b9c9285e62bacf29c3ba53be036"
+        }
+      }
+    }
+  ],
+  "delivery": "sips JPEG quality 91; fold JPEG max720 quality87",
+  "titleCard": "01-wake",
+  "apparatus": "New code-drawn SVG and HTML, independent of raster art",
+  "localArtModels": false
+}
