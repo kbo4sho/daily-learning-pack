@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "electrons",
+  "topic": "electrons",
+  "teaser": "A clinging sock. A tiny charge. Where did the electrons go?",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · ELECTRONS",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "Electrons",
+  "question": "Where do the tiny bits go when a sock sticks to a shirt?",
+  "idea": "Electrons carry negative electric charge. Moving some electrons from one material to another can make the materials pull together.",
+  "curiosity": {
+    "intro": "A sock clings to a shirt. Something too small to see has changed.",
+    "carryForward": "Follow the electrons from an atom model to a clinging sock.",
+    "questions": [
+      {
+        "id": "atom",
+        "plate": "wake",
+        "question": "What is an electron?",
+        "notice": "Find the small electron beads around the model’s center.",
+        "say": "An electron is a tiny bit of matter carrying negative electric charge. It has far less mass than a proton or neutron. An atom has a central nucleus with protons and usually neutrons, and electrons moving around it. Their motion is not a set of perfect circles.",
+        "try": "Point to the nucleus, then the electrons around it."
+      },
+      {
+        "id": "transfer",
+        "plate": "reach",
+        "question": "What changes when we rub a balloon?",
+        "notice": "A few light paper bits lift toward the balloon.",
+        "say": "Rubbing a balloon on wool can transfer some electrons to the balloon. It gains negative charge; the wool loses electrons and becomes positive. Nearby paper has charges that shift a little, so the closer side is pulled toward the balloon.",
+        "try": "With Big leading, rub a balloon on a sweater, then hold it near paper bits on a tray. Keep fingers out of outlets, and keep hands dry around plugs and switches. Big leads every demo."
+      },
+      {
+        "id": "charge",
+        "plate": "change",
+        "question": "When do charges pull or push?",
+        "notice": "The cards show a plus for positive and a minus for negative.",
+        "say": "Opposite charges pull together. Two positive charges push apart, and two negative charges push apart. Losing some negative electrons can leave a material with more positive charge than negative charge.",
+        "try": "Use a plus and a minus card to explain a pull; use two minus cards to explain a push."
+      },
+      {
+        "id": "wire",
+        "plate": "notice",
+        "question": "Do electrons travel in a lamp’s wire too?",
+        "notice": "The small lamp has a complete wire loop back to the battery.",
+        "say": "Yes. Some electrons can move through metal wires. A battery gives energy to a closed circuit so electric current flows and the lamp lights. Electrons are already in the wires; the lamp does not eat them. Static cling and current involve the same tiny bits moving in different ways.",
+        "try": "Trace the kit’s complete loop from the battery through the lamp and back."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/electrons/01-wake.jpg",
+      "original": "assets/electrons/01-wake.png",
+      "foldSrc": "assets/electrons/01-wake-fold.jpg",
+      "title": "Too small to see",
+      "alt": "Big and Little study a tabletop atom model, with a small clustered nucleus, tiny electron beads around it, and a brass magnifier beside it.",
+      "caption": "An atom has a nucleus with electrons around it."
+    },
+    {
+      "id": "reach",
+      "src": "assets/electrons/02-reach.jpg",
+      "original": "assets/electrons/02-reach.png",
+      "foldSrc": "assets/electrons/02-reach-fold.jpg",
+      "title": "A few electrons move",
+      "alt": "Big holds a warm ochre balloon near paper bits on a tray while Little watches beside a wool sweater.",
+      "caption": "Rubbing some materials together can transfer electrons."
+    },
+    {
+      "id": "change",
+      "src": "assets/electrons/03-change.jpg",
+      "original": "assets/electrons/03-change.png",
+      "foldSrc": "assets/electrons/03-change-fold.jpg",
+      "title": "Pull or push",
+      "alt": "Big and Little compare two charge cards on a wooden tray, one marked plus and one marked minus.",
+      "caption": "Opposite charges pull together; like charges push apart."
+    },
+    {
+      "id": "notice",
+      "src": "assets/electrons/04-notice.jpg",
+      "original": "assets/electrons/04-notice.png",
+      "foldSrc": "assets/electrons/04-notice-fold.jpg",
+      "title": "A path through a wire",
+      "alt": "Big and Little watch a small lamp on a battery kit with a closed loop of copper-colored wire on the table.",
+      "caption": "In a closed circuit, electrons move through the wire."
+    },
+    {
+      "id": "return",
+      "src": "assets/electrons/05-return.jpg",
+      "original": "assets/electrons/05-return.png",
+      "foldSrc": "assets/electrons/05-return-fold.jpg",
+      "title": "A sock that stays",
+      "alt": "Little holds a soft shirt with a sock clinging to it beside Big and a linen laundry basket.",
+      "caption": "Static cling can follow electrons moving between fabrics."
+    },
+    {
+      "id": "keep",
+      "src": "assets/electrons/06-keep.jpg",
+      "original": "assets/electrons/06-keep.png",
+      "foldSrc": "assets/electrons/06-keep-fold.jpg",
+      "title": "Where did they go?",
+      "alt": "Little draws a sock and a shirt with an arrow between them in the shared notebook as Big looks on.",
+      "caption": "Follow what moved, then keep a question."
+    }
+  ],
+  "reading": {
+    "title": "Where did the tiny bits go?",
+    "coverPlate": "wake",
+    "coverText": "An atom model, a balloon, and a clinging sock lead to one small question.",
+    "foldableTitle": "Where did the tiny bits go?",
+    "foldableCoverLine": "Tiny bits. A gentle charge.",
+    "foldableNote": "Look closely, notice the cling, and pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Explain electron, charge, atom, nucleus, wire, and static cling through the story.",
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "Little follows electrons from an atom model through a balloon transfer, charge pulls and pushes, a complete wire loop, and a clinging sock, then asks where the tiny bits go when the cling ends.",
+      "beatIntents": [
+        {
+          "plate": "wake",
+          "intent": "Establish Big and Little at a warm craft table with a brass magnifier, notebook, and handmade atom model: clustered nucleus beads, much smaller electron beads around the center. No planet-like tracks."
+        },
+        {
+          "plate": "reach",
+          "intent": "Big leads a balloon-and-paper demonstration at the craft table, holding one ochre balloon close above a few paper bits on a tray; wool sweater nearby, Little observing. No painted particles or arcs."
+        },
+        {
+          "plate": "change",
+          "intent": "Two physical paper cards with one simple plus symbol and one simple minus symbol on a wooden tray. Big beside Little, looking at the cards; notebook marks suggest comparing pull and push. No extra text."
+        },
+        {
+          "plate": "notice",
+          "intent": "A complete tabletop battery-and-small-lamp kit: battery holder, closed switch, two copper-colored insulated connecting wires making one complete loop, glowing low-voltage lamp. Big and Little beside it; no outlets, no painted electron dots."
+        },
+        {
+          "plate": "return",
+          "intent": "Beside the same craft table, Little gently lifts a folded shirt with one small sock clinging to it; Big sits close beside Little, laundry basket below. Calm ordinary fabric, no visible particles."
+        },
+        {
+          "plate": "keep",
+          "intent": "Close, tender notebook scene: Little drawing a simple sock and shirt with one arrow between; Big alongside, brass magnifier and atom model at the edge, warm lamp, no lettering."
+        }
+      ]
+    },
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Too small to see",
+        "passage": "Little Wonderer studied an atom model under the lamp. An atom is a tiny building block of matter. Its nucleus has protons and neutrons packed in the middle. Electrons move around the nucleus. These tiny bits carry electric charge and have much less mass than protons or neutrons.",
+        "prompt": "Which parts are in the middle, and which move around it?"
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "A few electrons move",
+        "passage": "Big rubbed a balloon on a wool sweater, then held it near paper bits. A few bits lifted. Rubbing can move some electrons from the wool onto the balloon. Electrons carry negative charge. The balloon now had extra electrons; the wool had fewer. The tiny bits had moved, not disappeared.",
+        "prompt": "Where did the balloon’s extra electrons come from?"
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Pull or push",
+        "passage": "“Charge can be positive or negative,” said Big. Opposite charges pull toward each other. Like charges push apart. Nearby paper can be pulled even when its charges balance overall: the balloon nudges charges inside the paper a little out of place. That makes the nearer side pull toward it.",
+        "prompt": "Why can a balloon pull paper before touching it?"
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A path through a wire",
+        "passage": "Next, Big closed a switch on a battery kit. The lamp lit. A wire is a thin metal path. Some electrons in metal can move along it. The closed circuit made a complete loop for electric current. The battery supplied energy; electrons were already in the wires. The lamp did not use them up.",
+        "prompt": "Why does the wire need a complete loop?"
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A sock that stays",
+        "passage": "A sock stayed on a shirt when Little lifted it. “Static cling!” said Big. That means fabrics stick because of electric charge. As some fabrics rub and separate, electrons can move between them. The fabrics can end up with opposite charges. Electrons can also jump across a tiny gap as charge spreads out.",
+        "prompt": "How is the clinging sock connected to the balloon?"
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Where did they go?",
+        "passage": "Little drew the sock and shirt, with an arrow for electrons moving between them. “The tiny bits were already there,” Little said. “Some changed places.” Big nodded. Little kept one question: “Where do the tiny bits go when a sock stops sticking?”",
+        "prompt": "What could change when the sock stops clinging?"
+      }
+    ],
+    "words": [
+      {
+        "word": "electron",
+        "meaning": "a tiny bit of matter that carries negative electric charge"
+      },
+      {
+        "word": "charge",
+        "meaning": "a property of matter that can cause electric pulls and pushes"
+      },
+      {
+        "word": "atom",
+        "meaning": "a tiny building block of matter"
+      },
+      {
+        "word": "nucleus",
+        "meaning": "the middle of an atom, holding protons and usually neutrons"
+      },
+      {
+        "word": "wire",
+        "meaning": "a thin metal path that electric current can travel through"
+      },
+      {
+        "word": "static cling",
+        "meaning": "fabrics sticking together because of electric charge"
+      }
+    ],
+    "questions": [
+      "Where do the balloon’s extra electrons come from?",
+      "How can a sock and shirt end up with opposite charges?",
+      "How are electrons in a wire like the electrons involved in static cling?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one command sentence for the balloon test.",
+      "example": "Example: Rub the balloon on your sweater, then hold it near the paper bits."
+    }
+  },
+  "math": {
+    "title": "Tiny bits, tens and ones",
+    "plate": "wake",
+    "intro": "Add or subtract. Trade ten ones for one ten when you need to.",
+    "eyebrow": "SIX CRAFT-TABLE QUESTIONS",
+    "actionLabel": "Add or subtract with tens and ones",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          27,
+          18
+        ],
+        "prompt": "Little sets out 27 electron-model beads, then adds 18 more. How many beads are on the tray?",
+        "equation": "27 + 18 =",
+        "hint": "Add the ones: 7 + 8. Trade 10 ones for 1 ten.",
+        "answer": 45,
+        "worked": "7 + 8 = 15 ones: 1 ten and 5 ones. Then 2 + 1 + 1 = 4 tens. 27 + 18 = 45 beads.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          64,
+          28
+        ],
+        "prompt": "Big has 64 beads for charge models and puts 28 into a bag. How many beads stay out?",
+        "equation": "64 − 28 =",
+        "hint": "Trade 1 of the 6 tens for 10 ones. Now subtract 8 from 14 ones.",
+        "answer": 36,
+        "worked": "64 is 5 tens and 14 ones. 14 − 8 = 6 ones; 5 − 2 = 3 tens. 64 − 28 = 36 beads.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          36,
+          19
+        ],
+        "prompt": "Little draws 36 electron dots along one model wire and 19 along another. How many dots are drawn altogether?",
+        "equation": "36 + 19 =",
+        "hint": "Add 6 + 9 ones, then trade 10 ones for 1 ten.",
+        "answer": 55,
+        "worked": "6 + 9 = 15 ones: 1 ten and 5 ones. Then 3 + 1 + 1 = 5 tens. 36 + 19 = 55 dots.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          82,
+          47
+        ],
+        "prompt": "A craft box has 82 paper bits for the balloon test. Little uses 47. How many bits remain in the box?",
+        "equation": "82 − 47 =",
+        "hint": "Trade 1 ten so 2 ones becomes 12 ones. Subtract the ones, then the tens.",
+        "answer": 35,
+        "worked": "82 is 7 tens and 12 ones. 12 − 7 = 5 ones; 7 − 4 = 3 tens. 82 − 47 = 35 bits.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          46,
+          37
+        ],
+        "prompt": "Big counts 46 small lamp-kit clips in one box and 37 in another. How many clips are there altogether?",
+        "equation": "46 + 37 =",
+        "hint": "Add 6 + 7 ones. Keep 3 ones and carry 1 ten.",
+        "answer": 83,
+        "worked": "6 + 7 = 13 ones: 1 ten and 3 ones. Then 4 + 3 + 1 = 8 tens. 46 + 37 = 83 clips.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          95,
+          56
+        ],
+        "prompt": "Little has 95 sock stickers for a static-cling notebook and uses 56. How many stickers are left?",
+        "equation": "95 − 56 =",
+        "hint": "Trade 1 ten so 5 ones becomes 15 ones. Then subtract 6 ones.",
+        "answer": 39,
+        "worked": "95 is 8 tens and 15 ones. 15 − 6 = 9 ones; 8 − 5 = 3 tens. 95 − 56 = 39 stickers.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one problem and explain where you regrouped a ten.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Age 8 / Grade 2 math. Six number-crunch tasks, all within 100, with two-digit operands and actual regrouping. Quantities describe craft supplies and model marks, not actual electron counts or measurements from art.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Regroup ten ones as one ten for addition, or trade one ten for ten ones for subtraction. Welcome a sketch or spoken explanation."
+  },
+  "writing": {
+    "title": "Give the balloon test its words",
+    "intro": "Say one clear command, then draw or write it.",
+    "plateIds": [
+      "wake",
+      "reach",
+      "return"
+    ],
+    "draw": "Draw a balloon near paper bits. Add an arrow to show what you notice.",
+    "starter": "My balloon-test command",
+    "frames": [
+      {
+        "plate": "wake",
+        "start": "First,",
+        "hint": "tell how to set out the model beads"
+      },
+      {
+        "plate": "reach",
+        "start": "Then,",
+        "hint": "tell how to hold the balloon near the paper"
+      },
+      {
+        "plate": "return",
+        "start": "Look for,",
+        "hint": "tell what to notice about a clinging sock"
+      }
+    ],
+    "words": [
+      "rub",
+      "hold",
+      "near",
+      "balloon",
+      "paper",
+      "electron",
+      "charge",
+      "cling"
+    ],
+    "check": "Does your command tell what to do, using a word such as Rub, Hold, or Notice?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Rub the balloon on your sweater, then hold it near the paper bits.”"
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Some electrons transfer from the wool to the balloon when the materials rub and separate."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Electrons can move from one fabric to another. One can gain extra negative charge, while the other loses electrons and becomes positive. Opposite charges pull together."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "Both involve electrons carrying negative charge. A closed circuit supports current through a loop; static cling can follow electrons moving between materials and leaving a charge imbalance."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Rub the balloon on your sweater, then hold it near the paper bits.”"
+    }
+  ],
+  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up leads every demo. Keep fingers out of outlets, and keep hands dry around plugs and switches. Use a balloon, sweater, paper bits, and a tray, or simply notice laundry cling. Keep balloon pieces and model beads with the grown-up. Use a battery-and-lamp activity only with a grown-up and a ready-made snap circuit or kit; leave wall outlets closed. The atom is a simplified spatial model, not a scale view or circular planetary orbit. Electrons have far less mass than protons and neutrons; the common hydrogen nucleus has no neutron. Charge marks in the diorama stand for an imbalance across many atoms, not one atom or measured particle counts. Its pieces exchange electrons without creating any or moving the positive nuclei. Static attraction can also involve polarization: a neutral object’s charges shift slightly without changing its total charge. Real transfer and cling depend on materials and humidity. The wire scene shows a low-voltage complete circuit; a lamp transfers energy, not a supply of used-up electrons.",
+  "sources": [
+    {
+      "label": "DOE · electrons and atoms",
+      "url": "https://www.energy.gov/science/doe-explainselectrons"
+    },
+    {
+      "label": "EIA · electric charge and current",
+      "url": "https://www.eia.gov/energyexplained/electricity/the-science-of-electricity.php"
+    },
+    {
+      "label": "Exploratorium · a balloon moves electrons",
+      "url": "https://annex.exploratorium.edu/science-explorer/roller.html"
+    }
+  ],
+  "authoring": {
+    "status": "authored",
+    "bar": "curiosity",
+    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-generation",
+    "todo": []
+  },
+  "surfaces": {
+    "layout": "six",
+    "diorama": "electrons"
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "ELECTRONS · 2026-10-09",
+    "subtitle": "Tiny bits. A gentle charge."
+  },
+  "visualNotes": {
+    "intent": "Six new craft-table scenes connect an atom model, electron transfer, charge, a wire, clinging socks, and a notebook question.",
+    "prompts": "assets/electrons/prompts.json",
+    "provenance": "assets/electrons/provenance.json"
+  },
+  "quiz": {
+    "title": "Four charge clues",
+    "intro": "Follow the tiny bits and the changes they make.",
+    "questions": [
+      {
+        "id": "electron",
+        "prompt": "What charge does an electron carry?",
+        "choices": [
+          "Positive",
+          "Negative",
+          "No electric charge"
+        ],
+        "answerIndex": 1,
+        "answer": "An electron carries negative electric charge."
+      },
+      {
+        "id": "nucleus",
+        "prompt": "Which parts are packed in the nucleus of this atom model?",
+        "choices": [
+          "Protons and neutrons",
+          "The wire and lamp",
+          "All the electrons"
+        ],
+        "answerIndex": 0,
+        "answer": "The model’s nucleus holds protons and neutrons. Electrons move around it."
+      },
+      {
+        "id": "transfer",
+        "prompt": "What can rubbing a balloon on wool do?",
+        "choices": [
+          "Create electrons from nothing",
+          "Use up all the electrons",
+          "Transfer some electrons between the materials"
+        ],
+        "answerIndex": 2,
+        "answer": "Rubbing can transfer some electrons from wool to the balloon. The balloon gains negative charge, and the wool loses electrons."
+      },
+      {
+        "id": "pull",
+        "prompt": "What do opposite electric charges do?",
+        "choices": [
+          "Always stay still",
+          "Pull toward each other",
+          "Always push apart"
+        ],
+        "answerIndex": 1,
+        "answer": "Opposite charges pull toward each other. Like charges push apart."
+      }
+    ]
+  }
+}
