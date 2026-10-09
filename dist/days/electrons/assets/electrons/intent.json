@@ -1,0 +1,42 @@
+{
+  "slug": "electrons",
+  "outline": {
+    "status": "locked",
+    "beforeImages": true,
+    "arc": "Little follows electrons from an atom model through a balloon transfer, charge pulls and pushes, a complete wire loop, and a clinging sock, then asks where the tiny bits go when the cling ends.",
+    "beatIntents": [
+      {
+        "plate": "wake",
+        "intent": "Establish Big and Little at a warm craft table with a brass magnifier, notebook, and handmade atom model: clustered nucleus beads, much smaller electron beads around the center. No planet-like tracks."
+      },
+      {
+        "plate": "reach",
+        "intent": "Big leads a balloon-and-paper demonstration at the craft table, holding one ochre balloon close above a few paper bits on a tray; wool sweater nearby, Little observing. No painted particles or arcs."
+      },
+      {
+        "plate": "change",
+        "intent": "Two physical paper cards with one simple plus symbol and one simple minus symbol on a wooden tray. Big beside Little, looking at the cards; notebook marks suggest comparing pull and push. No extra text."
+      },
+      {
+        "plate": "notice",
+        "intent": "A complete tabletop battery-and-small-lamp kit: battery holder, closed switch, two copper-colored insulated connecting wires making one complete loop, glowing low-voltage lamp. Big and Little beside it; no outlets, no painted electron dots."
+      },
+      {
+        "plate": "return",
+        "intent": "Beside the same craft table, Little gently lifts a folded shirt with one small sock clinging to it; Big sits close beside Little, laundry basket below. Calm ordinary fabric, no visible particles."
+      },
+      {
+        "plate": "keep",
+        "intent": "Close, tender notebook scene: Little drawing a simple sock and shirt with one arrow between; Big alongside, brass magnifier and atom model at the edge, warm lamp, no lettering."
+      }
+    ]
+  },
+  "lockedBeforeImages": true,
+  "titleCard": "01-wake",
+  "choices": [
+    "Canonical Big and Little at one craft table",
+    "Paper and ink with rare ochre gold",
+    "One scene per plate without baked-in type",
+    "Code-drawn charge mechanism independent of art"
+  ]
+}
