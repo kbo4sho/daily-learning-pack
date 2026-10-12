@@ -4,17 +4,41 @@ import { join, relative, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 // Keep the forbidden spelling out of files that this guard scans itself.
-const name = new RegExp(`\\b${String.fromCharCode(76, 101, 111)}\\b`, "g");
+const spelling = String.fromCharCode(76, 101, 111);
+const name = new RegExp(`\\b(?:${spelling}|${spelling.toUpperCase()})\\b`, "g");
+const lower = spelling.toLowerCase();
+const identifier = new RegExp(
+  `(?<![A-Za-z0-9])${lower}(?=$|[^A-Za-z0-9]|[A-Z])|` +
+    `(?<=[a-z0-9])${spelling}(?=$|[^A-Za-z0-9]|[A-Z])|` +
+    `(?<![A-Za-z0-9])${spelling}(?=[A-Z])`,
+  "g",
+);
 const home = /\/Users\/|~\/|\$(?:HOME\b|\{HOME\})/g;
 const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/g;
 
 export function privacyIssues(text, label = "content") {
+  // Embedded image bytes are not text. Keep surrounding markup and JSON in
+  // scope, including short inline scripts and all decoded JSON properties.
+  text = text.replace(/data:[^\s"'<>;,]*;base64,[a-z0-9+/=_-]+/gi, (blob) =>
+    " ".repeat(blob.length),
+  );
   const issues = [];
+  const identifiers =
+    label === "content" || /\.(?:html|css|[cm]?js|json)(?:$| \()/.test(label);
   for (const [kind, pattern] of [
     ["NAME", name],
+    ["IDENTIFIER", identifier],
     ["LOCAL", home],
     ["LOCAL", host],
   ]) {
+    // Third-party minified identifiers are arbitrary short symbols, not reader
+    // identifiers. Do not exempt our own minified/inline output or vendor copy
+    // from the NAME and home-path checks. Vendor files stay byte-identical.
+    if (
+      pattern === identifier &&
+      (!identifiers || /(?:^|\/)vendor\/.*\.min\.js$/.test(label))
+    )
+      continue;
     // Vendored minified fontkit has property access on a short variable. It is
     // third-party code, not a hostname. Only skip hostname checks in vendor/;
     // names and home paths are still checked, and vendor bytes are unchanged.

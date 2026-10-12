@@ -113,9 +113,9 @@ export function archivePage(
 <p class="house-note">For this family. Grade 2.</p>
 </header>
 <main id="mornings">
-<section class="leo-door" aria-labelledby="today-heading">
+<section class="today-door" aria-labelledby="today-heading">
 <div class="door-copy">
-<p class="eyebrow">LEO · THIS MORNING</p>
+<p class="eyebrow">THIS MORNING</p>
 <p class="door-date"><time datetime="${esc(today.date)}">${esc(formatArchiveDate(today.date))}</time></p>
 <h1 id="today-heading">${esc(today.title)}</h1>
 <p class="door-teaser">${esc(today.teaser)}</p>

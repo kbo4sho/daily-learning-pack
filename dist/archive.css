@@ -114,7 +114,7 @@ img {
   color: var(--muted);
   font-size: 0.78rem;
 }
-.leo-door {
+.today-door {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 352px);
   gap: 56px;
@@ -122,7 +122,7 @@ img {
   padding: 56px 0;
   border-bottom: 1px solid var(--line);
 }
-.leo-door .eyebrow {
+.today-door .eyebrow {
   color: var(--muted);
 }
 .door-date {
@@ -130,7 +130,7 @@ img {
   color: var(--muted);
   font-size: 0.8rem;
 }
-.leo-door h1 {
+.today-door h1 {
   max-width: 13ch;
   font-size: clamp(3rem, 5.2vw, 4.75rem);
   letter-spacing: -0.035em;
@@ -359,7 +359,7 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
   }
-  .leo-door {
+  .today-door {
     grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
     gap: 32px;
   }
@@ -371,12 +371,12 @@ img {
   .archive-header {
     padding-top: 24px;
   }
-  .leo-door {
+  .today-door {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
     padding: 32px 0 40px;
   }
-  .leo-door h1 {
+  .today-door h1 {
     font-size: 3rem;
   }
   .seed-packet-link {

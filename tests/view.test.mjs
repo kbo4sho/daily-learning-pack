@@ -139,7 +139,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
 
 test("archive.json lists approved mornings structurally", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
-  assert.equal(json.leoEntry, "./today/");
+  assert.equal(json.todayEntry, "./today/");
   assert.ok(json.days.length >= 1);
   const slugs = json.days.map((day) => day.slug);
   assert.ok(slugs.includes(json.latest), "latest slug exists as a day");
@@ -237,7 +237,7 @@ test("public view owns seed-packet archive chrome", async () => {
   const render = await read("src/archive-render.mjs");
   assert.match(render, /export function archivePage/);
   assert.match(render, /seed-packet/);
-  assert.match(render, /leo-door/);
+  assert.match(render, /today-door/);
   assert.match(render, /packet-shelf/);
   assert.match(render, /packet-seal/);
   assert.match(render, /seed-packet-link/);
@@ -246,7 +246,7 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
   const css = await read("src/archive.css");
-  assert.match(css, /archive-shell|leo-door/);
+  assert.match(css, /archive-shell|today-door/);
   assert.match(css, /packet-shelf/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /seed-packet-link/);
