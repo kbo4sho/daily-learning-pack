@@ -6,7 +6,7 @@
     {
       "id": "wake",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-f1e31302-79d4-4d96-99c4-573c2bfa3e8d.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-f1e31302-79d4-4d96-99c4-573c2bfa3e8d.png",
       "newOriginal": true,
       "files": {
         "original": {
@@ -26,7 +26,7 @@
     {
       "id": "reach",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-20deb23c-ea95-4ae6-b1b8-2de3f47f1398.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-20deb23c-ea95-4ae6-b1b8-2de3f47f1398.png",
       "newOriginal": true,
       "files": {
         "original": {
@@ -46,7 +46,7 @@
     {
       "id": "change",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-6e195fd8-0777-43cb-a835-89e26ebb7194.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-6e195fd8-0777-43cb-a835-89e26ebb7194.png",
       "newOriginal": true,
       "files": {
         "original": {
@@ -66,7 +66,7 @@
     {
       "id": "notice",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-7d2c7d2a-d223-4e6f-b8bc-09fcbd61b153.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-7d2c7d2a-d223-4e6f-b8bc-09fcbd61b153.png",
       "newOriginal": true,
       "files": {
         "original": {
@@ -86,7 +86,7 @@
     {
       "id": "return",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-9521ea67-be67-419a-9e4c-2e88fb2917dd.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-9521ea67-be67-419a-9e4c-2e88fb2917dd.png",
       "newOriginal": true,
       "files": {
         "original": {
@@ -106,7 +106,7 @@
     {
       "id": "keep",
       "generator": "built-in image_gen",
-      "generatedSource": "/Users/kevinbolander/.codex/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-4b043ee7-b979-460e-872a-261d530b8d33.png",
+      "generatedSource": "<local-run-dir>/generated_images/01a11e99-ef8d-7812-b2c1-173e1e27970f/exec-4b043ee7-b979-460e-872a-261d530b8d33.png",
       "newOriginal": true,
       "files": {
         "original": {

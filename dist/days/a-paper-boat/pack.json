@@ -116,7 +116,7 @@
     "coverPlate": "wake",
     "coverText": "Little follows a list of folds. A penny waits beside the tub. Will one sheet of paper carry it?",
     "foldableTitle": "A little book of folding and floating.",
-    "parentNote": "Age 8 / Grade 3 reading. Read six scenes at Leo’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
+    "parentNote": "Age 8 / Grade 3 reading. Read six scenes at the child’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
@@ -379,7 +379,7 @@
       "then"
     ],
     "check": "Read your sentence. Does it tell what to do, using a command such as Fold, Add, Watch, or Compare?",
-    "parentNote": "Accept Leo’s spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First fold the paper in half, then fold the corners down.”"
+    "parentNote": "Accept the child’s spoken command, dictation, invented spelling, or writing. One clear sentence is enough. Example: “First fold the paper in half, then fold the corners down.”"
   },
   "answers": [
     {
@@ -399,7 +399,7 @@
       "text": "Accept one sensible command, spoken, dictated, or written. Example: “First fold the paper in half, then fold the corners down.” A clear two-step sequence is welcome."
     }
   ],
-  "parentGuidance": "Leo is age 8: Grade 3 reading and Grade 2 math. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
+  "parentGuidance": "The child is age 8: Grade 3 reading and Grade 2 math. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
   "sources": [
     {
       "label": "OpenStax · Archimedes’ principle and buoyancy",
@@ -417,7 +417,7 @@
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
+    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",

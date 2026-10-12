@@ -116,7 +116,7 @@
     "title": "A loop goes somewhere",
     "coverPlate": "leaf",
     "coverText": "A green arch rises on a leaf. A head reaches. Follow the tiny grips that carry one inchworm across.",
-    "parentNote": "About 15 minutes. Support pronunciation when useful, then let Leo revisit a picture and explain the mechanism. Evidence and inference are deliberately a small step beyond a basic sequence retell. All kid-facing directions address Leo; the same story appears on screen, Letter and foldable.",
+    "parentNote": "About 15 minutes. Support pronunciation when useful, then let the child revisit a picture and explain the mechanism. Evidence and inference are deliberately a small step beyond a basic sequence retell. All kid-facing directions address the child; the same story appears on screen, Letter and foldable.",
     "beats": [
       {
         "id": "leaf",
@@ -271,7 +271,7 @@
       }
     ],
     "extension": "Keep using mm. Show each step.",
-    "parentNote": "About 15 minutes. Use a bar model or number-line hops. Read parentheses as 'do this part first'; two separate number sentences are equally useful. The table and route are invented, not measured observations, species speeds, or loop lengths. The final explanation checks that Leo connects the two results: 11 + 8 = 19."
+    "parentNote": "About 15 minutes. Use a bar model or number-line hops. Read parentheses as 'do this part first'; two separate number sentences are equally useful. The table and route are invented, not measured observations, species speeds, or loop lengths. The final explanation checks that the child connects the two results: 11 + 8 = 19."
   },
   "writing": {
     "title": "Explain a tiny grip.",
@@ -310,7 +310,7 @@
       "because"
     ],
     "check": "Reread your words. Does the detail support your explanation? Check the first capital and each ending mark.",
-    "parentNote": "About 15 minutes. Welcome Leo's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to Leo."
+    "parentNote": "About 15 minutes. Welcome the child's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to the child."
   },
   "answers": [
     {
@@ -359,7 +359,7 @@
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-gen",
-    "audience": "Leo",
+    "audience": "the child",
     "pipeline": "task-87 authorCuriosityPack scaffold, then inspected scenic plates and authored content",
     "craftApproval": "Skipped per explicit task-88 instruction; draft PR delivery only."
   }

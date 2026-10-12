@@ -300,7 +300,7 @@
       "because"
     ],
     "check": "Reread your words. Does the detail support your explanation? Check the first capital and each ending mark.",
-    "parentNote": "About 15 minutes. Welcome Leo's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to Leo."
+    "parentNote": "About 15 minutes. Welcome the child's own phrasing, invented spelling, drawing, speech or dictation in adult support. Keep the observation distinct from the inference without demanding formal terms. If needed, scribe his words exactly. The printed prompts stay addressed to the child."
   },
   "answers": [
     {
@@ -341,8 +341,8 @@
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-gen",
-    "audience": "Leo",
-    "pipeline": "task-99: locked reading.outline before plate image_gen (task-98 gate); Astra plates; Skia foldable; Leo-only kid surfaces",
+    "audience": "the child",
+    "pipeline": "task-99: locked reading.outline before plate image_gen (task-98 gate); Astra plates; Skia foldable; kid-facing kid surfaces",
     "craftApproval": "Skipped per captain ship word for task 99 when adversarial clean; draft PRs then merge."
   }
 }

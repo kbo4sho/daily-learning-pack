@@ -102,7 +102,7 @@ export function archivePage(
 <meta name="theme-color" content="#f8f5ee">
 <title>Wonder Daily · Mornings</title>
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="${cssHref}">
+<link rel="stylesheet" href="${cssHref}?v=20261012-privacy">
 <script src="${jsHref}" defer></script>
 </head>
 <body data-kind="archive">
@@ -113,9 +113,9 @@ export function archivePage(
 <p class="house-note">For this family. Grade 2.</p>
 </header>
 <main id="mornings">
-<section class="leo-door" aria-labelledby="today-heading">
+<section class="today-door" aria-labelledby="today-heading">
 <div class="door-copy">
-<p class="eyebrow">LEO · THIS MORNING</p>
+<p class="eyebrow">THIS MORNING</p>
 <p class="door-date"><time datetime="${esc(today.date)}">${esc(formatArchiveDate(today.date))}</time></p>
 <h1 id="today-heading">${esc(today.title)}</h1>
 <p class="door-teaser">${esc(today.teaser)}</p>
