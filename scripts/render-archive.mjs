@@ -1,14 +1,18 @@
 import {
   access,
   copyFile,
+  cp,
   mkdir,
+  mkdtemp,
   readFile,
   readdir,
+  rename,
   rm,
   writeFile,
 } from "node:fs/promises";
-import { resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
+import { scanPrivacy } from "./privacy-check.mjs";
 
 async function readable(path) {
   try {
@@ -135,7 +139,7 @@ async function dropRootDayRuntime(root) {
   await rm(`${root}/archive/archive.json`, { force: true });
 }
 
-export async function renderArchive(root = resolve("dist")) {
+async function writeArchive(root) {
   const json = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
   const entries = json.days;
   if (!Array.isArray(entries) || !entries.length)
@@ -173,6 +177,21 @@ export async function renderArchive(root = resolve("dist")) {
   await copyArchiveFonts(root);
   await dropRootDayRuntime(root);
   return { latest, count: entries.length };
+}
+
+export async function renderArchive(root = resolve("dist")) {
+  root = resolve(root);
+  const staging = await mkdtemp(join(dirname(root), ".archive-stage-"));
+  try {
+    await cp(root, staging, { recursive: true });
+    const result = await writeArchive(staging);
+    await scanPrivacy([staging]);
+    await rm(root, { recursive: true, force: true });
+    await rename(staging, root);
+    return result;
+  } finally {
+    await rm(staging, { recursive: true, force: true });
+  }
 }
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {

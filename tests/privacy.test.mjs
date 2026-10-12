@@ -1,10 +1,20 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { copyFile, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import {
+  copyFile,
+  mkdir,
+  mkdtemp,
+  readFile,
+  readdir,
+  rm,
+  writeFile,
+} from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { privacyIssues, scanPrivacy } from "../scripts/privacy-check.mjs";
+import { renderArchive } from "../scripts/render-archive.mjs";
 
 test("privacy guard rejects private copy, including escaped JSON, and keeps word boundaries", async () => {
   const forbidden = String.fromCharCode(76, 101, 111);
@@ -89,6 +99,39 @@ test("privacy guard rejects private copy, including escaped JSON, and keeps word
   }
 });
 
+test("privacy guard matches hostname case without broadening personal-name case", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "privacy-host-case-"));
+  try {
+    const file = join(dir, "record.json");
+    for (const hostname of [
+      "Morty" + ".local",
+      "brick-2" + ".LOCAL",
+      "https://MoRtY" + ".LoCaL/image.png",
+      "@BRICK-2" + ".LOCAL",
+    ]) {
+      assert.match(privacyIssues(hostname).join("\n"), /LOCAL/);
+      await writeFile(file, JSON.stringify({ source: hostname }));
+      await assert.rejects(scanPrivacy([file]), /LOCAL/);
+    }
+    for (const value of ["Morty" + ".locality", "object.Morty" + ".LOCAL"])
+      assert.deepEqual(privacyIssues(value), []);
+    assert.deepEqual(
+      privacyIssues("e" + ".LOCAL", "vendor/fontkit.umd.min.js"),
+      [],
+    );
+    const spelling = String.fromCharCode(76, 101, 111);
+    for (const value of [spelling, spelling.toUpperCase()])
+      assert.match(privacyIssues(value, "copy.txt").join("\n"), /NAME/);
+    for (const value of [
+      spelling.toLowerCase(),
+      spelling[0] + spelling[1].toUpperCase() + spelling[2],
+    ])
+      assert.deepEqual(privacyIssues(value, "copy.txt"), []);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 test("privacy guard scans decoded nested JSON strings and keys before serialization", async () => {
   const dir = await mkdtemp(join(tmpdir(), "privacy-decoded-"));
   const spelling = String.fromCharCode(76, 101, 111);
@@ -168,4 +211,71 @@ test("all committed public output, README and tests pass privacy", async () => {
     "DESIGN.md",
     "OUTCOME.md",
   ]);
+});
+
+test("archive publishing rejects private copy without changing existing dist", async () => {
+  const root = await mkdtemp(join(tmpdir(), "archive-privacy-"));
+  const output = join(root, "dist");
+  async function hashes(dir) {
+    const result = {};
+    async function visit(relative = "") {
+      for (const entry of await readdir(join(dir, relative), {
+        withFileTypes: true,
+      })) {
+        const path = join(relative, entry.name);
+        if (entry.isDirectory()) await visit(path);
+        else
+          result[path] = createHash("sha256")
+            .update(await readFile(join(dir, path)))
+            .digest("hex");
+      }
+    }
+    await visit();
+    return result;
+  }
+  try {
+    await mkdir(join(output, "archive"), { recursive: true });
+    await writeFile(join(output, "index.html"), "existing landing");
+    await writeFile(join(output, "archive/index.html"), "existing archive");
+    await writeFile(join(output, "pack.json"), '{"legacy":true}');
+    await writeFile(join(output, "keep.txt"), "existing output");
+    const data = {
+      latest: "sample",
+      days: [
+        { slug: "sample", date: "2026-10-12", title: "A morning.", teaser: "" },
+      ],
+    };
+    for (const [copy, kind] of [
+      [String.fromCharCode(76, 101, 111), "NAME"],
+      ["/Us" + "ers/example/image.png", "LOCAL"],
+    ]) {
+      data.days[0].teaser = copy;
+      await writeFile(join(output, "archive.json"), JSON.stringify(data));
+      const before = await hashes(output);
+      await assert.rejects(
+        renderArchive(output),
+        new RegExp(`Privacy guard failed:[\\s\\S]*${kind}`),
+      );
+      assert.deepEqual(await hashes(output), before);
+      assert.deepEqual(await readdir(root), ["dist"]);
+    }
+    data.days[0].teaser = "A small discovery.";
+    await writeFile(join(output, "archive.json"), JSON.stringify(data));
+    await renderArchive(output);
+    assert.match(
+      await readFile(join(output, "index.html"), "utf8"),
+      /A small discovery\./,
+    );
+    assert.equal(
+      await readFile(join(output, "keep.txt"), "utf8"),
+      "existing output",
+    );
+    assert.ok(
+      !(await readdir(output)).includes("pack.json"),
+      "clean publication still removes obsolete root runtime",
+    );
+    assert.deepEqual(await readdir(root), ["dist"]);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
 });

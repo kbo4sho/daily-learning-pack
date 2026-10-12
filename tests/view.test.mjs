@@ -502,7 +502,7 @@ test("renderArchive uses only each pack’s positive integer grade, even without
     );
   }
   await mkdir(`${dir}/days/invalid-pack`, { recursive: true });
-  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
+  await writeFile(`${dir}/days/invalid-pack/pack.json`, "null");
   await renderArchive(dir);
   for (const file of ["index.html", "archive/index.html"]) {
     const html = await readFile(`${dir}/${file}`, "utf8");
@@ -517,4 +517,7 @@ test("renderArchive uses only each pack’s positive integer grade, even without
       assert.match(packet, /is-typeface/);
     }
   }
+  // Missing pack data may omit its grade; malformed published JSON fails closed.
+  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
+  await assert.rejects(renderArchive(dir), SyntaxError);
 });
