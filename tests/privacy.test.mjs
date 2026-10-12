@@ -11,7 +11,51 @@ test("privacy guard rejects private copy, including escaped JSON, and keeps word
     privacyIssues(`${forbidden} ${forbidden}'s ${forbidden}’s`).length,
     3,
   );
-  assert.equal(privacyIssues(`${forbidden}nardo leopard leoEntry`).length, 0);
+  assert.equal(privacyIssues(forbidden.toUpperCase()).length, 1);
+  assert.equal(
+    privacyIssues(`${forbidden}nardo leopard oleo geology`).length,
+    0,
+  );
+  const token = forbidden.toLowerCase();
+  for (const value of [
+    `${token}-door`,
+    `door-${token}`,
+    `wd-${token}-copy`,
+    `${token}Entry`,
+    `some${forbidden}Entry`,
+    `some${forbidden}`,
+    `${token}_entry`,
+    `entry_${token}`,
+  ]) {
+    for (const label of ["page.html", "style.css", "app.js", "pack.json"])
+      assert.match(privacyIssues(value, label).join("\n"), /IDENTIFIER/);
+  }
+  assert.equal(
+    privacyIssues(`${token}pard ${token}nardo ${token}entry`).length,
+    0,
+  );
+  assert.equal(
+    privacyIssues(`data:image/png;base64,AAA${token}EntryAAA==`, "page.html")
+      .length,
+    0,
+  );
+  assert.equal(
+    privacyIssues(`const ${token}Entry=1`, "vendor/library.min.js").length,
+    0,
+  );
+  // Exceptions are narrow: copy and paths still fail inside third-party code.
+  assert.match(
+    privacyIssues(forbidden, "vendor/library.min.js").join(),
+    /NAME/,
+  );
+  assert.match(
+    privacyIssues("/Us" + "ers/example", "vendor/library.min.js").join(),
+    /LOCAL/,
+  );
+  assert.match(
+    privacyIssues(`const ${token}Entry=1`, "app.min.js").join(),
+    /IDENTIFIER/,
+  );
   for (const value of [
     "/Us" + "ers/example/file",
     "~" + "/file",
@@ -33,6 +77,10 @@ test("privacy guard rejects private copy, including escaped JSON, and keeps word
     await assert.rejects(scanPrivacy([dir]), /NAME/);
     await writeFile(file, JSON.stringify({ path: "/Us" + "ers/example/file" }));
     await assert.rejects(scanPrivacy([dir]), /LOCAL/);
+    await writeFile(file, JSON.stringify({ reader: forbidden.toUpperCase() }));
+    await assert.rejects(scanPrivacy([dir]), /NAME/);
+    await writeFile(file, JSON.stringify({ [`${token}Entry`]: "today" }));
+    await assert.rejects(scanPrivacy([dir]), /IDENTIFIER/);
     await writeFile(file, '{"reader":"your reader"}');
     await scanPrivacy([dir]);
   } finally {
