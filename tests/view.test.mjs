@@ -66,11 +66,12 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "electrons");
-  assert.equal(latest.date, "2026-10-09");
+  assert.equal(latest.slug, "how-drill-bits-work");
+  assert.equal(latest.date, "2026-10-12");
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-drill-bits-work",
       "electrons",
       "a-kitchen-sponge",
       "shadows-at-noon",
@@ -104,17 +105,17 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
     assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
   assert.match(today, /About the pictures and numbers\./);
   assert.match(today, /data-quiz-feedback aria-live="polite"/);
-  assert.match(today, /electrons-diorama\.js/);
-  assert.equal(await exists("dist/today/electrons-diorama.css"), true);
-  assert.equal(await exists("dist/today/electrons-diorama.js"), true);
+  assert.match(today, /drill-bits-diorama\.js/);
+  assert.equal(await exists("dist/today/drill-bits-diorama.css"), true);
+  assert.equal(await exists("dist/today/drill-bits-diorama.js"), true);
   assert.equal(todayPack.targetAge, 8);
   assert.equal(todayPack.gradeLevel, 3);
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [45, 36, 55, 35, 83, 39],
+    [41, 35, 43, 32, 53, 37],
   );
-  assert.equal(todayPack.mathTemplate, "number-crunch");
+  assert.equal(todayPack.mathTemplate, "story-problems");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
