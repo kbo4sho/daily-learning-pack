@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
+import { copyFile, mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -83,6 +84,74 @@ test("privacy guard rejects private copy, including escaped JSON, and keeps word
     await assert.rejects(scanPrivacy([dir]), /IDENTIFIER/);
     await writeFile(file, '{"reader":"your reader"}');
     await scanPrivacy([dir]);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("privacy guard scans decoded nested JSON strings and keys before serialization", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "privacy-decoded-"));
+  const spelling = String.fromCharCode(76, 101, 111);
+  try {
+    for (const name of [spelling, spelling.toUpperCase()]) {
+      for (const value of [
+        { prompts: [{ text: `first line\n${name}` }] },
+        { [name]: "generic value" },
+        { [`first line\n${name}`]: "generic value" },
+      ]) {
+        // Escape the name too, so only decoded inspection can find it.
+        const json = JSON.stringify(value).replaceAll(
+          name,
+          [...name]
+            .map((c) => `\\u${c.charCodeAt(0).toString(16).padStart(4, "0")}`)
+            .join(""),
+        );
+        for (const [file, text] of [
+          ["record.json", json],
+          [
+            "index.html",
+            `<${"script"} type="application/json">${json}</script>`,
+          ],
+        ]) {
+          const path = join(dir, file);
+          await writeFile(path, text);
+          await assert.rejects(scanPrivacy([path]), /decoded JSON.*NAME/);
+        }
+      }
+    }
+    const clean = join(dir, "clean.json");
+    await writeFile(
+      clean,
+      JSON.stringify({
+        prompts: ["first line\nyour reader"],
+        count: 1,
+        optional: null,
+      }),
+    );
+    await scanPrivacy([clean]);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("privacy guard scans decoded image metadata strings with newlines", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "privacy-metadata-"));
+  const image = join(dir, "proof.jpg");
+  const spelling = String.fromCharCode(76, 101, 111);
+  try {
+    await copyFile(
+      "dist/days/a-kitchen-sponge/assets/a-kitchen-sponge/01-wake.jpg",
+      image,
+    );
+    await scanPrivacy([image]); // Also provisions the guard's CI metadata tools.
+    for (const name of [spelling, spelling.toUpperCase()]) {
+      execFileSync(
+        "exiftool",
+        ["-overwrite_original", `-Comment=first line\n${name}`, image],
+        { stdio: "pipe" },
+      );
+      await assert.rejects(scanPrivacy([image]), /image metadata.*NAME/);
+    }
   } finally {
     await rm(dir, { recursive: true, force: true });
   }

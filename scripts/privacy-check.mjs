@@ -51,6 +51,17 @@ export function privacyIssues(text, label = "content") {
   return issues;
 }
 
+// Inspect decoded leaves directly: serializing them would turn newlines back
+// into escape sequences and hide word boundaries. Keys can contain copy too.
+function decodedPrivacyIssues(value, label) {
+  if (typeof value === "string") return privacyIssues(value, label);
+  if (!value || typeof value !== "object") return [];
+  return Object.entries(value).flatMap(([key, item]) => [
+    ...privacyIssues(key, label),
+    ...decodedPrivacyIssues(item, label),
+  ]);
+}
+
 let checkedTools = false;
 function requireTools() {
   if (checkedTools) return;
@@ -149,10 +160,7 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
           ].map((m) => m[1]);
       for (const block of blocks)
         issues.push(
-          ...privacyIssues(
-            JSON.stringify(JSON.parse(block)),
-            `${label} (decoded JSON)`,
-          ),
+          ...decodedPrivacyIssues(JSON.parse(block), `${label} (decoded JSON)`),
         );
     }
   }
@@ -177,7 +185,7 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
         ),
       );
       issues.push(
-        ...privacyIssues(JSON.stringify(metadata), `${label} (image metadata)`),
+        ...decodedPrivacyIssues(metadata, `${label} (image metadata)`),
       );
     }
   }
