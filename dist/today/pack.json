@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "electrons",
-  "topic": "electrons",
-  "teaser": "A clinging sock. A tiny charge. Where did the electrons go?",
+  "slug": "how-drill-bits-work",
+  "topic": "how drill bits work",
+  "teaser": "A turning tip. A spiral path. Where do the chips go?",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "number-crunch",
+  "mathTemplate": "story-problems",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · ELECTRONS",
+  "editionLabel": "GRADE 3 · HOW DRILL BITS WORK",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Electrons",
-  "question": "Where do the tiny bits go when a sock sticks to a shirt?",
-  "idea": "Electrons carry negative electric charge. Moving some electrons from one material to another can make the materials pull together.",
+  "title": "How Drill Bits Work",
+  "question": "Why does a spiral move things when it spins?",
+  "idea": "A drill bit’s cutting lips shave off chips. Its spiral flutes carry the chips up and out as it turns.",
   "curiosity": {
-    "intro": "A sock clings to a shirt. Something too small to see has changed.",
-    "carryForward": "Follow the electrons from an atom model to a clinging sock.",
+    "intro": "A twist in a metal rod gives tiny chips a way out.",
+    "carryForward": "Follow a spiral from the workbench to the garden and back.",
     "questions": [
       {
-        "id": "atom",
+        "id": "tip",
         "plate": "wake",
-        "question": "What is an electron?",
-        "notice": "Find the small electron beads around the model’s center.",
-        "say": "An electron is a tiny bit of matter carrying negative electric charge. It has far less mass than a proton or neutron. An atom has a central nucleus with protons and usually neutrons, and electrons moving around it. Their motion is not a set of perfect circles.",
-        "try": "Point to the nucleus, then the electrons around it."
+        "question": "Which part makes the hole?",
+        "notice": "Look at the cutting edges at the tip.",
+        "say": "A twist drill bit is a metal rod with spiral grooves. As it turns and moves into the material, the cutting lips at its tip shave off tiny bits called chips.",
+        "try": "Trace the tip in the picture, then follow one spiral groove."
       },
       {
-        "id": "transfer",
-        "plate": "reach",
-        "question": "What changes when we rub a balloon?",
-        "notice": "A few light paper bits lift toward the balloon.",
-        "say": "Rubbing a balloon on wool can transfer some electrons to the balloon. It gains negative charge; the wool loses electrons and becomes positive. Nearby paper has charges that shift a little, so the closer side is pulled toward the balloon.",
-        "try": "With Big leading, rub a balloon on a sweater, then hold it near paper bits on a tray. Keep fingers out of outlets, and keep hands dry around plugs and switches. Big leads every demo."
-      },
-      {
-        "id": "charge",
+        "id": "flutes",
         "plate": "change",
-        "question": "When do charges pull or push?",
-        "notice": "The cards show a plus for positive and a minus for negative.",
-        "say": "Opposite charges pull together. Two positive charges push apart, and two negative charges push apart. Losing some negative electrons can leave a material with more positive charge than negative charge.",
-        "try": "Use a plus and a minus card to explain a pull; use two minus cards to explain a push."
+        "question": "Where do the chips go?",
+        "notice": "Follow the chips from the bottom of the hole to the top.",
+        "say": "The spiral grooves are called flutes. They help carry chips up and out as the bit turns, keeping the hole clear. The cutting lips make chips; the flutes give them a way out.",
+        "try": "Use the diorama to follow one chip up the flute."
       },
       {
-        "id": "wire",
-        "plate": "notice",
-        "question": "Do electrons travel in a lamp’s wire too?",
-        "notice": "The small lamp has a complete wire loop back to the battery.",
-        "say": "Yes. Some electrons can move through metal wires. A battery gives energy to a closed circuit so electric current flows and the lamp lights. Electrons are already in the wires; the lamp does not eat them. Static cling and current involve the same tiny bits moving in different ways.",
-        "try": "Trace the kit’s complete loop from the battery through the lamp and back."
+        "id": "thread",
+        "plate": "reach",
+        "question": "What can we notice by turning slowly?",
+        "notice": "Look for a curl beside the screw thread.",
+        "say": "A screw has a spiral ridge called a thread. It acts like a ramp wrapped around the rod. Turning against the material helps the screw move in. A screw thread is a raised ridge; a drill flute is a groove.",
+        "try": "With Big close by, hand-turn a screw slowly into soap or clay on a tray and look at the curls. Power drills are tools for adults; kids do not use them. Big stays close. Try turning a pencil in an enclosed hand sharpener, too."
+      },
+      {
+        "id": "cousins",
+        "plate": "return",
+        "question": "What else can a turning spiral move?",
+        "notice": "Water rides from a low bowl to a higher cup.",
+        "say": "An auger lifts loose soil or ice from a hole. An Archimedes screw lifts pockets of water along a sloping tube. A spiral slopes along its length, so turning against material can push or carry that material along. It needs something to work against, not just empty space.",
+        "try": "Wrap a ribbon around a pencil and follow its sloping path with your eyes."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/electrons/01-wake.jpg",
-      "original": "assets/electrons/01-wake.png",
-      "foldSrc": "assets/electrons/01-wake-fold.jpg",
-      "title": "Too small to see",
-      "alt": "Big and Little study a tabletop atom model, with a small clustered nucleus, tiny electron beads around it, and a brass magnifier beside it.",
-      "caption": "An atom has a nucleus with electrons around it."
+      "src": "assets/how-drill-bits-work/01-shape.jpg",
+      "original": "assets/how-drill-bits-work/01-shape.png",
+      "foldSrc": "assets/how-drill-bits-work/01-shape-fold.jpg",
+      "title": "A spiral to follow",
+      "alt": "Big and Little study a stationary twist drill bit on a wooden stand, with its tip and spiral flutes enlarged by a brass magnifier.",
+      "caption": "The cutting lips at the tip shave off chips."
     },
     {
       "id": "reach",
-      "src": "assets/electrons/02-reach.jpg",
-      "original": "assets/electrons/02-reach.png",
-      "foldSrc": "assets/electrons/02-reach-fold.jpg",
-      "title": "A few electrons move",
-      "alt": "Big holds a warm ochre balloon near paper bits on a tray while Little watches beside a wool sweater.",
-      "caption": "Rubbing some materials together can transfer electrons."
+      "src": "assets/how-drill-bits-work/02-soap.jpg",
+      "original": "assets/how-drill-bits-work/02-soap.png",
+      "foldSrc": "assets/how-drill-bits-work/02-soap-fold.jpg",
+      "title": "A thread in the soap",
+      "alt": "Big turns a screw by hand into a bar of soap on a tray while Little watches the pale curls beside its thread.",
+      "caption": "A screw thread helps a turning screw move into the soap."
     },
     {
       "id": "change",
-      "src": "assets/electrons/03-change.jpg",
-      "original": "assets/electrons/03-change.png",
-      "foldSrc": "assets/electrons/03-change-fold.jpg",
-      "title": "Pull or push",
-      "alt": "Big and Little compare two charge cards on a wooden tray, one marked plus and one marked minus.",
-      "caption": "Opposite charges pull together; like charges push apart."
+      "src": "assets/how-drill-bits-work/03-chips.jpg",
+      "original": "assets/how-drill-bits-work/03-chips.png",
+      "foldSrc": "assets/how-drill-bits-work/03-chips-fold.jpg",
+      "title": "A way out for chips",
+      "alt": "Big and Little observe a cutaway wooden block with chips along a drill bit’s flutes and beside the hole.",
+      "caption": "Flutes carry chips up and out of the hole."
     },
     {
       "id": "notice",
-      "src": "assets/electrons/04-notice.jpg",
-      "original": "assets/electrons/04-notice.png",
-      "foldSrc": "assets/electrons/04-notice-fold.jpg",
-      "title": "A path through a wire",
-      "alt": "Big and Little watch a small lamp on a battery kit with a closed loop of copper-colored wire on the table.",
-      "caption": "In a closed circuit, electrons move through the wire."
+      "src": "assets/how-drill-bits-work/04-auger.jpg",
+      "original": "assets/how-drill-bits-work/04-auger.png",
+      "foldSrc": "assets/how-drill-bits-work/04-auger-fold.jpg",
+      "title": "A spiral in the soil",
+      "alt": "Big and Little study a hand auger in a garden soil cutaway, with loose soil resting on its broad spiral.",
+      "caption": "An auger lifts loose soil along its spiral."
     },
     {
       "id": "return",
-      "src": "assets/electrons/05-return.jpg",
-      "original": "assets/electrons/05-return.png",
-      "foldSrc": "assets/electrons/05-return-fold.jpg",
-      "title": "A sock that stays",
-      "alt": "Little holds a soft shirt with a sock clinging to it beside Big and a linen laundry basket.",
-      "caption": "Static cling can follow electrons moving between fabrics."
+      "src": "assets/how-drill-bits-work/05-water.jpg",
+      "original": "assets/how-drill-bits-work/05-water.png",
+      "foldSrc": "assets/how-drill-bits-work/05-water-fold.jpg",
+      "title": "Water takes a ride",
+      "alt": "Big and Little watch pockets of water in a sloping Archimedes screw leading from a low bowl to a higher cup.",
+      "caption": "An Archimedes screw lifts water to a higher place."
     },
     {
       "id": "keep",
-      "src": "assets/electrons/06-keep.jpg",
-      "original": "assets/electrons/06-keep.png",
-      "foldSrc": "assets/electrons/06-keep-fold.jpg",
-      "title": "Where did they go?",
-      "alt": "Little draws a sock and a shirt with an arrow between them in the shared notebook as Big looks on.",
-      "caption": "Follow what moved, then keep a question."
+      "src": "assets/how-drill-bits-work/06-wonder.jpg",
+      "original": "assets/how-drill-bits-work/06-wonder.png",
+      "foldSrc": "assets/how-drill-bits-work/06-wonder-fold.jpg",
+      "title": "What else can turn?",
+      "alt": "Little draws a spiral beside Big, a hand egg beater, a corkscrew in a cork, and an enclosed hand pencil sharpener.",
+      "caption": "Different turning shapes do different jobs."
     }
   ],
   "reading": {
-    "title": "Where did the tiny bits go?",
+    "title": "Follow the spiral",
     "coverPlate": "wake",
-    "coverText": "An atom model, a balloon, and a clinging sock lead to one small question.",
-    "foldableTitle": "Where did the tiny bits go?",
-    "foldableCoverLine": "Tiny bits. A gentle charge.",
-    "foldableNote": "Look closely, notice the cling, and pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Explain electron, charge, atom, nucleus, wire, and static cling through the story.",
+    "coverText": "A drill bit, a soap curl, and a path that winds up.",
+    "foldableTitle": "How Drill Bits Work",
+    "foldableCoverLine": "A turn. A tiny chip. A way out.",
+    "foldableNote": "Follow the spiral and keep a question.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain drill bit, spiral, flute, cutting lip, chips, screw thread, and auger.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little follows electrons from an atom model through a balloon transfer, charge pulls and pushes, a complete wire loop, and a clinging sock, then asks where the tiny bits go when the cling ends.",
+      "arc": "Little follows the drill bit’s spiral, compares a screw in soap, sees chips leave a hole, and connects that path to an auger and a water screw before wondering about other turning tools.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "Establish Big and Little at a warm craft table with a brass magnifier, notebook, and handmade atom model: clustered nucleus beads, much smaller electron beads around the center. No planet-like tracks."
+          "intent": "A warm workbench scene: an enlarged stationary metal twist drill bit rests on a wood stand beneath a brass magnifier. Two spiral flutes and the tip are clearly visible. Big and Little look together, with a notebook and soft lamp light. No powered drill."
         },
         {
           "plate": "reach",
-          "intent": "Big leads a balloon-and-paper demonstration at the craft table, holding one ochre balloon close above a few paper bits on a tray; wool sweater nearby, Little observing. No painted particles or arcs."
+          "intent": "Big and Little beside a tray on the same workbench. Big slowly hand-turns a large screw by its head into a white bar of soap. A few pale soap curls rest near its thread. Little observes close beside Big, no motor or power tools."
         },
         {
           "plate": "change",
-          "intent": "Two physical paper cards with one simple plus symbol and one simple minus symbol on a wooden tray. Big beside Little, looking at the cards; notebook marks suggest comparing pull and push. No extra text."
+          "intent": "An enlarged freestanding educational cutaway display on the workbench: a vertical twist drill bit in a wood block, front of the hole revealed. Fine amber chips at the cutting lips and along the spiral flutes lead up and out onto the surface. Big and Little observe from beside the display without touching it."
         },
         {
           "plate": "notice",
-          "intent": "A complete tabletop battery-and-small-lamp kit: battery holder, closed switch, two copper-colored insulated connecting wires making one complete loop, glowing low-voltage lamp. Big and Little beside it; no outlets, no painted electron dots."
+          "intent": "A quiet garden beside a potting bench. An adult-sized hand auger stands in a soil cutaway display, with loose soil caught on its broad spiral flights above the hole. Big and Little observe beside it, not operating it. Warm low sunlight, notebook on the bench."
         },
         {
           "plate": "return",
-          "intent": "Beside the same craft table, Little gently lifts a folded shirt with one small sock clinging to it; Big sits close beside Little, laundry basket below. Calm ordinary fabric, no visible particles."
+          "intent": "A tabletop Archimedes screw demonstration: one sloping transparent tube from a low water bowl to a raised small cup. A broad helical screw inside lifts small pockets of blue water. Hand crank at top. Big beside Little, both watching, soft lamp light. Clear coherent water path."
         },
         {
           "plate": "keep",
-          "intent": "Close, tender notebook scene: Little drawing a simple sock and shirt with one arrow between; Big alongside, brass magnifier and atom model at the edge, warm lamp, no lettering."
+          "intent": "A quiet kitchen table with a hand-crank egg beater, corkscrew resting in a cork, and enclosed hand pencil sharpener with one wood curl. Big beside Little as Little draws a spiral in the notebook. Shared wondering, lamp light. No text or headings."
         }
       ]
     },
@@ -154,323 +154,360 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "Too small to see",
-        "passage": "Little Wonderer studied an atom model under the lamp. An atom is a tiny building block of matter. Its nucleus has protons and neutrons packed in the middle. Electrons move around the nucleus. These tiny bits carry electric charge and have much less mass than protons or neutrons.",
-        "prompt": "Which parts are in the middle, and which move around it?"
+        "title": "A spiral to follow",
+        "passage": "Little Wonderer leaned toward the magnifier. A drill bit rested on the bench. This metal rod had a spiral shape that wound around and along it. “Why all the twists?” Little asked. Big pointed to the tip. Its cutting lips are edges that shave off tiny bits of material as the bit turns.",
+        "prompt": "How does the tip’s job differ from the spiral’s job?",
+        "foldable": {
+          "heading": "Follow the spiral",
+          "body": "Little found a spiral on a drill bit. As the bit turns, the cutting lips at its tip shave off tiny chips."
+        }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A few electrons move",
-        "passage": "Big rubbed a balloon on a wool sweater, then held it near paper bits. A few bits lifted. Rubbing can move some electrons from the wool onto the balloon. Electrons carry negative charge. The balloon now had extra electrons; the wool had fewer. The tiny bits had moved, not disappeared.",
-        "prompt": "Where did the balloon’s extra electrons come from?"
+        "title": "A thread in the soap",
+        "passage": "Big slowly turned a screw into a bar of soap by hand. Little watched a pale curl gather beside it. A screw thread is a spiral ridge around a screw. As it turns against the material, the sloping thread helps pull the screw farther in. Turning can make something move along, too.",
+        "prompt": "How could a sloping thread help a screw move in?",
+        "foldable": {
+          "heading": "A thread in soap",
+          "body": "Big turned a screw into soap. Its thread wound around like a tiny ramp, helping the screw move in with each turn."
+        }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Pull or push",
-        "passage": "“Charge can be positive or negative,” said Big. Opposite charges pull toward each other. Like charges push apart. Nearby paper can be pulled even when its charges balance overall: the balloon nudges charges inside the paper a little out of place. That makes the nearer side pull toward it.",
-        "prompt": "Why can a balloon pull paper before touching it?"
+        "title": "A way out for chips",
+        "passage": "Their cutaway display showed inside a hole. The drill bit’s sharp tip and cutting lips made small shavings called chips. Its spiral grooves, called flutes, gave those chips a path up and out as the bit turned. “Like a spiral slide going up!” said Little. The hole needed room for the next chips.",
+        "prompt": "Why does the hole need a path for chips to leave?",
+        "foldable": {
+          "heading": "A way out",
+          "body": "Chips need a way out of the hole. The drill bit’s spiral grooves, called flutes, carry them up as it turns."
+        }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A path through a wire",
-        "passage": "Next, Big closed a switch on a battery kit. The lamp lit. A wire is a thin metal path. Some electrons in metal can move along it. The closed circuit made a complete loop for electric current. The battery supplied energy; electrons were already in the wires. The lamp did not use them up.",
-        "prompt": "Why does the wire need a complete loop?"
+        "title": "A spiral in the soil",
+        "passage": "At the garden bench, Big showed Little an auger. An auger is a tool with a broad spiral for making holes in soil or ice. Its lower edge loosens material. Turning lifts the loose bits along the spiral. Little traced the path in the notebook: around, up, and out of the hole.",
+        "prompt": "What do a drill bit and an auger both move out?",
+        "foldable": {
+          "heading": "Around and up",
+          "body": "An auger has a broad spiral. As it turns in the soil, it lifts loose dirt up and out of the hole."
+        }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A sock that stays",
-        "passage": "A sock stayed on a shirt when Little lifted it. “Static cling!” said Big. That means fabrics stick because of electric charge. As some fabrics rub and separate, electrons can move between them. The fabrics can end up with opposite charges. Electrons can also jump across a tiny gap as charge spreads out.",
-        "prompt": "How is the clinging sock connected to the balloon?"
+        "title": "Water takes a ride",
+        "passage": "Back at the table, a sloping tube joined a low bowl to a high cup. Inside was an Archimedes screw, a large spiral that can lift water. Big turned its handle. Pockets of water rode up between the spiral and the tube. Little watched water reach the cup above the bowl.",
+        "prompt": "How does turning help water reach a higher cup?",
+        "foldable": {
+          "heading": "Water takes a ride",
+          "body": "Big turned the Archimedes screw. Pockets of water rode up the sloping tube and spilled into a cup higher than the bowl."
+        }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Where did they go?",
-        "passage": "Little drew the sock and shirt, with an arrow for electrons moving between them. “The tiny bits were already there,” Little said. “Some changed places.” Big nodded. Little kept one question: “Where do the tiny bits go when a sock stops sticking?”",
-        "prompt": "What could change when the sock stops clinging?"
+        "title": "What else can turn?",
+        "passage": "Little found more turning tools. A corkscrew spirals into a cork to pull it out. Egg-beater gears make a hand-crank spin the beaters faster. A hand sharpener shaves pencil curls. Little drew a spiral. “Why does a spiral move things when it spins?”",
+        "prompt": "Which tools move material along, and which mainly spin it?",
+        "foldable": {
+          "heading": "Keep a question",
+          "body": "Little drew a spiral beside the turning tools. “Why does a spiral move things when it spins?” The notebook had room to wonder."
+        }
       }
     ],
     "words": [
       {
-        "word": "electron",
-        "meaning": "a tiny bit of matter that carries negative electric charge"
+        "word": "drill bit",
+        "meaning": "a tool that turns to make a hole"
       },
       {
-        "word": "charge",
-        "meaning": "a property of matter that can cause electric pulls and pushes"
+        "word": "spiral",
+        "meaning": "a shape that winds around and along a center"
       },
       {
-        "word": "atom",
-        "meaning": "a tiny building block of matter"
+        "word": "flute",
+        "meaning": "a groove that carries chips out of a drilled hole"
       },
       {
-        "word": "nucleus",
-        "meaning": "the middle of an atom, holding protons and usually neutrons"
+        "word": "cutting lip",
+        "meaning": "an edge at a drill bit’s tip that shaves material"
       },
       {
-        "word": "wire",
-        "meaning": "a thin metal path that electric current can travel through"
+        "word": "chips",
+        "meaning": "small bits shaved off a material"
       },
       {
-        "word": "static cling",
-        "meaning": "fabrics sticking together because of electric charge"
+        "word": "screw thread",
+        "meaning": "a spiral ridge around a screw"
+      },
+      {
+        "word": "auger",
+        "meaning": "a tool with a broad spiral for making holes and lifting loose material"
       }
     ],
     "questions": [
-      "Where do the balloon’s extra electrons come from?",
-      "How can a sock and shirt end up with opposite charges?",
-      "How are electrons in a wire like the electrons involved in static cling?"
+      "Why do cutting lips and flutes need to work together?",
+      "How is a screw thread different from a drill bit’s flute?",
+      "How are an auger and an Archimedes screw alike?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for the balloon test.",
-      "example": "Example: Rub the balloon on your sweater, then hold it near the paper bits."
+      "prompt": "Write one command sentence for the soap test.",
+      "example": "Example: Turn the screw slowly into the soap, then look at the curls on the thread."
     }
   },
   "math": {
-    "title": "Tiny bits, tens and ones",
+    "title": "Turning-tool stories",
     "plate": "wake",
-    "intro": "Add or subtract. Trade ten ones for one ten when you need to.",
-    "eyebrow": "SIX CRAFT-TABLE QUESTIONS",
-    "actionLabel": "Add or subtract with tens and ones",
+    "intro": "Read each little story. Decide whether to add or subtract.",
+    "eyebrow": "SIX WORKBENCH QUESTIONS",
+    "actionLabel": "Solve one step at a time",
     "tasks": [
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          27,
-          18
+          24,
+          17
         ],
-        "prompt": "Little sets out 27 electron-model beads, then adds 18 more. How many beads are on the tray?",
-        "equation": "27 + 18 =",
-        "hint": "Add the ones: 7 + 8. Trade 10 ones for 1 ten.",
-        "answer": 45,
-        "worked": "7 + 8 = 15 ones: 1 ten and 5 ones. Then 2 + 1 + 1 = 4 tens. 27 + 18 = 45 beads.",
+        "prompt": "Little counts 24 screws in a jar. Big adds 17 more. How many screws are in the jar now?",
+        "equation": "24 + 17 =",
+        "hint": "Add the two groups. You can make a new ten.",
+        "answer": 41,
+        "worked": "24 + 17 = 41 screws. Add 20 + 10 and 4 + 7, then combine 30 + 11.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          64,
+          63,
           28
         ],
-        "prompt": "Big has 64 beads for charge models and puts 28 into a bag. How many beads stay out?",
-        "equation": "64 − 28 =",
-        "hint": "Trade 1 of the 6 tens for 10 ones. Now subtract 8 from 14 ones.",
-        "answer": 36,
-        "worked": "64 is 5 tens and 14 ones. 14 − 8 = 6 ones; 5 − 2 = 3 tens. 64 − 28 = 36 beads.",
+        "prompt": "Big has 63 screws and puts 28 into a box. How many screws stay in the jar?",
+        "equation": "63 − 28 =",
+        "hint": "Start with the whole group and take away the screws put in the box.",
+        "answer": 35,
+        "worked": "63 − 28 = 35 screws. Take away 20 to get 43, then take away 8.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          36,
-          19
+          16,
+          27
         ],
-        "prompt": "Little draws 36 electron dots along one model wire and 19 along another. How many dots are drawn altogether?",
-        "equation": "36 + 19 =",
-        "hint": "Add 6 + 9 ones, then trade 10 ones for 1 ten.",
-        "answer": 55,
-        "worked": "6 + 9 = 15 ones: 1 ten and 5 ones. Then 3 + 1 + 1 = 5 tens. 36 + 19 = 55 dots.",
+        "prompt": "Little counts 16 turns of a hand crank, then 27 more turns. How many turns does Little count altogether?",
+        "equation": "16 + 27 =",
+        "hint": "Add the turns from both rounds.",
+        "answer": 43,
+        "worked": "16 + 27 = 43 turns. Add 10 + 20 and 6 + 7, then combine 30 + 13.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          82,
-          47
+          54,
+          22
         ],
-        "prompt": "A craft box has 82 paper bits for the balloon test. Little uses 47. How many bits remain in the box?",
-        "equation": "82 − 47 =",
-        "hint": "Trade 1 ten so 2 ones becomes 12 ones. Subtract the ones, then the tens.",
-        "answer": 35,
-        "worked": "82 is 7 tens and 12 ones. 12 − 7 = 5 ones; 7 − 4 = 3 tens. 82 − 47 = 35 bits.",
+        "prompt": "There are 54 pencil curls on a tray. Little brushes 22 into a paper bag. How many curls remain on the tray?",
+        "equation": "54 − 22 =",
+        "hint": "Subtract the curls that leave the tray.",
+        "answer": 32,
+        "worked": "54 − 22 = 32 curls. Take away 20 to get 34, then take away 2.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          46,
-          37
+          38,
+          15
         ],
-        "prompt": "Big counts 46 small lamp-kit clips in one box and 37 in another. How many clips are there altogether?",
-        "equation": "46 + 37 =",
-        "hint": "Add 6 + 7 ones. Keep 3 ones and carry 1 ten.",
-        "answer": 83,
-        "worked": "6 + 7 = 13 ones: 1 ten and 3 ones. Then 4 + 3 + 1 = 8 tens. 46 + 37 = 83 clips.",
+        "prompt": "Big turns an egg-beater handle 38 times, then 15 more times. How many handle turns does Big make in all?",
+        "equation": "38 + 15 =",
+        "hint": "Add the first turns and the extra turns.",
+        "answer": 53,
+        "worked": "38 + 15 = 53 turns. Add 10 to get 48, then add 5.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          95,
-          56
+          71,
+          34
         ],
-        "prompt": "Little has 95 sock stickers for a static-cling notebook and uses 56. How many stickers are left?",
-        "equation": "95 − 56 =",
-        "hint": "Trade 1 ten so 5 ones becomes 15 ones. Then subtract 6 ones.",
-        "answer": 39,
-        "worked": "95 is 8 tens and 15 ones. 15 − 6 = 9 ones; 8 − 5 = 3 tens. 95 − 56 = 39 stickers.",
+        "prompt": "A sand tray holds 71 small scoops of sand. A hand auger lifts out 34 scoops. How many scoops of sand remain?",
+        "equation": "71 − 34 =",
+        "hint": "Take away the scoops lifted out of the tray.",
+        "answer": 37,
+        "worked": "71 − 34 = 37 scoops. Take away 30 to get 41, then take away 4.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one problem and explain where you regrouped a ten.",
+    "extension": "Choose one story and explain why you added or subtracted.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six number-crunch tasks, all within 100, with two-digit operands and actual regrouping. Quantities describe craft supplies and model marks, not actual electron counts or measurements from art.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Regroup ten ones as one ten for addition, or trade one ten for ten ones for subtraction. Welcome a sketch or spoken explanation."
+    "parentNote": "Age 8 / Grade 2 math. Six one-step story problems within 100, with addition and subtraction. Story quantities are supplied numbers, not counts to infer from the pictures.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Decide whether the story joins groups or takes some away. Each problem needs one addition or subtraction. Welcome a drawing or spoken explanation."
   },
   "writing": {
-    "title": "Give the balloon test its words",
+    "title": "Give the soap test its words",
     "intro": "Say one clear command, then draw or write it.",
     "plateIds": [
       "wake",
       "reach",
-      "return"
+      "change"
     ],
-    "draw": "Draw a balloon near paper bits. Add an arrow to show what you notice.",
-    "starter": "My balloon-test command",
+    "draw": "Draw the screw in the soap. Add a curl beside the thread.",
+    "starter": "My soap-test command",
     "frames": [
       {
         "plate": "wake",
         "start": "First,",
-        "hint": "tell how to set out the model beads"
+        "hint": "tell how to set the soap on a tray"
       },
       {
         "plate": "reach",
         "start": "Then,",
-        "hint": "tell how to hold the balloon near the paper"
+        "hint": "tell how to turn the screw slowly"
       },
       {
-        "plate": "return",
+        "plate": "change",
         "start": "Look for,",
-        "hint": "tell what to notice about a clinging sock"
+        "hint": "tell where to look for the curls"
       }
     ],
     "words": [
-      "rub",
-      "hold",
-      "near",
-      "balloon",
-      "paper",
-      "electron",
-      "charge",
-      "cling"
+      "turn",
+      "slowly",
+      "screw",
+      "soap",
+      "thread",
+      "curl",
+      "spiral",
+      "notice"
     ],
-    "check": "Does your command tell what to do, using a word such as Rub, Hold, or Notice?",
-    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Rub the balloon on your sweater, then hold it near the paper bits.”"
+    "check": "Does your command tell what to do, using a word such as Turn, Look, or Notice?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Turn the screw slowly into the soap, then look at the curls on the thread.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Some electrons transfer from the wool to the balloon when the materials rub and separate."
+      "text": "Cutting lips shave off chips, and flutes carry the chips out. Removing chips leaves space for more material to be shaved."
     },
     {
       "label": "Reading · 2",
-      "text": "Electrons can move from one fabric to another. One can gain extra negative charge, while the other loses electrons and becomes positive. Opposite charges pull together."
+      "text": "A screw thread is a raised spiral ridge that helps the screw move in. A flute is a spiral groove that gives chips a way out."
     },
     {
       "label": "Reading · 3",
-      "text": "Both involve electrons carrying negative charge. A closed circuit supports current through a loop; static cling can follow electrons moving between materials and leaving a charge imbalance."
+      "text": "Both use a turning spiral to carry material along: an auger lifts loose soil or ice, and an Archimedes screw lifts water."
     },
     {
       "label": "Writing",
-      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Rub the balloon on your sweater, then hold it near the paper bits.”"
+      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Turn the screw slowly into the soap, then look at the curls on the thread.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up leads every demo. Keep fingers out of outlets, and keep hands dry around plugs and switches. Use a balloon, sweater, paper bits, and a tray, or simply notice laundry cling. Keep balloon pieces and model beads with the grown-up. Use a battery-and-lamp activity only with a grown-up and a ready-made snap circuit or kit; leave wall outlets closed. The atom is a simplified spatial model, not a scale view or circular planetary orbit. Electrons have far less mass than protons and neutrons; the common hydrogen nucleus has no neutron. Charge marks in the diorama stand for an imbalance across many atoms, not one atom or measured particle counts. Its pieces exchange electrons without creating any or moving the positive nuclei. Static attraction can also involve polarization: a neutral object’s charges shift slightly without changing its total charge. Real transfer and cling depend on materials and humidity. The wire scene shows a low-voltage complete circuit; a lamp transfers energy, not a supply of used-up electrons.",
+  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Power drills are grown-up tools; kids do not use them. A grown-up stays close and leads the soap or clay activity, placing the material on a tray and choosing the screw. Use an enclosed hand pencil sharpener for the pencil-curl observation. The illustrated drill bit is a common twist bit. Its cutting lips remove material; flutes provide chip clearance as the bit rotates and advances. The diorama isolates chip travel in a fixed cutaway, with enlarged chips and a shortened path. Real chip shapes and motion depend on the material and bit. Screw threads are raised ridges, unlike the recessed flutes. A turning spiral needs contact or confinement to move material along. The egg beater uses gears for faster rotation; it does not lift material like an auger.",
   "sources": [
     {
-      "label": "DOE · electrons and atoms",
-      "url": "https://www.energy.gov/science/doe-explainselectrons"
+      "label": "Sandvik Coromant · drill flutes and chip removal",
+      "url": "https://www.sandvik.coromant.com/en-us/products/corodrill_865/Pages/default.aspx"
     },
     {
-      "label": "EIA · electric charge and current",
-      "url": "https://www.eia.gov/energyexplained/electricity/the-science-of-electricity.php"
-    },
-    {
-      "label": "Exploratorium · a balloon moves electrons",
-      "url": "https://annex.exploratorium.edu/science-explorer/roller.html"
+      "label": "Science Buddies · the Archimedes screw",
+      "url": "https://www.sciencebuddies.org/stem-activities/build-archimedes-screw"
     }
   ],
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
+    "themeIntake": {
+      "topic": "how drill bits work",
+      "source": "queue/next-topic.txt",
+      "queued": true,
+      "queueDir": "queue",
+      "notes": [
+        "# Slug: how-drill-bits-work (packSlug of the topic line above). Pack for Mon 2026-10-12.",
+        "# Captain theme (relayed by Firstmate Sun 10/11 8:07 PM CT), his words: \"how drillbits work and maybe about how other rotating shapes can be used as tools.\"",
+        "# Notes: spiral flutes carry chips out; the cutting lip does the cutting. Rotating cousins: screws, augers, corkscrews, egg beaters, Archimedes screws.",
+        "# Hands-on, safe for a 7-year-old, NO power tools: hand-turn a screw into a bar of soap or clay; a pencil sharpener."
+      ],
+      "normalized": "how drill bits work",
+      "slug": "how-drill-bits-work"
+    },
     "todo": []
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "electrons"
+    "diorama": "drill-bits"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "ELECTRONS · 2026-10-09",
-    "subtitle": "Tiny bits. A gentle charge."
+    "edition": "HOW DRILL BITS WORK · 2026-10-12",
+    "subtitle": "A turn. A tiny chip. A way out."
   },
   "visualNotes": {
-    "intent": "Six new craft-table scenes connect an atom model, electron transfer, charge, a wire, clinging socks, and a notebook question.",
-    "prompts": "assets/electrons/prompts.json",
-    "provenance": "assets/electrons/provenance.json"
+    "intent": "Six new warm workbench, garden, and kitchen scenes follow the jobs of turning shapes.",
+    "prompts": "assets/how-drill-bits-work/prompts.json",
+    "provenance": "assets/how-drill-bits-work/provenance.json"
   },
   "quiz": {
-    "title": "Four charge clues",
-    "intro": "Follow the tiny bits and the changes they make.",
+    "title": "Four turning clues",
+    "intro": "Follow the tip, the chips, and the spiral path.",
     "questions": [
       {
-        "id": "electron",
-        "prompt": "What charge does an electron carry?",
+        "id": "lips",
+        "prompt": "Which part of a twist drill bit shaves off material?",
         "choices": [
-          "Positive",
-          "Negative",
-          "No electric charge"
+          "The notebook",
+          "The cutting lips at the tip",
+          "The handle of the magnifier"
         ],
         "answerIndex": 1,
-        "answer": "An electron carries negative electric charge."
+        "answer": "The cutting lips at the tip shave off material as the drill bit turns."
       },
       {
-        "id": "nucleus",
-        "prompt": "Which parts are packed in the nucleus of this atom model?",
+        "id": "flutes",
+        "prompt": "What job do the flutes do?",
         "choices": [
-          "Protons and neutrons",
-          "The wire and lamp",
-          "All the electrons"
+          "Carry chips up and out",
+          "Glue chips into the hole",
+          "Turn wood into water"
         ],
         "answerIndex": 0,
-        "answer": "The model’s nucleus holds protons and neutrons. Electrons move around it."
+        "answer": "Flutes are spiral grooves that carry chips up and out of the hole."
       },
       {
-        "id": "transfer",
-        "prompt": "What can rubbing a balloon on wool do?",
+        "id": "thread",
+        "prompt": "What is a screw thread?",
         "choices": [
-          "Create electrons from nothing",
-          "Use up all the electrons",
-          "Transfer some electrons between the materials"
+          "A loose string",
+          "A groove in a notebook",
+          "A spiral ridge around a screw"
         ],
         "answerIndex": 2,
-        "answer": "Rubbing can transfer some electrons from wool to the balloon. The balloon gains negative charge, and the wool loses electrons."
+        "answer": "A screw thread is a spiral ridge that helps a turning screw move into material."
       },
       {
-        "id": "pull",
-        "prompt": "What do opposite electric charges do?",
+        "id": "water",
+        "prompt": "What can an Archimedes screw lift?",
         "choices": [
-          "Always stay still",
-          "Pull toward each other",
-          "Always push apart"
+          "Only pencil curls",
+          "Water from a low place to a higher place",
+          "Only empty air"
         ],
         "answerIndex": 1,
-        "answer": "Opposite charges pull toward each other. Like charges push apart."
+        "answer": "An Archimedes screw lifts pockets of water as its spiral turns inside a sloping tube."
       }
     ]
   }
