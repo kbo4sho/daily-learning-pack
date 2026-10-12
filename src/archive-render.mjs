@@ -102,7 +102,7 @@ export function archivePage(
 <meta name="theme-color" content="#f8f5ee">
 <title>Wonder Daily · Mornings</title>
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="${cssHref}">
+<link rel="stylesheet" href="${cssHref}?v=20261012-privacy">
 <script src="${jsHref}" defer></script>
 </head>
 <body data-kind="archive">
