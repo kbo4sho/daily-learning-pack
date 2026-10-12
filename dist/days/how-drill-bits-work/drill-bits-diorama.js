@@ -42,38 +42,51 @@ export function reduceDrill(state, event) {
     return { ...state, phase: "held" };
   return state;
 }
-export function drillChips(progress) {
+function drillFlutes(progress) {
+  const spin = (progress / 100) * Math.PI * 8;
+  const flutes = [];
+  for (let y = 84; y < 326; y += 3) {
+    for (let side = 0; side < 2; side++) {
+      const a = (y - 72) / 18 + spin + side * Math.PI;
+      flutes.push({
+        y,
+        side,
+        front: Math.cos(a) >= 0,
+        x1: 410 + 29 * Math.sin(a),
+        x2: 410 + 29 * Math.sin(a + 3 / 18),
+      });
+    }
+  }
+  return flutes;
+}
+export function drillChips(progress, flutes = drillFlutes(progress)) {
   return Array.from({ length: 12 }, (_, i) => {
     const t = Math.max(0, Math.min(1, (progress / 100 - i * 0.028) / 0.66));
     const y = 326 - Math.min(t / 0.8, 1) * 145;
+    const flute = flutes.find((f) => f.side === 0 && y >= f.y && y < f.y + 3);
+    const x =
+      t < 0.8
+        ? flute.x1 + ((y - flute.y) / 3.5) * (flute.x2 - flute.x1)
+        : 410 + ((t - 0.8) / 0.2) * (64 + (i % 4) * 15);
     return {
       id: i,
-      visible: t > 0,
+      // The cutting lips cover the tip; departing chips reappear clear of the bit.
+      visible: t > 0 && (t < 0.8 ? flute.front && y < 321 : x >= 450),
       arrived: t === 1,
-      x:
-        t < 0.8
-          ? 410 + 24 * Math.sin((y - 72) / 18 + (progress / 100) * Math.PI * 8)
-          : 410 + ((t - 0.8) / 0.2) * (64 + (i % 4) * 15),
+      x,
       y: t < 0.8 ? y : 181 + ((t - 0.8) / 0.2) * (17 - Math.floor(i / 4) * 6),
     };
   });
 }
 export function drillDrawing(progress = 0) {
-  const spin = (progress / 100) * Math.PI * 8;
-  const strips = [];
-  for (let y = 84; y < 326; y += 3) {
-    for (let side = 0; side < 2; side++) {
-      const a = (y - 72) / 18 + spin + side * Math.PI;
-      const b = a + 3 / 18;
-      if (Math.cos(a) < 0) continue;
-      const x1 = 410 + 29 * Math.sin(a),
-        x2 = 410 + 29 * Math.sin(b);
-      strips.push(
+  const flutes = drillFlutes(progress);
+  const strips = flutes
+    .filter((f) => f.front)
+    .map(
+      ({ x1, x2, y }) =>
         `<path d="M${x1 - 9} ${y}L${x1 + 9} ${y}L${x2 + 9} ${y + 3.5}L${x2 - 9} ${y + 3.5}Z" fill="#40564e"/>`,
-      );
-    }
-  }
-  const chips = drillChips(progress);
+    );
+  const chips = drillChips(progress, flutes);
   return `<svg viewBox="0 0 820 450" class="drill-drawing" role="img" aria-labelledby="drill-art-title drill-art-desc"><title id="drill-art-title">A spiral path out of the hole</title><desc id="drill-art-desc">A metal twist drill bit stands in a wooden block with the front of the hole opened to view. Cutting lips at the lower tip make chips. Spiral flutes carry the chips upward to a pile beside the hole. ${chips.filter((c) => c.arrived).length} chips have reached the top.</desc>
   <defs><clipPath id="drill-outline"><path d="M380 80q30-10 60 0v242l-30 28-30-28Z"/></clipPath><linearGradient id="drill-room" x2="0" y2="1"><stop stop-color="#fbf6e8"/><stop offset="1" stop-color="#e5d8bd"/></linearGradient><linearGradient id="drill-metal"><stop stop-color="#40554f"/><stop offset=".28" stop-color="#94a6a0"/><stop offset=".55" stop-color="#dbe2d9"/><stop offset="1" stop-color="#4e625b"/></linearGradient><linearGradient id="drill-wood" x2="0" y2="1"><stop stop-color="#c5a073"/><stop offset="1" stop-color="#927047"/></linearGradient><pattern id="drill-grain" width="100" height="18" patternUnits="userSpaceOnUse"><path d="M0 4Q30 1 60 5T100 4M0 13Q40 10 80 14T100 12" fill="none" stroke="#80623f" stroke-width=".8" opacity=".35"/></pattern></defs>
   <rect width="820" height="450" fill="url(#drill-room)"/><path d="M0 0h245L89 337H0Z" fill="#fffdf4" opacity=".55"/><path d="M37 367H781l27 60H12Z" fill="#cbb18a" stroke="#987b56"/><path d="M12 427h796v23H12Z" fill="#806348"/><path d="M36 417h748" stroke="#ebd6b5" stroke-width="3"/>
