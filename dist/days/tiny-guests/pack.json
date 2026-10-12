@@ -385,7 +385,7 @@
       "text": "Accept one sensible command, spoken, dictated, or written. Example: “First wet your hands, then scrub with soap for 20 seconds.”"
     }
   ],
-  "parentGuidance": "Leo is age 8: Grade 3 reading and Grade 2 math. Grown-ups and doctors decide about medicine. Many bacteria are helpful. Soap disrupts oily membranes of susceptible germs; it does not break apart every bacterium or every virus. Scrubbing and rinsing remove germs too. The diorama compares a bacterium and a virus with an oily outer layer; its removal amounts are qualitative, not measured. Antibiotics differ in which bacteria they affect and do not act on viruses. Immune memory helps recognition but is not a promise of complete protection.",
+  "parentGuidance": "Age 8: Grade 3 reading and Grade 2 math. Grown-ups and doctors decide about medicine. Many bacteria are helpful. Soap disrupts oily membranes of susceptible germs; it does not break apart every bacterium or every virus. Scrubbing and rinsing remove germs too. The diorama compares a bacterium and a virus with an oily outer layer; its removal amounts are qualitative, not measured. Antibiotics differ in which bacteria they affect and do not act on viruses. Immune memory helps recognition but is not a promise of complete protection.",
   "sources": [
     {
       "label": "NIH · bacteria and viruses",
@@ -411,7 +411,7 @@
   "authoring": {
     "status": "authored",
     "bar": "curiosity",
-    "learningRule": "Leo is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template story-problems: Six one-step word problems, each asking one question. Exactly two structured operands; both addition and subtraction appear. No two-step problems. Prose may spell out quantities or include context such as the day number.",
+    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template story-problems: Six one-step word problems, each asking one question. Exactly two structured operands; both addition and subtraction appear. No two-step problems. Prose may spell out quantities or include context such as the day number.",
     "difficultyBar": "one-step-beyond-grade-2",
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",

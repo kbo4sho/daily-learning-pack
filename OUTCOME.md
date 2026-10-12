@@ -1,6 +1,6 @@
 # Wonder Daily — one-click heirloom packets
 
-Task 123 replaces the archive’s three-press ritual with one native link per packet. Leo’s door opens `today/`; shelf packets open their own `days/<slug>/`. The only JavaScript adds Space activation. Clicking and Enter work without JavaScript.
+Task 123 replaces the archive’s three-press ritual with one native link per packet. the child’s door opens `today/`; shelf packets open their own `days/<slug>/`. The only JavaScript adds Space activation. Clicking and Enter work without JavaScript.
 
 Cream stock, a finely crimped glued edge, inset ink rules, Newsreader titles, subtle grain, and the existing story plates make a family shelf. Gold appears only in the single “This morning” mark. Missing art keeps a typographic face. Existing fonts are unchanged. Shelf packets share a uniform height within each row, with small print aligned at the bottom; the door keeps its natural height.
 

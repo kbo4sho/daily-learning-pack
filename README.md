@@ -5,7 +5,7 @@
 Live:
 
 - Archive landing: [https://kbo4sho.github.io/daily-learning-pack/](https://kbo4sho.github.io/daily-learning-pack/)
-- Today (Leo’s one tap): [https://kbo4sho.github.io/daily-learning-pack/today/](https://kbo4sho.github.io/daily-learning-pack/today/)
+- Today (the child’s one tap): [https://kbo4sho.github.io/daily-learning-pack/today/](https://kbo4sho.github.io/daily-learning-pack/today/)
 
 Wonder Daily stays a parent-led family surface. It is **not** on public Wonder Together marketing navigation.
 
@@ -17,7 +17,7 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 
 `npm run build`, `generate`, `site`, `overnight`, and `author` in this tree exit with a pointer to that repo.
 
-**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. Each heirloom seed packet is one native link: Leo’s door opens `today/`, and shelf packets open their own day. The tiny `src/archive.js` adds Space-key activation; clicking and Enter also work without JavaScript.
+**Archive chrome is public.** Landing markup and CSS live here (`src/archive-render.mjs`, `src/archive.css`). `npm run archive` reapplies that chrome onto `dist/archive.json` without generators. Each heirloom seed packet is one native link: the child’s door opens `today/`, and shelf packets open their own day. The tiny `src/archive.js` adds Space-key activation; clicking and Enter also work without JavaScript.
 
 ## How the public site is updated
 
@@ -59,3 +59,9 @@ No accounts, backend, tracking, external font requests, or runtime AI. Digital w
 ## Design
 
 Runtime CSS in `dist/` is canonical for the published site. Product notes: [DESIGN.md](DESIGN.md). Split notes: [OUTCOME.md](OUTCOME.md).
+
+## Output privacy guard
+
+`npm test` scans all current output, README, tests, source, scripts, and docs for a case-sensitive whole-word personal-name match, absolute home paths, and local machine hostnames. Inline JSON is decoded too. PDF checks use Poppler (`pdftotext` and `pdfinfo`) for extracted text, Info, and XMP, plus raw PDF dictionaries. Image metadata is checked with ExifTool. Install Poppler and ExifTool before running the tests; the test provisions missing tools on the ephemeral Ubuntu GitHub Actions runner. Missing tools or missing output fail the check.
+
+Compressed image/font bytes are not text. Vendored minified fontkit contains property access that resembles a local hostname; only the hostname check is excluded inside `vendor/`. Name and home-path checks still run there, and vendor files stay byte-identical.

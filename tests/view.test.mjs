@@ -44,7 +44,7 @@ async function walkJson(dir, acc = []) {
   return acc;
 }
 
-test("committed archive landing and Leo’s /today/ are present", async () => {
+test("committed archive landing and the child’s /today/ are present", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
   const latest = json.days.find((day) => day.slug === json.latest);
   assert.ok(latest, "archive.json.latest must name a listed day");
