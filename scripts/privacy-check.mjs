@@ -14,7 +14,7 @@ const identifier = new RegExp(
   "g",
 );
 const home = /\/Users\/|~\/|\$(?:HOME\b|\{HOME\})/g;
-const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/g;
+const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
 
 export function privacyIssues(text, label = "content") {
   // Embedded image bytes are not text. Keep surrounding markup and JSON in
