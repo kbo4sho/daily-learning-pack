@@ -44,7 +44,12 @@ async function walkJson(dir, acc = []) {
   return acc;
 }
 
-test("committed archive landing and Leo’s /today/ are present", async () => {
+test("committed archive landing and the child’s /today/ are present", async () => {
+  for (const path of ["dist/index.html", "dist/archive/index.html"])
+    assert.match(
+      await read(path),
+      /href="\.\/archive\.css\?v=20261012-privacy"/,
+    );
   const json = JSON.parse(await read("dist/archive.json"));
   const latest = json.days.find((day) => day.slug === json.latest);
   assert.ok(latest, "archive.json.latest must name a listed day");
@@ -139,7 +144,7 @@ test("committed archive landing and Leo’s /today/ are present", async () => {
 
 test("archive.json lists approved mornings structurally", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
-  assert.equal(json.leoEntry, "./today/");
+  assert.equal(json.todayEntry, "./today/");
   assert.ok(json.days.length >= 1);
   const slugs = json.days.map((day) => day.slug);
   assert.ok(slugs.includes(json.latest), "latest slug exists as a day");
@@ -237,7 +242,7 @@ test("public view owns seed-packet archive chrome", async () => {
   const render = await read("src/archive-render.mjs");
   assert.match(render, /export function archivePage/);
   assert.match(render, /seed-packet/);
-  assert.match(render, /leo-door/);
+  assert.match(render, /today-door/);
   assert.match(render, /packet-shelf/);
   assert.match(render, /packet-seal/);
   assert.match(render, /seed-packet-link/);
@@ -246,7 +251,7 @@ test("public view owns seed-packet archive chrome", async () => {
   assert.doesNotMatch(render, /from "\.\/archive\.mjs"/);
   assert.doesNotMatch(render, /from "\.\/pack\.mjs"/);
   const css = await read("src/archive.css");
-  assert.match(css, /archive-shell|leo-door/);
+  assert.match(css, /archive-shell|today-door/);
   assert.match(css, /packet-shelf/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /seed-packet-link/);
@@ -497,7 +502,7 @@ test("renderArchive uses only each pack’s positive integer grade, even without
     );
   }
   await mkdir(`${dir}/days/invalid-pack`, { recursive: true });
-  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
+  await writeFile(`${dir}/days/invalid-pack/pack.json`, "null");
   await renderArchive(dir);
   for (const file of ["index.html", "archive/index.html"]) {
     const html = await readFile(`${dir}/${file}`, "utf8");
@@ -512,4 +517,7 @@ test("renderArchive uses only each pack’s positive integer grade, even without
       assert.match(packet, /is-typeface/);
     }
   }
+  // Missing pack data may omit its grade; malformed published JSON fails closed.
+  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
+  await assert.rejects(renderArchive(dir), SyntaxError);
 });
