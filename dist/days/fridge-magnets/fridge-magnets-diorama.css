@@ -112,7 +112,6 @@
 .magnet-panel [hidden] {
   display: none;
 }
-.magnet-panel [data-magnet-talk],
 .magnet-panel [data-magnet-notice] {
   padding: 24px;
   border-left: 2px solid var(--gold);

@@ -40,9 +40,34 @@ export function magnetPull(surface, distance) {
     ? 1 / (1 + clamp(distance) / 18) ** 2
     : 0;
 }
+export const MAGNET_BANDS = Object.freeze([
+  {
+    max: 30,
+    gap: "Near",
+    art: "small",
+    pull: "A stronger pull",
+    notice: "Close by: a stronger pull.",
+  },
+  {
+    max: 65,
+    gap: "A little farther",
+    art: "larger",
+    pull: "A weaker pull",
+    notice: "A little farther: the pull is weaker.",
+  },
+  {
+    max: Infinity,
+    gap: "Farther",
+    art: "larger",
+    pull: "A very weak pull",
+    notice: "Farther away: only a very weak pull.",
+  },
+]);
+export function magnetBand(distance) {
+  return MAGNET_BANDS.find((b) => distance < b.max);
+}
 export function reduceMagnet(state, event) {
   if (event.type === "RESET") return createMagnetState(state);
-  if (event.type === "TALK") return { ...state, phase: "talk" };
   if (event.type === "MOTION")
     return {
       ...state,
@@ -51,7 +76,6 @@ export function reduceMagnet(state, event) {
         ? { phase: "notice", distance: 0, progress: 100 }
         : {}),
     };
-  if (["held", "talk"].includes(state.phase)) return state;
   if (event.type === "SURFACE" && Object.hasOwn(MAGNET_SURFACES, event.value))
     return { ...createMagnetState(state), surface: event.value };
   if (
@@ -84,15 +108,10 @@ export function reduceMagnet(state, event) {
       phase: progress === 100 ? "notice" : "testing",
     };
   }
-  if (event.type === "HOLD" && state.phase === "notice")
-    return { ...state, phase: "held" };
   return state;
 }
 export function magnetNotice(state) {
   const s = MAGNET_SURFACES[state.surface];
-  if (state.phase === "talk") return "Follow the magnet test in words.";
-  if (state.phase === "held")
-    return "The view is still. What did this surface show you?";
   if (state.phase === "testing")
     return "Bring the magnet to the surface, then let go.";
   if (state.phase === "notice") {
@@ -102,7 +121,7 @@ export function magnetNotice(state) {
   }
   if (!s.magnetic)
     return `${s.name}: no magnetic tug to feel, even close by. Predict, then touch and let go.`;
-  return `${state.distance < 30 ? "Close by: a stronger pull." : state.distance < 65 ? "A little farther: the pull is weaker." : "Farther away: only a very weak pull."} Move nearer or farther, then touch and let go.`;
+  return `${magnetBand(state.distance).notice} Move nearer or farther, then touch and let go.`;
 }
 export function magnetDrawing(state = createMagnetState()) {
   const s = MAGNET_SURFACES[state.surface];
@@ -115,7 +134,7 @@ export function magnetDrawing(state = createMagnetState()) {
     { length: 10 },
     (_, i) => `<path d="M594 ${116 + i * 23}q48-9 107 2"/>`,
   ).join("");
-  return `<svg class="magnet-drawing" viewBox="0 0 820 440" role="img" aria-labelledby="magnet-art-title magnet-art-desc"><title id="magnet-art-title">A magnet beside ${s.name.toLowerCase()}</title><desc id="magnet-art-desc">View from the side. Move a round magnet toward the selected surface. ${released ? (s.magnetic ? "The magnet remains against the steel." : "The magnet slides down to the tray.") : `The magnet is held with a ${state.distance < 30 ? "small" : "larger"} gap.`}</desc>
+  return `<svg class="magnet-drawing" viewBox="0 0 820 440" role="img" aria-labelledby="magnet-art-title magnet-art-desc"><title id="magnet-art-title">A magnet beside ${s.name.toLowerCase()}</title><desc id="magnet-art-desc">View from the side. Move a round magnet toward the selected surface. ${released ? (s.magnetic ? "The magnet remains against the steel." : "The magnet slides down to the tray.") : `The magnet is held with a ${magnetBand(state.distance).art} gap.`}</desc>
 <defs><linearGradient id="magnet-room" x2="0" y2="1"><stop stop-color="#fbf6e9"/><stop offset="1" stop-color="#e8dcc5"/></linearGradient><linearGradient id="magnet-brass"><stop stop-color="#73542c"/><stop offset=".4" stop-color="#cca55f"/><stop offset=".75" stop-color="#e9cc88"/><stop offset="1" stop-color="#a37d3f"/></linearGradient><linearGradient id="magnet-door"><stop stop-color="${s.face}"/><stop offset="1" stop-color="${s.edge}"/></linearGradient></defs>
 <rect width="820" height="440" fill="url(#magnet-room)"/><path d="M0 0h245L110 372H0Z" fill="#fffdf4" opacity=".6"/><path d="M65 54h130v181H65Z" fill="#e8e9d9" stroke="#c5b99d" stroke-width="6"/><path d="M130 57v176M68 146h124" stroke="#c5b99d" stroke-width="4"/>
 <path d="M22 388l39-42h717l29 42Z" fill="#c5a67a" stroke="#987b56"/><path d="M22 388h785v52H22Z" fill="#977652"/><path d="M41 384h749" stroke="#e6cfaa" stroke-width="3"/>
@@ -144,7 +163,7 @@ export function magnetPanel({ next = "" } = {}) {
     )
     .join(
       "",
-    )}</fieldset><fieldset class="magnet-prediction"><legend>Make a prediction</legend><button type="button" data-magnet-action="PREDICT" data-value="stick" aria-pressed="false">It will stick</button><button type="button" data-magnet-action="PREDICT" data-value="slide" aria-pressed="false">It will slide</button></fieldset><div class="magnet-bench"><div data-magnet-art></div><div class="magnet-labels"><span><b data-magnet-surface-label>Steel fridge door</b>View from the side</span><span><b data-magnet-pull-label>A very weak pull</b><small data-magnet-pull-note>Closer makes the pull stronger</small></span></div><div class="magnet-controls"><label class="magnet-slider">Move the magnet <span data-magnet-distance>Farther</span><input type="range" min="0" max="100" step="1" value="75" aria-label="Gap between magnet and surface" data-magnet-range><span class="magnet-range-ends"><span>Near</span><span>Far</span></span></label><button class="magnet-primary" type="button" data-magnet-action="TEST">Touch &amp; let go</button><button type="button" data-magnet-action="HOLD" disabled>Keep this view</button></div></div></div><p class="magnet-status" data-magnet-status role="status" aria-live="polite" aria-atomic="true"></p><p data-magnet-notice hidden>Which surface held the magnet? Tell how changing the gap changed the pull.</p><div data-magnet-talk hidden>${magnetTalkThrough()}</div><div class="magnet-external"><button type="button" data-magnet-action="RESET">Start again</button><button type="button" data-magnet-action="TALK">Talk it through</button></div></div><div data-magnet-static>${magnetDrawing()}${magnetTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
+    )}</fieldset><fieldset class="magnet-prediction"><legend>Make a prediction</legend><button type="button" data-magnet-action="PREDICT" data-value="stick" aria-pressed="false">It will stick</button><button type="button" data-magnet-action="PREDICT" data-value="slide" aria-pressed="false">It will slide</button></fieldset><div class="magnet-bench"><div data-magnet-art></div><div class="magnet-labels"><span><b data-magnet-surface-label>Steel fridge door</b>View from the side</span><span><b data-magnet-pull-label>A very weak pull</b><small data-magnet-pull-note>Closer makes the pull stronger</small></span></div><div class="magnet-controls"><label class="magnet-slider">Move the magnet <span data-magnet-distance>Farther</span><input type="range" min="0" max="100" step="1" value="75" aria-label="Gap between magnet and surface" data-magnet-range><span class="magnet-range-ends"><span>Near</span><span>Far</span></span></label><button class="magnet-primary" type="button" data-magnet-action="TEST">Touch &amp; let go</button></div></div></div><p class="magnet-status" data-magnet-status role="status" aria-live="polite" aria-atomic="true"></p><p data-magnet-notice hidden>Which surface held the magnet? Tell how changing the gap changed the pull.</p><div class="magnet-external"><button type="button" data-magnet-action="RESET">Start again</button></div></div><div data-magnet-static>${magnetDrawing()}${magnetTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
 }
 function mount() {
   const root = document.querySelector(".magnet-panel");
@@ -153,8 +172,7 @@ function mount() {
   let state = createMagnetState({ reducedMotion: media.matches }),
     frame = 0,
     started = 0;
-  const stage = root.querySelector("[data-magnet-stage]"),
-    range = root.querySelector("[data-magnet-range]");
+  const range = root.querySelector("[data-magnet-range]");
   root.querySelector("[data-magnet-live]").hidden = false;
   root.querySelector("[data-magnet-static]").remove();
   function render() {
@@ -162,8 +180,6 @@ function mount() {
     root.dataset.surface = state.surface;
     root.dataset.distance = state.distance.toFixed(2);
     root.dataset.progress = state.progress.toFixed(2);
-    stage.hidden = state.phase === "talk";
-    stage.inert = state.phase === "held";
     root.querySelector("[data-magnet-art]").innerHTML = magnetDrawing(state);
     range.value = state.distance;
     range.disabled = state.phase === "testing";
@@ -172,30 +188,16 @@ function mount() {
     ].magnetic
       ? "Closer makes the pull stronger"
       : "This surface does not attract the magnet";
-    const gap =
-      state.distance < 30
-        ? "Near"
-        : state.distance < 65
-          ? "A little farther"
-          : "Farther";
+    const band = magnetBand(state.distance),
+      gap = band.gap;
     range.setAttribute("aria-valuetext", gap);
     root.querySelector("[data-magnet-distance]").textContent = gap;
     root.querySelector("[data-magnet-surface-label]").textContent =
       MAGNET_SURFACES[state.surface].name;
     root.querySelector("[data-magnet-pull-label]").textContent =
-      !MAGNET_SURFACES[state.surface].magnetic
-        ? "No magnetic tug"
-        : state.distance < 30
-          ? "A stronger pull"
-          : state.distance < 65
-            ? "A weaker pull"
-            : "A very weak pull";
+      !MAGNET_SURFACES[state.surface].magnetic ? "No magnetic tug" : band.pull;
     root.querySelector('[data-magnet-action="TEST"]').disabled =
       state.phase === "testing";
-    root.querySelector('[data-magnet-action="HOLD"]').disabled = ![
-      "notice",
-      "held",
-    ].includes(state.phase);
     for (const b of root.querySelectorAll('[data-magnet-action="SURFACE"]'))
       b.setAttribute("aria-pressed", String(b.dataset.value === state.surface));
     for (const b of root.querySelectorAll('[data-magnet-action="PREDICT"]')) {
@@ -205,8 +207,8 @@ function mount() {
       );
       b.disabled = state.phase !== "predict";
     }
-    root.querySelector("[data-magnet-notice]").hidden = state.phase !== "held";
-    root.querySelector("[data-magnet-talk]").hidden = state.phase !== "talk";
+    root.querySelector("[data-magnet-notice]").hidden =
+      state.phase !== "notice";
     const live = root.querySelector("[data-magnet-status]"),
       notice = magnetNotice(state);
     if (live.textContent !== notice) live.textContent = notice;
@@ -226,7 +228,7 @@ function mount() {
   }
   root.addEventListener("click", (event) => {
     const button = event.target.closest("[data-magnet-action]");
-    if (!button || button.closest("[inert]")) return;
+    if (!button) return;
     const type = button.dataset.magnetAction,
       next = reduceMagnet(state, { type, value: button.dataset.value });
     if (next === state) return;
@@ -237,17 +239,9 @@ function mount() {
       started = 0;
       frame = requestAnimationFrame(tick);
     }
-    if (type === "HOLD")
-      root
-        .querySelector('[data-magnet-action="RESET"]')
-        .focus({ preventScroll: true });
     if (type === "RESET")
       root
         .querySelector('[data-magnet-action="TEST"]')
-        .focus({ preventScroll: true });
-    if (type === "TALK")
-      root
-        .querySelector("[data-magnet-talk] h3")
         .focus({ preventScroll: true });
   });
   range.addEventListener("input", () => {
