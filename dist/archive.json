@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T02:07:40.782Z",
-  "latest": "how-drill-bits-work",
+  "generatedAt": "2026-10-13T02:26:58.204Z",
+  "latest": "fridge-magnets",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "fridge-magnets",
+      "date": "2026-10-13",
+      "topic": "fridge magnets",
+      "title": "Fridge Magnets",
+      "teaser": "Some things stick. Some slide. How far can a pull reach?",
+      "href": "./days/fridge-magnets/",
+      "latest": true
+    },
     {
       "slug": "how-drill-bits-work",
       "date": "2026-10-12",
@@ -11,7 +20,7 @@
       "title": "How Drill Bits Work",
       "teaser": "A turning tip. A spiral path. Where do the chips go?",
       "href": "./days/how-drill-bits-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "electrons",
