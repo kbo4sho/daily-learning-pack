@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-drill-bits-work",
-  "topic": "how drill bits work",
-  "teaser": "A turning tip. A spiral path. Where do the chips go?",
+  "slug": "fridge-magnets",
+  "topic": "fridge magnets",
+  "teaser": "Some things stick. Some slide. How far can a pull reach?",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "story-problems",
+  "mathTemplate": "pattern-detective",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · HOW DRILL BITS WORK",
+  "editionLabel": "GRADE 3 · FRIDGE MAGNETS",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "How Drill Bits Work",
-  "question": "Why does a spiral move things when it spins?",
-  "idea": "A drill bit’s cutting lips shave off chips. Its spiral flutes carry the chips up and out as it turns.",
+  "title": "Fridge Magnets",
+  "question": "What sticks, what slides off, and how far can the pull reach?",
+  "idea": "A magnet pulls on some metals. The pull is stronger close by and weaker farther away.",
   "curiosity": {
-    "intro": "A twist in a metal rod gives tiny chips a way out.",
-    "carryForward": "Follow a spiral from the workbench to the garden and back.",
+    "intro": "A little tug at the fridge opens a kitchen full of questions.",
+    "carryForward": "Try one surface, change one thing, and notice what happens.",
     "questions": [
       {
-        "id": "tip",
-        "plate": "wake",
-        "question": "Which part makes the hole?",
-        "notice": "Look at the cutting edges at the tip.",
-        "say": "A twist drill bit is a metal rod with spiral grooves. As it turns and moves into the material, the cutting lips at its tip shave off tiny bits called chips.",
-        "try": "Trace the tip in the picture, then follow one spiral groove."
-      },
-      {
-        "id": "flutes",
-        "plate": "change",
-        "question": "Where do the chips go?",
-        "notice": "Follow the chips from the bottom of the hole to the top.",
-        "say": "The spiral grooves are called flutes. They help carry chips up and out as the bit turns, keeping the hole clear. The cutting lips make chips; the flutes give them a way out.",
-        "try": "Use the diorama to follow one chip up the flute."
-      },
-      {
-        "id": "thread",
+        "id": "hold",
         "plate": "reach",
-        "question": "What can we notice by turning slowly?",
-        "notice": "Look for a curl beside the screw thread.",
-        "say": "A screw has a spiral ridge called a thread. It acts like a ramp wrapped around the rod. Turning against the material helps the screw move in. A screw thread is a raised ridge; a drill flute is a groove.",
-        "try": "With Big close by, hand-turn a screw slowly into soap or clay on a tray and look at the curls. Power drills are tools for adults; kids do not use them. Big stays close. Try turning a pencil in an enclosed hand sharpener, too."
+        "question": "What holds a magnet to the fridge?",
+        "notice": "Look at the magnet holding the paper drawing.",
+        "say": "The magnet and the steel in this fridge door pull toward each other. The pull helps the magnet stay put. It can act through a thin piece of paper; the paper does not have to be magnetic.",
+        "try": "Point to the magnet, the paper, and the steel door. Tell which two pull toward each other."
       },
       {
-        "id": "cousins",
+        "id": "surfaces",
+        "plate": "change",
+        "question": "Will it stick to every surface?",
+        "notice": "The magnet rests at the bottom of the wood board.",
+        "say": "Magnets stick to some metals, including iron and many kinds of steel. They do not stick to wood, plastic, paper, or cloth. Aluminum foil and copper do not stick to an ordinary fridge magnet either.",
+        "try": "With Big nearby, predict and try a few fridge magnets on a fridge door or steel cookie sheet and a tray of paper, a plastic lid, wood, aluminum foil, and a steel paperclip. Notice what sticks and what slides. Keep magnets away from screens, cards with stripes, and mouths."
+      },
+      {
+        "id": "gap",
+        "plate": "notice",
+        "question": "How far can the pull reach?",
+        "notice": "Look for the tiny gap beside the paperclip.",
+        "say": "A magnetic pull can act across a gap. The closer the magnet is, the stronger the pull. Farther away, it gets weaker. Different magnets and objects can give different results.",
+        "try": "With Big beside you, slowly move a magnet toward a steel paperclip on a tray. Use a ruler or finger-widths to compare the gap where it first moves. Lift the paperclip a little with the magnet, then gently draw them apart over the tray until it lets go."
+      },
+      {
+        "id": "turn",
         "plate": "return",
-        "question": "What else can a turning spiral move?",
-        "notice": "Water rides from a low bowl to a higher cup.",
-        "say": "An auger lifts loose soil or ice from a hole. An Archimedes screw lifts pockets of water along a sloping tube. A spiral slopes along its length, so turning against material can push or carry that material along. It needs something to work against, not just empty space.",
-        "try": "Wrap a ribbon around a pencil and follow its sloping path with your eyes."
+        "question": "Can two magnets push apart?",
+        "notice": "Look at the two ends facing each other.",
+        "say": "Two magnets can pull together or push apart. Turning one magnet can change which ends face each other, changing the pull to a push.",
+        "try": "With Big, turn one of two large magnets around and notice whether they pull together or push apart."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-drill-bits-work/01-shape.jpg",
-      "original": "assets/how-drill-bits-work/01-shape.png",
-      "foldSrc": "assets/how-drill-bits-work/01-shape-fold.jpg",
-      "title": "A spiral to follow",
-      "alt": "Big and Little study a stationary twist drill bit on a wooden stand, with its tip and spiral flutes enlarged by a brass magnifier.",
-      "caption": "The cutting lips at the tip shave off chips."
+      "src": "assets/fridge-magnets/01-wonder.jpg",
+      "original": "assets/fridge-magnets/01-wonder.png",
+      "foldSrc": "assets/fridge-magnets/01-wonder-fold.jpg",
+      "title": "A small kitchen mystery",
+      "alt": "Big holds a magnifier beside an ochre magnet on the fridge while Little looks closely.",
+      "caption": "A magnet can pull on certain metals."
     },
     {
       "id": "reach",
-      "src": "assets/how-drill-bits-work/02-soap.jpg",
-      "original": "assets/how-drill-bits-work/02-soap.png",
-      "foldSrc": "assets/how-drill-bits-work/02-soap-fold.jpg",
-      "title": "A thread in the soap",
-      "alt": "Big turns a screw by hand into a bar of soap on a tray while Little watches the pale curls beside its thread.",
-      "caption": "A screw thread helps a turning screw move into the soap."
+      "src": "assets/fridge-magnets/02-stick.jpg",
+      "original": "assets/fridge-magnets/02-stick.png",
+      "foldSrc": "assets/fridge-magnets/02-stick-fold.jpg",
+      "title": "A pull that holds",
+      "alt": "Big and Little watch a round magnet holding a paper drawing to a steel fridge door.",
+      "caption": "The magnet and steel door pull toward each other."
     },
     {
       "id": "change",
-      "src": "assets/how-drill-bits-work/03-chips.jpg",
-      "original": "assets/how-drill-bits-work/03-chips.png",
-      "foldSrc": "assets/how-drill-bits-work/03-chips-fold.jpg",
-      "title": "A way out for chips",
-      "alt": "Big and Little observe a cutaway wooden block with chips along a drill bit’s flutes and beside the hole.",
-      "caption": "Flutes carry chips up and out of the hole."
+      "src": "assets/fridge-magnets/03-slide.jpg",
+      "original": "assets/fridge-magnets/03-slide.png",
+      "foldSrc": "assets/fridge-magnets/03-slide-fold.jpg",
+      "title": "Try another surface",
+      "alt": "A magnet rests at the bottom of a wood test board on a tray beside Little and Big.",
+      "caption": "Wood and plastic do not hold the magnet."
     },
     {
       "id": "notice",
-      "src": "assets/how-drill-bits-work/04-auger.jpg",
-      "original": "assets/how-drill-bits-work/04-auger.png",
-      "foldSrc": "assets/how-drill-bits-work/04-auger-fold.jpg",
-      "title": "A spiral in the soil",
-      "alt": "Big and Little study a hand auger in a garden soil cutaway, with loose soil resting on its broad spiral.",
-      "caption": "An auger lifts loose soil along its spiral."
+      "src": "assets/fridge-magnets/04-gap.jpg",
+      "original": "assets/fridge-magnets/04-gap.png",
+      "foldSrc": "assets/fridge-magnets/04-gap-fold.jpg",
+      "title": "A pull across a gap",
+      "alt": "Big and Little watch a steel paperclip tilt toward a nearby magnet beside a ruler.",
+      "caption": "Closer makes the pull stronger."
     },
     {
       "id": "return",
-      "src": "assets/how-drill-bits-work/05-water.jpg",
-      "original": "assets/how-drill-bits-work/05-water.png",
-      "foldSrc": "assets/how-drill-bits-work/05-water-fold.jpg",
-      "title": "Water takes a ride",
-      "alt": "Big and Little watch pockets of water in a sloping Archimedes screw leading from a low bowl to a higher cup.",
-      "caption": "An Archimedes screw lifts water to a higher place."
+      "src": "assets/fridge-magnets/05-turn.jpg",
+      "original": "assets/fridge-magnets/05-turn.png",
+      "foldSrc": "assets/fridge-magnets/05-turn-fold.jpg",
+      "title": "Turn and try again",
+      "alt": "Big holds two bar magnets with their ends facing as Little watches.",
+      "caption": "Turning a magnet can change a pull to a push."
     },
     {
       "id": "keep",
-      "src": "assets/how-drill-bits-work/06-wonder.jpg",
-      "original": "assets/how-drill-bits-work/06-wonder.png",
-      "foldSrc": "assets/how-drill-bits-work/06-wonder-fold.jpg",
-      "title": "What else can turn?",
-      "alt": "Little draws a spiral beside Big, a hand egg beater, a corkscrew in a cork, and an enclosed hand pencil sharpener.",
-      "caption": "Different turning shapes do different jobs."
+      "src": "assets/fridge-magnets/06-notebook.jpg",
+      "original": "assets/fridge-magnets/06-notebook.png",
+      "foldSrc": "assets/fridge-magnets/06-notebook-fold.jpg",
+      "title": "A question to keep",
+      "alt": "Little draws a magnet and paperclip in a notebook while Big looks on.",
+      "caption": "Try, notice, and keep a question."
     }
   ],
   "reading": {
-    "title": "Follow the spiral",
-    "coverPlate": "wake",
-    "coverText": "A drill bit, a soap curl, and a path that winds up.",
-    "foldableTitle": "How Drill Bits Work",
-    "foldableCoverLine": "A turn. A tiny chip. A way out.",
-    "foldableNote": "Follow the spiral and keep a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain drill bit, spiral, flute, cutting lip, chips, screw thread, and auger.",
+    "title": "Follow the pull",
+    "coverPlate": "notice",
+    "coverText": "A fridge door, a small gap, and a pull to explore.",
+    "foldableTitle": "Fridge Magnets",
+    "foldableCoverLine": "Some things stick. Some things slide.",
+    "foldableNote": "Keep a question from the kitchen.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain magnet, stick, pull, metal, fridge, and slide.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little follows the drill bit’s spiral, compares a screw in soap, sees chips leave a hole, and connects that path to an auger and a water screw before wondering about other turning tools.",
+      "arc": "Little starts with a magnet on the fridge, compares what sticks and slides, notices a pull across a gap, tries turning two magnets, and records a question to test again.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "A warm workbench scene: an enlarged stationary metal twist drill bit rests on a wood stand beneath a brass magnifier. Two spiral flutes and the tip are clearly visible. Big and Little look together, with a notebook and soft lamp light. No powered drill."
+          "intent": "A warm kitchen scene, Big and Little Wonderer looking closely at a large round ochre fridge magnet on a sage steel fridge door. Big holds a brass magnifier near the magnet; Little looks toward it. Notebook on a wood counter, soft lamp light. The round magnet is the clear central subject."
         },
         {
           "plate": "reach",
-          "intent": "Big and Little beside a tray on the same workbench. Big slowly hand-turns a large screw by its head into a white bar of soap. A few pale soap curls rest near its thread. Little observes close beside Big, no motor or power tools."
+          "intent": "Closer view beside the same sage steel fridge door. A large ochre round magnet holds one corner of a cream paper drawing against the door. Little has just let go; both hands are away. Big stands close beside Little and both look at the magnet holding the paper. Calm kitchen light."
         },
         {
           "plate": "change",
-          "intent": "An enlarged freestanding educational cutaway display on the workbench: a vertical twist drill bit in a wood block, front of the hole revealed. Fine amber chips at the cutting lips and along the spiral flutes lead up and out onto the surface. Big and Little observe from beside the display without touching it."
+          "intent": "A kitchen tabletop experiment on a shallow wooden tray. Big holds a plain wood test board upright; an ochre round magnet has slid down and now rests at the bottom of the board on the tray. Little looks at it, beside a plastic lid, paper scrap, folded cloth and aluminum foil. A steel paperclip waits separately. Quiet evidence, not falling action."
         },
         {
           "plate": "notice",
-          "intent": "A quiet garden beside a potting bench. An adult-sized hand auger stands in a soil cutaway display, with loose soil caught on its broad spiral flights above the hole. Big and Little observe beside it, not operating it. Warm low sunlight, notebook on the bench."
+          "intent": "A very close tabletop scene: Big holds a large round ochre magnet just above and to the left of a steel paperclip, which tilts toward the magnet across a very short visible air gap. Little watches beside Big. A wooden ruler lies flat alongside on the tray. Physically coherent, slight lift, no magical rays, soft lamp light."
         },
         {
           "plate": "return",
-          "intent": "A tabletop Archimedes screw demonstration: one sloping transparent tube from a low water bowl to a raised small cup. A broad helical screw inside lifts small pockets of blue water. Hand crank at top. Big beside Little, both watching, soft lamp light. Clear coherent water path."
+          "intent": "Big and Little compare two large simple bar magnets on the kitchen table. Big holds one bar magnet horizontally at each end, hands away from the tiny gap between their facing ends. Little watches from beside Big. One muted ochre magnet and one warm dark slate magnet. Both magnets are far from faces. Quiet shared curiosity, no arrows, text or sparks."
         },
         {
           "plate": "keep",
-          "intent": "A quiet kitchen table with a hand-crank egg beater, corkscrew resting in a cork, and enclosed hand pencil sharpener with one wood curl. Big beside Little as Little draws a spiral in the notebook. Shared wondering, lamp light. No text or headings."
+          "intent": "An open notebook with a simple drawing of a magnet and a steel paperclip with a small gap. Little draws with a pencil while Big looks beside Little. Large ochre fridge magnet, ruler and paperclip rest neatly on the tray, sage fridge in soft background. Notebook has only the small drawing, no text. A warm pool of lamplight closes the day."
         }
       ]
     },
@@ -154,275 +154,295 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A spiral to follow",
-        "passage": "Little Wonderer leaned toward the magnifier. A drill bit rested on the bench. This metal rod had a spiral shape that wound around and along it. “Why all the twists?” Little asked. Big pointed to the tip. Its cutting lips are edges that shave off tiny bits of material as the bit turns.",
-        "prompt": "How does the tip’s job differ from the spiral’s job?",
+        "title": "A small kitchen mystery",
+        "passage": "Little Wonderer noticed a round magnet on the fridge. It stayed in place without a hand holding it. A magnet is an object that can pull certain metals toward it. Little brought the magnifier closer. “What makes it stick?” Big Wonderer stood beside Little, ready to look for clues.",
+        "prompt": "What clue suggests a pull can act before things touch?",
         "foldable": {
-          "heading": "Follow the spiral",
-          "body": "Little found a spiral on a drill bit. As the bit turns, the cutting lips at its tip shave off tiny chips."
+          "heading": "A kitchen mystery",
+          "body": "Little found a magnet on the fridge. It stayed without a hand holding it. What could be pulling it toward the door?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A thread in the soap",
-        "passage": "Big slowly turned a screw into a bar of soap by hand. Little watched a pale curl gather beside it. A screw thread is a spiral ridge around a screw. As it turns against the material, the sloping thread helps pull the screw farther in. Turning can make something move along, too.",
-        "prompt": "How could a sloping thread help a screw move in?",
+        "title": "A pull that holds",
+        "passage": "Big lifted the magnet, then brought it close to the door. Little felt a tug before it touched. The magnet and the steel in this fridge door pulled toward each other. That pull helped it stick, or stay in place. A paper drawing stayed between them, even though the paper itself was not magnetic.",
+        "prompt": "Why can a magnet hold paper to a steel door without pulling on the paper itself?",
         "foldable": {
-          "heading": "A thread in soap",
-          "body": "Big turned a screw into soap. Its thread wound around like a tiny ramp, helping the screw move in with each turn."
+          "heading": "A pull that holds",
+          "body": "The magnet and steel door pulled toward each other. Their pull held a paper drawing, though the paper itself was not magnetic."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A way out for chips",
-        "passage": "Their cutaway display showed inside a hole. The drill bit’s sharp tip and cutting lips made small shavings called chips. Its spiral grooves, called flutes, gave those chips a path up and out as the bit turned. “Like a spiral slide going up!” said Little. The hole needed room for the next chips.",
-        "prompt": "Why does the hole need a path for chips to leave?",
+        "title": "Try another surface",
+        "passage": "Would the same magnet stick everywhere? Big held up a wood board over a tray. The magnet began to slide, moving down the smooth surface. It did not stick to the plastic lid, paper, or cloth either. Shiny aluminum foil did not hold it. “Metal is not one kind of stuff,” Little noticed.",
+        "prompt": "How did the foil test change the idea that all metal sticks?",
         "foldable": {
-          "heading": "A way out",
-          "body": "Chips need a way out of the hole. The drill bit’s spiral grooves, called flutes, carry them up as it turns."
+          "heading": "Some things slide",
+          "body": "The magnet slid down the wood. Plastic and foil did not hold it either. Little found that only some metals stick."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A spiral in the soil",
-        "passage": "At the garden bench, Big showed Little an auger. An auger is a tool with a broad spiral for making holes in soil or ice. Its lower edge loosens material. Turning lifts the loose bits along the spiral. Little traced the path in the notebook: around, up, and out of the hole.",
-        "prompt": "What do a drill bit and an auger both move out?",
+        "title": "A pull across a gap",
+        "passage": "Big set a steel paperclip on the tray, then moved the magnet nearer. Little watched the paperclip tip toward it across a small gap. Closer made the pull stronger. Farther away made it weaker. They moved slowly and checked the gap with a ruler. The distance that worked depended on this magnet and this paperclip.",
+        "prompt": "How could you check whether moving closer changes the pull?",
         "foldable": {
-          "heading": "Around and up",
-          "body": "An auger has a broad spiral. As it turns in the soil, it lifts loose dirt up and out of the hole."
+          "heading": "Across a small gap",
+          "body": "A steel paperclip tipped toward the magnet. Closer made the pull stronger. Farther away made it weaker. Little checked the gap."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Water takes a ride",
-        "passage": "Back at the table, a sloping tube joined a low bowl to a high cup. Inside was an Archimedes screw, a large spiral that can lift water. Big turned its handle. Pockets of water rode up between the spiral and the tube. Little watched water reach the cup above the bowl.",
-        "prompt": "How does turning help water reach a higher cup?",
+        "title": "Turn and try again",
+        "passage": "Big brought out a second magnet. One way round, the magnets pulled together with a little snap. Big turned one around. Now their facing ends pushed apart. Little tried to bring them closer and felt the push. The same two magnets could pull or push, depending on how their ends faced.",
+        "prompt": "What changed when Big turned one magnet around?",
         "foldable": {
-          "heading": "Water takes a ride",
-          "body": "Big turned the Archimedes screw. Pockets of water rode up the sloping tube and spilled into a cup higher than the bowl."
+          "heading": "Turn and try again",
+          "body": "Two magnets pulled together. Big turned one around, and their ends pushed apart. Little could feel that turning changed the pull."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "What else can turn?",
-        "passage": "Little found more turning tools. A corkscrew spirals into a cork to pull it out. Egg-beater gears make a hand-crank spin the beaters faster. A hand sharpener shaves pencil curls. Little drew a spiral. “Why does a spiral move things when it spins?”",
-        "prompt": "Which tools move material along, and which mainly spin it?",
+        "title": "A question to keep",
+        "passage": "Little drew the fridge, the wood board, and the paperclip in a notebook. “Some things stick. Some slide. And a pull can cross a gap!” Big nodded. Little left room for one more question: “What sticks, what slides off, and how far can the pull reach?”",
+        "prompt": "Which test would you repeat to learn how far the pull reaches?",
         "foldable": {
           "heading": "Keep a question",
-          "body": "Little drew a spiral beside the turning tools. “Why does a spiral move things when it spins?” The notebook had room to wonder."
+          "body": "Little drew the tests in a notebook. What sticks, what slides off, and how far can the pull reach? There was more to try."
         }
       }
     ],
     "words": [
       {
-        "word": "drill bit",
-        "meaning": "a tool that turns to make a hole"
+        "word": "magnet",
+        "meaning": "an object that can pull on certain metals"
       },
       {
-        "word": "spiral",
-        "meaning": "a shape that winds around and along a center"
+        "word": "stick",
+        "meaning": "stay in place against a surface"
       },
       {
-        "word": "flute",
-        "meaning": "a groove that carries chips out of a drilled hole"
+        "word": "pull",
+        "meaning": "a force that draws something closer"
       },
       {
-        "word": "cutting lip",
-        "meaning": "an edge at a drill bit’s tip that shaves material"
+        "word": "metal",
+        "meaning": "a kind of material, such as iron, steel, aluminum, or copper"
       },
       {
-        "word": "chips",
-        "meaning": "small bits shaved off a material"
+        "word": "fridge",
+        "meaning": "a machine that keeps food cool"
       },
       {
-        "word": "screw thread",
-        "meaning": "a spiral ridge around a screw"
-      },
-      {
-        "word": "auger",
-        "meaning": "a tool with a broad spiral for making holes and lifting loose material"
+        "word": "slide",
+        "meaning": "move along a surface"
       }
     ],
     "questions": [
-      "Why do cutting lips and flutes need to work together?",
-      "How is a screw thread different from a drill bit’s flute?",
-      "How are an auger and an Archimedes screw alike?"
+      "Why can the magnet hold paper on the fridge but not stick to paper by itself?",
+      "How did the wood and foil tests help Little change a guess?",
+      "What evidence showed that the pull was stronger close by?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for the soap test.",
-      "example": "Example: Turn the screw slowly into the soap, then look at the curls on the thread."
+      "prompt": "Write one command sentence for the magnet test.",
+      "example": "Example: Hold the magnet near the fridge, then slowly pull it away and notice when it lets go."
     }
   },
   "math": {
-    "title": "Turning-tool stories",
+    "title": "Find the fridge patterns",
     "plate": "wake",
-    "intro": "Read each little story. Decide whether to add or subtract.",
-    "eyebrow": "SIX WORKBENCH QUESTIONS",
-    "actionLabel": "Solve one step at a time",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "eyebrow": "SIX KITCHEN PATTERNS",
+    "actionLabel": "Find the step, then fill the gap",
     "tasks": [
       {
-        "skill": "one-step-add",
-        "operands": [
-          24,
-          17
+        "skill": "skip-next",
+        "sequence": [
+          2,
+          4,
+          6,
+          8
         ],
-        "prompt": "Little counts 24 screws in a jar. Big adds 17 more. How many screws are in the jar now?",
-        "equation": "24 + 17 =",
-        "hint": "Add the two groups. You can make a new ten.",
-        "answer": 41,
-        "worked": "24 + 17 = 41 screws. Add 20 + 10 and 4 + 7, then combine 30 + 11.",
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Little lines up magnets in pairs. What number comes next?",
+        "equation": "2, 4, 6, ___",
+        "hint": "Count forward by 2 each time.",
+        "answer": 8,
+        "worked": "6 + 2 = 8. Each step adds 2.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          63,
-          28
+        "skill": "skip-missing",
+        "sequence": [
+          15,
+          20,
+          25,
+          30
         ],
-        "prompt": "Big has 63 screws and puts 28 into a box. How many screws stay in the jar?",
-        "equation": "63 − 28 =",
-        "hint": "Start with the whole group and take away the screws put in the box.",
-        "answer": 35,
-        "worked": "63 − 28 = 35 screws. Take away 20 to get 43, then take away 8.",
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "Big counts sets of five magnetic tiles. What number is missing?",
+        "equation": "15, 20, ___, 30",
+        "hint": "Add 5 to the number before the blank.",
+        "answer": 25,
+        "worked": "20 + 5 = 25. Each step adds 5.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          16,
-          27
+        "skill": "skip-next",
+        "sequence": [
+          30,
+          40,
+          50,
+          60
         ],
-        "prompt": "Little counts 16 turns of a hand crank, then 27 more turns. How many turns does Little count altogether?",
-        "equation": "16 + 27 =",
-        "hint": "Add the turns from both rounds.",
-        "answer": 43,
-        "worked": "16 + 27 = 43 turns. Add 10 + 20 and 6 + 7, then combine 30 + 13.",
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Little counts fridge stickers in tens. What number comes next?",
+        "equation": "30, 40, 50, ___",
+        "hint": "Each new group adds 10 stickers.",
+        "answer": 60,
+        "worked": "50 + 10 = 60. Each step adds 10.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          54,
-          22
+        "skill": "skip-missing",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
         ],
-        "prompt": "There are 54 pencil curls on a tray. Little brushes 22 into a paper bag. How many curls remain on the tray?",
-        "equation": "54 − 22 =",
-        "hint": "Subtract the curls that leave the tray.",
-        "answer": 32,
-        "worked": "54 − 22 = 32 curls. Take away 20 to get 34, then take away 2.",
+        "step": 2,
+        "blankIndex": 1,
+        "prompt": "Little marks every second centimeter on a paper ruler. What number is missing?",
+        "equation": "12, ___, 16, 18",
+        "hint": "The marks go up by 2 centimeters.",
+        "answer": 14,
+        "worked": "12 + 2 = 14. Each step adds 2.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          38,
-          15
+        "skill": "skip-next",
+        "sequence": [
+          40,
+          45,
+          50,
+          55
         ],
-        "prompt": "Big turns an egg-beater handle 38 times, then 15 more times. How many handle turns does Big make in all?",
-        "equation": "38 + 15 =",
-        "hint": "Add the first turns and the extra turns.",
-        "answer": 53,
-        "worked": "38 + 15 = 53 turns. Add 10 to get 48, then add 5.",
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Big counts five more magnets in each row. What number comes next?",
+        "equation": "40, 45, 50, ___",
+        "hint": "Keep adding 5.",
+        "answer": 55,
+        "worked": "50 + 5 = 55. Each step adds 5.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          71,
-          34
+        "skill": "skip-missing",
+        "sequence": [
+          60,
+          70,
+          80,
+          90
         ],
-        "prompt": "A sand tray holds 71 small scoops of sand. A hand auger lifts out 34 scoops. How many scoops of sand remain?",
-        "equation": "71 − 34 =",
-        "hint": "Take away the scoops lifted out of the tray.",
-        "answer": 37,
-        "worked": "71 − 34 = 37 scoops. Take away 30 to get 41, then take away 4.",
+        "step": 10,
+        "blankIndex": 2,
+        "prompt": "Little counts magnetic letters in groups of ten. What number is missing?",
+        "equation": "60, 70, ___, 90",
+        "hint": "Count on by 10 from the number before the blank.",
+        "answer": 80,
+        "worked": "70 + 10 = 80. Each step adds 10.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one story and explain why you added or subtracted.",
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six one-step story problems within 100, with addition and subtraction. Story quantities are supplied numbers, not counts to infer from the pictures.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Decide whether the story joins groups or takes some away. Each problem needs one addition or subtraction. Welcome a drawing or spoken explanation."
+    "parentNote": "Age 8 / Grade 2 math. Six skip-counting sequences use steps of 2, 5, and 10 within 100. The supplied numbers are for counting practice, not measurements of magnetic reach.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
   },
   "writing": {
-    "title": "Give the soap test its words",
+    "title": "Give your magnet test its words",
     "intro": "Say one clear command, then draw or write it.",
     "plateIds": [
-      "wake",
       "reach",
-      "change"
+      "change",
+      "notice"
     ],
-    "draw": "Draw the screw in the soap. Add a curl beside the thread.",
-    "starter": "My soap-test command",
+    "draw": "Draw a magnet near the fridge or a steel paperclip. Show the gap.",
+    "starter": "My magnet-test command",
     "frames": [
       {
-        "plate": "wake",
-        "start": "First,",
-        "hint": "tell how to set the soap on a tray"
-      },
-      {
         "plate": "reach",
-        "start": "Then,",
-        "hint": "tell how to turn the screw slowly"
+        "start": "Hold",
+        "hint": "tell where to hold the magnet"
       },
       {
         "plate": "change",
-        "start": "Look for,",
-        "hint": "tell where to look for the curls"
+        "start": "Try",
+        "hint": "name a surface to test"
+      },
+      {
+        "plate": "notice",
+        "start": "Notice",
+        "hint": "tell what changes as the magnet moves"
       }
     ],
     "words": [
-      "turn",
-      "slowly",
-      "screw",
-      "soap",
-      "thread",
-      "curl",
-      "spiral",
+      "magnet",
+      "fridge",
+      "near",
+      "farther",
+      "pull",
+      "stick",
+      "slide",
       "notice"
     ],
-    "check": "Does your command tell what to do, using a word such as Turn, Look, or Notice?",
-    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Turn the screw slowly into the soap, then look at the curls on the thread.”"
+    "check": "Does your command tell what to do, using a word such as Hold, Try, or Notice?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Hold the magnet near the fridge, then slowly pull it away and notice when it lets go.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Cutting lips shave off chips, and flutes carry the chips out. Removing chips leaves space for more material to be shaved."
+      "text": "The magnet and steel door pull toward each other through the thin paper. Paper alone does not attract the magnet."
     },
     {
       "label": "Reading · 2",
-      "text": "A screw thread is a raised spiral ridge that helps the screw move in. A flute is a spiral groove that gives chips a way out."
+      "text": "Wood and aluminum foil did not hold the magnet. The evidence shows it sticks to some materials and some metals, not all of them."
     },
     {
       "label": "Reading · 3",
-      "text": "Both use a turning spiral to carry material along: an auger lifts loose soil or ice, and an Archimedes screw lifts water."
+      "text": "The paperclip tipped toward the magnet when it came closer. Moving farther away made the pull too weak to keep it lifted."
     },
     {
       "label": "Writing",
-      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Turn the screw slowly into the soap, then look at the curls on the thread.”"
+      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Hold the magnet near the fridge, then slowly pull it away and notice when it lets go.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Power drills are grown-up tools; kids do not use them. A grown-up stays close and leads the soap or clay activity, placing the material on a tray and choosing the screw. Use an enclosed hand pencil sharpener for the pencil-curl observation. The illustrated drill bit is a common twist bit. Its cutting lips remove material; flutes provide chip clearance as the bit rotates and advances. The diorama isolates chip travel in a fixed cutaway, with enlarged chips and a shortened path. Real chip shapes and motion depend on the material and bit. Screw threads are raised ridges, unlike the recessed flutes. A turning spiral needs contact or confinement to move material along. The egg beater uses gears for faster rotation; it does not lift material like an auger.",
+  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up stays nearby, chooses large intact fridge magnets, and leads the tray activity. Keep magnets away from screens, cards with stripes, and mouths. Use a steel fridge door or cookie sheet; some stainless-steel doors do not hold magnets. Iron and many steels attract strongly; ordinary fridge magnets do not stick to aluminum or copper. Paper, wood, plastic, and cloth are nonmagnetic test surfaces, though a thin layer can let a magnet hold against steel behind it. The magnet and steel attract each other; friction helps keep the magnet from sliding down the door. The diorama shows a qualitative comparison, not a measured range or force: its slider has near/far positions, and the contact test shows whether this magnet stays on the selected surface. Real reach depends on the magnet, object, gap, and friction. Two magnets can attract or repel depending on which poles face; flat fridge magnets may have several alternating poles, so use a pair of large bar magnets for the optional turning test.",
   "sources": [
     {
-      "label": "Sandvik Coromant · drill flutes and chip removal",
-      "url": "https://www.sandvik.coromant.com/en-us/products/corodrill_865/Pages/default.aspx"
+      "label": "Exploratorium · exploring magnets",
+      "url": "https://www.exploratorium.edu/sites/default/files/pdfs/Exploring_Magnets-FT_Chaperone_Guide_0.pdf"
     },
     {
-      "label": "Science Buddies · the Archimedes screw",
-      "url": "https://www.sciencebuddies.org/stem-activities/build-archimedes-screw"
+      "label": "Core Knowledge · investigating forces",
+      "url": "https://www.coreknowledge.org/wp-content/uploads/2019/09/CKSci_G3_U1_InvestigatingForces_SR.pdf"
     }
   ],
   "authoring": {
@@ -432,82 +452,80 @@
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
     "themeIntake": {
-      "topic": "how drill bits work",
-      "source": "queue/next-topic.txt",
-      "queued": true,
-      "queueDir": "queue",
-      "notes": [
-        "# Slug: how-drill-bits-work (packSlug of the topic line above). Pack for Mon 2026-10-12.",
-        "# Captain theme (relayed by Firstmate Sun 10/11 8:07 PM CT), his words: \"how drillbits work and maybe about how other rotating shapes can be used as tools.\"",
-        "# Notes: spiral flutes carry chips out; the cutting lip does the cutting. Rotating cousins: screws, augers, corkscrews, egg beaters, Archimedes screws.",
-        "# Hands-on, safe for a 7-year-old, NO power tools: hand-turn a screw into a bar of soap or clay; a pencil sharpener."
-      ],
-      "normalized": "how drill bits work",
-      "slug": "how-drill-bits-work"
+      "topic": "fridge magnets",
+      "source": "queue/standby.json",
+      "queued": false,
+      "cursor": 4,
+      "standby": {
+        "topic": "fridge magnets",
+        "note": "What sticks, what slides off, and how far the pull can reach."
+      },
+      "normalized": "fridge magnets",
+      "slug": "fridge-magnets"
     },
     "todo": []
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "drill-bits"
+    "diorama": "fridge-magnets"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "HOW DRILL BITS WORK · 2026-10-12",
-    "subtitle": "A turn. A tiny chip. A way out."
+    "edition": "FRIDGE MAGNETS · 2026-10-13",
+    "subtitle": "Some things stick. Some things slide."
   },
   "visualNotes": {
-    "intent": "Six new warm workbench, garden, and kitchen scenes follow the jobs of turning shapes.",
-    "prompts": "assets/how-drill-bits-work/prompts.json",
-    "provenance": "assets/how-drill-bits-work/provenance.json"
+    "intent": "Six new warm kitchen scenes explore surfaces, distance, and a shared question.",
+    "prompts": "assets/fridge-magnets/prompts.json",
+    "provenance": "assets/fridge-magnets/provenance.json"
   },
   "quiz": {
-    "title": "Four turning clues",
-    "intro": "Follow the tip, the chips, and the spiral path.",
+    "title": "Four clues from the fridge",
+    "intro": "Use what you noticed about surfaces, gaps, and turning.",
     "questions": [
       {
-        "id": "lips",
-        "prompt": "Which part of a twist drill bit shaves off material?",
+        "id": "hold",
+        "prompt": "Why does this magnet stay on the steel fridge door?",
         "choices": [
-          "The notebook",
-          "The cutting lips at the tip",
-          "The handle of the magnifier"
+          "The paper is sticky",
+          "The magnet and steel pull toward each other",
+          "Every smooth surface holds magnets"
         ],
         "answerIndex": 1,
-        "answer": "The cutting lips at the tip shave off material as the drill bit turns."
+        "answer": "The magnet and steel door pull toward each other, helping the magnet stay in place."
       },
       {
-        "id": "flutes",
-        "prompt": "What job do the flutes do?",
+        "id": "metal",
+        "prompt": "Which object is most likely to stick to a fridge magnet?",
         "choices": [
-          "Carry chips up and out",
-          "Glue chips into the hole",
-          "Turn wood into water"
+          "A steel paperclip",
+          "Aluminum foil",
+          "A plastic lid"
         ],
         "answerIndex": 0,
-        "answer": "Flutes are spiral grooves that carry chips up and out of the hole."
+        "answer": "A steel paperclip is attracted to a fridge magnet. Magnets stick to some metals, not all metals."
       },
       {
-        "id": "thread",
-        "prompt": "What is a screw thread?",
+        "id": "distance",
+        "prompt": "What usually happens as the magnet moves farther from the paperclip?",
         "choices": [
-          "A loose string",
-          "A groove in a notebook",
-          "A spiral ridge around a screw"
+          "The pull gets stronger",
+          "The paperclip becomes plastic",
+          "The pull gets weaker"
         ],
         "answerIndex": 2,
-        "answer": "A screw thread is a spiral ridge that helps a turning screw move into material."
+        "answer": "The pull gets weaker as the magnet moves farther from the paperclip."
       },
       {
-        "id": "water",
-        "prompt": "What can an Archimedes screw lift?",
+        "id": "turn",
+        "prompt": "What can happen when you turn one of two magnets around?",
         "choices": [
-          "Only pencil curls",
-          "Water from a low place to a higher place",
-          "Only empty air"
+          "Both magnets turn into wood",
+          "A pull can change to a push",
+          "The magnets always stop working"
         ],
         "answerIndex": 1,
-        "answer": "An Archimedes screw lifts pockets of water as its spiral turns inside a sloping tube."
+        "answer": "Turning one magnet can change a pull to a push because different ends face each other."
       }
     ]
   }
