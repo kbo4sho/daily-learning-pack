@@ -1,0 +1,91 @@
+{
+  "tool": "built-in image_gen",
+  "generatedUtc": "2026-10-14",
+  "newOriginals": true,
+  "outlineLockedBeforeImages": true,
+  "delivery": "JPEG quality 91; fold max 720px quality 87; PNG originals retained",
+  "records": [
+    {
+      "id": "wake",
+      "original": "assets/why-electronics-use-sine-waves/01-wiggle.png",
+      "delivery": "assets/why-electronics-use-sine-waves/01-wiggle.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/01-wiggle-fold.jpg",
+      "generationId": "exec-8dd81808-c397-4af6-b8b7-75078a68840c",
+      "sha256": {
+        "original": "7152cdbe11a00c7848a81406007a7f7050f3ffe04b7497d999fc4711c0bd48d0",
+        "src": "dfb936cd18b2fabfe9b0efc84b0679b524de459ffd1204d6dc6051dd501d6637",
+        "foldSrc": "674288f727b1cf9f11ff08ee6b61196c6416a001fff42673efd972ef462aafeb"
+      },
+      "editGenerationId": "exec-74b49f3c-eb10-408b-a7d9-537623d26972",
+      "edit": "Removed incidental botanical collection props; kept smooth stones and the science scene."
+    },
+    {
+      "id": "reach",
+      "original": "assets/why-electronics-use-sine-waves/02-swing.png",
+      "delivery": "assets/why-electronics-use-sine-waves/02-swing.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/02-swing-fold.jpg",
+      "generationId": "exec-06a5c045-24c5-417a-9527-b3a9c0486075",
+      "sha256": {
+        "original": "c02730755497c7ae3a8ead975260c26982c6696c3b121e75bdc1f5f2f74b0118",
+        "src": "7ca336b9bb7c9ae2735383b467261975bd49dbb90ecfb09f314bf0c8ad510b5e",
+        "foldSrc": "dc52372b336ed02b2f1c67f1ad809a04a11c666d7b83ac0ef38a90ec28ad9808"
+      }
+    },
+    {
+      "id": "change",
+      "original": "assets/why-electronics-use-sine-waves/03-spring.png",
+      "delivery": "assets/why-electronics-use-sine-waves/03-spring.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/03-spring-fold.jpg",
+      "generationId": "exec-dfcc1df1-feb0-437d-a9a0-aa14171679ec",
+      "sha256": {
+        "original": "fdf924c412eeb30f7a50ef717b18c10f2d00520bac2cb650c62bd18af528f283",
+        "src": "4ce0b3ebd362c21cc89c456b096ab220464f839dbc1b8091840ad389edebd593",
+        "foldSrc": "b4d579e0321be04f05ecf2c227527bcc06d461161e3475aa1bed44815c517c49"
+      },
+      "editGenerationId": "exec-83fc9a3a-7ad2-442a-a8ac-d97732541751",
+      "edit": "Removed incidental botanical collection props; kept smooth stones and the science scene."
+    },
+    {
+      "id": "notice",
+      "original": "assets/why-electronics-use-sine-waves/04-rope.png",
+      "delivery": "assets/why-electronics-use-sine-waves/04-rope.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/04-rope-fold.jpg",
+      "generationId": "exec-9ef22ee9-75fe-4d65-8338-42ef8a77ed04",
+      "sha256": {
+        "original": "349e7caa76cd54b4702614c0f3028d7bc4e4fdee69129627cde0649ce6e562cf",
+        "src": "c536c4464eebbf7cff01668965ae358be399a796a3683f9d168cd156e39d3d22",
+        "foldSrc": "235df7e426e653d4b69b19203aeb681d33f1b092d25d5c277934a42bc4f2fc05"
+      },
+      "editGenerationId": "exec-5dcc02f0-5693-45d9-9c6d-0808ccc850cb",
+      "edit": "Placed the rope fully on the rug in the horizontal plane."
+    },
+    {
+      "id": "return",
+      "original": "assets/why-electronics-use-sine-waves/05-generator.png",
+      "delivery": "assets/why-electronics-use-sine-waves/05-generator.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/05-generator-fold.jpg",
+      "generationId": "exec-e49fe094-76c6-4c75-9307-1bbcf93bb15c",
+      "sha256": {
+        "original": "1698cf2e4ff612abfebe585d825bbfbb0b88ede69711658a1269934063373df2",
+        "src": "f59f1ea29aa2b3802a6f165f855f3ea6479682dc5eac6d223f1b5f029cb4bca0",
+        "foldSrc": "5a29f8151356964678fbaf64f2679899801629f0b374e8f432ee302754e04506"
+      },
+      "editGenerationId": "exec-619edd1d-3a21-468a-b3f3-d4c95532161c",
+      "edit": "Removed incidental botanical collection props; kept smooth stones and the science scene."
+    },
+    {
+      "id": "keep",
+      "original": "assets/why-electronics-use-sine-waves/06-speaker.png",
+      "delivery": "assets/why-electronics-use-sine-waves/06-speaker.jpg",
+      "fold": "assets/why-electronics-use-sine-waves/06-speaker-fold.jpg",
+      "generationId": "exec-4b0f2a6f-a530-41a7-956e-3b87d35e165c",
+      "sha256": {
+        "original": "c8522789ecfc5e7db03190bb62f7d9f285a25c20ae47493b2af802668f676a87",
+        "src": "0273f245d92a65c5291987b17a82a5b1c49872cab4c30ee8a0a3d8f85837f692",
+        "foldSrc": "bc016f8ab67f654cb5bd58617848d0fa1f30bc8cadb6f79f97050786d8e9c601"
+      },
+      "editGenerationId": "exec-3eaf850c-0f27-4984-850d-e57af72198c5",
+      "edit": "Removed incidental botanical collection props; kept smooth stones and the science scene."
+    }
+  ]
+}

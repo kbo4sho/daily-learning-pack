@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "fridge-magnets",
-  "topic": "fridge magnets",
-  "teaser": "Some things stick. Some slide. How far can a pull reach?",
+  "slug": "why-electronics-use-sine-waves",
+  "topic": "why electronics use sine waves",
+  "teaser": "A swing, a spring, and a speaker share a smooth rhythm.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "pattern-detective",
+  "mathTemplate": "groups-and-arrays",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · FRIDGE MAGNETS",
+  "editionLabel": "GRADE 3 · SINE WAVES",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Fridge Magnets",
-  "question": "What sticks, what slides off, and how far can the pull reach?",
-  "idea": "A magnet pulls on some metals. The pull is stronger close by and weaker farther away.",
+  "title": "Why Electronics Use Sine Waves",
+  "question": "Where else do you see a smooth back-and-forth wiggle?",
+  "idea": "A sine wave records a smooth, repeating wiggle. Spinning generators and speakers making pure tones use this rhythm.",
   "curiosity": {
-    "intro": "A little tug at the fridge opens a kitchen full of questions.",
-    "carryForward": "Try one surface, change one thing, and notice what happens.",
+    "intro": "Follow one smooth wiggle from the living room into sound and power.",
+    "carryForward": "Keep a small drawing of a rhythm you noticed.",
     "questions": [
       {
-        "id": "hold",
+        "id": "shape",
         "plate": "reach",
-        "question": "What holds a magnet to the fridge?",
-        "notice": "Look at the magnet holding the paper drawing.",
-        "say": "The magnet and the steel in this fridge door pull toward each other. The pull helps the magnet stay put. It can act through a thin piece of paper; the paper does not have to be magnetic.",
-        "try": "Point to the magnet, the paper, and the steel door. Tell which two pull toward each other."
+        "question": "What is a sine wave?",
+        "notice": "Notice how the swing slows near the end of its trip.",
+        "say": "A sine wave is a smooth back-and-forth wiggle that repeats. It can show how a position or an electric push changes over time. A gentle swing moves in a sine-like rhythm; its seat travels along an arc.",
+        "try": "With Big nearby, take a gentle swing, bounce a soft toy spring over a tray, or move a rope from side to side on the floor. Draw the smooth wiggle you notice. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker."
       },
       {
-        "id": "surfaces",
-        "plate": "change",
-        "question": "Will it stick to every surface?",
-        "notice": "The magnet rests at the bottom of the wood board.",
-        "say": "Magnets stick to some metals, including iron and many kinds of steel. They do not stick to wood, plastic, paper, or cloth. Aluminum foil and copper do not stick to an ordinary fridge magnet either.",
-        "try": "With Big nearby, predict and try a few fridge magnets on a fridge door or steel cookie sheet and a tray of paper, a plastic lid, wood, aluminum foil, and a steel paperclip. Notice what sticks and what slides. Keep magnets away from screens, cards with stripes, and mouths."
-      },
-      {
-        "id": "gap",
-        "plate": "notice",
-        "question": "How far can the pull reach?",
-        "notice": "Look for the tiny gap beside the paperclip.",
-        "say": "A magnetic pull can act across a gap. The closer the magnet is, the stronger the pull. Farther away, it gets weaker. Different magnets and objects can give different results.",
-        "try": "With Big beside you, slowly move a magnet toward a steel paperclip on a tray. Use a ruler or finger-widths to compare the gap where it first moves. Lift the paperclip a little with the magnet, then gently draw them apart over the tray until it lets go."
-      },
-      {
-        "id": "turn",
+        "id": "power",
         "plate": "return",
-        "question": "Can two magnets push apart?",
-        "notice": "Look at the two ends facing each other.",
-        "say": "Two magnets can pull together or push apart. Turning one magnet can change which ends face each other, changing the pull to a push.",
-        "try": "With Big, turn one of two large magnets around and notice whether they pull together or push apart."
+        "question": "How can spinning make a wave?",
+        "notice": "Find the turning disk beside the wire coil.",
+        "say": "A generator turns motion into electrical energy. As a magnet spins beside wire, the electric push changes smoothly, first one way and then the other. Many generators make the AC power supplied at home. AC means that the push changes direction repeatedly.",
+        "try": "Draw a dot on a paper circle. Turn the circle slowly and watch the dot rise and fall."
+      },
+      {
+        "id": "sound",
+        "plate": "keep",
+        "question": "What wiggles inside a speaker?",
+        "notice": "Look at the circle on the front of the speaker.",
+        "say": "The speaker cone moves in and out, making the air nearby squeeze and spread. Those changes travel to your ears as sound. For a pure, steady tone, the cone moves in a sine-like rhythm. Music and voices make more complicated wiggles.",
+        "try": "Let Big set an intact battery speaker to low volume. Rest fingertips lightly on its outer case, leaving the cone alone, and notice any quiet buzz. A drawing of the cone’s motion works too."
+      },
+      {
+        "id": "why",
+        "plate": "wake",
+        "question": "Why use a smooth wiggle?",
+        "notice": "Follow the rounded turns in Little’s notebook.",
+        "say": "Spinning parts can make sine waves naturally. Smooth changes help many motors and speakers work evenly. Sudden jumps can make extra buzz or jerky starts. Electronics also use steady power and other signal shapes; not every signal is a sine wave.",
+        "try": "Draw a smooth wave and a zigzag. Trace them slowly with a finger and compare the turns."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/fridge-magnets/01-wonder.jpg",
-      "original": "assets/fridge-magnets/01-wonder.png",
-      "foldSrc": "assets/fridge-magnets/01-wonder-fold.jpg",
-      "title": "A small kitchen mystery",
-      "alt": "Big holds a magnifier beside an ochre magnet on the fridge while Little looks closely.",
-      "caption": "A magnet can pull on certain metals."
+      "src": "assets/why-electronics-use-sine-waves/01-wiggle.jpg",
+      "original": "assets/why-electronics-use-sine-waves/01-wiggle.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/01-wiggle-fold.jpg",
+      "title": "A line with a rhythm",
+      "alt": "Big and Little lean over a notebook with a smooth sine-shaped line, beside a small speaker and spring.",
+      "caption": "A sine wave is a smooth, repeating wiggle."
     },
     {
       "id": "reach",
-      "src": "assets/fridge-magnets/02-stick.jpg",
-      "original": "assets/fridge-magnets/02-stick.png",
-      "foldSrc": "assets/fridge-magnets/02-stick-fold.jpg",
-      "title": "A pull that holds",
-      "alt": "Big and Little watch a round magnet holding a paper drawing to a steel fridge door.",
-      "caption": "The magnet and steel door pull toward each other."
+      "src": "assets/why-electronics-use-sine-waves/02-swing.jpg",
+      "original": "assets/why-electronics-use-sine-waves/02-swing.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/02-swing-fold.jpg",
+      "title": "Slow at the turn",
+      "alt": "Little sits on a low wooden swing holding both ropes, with Big close beside it.",
+      "caption": "A gentle swing slows near each turn."
     },
     {
       "id": "change",
-      "src": "assets/fridge-magnets/03-slide.jpg",
-      "original": "assets/fridge-magnets/03-slide.png",
-      "foldSrc": "assets/fridge-magnets/03-slide-fold.jpg",
-      "title": "Try another surface",
-      "alt": "A magnet rests at the bottom of a wood test board on a tray beside Little and Big.",
-      "caption": "Wood and plastic do not hold the magnet."
+      "src": "assets/why-electronics-use-sine-waves/03-spring.jpg",
+      "original": "assets/why-electronics-use-sine-waves/03-spring.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/03-spring-fold.jpg",
+      "title": "A bounce comes back",
+      "alt": "Big holds a hanging spring above a tray while Little watches.",
+      "caption": "A spring can bounce up and down."
     },
     {
       "id": "notice",
-      "src": "assets/fridge-magnets/04-gap.jpg",
-      "original": "assets/fridge-magnets/04-gap.png",
-      "foldSrc": "assets/fridge-magnets/04-gap-fold.jpg",
-      "title": "A pull across a gap",
-      "alt": "Big and Little watch a steel paperclip tilt toward a nearby magnet beside a ruler.",
-      "caption": "Closer makes the pull stronger."
+      "src": "assets/why-electronics-use-sine-waves/04-rope.jpg",
+      "original": "assets/why-electronics-use-sine-waves/04-rope.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/04-rope-fold.jpg",
+      "title": "A wiggle travels",
+      "alt": "Big and Little hold a soft rope that curves across the living-room floor.",
+      "caption": "The wiggle travels along the rope."
     },
     {
       "id": "return",
-      "src": "assets/fridge-magnets/05-turn.jpg",
-      "original": "assets/fridge-magnets/05-turn.png",
-      "foldSrc": "assets/fridge-magnets/05-turn-fold.jpg",
-      "title": "Turn and try again",
-      "alt": "Big holds two bar magnets with their ends facing as Little watches.",
-      "caption": "Turning a magnet can change a pull to a push."
+      "src": "assets/why-electronics-use-sine-waves/05-generator.jpg",
+      "original": "assets/why-electronics-use-sine-waves/05-generator.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/05-generator-fold.jpg",
+      "title": "A turn makes a push",
+      "alt": "Big and Little examine a hand-cranked teaching model with a disk and wire coil inside a clear case.",
+      "caption": "Spinning can make a smoothly changing electric push."
     },
     {
       "id": "keep",
-      "src": "assets/fridge-magnets/06-notebook.jpg",
-      "original": "assets/fridge-magnets/06-notebook.png",
-      "foldSrc": "assets/fridge-magnets/06-notebook-fold.jpg",
-      "title": "A question to keep",
-      "alt": "Little draws a magnet and paperclip in a notebook while Big looks on.",
-      "caption": "Try, notice, and keep a question."
+      "src": "assets/why-electronics-use-sine-waves/06-speaker.jpg",
+      "original": "assets/why-electronics-use-sine-waves/06-speaker.png",
+      "foldSrc": "assets/why-electronics-use-sine-waves/06-speaker-fold.jpg",
+      "title": "A quiet tone",
+      "alt": "Little touches the outer wooden speaker cabinet beside Big and a notebook with a smooth wave drawing.",
+      "caption": "A speaker moves air to make sound."
     }
   ],
   "reading": {
-    "title": "Follow the pull",
-    "coverPlate": "notice",
-    "coverText": "A fridge door, a small gap, and a pull to explore.",
-    "foldableTitle": "Fridge Magnets",
-    "foldableCoverLine": "Some things stick. Some things slide.",
-    "foldableNote": "Keep a question from the kitchen.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain magnet, stick, pull, metal, fridge, and slide.",
+    "title": "Follow the smooth wiggle",
+    "coverPlate": "wake",
+    "coverText": "From a gentle swing to a speaker’s quiet tone.",
+    "foldableTitle": "A smooth back-and-forth wiggle",
+    "foldableCoverLine": "Why electronics use sine waves",
+    "foldableNote": "Watch the swing, the spring, and the speaker — then pause whenever you like.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sine wave, wiggle, swing, spring, generator, and speaker to the scenes.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little starts with a magnet on the fridge, compares what sticks and slides, notices a pull across a gap, tries turning two magnets, and records a question to test again.",
+      "arc": "Little draws a smooth wave, notices its rhythm in a swing and spring, sends a wiggle along a rope, and connects the same changing shape to generator power and a speaker’s steady tone.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "A warm kitchen scene, Big and Little Wonderer looking closely at a large round ochre fridge magnet on a sage steel fridge door. Big holds a brass magnifier near the magnet; Little looks toward it. Notebook on a wood counter, soft lamp light. The round magnet is the clear central subject."
+          "intent": "A cozy living-room craft table. Big and Little Wonderer lean together over a wide cream notebook, where Little draws one clean smooth sine-shaped line with two rounded hills and valleys in muted ochre. A small intact wooden speaker and a loose spring sit on a tray in the background. The notebook and shared gaze are central; a soft lamp pools light on paper. No words on the page."
         },
         {
           "plate": "reach",
-          "intent": "Closer view beside the same sage steel fridge door. A large ochre round magnet holds one corner of a cream paper drawing against the door. Little has just let go; both hands are away. Big stands close beside Little and both look at the magnet holding the paper. Calm kitchen light."
+          "intent": "A quiet garden beside the living-room window. Little Wonderer sits securely on a low wooden playground swing with two ropes, both hands holding the ropes. Big stands beside the swing within easy reach. The swing is tilted only slightly, a small gentle movement. Warm late-day light, grass below, spacious calm scene. No duplicate bodies or motion trails."
         },
         {
           "plate": "change",
-          "intent": "A kitchen tabletop experiment on a shallow wooden tray. Big holds a plain wood test board upright; an ochre round magnet has slid down and now rests at the bottom of the board on the tray. Little looks at it, beside a plastic lid, paper scrap, folded cloth and aluminum foil. A steel paperclip waits separately. Quiet evidence, not falling action."
+          "intent": "Back at the craft table, Big holds the top of a large soft toy spring above a wide shallow tray. Little watches beside Big, one hand resting on the table, their shared gaze on the hanging spring. The spring has an open rounded coil shape, gently stretched vertically. Notebook at one side; warm lamplight, no diagrams or words."
         },
         {
           "plate": "notice",
-          "intent": "A very close tabletop scene: Big holds a large round ochre magnet just above and to the left of a steel paperclip, which tilts toward the magnet across a very short visible air gap. Little watches beside Big. A wooden ruler lies flat alongside on the tray. Physically coherent, slight lift, no magical rays, soft lamp light."
+          "intent": "Living-room floor in warm window light. Little holds one end of a thick soft cotton rope on the floor. Big sits nearby holding the far end loosely. The rope makes a long gentle sideways wave across the rug between them; the whole rope stays on the floor. No rope loops near either character. One readable curve, notebook nearby."
         },
         {
           "plate": "return",
-          "intent": "Big and Little compare two large simple bar magnets on the kitchen table. Big holds one bar magnet horizontally at each end, hands away from the tiny gap between their facing ends. Little watches from beside Big. One muted ochre magnet and one warm dark slate magnet. Both magnets are far from faces. Quiet shared curiosity, no arrows, text or sparks."
+          "intent": "A warm craft-table illustration of a large simple educational generator model on a wooden base, an enclosed clear case containing one muted gold-and-slate rotating disk beside a copper-colored wire coil. Big points to the disk and Little looks closely. A broad hand crank remains outside the case. On paper beside it is one simple sine-shaped line without labels. It is a self-contained teaching object with no plugs, power cords, or disassembled appliance."
         },
         {
           "plate": "keep",
-          "intent": "An open notebook with a simple drawing of a magnet and a steel paperclip with a small gap. Little draws with a pencil while Big looks beside Little. Large ochre fridge magnet, ruler and paperclip rest neatly on the tray, sage fridge in soft background. Notebook has only the small drawing, no text. A warm pool of lamplight closes the day."
+          "intent": "Close living-room craft table scene. A small intact freestanding wooden speaker with a dark circular cone behind its grille rests on a tray. Little rests fingertips gently on the OUTER wooden cabinet, well away from the cone. Big sits beside Little, hand near a small volume knob set low. An open cream notebook in front has a clean smooth sine-shaped pencil line and tiny sketches of a swing and spring, no text. Quiet shared attention, warm lamp light."
         }
       ]
     },
@@ -154,295 +154,263 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A small kitchen mystery",
-        "passage": "Little Wonderer noticed a round magnet on the fridge. It stayed in place without a hand holding it. A magnet is an object that can pull certain metals toward it. Little brought the magnifier closer. “What makes it stick?” Big Wonderer stood beside Little, ready to look for clues.",
-        "prompt": "What clue suggests a pull can act before things touch?",
+        "title": "A line with a rhythm",
+        "passage": "Little Wonderer drew a line that rose, curved over, and dipped down. Again and again, it made the same smooth wiggle. “That shape is called a sine wave,” said Big Wonderer. Sine is the math name for this smooth shape. Could a line on paper help explain a swing, a speaker, and electricity?",
+        "prompt": "What repeats in Little’s line?",
         "foldable": {
-          "heading": "A kitchen mystery",
-          "body": "Little found a magnet on the fridge. It stayed without a hand holding it. What could be pulling it toward the door?"
+          "heading": "A smooth wiggle",
+          "body": "Little drew a smooth line that rose and fell again. Big called it a sine wave. Could this shape help explain a speaker?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A pull that holds",
-        "passage": "Big lifted the magnet, then brought it close to the door. Little felt a tug before it touched. The magnet and the steel in this fridge door pulled toward each other. That pull helped it stick, or stay in place. A paper drawing stayed between them, even though the paper itself was not magnetic.",
-        "prompt": "Why can a magnet hold paper to a steel door without pulling on the paper itself?",
+        "title": "Slow at the turn",
+        "passage": "Outside, Little took a gentle swing. Near each end, the swing slowed, paused, and came back. It moved fastest through the middle. Its seat followed an arc. A sine-like line could show its back-and-forth position as time passed. The line was a record of the motion, not the shape of the seat’s path.",
+        "prompt": "How is a record of motion different from the seat’s path?",
         "foldable": {
-          "heading": "A pull that holds",
-          "body": "The magnet and steel door pulled toward each other. Their pull held a paper drawing, though the paper itself was not magnetic."
+          "heading": "Slow at the turn",
+          "body": "The swing slowed at each end and sped through the middle. A sine-like line could record its back-and-forth motion as time passed."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Try another surface",
-        "passage": "Would the same magnet stick everywhere? Big held up a wood board over a tray. The magnet began to slide, moving down the smooth surface. It did not stick to the plastic lid, paper, or cloth either. Shiny aluminum foil did not hold it. “Metal is not one kind of stuff,” Little noticed.",
-        "prompt": "How did the foil test change the idea that all metal sticks?",
+        "title": "A bounce comes back",
+        "passage": "At the table, Big held a spring above a tray. A spring is a coil that can stretch and return. Its lower end bounced up and down, slowing near each turn. Little watched the bounces grow smaller. A steady sine wave repeats evenly; this real spring gradually settled as it lost energy to its surroundings.",
+        "prompt": "What changed about the spring’s bounces over time?",
         "foldable": {
-          "heading": "Some things slide",
-          "body": "The magnet slid down the wood. Plastic and foil did not hold it either. Little found that only some metals stick."
+          "heading": "A bouncing spring",
+          "body": "Big held a spring above a tray. Its end bounced up and down. Each bounce grew smaller until the spring settled."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A pull across a gap",
-        "passage": "Big set a steel paperclip on the tray, then moved the magnet nearer. Little watched the paperclip tip toward it across a small gap. Closer made the pull stronger. Farther away made it weaker. They moved slowly and checked the gap with a ruler. The distance that worked depended on this magnet and this paperclip.",
-        "prompt": "How could you check whether moving closer changes the pull?",
+        "title": "A wiggle travels",
+        "passage": "Little moved one end of a rope gently from side to side along the floor. A wiggle traveled toward Big. Bits of rope moved back and forth while the wave moved along. Little drew its rounded shape. Smooth turning felt different from suddenly changing direction. The same kind of curve kept appearing in new places.",
+        "prompt": "What traveled along the rope, and what moved back and forth?",
         "foldable": {
-          "heading": "Across a small gap",
-          "body": "A steel paperclip tipped toward the magnet. Closer made the pull stronger. Farther away made it weaker. Little checked the gap."
+          "heading": "Along the rope",
+          "body": "Little moved a rope from side to side. A wiggle traveled toward Big, while each bit of rope moved back and forth."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Turn and try again",
-        "passage": "Big brought out a second magnet. One way round, the magnets pulled together with a little snap. Big turned one around. Now their facing ends pushed apart. Little tried to bring them closer and felt the push. The same two magnets could pull or push, depending on how their ends faced.",
-        "prompt": "What changed when Big turned one magnet around?",
+        "title": "A turn makes a push",
+        "passage": "Big showed a generator: a machine that turns motion into electrical energy. Its magnet spins beside wire. The electric push grows, fades, and reverses smoothly. A sine wave records this change. Many spinning generators make AC power for homes. AC means the push changes direction again and again.",
+        "prompt": "How does spinning change the electric push?",
         "foldable": {
-          "heading": "Turn and try again",
-          "body": "Two magnets pulled together. Big turned one around, and their ends pushed apart. Little could feel that turning changed the pull."
+          "heading": "Turning into power",
+          "body": "A generator turns motion into electrical energy. As a magnet spins beside wire, the electric push grows, fades, and changes direction smoothly."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A question to keep",
-        "passage": "Little drew the fridge, the wood board, and the paperclip in a notebook. “Some things stick. Some slide. And a pull can cross a gap!” Big nodded. Little left room for one more question: “What sticks, what slides off, and how far can the pull reach?”",
-        "prompt": "Which test would you repeat to learn how far the pull reaches?",
+        "title": "A quiet tone",
+        "passage": "The speaker made a quiet tone. Its cone moved in and out, nudging air. A pure tone follows a sine-like rhythm. Smooth changes help machines work evenly. Electronics use other shapes too. Little wondered, “Where else can we find this smooth wiggle?”",
+        "prompt": "Where else could you notice a smooth wiggle?",
         "foldable": {
-          "heading": "Keep a question",
-          "body": "Little drew the tests in a notebook. What sticks, what slides off, and how far can the pull reach? There was more to try."
+          "heading": "A speaker’s rhythm",
+          "body": "The speaker’s cone moved in and out to make a steady tone. Little drew its smooth rhythm. Where else might a wiggle appear?"
         }
       }
     ],
     "words": [
       {
-        "word": "magnet",
-        "meaning": "an object that can pull on certain metals"
+        "word": "sine wave",
+        "meaning": "the math name for a smooth, repeating wave shape"
       },
       {
-        "word": "stick",
-        "meaning": "stay in place against a surface"
+        "word": "wiggle",
+        "meaning": "a small movement back and forth"
       },
       {
-        "word": "pull",
-        "meaning": "a force that draws something closer"
+        "word": "swing",
+        "meaning": "a hanging seat that moves back and forth along an arc"
       },
       {
-        "word": "metal",
-        "meaning": "a kind of material, such as iron, steel, aluminum, or copper"
+        "word": "spring",
+        "meaning": "a coil that can stretch and return"
       },
       {
-        "word": "fridge",
-        "meaning": "a machine that keeps food cool"
+        "word": "generator",
+        "meaning": "a machine that changes motion into electrical energy"
       },
       {
-        "word": "slide",
-        "meaning": "move along a surface"
+        "word": "speaker",
+        "meaning": "a device whose moving cone nudges air to make sound"
       }
     ],
     "questions": [
-      "Why can the magnet hold paper on the fridge but not stick to paper by itself?",
-      "How did the wood and foil tests help Little change a guess?",
-      "What evidence showed that the pull was stronger close by?"
+      "Why does the wave drawing differ from the path of the swing’s seat?",
+      "How does a spinning generator make a changing electric push?",
+      "What moves in a speaker to make a steady tone?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for the magnet test.",
-      "example": "Example: Hold the magnet near the fridge, then slowly pull it away and notice when it lets go."
+      "prompt": "Write one command sentence for a gentle wiggle.",
+      "example": "Example: Swing gently, then draw the smooth path you felt."
     }
   },
   "math": {
-    "title": "Find the fridge patterns",
+    "title": "Count groups of wiggles",
     "plate": "wake",
-    "intro": "Look for the step between numbers. Fill each missing number.",
-    "eyebrow": "SIX KITCHEN PATTERNS",
-    "actionLabel": "Find the step, then fill the gap",
+    "intro": "Add the same number for each equal group or row.",
+    "eyebrow": "SIX GROUPS TO EXPLORE",
+    "actionLabel": "Add the equal groups",
     "tasks": [
       {
-        "skill": "skip-next",
-        "sequence": [
-          2,
-          4,
-          6,
-          8
-        ],
-        "step": 2,
-        "blankIndex": 3,
-        "prompt": "Little lines up magnets in pairs. What number comes next?",
-        "equation": "2, 4, 6, ___",
-        "hint": "Count forward by 2 each time.",
-        "answer": 8,
-        "worked": "6 + 2 = 8. Each step adds 2.",
-        "plate": "wake",
+        "skill": "equal-groups",
+        "rows": 2,
+        "columns": 3,
+        "prompt": "Little draws 2 groups of swing marks, with 3 marks in each group. How many marks are there?",
+        "equation": "3 + 3 =",
+        "hint": "Add 3 + 3, one group at a time.",
+        "answer": 6,
+        "worked": "3 + 3 = 6. There are 2 equal groups of 3.",
+        "plate": "reach",
         "label": "TASK 1"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          15,
-          20,
-          25,
-          30
-        ],
-        "step": 5,
-        "blankIndex": 2,
-        "prompt": "Big counts sets of five magnetic tiles. What number is missing?",
-        "equation": "15, 20, ___, 30",
-        "hint": "Add 5 to the number before the blank.",
-        "answer": 25,
-        "worked": "20 + 5 = 25. Each step adds 5.",
-        "plate": "reach",
+        "skill": "array",
+        "rows": 4,
+        "columns": 2,
+        "prompt": "Big draws spring bounces in 4 rows, with 2 bounces in each row. How many bounces are drawn?",
+        "equation": "2 + 2 + 2 + 2 =",
+        "hint": "Add 2 + 2 + 2 + 2 to count the four rows.",
+        "answer": 8,
+        "worked": "2 + 2 + 2 + 2 = 8. There are 4 equal rows of 2.",
+        "plate": "change",
         "label": "TASK 2"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          30,
-          40,
-          50,
-          60
-        ],
-        "step": 10,
-        "blankIndex": 3,
-        "prompt": "Little counts fridge stickers in tens. What number comes next?",
-        "equation": "30, 40, 50, ___",
-        "hint": "Each new group adds 10 stickers.",
-        "answer": 60,
-        "worked": "50 + 10 = 60. Each step adds 10.",
-        "plate": "change",
+        "skill": "equal-groups",
+        "rows": 3,
+        "columns": 3,
+        "prompt": "Little counts 3 sets of rope wiggles, with 3 wiggles in each set. How many wiggles is that?",
+        "equation": "3 + 3 + 3 =",
+        "hint": "Use 3 + 3 + 3 to count all three sets.",
+        "answer": 9,
+        "worked": "3 + 3 + 3 = 9. There are 3 equal groups of 3.",
+        "plate": "notice",
         "label": "TASK 3"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          12,
-          14,
-          16,
-          18
-        ],
-        "step": 2,
-        "blankIndex": 1,
-        "prompt": "Little marks every second centimeter on a paper ruler. What number is missing?",
-        "equation": "12, ___, 16, 18",
-        "hint": "The marks go up by 2 centimeters.",
-        "answer": 14,
-        "worked": "12 + 2 = 14. Each step adds 2.",
-        "plate": "notice",
+        "skill": "array",
+        "rows": 3,
+        "columns": 4,
+        "prompt": "A page has 3 rows of wave drawings, with 4 drawings in each row. How many drawings are on the page?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Add 4 + 4 + 4 for the three equal rows.",
+        "answer": 12,
+        "worked": "4 + 4 + 4 = 12. There are 3 equal rows of 4.",
+        "plate": "wake",
         "label": "TASK 4"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          40,
-          45,
-          50,
-          55
-        ],
-        "step": 5,
-        "blankIndex": 3,
-        "prompt": "Big counts five more magnets in each row. What number comes next?",
-        "equation": "40, 45, 50, ___",
-        "hint": "Keep adding 5.",
-        "answer": 55,
-        "worked": "50 + 5 = 55. Each step adds 5.",
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 3,
+        "prompt": "Big counts 5 groups of crank turns, with 3 turns in each group. How many turns does Big count?",
+        "equation": "3 + 3 + 3 + 3 + 3 =",
+        "hint": "Try 3 + 3 + 3 + 3 + 3, adding one group at a time.",
+        "answer": 15,
+        "worked": "3 + 3 + 3 + 3 + 3 = 15. There are 5 equal groups of 3.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          60,
-          70,
-          80,
-          90
-        ],
-        "step": 10,
-        "blankIndex": 2,
-        "prompt": "Little counts magnetic letters in groups of ten. What number is missing?",
-        "equation": "60, 70, ___, 90",
-        "hint": "Count on by 10 from the number before the blank.",
-        "answer": 80,
-        "worked": "70 + 10 = 80. Each step adds 10.",
+        "skill": "array",
+        "rows": 4,
+        "columns": 5,
+        "prompt": "Little draws speaker wiggles in 4 rows, with 5 wiggles in each row. How many wiggles are drawn?",
+        "equation": "5 + 5 + 5 + 5 =",
+        "hint": "Use 5 + 5 + 5 + 5 to count the four rows.",
+        "answer": 20,
+        "worked": "5 + 5 + 5 + 5 = 20. There are 4 equal rows of 5.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "extension": "Choose one task and draw its equal groups or rows.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six skip-counting sequences use steps of 2, 5, and 10 within 100. The supplied numbers are for counting practice, not measurements of magnetic reach.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
+    "parentNote": "Age 8 / Grade 2 math. Six equal-group and array tasks use rows and columns from 2 to 5. Repeated addition gives totals from 6 to 20. These are story counts, not measurements of sound or power.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Add once for each equal group or row. Welcome a drawing or spoken explanation."
   },
   "writing": {
-    "title": "Give your magnet test its words",
+    "title": "Give a wiggle its words",
     "intro": "Say one clear command, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw a magnet near the fridge or a steel paperclip. Show the gap.",
-    "starter": "My magnet-test command",
+    "draw": "Draw a swing, a spring, or a rope. Show which way it moves.",
+    "starter": "My gentle-wiggle command",
     "frames": [
       {
         "plate": "reach",
-        "start": "Hold",
-        "hint": "tell where to hold the magnet"
+        "start": "Swing",
+        "hint": "tell how to move gently"
       },
       {
         "plate": "change",
-        "start": "Try",
-        "hint": "name a surface to test"
+        "start": "Watch",
+        "hint": "tell what to notice about a bounce"
       },
       {
         "plate": "notice",
-        "start": "Notice",
-        "hint": "tell what changes as the magnet moves"
+        "start": "Draw",
+        "hint": "describe the smooth wiggle"
       }
     ],
     "words": [
-      "magnet",
-      "fridge",
-      "near",
-      "farther",
-      "pull",
-      "stick",
-      "slide",
-      "notice"
+      "sine wave",
+      "wiggle",
+      "swing",
+      "spring",
+      "smooth",
+      "gently",
+      "back",
+      "forth"
     ],
-    "check": "Does your command tell what to do, using a word such as Hold, Try, or Notice?",
-    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Hold the magnet near the fridge, then slowly pull it away and notice when it lets go.”"
+    "check": "Does your command tell what to do, using a word such as Swing, Watch, or Draw?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Swing gently, then draw the smooth path you felt.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The magnet and steel door pull toward each other through the thin paper. Paper alone does not attract the magnet."
+      "text": "The seat travels along an arc. A wave graph records its changing back-and-forth position over time."
     },
     {
       "label": "Reading · 2",
-      "text": "Wood and aluminum foil did not hold the magnet. The evidence shows it sticks to some materials and some metals, not all of them."
+      "text": "As a magnet spins beside wire, the electric push grows, fades, and reverses. Its smooth change follows a sine wave."
     },
     {
       "label": "Reading · 3",
-      "text": "The paperclip tipped toward the magnet when it came closer. Moving farther away made the pull too weak to keep it lifted."
+      "text": "The speaker cone moves in and out, nudging the air. For a pure tone, that motion follows a sine-like rhythm."
     },
     {
       "label": "Writing",
-      "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Hold the magnet near the fridge, then slowly pull it away and notice when it lets go.”"
+      "text": "Accept a command spoken, dictated, drawn, or written. Example: “Swing gently, then draw the smooth path you felt.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up stays nearby, chooses large intact fridge magnets, and leads the tray activity. Keep magnets away from screens, cards with stripes, and mouths. Use a steel fridge door or cookie sheet; some stainless-steel doors do not hold magnets. Iron and many steels attract strongly; ordinary fridge magnets do not stick to aluminum or copper. Paper, wood, plastic, and cloth are nonmagnetic test surfaces, though a thin layer can let a magnet hold against steel behind it. The magnet and steel attract each other; friction helps keep the magnet from sliding down the door. The diorama shows a qualitative comparison, not a measured range or force: its slider has near/far positions, and the contact test shows whether this magnet stays on the selected surface. Real reach depends on the magnet, object, gap, and friction. Two magnets can attract or repel depending on which poles face; flat fridge magnets may have several alternating poles, so use a pair of large bar magnets for the optional turning test.",
+  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up stays nearby and sets speaker volume low. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker. Do not open an outlet or take apart a powered device. A small-angle swing is approximately sinusoidal over time; its physical path is an arc. Real spring motion loses energy and settles. AC voltage from an ideal uniformly spinning generator is sinusoidal: relative rotation of a magnet and coil changes magnetic flux through the wire. This is the changing electric push in the story. Grid power also comes from sources with electronic converters, and many devices convert AC to steady DC internally. A speaker cone’s motion for a pure tone is approximately sinusoidal; sound travels as pressure changes, not as a rope-shaped path through air. Smooth sine waves can reduce unwanted harmonics in machines and pure tones; digital electronics intentionally use other waveforms. The tracing diorama compares an ideal sine shape with a triangle wave. Its marker and moving paper show position over time, not an electrical experiment or measured device output.",
   "sources": [
     {
-      "label": "Exploratorium · exploring magnets",
-      "url": "https://www.exploratorium.edu/sites/default/files/pdfs/Exploring_Magnets-FT_Chaperone_Guide_0.pdf"
+      "label": "OpenStax · electric generators",
+      "url": "https://openstax.org/books/college-physics-2e/pages/23-5-electric-generators"
     },
     {
-      "label": "Core Knowledge · investigating forces",
-      "url": "https://www.coreknowledge.org/wp-content/uploads/2019/09/CKSci_G3_U1_InvestigatingForces_SR.pdf"
+      "label": "EIA · how electricity is generated",
+      "url": "https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php"
+    },
+    {
+      "label": "OpenStax · sound waves",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/17-1-sound-waves"
     }
   ],
   "authoring": {
@@ -452,80 +420,75 @@
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
     "themeIntake": {
-      "topic": "fridge magnets",
-      "source": "queue/standby.json",
-      "queued": false,
-      "cursor": 4,
-      "standby": {
-        "topic": "fridge magnets",
-        "note": "What sticks, what slides off, and how far the pull can reach."
-      },
-      "normalized": "fridge magnets",
-      "slug": "fridge-magnets"
+      "topic": "why electronics use sine waves",
+      "source": "queue/next-topic.txt",
+      "queued": true,
+      "normalized": "why electronics use sine waves",
+      "slug": "why-electronics-use-sine-waves"
     },
     "todo": []
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "fridge-magnets"
+    "diorama": "sine-waves"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "FRIDGE MAGNETS · 2026-10-13",
-    "subtitle": "Some things stick. Some things slide."
+    "edition": "SINE WAVES · 2026-10-14",
+    "subtitle": "A smooth rhythm in sound and power."
   },
   "visualNotes": {
-    "intent": "Six new warm kitchen scenes explore surfaces, distance, and a shared question.",
-    "prompts": "assets/fridge-magnets/prompts.json",
-    "provenance": "assets/fridge-magnets/provenance.json"
+    "intent": "Six new warm scenes connect familiar motion to sound and generator power.",
+    "prompts": "assets/why-electronics-use-sine-waves/prompts.json",
+    "provenance": "assets/why-electronics-use-sine-waves/provenance.json"
   },
   "quiz": {
-    "title": "Four clues from the fridge",
-    "intro": "Use what you noticed about surfaces, gaps, and turning.",
+    "title": "Four clues in a wiggle",
+    "intro": "Use the swing, the generator, and the speaker to think it through.",
     "questions": [
       {
-        "id": "hold",
-        "prompt": "Why does this magnet stay on the steel fridge door?",
+        "id": "shape",
+        "prompt": "Which description best fits a sine wave?",
         "choices": [
-          "The paper is sticky",
-          "The magnet and steel pull toward each other",
-          "Every smooth surface holds magnets"
-        ],
-        "answerIndex": 1,
-        "answer": "The magnet and steel door pull toward each other, helping the magnet stay in place."
-      },
-      {
-        "id": "metal",
-        "prompt": "Which object is most likely to stick to a fridge magnet?",
-        "choices": [
-          "A steel paperclip",
-          "Aluminum foil",
-          "A plastic lid"
+          "A smooth wiggle that repeats",
+          "A line with random jumps",
+          "A line that never changes"
         ],
         "answerIndex": 0,
-        "answer": "A steel paperclip is attracted to a fridge magnet. Magnets stick to some metals, not all metals."
+        "answer": "A sine wave is a smooth, repeating wiggle."
       },
       {
-        "id": "distance",
-        "prompt": "What usually happens as the magnet moves farther from the paperclip?",
+        "id": "generator",
+        "prompt": "What does a generator change into electrical energy?",
         "choices": [
-          "The pull gets stronger",
-          "The paperclip becomes plastic",
-          "The pull gets weaker"
-        ],
-        "answerIndex": 2,
-        "answer": "The pull gets weaker as the magnet moves farther from the paperclip."
-      },
-      {
-        "id": "turn",
-        "prompt": "What can happen when you turn one of two magnets around?",
-        "choices": [
-          "Both magnets turn into wood",
-          "A pull can change to a push",
-          "The magnets always stop working"
+          "A drawing on paper",
+          "Turning motion",
+          "The color of a speaker"
         ],
         "answerIndex": 1,
-        "answer": "Turning one magnet can change a pull to a push because different ends face each other."
+        "answer": "A generator changes turning motion into electrical energy; its electric push can change smoothly as it spins."
+      },
+      {
+        "id": "speaker",
+        "prompt": "How does a speaker make sound?",
+        "choices": [
+          "Its case makes light",
+          "Its paper drawing moves",
+          "Its cone moves in and out, nudging air"
+        ],
+        "answerIndex": 2,
+        "answer": "The cone moves in and out, nudging air. For a pure tone, it follows a sine-like rhythm."
+      },
+      {
+        "id": "signals",
+        "prompt": "Do electronics use only sine waves?",
+        "choices": [
+          "Yes, every signal has the same shape",
+          "No, they also use other shapes and steady power",
+          "Yes, because sound cannot change"
+        ],
+        "answerIndex": 1,
+        "answer": "Electronics also use other signal shapes and steady power. Sine waves are useful, but they are not the only kind."
       }
     ]
   }

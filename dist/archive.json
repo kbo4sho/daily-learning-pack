@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T02:26:58.204Z",
-  "latest": "fridge-magnets",
+  "generatedAt": "2026-10-14T02:11:01.137Z",
+  "latest": "why-electronics-use-sine-waves",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "why-electronics-use-sine-waves",
+      "date": "2026-10-14",
+      "topic": "why electronics use sine waves",
+      "title": "Why Electronics Use Sine Waves",
+      "teaser": "A swing, a spring, a speaker. What connects their smooth wiggles?",
+      "href": "./days/why-electronics-use-sine-waves/",
+      "latest": true
+    },
     {
       "slug": "fridge-magnets",
       "date": "2026-10-13",
@@ -11,7 +20,7 @@
       "title": "Fridge Magnets",
       "teaser": "Some things stick. Some slide. How far can a pull reach?",
       "href": "./days/fridge-magnets/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-drill-bits-work",
