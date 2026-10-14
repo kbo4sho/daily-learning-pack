@@ -26,8 +26,6 @@ export function reduceWave(state, event) {
         ? { phase: "notice", progress: 100 }
         : {}),
     };
-  if (event.type === "TALK") return { ...state, phase: "talk" };
-  if (["held", "talk"].includes(state.phase)) return state;
   if (event.type === "SHAPE" && Object.hasOwn(WAVE_MOTIONS, event.value))
     return { ...createWaveState(state), motion: event.value };
   if (
@@ -36,14 +34,6 @@ export function reduceWave(state, event) {
     ["rounded", "corners"].includes(event.value)
   )
     return { ...state, prediction: event.value };
-  if (event.type === "MOVE") {
-    const progress = clamp(event.value);
-    return {
-      ...state,
-      progress,
-      phase: progress === 100 ? "notice" : "predict",
-    };
-  }
   if (event.type === "TRACE" && state.phase !== "tracing")
     return {
       ...state,
@@ -58,14 +48,9 @@ export function reduceWave(state, event) {
       phase: progress === 100 ? "notice" : "tracing",
     };
   }
-  if (event.type === "HOLD") return { ...state, phase: "held" };
   return state;
 }
 export function waveNotice(state) {
-  if (state.phase === "talk")
-    return "Follow the marker and the paper at your own pace.";
-  if (state.phase === "held")
-    return "This view is held still. Follow the line with your eyes. Start again whenever you like.";
   if (state.phase === "tracing")
     return "The paper moves left as the marker moves up and down. Watch the turns.";
   const result = state.motion === "smooth" ? "rounded" : "corners";
@@ -116,7 +101,7 @@ export function wavePanel({ next = "" } = {}) {
     )
     .join(
       "",
-    )}</fieldset><fieldset><legend>Predict its turns</legend><button type="button" data-wave-action="PREDICT" data-value="rounded" aria-pressed="false">Rounded turns</button><button type="button" data-wave-action="PREDICT" data-value="corners" aria-pressed="false">Corners</button></fieldset></div><div class="wave-bench"><div data-wave-art></div><div class="wave-labels"><span><b>Marker: up and down</b><small data-wave-motion-label>Smooth turns</small></span><span><b>Paper: moves left</b><small>The line records motion over time</small></span></div><div class="wave-controls"><label class="wave-slider">Move the paper by hand <span data-wave-progress>Start</span><input type="range" min="0" max="100" step="1" value="0" data-wave-range aria-label="Move the paper by hand"><span class="wave-range-ends"><span>Start</span><span>Two wiggles</span></span></label><button type="button" class="wave-primary" data-wave-action="TRACE">Trace two wiggles</button></div></div></div><p class="wave-status" data-wave-status role="status" aria-live="polite" aria-atomic="true"></p><p data-wave-notice hidden>Follow one turn. Where does the marker slow down, and where does it change direction suddenly?</p><div class="wave-external"><button type="button" data-wave-action="HOLD">Keep this view</button><button type="button" data-wave-action="RESET">Start again</button><button type="button" data-wave-action="TALK">Talk it through</button></div><div data-wave-talk hidden>${waveTalkThrough()}</div></div><div data-wave-static>${waveDrawing()}${waveTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
+    )}</fieldset><fieldset><legend>Predict its turns</legend><button type="button" data-wave-action="PREDICT" data-value="rounded" aria-pressed="false">Rounded turns</button><button type="button" data-wave-action="PREDICT" data-value="corners" aria-pressed="false">Corners</button></fieldset></div><div class="wave-bench"><div data-wave-art></div><div class="wave-labels"><span><b>Marker: up and down</b><small data-wave-motion-label>Smooth turns</small></span><span><b>Paper: moves left</b><small>The line records motion over time</small></span></div><div class="wave-controls"><button type="button" class="wave-primary" data-wave-action="TRACE">Trace two wiggles</button></div></div></div><p class="wave-status" data-wave-status role="status" aria-live="polite" aria-atomic="true"></p><p data-wave-notice hidden>Follow one turn. Where does the marker slow down, and where does it change direction suddenly?</p><div class="wave-external"><button type="button" data-wave-action="RESET">Start again</button></div></div><div data-wave-static>${waveDrawing()}${waveTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
 }
 function mount() {
   const root = document.querySelector(".wave-panel");
@@ -125,38 +110,22 @@ function mount() {
   let state = createWaveState({ reducedMotion: media.matches }),
     frame = 0,
     started = null;
-  const range = root.querySelector("[data-wave-range]"),
-    stage = root.querySelector("[data-wave-stage]");
   root.querySelector("[data-wave-live]").hidden = false;
   root.querySelector("[data-wave-static]").remove();
   function render() {
     root.dataset.phase = state.phase;
     root.dataset.motion = state.motion;
     root.dataset.progress = state.progress.toFixed(2);
-    const held = state.phase === "held" || state.phase === "talk";
-    stage.inert = held;
     const art = root.querySelector("[data-wave-art]"),
       drawing = waveDrawing(state);
     if (art.innerHTML !== drawing) art.innerHTML = drawing;
-    range.value = state.progress;
-    range.disabled = held || state.phase === "tracing";
-    range.setAttribute(
-      "aria-valuetext",
-      `${Math.round(state.progress)} percent of two wiggles`,
-    );
-    root.querySelector("[data-wave-progress]").textContent =
-      state.progress === 0
-        ? "Start"
-        : state.progress === 100
-          ? "Two wiggles"
-          : `${Math.round(state.progress)}%`;
     root.querySelector("[data-wave-motion-label]").textContent =
       state.motion === "smooth"
         ? "Slows near each turn"
         : "Changes direction at each corner";
     for (const b of root.querySelectorAll('[data-wave-action="SHAPE"]')) {
       b.setAttribute("aria-pressed", String(b.dataset.value === state.motion));
-      b.disabled = held;
+      b.disabled = state.phase === "tracing";
     }
     for (const b of root.querySelectorAll('[data-wave-action="PREDICT"]')) {
       b.setAttribute(
@@ -166,10 +135,8 @@ function mount() {
       b.disabled = state.phase !== "predict";
     }
     root.querySelector('[data-wave-action="TRACE"]').disabled =
-      held || state.phase === "tracing";
-    root.querySelector('[data-wave-action="HOLD"]').disabled = held;
+      state.phase === "tracing";
     root.querySelector("[data-wave-notice]").hidden = state.phase !== "notice";
-    root.querySelector("[data-wave-talk]").hidden = state.phase !== "talk";
     const status = root.querySelector("[data-wave-status]"),
       notice = waveNotice(state);
     if (status.textContent !== notice) status.textContent = notice;
@@ -199,14 +166,6 @@ function mount() {
       root
         .querySelector('[data-wave-action="TRACE"]')
         .focus({ preventScroll: true });
-    if (type === "TALK")
-      root.querySelector("[data-wave-talk] h3").focus({ preventScroll: true });
-  });
-  range.addEventListener("input", () => {
-    if (range.disabled) return;
-    stop();
-    state = reduceWave(state, { type: "MOVE", value: range.value });
-    render();
   });
   media.addEventListener("change", (e) => {
     state = reduceWave(state, { type: "MOTION", value: e.matches });
