@@ -1,0 +1,498 @@
+.bl-title-note {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #70654d;
+  margin-top: 20px;
+}
+.bl-title-plate {
+  margin: 0 0 24px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bl-title-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+}
+.bl-visual-notes {
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid #d9d1c1;
+}
+.bl-visual-notes summary,
+.bl-art-context summary {
+  min-height: 48px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.bl-quiz {
+  max-width: 760px;
+}
+.bl-quiz fieldset {
+  border: 0;
+  border-top: 1px solid #d9d1c1;
+  padding: 26px 0;
+  margin: 0;
+}
+.bl-quiz legend {
+  font:
+    400 26px/1.2 Newsreader,
+    serif;
+  float: left;
+  width: 100%;
+  margin: 0 0 16px;
+}
+.bl-quiz label {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #cfc4ae;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bl-quiz input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #685737;
+}
+.bl-quiz label:has(input:checked) {
+  background: #ede4ce;
+  border-color: #87704b;
+}
+.bl-quiz details {
+  border-top: 1px solid #d9d1c1;
+  padding-top: 20px;
+}
+.bl-quiz summary {
+  padding: 12px 0;
+  min-height: 48px;
+  cursor: pointer;
+}
+.bl-quiz dd {
+  margin: 0 0 16px;
+}
+.bl-foldable {
+  max-width: 760px;
+}
+.bl-foldable .primary-button {
+  margin: 16px 0;
+}
+.bl-foldable ol {
+  line-height: 1.8;
+}
+body[data-surfaces="six"] .daily-nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+body[data-surfaces="six"] .daily-nav a {
+  padding: 16px 8px;
+  text-align: center;
+}
+.dew-panel {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.dew-dogfood {
+  font:
+    600 10px Inter,
+    sans-serif;
+  letter-spacing: 0.12em;
+  border: 1px solid #aa9877;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin-left: 12px;
+}
+.dew-stage-copy {
+  max-width: 760px;
+  margin: 24px 0;
+}
+.dew-stage-copy h3 {
+  font:
+    400 clamp(27px, 3.5vw, 42px) / 1.12 Newsreader,
+    serif;
+  margin: 8px 0;
+}
+.dew-bench {
+  border: 1px solid #5d503b;
+  background: #14232b;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px #31231518;
+}
+.dew-apparatus {
+  position: relative;
+  isolation: isolate;
+  padding-top: 8px;
+  background: radial-gradient(ellipse at 48% 58%, #344348, #101925 80%);
+}
+.dew-drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.dew-pointer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5eddb;
+  color: #342f26;
+  border: 1px solid #c7b896;
+  border-radius: 5px;
+  font:
+    600 clamp(11px, 1.5vw, 15px) / 1.25 Inter,
+    sans-serif;
+  padding: 10px 12px;
+  min-height: 48px;
+  max-width: 30%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.dew-pointer::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 32px;
+  background: #eadbbd;
+  top: 100%;
+  left: 50%;
+}
+.dew-pointer-sky {
+  left: 41%;
+  top: 5%;
+}
+.dew-pointer-air {
+  left: 77%;
+  top: 20%;
+}
+.dew-pointer-leaf {
+  left: 45%;
+  top: 32%;
+}
+.dew-pointer-leaf::after {
+  height: 48px;
+}
+.dew-pointer[data-dew] {
+  border-style: dashed;
+  cursor: pointer;
+}
+.dew-pointer[data-dew]:hover {
+  background: #fffaf0;
+  box-shadow: 0 0 0 3px #c7ac7066;
+}
+.dew-gauges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 12px 24px;
+  gap: 12px;
+  color: #e4e7dd;
+}
+.dew-gauges span {
+  padding: 10px;
+  border-top: 1px solid #73857c;
+  font-size: 13px;
+}
+.dew-gauges b {
+  display: block;
+  font:
+    400 30px/1.4 Newsreader,
+    serif;
+  color: #fff1d5;
+}
+.dew-result {
+  text-align: center;
+  color: #f9eacf;
+  margin: 0;
+  padding: 0 12px 20px;
+  font:
+    400 25px/1.2 Newsreader,
+    serif;
+}
+.dew-beads {
+  opacity: 0;
+}
+[data-drops="true"] .dew-beads {
+  opacity: 1;
+}
+[data-motion="once"][data-drops="true"] .dew-beads {
+  animation: dew-condense 2.4s ease;
+}
+[data-motion="once"] .dew-heat {
+  animation: dew-heat 2.4s ease;
+}
+@keyframes dew-condense {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dew-heat {
+  0% {
+    opacity: 0;
+  }
+  35%,
+  100% {
+    opacity: 1;
+  }
+}
+.dew-control-base {
+  padding: 24px 32px 30px;
+  border-top: 1px solid #9a7852;
+  background: linear-gradient(105deg, #483529, #2e251f 60%, #47372a);
+  color: #fbf2df;
+  min-height: 160px;
+}
+.dew-control-base > p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.dew-control-base button {
+  font:
+    600 14px/1.35 Inter,
+    sans-serif;
+  cursor: pointer;
+  min-height: 48px;
+  border-radius: 6px;
+  padding: 14px 18px;
+  border: 1px solid #c6b595;
+}
+.dew-primary {
+  background: linear-gradient(#f8efd8, #d9c6a0);
+  color: #352b1d;
+  box-shadow: 0 3px 0 #957851;
+}
+.dew-secondary {
+  color: #fbf2df;
+  background: transparent;
+}
+.dew-activate {
+  min-height: 70px !important;
+  width: 100%;
+  max-width: 450px;
+}
+.dew-tray {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.dew-tray button {
+  background: #ede2c9;
+  color: #382d21;
+}
+.dew-tray button[aria-pressed="true"] {
+  outline: 3px solid #cddde0;
+  outline-offset: 2px;
+}
+.dew-tray button:disabled {
+  background: #322922;
+  color: #d8cbae;
+  border-color: #776349;
+}
+.dew-conditions {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.dew-conditions fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+}
+.dew-conditions legend {
+  padding: 0 0 10px;
+  font-size: 13px;
+}
+.dew-conditions button {
+  background: transparent;
+  color: #f8eddb;
+}
+.dew-conditions button[aria-pressed="true"] {
+  background: #f2e5c8;
+  color: #302a20;
+  box-shadow: inset 0 -3px #af9667;
+}
+.dew-notice {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.dew-model-note {
+  font-size: 12px;
+  line-height: 1.65;
+  max-width: 800px;
+  color: #625b4d;
+  margin: 18px 0;
+}
+.dew-status {
+  min-height: 48px;
+  font-size: 14px;
+  max-width: 760px;
+}
+.dew-external {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin: 12px 0 30px;
+}
+.dew-external .text-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.dew-explain,
+.dew-talk {
+  background: #eee8dc;
+  border-left: 2px solid #a28957;
+  padding: 24px;
+  margin: 24px 0;
+  max-width: 800px;
+}
+.dew-explain h3,
+.dew-talk h3 {
+  font:
+    400 30px/1.15 Newsreader,
+    serif;
+  margin: 0 0 16px;
+}
+.dew-talk li {
+  margin-bottom: 14px;
+}
+.dew-path {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 24px;
+}
+.dew-path li {
+  flex: 1;
+  padding-right: 12px;
+}
+.dew-art-context {
+  max-width: 640px;
+  border-top: 1px solid #d9d1c1;
+}
+.dew-art-context summary {
+  min-height: 48px;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.dew-art-context img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.dew-art-context p {
+  font-size: 13px;
+}
+@media (max-width: 650px) {
+  body[data-surfaces="six"] .daily-nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body[data-surfaces="six"] .daily-nav a {
+    padding: 11px 5px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+  body[data-surfaces="six"].reader-open .daily-nav {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  body[data-surfaces="six"].reader-open .daily-nav a {
+    font-size: 10px;
+    padding: 12px 1px;
+  }
+  body[data-surfaces="six"] .family-reader .curiosity-plate {
+    max-width: 220px;
+  }
+  .dew-control-base {
+    padding: 20px 16px;
+  }
+  .dew-pointer {
+    font-size: 10px;
+    padding: 6px 7px;
+    min-height: 44px;
+  }
+  .dew-pointer-sky {
+    top: 2%;
+    left: 38%;
+  }
+  .dew-pointer-air {
+    top: 8%;
+    left: 78%;
+  }
+  .dew-pointer-leaf {
+    top: 22%;
+    left: 45%;
+  }
+  .dew-pointer::after {
+    height: 12px;
+  }
+  .dew-pointer-leaf::after {
+    height: 20px;
+  }
+  .dew-tray {
+    gap: 7px;
+  }
+  .dew-tray button {
+    padding: 12px 5px;
+    font-size: 12px;
+    min-height: 72px;
+  }
+  .dew-gauges {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .dew-gauges span {
+    font-size: 11px;
+    padding: 8px 2px;
+  }
+  .dew-gauges b {
+    font-size: 26px;
+  }
+  .dew-result {
+    font-size: 22px;
+  }
+  .dew-notice {
+    flex-direction: column;
+  }
+  .dew-path {
+    display: block;
+    font-size: 14px;
+    margin: 0;
+  }
+  .dew-path li {
+    margin-bottom: 8px;
+  }
+  .dew-external {
+    gap: 12px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  body[data-surfaces="six"] .family-reader .curiosity-plate {
+    max-width: 540px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dew-panel *,
+  .dew-panel *::before,
+  .dew-panel *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
