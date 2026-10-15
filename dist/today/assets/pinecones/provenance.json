@@ -1,0 +1,67 @@
+{
+  "slug": "pinecones",
+  "tool": "built-in image_gen",
+  "outlineLockedBeforeImages": true,
+  "images": [
+    {
+      "id": "wake",
+      "original": "assets/pinecones/01-spiral.png",
+      "generationId": "exec-030c3109-bfeb-4f08-b684-b7fa773d1d2f",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "be4a6c01f9e892ae441573f9418f68000b61dc0d9e7e74e8bab72fa163a95e5a",
+      "delivery": "assets/pinecones/01-spiral.jpg",
+      "fold": "assets/pinecones/01-spiral-fold.jpg"
+    },
+    {
+      "id": "reach",
+      "original": "assets/pinecones/02-dry.png",
+      "generationId": "exec-7ef00efb-8631-4923-aa29-cee2847103df",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "cd0dcddadbd605cfeec7ccd42cf8de120c44f1f19d446d19d47b1943ebeb19c2",
+      "delivery": "assets/pinecones/02-dry.jpg",
+      "fold": "assets/pinecones/02-dry-fold.jpg"
+    },
+    {
+      "id": "change",
+      "original": "assets/pinecones/03-wet.png",
+      "generationId": "exec-e4dc256a-69df-4955-8958-6856b388893c",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "41833d3cfb5c28606ac01468771d830bd290a0fb63ae3512739ba18e52e757a8",
+      "delivery": "assets/pinecones/03-wet.jpg",
+      "fold": "assets/pinecones/03-wet-fold.jpg"
+    },
+    {
+      "id": "notice",
+      "original": "assets/pinecones/04-dishes.png",
+      "generationId": "exec-f136839e-eb6e-494e-aacf-15752f53dd6b",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "912301904f21d9d84ee1254cf45b42d36450493e1d60ed18f2baa5c2092cb479",
+      "delivery": "assets/pinecones/04-dishes.jpg",
+      "fold": "assets/pinecones/04-dishes-fold.jpg"
+    },
+    {
+      "id": "return",
+      "original": "assets/pinecones/05-bending.png",
+      "generationId": "exec-089d51ea-cf4e-4c35-b166-8cf46cdd1e67",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "c5a29ae181681ebdd7aeb42a595f47fedd89ac07c2346061f6e8bfa448881fb6",
+      "delivery": "assets/pinecones/05-bending.jpg",
+      "fold": "assets/pinecones/05-bending-fold.jpg"
+    },
+    {
+      "id": "keep",
+      "original": "assets/pinecones/06-seeds.png",
+      "generationId": "exec-d6383834-f7ad-40f7-9d34-7f5b0571a9f9",
+      "tool": "built-in image_gen",
+      "generatedNew": true,
+      "sha256": "1c36dcb55abd5f685e683fec979655074b7ceecd10f04159728545157052bc47",
+      "delivery": "assets/pinecones/06-seeds.jpg",
+      "fold": "assets/pinecones/06-seeds-fold.jpg"
+    }
+  ]
+}

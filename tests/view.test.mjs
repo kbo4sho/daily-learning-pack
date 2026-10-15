@@ -71,11 +71,12 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "why-electronics-use-sine-waves");
-  assert.equal(latest.date, "2026-10-14");
+  assert.equal(latest.slug, "pinecones");
+  assert.equal(latest.date, "2026-10-15");
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "pinecones",
       "why-electronics-use-sine-waves",
       "fridge-magnets",
       "how-drill-bits-work",
@@ -112,17 +113,17 @@ test("committed archive landing and the child’s /today/ are present", async ()
     assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
   assert.match(today, /About the pictures and numbers\./);
   assert.match(today, /data-quiz-feedback aria-live="polite"/);
-  assert.match(today, /sine-waves-diorama\.js/);
-  assert.equal(await exists("dist/today/sine-waves-diorama.css"), true);
-  assert.equal(await exists("dist/today/sine-waves-diorama.js"), true);
+  assert.match(today, /pinecones-diorama\.js/);
+  assert.equal(await exists("dist/today/pinecones-diorama.css"), true);
+  assert.equal(await exists("dist/today/pinecones-diorama.js"), true);
   assert.equal(todayPack.targetAge, 8);
   assert.equal(todayPack.gradeLevel, 3);
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [6, 8, 9, 12, 15, 20],
+    [74, 30, 68, 90, 26, 60],
   );
-  assert.equal(todayPack.mathTemplate, "groups-and-arrays");
+  assert.equal(todayPack.mathTemplate, "compare-and-round");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);

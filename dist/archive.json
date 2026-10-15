@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T02:11:01.137Z",
-  "latest": "why-electronics-use-sine-waves",
+  "generatedAt": "2026-10-15T02:02:38.251Z",
+  "latest": "pinecones",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "pinecones",
+      "date": "2026-10-15",
+      "topic": "pinecones",
+      "title": "Pinecones",
+      "teaser": "A woody spiral opens in dry air and closes when wet.",
+      "href": "./days/pinecones/",
+      "latest": true
+    },
     {
       "slug": "why-electronics-use-sine-waves",
       "date": "2026-10-14",
@@ -11,7 +20,7 @@
       "title": "Why Electronics Use Sine Waves",
       "teaser": "A swing, a spring, a speaker. What connects their smooth wiggles?",
       "href": "./days/why-electronics-use-sine-waves/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "fridge-magnets",

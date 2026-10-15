@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "why-electronics-use-sine-waves",
-  "topic": "why electronics use sine waves",
-  "teaser": "A swing, a spring, and a speaker share a smooth rhythm.",
+  "slug": "pinecones",
+  "topic": "pinecones",
+  "teaser": "A woody spiral opens in dry air and closes when wet.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "groups-and-arrays",
+  "mathTemplate": "compare-and-round",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · SINE WAVES",
+  "editionLabel": "GRADE 3 · PINECONES",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Why Electronics Use Sine Waves",
-  "question": "Where else do you see a smooth back-and-forth wiggle?",
-  "idea": "A sine wave records a smooth, repeating wiggle. Spinning generators and speakers making pure tones use this rhythm.",
+  "title": "Pinecones",
+  "question": "Why would a tree open its cones only when the air is dry?",
+  "idea": "Many common pinecones open when dry and close when wet. Water changes the shape of their woody scales, helping time the release of seeds.",
   "curiosity": {
-    "intro": "Follow one smooth wiggle from the living room into sound and power.",
-    "carryForward": "Keep a small drawing of a rhythm you noticed.",
+    "intro": "Bring a fallen cone to the porch table and follow a slow change.",
+    "carryForward": "Keep two small drawings: open and closed.",
     "questions": [
       {
-        "id": "shape",
-        "plate": "reach",
-        "question": "What is a sine wave?",
-        "notice": "Notice how the swing slows near the end of its trip.",
-        "say": "A sine wave is a smooth back-and-forth wiggle that repeats. It can show how a position or an electric push changes over time. A gentle swing moves in a sine-like rhythm; its seat travels along an arc.",
-        "try": "With Big nearby, take a gentle swing, bounce a soft toy spring over a tray, or move a rope from side to side on the floor. Draw the smooth wiggle you notice. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker."
-      },
-      {
-        "id": "power",
-        "plate": "return",
-        "question": "How can spinning make a wave?",
-        "notice": "Find the turning disk beside the wire coil.",
-        "say": "A generator turns motion into electrical energy. As a magnet spins beside wire, the electric push changes smoothly, first one way and then the other. Many generators make the AC power supplied at home. AC means that the push changes direction repeatedly.",
-        "try": "Draw a dot on a paper circle. Turn the circle slowly and watch the dot rise and fall."
-      },
-      {
-        "id": "sound",
-        "plate": "keep",
-        "question": "What wiggles inside a speaker?",
-        "notice": "Look at the circle on the front of the speaker.",
-        "say": "The speaker cone moves in and out, making the air nearby squeeze and spread. Those changes travel to your ears as sound. For a pure, steady tone, the cone moves in a sine-like rhythm. Music and voices make more complicated wiggles.",
-        "try": "Let Big set an intact battery speaker to low volume. Rest fingertips lightly on its outer case, leaving the cone alone, and notice any quiet buzz. A drawing of the cone’s motion works too."
-      },
-      {
-        "id": "why",
+        "id": "scales",
         "plate": "wake",
-        "question": "Why use a smooth wiggle?",
-        "notice": "Follow the rounded turns in Little’s notebook.",
-        "say": "Spinning parts can make sine waves naturally. Smooth changes help many motors and speakers work evenly. Sudden jumps can make extra buzz or jerky starts. Electronics also use steady power and other signal shapes; not every signal is a sine wave.",
-        "try": "Draw a smooth wave and a zigzag. Trace them slowly with a finger and compare the turns."
+        "question": "What is a pinecone made of?",
+        "notice": "Follow a spiral around the cone.",
+        "say": "A pinecone is a woody seed case with many overlapping parts called scales. Seeds grow tucked beside the scales. The scales wind around the cone in spirals.",
+        "try": "Count the scales you can see on one side, then draw one spiral."
+      },
+      {
+        "id": "dry",
+        "plate": "reach",
+        "question": "Why are there gaps in a dry cone?",
+        "notice": "Look between the spread-out scales.",
+        "say": "When many common pinecones dry, their scales bend outward. The open spaces let ripe seeds leave. A light wing helps many pine seeds catch the breeze.",
+        "try": "Set a dry cone on a dish and sketch its outline. Leave room beside your drawing for a second shape."
+      },
+      {
+        "id": "wet",
+        "plate": "change",
+        "question": "What changes when a cone gets wet?",
+        "notice": "Compare the close scales with your open-cone drawing.",
+        "say": "Wet or humid conditions add water to the scales. Parts of each scale take in water differently, so the woody tissue bends inward. The cone closes. A fallen cone can still do this without muscles.",
+        "try": "Use two fallen cones or cones from a craft bin. Put one in a dry dish and briefly wet the other in a shallow dish of water. With Big beside you, check their scales over time and draw both shapes. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward."
+      },
+      {
+        "id": "seeds",
+        "plate": "keep",
+        "question": "Why wait for dry air?",
+        "notice": "Find the thin wing beside a seed.",
+        "say": "Winged seeds can drift on a dry breeze. When wet, they can cling to a scale instead. Closing in damp weather helps keep seeds inside until conditions are better for leaving. Different kinds of pinecones do not all open in exactly the same way.",
+        "try": "Let the damp cone dry on an empty dish. Check it later. What do you think the scales will do?"
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/why-electronics-use-sine-waves/01-wiggle.jpg",
-      "original": "assets/why-electronics-use-sine-waves/01-wiggle.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/01-wiggle-fold.jpg",
-      "title": "A line with a rhythm",
-      "alt": "Big and Little lean over a notebook with a smooth sine-shaped line, beside a small speaker and spring.",
-      "caption": "A sine wave is a smooth, repeating wiggle."
+      "src": "assets/pinecones/01-spiral.jpg",
+      "original": "assets/pinecones/01-spiral.png",
+      "foldSrc": "assets/pinecones/01-spiral-fold.jpg",
+      "title": "A woody spiral",
+      "alt": "Big and Little examine the spiraling woody scales of a fallen pinecone on a porch table.",
+      "caption": "Scales stack in a spiral around a pinecone."
     },
     {
       "id": "reach",
-      "src": "assets/why-electronics-use-sine-waves/02-swing.jpg",
-      "original": "assets/why-electronics-use-sine-waves/02-swing.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/02-swing-fold.jpg",
-      "title": "Slow at the turn",
-      "alt": "Little sits on a low wooden swing holding both ropes, with Big close beside it.",
-      "caption": "A gentle swing slows near each turn."
+      "src": "assets/pinecones/02-dry.jpg",
+      "original": "assets/pinecones/02-dry.png",
+      "foldSrc": "assets/pinecones/02-dry-fold.jpg",
+      "title": "Room between scales",
+      "alt": "A dry pinecone spreads its scales apart on a cream dish while Big and Little look closely.",
+      "caption": "Dry scales open, leaving room for seeds to leave."
     },
     {
       "id": "change",
-      "src": "assets/why-electronics-use-sine-waves/03-spring.jpg",
-      "original": "assets/why-electronics-use-sine-waves/03-spring.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/03-spring-fold.jpg",
-      "title": "A bounce comes back",
-      "alt": "Big holds a hanging spring above a tray while Little watches.",
-      "caption": "A spring can bounce up and down."
+      "src": "assets/pinecones/03-wet.jpg",
+      "original": "assets/pinecones/03-wet.png",
+      "foldSrc": "assets/pinecones/03-wet-fold.jpg",
+      "title": "A cone closes",
+      "alt": "Big and Little watch a narrow closed pinecone in a shallow dish of water.",
+      "caption": "Wet scales bend inward and close the gaps."
     },
     {
       "id": "notice",
-      "src": "assets/why-electronics-use-sine-waves/04-rope.jpg",
-      "original": "assets/why-electronics-use-sine-waves/04-rope.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/04-rope-fold.jpg",
-      "title": "A wiggle travels",
-      "alt": "Big and Little hold a soft rope that curves across the living-room floor.",
-      "caption": "The wiggle travels along the rope."
+      "src": "assets/pinecones/04-dishes.jpg",
+      "original": "assets/pinecones/04-dishes.png",
+      "foldSrc": "assets/pinecones/04-dishes-fold.jpg",
+      "title": "Two dishes, one clue",
+      "alt": "Little draws an open dry cone and a closed damp cone in two dishes, with Big beside the notebook.",
+      "caption": "Compare the shapes, then watch what changes."
     },
     {
       "id": "return",
-      "src": "assets/why-electronics-use-sine-waves/05-generator.jpg",
-      "original": "assets/why-electronics-use-sine-waves/05-generator.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/05-generator-fold.jpg",
-      "title": "A turn makes a push",
-      "alt": "Big and Little examine a hand-cranked teaching model with a disk and wire coil inside a clear case.",
-      "caption": "Spinning can make a smoothly changing electric push."
+      "src": "assets/pinecones/05-bending.jpg",
+      "original": "assets/pinecones/05-bending.png",
+      "foldSrc": "assets/pinecones/05-bending-fold.jpg",
+      "title": "Water bends the scales",
+      "alt": "Big holds a magnifier over an attached curved pinecone scale while Little watches.",
+      "caption": "Water changes the shape of plant tissue."
     },
     {
       "id": "keep",
-      "src": "assets/why-electronics-use-sine-waves/06-speaker.jpg",
-      "original": "assets/why-electronics-use-sine-waves/06-speaker.png",
-      "foldSrc": "assets/why-electronics-use-sine-waves/06-speaker-fold.jpg",
-      "title": "A quiet tone",
-      "alt": "Little touches the outer wooden speaker cabinet beside Big and a notebook with a smooth wave drawing.",
-      "caption": "A speaker moves air to make sound."
+      "src": "assets/pinecones/06-seeds.jpg",
+      "original": "assets/pinecones/06-seeds.png",
+      "foldSrc": "assets/pinecones/06-seeds-fold.jpg",
+      "title": "A day for seeds",
+      "alt": "Big and Little watch winged seeds beside an open pinecone and a notebook of cone drawings.",
+      "caption": "Dry weather can help winged seeds drift away."
     }
   ],
   "reading": {
-    "title": "Follow the smooth wiggle",
+    "title": "The cone that changed its shape",
     "coverPlate": "wake",
-    "coverText": "From a gentle swing to a speaker’s quiet tone.",
-    "foldableTitle": "A smooth back-and-forth wiggle",
-    "foldableCoverLine": "Why electronics use sine waves",
-    "foldableNote": "Watch the swing, the spring, and the speaker — then pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sine wave, wiggle, swing, spring, generator, and speaker to the scenes.",
+    "coverText": "A slow change at the porch table.",
+    "foldableTitle": "Open, close, and wonder",
+    "foldableCoverLine": "Pinecones",
+    "foldableNote": "Watch the scales and keep a question.",
+    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect pinecone, scale, moisture, humid, tissue, and seed to the scenes.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little draws a smooth wave, notices its rhythm in a swing and spring, sends a wiggle along a rope, and connects the same changing shape to generator power and a speaker’s steady tone.",
+      "arc": "Little follows a spiral of scales, compares a dry open cone with a wet closed one, watches drying reverse the change, and connects water-bent tissue to a winged seed’s chance to travel.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "A cozy living-room craft table. Big and Little Wonderer lean together over a wide cream notebook, where Little draws one clean smooth sine-shaped line with two rounded hills and valleys in muted ochre. A small intact wooden speaker and a loose spring sit on a tray in the background. The notebook and shared gaze are central; a soft lamp pools light on paper. No words on the page."
+          "intent": "A quiet porch craft table in soft afternoon light. Big and Little Wonderer lean beside a large mature brown pinecone lying sideways on a cream notebook. The cone is central, with many overlapping woody scales arranged in clear spirals. Little follows one spiral with a short pencil held above the page; a magnifier lies nearby. No writing or labels."
         },
         {
           "plate": "reach",
-          "intent": "A quiet garden beside the living-room window. Little Wonderer sits securely on a low wooden playground swing with two ropes, both hands holding the ropes. Big stands beside the swing within easy reach. The swing is tilted only slightly, a small gentle movement. Warm late-day light, grass below, spacious calm scene. No duplicate bodies or motion trails."
+          "intent": "Close low view across the porch table. A mature dry brown pinecone lies on a shallow cream ceramic dish. Its broad woody scales spread well apart, with dark gaps between them. Little peers closely from behind the dish, Big just beside Little. Warm dry afternoon light, a folded linen cloth and notebook quietly behind. No text."
         },
         {
           "plate": "change",
-          "intent": "Back at the craft table, Big holds the top of a large soft toy spring above a wide shallow tray. Little watches beside Big, one hand resting on the table, their shared gaze on the hanging spring. The spring has an open rounded coil shape, gently stretched vertically. Notebook at one side; warm lamplight, no diagrams or words."
+          "intent": "Close low view of a mature brown pinecone in a shallow pale-blue ceramic dish with a small amount of water. Its scales lie tightly together, making a narrow closed cone. A few droplets on its woody surface. Big and Little observe quietly side by side. Soft overcast porch light, cream paper and warm wood. No rainstorm, no text."
         },
         {
           "plate": "notice",
-          "intent": "Living-room floor in warm window light. Little holds one end of a thick soft cotton rope on the floor. Big sits nearby holding the far end loosely. The rope makes a long gentle sideways wave across the rug between them; the whole rope stays on the floor. No rope loops near either character. One readable curve, notebook nearby."
+          "intent": "A spacious porch-table scene with Big and Little Wonderer side by side. Two shallow ceramic dishes sit together: cream dish holds an open dry cone, pale-blue dish holds a narrow closed damp cone in a little water. Little draws the two shapes in an open notebook while Big shares the gaze. A soft lamp and folded linen. One coherent scene, no panels, no text."
         },
         {
           "plate": "return",
-          "intent": "A warm craft-table illustration of a large simple educational generator model on a wooden base, an enclosed clear case containing one muted gold-and-slate rotating disk beside a copper-colored wire coil. Big points to the disk and Little looks closely. A broad hand crank remains outside the case. On paper beside it is one simple sine-shaped line without labels. It is a self-contained teaching object with no plugs, power cords, or disassembled appliance."
+          "intent": "A very close still life of a mature partly open pinecone resting on warm wood, its overlapping curved scales and spiral arrangement clearly visible. A broad simple magnifier held by Big frames one attached woody scale, not a detached object. Little leans beside Big, watching the curl of the scale. A damp dish rests out of focus behind. Warm lamplight, no text or inset diagram."
         },
         {
           "plate": "keep",
-          "intent": "Close living-room craft table scene. A small intact freestanding wooden speaker with a dark circular cone behind its grille rests on a tray. Little rests fingertips gently on the OUTER wooden cabinet, well away from the cone. Big sits beside Little, hand near a small volume knob set low. An open cream notebook in front has a clean smooth sine-shaped pencil line and tiny sketches of a swing and spring, no text. Quiet shared attention, warm lamp light."
+          "intent": "At the edge of the sunny porch table, a mature open brown pinecone rests beside a few delicate winged pine seeds. One or two light papery winged seeds drift gently a short way from the open cone in a soft breeze. Big and Little watch together beside an open notebook showing small drawings of open and closed cones. The seed wing is a thin tan translucent blade with a tiny dark seed at one end. Quiet hopeful afternoon, no text."
         }
       ]
     },
@@ -154,263 +154,275 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A line with a rhythm",
-        "passage": "Little Wonderer drew a line that rose, curved over, and dipped down. Again and again, it made the same smooth wiggle. “That shape is called a sine wave,” said Big Wonderer. Sine is the math name for this smooth shape. Could a line on paper help explain a swing, a speaker, and electricity?",
-        "prompt": "What repeats in Little’s line?",
+        "title": "A woody spiral",
+        "passage": "Little Wonderer set a fallen pinecone on the porch table. It felt woody, but it was not a piece of bark. “A pinecone is a seed case,” said Big Wonderer. Its many parts are called scales. They overlap in a spiral, winding around the cone. Little followed the spiral with a curious gaze.",
+        "prompt": "How are the scales arranged?",
         "foldable": {
-          "heading": "A smooth wiggle",
-          "body": "Little drew a smooth line that rose and fell again. Big called it a sine wave. Could this shape help explain a speaker?"
+          "heading": "A woody spiral",
+          "body": "Little found a woody seed case. Its scales overlapped in a spiral. Big called it a pinecone. What was hiding inside?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Slow at the turn",
-        "passage": "Outside, Little took a gentle swing. Near each end, the swing slowed, paused, and came back. It moved fastest through the middle. Its seat followed an arc. A sine-like line could show its back-and-forth position as time passed. The line was a record of the motion, not the shape of the seat’s path.",
-        "prompt": "How is a record of motion different from the seat’s path?",
+        "title": "Room between scales",
+        "passage": "The dry cone had gaps between its scales. Dry means there is little moisture, or water, around it. The scales spread outward like small shelves. Seeds could slip through the spaces. Little drew the wide shape. Would the cone stay open if the air changed?",
+        "prompt": "How could a seed leave the dry cone?",
         "foldable": {
-          "heading": "Slow at the turn",
-          "body": "The swing slowed at each end and sped through the middle. A sine-like line could record its back-and-forth motion as time passed."
+          "heading": "Room for seeds",
+          "body": "The dry cone had gaps between its scales. Seeds could slip through those spaces. Little drew its wide, open shape."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A bounce comes back",
-        "passage": "At the table, Big held a spring above a tray. A spring is a coil that can stretch and return. Its lower end bounced up and down, slowing near each turn. Little watched the bounces grow smaller. A steady sine wave repeats evenly; this real spring gradually settled as it lost energy to its surroundings.",
-        "prompt": "What changed about the spring’s bounces over time?",
+        "title": "A cone closes",
+        "passage": "Big placed another cone in a shallow dish of water. Over time, its scales curled closer together. Wet scales take in a little water and bend inward. Humid air has water in it too. Little checked the drawing again. The cone had become narrower without anyone squeezing it.",
+        "prompt": "What changed as the cone became wet?",
         "foldable": {
-          "heading": "A bouncing spring",
-          "body": "Big held a spring above a tray. Its end bounced up and down. Each bounce grew smaller until the spring settled."
+          "heading": "A slow closing",
+          "body": "The wet cone took in a little water. Its scales bent inward and closed the gaps. Little watched its shape grow narrow."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A wiggle travels",
-        "passage": "Little moved one end of a rope gently from side to side along the floor. A wiggle traveled toward Big. Bits of rope moved back and forth while the wave moved along. Little drew its rounded shape. Smooth turning felt different from suddenly changing direction. The same kind of curve kept appearing in new places.",
-        "prompt": "What traveled along the rope, and what moved back and forth?",
+        "title": "Two dishes, one clue",
+        "passage": "One dish stayed dry. The other held the damp cone. Little sketched both shapes in a notebook: open and closed. “Let’s give the damp one time to dry,” said Big. They left it on a dry dish. Later, spaces began to appear between its scales again.",
+        "prompt": "What would make the two-dish test a fair comparison?",
         "foldable": {
-          "heading": "Along the rope",
-          "body": "Little moved a rope from side to side. A wiggle traveled toward Big, while each bit of rope moved back and forth."
+          "heading": "Two dishes, one clue",
+          "body": "Little drew the open cone and the closed cone. When the damp cone dried, spaces began to appear between its scales again."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A turn makes a push",
-        "passage": "Big showed a generator: a machine that turns motion into electrical energy. Its magnet spins beside wire. The electric push grows, fades, and reverses smoothly. A sine wave records this change. Many spinning generators make AC power for homes. AC means the push changes direction again and again.",
-        "prompt": "How does spinning change the electric push?",
+        "title": "Water bends the scales",
+        "passage": "Little leaned toward the magnifier. A scale was made of plant tissue, the material that makes up plant parts. Different parts of that tissue take in water differently. That makes the scale bend. The fallen cone needed no muscles to move. Water in, water out: its shape could change.",
+        "prompt": "What makes a scale bend without muscles?",
         "foldable": {
-          "heading": "Turning into power",
-          "body": "A generator turns motion into electrical energy. As a magnet spins beside wire, the electric push grows, fades, and changes direction smoothly."
+          "heading": "Water makes it bend",
+          "body": "Parts of a scale take in water differently. This bends the plant tissue. The fallen cone can move without muscles."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A quiet tone",
-        "passage": "The speaker made a quiet tone. Its cone moved in and out, nudging air. A pure tone follows a sine-like rhythm. Smooth changes help machines work evenly. Electronics use other shapes too. Little wondered, “Where else can we find this smooth wiggle?”",
-        "prompt": "Where else could you notice a smooth wiggle?",
+        "title": "A day for seeds",
+        "passage": "A winged seed rested beside the open cone. Its thin wing could catch a breeze. Wet seeds can cling instead of drifting. “Why would a tree open its cones only when the air is dry?” Little wondered. Their two drawings held a clue.",
+        "prompt": "Why might dry weather help a winged seed travel?",
         "foldable": {
-          "heading": "A speaker’s rhythm",
-          "body": "The speaker’s cone moved in and out to make a steady tone. Little drew its smooth rhythm. Where else might a wiggle appear?"
+          "heading": "A day for seeds",
+          "body": "A seed with a thin wing lay beside the open cone. Could dry air help it travel? Little kept the question in the notebook."
         }
       }
     ],
     "words": [
       {
-        "word": "sine wave",
-        "meaning": "the math name for a smooth, repeating wave shape"
+        "word": "pinecone",
+        "meaning": "a woody seed case with overlapping scales"
       },
       {
-        "word": "wiggle",
-        "meaning": "a small movement back and forth"
+        "word": "scale",
+        "meaning": "one of the woody parts stacked around a cone"
       },
       {
-        "word": "swing",
-        "meaning": "a hanging seat that moves back and forth along an arc"
+        "word": "dry",
+        "meaning": "having little water or moisture"
       },
       {
-        "word": "spring",
-        "meaning": "a coil that can stretch and return"
+        "word": "humid",
+        "meaning": "having moisture in the air"
       },
       {
-        "word": "generator",
-        "meaning": "a machine that changes motion into electrical energy"
+        "word": "tissue",
+        "meaning": "the material that makes up a plant part"
       },
       {
-        "word": "speaker",
-        "meaning": "a device whose moving cone nudges air to make sound"
+        "word": "seed",
+        "meaning": "a small package from which a new plant can grow"
       }
     ],
     "questions": [
-      "Why does the wave drawing differ from the path of the swing’s seat?",
-      "How does a spinning generator make a changing electric push?",
-      "What moves in a speaker to make a steady tone?"
+      "How do a dry cone and a wet cone usually look different?",
+      "How can a fallen cone move without muscles?",
+      "Why might dry weather help a winged seed leave its cone?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for a gentle wiggle.",
-      "example": "Example: Swing gently, then draw the smooth path you felt."
+      "prompt": "Write one command sentence for watching the cones.",
+      "example": "Example: Watch one dry cone and one damp cone, then draw how the scales look."
     }
   },
   "math": {
-    "title": "Count groups of wiggles",
-    "plate": "wake",
-    "intro": "Add the same number for each equal group or row.",
-    "eyebrow": "SIX GROUPS TO EXPLORE",
-    "actionLabel": "Add the equal groups",
+    "title": "Compare cones, round counts",
+    "plate": "notice",
+    "intro": "Compare two counts or round one count to the nearest ten.",
+    "eyebrow": "SIX COUNTS TO EXPLORE",
+    "actionLabel": "Compare and round",
     "tasks": [
       {
-        "skill": "equal-groups",
-        "rows": 2,
-        "columns": 3,
-        "prompt": "Little draws 2 groups of swing marks, with 3 marks in each group. How many marks are there?",
-        "equation": "3 + 3 =",
-        "hint": "Add 3 + 3, one group at a time.",
-        "answer": 6,
-        "worked": "3 + 3 = 6. There are 2 equal groups of 3.",
-        "plate": "reach",
-        "label": "TASK 1"
+        "skill": "compare",
+        "operands": [
+          47,
+          74
+        ],
+        "prompt": "Little counts 47 open cones and 74 closed cones on two trays. Fill the circle with >, <, or =. Which count is greater?",
+        "equation": "47 ○ 74",
+        "hint": "Compare the tens first: 4 tens and 7 tens.",
+        "answer": 74,
+        "worked": "47 < 74. The greater count is 74.",
+        "plate": "wake",
+        "label": "TASK 1",
+        "symbol": "<"
       },
       {
-        "skill": "array",
-        "rows": 4,
-        "columns": 2,
-        "prompt": "Big draws spring bounces in 4 rows, with 2 bounces in each row. How many bounces are drawn?",
-        "equation": "2 + 2 + 2 + 2 =",
-        "hint": "Add 2 + 2 + 2 + 2 to count the four rows.",
-        "answer": 8,
-        "worked": "2 + 2 + 2 + 2 = 8. There are 4 equal rows of 2.",
-        "plate": "change",
+        "skill": "round-ten",
+        "operands": [
+          32
+        ],
+        "prompt": "Big records 32 visible scales. What is this count rounded to the nearest ten?",
+        "equation": "32 → nearest ten: ___",
+        "hint": "Find 32 between 30 and 40. Which ten is closer?",
+        "answer": 30,
+        "worked": "32 rounds to 30 because it is 2 away from 30 and 8 away from 40.",
+        "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "equal-groups",
-        "rows": 3,
-        "columns": 3,
-        "prompt": "Little counts 3 sets of rope wiggles, with 3 wiggles in each set. How many wiggles is that?",
-        "equation": "3 + 3 + 3 =",
-        "hint": "Use 3 + 3 + 3 to count all three sets.",
-        "answer": 9,
-        "worked": "3 + 3 + 3 = 9. There are 3 equal groups of 3.",
-        "plate": "notice",
-        "label": "TASK 3"
+        "skill": "compare",
+        "operands": [
+          68,
+          59
+        ],
+        "prompt": "One notebook shows 68 dry cones; another shows 59 damp cones. Fill the circle with >, <, or =. Which count is greater?",
+        "equation": "68 ○ 59",
+        "hint": "Compare 6 tens with 5 tens before looking at the ones.",
+        "answer": 68,
+        "worked": "68 > 59. The greater count is 68.",
+        "plate": "change",
+        "label": "TASK 3",
+        "symbol": ">"
       },
       {
-        "skill": "array",
-        "rows": 3,
-        "columns": 4,
-        "prompt": "A page has 3 rows of wave drawings, with 4 drawings in each row. How many drawings are on the page?",
-        "equation": "4 + 4 + 4 =",
-        "hint": "Add 4 + 4 + 4 for the three equal rows.",
-        "answer": 12,
-        "worked": "4 + 4 + 4 = 12. There are 3 equal rows of 4.",
-        "plate": "wake",
+        "skill": "round-ten",
+        "operands": [
+          85
+        ],
+        "prompt": "Little draws 85 moisture marks beside the cone pictures. What is the count rounded to the nearest ten?",
+        "equation": "85 → nearest ten: ___",
+        "hint": "85 is halfway between 80 and 90. Halfway rounds up.",
+        "answer": 90,
+        "worked": "85 rounds to 90. A ones digit of 5 rounds up to the next ten.",
+        "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "equal-groups",
-        "rows": 5,
-        "columns": 3,
-        "prompt": "Big counts 5 groups of crank turns, with 3 turns in each group. How many turns does Big count?",
-        "equation": "3 + 3 + 3 + 3 + 3 =",
-        "hint": "Try 3 + 3 + 3 + 3 + 3, adding one group at a time.",
-        "answer": 15,
-        "worked": "3 + 3 + 3 + 3 + 3 = 15. There are 5 equal groups of 3.",
+        "skill": "compare",
+        "operands": [
+          26,
+          26
+        ],
+        "prompt": "Big and Little each count 26 scales on one side of a cone. Fill the circle with >, <, or =. What is the shared count?",
+        "equation": "26 ○ 26",
+        "hint": "Compare the tens and the ones. Both counts match.",
+        "answer": 26,
+        "worked": "26 = 26. The shared count is 26.",
         "plate": "return",
-        "label": "TASK 5"
+        "label": "TASK 5",
+        "symbol": "="
       },
       {
-        "skill": "array",
-        "rows": 4,
-        "columns": 5,
-        "prompt": "Little draws speaker wiggles in 4 rows, with 5 wiggles in each row. How many wiggles are drawn?",
-        "equation": "5 + 5 + 5 + 5 =",
-        "hint": "Use 5 + 5 + 5 + 5 to count the four rows.",
-        "answer": 20,
-        "worked": "5 + 5 + 5 + 5 = 20. There are 4 equal rows of 5.",
+        "skill": "round-ten",
+        "operands": [
+          56
+        ],
+        "prompt": "A page shows 56 open scales. What is the count rounded to the nearest ten?",
+        "equation": "56 → nearest ten: ___",
+        "hint": "Find 56 between 50 and 60. It is past the halfway point.",
+        "answer": 60,
+        "worked": "56 rounds to 60 because it is 4 away from 60 and 6 away from 50.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one task and draw its equal groups or rows.",
+    "extension": "Choose a rounding task and show its two nearby tens on a number line.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six equal-group and array tasks use rows and columns from 2 to 5. Repeated addition gives totals from 6 to 20. These are story counts, not measurements of sound or power.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Add once for each equal group or row. Welcome a drawing or spoken explanation."
+    "parentNote": "Age 8 / Grade 2 math. Compare two-digit counts and round to the nearest ten. A ones digit of 5 rounds up. Counts describe story collections, not a fixed number of scales on each cone.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Compare tens, then ones. For rounding, locate the two nearby tens and find the closer one; halfway rounds up."
   },
   "writing": {
-    "title": "Give a wiggle its words",
-    "intro": "Say one clear command, then draw or write it.",
+    "title": "A small change, in words",
+    "intro": "Give a clear command for watching a cone.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw a swing, a spring, or a rope. Show which way it moves.",
-    "starter": "My gentle-wiggle command",
+    "draw": "Draw an open cone beside a closed cone. Show the gaps between the scales.",
+    "starter": "My cone-watching command",
     "frames": [
       {
         "plate": "reach",
-        "start": "Swing",
-        "hint": "tell how to move gently"
+        "start": "Watch",
+        "hint": "tell which cone to observe"
       },
       {
         "plate": "change",
-        "start": "Watch",
-        "hint": "tell what to notice about a bounce"
+        "start": "Compare",
+        "hint": "tell which shapes to compare"
       },
       {
         "plate": "notice",
         "start": "Draw",
-        "hint": "describe the smooth wiggle"
+        "hint": "tell which details to include"
       }
     ],
     "words": [
-      "sine wave",
-      "wiggle",
-      "swing",
-      "spring",
-      "smooth",
-      "gently",
-      "back",
-      "forth"
+      "pinecone",
+      "scale",
+      "dry",
+      "wet",
+      "open",
+      "close",
+      "seed",
+      "slowly"
     ],
-    "check": "Does your command tell what to do, using a word such as Swing, Watch, or Draw?",
-    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Swing gently, then draw the smooth path you felt.”"
+    "check": "Does your command begin with an action word, such as Watch, Compare, or Draw?",
+    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Watch one dry cone and one damp cone, then draw how the scales look.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The seat travels along an arc. A wave graph records its changing back-and-forth position over time."
+      "text": "A dry cone usually has open scales with gaps. A wet cone usually has close scales and a narrower shape."
     },
     {
       "label": "Reading · 2",
-      "text": "As a magnet spins beside wire, the electric push grows, fades, and reverses. Its smooth change follows a sine wave."
+      "text": "Different parts of a scale take in water differently. The plant tissue bends as it gains or loses water; it does not need muscles."
     },
     {
       "label": "Reading · 3",
-      "text": "The speaker cone moves in and out, nudging the air. For a pure tone, that motion follows a sine-like rhythm."
+      "text": "In dry conditions, scales open and winged seeds can drift on a breeze. Wet seeds can cling to the scales."
     },
     {
       "label": "Writing",
-      "text": "Accept a command spoken, dictated, drawn, or written. Example: “Swing gently, then draw the smooth path you felt.”"
+      "text": "Accept a command spoken, dictated, drawn, or written. Example: “Watch one dry cone and one damp cone, then draw how the scales look.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up stays nearby and sets speaker volume low. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker. Do not open an outlet or take apart a powered device. A small-angle swing is approximately sinusoidal over time; its physical path is an arc. Real spring motion loses energy and settles. AC voltage from an ideal uniformly spinning generator is sinusoidal: relative rotation of a magnet and coil changes magnetic flux through the wire. This is the changing electric push in the story. Grid power also comes from sources with electronic converters, and many devices convert AC to steady DC internally. A speaker cone’s motion for a pure tone is approximately sinusoidal; sound travels as pressure changes, not as a rope-shaped path through air. Smooth sine waves can reduce unwanted harmonics in machines and pure tones; digital electronics intentionally use other waveforms. The tracing diorama compares an ideal sine shape with a triangle wave. Its marker and moving paper show position over time, not an electrical experiment or measured device output.",
+  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward. Use shallow dishes, with a grown-up nearby. Changes may take hours; revisit later without a timer or deadline. Many mature common pinecones open dry and close wet, but species differ, and some cones need special conditions to first open. Mature scale tissue is no longer living; its structure still swells unevenly with moisture and bends. The cone is not choosing or using muscles. Empty fallen cones can still change shape. The diorama shows this moisture response faster than it happens at the table, with a qualitative view inside the cone rather than a measured scale angle.",
   "sources": [
     {
-      "label": "OpenStax · electric generators",
-      "url": "https://openstax.org/books/college-physics-2e/pages/23-5-electric-generators"
+      "label": "Nature · how pine cones open",
+      "url": "https://www.nature.com/articles/37745"
     },
     {
-      "label": "EIA · how electricity is generated",
-      "url": "https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php"
+      "label": "Royal Society · hygromorphs and pinecones",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2838359/"
     },
     {
-      "label": "OpenStax · sound waves",
-      "url": "https://openstax.org/books/university-physics-volume-1/pages/17-1-sound-waves"
+      "label": "Scientific Reports · pine seed attachment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5935463/"
     }
   ],
   "authoring": {
@@ -420,75 +432,75 @@
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
     "themeIntake": {
-      "topic": "why electronics use sine waves",
-      "source": "queue/next-topic.txt",
-      "queued": true,
-      "normalized": "why electronics use sine waves",
-      "slug": "why-electronics-use-sine-waves"
+      "topic": "pinecones",
+      "source": "queue/standby.json",
+      "queued": false,
+      "normalized": "pinecones",
+      "slug": "pinecones"
     },
     "todo": []
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "sine-waves"
+    "diorama": "pinecones"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "SINE WAVES · 2026-10-14",
-    "subtitle": "A smooth rhythm in sound and power."
+    "edition": "PINECONES · 2026-10-15",
+    "subtitle": "A slow change at the porch table."
   },
   "visualNotes": {
-    "intent": "Six new warm scenes connect familiar motion to sound and generator power.",
-    "prompts": "assets/why-electronics-use-sine-waves/prompts.json",
-    "provenance": "assets/why-electronics-use-sine-waves/provenance.json"
+    "intent": "Six new porch-table scenes follow a woody spiral, dry and wet cones, a two-dish comparison, bending tissue, and winged seeds. The first scene also supplies the title card.",
+    "prompts": "assets/pinecones/prompts.json",
+    "provenance": "assets/pinecones/provenance.json"
   },
   "quiz": {
-    "title": "Four clues in a wiggle",
-    "intro": "Use the swing, the generator, and the speaker to think it through.",
+    "title": "Four clues in a cone",
+    "intro": "Think back to the scales, the dishes, and the seed.",
     "questions": [
       {
-        "id": "shape",
-        "prompt": "Which description best fits a sine wave?",
+        "id": "parts",
+        "prompt": "What are the woody parts stacked around a pinecone called?",
         "choices": [
-          "A smooth wiggle that repeats",
-          "A line with random jumps",
-          "A line that never changes"
+          "Scales",
+          "Petals",
+          "Roots"
         ],
         "answerIndex": 0,
-        "answer": "A sine wave is a smooth, repeating wiggle."
+        "answer": "They are scales, arranged in spirals around the cone."
       },
       {
-        "id": "generator",
-        "prompt": "What does a generator change into electrical energy?",
+        "id": "dry",
+        "prompt": "What usually happens to a common pinecone as it dries?",
         "choices": [
-          "A drawing on paper",
-          "Turning motion",
-          "The color of a speaker"
+          "Its scales close tightly",
+          "Its scales open wider",
+          "It grows new muscles"
         ],
         "answerIndex": 1,
-        "answer": "A generator changes turning motion into electrical energy; its electric push can change smoothly as it spins."
+        "answer": "As the cone dries, its scales open wider, making space for seeds to leave."
       },
       {
-        "id": "speaker",
-        "prompt": "How does a speaker make sound?",
+        "id": "bend",
+        "prompt": "What makes a wet pinecone’s scales close?",
         "choices": [
-          "Its case makes light",
-          "Its paper drawing moves",
-          "Its cone moves in and out, nudging air"
+          "The cone decides to squeeze",
+          "A seed pulls each scale",
+          "Water makes parts of the scale swell differently"
         ],
         "answerIndex": 2,
-        "answer": "The cone moves in and out, nudging air. For a pure tone, it follows a sine-like rhythm."
+        "answer": "Water makes parts of the scale swell differently, bending the woody tissue inward."
       },
       {
-        "id": "signals",
-        "prompt": "Do electronics use only sine waves?",
+        "id": "travel",
+        "prompt": "Why can dry weather be a good time for winged seeds to leave?",
         "choices": [
-          "Yes, every signal has the same shape",
-          "No, they also use other shapes and steady power",
-          "Yes, because sound cannot change"
+          "Dry air makes seeds heavier",
+          "A dry winged seed can drift on a breeze",
+          "Seeds need to stay wet to drift"
         ],
         "answerIndex": 1,
-        "answer": "Electronics also use other signal shapes and steady power. Sine waves are useful, but they are not the only kind."
+        "answer": "A dry winged seed can drift on a breeze. Wet seeds can cling to the cone instead."
       }
     ]
   }
