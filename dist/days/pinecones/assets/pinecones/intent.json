@@ -1,0 +1,37 @@
+{
+  "slug": "pinecones",
+  "outlineLockedBeforeImages": true,
+  "arc": "Little follows a spiral of scales, compares a dry open cone with a wet closed one, watches drying reverse the change, and connects water-bent tissue to a winged seed’s chance to travel.",
+  "scenes": [
+    {
+      "plate": "wake",
+      "intent": "A quiet porch craft table in soft afternoon light. Big and Little Wonderer lean beside a large mature brown pinecone lying sideways on a cream notebook. The cone is central, with many overlapping woody scales arranged in clear spirals. Little follows one spiral with a short pencil held above the page; a magnifier lies nearby. No writing or labels."
+    },
+    {
+      "plate": "reach",
+      "intent": "Close low view across the porch table. A mature dry brown pinecone lies on a shallow cream ceramic dish. Its broad woody scales spread well apart, with dark gaps between them. Little peers closely from behind the dish, Big just beside Little. Warm dry afternoon light, a folded linen cloth and notebook quietly behind. No text."
+    },
+    {
+      "plate": "change",
+      "intent": "Close low view of a mature brown pinecone in a shallow pale-blue ceramic dish with a small amount of water. Its scales lie tightly together, making a narrow closed cone. A few droplets on its woody surface. Big and Little observe quietly side by side. Soft overcast porch light, cream paper and warm wood. No rainstorm, no text."
+    },
+    {
+      "plate": "notice",
+      "intent": "A spacious porch-table scene with Big and Little Wonderer side by side. Two shallow ceramic dishes sit together: cream dish holds an open dry cone, pale-blue dish holds a narrow closed damp cone in a little water. Little draws the two shapes in an open notebook while Big shares the gaze. A soft lamp and folded linen. One coherent scene, no panels, no text."
+    },
+    {
+      "plate": "return",
+      "intent": "A very close still life of a mature partly open pinecone resting on warm wood, its overlapping curved scales and spiral arrangement clearly visible. A broad simple magnifier held by Big frames one attached woody scale, not a detached object. Little leans beside Big, watching the curl of the scale. A damp dish rests out of focus behind. Warm lamplight, no text or inset diagram."
+    },
+    {
+      "plate": "keep",
+      "intent": "At the edge of the sunny porch table, a mature open brown pinecone rests beside a few delicate winged pine seeds. One or two light papery winged seeds drift gently a short way from the open cone in a soft breeze. Big and Little watch together beside an open notebook showing small drawings of open and closed cones. The seed wing is a thin tan translucent blade with a tiny dark seed at one end. Quiet hopeful afternoon, no text."
+    }
+  ],
+  "designLocks": [
+    "Newsreader and Inter; ink and paper with rare gold.",
+    "Quiet porch light, warm wood, cream dishes.",
+    "Big beside Little; shared gaze keeps the cone central.",
+    "Moisture bending is the only interactive mechanism."
+  ]
+}
