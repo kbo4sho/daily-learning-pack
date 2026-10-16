@@ -1,0 +1,35 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "id": "wake",
+      "file": "01-speaker.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. At a cozy kitchen craft table in soft lamplight, Big and Little Wonderer lean toward a small intact walnut speaker with a visible cream paper cone on its front. A notebook holds a simple smooth wave drawing. A few delicate muted orange curved air-wave marks travel away from the cone. Quiet curiosity, one scene, no text."
+    },
+    {
+      "id": "reach",
+      "file": "02-cone.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. Close three-quarter view of the front of a small intact walnut speaker on the craft table. Its broad cream paper cone is shown mid vibration with two subtle offset contour marks suggesting forward and backward movement, and delicate curved air-wave marks radiating outward. Big and Little watch side by side behind the speaker. No visible inner electrical parts or text."
+    },
+    {
+      "id": "change",
+      "file": "03-bowl.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. Big and Little Wonderer watch a cream ceramic bowl on a wooden tray. Transparent plastic wrap is stretched taut over the rim. A pinch of rice rests on top, with three grains just barely hopping above the membrane. Big gently touches the bowl side. Soft lamp light catches the transparent taut surface. An open notebook nearby, no text."
+    },
+    {
+      "id": "notice",
+      "file": "04-drum.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. A small toy drum rests flat on a wooden craft table with a pinch of rice on its pale taut drumhead. Big gently touches the outer drum rim while Little watches three rice grains make tiny hops over the surface. Big and Little share the same gaze. Folded linen and a warm lamp, no drumsticks, no text."
+    },
+    {
+      "id": "return",
+      "file": "05-cups.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. Big and Little Wonderer use a simple cup-and-string telephone across a cozy craft table. Big holds one cream paper cup near the mouth, Little holds the second near the ear. A single gently taut string connects the centers of the two cup bottoms, crossing only above the table. No string around bodies. Notebook with tiny wave sketches, warm lamp, no electricity, no text."
+    },
+    {
+      "id": "keep",
+      "file": "06-ear.png",
+      "prompt": "Use case: illustration-story. Create one NEW landscape 1536x1024 scenic watercolor and fine graphite illustration for Wonder Together. Quiet luxury that cares: warm ivory paper grain, walnut, charcoal ink, restrained antique gold, soft lamplight, generous breathing room. Big and Little Wonderer are neutral cream pebble-shaped creatures with tiny black eyes, small round ears and simple little arms, no clothes, no fur, no plush anatomy. Big is 1.5 times Little, beside Little, sharing attention. Tender capable curiosity. Full-bleed single scene, not a collage. No typography, headings, captions, logos or watermark. No wall outlets, no disassembled devices, no electrical wiring, no distress. Quiet over-the-shoulder scene beside Little Wonderer and Big at the kitchen table. A small intact walnut speaker faces toward Little, with delicate curved air-wave marks approaching Little\u2019s small rounded ear. Big shares Little\u2019s gaze toward an open notebook that shows a simple ear outline and smooth wave sketch. Tender warm lamplight, wonder held in the unfinished drawing, no written text."
+    }
+  ]
+}
