@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-speakers-turn-waves-into-sound",
+  "topic": "how speakers turn waves into sound",
+  "teaser": "Follow a wiggle from a paper cone, through the air, to your ear.",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · SPEAKERS",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "How Speakers Turn Waves Into Sound",
+  "question": "Where does the wiggle go after it leaves the speaker?",
+  "idea": "A changing electric signal moves a speaker’s coil and cone. The cone sends pressure waves through air, and those waves make an eardrum vibrate.",
+  "curiosity": {
+    "intro": "Bring a notebook to the kitchen table and follow one small wiggle.",
+    "carryForward": "Draw the path from the cone to an ear.",
+    "questions": [
+      {
+        "id": "speaker",
+        "plate": "wake",
+        "question": "How can a wave become a sound?",
+        "notice": "Find the smooth wiggle beside the speaker.",
+        "say": "Sound begins with vibration, a back-and-forth motion. A speaker turns a changing electric signal into motion. A pure note can follow a sine wave’s smooth wiggle. Music uses many wiggles together.",
+        "try": "Draw a smooth wave, then move your hand gently back and forth to follow its rhythm."
+      },
+      {
+        "id": "cone",
+        "plate": "reach",
+        "question": "What makes the cone wiggle?",
+        "notice": "Look for the wide paper cone on the speaker.",
+        "say": "A speaker has a cone made of paper or plastic. A wire coil is attached behind it, near a magnet. The changing electric signal makes the coil push and pull against the magnet. The cone moves with it.",
+        "try": "Use the diorama to follow the coil, the cone, and the air in that order."
+      },
+      {
+        "id": "rice",
+        "plate": "change",
+        "question": "Can you see a vibration?",
+        "notice": "Look just above the tight wrap.",
+        "say": "Rice can hop when the surface under it vibrates. Try a toy drum, or a bowl with plastic wrap pulled tight across its top. A tiny tap makes the motion easier to spot.",
+        "try": "Place a pinch of rice on the tight wrap or a toy drum. Hum or sing softly nearby and look closely. If the rice stays still, gently tap the bowl’s side or the drum rim. Draw what changes. Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet."
+      },
+      {
+        "id": "ear",
+        "plate": "keep",
+        "question": "How does the wiggle reach your ear?",
+        "notice": "Follow the air-wave marks toward the ear.",
+        "say": "The cone squeezes air, then lets it spread out. These pressure changes travel as a wave. At your ear, the eardrum vibrates. Faster wiggles make a higher pitch. Bigger wiggles make a louder sound.",
+        "try": "Draw a path from speaker to air to ear. Add one question about where the wiggle goes next."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-speakers-turn-waves-into-sound/01-speaker.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/01-speaker.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/01-speaker-fold.jpg",
+      "title": "A wiggle begins",
+      "alt": "Big and Little examine an intact speaker beside a notebook with a smooth wave drawing.",
+      "caption": "A speaker gives a smooth signal a moving cone."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-speakers-turn-waves-into-sound/02-cone.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/02-cone.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/02-cone-fold.jpg",
+      "title": "A cone moves air",
+      "alt": "A speaker’s paper cone has back-and-forth motion marks while Big and Little watch.",
+      "caption": "The coil moves the cone, and the cone moves air."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-speakers-turn-waves-into-sound/03-bowl.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/03-bowl.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/03-bowl-fold.jpg",
+      "title": "Rice gives a clue",
+      "alt": "Big and Little watch a few rice grains hop above plastic wrap stretched over a bowl.",
+      "caption": "A vibrating surface can make rice hop."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-speakers-turn-waves-into-sound/04-drum.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/04-drum.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/04-drum-fold.jpg",
+      "title": "A drum can wiggle too",
+      "alt": "Rice hops on a toy drum as Big gently touches the rim beside Little.",
+      "caption": "A drumhead can pass its wiggle to rice."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-speakers-turn-waves-into-sound/05-cups.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/05-cups.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/05-cups-fold.jpg",
+      "title": "Another path for a wiggle",
+      "alt": "Big speaks softly into one paper cup while Little listens at a second cup joined by a taut string.",
+      "caption": "A taut string carries vibration between cups."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-speakers-turn-waves-into-sound/06-ear.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/06-ear.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/06-ear-fold.jpg",
+      "title": "The wiggle reaches you",
+      "alt": "Air-wave marks lead from a small speaker toward Little’s ear beside a notebook of wave drawings.",
+      "caption": "Pressure waves make an eardrum vibrate."
+    }
+  ],
+  "reading": {
+    "title": "Follow the little wiggle",
+    "coverPlate": "wake",
+    "coverText": "From a paper cone to a listening ear.",
+    "foldableTitle": "A little book of wiggles",
+    "foldableCoverLine": "How Speakers Make Sound",
+    "foldableNote": "Follow the motion and carry a question.",
+    "parentNote": "Age 8 / Grade 3 reading. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
+    "outline": {
+      "status": "locked",
+      "beforeImages": true,
+      "arc": "Little traces a smooth electric signal into a moving speaker cone, sees vibration in rice on a bowl and drum, follows it through a cup telephone, and wonders how an air wave reaches an ear.",
+      "beatIntents": [
+        {
+          "plate": "wake",
+          "intent": "At a cozy kitchen craft table in soft lamplight, Big and Little Wonderer lean toward a small intact walnut speaker with a visible cream paper cone on its front. A notebook holds a simple smooth wave drawing. A few delicate muted orange curved air-wave marks travel away from the cone. Quiet curiosity, one scene, no text."
+        },
+        {
+          "plate": "reach",
+          "intent": "Close three-quarter view of the front of a small intact walnut speaker on the craft table. Its broad cream paper cone is shown mid vibration with two subtle offset contour marks suggesting forward and backward movement, and delicate curved air-wave marks radiating outward. Big and Little watch side by side behind the speaker. No visible inner electrical parts or text."
+        },
+        {
+          "plate": "change",
+          "intent": "Big and Little Wonderer watch a cream ceramic bowl on a wooden tray. Transparent plastic wrap is stretched taut over the rim. A pinch of rice rests on top, with three grains just barely hopping above the membrane. Big gently touches the bowl side. Soft lamp light catches the transparent taut surface. An open notebook nearby, no text."
+        },
+        {
+          "plate": "notice",
+          "intent": "A small toy drum rests flat on a wooden craft table with a pinch of rice on its pale taut drumhead. Big gently touches the outer drum rim while Little watches three rice grains make tiny hops over the surface. Big and Little share the same gaze. Folded linen and a warm lamp, no drumsticks, no text."
+        },
+        {
+          "plate": "return",
+          "intent": "Big and Little Wonderer use a simple cup-and-string telephone across a cozy craft table. Big holds one cream paper cup near the mouth, Little holds the second near the ear. A single gently taut string connects the centers of the two cup bottoms, crossing only above the table. No string around bodies. Notebook with tiny wave sketches, warm lamp, no electricity, no text."
+        },
+        {
+          "plate": "keep",
+          "intent": "Quiet over-the-shoulder scene beside Little Wonderer and Big at the kitchen table. A small intact walnut speaker faces toward Little, with delicate curved air-wave marks approaching Little’s small rounded ear. Big shares Little’s gaze toward an open notebook that shows a simple ear outline and smooth wave sketch. Tender warm lamplight, wonder held in the unfinished drawing, no written text."
+        }
+      ]
+    },
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A wiggle begins",
+        "passage": "A soft note came from the speaker on the table. Little Wonderer found the smooth wave drawn in the notebook. “Could that wiggle become a sound?” Big Wonderer nodded. A speaker changes an electric signal into vibration: a back-and-forth motion. For a pure note, that motion follows the smooth shape of a sine wave.",
+        "prompt": "What changes inside a speaker when it makes a note?",
+        "foldable": {
+          "heading": "A wiggle begins",
+          "body": "Little heard a note from the speaker. A wiggly electric signal made something move. Could the notebook’s smooth wave become a sound?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "A cone moves air",
+        "passage": "The speaker’s cone was a thin piece of paper shaped like a shallow bowl. Behind it, a coil of wire sat near a magnet. The changing signal made the coil push and pull against the magnet. The attached cone moved back and forth, squeezing nearby air, then letting it spread out.",
+        "prompt": "Why does the cone move when the coil moves?",
+        "foldable": {
+          "heading": "Push, then pull",
+          "body": "A wire coil sat near a magnet. The changing signal made it push and pull. The attached paper cone moved back and forth."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Rice gives a clue",
+        "passage": "Big stretched plastic wrap over a bowl and added a pinch of rice. Little hummed nearby. Nothing moved yet. Big gently tapped the bowl, and a few grains hopped. The tight wrap was vibrating beneath them. Rice made a small motion easier to see. Little drew the tiny hops.",
+        "prompt": "What does the moving rice tell you about the wrap?",
+        "foldable": {
+          "heading": "A tiny hop",
+          "body": "Little hummed near the rice bowl. Big gently tapped its side. The tight wrap vibrated, and rice hopped. A small motion became visible."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A drum can wiggle too",
+        "passage": "A toy drum waited beside the bowl. Big gave its rim a gentle tap. Rice on the drumhead bounced. The drumhead and the bowl’s wrap could both vibrate. Faster wiggles make a higher pitch, or higher-sounding note. Bigger wiggles make a louder sound. Little kept the taps soft.",
+        "prompt": "How is a higher sound different from a louder sound?",
+        "foldable": {
+          "heading": "Two kinds of change",
+          "body": "Rice hopped on the vibrating drumhead too. Faster wiggles make higher sounds. Bigger wiggles make louder sounds. Little kept the taps gentle."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "Another path for a wiggle",
+        "passage": "Big spoke softly into a paper cup. Little listened at a second cup, joined by a taut string. The first cup’s bottom vibrated. The string carried the motion to the other cup. That cup moved the air near Little’s ear. A wiggle could travel through more than air.",
+        "prompt": "What carries the vibration between the two cups?",
+        "foldable": {
+          "heading": "Along a string",
+          "body": "Big spoke into a paper cup. Its bottom vibrated. A taut string carried the motion to Little’s cup, which moved the air nearby."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "The wiggle reaches you",
+        "passage": "A pattern of squeezed and spread-out air traveled as pressure waves. Air wiggled in place. Little’s eardrum vibrated, helping the ear sense sound. “Where does the wiggle go after it leaves the speaker?” Little wondered.",
+        "prompt": "How does the wiggle get from the cone to your ear?",
+        "foldable": {
+          "heading": "A wiggle reaches you",
+          "body": "The cone sent pressure waves through air. Little’s eardrum vibrated when they arrived. Where would the wiggle travel next?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "speaker",
+        "meaning": "a device that changes an electric signal into sound"
+      },
+      {
+        "word": "cone",
+        "meaning": "the thin paper or plastic part that moves air"
+      },
+      {
+        "word": "coil",
+        "meaning": "wire wound into loops"
+      },
+      {
+        "word": "magnet",
+        "meaning": "a part that pushes or pulls on the coil when its signal changes"
+      },
+      {
+        "word": "vibration",
+        "meaning": "a back-and-forth wiggle"
+      },
+      {
+        "word": "pressure wave",
+        "meaning": "a traveling pattern of squeezed and spread-out air"
+      },
+      {
+        "word": "eardrum",
+        "meaning": "a thin surface inside the ear that vibrates with sound"
+      },
+      {
+        "word": "pitch",
+        "meaning": "how high or low a sound seems"
+      }
+    ],
+    "questions": [
+      "Why must the cone be attached to the coil?",
+      "What do the hopping rice and the listening ear have in common?",
+      "How would faster wiggles change a note differently from bigger wiggles?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one command sentence for watching a vibration.",
+      "example": "Example: Hum near the bowl, then draw how the rice moved."
+    }
+  },
+  "math": {
+    "title": "Count the little wiggles",
+    "plate": "notice",
+    "intro": "Add or subtract. Trade a ten when you need one.",
+    "eyebrow": "SIX SOUND COUNTS",
+    "actionLabel": "Add and subtract",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          27,
+          36
+        ],
+        "prompt": "Little marks 27 cone wiggles, then 36 more. How many wiggles are marked?",
+        "equation": "27 + 36 =",
+        "hint": "Add the ones, then trade 10 ones for 1 ten.",
+        "answer": 63,
+        "worked": "7 + 6 = 13 ones: 1 ten and 3 ones. Add 2 + 3 + 1 tens to get 63.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          64,
+          28
+        ],
+        "prompt": "Of 64 rice grains on the drum, 28 hop during a gentle tap. How many stay still?",
+        "equation": "64 − 28 =",
+        "hint": "Trade 1 ten for 10 ones before subtracting 8 ones.",
+        "answer": 36,
+        "worked": "64 is 5 tens and 14 ones. Subtract 2 tens and 8 ones to get 36.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          38,
+          45
+        ],
+        "prompt": "Big records 38 drum taps on one page and 45 on another. How many taps are recorded?",
+        "equation": "38 + 45 =",
+        "hint": "Combine the ones first, then regroup a ten.",
+        "answer": 83,
+        "worked": "8 + 5 = 13 ones: 1 ten and 3 ones. Add 3 + 4 + 1 tens to get 83.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          72,
+          46
+        ],
+        "prompt": "Little draws 72 waves and colors 46 of them. How many waves are left to color?",
+        "equation": "72 − 46 =",
+        "hint": "Rename 72 as 6 tens and 12 ones.",
+        "answer": 26,
+        "worked": "72 is 6 tens and 12 ones. Subtract 4 tens and 6 ones to get 26.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          46,
+          29
+        ],
+        "prompt": "A speaker drawing shows 46 wire loops, then Little adds 29. How many loops are drawn?",
+        "equation": "46 + 29 =",
+        "hint": "Add 6 ones and 9 ones, then regroup.",
+        "answer": 75,
+        "worked": "6 + 9 = 15 ones: 1 ten and 5 ones. Add 4 + 2 + 1 tens to get 75.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          91,
+          57
+        ],
+        "prompt": "A notebook has 91 cup-phone turns planned and 57 finished. How many turns remain?",
+        "equation": "91 − 57 =",
+        "hint": "Rename 91 as 8 tens and 11 ones.",
+        "answer": 34,
+        "worked": "91 is 8 tens and 11 ones. Subtract 5 tens and 7 ones to get 34.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one task and show the trade with tens and ones.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Age 8 / Grade 2 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
+  },
+  "writing": {
+    "title": "Put a wiggle into words",
+    "intro": "Give a clear command for watching rice move.",
+    "plateIds": [
+      "change",
+      "notice",
+      "return"
+    ],
+    "draw": "Draw the bowl before and after a gentle tap. Show the rice.",
+    "starter": "My vibration-watching command",
+    "frames": [
+      {
+        "plate": "change",
+        "start": "Hum",
+        "hint": "tell where to make a soft sound"
+      },
+      {
+        "plate": "notice",
+        "start": "Watch",
+        "hint": "tell which surface to observe"
+      },
+      {
+        "plate": "return",
+        "start": "Draw",
+        "hint": "tell how to show the motion"
+      }
+    ],
+    "words": [
+      "speaker",
+      "cone",
+      "coil",
+      "magnet",
+      "air",
+      "wave",
+      "ear",
+      "rice",
+      "gently"
+    ],
+    "check": "Does your command begin with an action word, such as Hum, Watch, or Draw?",
+    "parentNote": "Welcome speaking, dictation, drawing, or writing. One command is enough. Example: “Hum near the bowl, then draw how the rice moved.”"
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The coil pushes and pulls near the magnet. Its attachment passes that back-and-forth motion to the cone."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Both reveal vibration. A moving surface makes rice hop; arriving pressure waves make an eardrum vibrate."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "Faster wiggles make a higher pitch. Bigger wiggles make a louder sound."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a spoken, dictated, drawn, or written command. Example: “Hum near the bowl, then draw how the rice moved.”"
+    }
+  ],
+  "parentGuidance": "Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet. Rice may not move with a gentle voice; a light tap on the bowl’s side is a reliable next step. The model slows and enlarges motion and does not play audio. Air particles move locally back and forth while the pressure pattern travels. The electric signal stays in the speaker circuit; sound through air is mechanical vibration. The coil’s magnetic interaction with a fixed magnet moves the attached cone. Pure tones are sinusoidal; speech and music combine more complex motions. At a fixed pitch and distance, greater vibration amplitude generally sounds louder. The inner ear changes the eardrum’s arriving vibration into signals for the brain. The cup phone carries mechanical vibration along its taut string.",
+  "sources": [
+    {
+      "label": "Washington University · speaker coil and magnet",
+      "url": "https://web.physics.wustl.edu/introphys/Archives/SP14/Speakers_SP14.pdf"
+    },
+    {
+      "label": "NIDCD · how hearing works",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    },
+    {
+      "label": "The Physics Classroom · sound waves",
+      "url": "https://www.physicsclassroom.com/Class/sound/soundtoc.cfm"
+    }
+  ],
+  "authoring": {
+    "status": "authored",
+    "bar": "curiosity",
+    "difficultyBar": "one-step-beyond-grade-2",
+    "expectedPlates": 6,
+    "plateGen": "built-in-image-generation",
+    "themeIntake": {
+      "topic": "how speakers turn waves into sound",
+      "source": "queue/next-topic.txt",
+      "queued": true,
+      "normalized": "how speakers turn waves into sound",
+      "slug": "how-speakers-turn-waves-into-sound"
+    },
+    "todo": []
+  },
+  "surfaces": {
+    "layout": "six",
+    "diorama": "speakers"
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "SPEAKERS · 2026-10-16",
+    "subtitle": "A little wiggle, all the way to your ear."
+  },
+  "visualNotes": {
+    "intent": "Six new kitchen-table scenes follow an intact speaker, its moving cone, rice on a bowl and drum, a cup telephone, and an arriving air wave. Scene one supplies the title card.",
+    "prompts": "assets/how-speakers-turn-waves-into-sound/prompts.json",
+    "provenance": "assets/how-speakers-turn-waves-into-sound/provenance.json"
+  },
+  "quiz": {
+    "title": "Four stops for a wiggle",
+    "intro": "Follow the motion from the speaker to the ear.",
+    "questions": [
+      {
+        "id": "coil",
+        "prompt": "What moves the cone in a speaker?",
+        "choices": [
+          "Air arriving from your ear",
+          "A coil pushing and pulling near a magnet",
+          "Rice inside the cone"
+        ],
+        "answerIndex": 1,
+        "answer": "The changing electric signal makes the coil push and pull near the magnet, moving the attached cone."
+      },
+      {
+        "id": "air",
+        "prompt": "What travels through the air from the cone?",
+        "choices": [
+          "Pressure waves",
+          "Wire loops",
+          "A stream of electricity"
+        ],
+        "answerIndex": 0,
+        "answer": "Pressure waves carry a pattern of squeezed and spread-out air toward the ear."
+      },
+      {
+        "id": "pitch",
+        "prompt": "What makes a note higher in pitch?",
+        "choices": [
+          "Bigger wiggles",
+          "A larger bowl",
+          "Faster wiggles"
+        ],
+        "answerIndex": 2,
+        "answer": "Faster wiggles make a higher pitch; bigger wiggles make a louder sound."
+      },
+      {
+        "id": "rice",
+        "prompt": "Why can rice hop on a drumhead?",
+        "choices": [
+          "The rice hears the music",
+          "The vibrating drumhead moves the rice",
+          "Air turns the rice into sound"
+        ],
+        "answerIndex": 1,
+        "answer": "The drumhead vibrates beneath the rice and gives it little pushes upward."
+      }
+    ]
+  }
+}

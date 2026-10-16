@@ -1,152 +1,152 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "pinecones",
-  "topic": "pinecones",
-  "teaser": "A woody spiral opens in dry air and closes when wet.",
+  "slug": "how-speakers-turn-waves-into-sound",
+  "topic": "how speakers turn waves into sound",
+  "teaser": "Follow a wiggle from a paper cone, through the air, to your ear.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "compare-and-round",
+  "mathTemplate": "number-crunch",
   "ageRange": [
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · PINECONES",
+  "editionLabel": "GRADE 3 · SPEAKERS",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Pinecones",
-  "question": "Why would a tree open its cones only when the air is dry?",
-  "idea": "Many common pinecones open when dry and close when wet. Water changes the shape of their woody scales, helping time the release of seeds.",
+  "title": "How Speakers Turn Waves Into Sound",
+  "question": "Where does the wiggle go after it leaves the speaker?",
+  "idea": "A changing electric signal moves a speaker’s coil and cone. The cone sends pressure waves through air, and those waves make an eardrum vibrate.",
   "curiosity": {
-    "intro": "Bring a fallen cone to the porch table and follow a slow change.",
-    "carryForward": "Keep two small drawings: open and closed.",
+    "intro": "Bring a notebook to the kitchen table and follow one small wiggle.",
+    "carryForward": "Draw the path from the cone to an ear.",
     "questions": [
       {
-        "id": "scales",
+        "id": "speaker",
         "plate": "wake",
-        "question": "What is a pinecone made of?",
-        "notice": "Follow a spiral around the cone.",
-        "say": "A pinecone is a woody seed case with many overlapping parts called scales. Seeds grow tucked beside the scales. The scales wind around the cone in spirals.",
-        "try": "Count the scales you can see on one side, then draw one spiral."
+        "question": "How can a wave become a sound?",
+        "notice": "Find the smooth wiggle beside the speaker.",
+        "say": "Sound begins with vibration, a back-and-forth motion. A speaker turns a changing electric signal into motion. A pure note can follow a sine wave’s smooth wiggle. Music uses many wiggles together.",
+        "try": "Draw a smooth wave, then move your hand gently back and forth to follow its rhythm."
       },
       {
-        "id": "dry",
+        "id": "cone",
         "plate": "reach",
-        "question": "Why are there gaps in a dry cone?",
-        "notice": "Look between the spread-out scales.",
-        "say": "When many common pinecones dry, their scales bend outward. The open spaces let ripe seeds leave. A light wing helps many pine seeds catch the breeze.",
-        "try": "Set a dry cone on a dish and sketch its outline. Leave room beside your drawing for a second shape."
+        "question": "What makes the cone wiggle?",
+        "notice": "Look for the wide paper cone on the speaker.",
+        "say": "A speaker has a cone made of paper or plastic. A wire coil is attached behind it, near a magnet. The changing electric signal makes the coil push and pull against the magnet. The cone moves with it.",
+        "try": "Use the diorama to follow the coil, the cone, and the air in that order."
       },
       {
-        "id": "wet",
+        "id": "rice",
         "plate": "change",
-        "question": "What changes when a cone gets wet?",
-        "notice": "Compare the close scales with your open-cone drawing.",
-        "say": "Wet or humid conditions add water to the scales. Parts of each scale take in water differently, so the woody tissue bends inward. The cone closes. A fallen cone can still do this without muscles.",
-        "try": "Use two fallen cones or cones from a craft bin. Put one in a dry dish and briefly wet the other in a shallow dish of water. With Big beside you, check their scales over time and draw both shapes. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward."
+        "question": "Can you see a vibration?",
+        "notice": "Look just above the tight wrap.",
+        "say": "Rice can hop when the surface under it vibrates. Try a toy drum, or a bowl with plastic wrap pulled tight across its top. A tiny tap makes the motion easier to spot.",
+        "try": "Place a pinch of rice on the tight wrap or a toy drum. Hum or sing softly nearby and look closely. If the rice stays still, gently tap the bowl’s side or the drum rim. Draw what changes. Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet."
       },
       {
-        "id": "seeds",
+        "id": "ear",
         "plate": "keep",
-        "question": "Why wait for dry air?",
-        "notice": "Find the thin wing beside a seed.",
-        "say": "Winged seeds can drift on a dry breeze. When wet, they can cling to a scale instead. Closing in damp weather helps keep seeds inside until conditions are better for leaving. Different kinds of pinecones do not all open in exactly the same way.",
-        "try": "Let the damp cone dry on an empty dish. Check it later. What do you think the scales will do?"
+        "question": "How does the wiggle reach your ear?",
+        "notice": "Follow the air-wave marks toward the ear.",
+        "say": "The cone squeezes air, then lets it spread out. These pressure changes travel as a wave. At your ear, the eardrum vibrates. Faster wiggles make a higher pitch. Bigger wiggles make a louder sound.",
+        "try": "Draw a path from speaker to air to ear. Add one question about where the wiggle goes next."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/pinecones/01-spiral.jpg",
-      "original": "assets/pinecones/01-spiral.png",
-      "foldSrc": "assets/pinecones/01-spiral-fold.jpg",
-      "title": "A woody spiral",
-      "alt": "Big and Little examine the spiraling woody scales of a fallen pinecone on a porch table.",
-      "caption": "Scales stack in a spiral around a pinecone."
+      "src": "assets/how-speakers-turn-waves-into-sound/01-speaker.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/01-speaker.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/01-speaker-fold.jpg",
+      "title": "A wiggle begins",
+      "alt": "Big and Little examine an intact speaker beside a notebook with a smooth wave drawing.",
+      "caption": "A speaker gives a smooth signal a moving cone."
     },
     {
       "id": "reach",
-      "src": "assets/pinecones/02-dry.jpg",
-      "original": "assets/pinecones/02-dry.png",
-      "foldSrc": "assets/pinecones/02-dry-fold.jpg",
-      "title": "Room between scales",
-      "alt": "A dry pinecone spreads its scales apart on a cream dish while Big and Little look closely.",
-      "caption": "Dry scales open, leaving room for seeds to leave."
+      "src": "assets/how-speakers-turn-waves-into-sound/02-cone.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/02-cone.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/02-cone-fold.jpg",
+      "title": "A cone moves air",
+      "alt": "A speaker’s paper cone has back-and-forth motion marks while Big and Little watch.",
+      "caption": "The coil moves the cone, and the cone moves air."
     },
     {
       "id": "change",
-      "src": "assets/pinecones/03-wet.jpg",
-      "original": "assets/pinecones/03-wet.png",
-      "foldSrc": "assets/pinecones/03-wet-fold.jpg",
-      "title": "A cone closes",
-      "alt": "Big and Little watch a narrow closed pinecone in a shallow dish of water.",
-      "caption": "Wet scales bend inward and close the gaps."
+      "src": "assets/how-speakers-turn-waves-into-sound/03-bowl.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/03-bowl.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/03-bowl-fold.jpg",
+      "title": "Rice gives a clue",
+      "alt": "Big and Little watch a few rice grains hop above plastic wrap stretched over a bowl.",
+      "caption": "A vibrating surface can make rice hop."
     },
     {
       "id": "notice",
-      "src": "assets/pinecones/04-dishes.jpg",
-      "original": "assets/pinecones/04-dishes.png",
-      "foldSrc": "assets/pinecones/04-dishes-fold.jpg",
-      "title": "Two dishes, one clue",
-      "alt": "Little draws an open dry cone and a closed damp cone in two dishes, with Big beside the notebook.",
-      "caption": "Compare the shapes, then watch what changes."
+      "src": "assets/how-speakers-turn-waves-into-sound/04-drum.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/04-drum.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/04-drum-fold.jpg",
+      "title": "A drum can wiggle too",
+      "alt": "Rice hops on a toy drum as Big gently touches the rim beside Little.",
+      "caption": "A drumhead can pass its wiggle to rice."
     },
     {
       "id": "return",
-      "src": "assets/pinecones/05-bending.jpg",
-      "original": "assets/pinecones/05-bending.png",
-      "foldSrc": "assets/pinecones/05-bending-fold.jpg",
-      "title": "Water bends the scales",
-      "alt": "Big holds a magnifier over an attached curved pinecone scale while Little watches.",
-      "caption": "Water changes the shape of plant tissue."
+      "src": "assets/how-speakers-turn-waves-into-sound/05-cups.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/05-cups.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/05-cups-fold.jpg",
+      "title": "Another path for a wiggle",
+      "alt": "Big speaks softly into one paper cup while Little listens at a second cup joined by a taut string.",
+      "caption": "A taut string carries vibration between cups."
     },
     {
       "id": "keep",
-      "src": "assets/pinecones/06-seeds.jpg",
-      "original": "assets/pinecones/06-seeds.png",
-      "foldSrc": "assets/pinecones/06-seeds-fold.jpg",
-      "title": "A day for seeds",
-      "alt": "Big and Little watch winged seeds beside an open pinecone and a notebook of cone drawings.",
-      "caption": "Dry weather can help winged seeds drift away."
+      "src": "assets/how-speakers-turn-waves-into-sound/06-ear.jpg",
+      "original": "assets/how-speakers-turn-waves-into-sound/06-ear.png",
+      "foldSrc": "assets/how-speakers-turn-waves-into-sound/06-ear-fold.jpg",
+      "title": "The wiggle reaches you",
+      "alt": "Air-wave marks lead from a small speaker toward Little’s ear beside a notebook of wave drawings.",
+      "caption": "Pressure waves make an eardrum vibrate."
     }
   ],
   "reading": {
-    "title": "The cone that changed its shape",
+    "title": "Follow the little wiggle",
     "coverPlate": "wake",
-    "coverText": "A slow change at the porch table.",
-    "foldableTitle": "Open, close, and wonder",
-    "foldableCoverLine": "Pinecones",
-    "foldableNote": "Watch the scales and keep a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect pinecone, scale, moisture, humid, tissue, and seed to the scenes.",
+    "coverText": "From a paper cone to a listening ear.",
+    "foldableTitle": "A little book of wiggles",
+    "foldableCoverLine": "How Speakers Make Sound",
+    "foldableNote": "Follow the motion and carry a question.",
+    "parentNote": "Age 8 / Grade 3 reading. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
     "outline": {
       "status": "locked",
       "beforeImages": true,
-      "arc": "Little follows a spiral of scales, compares a dry open cone with a wet closed one, watches drying reverse the change, and connects water-bent tissue to a winged seed’s chance to travel.",
+      "arc": "Little traces a smooth electric signal into a moving speaker cone, sees vibration in rice on a bowl and drum, follows it through a cup telephone, and wonders how an air wave reaches an ear.",
       "beatIntents": [
         {
           "plate": "wake",
-          "intent": "A quiet porch craft table in soft afternoon light. Big and Little Wonderer lean beside a large mature brown pinecone lying sideways on a cream notebook. The cone is central, with many overlapping woody scales arranged in clear spirals. Little follows one spiral with a short pencil held above the page; a magnifier lies nearby. No writing or labels."
+          "intent": "At a cozy kitchen craft table in soft lamplight, Big and Little Wonderer lean toward a small intact walnut speaker with a visible cream paper cone on its front. A notebook holds a simple smooth wave drawing. A few delicate muted orange curved air-wave marks travel away from the cone. Quiet curiosity, one scene, no text."
         },
         {
           "plate": "reach",
-          "intent": "Close low view across the porch table. A mature dry brown pinecone lies on a shallow cream ceramic dish. Its broad woody scales spread well apart, with dark gaps between them. Little peers closely from behind the dish, Big just beside Little. Warm dry afternoon light, a folded linen cloth and notebook quietly behind. No text."
+          "intent": "Close three-quarter view of the front of a small intact walnut speaker on the craft table. Its broad cream paper cone is shown mid vibration with two subtle offset contour marks suggesting forward and backward movement, and delicate curved air-wave marks radiating outward. Big and Little watch side by side behind the speaker. No visible inner electrical parts or text."
         },
         {
           "plate": "change",
-          "intent": "Close low view of a mature brown pinecone in a shallow pale-blue ceramic dish with a small amount of water. Its scales lie tightly together, making a narrow closed cone. A few droplets on its woody surface. Big and Little observe quietly side by side. Soft overcast porch light, cream paper and warm wood. No rainstorm, no text."
+          "intent": "Big and Little Wonderer watch a cream ceramic bowl on a wooden tray. Transparent plastic wrap is stretched taut over the rim. A pinch of rice rests on top, with three grains just barely hopping above the membrane. Big gently touches the bowl side. Soft lamp light catches the transparent taut surface. An open notebook nearby, no text."
         },
         {
           "plate": "notice",
-          "intent": "A spacious porch-table scene with Big and Little Wonderer side by side. Two shallow ceramic dishes sit together: cream dish holds an open dry cone, pale-blue dish holds a narrow closed damp cone in a little water. Little draws the two shapes in an open notebook while Big shares the gaze. A soft lamp and folded linen. One coherent scene, no panels, no text."
+          "intent": "A small toy drum rests flat on a wooden craft table with a pinch of rice on its pale taut drumhead. Big gently touches the outer drum rim while Little watches three rice grains make tiny hops over the surface. Big and Little share the same gaze. Folded linen and a warm lamp, no drumsticks, no text."
         },
         {
           "plate": "return",
-          "intent": "A very close still life of a mature partly open pinecone resting on warm wood, its overlapping curved scales and spiral arrangement clearly visible. A broad simple magnifier held by Big frames one attached woody scale, not a detached object. Little leans beside Big, watching the curl of the scale. A damp dish rests out of focus behind. Warm lamplight, no text or inset diagram."
+          "intent": "Big and Little Wonderer use a simple cup-and-string telephone across a cozy craft table. Big holds one cream paper cup near the mouth, Little holds the second near the ear. A single gently taut string connects the centers of the two cup bottoms, crossing only above the table. No string around bodies. Notebook with tiny wave sketches, warm lamp, no electricity, no text."
         },
         {
           "plate": "keep",
-          "intent": "At the edge of the sunny porch table, a mature open brown pinecone rests beside a few delicate winged pine seeds. One or two light papery winged seeds drift gently a short way from the open cone in a soft breeze. Big and Little watch together beside an open notebook showing small drawings of open and closed cones. The seed wing is a thin tan translucent blade with a tiny dark seed at one end. Quiet hopeful afternoon, no text."
+          "intent": "Quiet over-the-shoulder scene beside Little Wonderer and Big at the kitchen table. A small intact walnut speaker faces toward Little, with delicate curved air-wave marks approaching Little’s small rounded ear. Big shares Little’s gaze toward an open notebook that shows a simple ear outline and smooth wave sketch. Tender warm lamplight, wonder held in the unfinished drawing, no written text."
         }
       ]
     },
@@ -154,275 +154,284 @@
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A woody spiral",
-        "passage": "Little Wonderer set a fallen pinecone on the porch table. It felt woody, but it was not a piece of bark. “A pinecone is a seed case,” said Big Wonderer. Its many parts are called scales. They overlap in a spiral, winding around the cone. Little followed the spiral with a curious gaze.",
-        "prompt": "How are the scales arranged?",
+        "title": "A wiggle begins",
+        "passage": "A soft note came from the speaker on the table. Little Wonderer found the smooth wave drawn in the notebook. “Could that wiggle become a sound?” Big Wonderer nodded. A speaker changes an electric signal into vibration: a back-and-forth motion. For a pure note, that motion follows the smooth shape of a sine wave.",
+        "prompt": "What changes inside a speaker when it makes a note?",
         "foldable": {
-          "heading": "A woody spiral",
-          "body": "Little found a woody seed case. Its scales overlapped in a spiral. Big called it a pinecone. What was hiding inside?"
+          "heading": "A wiggle begins",
+          "body": "Little heard a note from the speaker. A wiggly electric signal made something move. Could the notebook’s smooth wave become a sound?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Room between scales",
-        "passage": "The dry cone had gaps between its scales. Dry means there is little moisture, or water, around it. The scales spread outward like small shelves. Seeds could slip through the spaces. Little drew the wide shape. Would the cone stay open if the air changed?",
-        "prompt": "How could a seed leave the dry cone?",
+        "title": "A cone moves air",
+        "passage": "The speaker’s cone was a thin piece of paper shaped like a shallow bowl. Behind it, a coil of wire sat near a magnet. The changing signal made the coil push and pull against the magnet. The attached cone moved back and forth, squeezing nearby air, then letting it spread out.",
+        "prompt": "Why does the cone move when the coil moves?",
         "foldable": {
-          "heading": "Room for seeds",
-          "body": "The dry cone had gaps between its scales. Seeds could slip through those spaces. Little drew its wide, open shape."
+          "heading": "Push, then pull",
+          "body": "A wire coil sat near a magnet. The changing signal made it push and pull. The attached paper cone moved back and forth."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A cone closes",
-        "passage": "Big placed another cone in a shallow dish of water. Over time, its scales curled closer together. Wet scales take in a little water and bend inward. Humid air has water in it too. Little checked the drawing again. The cone had become narrower without anyone squeezing it.",
-        "prompt": "What changed as the cone became wet?",
+        "title": "Rice gives a clue",
+        "passage": "Big stretched plastic wrap over a bowl and added a pinch of rice. Little hummed nearby. Nothing moved yet. Big gently tapped the bowl, and a few grains hopped. The tight wrap was vibrating beneath them. Rice made a small motion easier to see. Little drew the tiny hops.",
+        "prompt": "What does the moving rice tell you about the wrap?",
         "foldable": {
-          "heading": "A slow closing",
-          "body": "The wet cone took in a little water. Its scales bent inward and closed the gaps. Little watched its shape grow narrow."
+          "heading": "A tiny hop",
+          "body": "Little hummed near the rice bowl. Big gently tapped its side. The tight wrap vibrated, and rice hopped. A small motion became visible."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Two dishes, one clue",
-        "passage": "One dish stayed dry. The other held the damp cone. Little sketched both shapes in a notebook: open and closed. “Let’s give the damp one time to dry,” said Big. They left it on a dry dish. Later, spaces began to appear between its scales again.",
-        "prompt": "What would make the two-dish test a fair comparison?",
+        "title": "A drum can wiggle too",
+        "passage": "A toy drum waited beside the bowl. Big gave its rim a gentle tap. Rice on the drumhead bounced. The drumhead and the bowl’s wrap could both vibrate. Faster wiggles make a higher pitch, or higher-sounding note. Bigger wiggles make a louder sound. Little kept the taps soft.",
+        "prompt": "How is a higher sound different from a louder sound?",
         "foldable": {
-          "heading": "Two dishes, one clue",
-          "body": "Little drew the open cone and the closed cone. When the damp cone dried, spaces began to appear between its scales again."
+          "heading": "Two kinds of change",
+          "body": "Rice hopped on the vibrating drumhead too. Faster wiggles make higher sounds. Bigger wiggles make louder sounds. Little kept the taps gentle."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Water bends the scales",
-        "passage": "Little leaned toward the magnifier. A scale was made of plant tissue, the material that makes up plant parts. Different parts of that tissue take in water differently. That makes the scale bend. The fallen cone needed no muscles to move. Water in, water out: its shape could change.",
-        "prompt": "What makes a scale bend without muscles?",
+        "title": "Another path for a wiggle",
+        "passage": "Big spoke softly into a paper cup. Little listened at a second cup, joined by a taut string. The first cup’s bottom vibrated. The string carried the motion to the other cup. That cup moved the air near Little’s ear. A wiggle could travel through more than air.",
+        "prompt": "What carries the vibration between the two cups?",
         "foldable": {
-          "heading": "Water makes it bend",
-          "body": "Parts of a scale take in water differently. This bends the plant tissue. The fallen cone can move without muscles."
+          "heading": "Along a string",
+          "body": "Big spoke into a paper cup. Its bottom vibrated. A taut string carried the motion to Little’s cup, which moved the air nearby."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A day for seeds",
-        "passage": "A winged seed rested beside the open cone. Its thin wing could catch a breeze. Wet seeds can cling instead of drifting. “Why would a tree open its cones only when the air is dry?” Little wondered. Their two drawings held a clue.",
-        "prompt": "Why might dry weather help a winged seed travel?",
+        "title": "The wiggle reaches you",
+        "passage": "A pattern of squeezed and spread-out air traveled as pressure waves. Air wiggled in place. Little’s eardrum vibrated, helping the ear sense sound. “Where does the wiggle go after it leaves the speaker?” Little wondered.",
+        "prompt": "How does the wiggle get from the cone to your ear?",
         "foldable": {
-          "heading": "A day for seeds",
-          "body": "A seed with a thin wing lay beside the open cone. Could dry air help it travel? Little kept the question in the notebook."
+          "heading": "A wiggle reaches you",
+          "body": "The cone sent pressure waves through air. Little’s eardrum vibrated when they arrived. Where would the wiggle travel next?"
         }
       }
     ],
     "words": [
       {
-        "word": "pinecone",
-        "meaning": "a woody seed case with overlapping scales"
+        "word": "speaker",
+        "meaning": "a device that changes an electric signal into sound"
       },
       {
-        "word": "scale",
-        "meaning": "one of the woody parts stacked around a cone"
+        "word": "cone",
+        "meaning": "the thin paper or plastic part that moves air"
       },
       {
-        "word": "dry",
-        "meaning": "having little water or moisture"
+        "word": "coil",
+        "meaning": "wire wound into loops"
       },
       {
-        "word": "humid",
-        "meaning": "having moisture in the air"
+        "word": "magnet",
+        "meaning": "a part that pushes or pulls on the coil when its signal changes"
       },
       {
-        "word": "tissue",
-        "meaning": "the material that makes up a plant part"
+        "word": "vibration",
+        "meaning": "a back-and-forth wiggle"
       },
       {
-        "word": "seed",
-        "meaning": "a small package from which a new plant can grow"
+        "word": "pressure wave",
+        "meaning": "a traveling pattern of squeezed and spread-out air"
+      },
+      {
+        "word": "eardrum",
+        "meaning": "a thin surface inside the ear that vibrates with sound"
+      },
+      {
+        "word": "pitch",
+        "meaning": "how high or low a sound seems"
       }
     ],
     "questions": [
-      "How do a dry cone and a wet cone usually look different?",
-      "How can a fallen cone move without muscles?",
-      "Why might dry weather help a winged seed leave its cone?"
+      "Why must the cone be attached to the coil?",
+      "What do the hopping rice and the listening ear have in common?",
+      "How would faster wiggles change a note differently from bigger wiggles?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for watching the cones.",
-      "example": "Example: Watch one dry cone and one damp cone, then draw how the scales look."
+      "prompt": "Write one command sentence for watching a vibration.",
+      "example": "Example: Hum near the bowl, then draw how the rice moved."
     }
   },
   "math": {
-    "title": "Compare cones, round counts",
+    "title": "Count the little wiggles",
     "plate": "notice",
-    "intro": "Compare two counts or round one count to the nearest ten.",
-    "eyebrow": "SIX COUNTS TO EXPLORE",
-    "actionLabel": "Compare and round",
+    "intro": "Add or subtract. Trade a ten when you need one.",
+    "eyebrow": "SIX SOUND COUNTS",
+    "actionLabel": "Add and subtract",
     "tasks": [
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          47,
-          74
+          27,
+          36
         ],
-        "prompt": "Little counts 47 open cones and 74 closed cones on two trays. Fill the circle with >, <, or =. Which count is greater?",
-        "equation": "47 ○ 74",
-        "hint": "Compare the tens first: 4 tens and 7 tens.",
-        "answer": 74,
-        "worked": "47 < 74. The greater count is 74.",
+        "prompt": "Little marks 27 cone wiggles, then 36 more. How many wiggles are marked?",
+        "equation": "27 + 36 =",
+        "hint": "Add the ones, then trade 10 ones for 1 ten.",
+        "answer": 63,
+        "worked": "7 + 6 = 13 ones: 1 ten and 3 ones. Add 2 + 3 + 1 tens to get 63.",
         "plate": "wake",
-        "label": "TASK 1",
-        "symbol": "<"
+        "label": "TASK 1"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          32
+          64,
+          28
         ],
-        "prompt": "Big records 32 visible scales. What is this count rounded to the nearest ten?",
-        "equation": "32 → nearest ten: ___",
-        "hint": "Find 32 between 30 and 40. Which ten is closer?",
-        "answer": 30,
-        "worked": "32 rounds to 30 because it is 2 away from 30 and 8 away from 40.",
+        "prompt": "Of 64 rice grains on the drum, 28 hop during a gentle tap. How many stay still?",
+        "equation": "64 − 28 =",
+        "hint": "Trade 1 ten for 10 ones before subtracting 8 ones.",
+        "answer": 36,
+        "worked": "64 is 5 tens and 14 ones. Subtract 2 tens and 8 ones to get 36.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          68,
-          59
+          38,
+          45
         ],
-        "prompt": "One notebook shows 68 dry cones; another shows 59 damp cones. Fill the circle with >, <, or =. Which count is greater?",
-        "equation": "68 ○ 59",
-        "hint": "Compare 6 tens with 5 tens before looking at the ones.",
-        "answer": 68,
-        "worked": "68 > 59. The greater count is 68.",
+        "prompt": "Big records 38 drum taps on one page and 45 on another. How many taps are recorded?",
+        "equation": "38 + 45 =",
+        "hint": "Combine the ones first, then regroup a ten.",
+        "answer": 83,
+        "worked": "8 + 5 = 13 ones: 1 ten and 3 ones. Add 3 + 4 + 1 tens to get 83.",
         "plate": "change",
-        "label": "TASK 3",
-        "symbol": ">"
+        "label": "TASK 3"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          85
+          72,
+          46
         ],
-        "prompt": "Little draws 85 moisture marks beside the cone pictures. What is the count rounded to the nearest ten?",
-        "equation": "85 → nearest ten: ___",
-        "hint": "85 is halfway between 80 and 90. Halfway rounds up.",
-        "answer": 90,
-        "worked": "85 rounds to 90. A ones digit of 5 rounds up to the next ten.",
+        "prompt": "Little draws 72 waves and colors 46 of them. How many waves are left to color?",
+        "equation": "72 − 46 =",
+        "hint": "Rename 72 as 6 tens and 12 ones.",
+        "answer": 26,
+        "worked": "72 is 6 tens and 12 ones. Subtract 4 tens and 6 ones to get 26.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          26,
-          26
+          46,
+          29
         ],
-        "prompt": "Big and Little each count 26 scales on one side of a cone. Fill the circle with >, <, or =. What is the shared count?",
-        "equation": "26 ○ 26",
-        "hint": "Compare the tens and the ones. Both counts match.",
-        "answer": 26,
-        "worked": "26 = 26. The shared count is 26.",
+        "prompt": "A speaker drawing shows 46 wire loops, then Little adds 29. How many loops are drawn?",
+        "equation": "46 + 29 =",
+        "hint": "Add 6 ones and 9 ones, then regroup.",
+        "answer": 75,
+        "worked": "6 + 9 = 15 ones: 1 ten and 5 ones. Add 4 + 2 + 1 tens to get 75.",
         "plate": "return",
-        "label": "TASK 5",
-        "symbol": "="
+        "label": "TASK 5"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          56
+          91,
+          57
         ],
-        "prompt": "A page shows 56 open scales. What is the count rounded to the nearest ten?",
-        "equation": "56 → nearest ten: ___",
-        "hint": "Find 56 between 50 and 60. It is past the halfway point.",
-        "answer": 60,
-        "worked": "56 rounds to 60 because it is 4 away from 60 and 6 away from 50.",
+        "prompt": "A notebook has 91 cup-phone turns planned and 57 finished. How many turns remain?",
+        "equation": "91 − 57 =",
+        "hint": "Rename 91 as 8 tens and 11 ones.",
+        "answer": 34,
+        "worked": "91 is 8 tens and 11 ones. Subtract 5 tens and 7 ones to get 34.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose a rounding task and show its two nearby tens on a number line.",
+    "extension": "Choose one task and show the trade with tens and ones.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Compare two-digit counts and round to the nearest ten. A ones digit of 5 rounds up. Counts describe story collections, not a fixed number of scales on each cone.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Compare tens, then ones. For rounding, locate the two nearby tens and find the closer one; halfway rounds up."
+    "parentNote": "Age 8 / Grade 2 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
+    "answerKeyIntro": "Age 8 / Grade 2 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
   },
   "writing": {
-    "title": "A small change, in words",
-    "intro": "Give a clear command for watching a cone.",
+    "title": "Put a wiggle into words",
+    "intro": "Give a clear command for watching rice move.",
     "plateIds": [
-      "reach",
       "change",
-      "notice"
+      "notice",
+      "return"
     ],
-    "draw": "Draw an open cone beside a closed cone. Show the gaps between the scales.",
-    "starter": "My cone-watching command",
+    "draw": "Draw the bowl before and after a gentle tap. Show the rice.",
+    "starter": "My vibration-watching command",
     "frames": [
       {
-        "plate": "reach",
-        "start": "Watch",
-        "hint": "tell which cone to observe"
-      },
-      {
         "plate": "change",
-        "start": "Compare",
-        "hint": "tell which shapes to compare"
+        "start": "Hum",
+        "hint": "tell where to make a soft sound"
       },
       {
         "plate": "notice",
+        "start": "Watch",
+        "hint": "tell which surface to observe"
+      },
+      {
+        "plate": "return",
         "start": "Draw",
-        "hint": "tell which details to include"
+        "hint": "tell how to show the motion"
       }
     ],
     "words": [
-      "pinecone",
-      "scale",
-      "dry",
-      "wet",
-      "open",
-      "close",
-      "seed",
-      "slowly"
+      "speaker",
+      "cone",
+      "coil",
+      "magnet",
+      "air",
+      "wave",
+      "ear",
+      "rice",
+      "gently"
     ],
-    "check": "Does your command begin with an action word, such as Watch, Compare, or Draw?",
-    "parentNote": "Welcome speech, dictation, invented spelling, or writing. One command is enough. Example: “Watch one dry cone and one damp cone, then draw how the scales look.”"
+    "check": "Does your command begin with an action word, such as Hum, Watch, or Draw?",
+    "parentNote": "Welcome speaking, dictation, drawing, or writing. One command is enough. Example: “Hum near the bowl, then draw how the rice moved.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "A dry cone usually has open scales with gaps. A wet cone usually has close scales and a narrower shape."
+      "text": "The coil pushes and pulls near the magnet. Its attachment passes that back-and-forth motion to the cone."
     },
     {
       "label": "Reading · 2",
-      "text": "Different parts of a scale take in water differently. The plant tissue bends as it gains or loses water; it does not need muscles."
+      "text": "Both reveal vibration. A moving surface makes rice hop; arriving pressure waves make an eardrum vibrate."
     },
     {
       "label": "Reading · 3",
-      "text": "In dry conditions, scales open and winged seeds can drift on a breeze. Wet seeds can cling to the scales."
+      "text": "Faster wiggles make a higher pitch. Bigger wiggles make a louder sound."
     },
     {
       "label": "Writing",
-      "text": "Accept a command spoken, dictated, drawn, or written. Example: “Watch one dry cone and one damp cone, then draw how the scales look.”"
+      "text": "Accept a spoken, dictated, drawn, or written command. Example: “Hum near the bowl, then draw how the rice moved.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward. Use shallow dishes, with a grown-up nearby. Changes may take hours; revisit later without a timer or deadline. Many mature common pinecones open dry and close wet, but species differ, and some cones need special conditions to first open. Mature scale tissue is no longer living; its structure still swells unevenly with moisture and bends. The cone is not choosing or using muscles. Empty fallen cones can still change shape. The diorama shows this moisture response faster than it happens at the table, with a qualitative view inside the cone rather than a measured scale angle.",
+  "parentGuidance": "Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet. Rice may not move with a gentle voice; a light tap on the bowl’s side is a reliable next step. The model slows and enlarges motion and does not play audio. Air particles move locally back and forth while the pressure pattern travels. The electric signal stays in the speaker circuit; sound through air is mechanical vibration. The coil’s magnetic interaction with a fixed magnet moves the attached cone. Pure tones are sinusoidal; speech and music combine more complex motions. At a fixed pitch and distance, greater vibration amplitude generally sounds louder. The inner ear changes the eardrum’s arriving vibration into signals for the brain. The cup phone carries mechanical vibration along its taut string.",
   "sources": [
     {
-      "label": "Nature · how pine cones open",
-      "url": "https://www.nature.com/articles/37745"
+      "label": "Washington University · speaker coil and magnet",
+      "url": "https://web.physics.wustl.edu/introphys/Archives/SP14/Speakers_SP14.pdf"
     },
     {
-      "label": "Royal Society · hygromorphs and pinecones",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2838359/"
+      "label": "NIDCD · how hearing works",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
     },
     {
-      "label": "Scientific Reports · pine seed attachment",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5935463/"
+      "label": "The Physics Classroom · sound waves",
+      "url": "https://www.physicsclassroom.com/Class/sound/soundtoc.cfm"
     }
   ],
   "authoring": {
@@ -432,75 +441,75 @@
     "expectedPlates": 6,
     "plateGen": "built-in-image-generation",
     "themeIntake": {
-      "topic": "pinecones",
-      "source": "queue/standby.json",
-      "queued": false,
-      "normalized": "pinecones",
-      "slug": "pinecones"
+      "topic": "how speakers turn waves into sound",
+      "source": "queue/next-topic.txt",
+      "queued": true,
+      "normalized": "how speakers turn waves into sound",
+      "slug": "how-speakers-turn-waves-into-sound"
     },
     "todo": []
   },
   "surfaces": {
     "layout": "six",
-    "diorama": "pinecones"
+    "diorama": "speakers"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "PINECONES · 2026-10-15",
-    "subtitle": "A slow change at the porch table."
+    "edition": "SPEAKERS · 2026-10-16",
+    "subtitle": "A little wiggle, all the way to your ear."
   },
   "visualNotes": {
-    "intent": "Six new porch-table scenes follow a woody spiral, dry and wet cones, a two-dish comparison, bending tissue, and winged seeds. The first scene also supplies the title card.",
-    "prompts": "assets/pinecones/prompts.json",
-    "provenance": "assets/pinecones/provenance.json"
+    "intent": "Six new kitchen-table scenes follow an intact speaker, its moving cone, rice on a bowl and drum, a cup telephone, and an arriving air wave. Scene one supplies the title card.",
+    "prompts": "assets/how-speakers-turn-waves-into-sound/prompts.json",
+    "provenance": "assets/how-speakers-turn-waves-into-sound/provenance.json"
   },
   "quiz": {
-    "title": "Four clues in a cone",
-    "intro": "Think back to the scales, the dishes, and the seed.",
+    "title": "Four stops for a wiggle",
+    "intro": "Follow the motion from the speaker to the ear.",
     "questions": [
       {
-        "id": "parts",
-        "prompt": "What are the woody parts stacked around a pinecone called?",
+        "id": "coil",
+        "prompt": "What moves the cone in a speaker?",
         "choices": [
-          "Scales",
-          "Petals",
-          "Roots"
+          "Air arriving from your ear",
+          "A coil pushing and pulling near a magnet",
+          "Rice inside the cone"
+        ],
+        "answerIndex": 1,
+        "answer": "The changing electric signal makes the coil push and pull near the magnet, moving the attached cone."
+      },
+      {
+        "id": "air",
+        "prompt": "What travels through the air from the cone?",
+        "choices": [
+          "Pressure waves",
+          "Wire loops",
+          "A stream of electricity"
         ],
         "answerIndex": 0,
-        "answer": "They are scales, arranged in spirals around the cone."
+        "answer": "Pressure waves carry a pattern of squeezed and spread-out air toward the ear."
       },
       {
-        "id": "dry",
-        "prompt": "What usually happens to a common pinecone as it dries?",
+        "id": "pitch",
+        "prompt": "What makes a note higher in pitch?",
         "choices": [
-          "Its scales close tightly",
-          "Its scales open wider",
-          "It grows new muscles"
-        ],
-        "answerIndex": 1,
-        "answer": "As the cone dries, its scales open wider, making space for seeds to leave."
-      },
-      {
-        "id": "bend",
-        "prompt": "What makes a wet pinecone’s scales close?",
-        "choices": [
-          "The cone decides to squeeze",
-          "A seed pulls each scale",
-          "Water makes parts of the scale swell differently"
+          "Bigger wiggles",
+          "A larger bowl",
+          "Faster wiggles"
         ],
         "answerIndex": 2,
-        "answer": "Water makes parts of the scale swell differently, bending the woody tissue inward."
+        "answer": "Faster wiggles make a higher pitch; bigger wiggles make a louder sound."
       },
       {
-        "id": "travel",
-        "prompt": "Why can dry weather be a good time for winged seeds to leave?",
+        "id": "rice",
+        "prompt": "Why can rice hop on a drumhead?",
         "choices": [
-          "Dry air makes seeds heavier",
-          "A dry winged seed can drift on a breeze",
-          "Seeds need to stay wet to drift"
+          "The rice hears the music",
+          "The vibrating drumhead moves the rice",
+          "Air turns the rice into sound"
         ],
         "answerIndex": 1,
-        "answer": "A dry winged seed can drift on a breeze. Wet seeds can cling to the cone instead."
+        "answer": "The drumhead vibrates beneath the rice and gives it little pushes upward."
       }
     ]
   }
