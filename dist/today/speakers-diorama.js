@@ -1,99 +1,119 @@
+// Anatomy by Ryan, github.com/wheresryan22/anatomy, MIT.
+// Geometry is generated at build time; this runtime only moves existing parts.
 const clamp = (n) => Math.max(0, Math.min(1, Number(n) || 0));
+export const SPEAKER_DURATION = 6000;
+export const AIR_ROWS = 17;
 export function createSpeakerState({ reducedMotion = false } = {}) {
-  return { phase: "predict", prediction: null, progress: 0, reducedMotion };
+  return {
+    phase: "predict",
+    prediction: null,
+    progress: 0,
+    reducedMotion,
+    outcome: null,
+  };
 }
 export function reduceSpeaker(state, event) {
   if (event.type === "RESET") return createSpeakerState(state);
-  if (event.type === "MOTION")
+  if (event.type === "MOTION") {
+    const reducedMotion = Boolean(event.value);
+    if (state.reducedMotion === reducedMotion) return state;
     return {
       ...state,
-      reducedMotion: event.value,
-      ...(event.value && state.phase === "playing"
-        ? { phase: "notice", progress: 1 }
+      reducedMotion,
+      ...(state.phase === "playing"
+        ? { phase: "notice", progress: 0, outcome: "stopped" }
+        : {}),
+      ...(state.outcome === "still" && !reducedMotion
+        ? { outcome: "stopped", progress: 0 }
         : {}),
     };
+  }
+  if (event.type === "INTERRUPT" && state.phase === "playing")
+    return { ...state, phase: "notice", progress: 0, outcome: "stopped" };
   if (
     event.type === "PREDICT" &&
     state.phase !== "playing" &&
-    ["hop", "still"].includes(event.value)
+    ["cone", "magnet"].includes(event.value)
   )
-    return { ...state, prediction: event.value, phase: "predict", progress: 0 };
+    return {
+      ...state,
+      phase: "predict",
+      prediction: event.value,
+      progress: 0,
+      outcome: null,
+    };
   if (event.type === "PLAY" && state.phase !== "playing")
     return {
       ...state,
       progress: state.reducedMotion ? 1 : 0,
       phase: state.reducedMotion ? "notice" : "playing",
+      outcome: state.reducedMotion ? "still" : null,
     };
   if (event.type === "FRAME" && state.phase === "playing") {
-    const progress = clamp(event.value);
-    return { ...state, progress, phase: progress === 1 ? "notice" : "playing" };
+    const progress = Math.max(state.progress, clamp(event.value));
+    return {
+      ...state,
+      progress,
+      phase: progress === 1 ? "notice" : "playing",
+      outcome: progress === 1 ? "complete" : null,
+    };
   }
   return state;
 }
-export function speakerNotice(state) {
-  if (state.phase === "predict")
-    return "Will the rice hop when the tight wrap vibrates? Make a guess, then play a wiggle.";
-  if (state.phase === "playing")
-    return "The coil moves the cone. Watch the pressure pattern travel through the air.";
-  return `${state.prediction === "still" ? "The rice showed something different. " : ""}The cone moved back and forth. Air passed the wiggle along to the ear and the bowl’s wrap. The vibrating wrap made the rice hop.`;
+// Slowed illustrative displacement, not a measured acoustic simulation.
+function drive(t) {
+  if (t <= 0 || t >= 4) return 0;
+  const envelope = Math.min(1, t / 0.4, (4 - t) / 0.4);
+  return Math.sin(t * Math.PI * 2) * Math.sin((envelope * Math.PI) / 2) ** 2;
 }
-export function speakerDrawing(state = createSpeakerState()) {
-  const active = state.phase !== "predict",
-    t = state.progress * 6 * Math.PI;
-  const shift = active ? Math.sin(t) * 11 : 0;
-  const ear = active && t >= 5 ? Math.sin(t - 5) * 4 : 0;
-  const hop = active
-    ? state.phase === "notice"
-      ? 8
-      : Math.max(0, Math.sin(t - 3)) * 16
-    : 0;
-  const dots = Array.from({ length: 7 }, (_, row) =>
-    Array.from({ length: 31 }, (_, col) => {
-      const home = 337 + col * 12.5,
-        dx = active && t >= col * 0.16 ? Math.sin(t - col * 0.16) * 6 : 0;
-      return `<circle cx="${(home + dx).toFixed(2)}" cy="${156 + row * 17}" r="1.8" fill="#63756c" opacity="${0.48 + (0.5 - Math.abs(row - 3) / 8) * 0.3}"/>`;
-    }).join(""),
-  ).join("");
-  const wire = Array.from(
-    { length: 10 },
-    (_, i) =>
-      `<ellipse cx="${189 + i * 4}" cy="207" rx="5" ry="29" fill="none" stroke="${i % 2 ? "#a56b3d" : "#cf9a59"}" stroke-width="3"/>`,
-  ).join("");
-  const rice = Array.from({ length: 9 }, (_, i) => {
-    const x = 548 + i * 13,
-      y = 357 - (i % 3) * 3 - hop * (0.6 + (i % 3) * 0.3);
-    return `<ellipse data-speaker-rice cx="${x}" cy="${y.toFixed(2)}" rx="4" ry="1.7" transform="rotate(${i % 2 ? 25 : -25} ${x} ${y})" fill="#fff9df" stroke="#8e7a52" stroke-width=".65"/>`;
-  }).join("");
-  return `<svg class="speaker-drawing" viewBox="0 0 900 465" role="img" aria-labelledby="speaker-art-title speaker-art-desc"><title id="speaker-art-title">A wiggle travels from a speaker to an ear</title><desc id="speaker-art-desc">A wire coil beside a fixed magnet is attached to a paper cone. The cone moves back and forth. Air particles wiggle locally as pressure waves travel toward an ear. Rice on a bowl reveals vibration. ${active ? "The drawing shows squeezed and spread-out air." : "The speaker is waiting to move."}</desc><defs><linearGradient id="speaker-room" x2="0" y2="1"><stop stop-color="#faf5e9"/><stop offset="1" stop-color="#e4d7bc"/></linearGradient><linearGradient id="speaker-paper"><stop stop-color="#d4bd90"/><stop offset=".4" stop-color="#fff8df"/><stop offset="1" stop-color="#d0b88d"/></linearGradient><linearGradient id="speaker-metal"><stop stop-color="#64716a"/><stop offset=".4" stop-color="#c9cec3"/><stop offset="1" stop-color="#7d8880"/></linearGradient><linearGradient id="speaker-bowl" x2="0" y2="1"><stop stop-color="#faf6e9"/><stop offset="1" stop-color="#c8bba1"/></linearGradient></defs>
-<rect width="900" height="465" fill="url(#speaker-room)"/>
-<path d="M0 0h228L102 377H0Z" fill="#fffdf7" opacity=".65"/><path d="M40 25h139v144H40Z" fill="#e4e6d7" stroke="#c4b391" stroke-width="6"/><path d="M110 27v140M42 97h134" stroke="#c4b391" stroke-width="3"/>
-<path d="M25 387l43-24h764l45 24v56H25Z" fill="#b5966d" stroke="#8c7352"/><path d="M25 387h852v56H25Z" fill="#9c7c55"/><path d="M42 403h817M58 425h787" stroke="#b8976b" stroke-width="2"/>
-<rect x="121" y="83" width="712" height="238" rx="8" fill="#b39a70" stroke="#8f7957" stroke-width="2"/><rect x="130" y="92" width="694" height="220" rx="3" fill="#f8f1e1"/>
-<g fill="#dac28e" stroke="#8f7957">${[
-    [136, 98],
-    [818, 98],
-    [136, 306],
-    [818, 306],
-  ]
-    .map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3"/>`)
-    .join("")}</g>
-<path d="M155 151h45v112h-45Z" fill="url(#speaker-metal)" stroke="#59665e" stroke-width="2"/><path d="M164 163h18v88h-18Z" fill="#505e57"/><path d="M180 195h47v24h-47Z" fill="#9aa59c" stroke="#59665e"/>
-<path d="M238 114h57v14h-45v158h45v14h-57Z" fill="#816549" stroke="#655139"/><g data-speaker-cone transform="translate(${shift.toFixed(3)} 0)">${wire}<path d="M223 181L292 133Q308 207 292 281L223 233Z" fill="url(#speaker-paper)" stroke="#8f7954" stroke-width="2"/><path d="M225 190l69-47M225 224l69 47" stroke="#eee0bd" stroke-width="2"/><ellipse cx="292" cy="207" rx="13" ry="74" fill="#e7d5ad" stroke="#8f7954" stroke-width="2"/><ellipse cx="292" cy="207" rx="7" ry="52" fill="#f8efd7" stroke="#b49b6c"/></g>
-<path d="M183 232v54h-25v62" fill="none" stroke="#a17749" stroke-width="2"/><path d="M218 234v58h-37v56" fill="none" stroke="#6f7c71" stroke-width="2"/>
-<g data-speaker-air>${dots}</g><path d="M350 123h349l-8-5m8 5-8 5" fill="none" stroke="#a7864a" stroke-width="1.8"/>
-<g transform="translate(746 149)"><path d="M4 99C-15 78-12 48-3 21C9-17 57-13 60 20C65 48 46 55 39 68C33 81 40 99 22 108C14 112 8 107 4 99Z" fill="#ddc5a3" stroke="#927b5c" stroke-width="2"/><path d="M9 72C-3 49 3 9 27 8C48 8 50 28 40 40L22 47L17 65" fill="none" stroke="#a28b68" stroke-width="3" stroke-linecap="round"/><path d="M12 70h33" stroke="#a28b68" stroke-width="6"/><path data-speaker-eardrum d="M${43 + ear} 60q-4 10 0 20" fill="none" stroke="#856942" stroke-width="3"/></g>
-<ellipse cx="598" cy="396" rx="104" ry="13" fill="#756244" opacity=".18"/><path d="M503 356Q512 413 598 413T693 356" fill="url(#speaker-bowl)" stroke="#ab9a7b" stroke-width="2"/><ellipse cx="598" cy="356" rx="95" ry="20" fill="#e4e6d9" fill-opacity=".7" stroke="#a2967c" stroke-width="2"/><path data-speaker-wrap d="M509 352q87 ${25 - hop * 0.5} 179 0M521 344l133 23M540 340l126 23" fill="none" stroke="#fffcf3" stroke-width="2" opacity=".85"/>${rice}
-<path d="M506 382q90 25 182 0" fill="none" stroke="#bcad90"/>
-<g transform="translate(239 337) rotate(5)"><path d="M0 0h178v70H0Z" fill="#d8c7a7" stroke="#ad9774"/><path d="M5 3h80v62H5ZM88 3h85v62H88Z" fill="#fff9e9"/><path d="M86 4v58" stroke="#bda987"/><path d="M14 34q10-24 20 0t20 0t20 0M99 34q10-24 20 0t20 0t20 0" fill="none" stroke="#a77e46" stroke-width="2"/><path d="M17 77l136-3" stroke="#766349" stroke-width="4"/></g>
-<g fill="#e9d8b8" stroke="#b8a382" stroke-width="2"><path d="M60 365q-19-3-17-30l3-61q2-32 27-32t28 31l2 63q0 29-22 29Z"/><path d="M124 366q-15-2-14-22l3-38q1-23 20-23t22 23l2 39q0 21-18 21Z"/></g><g fill="#3e493c"><circle cx="80" cy="278" r="2.5"/><circle cx="92" cy="279" r="2.5"/><circle cx="139" cy="312" r="2"/><circle cx="150" cy="313" r="2"/></g><path d="M96 316q14 14 24 5" fill="none" stroke="#b8a382" stroke-width="7" stroke-linecap="round"/>
-</svg>`;
+export function speakerView(state) {
+  const still = state.outcome === "still";
+  const time = still
+    ? 2.25
+    : state.phase === "playing"
+      ? state.progress * 6
+      : 0;
+  const shift = drive(time) * 4;
+  const air = Array.from(
+    { length: AIR_ROWS },
+    (_, i) => drive(time - i * 0.09) * 5.5,
+  );
+  let readout = "Signal off · cone at rest";
+  let status =
+    "Predict: which part moves the air? Choose a guess, then play the signal.";
+  if (state.phase === "playing") {
+    readout =
+      time < 4
+        ? "Signal on · coil + cone moving"
+        : "Signal off · air wave traveling";
+    status =
+      time < 4
+        ? "Test: the signal changes. The voice coil moves in the magnet’s field. The attached cone squeezes and spreads the air."
+        : "Test: the cone has stopped. The last pressure waves are still traveling away.";
+  } else if (state.phase === "notice") {
+    const notice =
+      "The coil and cone move together; the permanent magnet stays fixed. Air wiggles nearby while the pressure pattern travels away.";
+    if (state.outcome === "stopped")
+      status =
+        "Test stopped. The signal is off and the cone is at rest. Play the signal to try again.";
+    else if (still) {
+      readout = "Still example · cone pushed out";
+      status = `Notice this still example: ${notice}`;
+    } else
+      status = `Notice: ${state.prediction === "magnet" ? "The magnet stayed still. " : ""}${notice} The test is finished; the cone is at rest.`;
+  }
+  return {
+    shift,
+    air,
+    time,
+    still,
+    readout,
+    status,
+    signal: time > 0 && time < 4,
+  };
 }
-export function speakerTalkThrough() {
-  return "<h3>Follow one wiggle</h3><ol><li>A changing electric signal makes the coil push and pull near the magnet.</li><li>The attached cone moves back and forth, squeezing air and letting it spread out.</li><li>The pressure pattern travels. Each bit of air wiggles near its own place.</li><li>The arriving wave makes an eardrum vibrate. It can also move tight wrap on a bowl and make rice hop.</li></ol><p>Faster wiggles make a higher pitch. Bigger wiggles make a louder sound.</p>";
-}
-export function speakerPanel({ next = "" } = {}) {
-  return `<section id="diorama" class="daily-panel speaker-panel" aria-labelledby="diorama-heading"><header class="activity-heading"><h2 id="diorama-heading" tabindex="-1">Follow the wiggle through air</h2></header><div data-speaker-live hidden><p class="speaker-invitation">One little motion can travel a long way.</p><div class="speaker-choices"><fieldset><legend>Predict what the rice will do</legend><button type="button" data-speaker-action="PREDICT" data-value="hop" aria-pressed="false">Hop</button><button type="button" data-speaker-action="PREDICT" data-value="still" aria-pressed="false">Stay still</button></fieldset><button class="speaker-primary" type="button" data-speaker-action="PLAY">Play a wiggle</button></div><div class="speaker-bench"><div data-speaker-art></div><div class="speaker-labels"><span><b>Coil + magnet</b><small>A changing push and pull</small></span><span><b>Paper cone</b><small>Back and forth</small></span><span><b>Air → ear</b><small>A traveling pressure pattern</small></span><span><b>Rice on wrap</b><small>A clue you can see</small></span></div></div><p class="speaker-status" data-speaker-status role="status" aria-live="polite" aria-atomic="true"></p><p data-speaker-notice hidden>Notice: the cone stayed with the speaker. What carried the wiggle across the space?</p><div class="speaker-external"><button type="button" data-speaker-action="RESET">Start again</button></div></div><div data-speaker-static>${speakerDrawing({ ...createSpeakerState(), phase: "notice", progress: 1 })}${speakerTalkThrough()}</div><div class="activity-footer">${next}</div></section>`;
-}
+export const speakerNotice = (state) => speakerView(state).status;
+
 function mount() {
   const root = document.querySelector(".speaker-panel");
   if (!root) return;
@@ -101,61 +121,125 @@ function mount() {
   let state = createSpeakerState({ reducedMotion: media.matches }),
     frame = 0,
     started = null;
-  root.querySelector("[data-speaker-live]").hidden = false;
-  root.querySelector("[data-speaker-static]").remove();
-  function stop() {
-    cancelAnimationFrame(frame);
-    started = null;
-  }
+  const svg = root.querySelector("svg");
+  const moving = [...svg.querySelectorAll("[data-speaker-moving]")];
+  const rows = [...svg.querySelectorAll("[data-speaker-air-row]")];
+  const flex = [...svg.querySelectorAll("[data-speaker-flex]")].map((el) => ({
+    el,
+    points: el.dataset.speakerFlex
+      .split(";")
+      .map((p) => p.split(",").map(Number)),
+  }));
+  const unit = Number(svg.dataset.axisY);
+  const readout = root.querySelector("[data-speaker-readout]");
+  const status = root.querySelector("[data-speaker-status]");
+  const signal = svg.querySelector("[data-speaker-signal]");
+  const signalDot = svg.querySelector("[data-speaker-signal-dot]");
   function render() {
+    const view = speakerView(state);
     root.dataset.phase = state.phase;
     root.dataset.progress = state.progress.toFixed(4);
-    root.querySelector("[data-speaker-art]").innerHTML = speakerDrawing(state);
-    for (const b of root.querySelectorAll('[data-speaker-action="PREDICT"]')) {
-      b.setAttribute(
+    root.dataset.outcome = state.outcome || "";
+    root.dataset.still = String(view.still);
+    flex.forEach(({ el, points }) =>
+      el.setAttribute(
+        "d",
+        points
+          .map(
+            ([x, y, w], i) =>
+              `${i ? "L" : "M"}${x} ${(y + view.shift * unit * w).toFixed(3)}`,
+          )
+          .join("") + (el.dataset.speakerOpen ? "" : "Z"),
+      ),
+    );
+    moving.forEach((el) =>
+      el.setAttribute(
+        "transform",
+        `translate(0 ${(view.shift * unit).toFixed(3)})`,
+      ),
+    );
+    rows.forEach((el, i) =>
+      el.setAttribute(
+        "transform",
+        `translate(0 ${(view.air[i] * unit).toFixed(3)})`,
+      ),
+    );
+    signal.setAttribute("opacity", view.signal ? "1" : "0.45");
+    const at = view.signal ? view.time % 1 : 0;
+    const point = signal.getPointAtLength(signal.getTotalLength() * at);
+    signalDot.setAttribute("cx", point.x);
+    signalDot.setAttribute("cy", point.y);
+    signalDot.setAttribute("opacity", view.signal ? "1" : "0");
+    for (const button of root.querySelectorAll(
+      '[data-speaker-action="PREDICT"]',
+    )) {
+      button.setAttribute(
         "aria-pressed",
-        String(b.dataset.value === state.prediction),
+        String(button.dataset.value === state.prediction),
       );
-      b.disabled = state.phase === "playing";
+      button.disabled = state.phase === "playing";
     }
     root.querySelector('[data-speaker-action="PLAY"]').disabled =
       state.phase === "playing";
-    const n = speakerNotice(state),
-      s = root.querySelector("[data-speaker-status]");
-    if (s.textContent !== n) s.textContent = n;
-    root.querySelector("[data-speaker-notice]").hidden =
-      state.phase !== "notice";
+    if (readout.textContent !== view.readout)
+      readout.textContent = view.readout;
+    if (status.textContent !== view.status) status.textContent = view.status;
   }
-  function tick(time) {
+  function stop() {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    started = null;
+  }
+  function tick(now) {
     if (state.phase !== "playing") return;
-    started ??= time;
+    started ??= now;
     state = reduceSpeaker(state, {
       type: "FRAME",
-      value: (time - started) / 4800,
+      value: (now - started) / SPEAKER_DURATION,
     });
     render();
     if (state.phase === "playing") frame = requestAnimationFrame(tick);
+    else stop();
   }
-  root.addEventListener("click", (event) => {
-    const b = event.target.closest("[data-speaker-action]");
-    if (!b || b.disabled) return;
-    const type = b.dataset.speakerAction,
-      next = reduceSpeaker(state, { type, value: b.dataset.value });
+  function dispatch(event) {
+    const next = reduceSpeaker(state, event);
     if (next === state) return;
     stop();
     state = next;
     render();
     if (state.phase === "playing") frame = requestAnimationFrame(tick);
-    if (type === "RESET")
+  }
+  root.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-speaker-action]");
+    if (!button || button.disabled) return;
+    dispatch({
+      type: button.dataset.speakerAction,
+      value: button.dataset.value,
+    });
+    if (button.dataset.speakerAction === "RESET")
       root
         .querySelector('[data-speaker-action="PREDICT"]')
         .focus({ preventScroll: true });
   });
-  media.addEventListener("change", (e) => {
-    state = reduceSpeaker(state, { type: "MOTION", value: e.matches });
-    if (e.matches) stop();
-    render();
+  media.addEventListener("change", (event) =>
+    dispatch({ type: "MOTION", value: event.matches }),
+  );
+  const interrupt = () => dispatch({ type: "INTERRUPT" });
+  document.addEventListener("subjectchange", (event) => {
+    if (event.detail !== "diorama") interrupt();
   });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) interrupt();
+  });
+  window.addEventListener("pagehide", interrupt);
+  window.addEventListener("blur", interrupt);
+  new IntersectionObserver((entries) => {
+    if (!entries.at(-1).isIntersecting) interrupt();
+  }).observe(svg);
+  root.querySelectorAll("[data-speaker-controls]").forEach((el) => {
+    el.hidden = false;
+  });
+  root.querySelector("[data-speaker-static]").hidden = true;
   render();
 }
 if (typeof document !== "undefined") mount();
