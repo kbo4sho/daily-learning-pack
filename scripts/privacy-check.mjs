@@ -221,12 +221,12 @@ function pdfText(command, args) {
   }
 }
 
-// source: true scans private authoring sources (packs/, assets/), which may
-// hold internal notes. Every other scan is of public output, where all JSON,
-// whatever its file name, and JSON embedded in pages is public pack JSON.
+// Public pack JSON is every pack.json and every JSON block embedded in a
+// page. publicOutput: true marks a scan of a whole published tree (dist/, the
+// public sync); there every JSON file is public pack JSON, whatever its name.
 export async function scanPrivacy(
   paths,
-  { jsonOnly = false, source = false } = {},
+  { jsonOnly = false, publicOutput = false } = {},
 ) {
   const issues = [];
   let files = 0;
@@ -273,8 +273,11 @@ export async function scanPrivacy(
       for (const block of blocks) {
         const data = JSON.parse(block);
         issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
-        // Public pack JSON: every public JSON file and JSON embedded in pages.
-        if (!source)
+        if (
+          publicOutput ||
+          !path.endsWith(".json") ||
+          /(?:^|[\\/])pack\.json$/.test(path)
+        )
           issues.push(...processNoteIssues(data, `${label} (pack JSON)`));
       }
     }
@@ -315,6 +318,6 @@ if (
 ) {
   const paths = process.argv.slice(2);
   console.log(
-    `Privacy guard passed (${await scanPrivacy(paths.length ? paths : ["dist"])} files).`,
+    `Privacy guard passed (${await scanPrivacy(paths.length ? paths : ["dist"], { publicOutput: true })} files).`,
   );
 }
