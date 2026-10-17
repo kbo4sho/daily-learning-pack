@@ -119,37 +119,6 @@
     "foldableCoverLine": "Very hard. Not always tough.",
     "foldableNote": "Predict, watch a grown-up test, and pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "A resting carbide tip starts a question; a pen reveals its everyday use; a soap scratch and chalk/eraser comparison separate hard from tough; pole tips and a steel-backed tooth show how engineers choose materials.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Introduce a resting carbide-tipped tooth on linen and the question of hard versus tough; no tool is operated or held."
-        },
-        {
-          "plate": "reach",
-          "intent": "Discover the rolling carbide ball in an ordinary pen; prose explains joining tungsten with carbon, pressing powder and heating, with a cobalt binder."
-        },
-        {
-          "plate": "change",
-          "intent": "Big performs a gentle craft-stick scratch on soap over a tray; Little only predicts, watches and records."
-        },
-        {
-          "plate": "notice",
-          "intent": "Compare two already separated chalk pieces with Big gently bending an eraser; no flying pieces, powder cloud or child handling."
-        },
-        {
-          "plate": "return",
-          "intent": "Follow the pair onto a calm snowy path, with pole tips planted into the ground; small carbide tips serve a specific job."
-        },
-        {
-          "plate": "keep",
-          "intent": "Return to the shared notebook and compare a hard carbide tip with the tougher steel body supporting it; leave a material-choice question open."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -436,15 +405,6 @@
       "url": "https://www.leki.co.uk/customer-care/helpdesk"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template pattern-detective: Six skip-counting sequences of at least three terms with exactly one blank. Steps are 2, 5, or 10; all three steps appear. At least one skip-missing task puts the blank before the final term. Store the complete sequence, step, and blankIndex; skip-next blanks the last term.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "tungsten-carbide"
@@ -453,11 +413,6 @@
     "plate": "wake",
     "edition": "TUNGSTEN CARBIDE · 2026-10-05",
     "subtitle": "Very hard. Not always tough."
-  },
-  "visualNotes": {
-    "intent": "Six quiet workshop and snowy-walk scenes compare hard surfaces with tough bodies. Big leads the household test while Little predicts and records.",
-    "prompts": "assets/tungsten-carbide/prompts.json",
-    "provenance": "assets/tungsten-carbide/provenance.json"
   },
   "quiz": {
     "title": "Four workshop clues",

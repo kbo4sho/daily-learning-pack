@@ -117,37 +117,6 @@
     "coverText": "Little follows a list of folds. A penny waits beside the tub. Will one sheet of paper carry it?",
     "foldableTitle": "A little book of folding and floating.",
     "parentNote": "Age 8 / Grade 3 reading. Read six scenes at the child’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows folding commands, discovers that water supports the boat, tests a penny load, then sees swamping and soaking reveal why a paper voyage cannot last forever.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Establish a flat ivory sheet, tub, pennies, and Little’s question about carrying a load."
-        },
-        {
-          "plate": "reach",
-          "intent": "Show deliberate folding in sequence, open walls and broad bottom; a program-like list of commands."
-        },
-        {
-          "plate": "change",
-          "intent": "Reveal the boat afloat in the tub, with the water’s upward push explained in prose."
-        },
-        {
-          "plate": "notice",
-          "intent": "Compare the same boat under a small penny load: lower hull and higher waterline."
-        },
-        {
-          "plate": "return",
-          "intent": "Show water entering over an overloaded rim: a finite limit, not a magic floating material."
-        },
-        {
-          "plate": "keep",
-          "intent": "End with damp sagging paper and saved commands; connect absorb to plant fibers and a new question."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -414,15 +383,6 @@
       "url": "https://www.sciencebuddies.org/stem-activities/aluminum-foil-boats-float"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "paper-boat"
@@ -431,12 +391,6 @@
     "plate": "wake",
     "edition": "A PAPER BOAT · 2026-10-01",
     "subtitle": "One sheet, a tub of water, and a small voyage."
-  },
-  "visualNotes": {
-    "intent": "Six imagined scenes follow Little Wonderer folding one ivory paper boat, floating it in a blue-gray tub, adding copper pennies, and noticing its soft wet sides.",
-    "grownUpNote": "Pictures are story scenes, not measured data or a complete folding guide. The code-drawn diorama is a simplified comparison with sped-up time; real paper and boats vary.",
-    "prompts": "assets/a-paper-boat/prompts.json",
-    "provenance": "assets/a-paper-boat/provenance.json"
   },
   "quiz": {
     "title": "Four clues to keep",

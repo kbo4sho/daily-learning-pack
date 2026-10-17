@@ -13,7 +13,12 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { privacyIssues, scanPrivacy } from "../scripts/privacy-check.mjs";
+import {
+  privacyIssues,
+  processNoteIssues,
+  publicPack,
+  scanPrivacy,
+} from "../scripts/privacy-check.mjs";
 import { renderArchive } from "../scripts/render-archive.mjs";
 
 test("privacy guard rejects private copy, including escaped JSON, and keeps word boundaries", async () => {
@@ -201,8 +206,8 @@ test("privacy guard scans decoded image metadata strings with newlines", async (
 });
 
 test("all committed public output, README and tests pass privacy", async () => {
+  await scanPrivacy(["dist"], { publicOutput: true });
   await scanPrivacy([
-    "dist",
     "README.md",
     "tests",
     "src",
@@ -277,5 +282,255 @@ test("archive publishing rejects private copy without changing existing dist", a
     assert.deepEqual(await readdir(root), ["dist"]);
   } finally {
     await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("pack JSON guard rejects relay/process notes, model names, dates, ages and internal fields", async () => {
+  const leaks = {
+    RELAY: [
+      "Captain theme (relayed by Firstmate Sun 10/11 8:07 PM CT)",
+      "Skipped per captain ship word for task 99",
+      "relay note",
+    ],
+    MODEL: [
+      "Astra plates; Skia foldable",
+      "made with gpt-image-1",
+      "DALL-E 3 art",
+      "Midjourney v6",
+      "codex exec",
+      "GPT 5 draft",
+    ],
+    DATE: [
+      "Pack for Mon 2026-10-12.",
+      "Pack for 2026-10-12",
+      "pack for Tuesday",
+      "Pack for October 12, 2026",
+      "Pack for\n2026-10-12",
+    ],
+    AGE: ["safe for a 7-year-old", "for 8 year olds", "a 7\u2011year\u2011old"],
+  };
+  for (const [kind, values] of Object.entries(leaks))
+    for (const value of values) {
+      const issues = processNoteIssues({ title: "Clean", copy: value });
+      assert.match(issues.join("\n"), new RegExp(`PROCESS ${kind}`), value);
+    }
+  // Keys are checked as well as values.
+  assert.match(processNoteIssues({ firstmate: "x" }).join(), /PROCESS RELAY/);
+  assert.match(processNoteIssues({ firstmateNote: "x" }).join(), /RELAY/);
+  assert.match(processNoteIssues({ relay_note: "x" }).join(), /RELAY/);
+  // Internal fields fail at any depth, including inside arrays.
+  assert.match(
+    processNoteIssues({ data: { authoring: {} } }).join(),
+    /FIELD \.data\.authoring/,
+  );
+  assert.match(processNoteIssues([{ visualNotes: {} }]).join(), /FIELD/);
+  assert.deepEqual(
+    processNoteIssues(
+      { data: { reading: { outline: "D" }, sources: [{ note: "C" }] } },
+      "p",
+    ),
+    [
+      "p: PROCESS FIELD .data.reading.outline",
+      "p: PROCESS FIELD .data.sources[0].note",
+    ],
+  );
+  for (const key of ["ChatGPT", "OpenAI", "RELAYNote"])
+    assert.match(processNoteIssues({ [key]: "x" }).join(), /PROCESS/, key);
+  for (const value of [
+    "Pack for October 12th, 2026",
+    "Pack for 12 October 2026",
+  ])
+    assert.match(processNoteIssues({ c: value }).join(), /PROCESS DATE/, value);
+  // Lesson copy is not phrase-checked; internal and non-lesson fields are.
+  assert.deepEqual(
+    processNoteIssues({
+      title: "How relays work",
+      reading: { passage: "An electrical relay opens the circuit." },
+      curiosity: { caption: "Gemini is a constellation." },
+      plates: [{ alt: "A relay and a Gemini star map" }],
+    }),
+    [],
+  );
+  assert.match(
+    processNoteIssues({ reading: { outline: { arc: "Astra plates" } } }).join(),
+    /PROCESS MODEL "Astra" at \.reading\.outline\.arc/,
+  );
+  assert.match(
+    processNoteIssues({
+      sources: [{ label: "S", note: "captain said" }],
+    }).join(),
+    /PROCESS RELAY "captain" at \.sources\[0\]\.note/,
+  );
+  assert.match(
+    processNoteIssues({ craft: "built-in image_gen" }).join(),
+    /PROCESS MODEL "image_gen"/,
+  );
+  // Root arrays and o-series model names are checked too.
+  assert.match(
+    processNoteIssues(["built-in image_gen", "relayed by Firstmate"]).join(),
+    /PROCESS MODEL[\s\S]*PROCESS RELAY/,
+  );
+  assert.match(processNoteIssues({ pipeline: "made with o3" }).join(), /MODEL/);
+  // A lesson key below a non-lesson field, or an unknown key inside a lesson
+  // field, is not lesson copy.
+  assert.match(
+    processNoteIssues({ pipeline: { title: "built-in image_gen" } }).join(),
+    /PROCESS MODEL "image_gen" at \.pipeline\.title/,
+  );
+  assert.match(
+    processNoteIssues({
+      reading: { generationNotes: "relayed by Firstmate" },
+    }).join(),
+    /PROCESS RELAY "relayed" at \.reading\.generationNotes/,
+  );
+  // Ordinary words near the date pattern are not dates.
+  assert.deepEqual(
+    processNoteIssues({ c: "Pack for sunlight experiments" }),
+    [],
+  );
+  // Internal fields fail even when their text looks harmless.
+  const internal = {
+    title: "T",
+    authoring: { status: "authored" },
+    visualNotes: { intent: "Scenes." },
+    reading: { title: "R", outline: { arc: "A" } },
+    sources: [{ label: "S", url: "https://example.com", note: "craft" }],
+  };
+  assert.deepEqual(
+    processNoteIssues(internal, "p").filter((i) => /FIELD/.test(i)),
+    [
+      "p: PROCESS FIELD .authoring",
+      "p: PROCESS FIELD .visualNotes",
+      "p: PROCESS FIELD .reading.outline",
+      "p: PROCESS FIELD .sources[0].note",
+    ],
+  );
+  const stripped = publicPack(internal);
+  assert.deepEqual(stripped, {
+    title: "T",
+    reading: { title: "R" },
+    sources: [{ label: "S", url: "https://example.com" }],
+  });
+  assert.equal(internal.authoring.status, "authored", "input not mutated");
+  assert.deepEqual(processNoteIssues(stripped), []);
+  // Ordinary lesson copy stays clean: magnetic flux, an atom model, Age 8.
+  assert.deepEqual(
+    processNoteIssues({
+      a: "changes magnetic flux through the wire",
+      b: "a handmade atom model",
+      c: "Age 8, Grade 3 reading",
+      d: "the ship floats",
+    }),
+    [],
+  );
+  // The rule applies to pack.json, JSON embedded in pages (any valid type
+  // attribute spelling) and, in a published-tree scan, to every JSON file.
+  const dir = await mkdtemp(join(tmpdir(), "process-guard-"));
+  try {
+    const leaked = JSON.stringify({ title: "T", authoring: { status: "x" } });
+    await writeFile(join(dir, "pack.json"), leaked);
+    await assert.rejects(scanPrivacy([dir]), /PROCESS FIELD \.authoring/);
+    await rm(join(dir, "pack.json"));
+    await writeFile(
+      join(dir, "index.html"),
+      // Split so this test file's own scan does not read it as embedded JSON.
+      `<script id="curiosity-content" type="application/${"json"}">${leaked}</script>`,
+    );
+    await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
+    for (const type of [
+      `type = "application/${"json"}"`,
+      `type=application/${"json"}`,
+    ]) {
+      await writeFile(
+        join(dir, "index.html"),
+        `<script ${type}>${leaked}</script>`,
+      );
+      await assert.rejects(
+        scanPrivacy([dir]),
+        /index\.html \(pack JSON\)/,
+        type,
+      );
+    }
+    await writeFile(
+      join(dir, "index.html"),
+      `<script type="application/${"json"}">${leaked}</script >`,
+    );
+    await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
+    for (const attrs of [
+      `data-label="a > b" type="application/${"json"}"`,
+      `type=" application/${"json"} "`,
+    ]) {
+      await writeFile(
+        join(dir, "index.html"),
+        `<script ${attrs}>${leaked}</script>`,
+      );
+      await assert.rejects(
+        scanPrivacy([dir]),
+        /index\.html \(pack JSON\)/,
+        attrs,
+      );
+    }
+    await rm(join(dir, "index.html"));
+    await writeFile(join(dir, "renamed.JSON"), leaked);
+    await assert.rejects(
+      scanPrivacy([dir], { publicOutput: true }),
+      /renamed\.JSON \(pack JSON\)/,
+    );
+    await rm(join(dir, "renamed.JSON"));
+    // Image prompts and provenance never ship in a published tree.
+    for (const name of ["prompts.json", "provenance.json"]) {
+      await writeFile(join(dir, name), '{"tool":"x"}');
+      await assert.rejects(
+        scanPrivacy([dir], { publicOutput: true }),
+        /PROCESS FILE image prompts\/provenance are private/,
+        name,
+      );
+      await rm(join(dir, name));
+    }
+    await writeFile(join(dir, "source-pack.json"), leaked);
+    await scanPrivacy([dir]);
+    await assert.rejects(
+      scanPrivacy([dir], { publicOutput: true }),
+      /source-pack\.json \(pack JSON\): PROCESS FIELD \.authoring/,
+    );
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+// The last main commit that still published the leaked notes. CI fetches just
+// this commit so the test proves the guard fails on the exact old files.
+const LEAKED_MAIN = "207cda9954d7f27eee09a1284d2648d229e84bc8";
+test("previously published pack.json and day pages fail the pack JSON guard", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "process-old-"));
+  try {
+    for (const [slug, kinds] of [
+      ["how-drill-bits-work", ["RELAY", "DATE", "AGE", "FIELD"]],
+      ["how-code-turns-into-lesson", ["RELAY", "MODEL", "FIELD"]],
+    ])
+      for (const file of ["pack.json", "index.html"]) {
+        const old = execFileSync(
+          "git",
+          ["show", `${LEAKED_MAIN}:dist/days/${slug}/${file}`],
+          { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+        );
+        await writeFile(join(dir, file), old);
+        const error = await scanPrivacy([dir]).then(
+          () => null,
+          (e) => e,
+        );
+        assert.ok(error, `${slug}/${file} must fail`);
+        for (const kind of kinds)
+          assert.match(
+            error.message,
+            new RegExp(`PROCESS ${kind}`),
+            `${slug}/${file}`,
+          );
+        await rm(join(dir, file));
+        // The committed replacement passes.
+        await scanPrivacy([`dist/days/${slug}/${file}`]);
+      }
+  } finally {
+    await rm(dir, { recursive: true, force: true });
   }
 });
