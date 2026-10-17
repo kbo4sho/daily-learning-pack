@@ -185,7 +185,7 @@ export async function renderArchive(root = resolve("dist")) {
   try {
     await cp(root, staging, { recursive: true });
     const result = await writeArchive(staging);
-    await scanPrivacy([staging]);
+    await scanPrivacy([staging], { publicOutput: true });
     await rm(root, { recursive: true, force: true });
     await rename(staging, root);
     return result;

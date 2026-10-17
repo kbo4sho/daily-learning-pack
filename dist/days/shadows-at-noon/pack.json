@@ -119,37 +119,6 @@
     "foldableCoverLine": "A short shadow. A high sun.",
     "foldableNote": "Measure, notice, and pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little saves a long morning shadow, returns to find a short noon shadow, follows the direction of the light, compares two lengths, and keeps a clue in a notebook.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Establish the same vertical wooden stick in a pale garden path, a long morning shadow, Big and Little, chalk, and linen notebook; begin with a question."
-        },
-        {
-          "plate": "reach",
-          "intent": "Little saves the long shadow tip with one chalk mark; use a closer ground-level composition with the same unmoved stick."
-        },
-        {
-          "plate": "change",
-          "intent": "Return at noon to the same stick; show a short crisp shadow and the earlier chalk mark farther away."
-        },
-        {
-          "plate": "notice",
-          "intent": "Focus on the mechanism: light on one side of the vertical stick, short shadow on the opposite side; Big and Little attend to the ground."
-        },
-        {
-          "plate": "return",
-          "intent": "Compare morning and noon chalk marks with the same wooden measuring stick; notebook records the evidence."
-        },
-        {
-          "plate": "keep",
-          "intent": "Close with two simple notebook lines and the short shadow beside the pair; invite a new question."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -384,15 +353,6 @@
       "url": "https://pwg.gsfc.nasa.gov/stargaze/Snavigat.htm"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template groups-and-arrays: Six equal-group/array tasks, both skills present. Store rows and columns, each 2–5. Equation is rows copies of columns joined by + and ending in =, never multiplication. Hint shows a repeated sum.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "shadows-at-noon"
@@ -401,11 +361,6 @@
     "plate": "wake",
     "edition": "SHADOWS AT NOON · 2026-10-06",
     "subtitle": "A short shadow. A high sun."
-  },
-  "visualNotes": {
-    "intent": "Six quiet outdoor scenes follow the same standing stick, chalk marks, and linen notebook from a long morning shadow to a short noon shadow.",
-    "prompts": "assets/shadows-at-noon/prompts.json",
-    "provenance": "assets/shadows-at-noon/provenance.json"
   },
   "quiz": {
     "title": "Four shadow clues",

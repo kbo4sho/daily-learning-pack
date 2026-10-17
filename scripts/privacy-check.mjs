@@ -104,6 +104,270 @@ export function privacyIssues(text, label = "content") {
   return issues;
 }
 
+// Public pack output (pack.json and JSON embedded in day pages) carries the
+// lesson, never internal authoring or process notes. publicPack() is the one
+// definition of what is stripped; the guard below fails if any of it remains.
+const INTERNAL_TOP = ["authoring", "visualNotes"];
+export function publicPack(pack) {
+  if (!pack || typeof pack !== "object" || Array.isArray(pack)) return pack;
+  const out = { ...pack };
+  for (const key of INTERNAL_TOP) delete out[key];
+  if (
+    out.reading &&
+    typeof out.reading === "object" &&
+    "outline" in out.reading
+  ) {
+    out.reading = { ...out.reading };
+    delete out.reading.outline;
+  }
+  if (Array.isArray(out.sources))
+    out.sources = out.sources.map((source) => {
+      if (!source || typeof source !== "object" || !("note" in source))
+        return source;
+      const { note, ...rest } = source;
+      return rest;
+    });
+  return out;
+}
+
+const WEEKDAY =
+  "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tues?|wed|thu(?:rs?)?|fri|sat|sun)";
+const DAY_NAME = "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)";
+const MONTH_DAY =
+  "(?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.? \\d{1,2}(?:st|nd|rd|th)?|\\d{1,2}(?:st|nd|rd|th)? (?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?))";
+const processNotes = [
+  ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
+  [
+    "MODEL",
+    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra|image[_\s-]gen|o[134](?:-(?:mini|pro|preview))?)\b/gi,
+  ],
+  [
+    "DATE",
+    new RegExp(
+      `\\bpack for (?:(?:${WEEKDAY}\\.?,? )?(?:\\d{4}-\\d{2}-\\d{2}|\\d{1,2}\\/\\d{1,2}(?:\\/\\d{2,4})?|${MONTH_DAY})|${DAY_NAME})\\b`,
+      "gi",
+    ),
+  ],
+  ["AGE", /\b\d+[\s-]year[\s-]olds?\b/gi],
+];
+// Match on normalized text: any whitespace run is one space and Unicode
+// hyphens are "-", so line breaks and non-breaking hyphens cannot hide a note.
+const normalize = (text) =>
+  text.replace(/[\u00ad\u2010-\u2015\u2212]/g, "-").replace(/\s+/g, " ");
+// Keys also match as words: firstmateNote and relay_note read as
+// "firstmate Note" and "relay note".
+const keyWords = (key) =>
+  key
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/_+/g, " ");
+function processText(text, label, path) {
+  const value = normalize(text);
+  return processNotes.flatMap(([kind, pattern]) =>
+    [...value.matchAll(pattern)].map(
+      (m) => `${label}: PROCESS ${kind} "${m[0]}" at ${path || "(root)"}`,
+    ),
+  );
+}
+// Lesson copy is never phrase-checked: a lesson may say "an electrical relay"
+// or "Gemini is a constellation". A value is lesson copy only when every key
+// on its path from the JSON root is a known lesson/metadata key of the public
+// pack schema (plus archive rows and the lesson-content embed). Any other
+// field, and everything below it, is a non-lesson field and is
+// phrase-checked, as is everything under an internal field (authoring,
+// visualNotes, reading.outline, sources[].note) wherever it sits. A new
+// lesson key is added here when the schema grows.
+const LESSON_KEYS = new Set([
+  "actionLabel",
+  "ageRange",
+  "aliases",
+  "alt",
+  "answer",
+  "answerIndex",
+  "answerKeyIntro",
+  "answers",
+  "beats",
+  "blankIndex",
+  "body",
+  "caption",
+  "carryForward",
+  "challenge",
+  "check",
+  "choices",
+  "columnLabel",
+  "columns",
+  "countSequence",
+  "coverPlate",
+  "coverText",
+  "coverWink",
+  "curiosity",
+  "date",
+  "day",
+  "days",
+  "diorama",
+  "draw",
+  "edition",
+  "editionLabel",
+  "equation",
+  "example",
+  "extension",
+  "eyebrow",
+  "feedback",
+  "foldSrc",
+  "foldable",
+  "foldableCoverLine",
+  "foldableNote",
+  "foldableTitle",
+  "frames",
+  "generatedAt",
+  "gesture",
+  "gradeLevel",
+  "heading",
+  "height",
+  "hint",
+  "hints",
+  "href",
+  "id",
+  "idea",
+  "intro",
+  "kind",
+  "label",
+  "latest",
+  "layout",
+  "math",
+  "mathTemplate",
+  "meaning",
+  "measurements",
+  "motion",
+  "notice",
+  "operands",
+  "original",
+  "paragraphs",
+  "parentGuidance",
+  "parentNote",
+  "passage",
+  "plate",
+  "plateIds",
+  "plates",
+  "pose",
+  "printNote",
+  "prompt",
+  "question",
+  "questions",
+  "quiz",
+  "reading",
+  "rowLabel",
+  "rows",
+  "say",
+  "schemaVersion",
+  "sequence",
+  "skill",
+  "slug",
+  "sources",
+  "src",
+  "start",
+  "starter",
+  "step",
+  "steps",
+  "subtitle",
+  "surfaces",
+  "symbol",
+  "table",
+  "targetAge",
+  "tasks",
+  "teaser",
+  "text",
+  "title",
+  "titleCard",
+  "todayEntry",
+  "topic",
+  "try",
+  "url",
+  "values",
+  "wink",
+  "wonderLabel",
+  "word",
+  "words",
+  "worked",
+  "workspaces",
+  "writing",
+  "yourTurn",
+]);
+const isInternal = (key, parent) =>
+  INTERNAL_TOP.includes(key) ||
+  (key === "outline" && parent === "reading") ||
+  (key === "note" && parent === "sources");
+function keyIssues(key, label, path) {
+  // The key as written (ChatGPT) and as words (firstmate Note).
+  return [
+    ...new Set([
+      ...processText(key, label, path),
+      ...processText(keyWords(key), label, path),
+    ]),
+  ];
+}
+function processLeaves(
+  value,
+  label,
+  path = "",
+  { lesson = true, internal = false, parent = "" } = {},
+) {
+  // At the root, lesson only means "keys here may be lesson keys".
+  if (typeof value === "string")
+    return lesson && parent ? [] : processText(value, label, path);
+  if (!value || typeof value !== "object") return [];
+  if (Array.isArray(value))
+    return value.flatMap((item, i) =>
+      processLeaves(item, label, `${path}[${i}]`, { lesson, internal, parent }),
+    );
+  return Object.entries(value).flatMap(([key, item]) => {
+    const inner = internal || isInternal(key, parent);
+    const childLesson = !inner && lesson && LESSON_KEYS.has(key);
+    return [
+      ...(childLesson ? [] : keyIssues(key, label, `${path}.${key}`)),
+      ...processLeaves(item, label, `${path}.${key}`, {
+        lesson: childLesson,
+        internal: inner,
+        parent: key,
+      }),
+    ];
+  });
+}
+// Internal fields fail at the pack root and at any depth below it, inside
+// objects and arrays alike.
+function fieldIssues(value, label, path = "") {
+  if (!value || typeof value !== "object") return [];
+  if (Array.isArray(value))
+    return value.flatMap((item, i) =>
+      fieldIssues(item, label, `${path}[${i}]`),
+    );
+  const issues = INTERNAL_TOP.filter((key) => key in value).map(
+    (key) => `${label}: PROCESS FIELD ${path}.${key}`,
+  );
+  if (
+    value.reading &&
+    typeof value.reading === "object" &&
+    "outline" in value.reading
+  )
+    issues.push(`${label}: PROCESS FIELD ${path}.reading.outline`);
+  if (Array.isArray(value.sources))
+    value.sources.forEach((source, i) => {
+      if (source && typeof source === "object" && "note" in source)
+        issues.push(`${label}: PROCESS FIELD ${path}.sources[${i}].note`);
+    });
+  for (const [key, item] of Object.entries(value))
+    if (!INTERNAL_TOP.includes(key))
+      issues.push(...fieldIssues(item, label, `${path}.${key}`));
+  return issues;
+}
+
+// Relay/process notes, model names, scheduling and audience notes, and
+// internal note fields fail in public pack JSON.
+export function processNoteIssues(pack, label = "pack.json") {
+  const issues = fieldIssues(pack, label);
+  return [...issues, ...processLeaves(pack, label)];
+}
+
 // Inspect decoded leaves directly: serializing them would turn newlines back
 // into escape sequences and hide word boundaries. Keys can contain copy too.
 function decodedPrivacyIssues(value, label) {
@@ -168,7 +432,15 @@ function pdfText(command, args) {
   }
 }
 
-export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
+const isJson = (path) => /\.json$/i.test(path);
+
+// Public pack JSON is every pack.json and every JSON block embedded in a
+// page. publicOutput: true marks a scan of a whole published tree (dist/, the
+// public sync); there every JSON file is public pack JSON, whatever its name.
+export async function scanPrivacy(
+  paths,
+  { jsonOnly = false, publicOutput = false } = {},
+) {
   const issues = [];
   let files = 0;
   const images = [];
@@ -179,8 +451,13 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
         await visit(join(path, entry));
       return;
     }
-    if (jsonOnly && !path.endsWith(".json")) return;
+    if (jsonOnly && !isJson(path)) return;
     const label = relative(process.cwd(), path).replaceAll("\\", "/");
+    // Image prompts and generator provenance stay in the private repo.
+    if (publicOutput && /(?:^|[\\/])(?:prompts|provenance)\.json$/i.test(path))
+      issues.push(
+        `${label}: PROCESS FILE image prompts/provenance are private`,
+      );
     const bytes = await readFile(path);
     files++;
     if (/\.(?:png|jpe?g|webp)$/i.test(path)) {
@@ -204,17 +481,31 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
       const text = bytes.toString("utf8");
       issues.push(...privacyIssues(text, label));
       // Check escaped strings too, including JSON embedded in HTML scripts.
-      const blocks = path.endsWith(".json")
+      const blocks = isJson(path)
         ? [text]
         : [
+            // Quote-aware opening tag: a ">" inside an attribute value
+            // does not end it. The type check then reads the attributes.
             ...text.matchAll(
-              /<script\b[^>]*type=["']application\/json["'][^>]*>([\s\S]*?)<\/script>/gi,
+              /<script\b((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)<\/script\s*>/gi,
             ),
-          ].map((m) => m[1]);
-      for (const block of blocks)
-        issues.push(
-          ...decodedPrivacyIssues(JSON.parse(block), `${label} (decoded JSON)`),
-        );
+          ]
+            .filter((m) =>
+              /(?:^|\s)type\s*=\s*(?:"\s*application\/json\s*"|'\s*application\/json\s*'|application\/json(?=\s|\/|$))/i.test(
+                m[1],
+              ),
+            )
+            .map((m) => m[2]);
+      for (const block of blocks) {
+        const data = JSON.parse(block);
+        issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
+        if (
+          publicOutput ||
+          !isJson(path) ||
+          /(?:^|[\\/])pack\.json$/.test(path)
+        )
+          issues.push(...processNoteIssues(data, `${label} (pack JSON)`));
+      }
     }
   }
   for (const path of paths) await visit(resolve(path));
@@ -253,6 +544,6 @@ if (
 ) {
   const paths = process.argv.slice(2);
   console.log(
-    `Privacy guard passed (${await scanPrivacy(paths.length ? paths : ["dist"])} files).`,
+    `Privacy guard passed (${await scanPrivacy(paths.length ? paths : ["dist"], { publicOutput: true })} files).`,
   );
 }

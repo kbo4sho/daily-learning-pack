@@ -116,37 +116,6 @@
     "coverPlate": "marks",
     "coverText": "Six close looks. One hidden path from marks to a morning lesson.",
     "parentNote": "About 15 min: look, read six short beats, then talk. No independent reading required.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows quiet code marks through ordered jobs, a running helper, a page that appears as evidence, a revised guess that the marks meant a lesson, and one open wonder about other transforms.",
-      "beatIntents": [
-        {
-          "plate": "marks",
-          "intent": "Sunlit study; Little notices neat code-like marks on a screen and wonders what they are for."
-        },
-        {
-          "plate": "sequence",
-          "intent": "Notebook shows three tiny jobs in a clear numbered order; order itself is the clue."
-        },
-        {
-          "plate": "follow",
-          "intent": "Each job runs: orange path from list to blank page; a first shape begins to appear."
-        },
-        {
-          "plate": "appear",
-          "intent": "Evidence plate: blank page beside finished page with picture and words; compare to trust the change."
-        },
-        {
-          "plate": "lesson",
-          "intent": "Return to the first marks beside the finished morning lesson; revise the guess — the marks meant make a lesson."
-        },
-        {
-          "plate": "wonder",
-          "intent": "Keep the finished lesson and one precise open question about what else ordered jobs could become."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "marks",
@@ -331,18 +300,7 @@
   "parentGuidance": "These are imagined, enlarged scenes about how ordered instructions (code) can become a printed lesson — not a coding tutorial, IDE walkthrough, or claim about any one programming language. 'Instructions,' 'sequence,' and 'transform' are kid-sized models. The helper/computer is schematic. Job counts and morning totals are invented for math and independent of art scale. Screens and notebooks in the plates are props, not real interfaces to copy. Support pronunciation, invented spelling or dictation as useful. Keep adult guidance in this key or collapsed details.",
   "sources": [
     {
-      "label": "Family craft model",
-      "note": "Wonder Daily curiosity bar: mechanism, evidence→inference, supported vocabulary, multi-step math."
+      "label": "Family craft model"
     }
-  ],
-  "authoring": {
-    "status": "complete",
-    "bar": "curiosity",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-gen",
-    "audience": "the child",
-    "pipeline": "task-99: locked reading.outline before plate image_gen (task-98 gate); Astra plates; Skia foldable; kid-facing kid surfaces",
-    "craftApproval": "Skipped per captain ship word for task 99 when adversarial clean; draft PRs then merge."
-  }
+  ]
 }
