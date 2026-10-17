@@ -369,8 +369,8 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
   }
 });
 
-// The last main commit that still published the leaked notes. CI checks out
-// full history so this proves the guard fails on the exact old files.
+// The last main commit that still published the leaked notes. CI fetches just
+// this commit so the test proves the guard fails on the exact old files.
 const LEAKED_MAIN = "207cda9954d7f27eee09a1284d2648d229e84bc8";
 test("previously published pack.json and day pages fail the pack JSON guard", async () => {
   const dir = await mkdtemp(join(tmpdir(), "process-old-"));
