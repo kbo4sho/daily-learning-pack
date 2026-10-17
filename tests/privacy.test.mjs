@@ -206,8 +206,8 @@ test("privacy guard scans decoded image metadata strings with newlines", async (
 });
 
 test("all committed public output, README and tests pass privacy", async () => {
+  await scanPrivacy(["dist"], { publicOutput: true });
   await scanPrivacy([
-    "dist",
     "README.md",
     "tests",
     "src",
@@ -324,6 +324,23 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     /FIELD \.data\.authoring/,
   );
   assert.match(processNoteIssues([{ visualNotes: {} }]).join(), /FIELD/);
+  assert.deepEqual(
+    processNoteIssues(
+      { data: { reading: { outline: "D" }, sources: [{ note: "C" }] } },
+      "p",
+    ),
+    [
+      "p: PROCESS FIELD .data.reading.outline",
+      "p: PROCESS FIELD .data.sources[0].note",
+    ],
+  );
+  for (const key of ["ChatGPT", "OpenAI", "RELAYNote"])
+    assert.match(processNoteIssues({ [key]: "x" }).join(), /PROCESS/, key);
+  for (const value of [
+    "Pack for October 12th, 2026",
+    "Pack for 12 October 2026",
+  ])
+    assert.match(processNoteIssues({ c: value }).join(), /PROCESS DATE/, value);
   // Ordinary words near the date pattern are not dates.
   assert.deepEqual(
     processNoteIssues({ c: "Pack for sunlight experiments" }),
@@ -392,7 +409,18 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
         type,
       );
     }
+    await writeFile(
+      join(dir, "index.html"),
+      `<script type="application/${"json"}">${leaked}</script >`,
+    );
+    await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
     await rm(join(dir, "index.html"));
+    await writeFile(join(dir, "renamed.JSON"), leaked);
+    await assert.rejects(
+      scanPrivacy([dir], { publicOutput: true }),
+      /renamed\.JSON \(pack JSON\)/,
+    );
+    await rm(join(dir, "renamed.JSON"));
     await writeFile(join(dir, "source-pack.json"), leaked);
     await scanPrivacy([dir]);
     await assert.rejects(
