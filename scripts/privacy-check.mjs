@@ -86,7 +86,7 @@ const processNotes = [
   ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
   [
     "MODEL",
-    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra|image[_\s-]gen)\b/gi,
+    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra|image[_\s-]gen|o[134](?:-(?:mini|pro|preview))?)\b/gi,
   ],
   [
     "DATE",
@@ -261,7 +261,7 @@ function processLeaves(
 ) {
   // At the root, lesson only means "keys here may be lesson keys".
   if (typeof value === "string")
-    return lesson && path ? [] : processText(value, label, path);
+    return lesson && parent ? [] : processText(value, label, path);
   if (!value || typeof value !== "object") return [];
   if (Array.isArray(value))
     return value.flatMap((item, i) =>

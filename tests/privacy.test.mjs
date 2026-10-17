@@ -365,6 +365,12 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     processNoteIssues({ craft: "built-in image_gen" }).join(),
     /PROCESS MODEL "image_gen"/,
   );
+  // Root arrays and o-series model names are checked too.
+  assert.match(
+    processNoteIssues(["built-in image_gen", "relayed by Firstmate"]).join(),
+    /PROCESS MODEL[\s\S]*PROCESS RELAY/,
+  );
+  assert.match(processNoteIssues({ pipeline: "made with o3" }).join(), /MODEL/);
   // A lesson key below a non-lesson field, or an unknown key inside a lesson
   // field, is not lesson copy.
   assert.match(
