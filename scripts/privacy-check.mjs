@@ -35,7 +35,7 @@ const LITTLE_BANS = [
   // Internal process notes never reach the public library.
   [
     "PROCESS",
-    /\b(?:codex|firstmate|gpt-\d[\w-]*|TODO|FIXME|WIP)\b|\bFM-\d|\bquality gate\b|\bgate (?:pass|fail)\b|\blittle-runs\b|\boutput\/little|\bvision review\b|\bgate\s*[:=]|\b(?:tmp|scripts|src|tests|learners|queue|output|little\/topics)\/[\w./-]+|\b[\w-]+\.(?:mjs|cjs|ts|py|sh|log)\b|\blittle-nightly\b/gi,
+    /\b(?:codex|firstmate|gpt-\d[\w-]*|TODO|FIXME|WIP)\b|\bFM-\d|\bquality gate\b|\bgate (?:pass|fail)\b|\blittle-runs\b|\boutput\/little|\bvision review\b|\bgate\s*[:=]|\bgates?\s+(?:pass\w*|fail\w*|approv\w*|reject\w*|ok|clean|block\w*)\b|\/(?:home|var|private|tmp|opt|etc|root)\/[\w./-]*|\b(?:tmp|scripts|src|tests|learners|queue|output|little\/topics)\/[\w./-]+|\b[\w-]+\.(?:mjs|cjs|ts|py|sh|log)\b|\blittle-nightly\b/gi,
   ],
   [
     "LEARNER_CONFIG",
