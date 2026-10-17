@@ -414,6 +414,20 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
       `<script type="application/${"json"}">${leaked}</script >`,
     );
     await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
+    for (const attrs of [
+      `data-label="a > b" type="application/${"json"}"`,
+      `type=" application/${"json"} "`,
+    ]) {
+      await writeFile(
+        join(dir, "index.html"),
+        `<script ${attrs}>${leaked}</script>`,
+      );
+      await assert.rejects(
+        scanPrivacy([dir]),
+        /index\.html \(pack JSON\)/,
+        attrs,
+      );
+    }
     await rm(join(dir, "index.html"));
     await writeFile(join(dir, "renamed.JSON"), leaked);
     await assert.rejects(

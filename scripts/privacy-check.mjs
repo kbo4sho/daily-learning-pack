@@ -274,10 +274,18 @@ export async function scanPrivacy(
       const blocks = isJson(path)
         ? [text]
         : [
+            // Quote-aware opening tag: a ">" inside an attribute value
+            // does not end it. The type check then reads the attributes.
             ...text.matchAll(
-              /<script\b[^>]*?\btype\s*=\s*(["']?)application\/json\1(?=[\s/>])[^>]*>([\s\S]*?)<\/script\s*>/gi,
+              /<script\b((?:[^>"']|"[^"]*"|'[^']*')*)>([\s\S]*?)<\/script\s*>/gi,
             ),
-          ].map((m) => m[2]);
+          ]
+            .filter((m) =>
+              /(?:^|\s)type\s*=\s*(?:"\s*application\/json\s*"|'\s*application\/json\s*'|application\/json(?=\s|\/|$))/i.test(
+                m[1],
+              ),
+            )
+            .map((m) => m[2]);
       for (const block of blocks) {
         const data = JSON.parse(block);
         issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
