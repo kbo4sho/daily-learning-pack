@@ -179,38 +179,7 @@
     "questions": [
       "What did Little first guess about the note? Which moving parts helped change that guess?",
       "How does vibration get from a string to the air? Name the two wooden helpers."
-    ],
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows one note: a key press starts the action, a hammer taps a string, vibration travels bridge to soundboard into air, length shapes pitch, and a damper lets Little keep the path.",
-      "beatIntents": [
-        {
-          "plate": "keys",
-          "intent": "Museum key press; Little wonders where the note came from."
-        },
-        {
-          "plate": "action",
-          "intent": "Enlarged action model: key tips linked parts; felt hammer taps and rebounds."
-        },
-        {
-          "plate": "strings",
-          "intent": "After the tap, one string keeps vibrating; motion traces exaggerate the quiver."
-        },
-        {
-          "plate": "soundboard",
-          "intent": "Bridge carries vibration into the broad soundboard so more air moves."
-        },
-        {
-          "plate": "pitch",
-          "intent": "Two comparison strings: longer lower, shorter higher when else is equal."
-        },
-        {
-          "plate": "quiet",
-          "intent": "Damper hushes; Little sketches the path and revises the hiding guess."
-        }
-      ]
-    }
+    ]
   },
   "math": {
     "title": "Longer by how much?",

@@ -119,37 +119,6 @@
     "foldableCoverLine": "A turn. A tiny chip. A way out.",
     "foldableNote": "Follow the spiral and keep a question.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain drill bit, spiral, flute, cutting lip, chips, screw thread, and auger.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows the drill bit’s spiral, compares a screw in soap, sees chips leave a hole, and connects that path to an auger and a water screw before wondering about other turning tools.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "A warm workbench scene: an enlarged stationary metal twist drill bit rests on a wood stand beneath a brass magnifier. Two spiral flutes and the tip are clearly visible. Big and Little look together, with a notebook and soft lamp light. No powered drill."
-        },
-        {
-          "plate": "reach",
-          "intent": "Big and Little beside a tray on the same workbench. Big slowly hand-turns a large screw by its head into a white bar of soap. A few pale soap curls rest near its thread. Little observes close beside Big, no motor or power tools."
-        },
-        {
-          "plate": "change",
-          "intent": "An enlarged freestanding educational cutaway display on the workbench: a vertical twist drill bit in a wood block, front of the hole revealed. Fine amber chips at the cutting lips and along the spiral flutes lead up and out onto the surface. Big and Little observe from beside the display without touching it."
-        },
-        {
-          "plate": "notice",
-          "intent": "A quiet garden beside a potting bench. An adult-sized hand auger stands in a soil cutaway display, with loose soil caught on its broad spiral flights above the hole. Big and Little observe beside it, not operating it. Warm low sunlight, notebook on the bench."
-        },
-        {
-          "plate": "return",
-          "intent": "A tabletop Archimedes screw demonstration: one sloping transparent tube from a low water bowl to a raised small cup. A broad helical screw inside lifts small pockets of blue water. Hand crank at top. Big beside Little, both watching, soft lamp light. Clear coherent water path."
-        },
-        {
-          "plate": "keep",
-          "intent": "A quiet kitchen table with a hand-crank egg beater, corkscrew resting in a cork, and enclosed hand pencil sharpener with one wood curl. Big beside Little as Little draws a spiral in the notebook. Shared wondering, lamp light. No text or headings."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -425,28 +394,6 @@
       "url": "https://www.sciencebuddies.org/stem-activities/build-archimedes-screw"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "themeIntake": {
-      "topic": "how drill bits work",
-      "source": "queue/next-topic.txt",
-      "queued": true,
-      "queueDir": "queue",
-      "notes": [
-        "# Slug: how-drill-bits-work (packSlug of the topic line above). Pack for Mon 2026-10-12.",
-        "# Captain theme (relayed by Firstmate Sun 10/11 8:07 PM CT), his words: \"how drillbits work and maybe about how other rotating shapes can be used as tools.\"",
-        "# Notes: spiral flutes carry chips out; the cutting lip does the cutting. Rotating cousins: screws, augers, corkscrews, egg beaters, Archimedes screws.",
-        "# Hands-on, safe for a 7-year-old, NO power tools: hand-turn a screw into a bar of soap or clay; a pencil sharpener."
-      ],
-      "normalized": "how drill bits work",
-      "slug": "how-drill-bits-work"
-    },
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "drill-bits"
@@ -455,11 +402,6 @@
     "plate": "wake",
     "edition": "HOW DRILL BITS WORK · 2026-10-12",
     "subtitle": "A turn. A tiny chip. A way out."
-  },
-  "visualNotes": {
-    "intent": "Six new warm workbench, garden, and kitchen scenes follow the jobs of turning shapes.",
-    "prompts": "assets/how-drill-bits-work/prompts.json",
-    "provenance": "assets/how-drill-bits-work/provenance.json"
   },
   "quiz": {
     "title": "Four turning clues",

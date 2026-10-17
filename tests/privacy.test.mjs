@@ -13,7 +13,12 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { privacyIssues, scanPrivacy } from "../scripts/privacy-check.mjs";
+import {
+  privacyIssues,
+  processNoteIssues,
+  publicPack,
+  scanPrivacy,
+} from "../scripts/privacy-check.mjs";
 import { renderArchive } from "../scripts/render-archive.mjs";
 
 test("privacy guard rejects private copy, including escaped JSON, and keeps word boundaries", async () => {
@@ -277,5 +282,126 @@ test("archive publishing rejects private copy without changing existing dist", a
     assert.deepEqual(await readdir(root), ["dist"]);
   } finally {
     await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("pack JSON guard rejects relay/process notes, model names, dates, ages and internal fields", async () => {
+  const leaks = {
+    RELAY: [
+      "Captain theme (relayed by Firstmate Sun 10/11 8:07 PM CT)",
+      "Skipped per captain ship word for task 99",
+      "relay note",
+    ],
+    MODEL: [
+      "Astra plates; Skia foldable",
+      "made with gpt-image-1",
+      "DALL-E 3 art",
+      "Midjourney v6",
+      "codex exec",
+    ],
+    DATE: [
+      "Pack for Mon 2026-10-12.",
+      "Pack for 2026-10-12",
+      "pack for Tuesday",
+    ],
+    AGE: ["safe for a 7-year-old", "for 8 year olds"],
+  };
+  for (const [kind, values] of Object.entries(leaks))
+    for (const value of values) {
+      const issues = processNoteIssues({ title: "Clean", copy: value });
+      assert.match(issues.join("\n"), new RegExp(`PROCESS ${kind}`), value);
+    }
+  // Keys are checked as well as values.
+  assert.match(processNoteIssues({ firstmate: "x" }).join(), /PROCESS RELAY/);
+  // Internal fields fail even when their text looks harmless.
+  const internal = {
+    title: "T",
+    authoring: { status: "authored" },
+    visualNotes: { intent: "Scenes." },
+    reading: { title: "R", outline: { arc: "A" } },
+    sources: [{ label: "S", url: "https://example.com", note: "craft" }],
+  };
+  assert.deepEqual(
+    processNoteIssues(internal, "p").filter((i) => /FIELD/.test(i)),
+    [
+      "p: PROCESS FIELD .authoring",
+      "p: PROCESS FIELD .visualNotes",
+      "p: PROCESS FIELD .reading.outline",
+      "p: PROCESS FIELD .sources[0].note",
+    ],
+  );
+  const stripped = publicPack(internal);
+  assert.deepEqual(stripped, {
+    title: "T",
+    reading: { title: "R" },
+    sources: [{ label: "S", url: "https://example.com" }],
+  });
+  assert.equal(internal.authoring.status, "authored", "input not mutated");
+  assert.deepEqual(processNoteIssues(stripped), []);
+  // Ordinary lesson copy stays clean: magnetic flux, an atom model, Age 8.
+  assert.deepEqual(
+    processNoteIssues({
+      a: "changes magnetic flux through the wire",
+      b: "a handmade atom model",
+      c: "Age 8, Grade 3 reading",
+      d: "the ship floats",
+    }),
+    [],
+  );
+  // The rule applies to pack.json and JSON embedded in pages, not to source.
+  const dir = await mkdtemp(join(tmpdir(), "process-guard-"));
+  try {
+    const leaked = JSON.stringify({ title: "T", authoring: { status: "x" } });
+    await writeFile(join(dir, "pack.json"), leaked);
+    await assert.rejects(scanPrivacy([dir]), /PROCESS FIELD \.authoring/);
+    await rm(join(dir, "pack.json"));
+    await writeFile(
+      join(dir, "index.html"),
+      // Split so this test file's own scan does not read it as embedded JSON.
+      `<script id="curiosity-content" type="application/${"json"}">${leaked}</script>`,
+    );
+    await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
+    await rm(join(dir, "index.html"));
+    await writeFile(join(dir, "source-pack.json"), leaked);
+    await scanPrivacy([dir]);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+// The last main commit that still published the leaked notes. CI checks out
+// full history so this proves the guard fails on the exact old files.
+const LEAKED_MAIN = "207cda9954d7f27eee09a1284d2648d229e84bc8";
+test("previously published pack.json and day pages fail the pack JSON guard", async () => {
+  const dir = await mkdtemp(join(tmpdir(), "process-old-"));
+  try {
+    for (const [slug, kinds] of [
+      ["how-drill-bits-work", ["RELAY", "DATE", "AGE", "FIELD"]],
+      ["how-code-turns-into-lesson", ["RELAY", "MODEL", "FIELD"]],
+    ])
+      for (const file of ["pack.json", "index.html"]) {
+        const old = execFileSync(
+          "git",
+          ["show", `${LEAKED_MAIN}:dist/days/${slug}/${file}`],
+          { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+        );
+        await writeFile(join(dir, file), old);
+        const error = await scanPrivacy([dir]).then(
+          () => null,
+          (e) => e,
+        );
+        assert.ok(error, `${slug}/${file} must fail`);
+        for (const kind of kinds)
+          assert.match(
+            error.message,
+            new RegExp(`PROCESS ${kind}`),
+            `${slug}/${file}`,
+          );
+        await rm(join(dir, file));
+        // The committed replacement passes.
+        await scanPrivacy([`dist/days/${slug}/${file}`]);
+      }
+  } finally {
+    await rm(dir, { recursive: true, force: true });
   }
 });

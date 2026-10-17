@@ -119,37 +119,6 @@
     "foldableCoverLine": "Tiny bits. A gentle charge.",
     "foldableNote": "Look closely, notice the cling, and pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Explain electron, charge, atom, nucleus, wire, and static cling through the story.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows electrons from an atom model through a balloon transfer, charge pulls and pushes, a complete wire loop, and a clinging sock, then asks where the tiny bits go when the cling ends.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Establish Big and Little at a warm craft table with a brass magnifier, notebook, and handmade atom model: clustered nucleus beads, much smaller electron beads around the center. No planet-like tracks."
-        },
-        {
-          "plate": "reach",
-          "intent": "Big leads a balloon-and-paper demonstration at the craft table, holding one ochre balloon close above a few paper bits on a tray; wool sweater nearby, Little observing. No painted particles or arcs."
-        },
-        {
-          "plate": "change",
-          "intent": "Two physical paper cards with one simple plus symbol and one simple minus symbol on a wooden tray. Big beside Little, looking at the cards; notebook marks suggest comparing pull and push. No extra text."
-        },
-        {
-          "plate": "notice",
-          "intent": "A complete tabletop battery-and-small-lamp kit: battery holder, closed switch, two copper-colored insulated connecting wires making one complete loop, glowing low-voltage lamp. Big and Little beside it; no outlets, no painted electron dots."
-        },
-        {
-          "plate": "return",
-          "intent": "Beside the same craft table, Little gently lifts a folded shirt with one small sock clinging to it; Big sits close beside Little, laundry basket below. Calm ordinary fabric, no visible particles."
-        },
-        {
-          "plate": "keep",
-          "intent": "Close, tender notebook scene: Little drawing a simple sock and shirt with one arrow between; Big alongside, brass magnifier and atom model at the edge, warm lamp, no lettering."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -401,15 +370,6 @@
       "url": "https://annex.exploratorium.edu/science-explorer/roller.html"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template number-crunch: Six bare add/subtract equations with short story-tied questions. Two two-digit operands; actually regroup; both addition and subtraction appear.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "electrons"
@@ -418,11 +378,6 @@
     "plate": "wake",
     "edition": "ELECTRONS · 2026-10-09",
     "subtitle": "Tiny bits. A gentle charge."
-  },
-  "visualNotes": {
-    "intent": "Six new craft-table scenes connect an atom model, electron transfer, charge, a wire, clinging socks, and a notebook question.",
-    "prompts": "assets/electrons/prompts.json",
-    "provenance": "assets/electrons/provenance.json"
   },
   "quiz": {
     "title": "Four charge clues",
