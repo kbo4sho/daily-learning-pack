@@ -341,6 +341,30 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     "Pack for 12 October 2026",
   ])
     assert.match(processNoteIssues({ c: value }).join(), /PROCESS DATE/, value);
+  // Lesson copy is not phrase-checked; internal and non-lesson fields are.
+  assert.deepEqual(
+    processNoteIssues({
+      title: "How relays work",
+      reading: { passage: "An electrical relay opens the circuit." },
+      curiosity: { caption: "Gemini is a constellation." },
+      plates: [{ alt: "A relay and a Gemini star map" }],
+    }),
+    [],
+  );
+  assert.match(
+    processNoteIssues({ reading: { outline: { arc: "Astra plates" } } }).join(),
+    /PROCESS MODEL "Astra" at \.reading\.outline\.arc/,
+  );
+  assert.match(
+    processNoteIssues({
+      sources: [{ label: "S", note: "captain said" }],
+    }).join(),
+    /PROCESS RELAY "captain" at \.sources\[0\]\.note/,
+  );
+  assert.match(
+    processNoteIssues({ craft: "built-in image_gen" }).join(),
+    /PROCESS MODEL "image_gen"/,
+  );
   // Ordinary words near the date pattern are not dates.
   assert.deepEqual(
     processNoteIssues({ c: "Pack for sunlight experiments" }),
@@ -435,6 +459,16 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
       /renamed\.JSON \(pack JSON\)/,
     );
     await rm(join(dir, "renamed.JSON"));
+    // Image prompts and provenance never ship in a published tree.
+    for (const name of ["prompts.json", "provenance.json"]) {
+      await writeFile(join(dir, name), '{"tool":"x"}');
+      await assert.rejects(
+        scanPrivacy([dir], { publicOutput: true }),
+        /PROCESS FILE image prompts\/provenance are private/,
+        name,
+      );
+      await rm(join(dir, name));
+    }
     await writeFile(join(dir, "source-pack.json"), leaked);
     await scanPrivacy([dir]);
     await assert.rejects(
