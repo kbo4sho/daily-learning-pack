@@ -65,3 +65,11 @@ Runtime CSS in `dist/` is canonical for the published site. Product notes: [DESI
 `npm test` scans all current output, README, tests, source, scripts, and docs for a case-sensitive whole-word personal-name match, absolute home paths, and local machine hostnames. Inline JSON is decoded too. PDF checks use Poppler (`pdftotext` and `pdfinfo`) for extracted text, Info, and XMP, plus raw PDF dictionaries. Image metadata is checked with ExifTool. Install Poppler and ExifTool before running the tests; the test provisions missing tools on the ephemeral Ubuntu GitHub Actions runner. Missing tools or missing output fail the check.
 
 Compressed image/font bytes are not text. Vendored minified fontkit contains property access that resembles a local hostname; only the hostname check is excluded inside `vendor/`. Name and home-path checks still run there, and vendor files stay byte-identical.
+
+## `/little/` — packs for little explorers
+
+`dist/little/` is a second, separate public view (today, `days/<slug>/`, archive) built by the private
+generators (`npm run little:nightly` there). Its only identifier is the opaque id `little`; no learner
+configuration, age, grade, birthday or name is ever published, and `scripts/privacy-check.mjs` applies a
+stricter ban list inside `/little/`. `tests/little.test.mjs` and `tests/little-browser.mjs` (phone and
+desktop widths, axe) cover it.
