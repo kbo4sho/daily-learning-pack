@@ -212,6 +212,12 @@ function mount() {
   root.addEventListener("click", (event) => {
     const button = event.target.closest("[data-speaker-action]");
     if (!button || button.disabled) return;
+    if (button.dataset.speakerAction === "PLAY") {
+      root.querySelector(".speaker-bench").scrollIntoView({
+        behavior: media.matches ? "instant" : "smooth",
+        block: "nearest",
+      });
+    }
     dispatch({
       type: button.dataset.speakerAction,
       value: button.dataset.value,

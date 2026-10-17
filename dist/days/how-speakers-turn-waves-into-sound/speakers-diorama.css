@@ -209,6 +209,11 @@
 .speaker-drawing .speaker-air-dot {
   fill: #756e5b;
 }
+@media (min-width: 651px) {
+  .speaker-part-label[data-label="magnet"] {
+    transform: translate(-36%, -38%);
+  }
+}
 @media (max-width: 650px) {
   .speaker-part-label {
     font-size: 14px;
