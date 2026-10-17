@@ -1,9 +1,0 @@
-{
-  "tool": "built-in image_gen",
-  "prompts": [
-    {
-      "id": "diorama",
-      "prompt": "Use case: illustration-story. Asset type: one scenic plate for Wonder Together's internal morning-dew reading story, age 7. Create a single wide 3:2 landscape scene, 1536x1024. Quiet luxury picture-book field illustration: finely drawn dark ink, warm ivory paper texture, translucent muted watercolor washes, cinematic natural light, rare warm gold, restrained moss green and blue-black. Editorial Newsreader-and-Inter energy without typography. No text, letters, titles, numbers, labels, panels, borders, arrows, giant hand, tip-hand, logo, or watermark. Dew droplets must cling to surfaces; no rain or falling droplets. Water vapor is invisible, so no visible steam or mist. The recurring leaf is a broad heart-shaped green leaf with a gently pointed tip on a low plant near a delicate spider web. Where characters appear, Big and Little Wonderer are gender-neutral NONHUMAN minimal pebble/capsule guides, warm-gray and cream, tiny integrated ear nubs, dot eyes, subtle nose dash, very short mitten arms; Big is 1.6 times Little's height, calmly beside or slightly behind. NOT humans, literal bears, plush toys, detailed paws, costumes, or mascots. Leaf and mechanism dominate. Asset type override: a crafted tabletop natural-history diorama reference illustration, not a story panel. On a walnut museum base sits one broad living-looking green leaf on its short stem, with fine web to right, a curved deep blue night-sky backdrop with stars behind, and a tiny unlabeled brass thermometer mounted beside leaf. Tiny dew beads cling to leaf and web. Big and Little Wonderer stand quietly at left of the base looking in. A tactile paper-and-brass educational model, warm rim lighting, ink-black shadows, cinematic luxurious miniature. No labels or control UI. No glass dome, no fog, no liquid falling."
-    }
-  ]
-}

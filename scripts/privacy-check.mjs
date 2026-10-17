@@ -86,7 +86,7 @@ const processNotes = [
   ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
   [
     "MODEL",
-    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra)\b/gi,
+    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra|image[_\s-]gen)\b/gi,
   ],
   [
     "DATE",
@@ -116,17 +116,85 @@ function processText(text, label, path) {
     ),
   );
 }
-function processLeaves(value, label, path = "") {
-  if (typeof value === "string") return processText(value, label, path);
-  if (!value || typeof value !== "object") return [];
-  return Object.entries(value).flatMap(([key, item]) => [
-    // The key as written (ChatGPT) and as words (firstmate Note).
+// Lesson copy is never phrase-checked: a lesson may say "an electrical relay"
+// or "Gemini is a constellation". These are the public pack's lesson and
+// metadata fields (plus archive rows and the lesson-content embed). Any
+// other field is a non-lesson field and is phrase-checked, as is everything
+// under an internal field (authoring, visualNotes, reading.outline,
+// sources[].note) wherever it sits.
+const LESSON_KEYS = new Set([
+  "schemaVersion",
+  "kind",
+  "slug",
+  "topic",
+  "teaser",
+  "aliases",
+  "targetAge",
+  "gradeLevel",
+  "mathTemplate",
+  "ageRange",
+  "editionLabel",
+  "wonderLabel",
+  "title",
+  "question",
+  "idea",
+  "curiosity",
+  "plates",
+  "reading",
+  "math",
+  "writing",
+  "answers",
+  "parentGuidance",
+  "sources",
+  "surfaces",
+  "titleCard",
+  "quiz",
+  "motion",
+  "feedback",
+  "date",
+  "href",
+  "latest",
+  "todayEntry",
+  "generatedAt",
+]);
+const isInternal = (key, parent) =>
+  INTERNAL_TOP.includes(key) ||
+  (key === "outline" && parent === "reading") ||
+  (key === "note" && parent === "sources");
+function keyIssues(key, label, path) {
+  // The key as written (ChatGPT) and as words (firstmate Note).
+  return [
     ...new Set([
-      ...processText(key, label, `${path}.${key}`),
-      ...processText(keyWords(key), label, `${path}.${key}`),
+      ...processText(key, label, path),
+      ...processText(keyWords(key), label, path),
     ]),
-    ...processLeaves(item, label, `${path}.${key}`),
-  ]);
+  ];
+}
+function processLeaves(
+  value,
+  label,
+  path = "",
+  { lesson = false, internal = false, parent = "" } = {},
+) {
+  if (typeof value === "string")
+    return lesson ? [] : processText(value, label, path);
+  if (!value || typeof value !== "object") return [];
+  if (Array.isArray(value))
+    return value.flatMap((item, i) =>
+      processLeaves(item, label, `${path}[${i}]`, { lesson, internal, parent }),
+    );
+  return Object.entries(value).flatMap(([key, item]) => {
+    const inner = internal || isInternal(key, parent);
+    const childLesson = !inner && (lesson || LESSON_KEYS.has(key));
+    return [
+      ...(childLesson ? [] : keyIssues(key, label, `${path}.${key}`)),
+      ...processLeaves(item, label, `${path}.${key}`, {
+        lesson: childLesson,
+        internal: inner,
+        parent: key,
+      }),
+    ];
+  });
 }
 // Internal fields fail at the pack root and at any depth below it, inside
 // objects and arrays alike.
@@ -248,6 +316,11 @@ export async function scanPrivacy(
     }
     if (jsonOnly && !isJson(path)) return;
     const label = relative(process.cwd(), path).replaceAll("\\", "/");
+    // Image prompts and generator provenance stay in the private repo.
+    if (publicOutput && /(?:^|[\\/])(?:prompts|provenance)\.json$/i.test(path))
+      issues.push(
+        `${label}: PROCESS FILE image prompts/provenance are private`,
+      );
     const bytes = await readFile(path);
     files++;
     if (/\.(?:png|jpe?g|webp)$/i.test(path)) {
