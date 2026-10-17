@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          # Full history: the privacy test proves the guard fails on old leaked output.
-          fetch-depth: 0
+      # Only the last commit that published the leaked notes: the privacy test
+      # proves the guard fails on those exact files.
+      - run: git fetch --no-tags --depth=1 origin 207cda9954d7f27eee09a1284d2648d229e84bc8
       - uses: actions/setup-node@v4
         with:
           node-version: 22
