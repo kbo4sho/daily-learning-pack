@@ -69,5 +69,28 @@
     "letters",
     "tracing",
     "coloring"
-  ]
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "puddles",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-17"
+  }
 }

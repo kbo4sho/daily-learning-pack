@@ -40,8 +40,19 @@ test("/little/ has today, archive and one folder per day", async () => {
       "date",
       "question",
       "slug",
+      "tags",
       "title",
     ]);
+    // Library model: tagged by band (opaque id only), topic, skills and date.
+    assert.deepEqual(Object.keys(day.tags).sort(), [
+      "band",
+      "date",
+      "skills",
+      "topic",
+    ]);
+    assert.equal(day.tags.band, "little");
+    assert.equal(day.tags.date, day.date);
+    assert.ok(day.tags.skills.length >= 5);
     for (const rel of [
       "index.html",
       "little-pack.pdf",
