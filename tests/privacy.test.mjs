@@ -365,6 +365,18 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     processNoteIssues({ craft: "built-in image_gen" }).join(),
     /PROCESS MODEL "image_gen"/,
   );
+  // A lesson key below a non-lesson field, or an unknown key inside a lesson
+  // field, is not lesson copy.
+  assert.match(
+    processNoteIssues({ pipeline: { title: "built-in image_gen" } }).join(),
+    /PROCESS MODEL "image_gen" at \.pipeline\.title/,
+  );
+  assert.match(
+    processNoteIssues({
+      reading: { generationNotes: "relayed by Firstmate" },
+    }).join(),
+    /PROCESS RELAY "relayed" at \.reading\.generationNotes/,
+  );
   // Ordinary words near the date pattern are not dates.
   assert.deepEqual(
     processNoteIssues({ c: "Pack for sunlight experiments" }),
