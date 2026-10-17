@@ -51,6 +51,80 @@ export function privacyIssues(text, label = "content") {
   return issues;
 }
 
+// Public pack output (pack.json and JSON embedded in day pages) carries the
+// lesson, never internal authoring or process notes. publicPack() is the one
+// definition of what is stripped; the guard below fails if any of it remains.
+const INTERNAL_TOP = ["authoring", "visualNotes"];
+export function publicPack(pack) {
+  if (!pack || typeof pack !== "object" || Array.isArray(pack)) return pack;
+  const out = { ...pack };
+  for (const key of INTERNAL_TOP) delete out[key];
+  if (
+    out.reading &&
+    typeof out.reading === "object" &&
+    "outline" in out.reading
+  ) {
+    out.reading = { ...out.reading };
+    delete out.reading.outline;
+  }
+  if (Array.isArray(out.sources))
+    out.sources = out.sources.map((source) => {
+      if (!source || typeof source !== "object" || !("note" in source))
+        return source;
+      const { note, ...rest } = source;
+      return rest;
+    });
+  return out;
+}
+
+const processNotes = [
+  ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
+  [
+    "MODEL",
+    /\b(?:gpt-?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra)\b/gi,
+  ],
+  [
+    "DATE",
+    /\bpack for (?:(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?,?\s*)?(?:\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}|(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*)\b/gi,
+  ],
+  ["AGE", /\b\d+[\s-]year[\s-]olds?\b/gi],
+];
+function processLeaves(value, label, path = "") {
+  if (typeof value === "string")
+    return processNotes.flatMap(([kind, pattern]) =>
+      [...value.matchAll(pattern)].map(
+        (m) => `${label}: PROCESS ${kind} "${m[0]}" at ${path || "(root)"}`,
+      ),
+    );
+  if (!value || typeof value !== "object") return [];
+  return Object.entries(value).flatMap(([key, item]) => [
+    ...processLeaves(key, label, `${path}.${key}`),
+    ...processLeaves(item, label, `${path}.${key}`),
+  ]);
+}
+
+// Relay/process notes, model names, scheduling and audience notes, and
+// internal note fields fail in public pack JSON.
+export function processNoteIssues(pack, label = "pack.json") {
+  const issues = [];
+  if (pack && typeof pack === "object" && !Array.isArray(pack)) {
+    for (const key of INTERNAL_TOP)
+      if (key in pack) issues.push(`${label}: PROCESS FIELD .${key}`);
+    if (
+      pack.reading &&
+      typeof pack.reading === "object" &&
+      "outline" in pack.reading
+    )
+      issues.push(`${label}: PROCESS FIELD .reading.outline`);
+    if (Array.isArray(pack.sources))
+      pack.sources.forEach((source, i) => {
+        if (source && typeof source === "object" && "note" in source)
+          issues.push(`${label}: PROCESS FIELD .sources[${i}].note`);
+      });
+  }
+  return [...issues, ...processLeaves(pack, label)];
+}
+
 // Inspect decoded leaves directly: serializing them would turn newlines back
 // into escape sequences and hide word boundaries. Keys can contain copy too.
 function decodedPrivacyIssues(value, label) {
@@ -158,10 +232,13 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
               /<script\b[^>]*type=["']application\/json["'][^>]*>([\s\S]*?)<\/script>/gi,
             ),
           ].map((m) => m[1]);
-      for (const block of blocks)
-        issues.push(
-          ...decodedPrivacyIssues(JSON.parse(block), `${label} (decoded JSON)`),
-        );
+      for (const block of blocks) {
+        const data = JSON.parse(block);
+        issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
+        // Public pack JSON: pack.json files and JSON embedded in pages.
+        if (!path.endsWith(".json") || /(?:^|[\\/])pack\.json$/.test(path))
+          issues.push(...processNoteIssues(data, `${label} (pack JSON)`));
+      }
     }
   }
   for (const path of paths) await visit(resolve(path));

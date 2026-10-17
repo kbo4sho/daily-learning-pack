@@ -119,37 +119,6 @@
     "foldableCoverLine": "Tiny holes. A big squeeze.",
     "foldableNote": "Dip, squeeze, notice, and pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sponge, pores, soak, squeeze, spring back, and absorb to the tray experiment.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows water through a sponge’s connected spaces, sees a squeeze bring it back, compares dry and damp pieces fairly, watches the sponge reopen, and keeps a question about how much it can hold.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Establish the warm kitchen table, a fresh golden cellulose sponge, brass magnifier, tray, two clear cups, Big and Little, and a linen notebook; focus on visible pores and the opening question."
-        },
-        {
-          "plate": "reach",
-          "intent": "Big lowers the same sponge into a shallow dish on the tray; Little notices the wet edge creeping upward. Keep the sponge in contact with the water, with no floating drops."
-        },
-        {
-          "plate": "change",
-          "intent": "Big compresses the same sponge above an empty clear cup inside the tray. Water travels down into the cup; Little watches the connection between smaller spaces and released water."
-        },
-        {
-          "plate": "notice",
-          "intent": "Compare two same-size pieces of the same sponge with equal small puddles and equal time, one initially dry and one damp. A split tray and small timer support the comparison; no numerical results are painted."
-        },
-        {
-          "plate": "return",
-          "intent": "After the squeeze, show the released sponge fully open on the tray next to the partly filled cup. The pair notice its restored shape; depict one actual sponge, no motion duplicates."
-        },
-        {
-          "plate": "keep",
-          "intent": "Return to the notebook with a wordless drawing of a sponge and a clear cup; Big sits beside Little. Keep the opening water question alive with the same tray and magnifier."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -401,15 +370,6 @@
       "url": "https://oceanexplorer.noaa.gov/ocean-fact/sponge-diversity/"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template compare-and-round: Six tasks including both two-digit comparisons and nearest-ten rounding (a requested extension). Compare uses two operands, symbol >|<|=, and equation a ○ b: put the symbol in the circle and give the greater number as the numeric answer (the shared number if equal); the worked step shows the completed comparison (e.g. 47 < 74). Round-ten uses one two-digit operand and equation n → nearest ten: ___; 5 rounds up, at most 100.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "a-kitchen-sponge"
@@ -418,11 +378,6 @@
     "plate": "wake",
     "edition": "A KITCHEN SPONGE · 2026-10-08",
     "subtitle": "Tiny holes. A big squeeze."
-  },
-  "visualNotes": {
-    "intent": "Six new warm kitchen-table scenes follow one sponge, connected spaces, water, a squeeze, a fair comparison, and a notebook question.",
-    "prompts": "assets/a-kitchen-sponge/prompts.json",
-    "provenance": "assets/a-kitchen-sponge/provenance.json"
   },
   "quiz": {
     "title": "Four water clues",
