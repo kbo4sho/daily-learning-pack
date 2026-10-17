@@ -32,6 +32,11 @@ const LITTLE_BANS = [
     /\bpre-?school(?:er)?s?\b|\bpre-?k\b|\bkindergarten\b|\btoddlers?\b|\bgrade(?:Level)?s?\b/gi,
   ],
   ["BIRTHDAY", /\bbirth ?days?\b|\bborn\b/gi],
+  // Internal process notes never reach the public library.
+  [
+    "PROCESS",
+    /\b(?:codex|firstmate|gpt-\d[\w-]*|TODO|FIXME|WIP)\b|\bFM-\d|\bquality gate\b|\bgate (?:pass|fail)\b|\blittle-runs\b|\boutput\/little|\bvision review\b/gi,
+  ],
   [
     "LEARNER_CONFIG",
     /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:(?!\s*"little")|\blearners\//g,
