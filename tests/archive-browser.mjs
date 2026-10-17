@@ -7,13 +7,14 @@ import { serve } from "../scripts/serve.mjs";
 
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
+// Door (today → /today/) first, then the shelf with every day, today included.
 const days = [
   archive.days.find((day) => day.slug === archive.latest),
-  ...archive.days.filter((day) => day.slug !== archive.latest),
+  ...archive.days,
 ];
 const packets = days.map((day, index) => ({
   ...day,
-  name: `Open ${day.title.replace(/\.$/, "")}, ${new Intl.DateTimeFormat(
+  name: `Open ${index === 0 ? "today’s pack: " : ""}${day.title.replace(/\.$/, "")}, ${new Intl.DateTimeFormat(
     "en-GB",
     {
       weekday: "long",
