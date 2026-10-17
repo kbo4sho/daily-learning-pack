@@ -77,29 +77,58 @@ export function publicPack(pack) {
   return out;
 }
 
+const WEEKDAY =
+  "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tues?|wed|thu(?:rs?)?|fri|sat|sun)";
+const DAY_NAME = "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)";
+const MONTH_DAY =
+  "(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.? \\d{1,2}";
 const processNotes = [
   ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
   [
     "MODEL",
-    /\b(?:gpt-?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra)\b/gi,
+    /\b(?:gpt[\s-]?\d[\w.-]*|gpt-image[\w.-]*|chatgpt|openai|dall[\s·-]?e(?:[\s-]?\d)?|imagen|midjourney|stable[\s-]diffusion|sdxl|flux\.\d|gemini|claude|anthropic|grok|codex|sora|astra)\b/gi,
   ],
   [
     "DATE",
-    /\bpack for (?:(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*\.?,?\s*)?(?:\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}|(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*)\b/gi,
+    new RegExp(
+      `\\bpack for (?:(?:${WEEKDAY}\\.?,? )?(?:\\d{4}-\\d{2}-\\d{2}|\\d{1,2}\\/\\d{1,2}(?:\\/\\d{2,4})?|${MONTH_DAY})|${DAY_NAME})\\b`,
+      "gi",
+    ),
   ],
   ["AGE", /\b\d+[\s-]year[\s-]olds?\b/gi],
 ];
+// Match on normalized text: any whitespace run is one space and Unicode
+// hyphens are "-", so line breaks and non-breaking hyphens cannot hide a note.
+const normalize = (text) =>
+  text.replace(/[\u00ad\u2010-\u2015\u2212]/g, "-").replace(/\s+/g, " ");
+// Keys also match as words: firstmateNote and relay_note read as
+// "firstmate Note" and "relay note".
+const keyWords = (key) =>
+  key.replace(/([a-z0-9])([A-Z])/g, "$1 $2").replace(/_+/g, " ");
+function processText(text, label, path) {
+  const value = normalize(text);
+  return processNotes.flatMap(([kind, pattern]) =>
+    [...value.matchAll(pattern)].map(
+      (m) => `${label}: PROCESS ${kind} "${m[0]}" at ${path || "(root)"}`,
+    ),
+  );
+}
 function processLeaves(value, label, path = "") {
-  if (typeof value === "string")
-    return processNotes.flatMap(([kind, pattern]) =>
-      [...value.matchAll(pattern)].map(
-        (m) => `${label}: PROCESS ${kind} "${m[0]}" at ${path || "(root)"}`,
-      ),
-    );
+  if (typeof value === "string") return processText(value, label, path);
   if (!value || typeof value !== "object") return [];
   return Object.entries(value).flatMap(([key, item]) => [
-    ...processLeaves(key, label, `${path}.${key}`),
+    ...processText(keyWords(key), label, `${path}.${key}`),
     ...processLeaves(item, label, `${path}.${key}`),
+  ]);
+}
+// Internal field names fail at any depth below the pack root too.
+function nestedInternal(value, label, path) {
+  if (!value || typeof value !== "object") return [];
+  return Object.entries(value).flatMap(([key, item]) => [
+    ...(INTERNAL_TOP.includes(key)
+      ? [`${label}: PROCESS FIELD ${path}.${key}`]
+      : []),
+    ...nestedInternal(item, label, `${path}.${key}`),
   ]);
 }
 
@@ -121,7 +150,10 @@ export function processNoteIssues(pack, label = "pack.json") {
         if (source && typeof source === "object" && "note" in source)
           issues.push(`${label}: PROCESS FIELD .sources[${i}].note`);
       });
-  }
+    for (const [key, item] of Object.entries(pack))
+      if (!INTERNAL_TOP.includes(key))
+        issues.push(...nestedInternal(item, label, `.${key}`));
+  } else issues.push(...nestedInternal(pack, label, ""));
   return [...issues, ...processLeaves(pack, label)];
 }
 
@@ -189,7 +221,13 @@ function pdfText(command, args) {
   }
 }
 
-export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
+// source: true scans private authoring sources (packs/, assets/), which may
+// hold internal notes. Every other scan is of public output, where all JSON,
+// whatever its file name, and JSON embedded in pages is public pack JSON.
+export async function scanPrivacy(
+  paths,
+  { jsonOnly = false, source = false } = {},
+) {
   const issues = [];
   let files = 0;
   const images = [];
@@ -229,14 +267,14 @@ export async function scanPrivacy(paths, { jsonOnly = false } = {}) {
         ? [text]
         : [
             ...text.matchAll(
-              /<script\b[^>]*type=["']application\/json["'][^>]*>([\s\S]*?)<\/script>/gi,
+              /<script\b[^>]*?\btype\s*=\s*(["']?)application\/json\1(?=[\s/>])[^>]*>([\s\S]*?)<\/script>/gi,
             ),
-          ].map((m) => m[1]);
+          ].map((m) => m[2]);
       for (const block of blocks) {
         const data = JSON.parse(block);
         issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
-        // Public pack JSON: pack.json files and JSON embedded in pages.
-        if (!path.endsWith(".json") || /(?:^|[\\/])pack\.json$/.test(path))
+        // Public pack JSON: every public JSON file and JSON embedded in pages.
+        if (!source)
           issues.push(...processNoteIssues(data, `${label} (pack JSON)`));
       }
     }
