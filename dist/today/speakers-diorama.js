@@ -186,8 +186,9 @@ function mount() {
     if (status.textContent !== view.status) status.textContent = view.status;
   }
   // Center the voice coil and magnet, the parts being compared, in the viewport.
+  // The visible coil turns are <use> instances; their .speaker-copper sources sit in <defs>.
   const mechanism = [
-    ...svg.querySelectorAll(".speaker-copper,.speaker-magnet"),
+    ...svg.querySelectorAll('.speaker-magnet,use[href^="#speaker-turn-"]'),
   ];
   function centerMechanism() {
     let top = Infinity,
