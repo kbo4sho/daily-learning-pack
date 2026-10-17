@@ -195,38 +195,7 @@
     "questions": [
       "What clue helped Ritter find unseen light?",
       "Why did Little change the idea about tiny lights inside the star? Use the coating as a clue."
-    ],
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Two stars pose a mystery; Ritter discovers unseen UV; Stokes names fluorescence; Little follows UV-A from lamp into coating and visible light out; lamp off resolves the first guess.",
-      "beatIntents": [
-        {
-          "plate": "mystery",
-          "intent": "Wonder at matching shapes with different glow."
-        },
-        {
-          "plate": "beyond",
-          "intent": "Ritter finds unseen light through a material change."
-        },
-        {
-          "plate": "name",
-          "intent": "Stokes gives fluorescence a name, without claiming he invented black lights."
-        },
-        {
-          "plate": "lamp",
-          "intent": "Distinguish invisible UV-A from visible violet leakage."
-        },
-        {
-          "plate": "material",
-          "intent": "Coating absorbs UV-A and emits visible green light."
-        },
-        {
-          "plate": "keep",
-          "intent": "Prompt stopping of fluorescence resolves the tiny-lights guess."
-        }
-      ]
-    }
+    ]
   },
   "math": {
     "title": "A little strip of light",
@@ -419,12 +388,6 @@
     }
   ],
   "parentGuidance": "Let a guess come first. This is a screen and paper exploration; no real lamp or chemical experiment is needed. Ordinary black lights mainly use near-ultraviolet UV-A, not X-rays. Adults manage real UV equipment; never aim it at eyes or skin. UV-A is invisible; visible violet leakage is separate. Fluorescence promptly re-emits absorbed energy as light, usually at a longer wavelength. A phosphor is a luminescent material, not the element phosphorus; the model uses a fluorescent phosphor. Some materials instead keep an afterglow (phosphorescence). Glow depends on both material and lamp wavelength. Ritter and Stokes supplied discoveries on the path to black lights; neither is presented as their sole inventor. The six illustrations are imagined museum scenes. Accept dictation and stop whenever you have had enough.",
-  "visualNotes": {
-    "intent": "An unseen-light mystery becomes a visible material clue. Keep Big and Little beside the discovery, with ink, warm paper, dark walnut and rare brass. Color earns its place by showing the mechanism.",
-    "prompts": "assets/how-black-lights-work/prompts.json",
-    "provenance": "assets/how-black-lights-work/provenance.json",
-    "grownUpNote": "AI-generated scenic illustrations, made with built-in image generation. Historical displays are imagined reconstructions. The interactive lens enlarges a model coating; its dashed UV path is a teaching symbol for invisible light. No image is a measured spectrum, a build plan, or proof that a particular real object fluoresces."
-  },
   "sources": [
     {
       "label": "NASA · Ritter's clue beyond violet",

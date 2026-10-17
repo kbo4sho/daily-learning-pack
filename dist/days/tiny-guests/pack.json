@@ -117,37 +117,6 @@
     "coverText": "Little has a magnifier and a question. Can two tiny guests be very different?",
     "foldableTitle": "A little book of tiny guests",
     "parentNote": "Age 8 / Grade 3 reading. Welcome shared reading, spoken answers, and dictation. Pause at cell, bacteria, virus, antibiotic, and immune system.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little wonders about unseen guests, discovers a helpful whole cell and a smaller package of instructions, follows soap-and-rinse commands, compares antibiotics, and keeps a clue about defenders remembering.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Establish the cozy sink, amber soap, linen towel, magnifier, book and question; the ordinary magnifier does not reveal actual germs."
-        },
-        {
-          "plate": "reach",
-          "intent": "Discover helpful bacteria through a yogurt cup and a large soft oval cell on a book page; keep the whole-cell idea clear."
-        },
-        {
-          "plate": "change",
-          "intent": "Compare a much smaller round virus with the bacterium, and reveal its coiled instructions; a cell supplies the machinery."
-        },
-        {
-          "plate": "notice",
-          "intent": "Return to the sink for soap, a gentle scrub, rinse and dry; Little follows command sentences."
-        },
-        {
-          "plate": "return",
-          "intent": "Revisit the paired book sketches to ask why antibiotics work on bacteria but not viruses; show no medicine or treatment action."
-        },
-        {
-          "plate": "keep",
-          "intent": "End with Little saving a guest shape in a notebook, echoing defenders learning and remembering, with a kind habit to keep."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -408,15 +377,6 @@
       "url": "https://www.nih.gov/news-events/nih-research-matters/lasting-immunity-found-after-recovery-covid-19"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 8, Grade 3 for reading; math is Grade 2. New Curiosity packs declare mathTemplate and require exactly six tasks for that template. Every number (operands, terms, intermediates, answers) is an integer from 0 to 100. Each task asks one clear question tied to the day's story and includes an equation matching the validated numbers, a hint, numeric answer, and short worked explanation containing the answer (mixed-review retains its shipped calculation rule). Replace scaffold notebook objects with the day's story objects. Explain precise vocabulary in context; welcome speech and dictation. Template story-problems: Six one-step word problems, each asking one question. Exactly two structured operands; both addition and subtraction appear. No two-step problems. Prose may spell out quantities or include context such as the day number.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "tiny-guests"
@@ -425,11 +385,6 @@
     "plate": "wake",
     "edition": "TINY GUESTS · 2026-10-02",
     "subtitle": "A whole cell. A tiny package. A kind habit."
-  },
-  "visualNotes": {
-    "intent": "Six cozy scenes follow Big and Little Wonderer from a sink to a book of tiny guests and back to a kind handwashing habit.",
-    "prompts": "assets/tiny-guests/prompts.json",
-    "provenance": "assets/tiny-guests/provenance.json"
   },
   "quiz": {
     "title": "Four clues to keep",

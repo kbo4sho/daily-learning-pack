@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Only the last commit that published the leaked notes: the privacy test
+      # proves the guard fails on those exact files.
+      - run: git fetch --no-tags --depth=1 origin 207cda9954d7f27eee09a1284d2648d229e84bc8
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -18,5 +21,8 @@ jobs:
       - run: npm run format:check
       - run: npm run archive
       - run: npm test
+      # Pack-level guard: relay/process notes, model names and internal fields fail.
+      - name: Privacy guard (public output)
+        run: node scripts/privacy-check.mjs dist
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:browser
