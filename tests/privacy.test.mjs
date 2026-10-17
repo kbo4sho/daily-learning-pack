@@ -298,13 +298,16 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
       "DALL-E 3 art",
       "Midjourney v6",
       "codex exec",
+      "GPT 5 draft",
     ],
     DATE: [
       "Pack for Mon 2026-10-12.",
       "Pack for 2026-10-12",
       "pack for Tuesday",
+      "Pack for October 12, 2026",
+      "Pack for\n2026-10-12",
     ],
-    AGE: ["safe for a 7-year-old", "for 8 year olds"],
+    AGE: ["safe for a 7-year-old", "for 8 year olds", "a 7\u2011year\u2011old"],
   };
   for (const [kind, values] of Object.entries(leaks))
     for (const value of values) {
@@ -313,6 +316,19 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     }
   // Keys are checked as well as values.
   assert.match(processNoteIssues({ firstmate: "x" }).join(), /PROCESS RELAY/);
+  assert.match(processNoteIssues({ firstmateNote: "x" }).join(), /RELAY/);
+  assert.match(processNoteIssues({ relay_note: "x" }).join(), /RELAY/);
+  // Internal fields fail at any depth, including inside arrays.
+  assert.match(
+    processNoteIssues({ data: { authoring: {} } }).join(),
+    /FIELD \.data\.authoring/,
+  );
+  assert.match(processNoteIssues([{ visualNotes: {} }]).join(), /FIELD/);
+  // Ordinary words near the date pattern are not dates.
+  assert.deepEqual(
+    processNoteIssues({ c: "Pack for sunlight experiments" }),
+    [],
+  );
   // Internal fields fail even when their text looks harmless.
   const internal = {
     title: "T",
@@ -348,7 +364,8 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     }),
     [],
   );
-  // The rule applies to pack.json and JSON embedded in pages, not to source.
+  // The rule applies to every public JSON file and to JSON embedded in pages
+  // (any valid type attribute spelling); only explicit source scans skip it.
   const dir = await mkdtemp(join(tmpdir(), "process-guard-"));
   try {
     const leaked = JSON.stringify({ title: "T", authoring: { status: "x" } });
@@ -361,9 +378,24 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
       `<script id="curiosity-content" type="application/${"json"}">${leaked}</script>`,
     );
     await assert.rejects(scanPrivacy([dir]), /index\.html \(pack JSON\)/);
+    for (const type of [
+      `type = "application/${"json"}"`,
+      `type=application/${"json"}`,
+    ]) {
+      await writeFile(
+        join(dir, "index.html"),
+        `<script ${type}>${leaked}</script>`,
+      );
+      await assert.rejects(
+        scanPrivacy([dir]),
+        /index\.html \(pack JSON\)/,
+        type,
+      );
+    }
     await rm(join(dir, "index.html"));
     await writeFile(join(dir, "source-pack.json"), leaked);
-    await scanPrivacy([dir]);
+    await assert.rejects(scanPrivacy([dir]), /PROCESS FIELD \.authoring/);
+    await scanPrivacy([dir], { source: true });
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
