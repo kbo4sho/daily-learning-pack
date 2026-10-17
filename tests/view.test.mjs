@@ -300,10 +300,8 @@ test("landing packets use that day's story plate, not stock", async () => {
 
 test("every packet is one named native link without ritual chrome", async () => {
   const { days, latest } = JSON.parse(await read("dist/archive.json"));
-  const ordered = [
-    days.find((day) => day.slug === latest),
-    ...days.filter((day) => day.slug !== latest),
-  ];
+  // The door opens /today/; the shelf then carries every day, today included.
+  const ordered = [days.find((day) => day.slug === latest), ...days];
   for (const [file, prefix] of [
     ["dist/index.html", "./"],
     ["dist/archive/index.html", "../"],
@@ -312,10 +310,10 @@ test("every packet is one named native link without ritual chrome", async () => 
     const packets = [
       ...html.matchAll(/<a class="seed-packet-link[^"]*"[\s\S]*?<\/a>/g),
     ].map(([packet]) => packet);
-    assert.equal(packets.length, days.length);
+    assert.equal(packets.length, days.length + 1);
     assert.equal(
       (html.match(/<a /g) || []).length,
-      days.length + 1,
+      days.length + 2,
       "only the skip-to-content link is outside the packets",
     );
     for (const [i, packet] of packets.entries()) {
@@ -342,9 +340,11 @@ test("every packet is one named native link without ritual chrome", async () => 
           `href="${prefix}${i === 0 ? "today" : `days/${day.slug}`}/"`,
         ),
       );
-      assert.ok(
-        packet.includes(`aria-label="${escape(`Open ${title}, ${date}`)}"`),
-      );
+      const label =
+        i === 0
+          ? `Open today’s pack: ${title}, ${date}`
+          : `Open ${title}, ${date}`;
+      assert.ok(packet.includes(`aria-label="${escape(label)}"`));
       assert.ok(
         packet.includes(`class="packet-cultivar">${escape(title)}</span>`),
       );
@@ -513,10 +513,13 @@ test("renderArchive uses only each pack’s positive integer grade, even without
     const packets = [
       ...html.matchAll(/<a class="seed-packet-link[^"]*"[\s\S]*?<\/a>/g),
     ].map(([packet]) => packet);
-    assert.equal(packets.length, days.length);
-    assert.match(packets[0], /Grade 4/);
-    assert.match(packets[0], /is-typeface/);
-    for (const packet of packets.slice(1)) {
+    assert.equal(packets.length, days.length + 1);
+    // Door and today's shelf packet are the same day.
+    for (const packet of packets.slice(0, 2)) {
+      assert.match(packet, /Grade 4/);
+      assert.match(packet, /is-typeface/);
+    }
+    for (const packet of packets.slice(2)) {
       assert.doesNotMatch(packet, /Grade/);
       assert.match(packet, /is-typeface/);
     }
@@ -524,4 +527,62 @@ test("renderArchive uses only each pack’s positive integer grade, even without
   // Missing pack data may omit its grade; malformed published JSON fails closed.
   await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
   await assert.rejects(renderArchive(dir), SyntaxError);
+});
+
+test("every published /days/<slug>/ is listed in archive.json and on both shelves", async () => {
+  const json = JSON.parse(await read("dist/archive.json"));
+  const listed = new Set(json.days.map((day) => day.slug));
+  const published = [];
+  for (const entry of await readdir(new URL("../dist/days/", import.meta.url), {
+    withFileTypes: true,
+  })) {
+    if (!entry.isDirectory()) continue;
+    if (await exists(`dist/days/${entry.name}/index.html`))
+      published.push(entry.name);
+  }
+  assert.ok(published.length >= 1);
+  assert.ok(
+    published.includes(json.latest),
+    "today's day also has its permanent /days/<slug>/ page",
+  );
+  for (const slug of published)
+    assert.ok(listed.has(slug), `dist/days/${slug}/ missing from archive.json`);
+  for (const [file, prefix] of [
+    ["dist/index.html", "./"],
+    ["dist/archive/index.html", "../"],
+  ]) {
+    const html = await read(file);
+    const shelf = html.split('<ol class="packet-shelf">')[1]?.split("</ol>")[0];
+    assert.ok(shelf, `${file} has a shelf`);
+    for (const slug of published)
+      assert.ok(
+        shelf.includes(`href="${prefix}days/${slug}/"`),
+        `${file} shelf is missing ${slug}`,
+      );
+  }
+});
+
+test("archivePage shelves today's own /days/ link beside the /today/ door", () => {
+  const today = {
+    slug: "today-day",
+    date: "2026-10-16",
+    title: "Today.",
+    teaser: "Fresh this morning.",
+  };
+  const earlier = {
+    slug: "earlier-day",
+    date: "2026-10-15",
+    title: "Earlier.",
+    teaser: "Yesterday.",
+  };
+  for (const entries of [[today], [today, earlier]]) {
+    const html = archivePage(entries, { latest: today, homePrefix: "../" });
+    const [door, shelf] = html.split('<ol class="packet-shelf">');
+    assert.match(door, /href="\.\.\/today\/"/);
+    for (const entry of entries)
+      assert.ok(shelf.includes(`href="../days/${entry.slug}/"`), entry.slug);
+    assert.equal(html.match(/class="packet-mark"/g)?.length, 1);
+    const labels = [...html.matchAll(/aria-label="([^"]+)"/g)].map((m) => m[1]);
+    assert.equal(new Set(labels).size, labels.length, "link names are unique");
+  }
 });
