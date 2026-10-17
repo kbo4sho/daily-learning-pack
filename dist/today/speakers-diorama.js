@@ -185,6 +185,25 @@ function mount() {
       readout.textContent = view.readout;
     if (status.textContent !== view.status) status.textContent = view.status;
   }
+  // Center the voice coil and magnet, the parts being compared, in the viewport.
+  const mechanism = [
+    ...svg.querySelectorAll(".speaker-copper,.speaker-magnet"),
+  ];
+  function centerMechanism() {
+    let top = Infinity,
+      bottom = -Infinity;
+    for (const el of mechanism) {
+      const r = el.getBoundingClientRect();
+      if (!r.height) continue;
+      top = Math.min(top, r.top);
+      bottom = Math.max(bottom, r.bottom);
+    }
+    if (bottom < top) return;
+    window.scrollTo({
+      top: Math.max(0, scrollY + (top + bottom - innerHeight) / 2),
+      behavior: media.matches ? "instant" : "smooth",
+    });
+  }
   function stop() {
     cancelAnimationFrame(frame);
     frame = 0;
@@ -212,12 +231,7 @@ function mount() {
   root.addEventListener("click", (event) => {
     const button = event.target.closest("[data-speaker-action]");
     if (!button || button.disabled) return;
-    if (button.dataset.speakerAction === "PLAY") {
-      root.querySelector(".speaker-bench").scrollIntoView({
-        behavior: media.matches ? "instant" : "smooth",
-        block: "nearest",
-      });
-    }
+    if (button.dataset.speakerAction === "PLAY") centerMechanism();
     dispatch({
       type: button.dataset.speakerAction,
       value: button.dataset.value,
@@ -238,7 +252,6 @@ function mount() {
     if (document.hidden) interrupt();
   });
   window.addEventListener("pagehide", interrupt);
-  window.addEventListener("blur", interrupt);
   new IntersectionObserver((entries) => {
     if (!entries.at(-1).isIntersecting) interrupt();
   }).observe(svg);
