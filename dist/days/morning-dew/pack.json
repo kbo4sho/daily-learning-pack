@@ -120,37 +120,6 @@
     "coverText": "A wet leaf. A dry path. Little Wonderer follows the night’s hidden instructions to solve a morning mystery.",
     "foldableTitle": "A little book of morning dew.",
     "parentNote": "Age 7 / Grade 2. Read six short scenes at the child’s pace. Pause for a guess, then connect each new word to the leaf. Welcome shared reading and spoken answers.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little Wonderer investigates a leaf wet without rain, traces night cooling and condensation, records the steps like a program, then sees sunrise reverse the change through evaporation.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "Discover wet leaf and web before sunrise despite no rain; establish the mystery."
-        },
-        {
-          "plate": "reach",
-          "intent": "Reconstruct clear calm night and leaf cooling to open sky; instruction 1."
-        },
-        {
-          "plate": "change",
-          "intent": "Close view shows onset of dew, with invisible vapor explained in prose; instruction 2."
-        },
-        {
-          "plate": "notice",
-          "intent": "Inspect drops formed on leaf and nearby web; condensation and instruction 3."
-        },
-        {
-          "plate": "return",
-          "intent": "Little records ordered commands in a notebook; connect instructions with a program."
-        },
-        {
-          "plate": "keep",
-          "intent": "Sunrise warms the same leaf; remaining beads shrink by evaporation; instruction 4."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -415,15 +384,6 @@
       "url": "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "learningRule": "The child is age 7, Grade 2. New Curiosity packs require exactly six math tasks, one per skill: addition-regrouping, subtraction-regrouping, two-step, equal-groups, missing-addend, pattern-sequencing. Numbers and results stay within 100. Each task asks one clear question and includes a hint, numeric answer, and short worked step. Equal groups needs repeated-addition support. Tie the pattern or sequence to the day's theme. Explain precise vocabulary in context; welcome speech and dictation.",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "dew"
@@ -432,12 +392,6 @@
     "plate": "wake",
     "edition": "MORNING DEW · 2026-09-29",
     "subtitle": "A leaf, a quiet night, and water we could not see."
-  },
-  "visualNotes": {
-    "intent": "Six imagined garden scenes follow one broad leaf, a nearby spider web, and Big and Little Wonderer from a puzzling wet morning through the night’s hidden steps to sunrise.",
-    "grownUpNote": "Water vapor is invisible. Enlarged drops are an illustration aid; the math counts are invented. The diorama’s temperatures and timing are a simplified model, not a weather forecast.",
-    "prompts": "assets/morning-dew/prompts.json",
-    "provenance": "assets/morning-dew/provenance.json"
   },
   "quiz": {
     "title": "Four clues to keep",

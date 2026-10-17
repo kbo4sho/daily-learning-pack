@@ -119,37 +119,6 @@
     "foldableCoverLine": "Pinecones",
     "foldableNote": "Watch the scales and keep a question.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect pinecone, scale, moisture, humid, tissue, and seed to the scenes.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little follows a spiral of scales, compares a dry open cone with a wet closed one, watches drying reverse the change, and connects water-bent tissue to a winged seed’s chance to travel.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "A quiet porch craft table in soft afternoon light. Big and Little Wonderer lean beside a large mature brown pinecone lying sideways on a cream notebook. The cone is central, with many overlapping woody scales arranged in clear spirals. Little follows one spiral with a short pencil held above the page; a magnifier lies nearby. No writing or labels."
-        },
-        {
-          "plate": "reach",
-          "intent": "Close low view across the porch table. A mature dry brown pinecone lies on a shallow cream ceramic dish. Its broad woody scales spread well apart, with dark gaps between them. Little peers closely from behind the dish, Big just beside Little. Warm dry afternoon light, a folded linen cloth and notebook quietly behind. No text."
-        },
-        {
-          "plate": "change",
-          "intent": "Close low view of a mature brown pinecone in a shallow pale-blue ceramic dish with a small amount of water. Its scales lie tightly together, making a narrow closed cone. A few droplets on its woody surface. Big and Little observe quietly side by side. Soft overcast porch light, cream paper and warm wood. No rainstorm, no text."
-        },
-        {
-          "plate": "notice",
-          "intent": "A spacious porch-table scene with Big and Little Wonderer side by side. Two shallow ceramic dishes sit together: cream dish holds an open dry cone, pale-blue dish holds a narrow closed damp cone in a little water. Little draws the two shapes in an open notebook while Big shares the gaze. A soft lamp and folded linen. One coherent scene, no panels, no text."
-        },
-        {
-          "plate": "return",
-          "intent": "A very close still life of a mature partly open pinecone resting on warm wood, its overlapping curved scales and spiral arrangement clearly visible. A broad simple magnifier held by Big frames one attached woody scale, not a detached object. Little leans beside Big, watching the curl of the scale. A damp dish rests out of focus behind. Warm lamplight, no text or inset diagram."
-        },
-        {
-          "plate": "keep",
-          "intent": "At the edge of the sunny porch table, a mature open brown pinecone rests beside a few delicate winged pine seeds. One or two light papery winged seeds drift gently a short way from the open cone in a soft breeze. Big and Little watch together beside an open notebook showing small drawings of open and closed cones. The seed wing is a thin tan translucent blade with a tiny dark seed at one end. Quiet hopeful afternoon, no text."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -425,21 +394,6 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5935463/"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "themeIntake": {
-      "topic": "pinecones",
-      "source": "queue/standby.json",
-      "queued": false,
-      "normalized": "pinecones",
-      "slug": "pinecones"
-    },
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "pinecones"
@@ -448,11 +402,6 @@
     "plate": "wake",
     "edition": "PINECONES · 2026-10-15",
     "subtitle": "A slow change at the porch table."
-  },
-  "visualNotes": {
-    "intent": "Six new porch-table scenes follow a woody spiral, dry and wet cones, a two-dish comparison, bending tissue, and winged seeds. The first scene also supplies the title card.",
-    "prompts": "assets/pinecones/prompts.json",
-    "provenance": "assets/pinecones/provenance.json"
   },
   "quiz": {
     "title": "Four clues in a cone",
