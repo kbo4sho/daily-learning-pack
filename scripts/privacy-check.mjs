@@ -18,7 +18,8 @@ const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
 
 // Stricter ban list for the second learner's public /little/ tree
 // (reports/FM-2026-10-16-02.md update 3): no age, band, grade or birthday
-// wording, no learner-config keys, and no private names. Names come only from
+// wording, no learner-config keys (a public "band" tag may only be the opaque
+// id "little"), and no private names. Names come only from
 // the untracked WD_PRIVATE_NAMES list (comma separated), never from git.
 const LITTLE_TREE = /(?:^|\/)little(?:\/|$)/;
 const LITTLE_BANS = [
@@ -33,7 +34,7 @@ const LITTLE_BANS = [
   ["BIRTHDAY", /\bbirth ?days?\b|\bborn\b/gi],
   [
     "LEARNER_CONFIG",
-    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:|\blearners\//g,
+    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:(?!\s*"little")|\blearners\//g,
   ],
 ];
 
