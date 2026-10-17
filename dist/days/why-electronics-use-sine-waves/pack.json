@@ -119,37 +119,6 @@
     "foldableCoverLine": "Why electronics use sine waves",
     "foldableNote": "Watch the swing, the spring, and the speaker — then pause whenever you like.",
     "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sine wave, wiggle, swing, spring, generator, and speaker to the scenes.",
-    "outline": {
-      "status": "locked",
-      "beforeImages": true,
-      "arc": "Little draws a smooth wave, notices its rhythm in a swing and spring, sends a wiggle along a rope, and connects the same changing shape to generator power and a speaker’s steady tone.",
-      "beatIntents": [
-        {
-          "plate": "wake",
-          "intent": "A cozy living-room craft table. Big and Little Wonderer lean together over a wide cream notebook, where Little draws one clean smooth sine-shaped line with two rounded hills and valleys in muted ochre. A small intact wooden speaker and a loose spring sit on a tray in the background. The notebook and shared gaze are central; a soft lamp pools light on paper. No words on the page."
-        },
-        {
-          "plate": "reach",
-          "intent": "A quiet garden beside the living-room window. Little Wonderer sits securely on a low wooden playground swing with two ropes, both hands holding the ropes. Big stands beside the swing within easy reach. The swing is tilted only slightly, a small gentle movement. Warm late-day light, grass below, spacious calm scene. No duplicate bodies or motion trails."
-        },
-        {
-          "plate": "change",
-          "intent": "Back at the craft table, Big holds the top of a large soft toy spring above a wide shallow tray. Little watches beside Big, one hand resting on the table, their shared gaze on the hanging spring. The spring has an open rounded coil shape, gently stretched vertically. Notebook at one side; warm lamplight, no diagrams or words."
-        },
-        {
-          "plate": "notice",
-          "intent": "Living-room floor in warm window light. Little holds one end of a thick soft cotton rope on the floor. Big sits nearby holding the far end loosely. The rope makes a long gentle sideways wave across the rug between them; the whole rope stays on the floor. No rope loops near either character. One readable curve, notebook nearby."
-        },
-        {
-          "plate": "return",
-          "intent": "A warm craft-table illustration of a large simple educational generator model on a wooden base, an enclosed clear case containing one muted gold-and-slate rotating disk beside a copper-colored wire coil. Big points to the disk and Little looks closely. A broad hand crank remains outside the case. On paper beside it is one simple sine-shaped line without labels. It is a self-contained teaching object with no plugs, power cords, or disassembled appliance."
-        },
-        {
-          "plate": "keep",
-          "intent": "Close living-room craft table scene. A small intact freestanding wooden speaker with a dark circular cone behind its grille rests on a tray. Little rests fingertips gently on the OUTER wooden cabinet, well away from the cone. Big sits beside Little, hand near a small volume knob set low. An open cream notebook in front has a clean smooth sine-shaped pencil line and tiny sketches of a swing and spring, no text. Quiet shared attention, warm lamp light."
-        }
-      ]
-    },
     "beats": [
       {
         "id": "wake",
@@ -413,21 +382,6 @@
       "url": "https://openstax.org/books/university-physics-volume-1/pages/17-1-sound-waves"
     }
   ],
-  "authoring": {
-    "status": "authored",
-    "bar": "curiosity",
-    "difficultyBar": "one-step-beyond-grade-2",
-    "expectedPlates": 6,
-    "plateGen": "built-in-image-generation",
-    "themeIntake": {
-      "topic": "why electronics use sine waves",
-      "source": "queue/next-topic.txt",
-      "queued": true,
-      "normalized": "why electronics use sine waves",
-      "slug": "why-electronics-use-sine-waves"
-    },
-    "todo": []
-  },
   "surfaces": {
     "layout": "six",
     "diorama": "sine-waves"
@@ -436,11 +390,6 @@
     "plate": "wake",
     "edition": "SINE WAVES · 2026-10-14",
     "subtitle": "A smooth rhythm in sound and power."
-  },
-  "visualNotes": {
-    "intent": "Six new warm scenes connect familiar motion to sound and generator power.",
-    "prompts": "assets/why-electronics-use-sine-waves/prompts.json",
-    "provenance": "assets/why-electronics-use-sine-waves/provenance.json"
   },
   "quiz": {
     "title": "Four clues in a wiggle",
