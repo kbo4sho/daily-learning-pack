@@ -364,8 +364,8 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     }),
     [],
   );
-  // The rule applies to every public JSON file and to JSON embedded in pages
-  // (any valid type attribute spelling); only explicit source scans skip it.
+  // The rule applies to pack.json, JSON embedded in pages (any valid type
+  // attribute spelling) and, in a published-tree scan, to every JSON file.
   const dir = await mkdtemp(join(tmpdir(), "process-guard-"));
   try {
     const leaked = JSON.stringify({ title: "T", authoring: { status: "x" } });
@@ -394,8 +394,11 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
     }
     await rm(join(dir, "index.html"));
     await writeFile(join(dir, "source-pack.json"), leaked);
-    await assert.rejects(scanPrivacy([dir]), /PROCESS FIELD \.authoring/);
-    await scanPrivacy([dir], { source: true });
+    await scanPrivacy([dir]);
+    await assert.rejects(
+      scanPrivacy([dir], { publicOutput: true }),
+      /source-pack\.json \(pack JSON\): PROCESS FIELD \.authoring/,
+    );
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
