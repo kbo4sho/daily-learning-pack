@@ -38,7 +38,12 @@ function packetWindow(entry) {
 
 function packetLink(entry, { isLatest, href, position = "shelf" }) {
   const title = String(entry.title).trim().replace(/\.$/, "");
-  const label = `Open ${title}, ${formatArchiveDate(entry.date).replace(",", "")}`;
+  const date = formatArchiveDate(entry.date).replace(",", "");
+  // The door and the shelf both carry today; distinct names keep each link unique.
+  const label =
+    position === "door"
+      ? `Open today’s pack: ${title}, ${date}`
+      : `Open ${title}, ${date}`;
   const grade =
     Number.isInteger(entry.gradeLevel) && entry.gradeLevel > 0
       ? ` · Grade ${entry.gradeLevel}`
@@ -76,7 +81,10 @@ export function archivePage(
   const today = latest;
   const earlier = entries.filter((entry) => entry.slug !== today.slug);
   const todayHref = `${homePrefix}today/`;
-  const packets = earlier
+  // Every published day keeps its own /days/<slug>/ packet on the shelf,
+  // including today's. The door above is the one-tap /today/ shortcut, not
+  // a replacement for the day's permanent home.
+  const packets = entries
     .map((entry) =>
       seedPacket(entry, {
         href: `${homePrefix}days/${esc(entry.slug)}/`,
@@ -86,7 +94,7 @@ export function archivePage(
   const lead = earlier.length
     ? "Small discoveries, kept for another day. Choose a packet to revisit a morning together."
     : "The first approved morning stands here. Later days will stand beside it.";
-  const shelf = earlier.length
+  const shelf = entries.length
     ? `<section class="packet-shelf-wrap" aria-labelledby="list-heading">
 <h2 id="list-heading">On the shelf</h2>
 <p class="list-lead">${lead}</p>
