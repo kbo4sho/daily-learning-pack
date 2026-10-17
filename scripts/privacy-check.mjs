@@ -81,7 +81,7 @@ const WEEKDAY =
   "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tues?|wed|thu(?:rs?)?|fri|sat|sun)";
 const DAY_NAME = "(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)";
 const MONTH_DAY =
-  "(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.? \\d{1,2}";
+  "(?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.? \\d{1,2}(?:st|nd|rd|th)?|\\d{1,2}(?:st|nd|rd|th)? (?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?))";
 const processNotes = [
   ["RELAY", /\b(?:relay(?:ed|ing|s)?|firstmate|captain|ship[\s-]+word)\b/gi],
   [
@@ -104,7 +104,10 @@ const normalize = (text) =>
 // Keys also match as words: firstmateNote and relay_note read as
 // "firstmate Note" and "relay note".
 const keyWords = (key) =>
-  key.replace(/([a-z0-9])([A-Z])/g, "$1 $2").replace(/_+/g, " ");
+  key
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/_+/g, " ");
 function processText(text, label, path) {
   const value = normalize(text);
   return processNotes.flatMap(([kind, pattern]) =>
@@ -117,43 +120,46 @@ function processLeaves(value, label, path = "") {
   if (typeof value === "string") return processText(value, label, path);
   if (!value || typeof value !== "object") return [];
   return Object.entries(value).flatMap(([key, item]) => [
-    ...processText(keyWords(key), label, `${path}.${key}`),
+    // The key as written (ChatGPT) and as words (firstmate Note).
+    ...new Set([
+      ...processText(key, label, `${path}.${key}`),
+      ...processText(keyWords(key), label, `${path}.${key}`),
+    ]),
     ...processLeaves(item, label, `${path}.${key}`),
   ]);
 }
-// Internal field names fail at any depth below the pack root too.
-function nestedInternal(value, label, path) {
+// Internal fields fail at the pack root and at any depth below it, inside
+// objects and arrays alike.
+function fieldIssues(value, label, path = "") {
   if (!value || typeof value !== "object") return [];
-  return Object.entries(value).flatMap(([key, item]) => [
-    ...(INTERNAL_TOP.includes(key)
-      ? [`${label}: PROCESS FIELD ${path}.${key}`]
-      : []),
-    ...nestedInternal(item, label, `${path}.${key}`),
-  ]);
+  if (Array.isArray(value))
+    return value.flatMap((item, i) =>
+      fieldIssues(item, label, `${path}[${i}]`),
+    );
+  const issues = INTERNAL_TOP.filter((key) => key in value).map(
+    (key) => `${label}: PROCESS FIELD ${path}.${key}`,
+  );
+  if (
+    value.reading &&
+    typeof value.reading === "object" &&
+    "outline" in value.reading
+  )
+    issues.push(`${label}: PROCESS FIELD ${path}.reading.outline`);
+  if (Array.isArray(value.sources))
+    value.sources.forEach((source, i) => {
+      if (source && typeof source === "object" && "note" in source)
+        issues.push(`${label}: PROCESS FIELD ${path}.sources[${i}].note`);
+    });
+  for (const [key, item] of Object.entries(value))
+    if (!INTERNAL_TOP.includes(key))
+      issues.push(...fieldIssues(item, label, `${path}.${key}`));
+  return issues;
 }
 
 // Relay/process notes, model names, scheduling and audience notes, and
 // internal note fields fail in public pack JSON.
 export function processNoteIssues(pack, label = "pack.json") {
-  const issues = [];
-  if (pack && typeof pack === "object" && !Array.isArray(pack)) {
-    for (const key of INTERNAL_TOP)
-      if (key in pack) issues.push(`${label}: PROCESS FIELD .${key}`);
-    if (
-      pack.reading &&
-      typeof pack.reading === "object" &&
-      "outline" in pack.reading
-    )
-      issues.push(`${label}: PROCESS FIELD .reading.outline`);
-    if (Array.isArray(pack.sources))
-      pack.sources.forEach((source, i) => {
-        if (source && typeof source === "object" && "note" in source)
-          issues.push(`${label}: PROCESS FIELD .sources[${i}].note`);
-      });
-    for (const [key, item] of Object.entries(pack))
-      if (!INTERNAL_TOP.includes(key))
-        issues.push(...nestedInternal(item, label, `.${key}`));
-  } else issues.push(...nestedInternal(pack, label, ""));
+  const issues = fieldIssues(pack, label);
   return [...issues, ...processLeaves(pack, label)];
 }
 
@@ -221,6 +227,8 @@ function pdfText(command, args) {
   }
 }
 
+const isJson = (path) => /\.json$/i.test(path);
+
 // Public pack JSON is every pack.json and every JSON block embedded in a
 // page. publicOutput: true marks a scan of a whole published tree (dist/, the
 // public sync); there every JSON file is public pack JSON, whatever its name.
@@ -238,7 +246,7 @@ export async function scanPrivacy(
         await visit(join(path, entry));
       return;
     }
-    if (jsonOnly && !path.endsWith(".json")) return;
+    if (jsonOnly && !isJson(path)) return;
     const label = relative(process.cwd(), path).replaceAll("\\", "/");
     const bytes = await readFile(path);
     files++;
@@ -263,11 +271,11 @@ export async function scanPrivacy(
       const text = bytes.toString("utf8");
       issues.push(...privacyIssues(text, label));
       // Check escaped strings too, including JSON embedded in HTML scripts.
-      const blocks = path.endsWith(".json")
+      const blocks = isJson(path)
         ? [text]
         : [
             ...text.matchAll(
-              /<script\b[^>]*?\btype\s*=\s*(["']?)application\/json\1(?=[\s/>])[^>]*>([\s\S]*?)<\/script>/gi,
+              /<script\b[^>]*?\btype\s*=\s*(["']?)application\/json\1(?=[\s/>])[^>]*>([\s\S]*?)<\/script\s*>/gi,
             ),
           ].map((m) => m[2]);
       for (const block of blocks) {
@@ -275,7 +283,7 @@ export async function scanPrivacy(
         issues.push(...decodedPrivacyIssues(data, `${label} (decoded JSON)`));
         if (
           publicOutput ||
-          !path.endsWith(".json") ||
+          !isJson(path) ||
           /(?:^|[\\/])pack\.json$/.test(path)
         )
           issues.push(...processNoteIssues(data, `${label} (pack JSON)`));
