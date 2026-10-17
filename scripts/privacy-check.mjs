@@ -16,6 +16,52 @@ const identifier = new RegExp(
 const home = /\/Users\/|~\/|\$(?:HOME\b|\{HOME\})/g;
 const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
 
+// Stricter ban list for the second learner's public /little/ tree
+// (reports/FM-2026-10-16-02.md update 3): no age, band, grade or birthday
+// wording, no learner-config keys, and no private names. Names come only from
+// the untracked WD_PRIVATE_NAMES list (comma separated), never from git.
+const LITTLE_TREE = /(?:^|\/)little(?:\/|$)/;
+const LITTLE_BANS = [
+  [
+    "AGE",
+    /\btargetAge\b|\bage[sd]?\b|\b\d+\s*[- ]?(?:years?|yrs?|months?)[- ]?olds?\b|\byears?[- ]old\b/gi,
+  ],
+  [
+    "BAND",
+    /\bpre-?school(?:er)?s?\b|\bpre-?k\b|\bkindergarten\b|\btoddlers?\b|\bgrade(?:Level)?s?\b/gi,
+  ],
+  ["BIRTHDAY", /\bbirth ?days?\b|\bborn\b/gi],
+  [
+    "LEARNER_CONFIG",
+    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:|\blearners\//g,
+  ],
+];
+
+function privateNames() {
+  return (process.env.WD_PRIVATE_NAMES || "")
+    .split(",")
+    .map((n) => n.trim())
+    .filter(Boolean)
+    .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+}
+
+export function littleIssues(text, label = "content") {
+  const issues = [];
+  const names = privateNames();
+  const bans = names.length
+    ? [
+        ...LITTLE_BANS,
+        ["NAME", new RegExp(`(?<![\\w])(?:${names.join("|")})(?![\\w])`, "gi")],
+      ]
+    : LITTLE_BANS;
+  for (const [kind, pattern] of bans)
+    for (const match of text.matchAll(pattern)) {
+      const line = text.slice(0, match.index).split("\n").length;
+      issues.push(`${label}:${line}: LITTLE_${kind}`);
+    }
+  return issues;
+}
+
 export function privacyIssues(text, label = "content") {
   // Embedded image bytes are not text. Keep surrounding markup and JSON in
   // scope, including short inline scripts and all decoded JSON properties.
@@ -48,6 +94,7 @@ export function privacyIssues(text, label = "content") {
       issues.push(`${label}:${line}: ${kind}`);
     }
   }
+  if (LITTLE_TREE.test(label)) issues.push(...littleIssues(text, label));
   return issues;
 }
 

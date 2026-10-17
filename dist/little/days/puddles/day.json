@@ -1,0 +1,73 @@
+{
+  "slug": "puddles",
+  "date": "2026-10-17",
+  "title": "Puddles",
+  "question": "Where does a puddle go?",
+  "coverAlt": "Big and Little Wonderer: Puddles",
+  "readAloud": [
+    [
+      {
+        "b": "Plip. Plop. Plip."
+      },
+      {
+        "say": "(Tap your fingers on the table like rain.)"
+      },
+      "It is raining in the garden. Big Wonderer holds the umbrella, and Little Wonderer stands close."
+    ],
+    [
+      "Look: the rain runs along the path and gathers in a low dip. That is how a puddle is made. Water slides to the lowest place, and it waits there."
+    ],
+    [
+      {
+        "ask": "Where would the water stop on our street?"
+      }
+    ],
+    [
+      "Little Wonderer gives one small hop.",
+      {
+        "b": "SPLASH!"
+      },
+      "Drops jump up like a crown, and rings spread out, out, out.",
+      {
+        "say": "(Draw a ring in the air.)"
+      }
+    ],
+    [
+      "When the rain stops, the puddle becomes a mirror.",
+      {
+        "ask": "What can you see in it?"
+      }
+    ],
+    [
+      "Then the sun comes out, and the puddle starts to go away. Some water soaks down into the soil, where the roots drink. Some rises into the warm air, in bits too small to see. Some trickles downhill to the garden bed."
+    ],
+    [
+      {
+        "ask": "Which way do you think our puddle went?"
+      }
+    ],
+    [
+      "Big Wonderer smiles at the sky. “The clouds will bring it back.” And they wave goodbye, until the next rain."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ]
+}
