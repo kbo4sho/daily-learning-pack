@@ -5,8 +5,6 @@ import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import { serve } from "../scripts/serve.mjs";
 import AxeBuilder from "@axe-core/playwright";
-import { readLibrary } from "../src/library.mjs";
-import { libraryHref } from "../src/library-contract.mjs";
 
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
@@ -75,48 +73,6 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     const browser = await browserType.launch();
     t.after(() => browser.close());
     const origin = `http://127.0.0.1:${server.address().port}`;
-    for (const width of [390, 1440]) {
-      await t.test(
-        `library: ${width}px, both bands, no JavaScript`,
-        async () => {
-          const context = await browser.newContext({
-            viewport: { width, height: 900 },
-            javaScriptEnabled: false,
-          });
-          const page = await context.newPage();
-          await page.goto(`${origin}/daily-learning-pack/library/`);
-          assert.equal(
-            await page.getByRole("heading", { name: "Ages 6-8" }).count(),
-            1,
-          );
-          assert.equal(
-            await page.getByRole("heading", { name: "Ages 4-5" }).count(),
-            1,
-          );
-          assert.ok(
-            await page.evaluate(
-              () => document.documentElement.scrollWidth <= innerWidth,
-            ),
-          );
-          for (const row of await readLibrary(root)) {
-            const href = libraryHref(row);
-            assert.equal(
-              await page.locator(`.library-list a[href="${href}"]`).count(),
-              1,
-            );
-            const response = await context.request.get(
-              `${origin}/daily-learning-pack/${href.replace("../", "")}`,
-            );
-            assert.equal(response.status(), 200);
-          }
-          assert.deepEqual(
-            (await new AxeBuilder({ page }).analyze()).violations,
-            [],
-          );
-          await context.close();
-        },
-      );
-    }
     for (const route of [
       "/daily-learning-pack/",
       "/daily-learning-pack/archive/",

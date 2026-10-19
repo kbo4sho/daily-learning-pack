@@ -14,7 +14,6 @@ import { dirname, join, resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
 import { readLibrary } from "../src/library.mjs";
-import { libraryPage } from "../src/library-render.mjs";
 
 async function readable(path) {
   try {
@@ -154,9 +153,6 @@ async function writeArchive(root) {
     );
   await mkdir(`${root}/archive`, { recursive: true });
   const library = await readLibrary(root);
-  await mkdir(`${root}/library`, { recursive: true });
-  await writeFile(`${root}/library/index.html`, libraryPage(library));
-  await copyFile("src/library.css", `${root}/library/library.css`);
   const home = await withFaces(entries, root, library);
   const nested = nestFaces(home);
   const homeLatest = facedLatest(home, latest.slug);
@@ -191,7 +187,6 @@ export async function renderArchive(root = resolve("dist")) {
   const staging = await mkdtemp(join(dirname(root), ".archive-stage-"));
   try {
     await cp(root, staging, { recursive: true });
-    await scanPrivacy([staging], { publicOutput: true });
     const result = await writeArchive(staging);
     await scanPrivacy([staging], { publicOutput: true });
     await rm(root, { recursive: true, force: true });

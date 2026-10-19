@@ -55,7 +55,3 @@ export function validateLibrary(manifest, band) {
   }
   return manifest.entries;
 }
-
-export function libraryHref(row, prefix = "../") {
-  return `${prefix}${row.band === "4-5" ? "little/" : ""}days/${row.id}/`;
-}
