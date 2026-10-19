@@ -1,0 +1,96 @@
+{
+  "slug": "leaves-changing-color",
+  "date": "2026-10-19",
+  "title": "Leaves Changing Color",
+  "question": "Why do leaves change color?",
+  "coverAlt": "Big and Little Wonderer: Leaves Changing Color",
+  "readAloud": [
+    [
+      {
+        "b": "Swish. Sway. Rustle."
+      },
+      {
+        "say": "(Sway your hands like leaves.)"
+      },
+      "Big Wonderer and Little Wonderer stand beneath a tree. Yesterday's green branches have patches of gold."
+    ],
+    [
+      "All summer, a green helper inside the leaves caught sunlight to help make food for the tree. Its green color hid other colors."
+    ],
+    [
+      {
+        "ask": "Can you spot a leaf with more than one color?"
+      }
+    ],
+    [
+      "Now autumn days are shorter. The green helper breaks down, and the leaves stop making more.",
+      {
+        "b": "Hello, yellow! Hello, orange!"
+      },
+      "Those colors were there all along.",
+      {
+        "say": "(Open your hands for a surprise.)"
+      }
+    ],
+    [
+      "Some leaves make red in autumn, too.",
+      {
+        "ask": "Which color would you point to first?"
+      }
+    ],
+    [
+      "A breeze shakes the branch. One leaf lets go and twirls down. On the ground, fallen leaves slowly become part of the soil."
+    ],
+    [
+      {
+        "ask": "How could your hand move like a falling leaf?"
+      }
+    ],
+    [
+      "Big Wonderer holds out a hand. Little Wonderer takes it. In spring, this tree will grow fresh green leaves."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "leaves changing color",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-19"
+  }
+}
