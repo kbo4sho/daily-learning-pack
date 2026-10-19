@@ -118,7 +118,7 @@
     "foldableTitle": "How Drill Bits Work",
     "foldableCoverLine": "A turn. A tiny chip. A way out.",
     "foldableNote": "Follow the spiral and keep a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain drill bit, spiral, flute, cutting lip, chips, screw thread, and auger.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Use the story to explain drill bit, spiral, flute, cutting lip, chips, screw thread, and auger.",
     "beats": [
       {
         "id": "wake",
@@ -322,8 +322,8 @@
     ],
     "extension": "Choose one story and explain why you added or subtracted.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six one-step story problems within 100, with addition and subtraction. Story quantities are supplied numbers, not counts to infer from the pictures.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Decide whether the story joins groups or takes some away. Each problem needs one addition or subtraction. Welcome a drawing or spoken explanation."
+    "parentNote": "Ages 6-8 math. Six one-step story problems within 100, with addition and subtraction. Story quantities are supplied numbers, not counts to infer from the pictures.",
+    "answerKeyIntro": "Ages 6-8 math. Decide whether the story joins groups or takes some away. Each problem needs one addition or subtraction. Welcome a drawing or spoken explanation."
   },
   "writing": {
     "title": "Give the soap test its words",
@@ -383,7 +383,7 @@
       "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Turn the screw slowly into the soap, then look at the curls on the thread.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Power drills are grown-up tools; kids do not use them. A grown-up stays close and leads the soap or clay activity, placing the material on a tray and choosing the screw. Use an enclosed hand pencil sharpener for the pencil-curl observation. The illustrated drill bit is a common twist bit. Its cutting lips remove material; flutes provide chip clearance as the bit rotates and advances. The diorama isolates chip travel in a fixed cutaway, with enlarged chips and a shortened path. Real chip shapes and motion depend on the material and bit. Screw threads are raised ridges, unlike the recessed flutes. A turning spiral needs contact or confinement to move material along. The egg beater uses gears for faster rotation; it does not lift material like an auger.",
+  "parentGuidance": "Ages 6-8. Power drills are grown-up tools; kids do not use them. A grown-up stays close and leads the soap or clay activity, placing the material on a tray and choosing the screw. Use an enclosed hand pencil sharpener for the pencil-curl observation. The illustrated drill bit is a common twist bit. Its cutting lips remove material; flutes provide chip clearance as the bit rotates and advances. The diorama isolates chip travel in a fixed cutaway, with enlarged chips and a shortened path. Real chip shapes and motion depend on the material and bit. Screw threads are raised ridges, unlike the recessed flutes. A turning spiral needs contact or confinement to move material along. The egg beater uses gears for faster rotation; it does not lift material like an auger.",
   "sources": [
     {
       "label": "Sandvik Coromant · drill flutes and chip removal",
@@ -452,5 +452,16 @@
         "answer": "An Archimedes screw lifts pockets of water as its spiral turns inside a sloping tube."
       }
     ]
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "one-step-add",
+      "one-step-subtract",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
   }
 }

@@ -75,6 +75,19 @@ export function privacyIssues(text, label = "content") {
     " ".repeat(blob.length),
   );
   const issues = [];
+  const names = privateNames();
+  if (
+    names.length &&
+    new RegExp(`(?<![\\w])(?:${names.join("|")})(?![\\w])`, "i").test(text)
+  )
+    issues.push(`${label}: PRIVATE_NAME`);
+  if (
+    /\.(?:json|html)(?:$| \()/i.test(label) &&
+    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|\blearners\//i.test(
+      text,
+    )
+  )
+    issues.push(`${label}: LEARNER_CONFIG`);
   const identifiers =
     label === "content" || /\.(?:html|css|[cm]?js|json)(?:$| \()/.test(label);
   for (const [kind, pattern] of [
@@ -187,6 +200,7 @@ const LESSON_KEYS = new Set([
   "answerKeyIntro",
   "answers",
   "beats",
+  "band",
   "blankIndex",
   "body",
   "caption",
@@ -219,12 +233,14 @@ const LESSON_KEYS = new Set([
   "foldableNote",
   "foldableTitle",
   "frames",
+  "format",
   "generatedAt",
   "gesture",
   "gradeLevel",
   "heading",
   "height",
   "hint",
+  "hidden",
   "hints",
   "href",
   "id",
@@ -262,6 +278,10 @@ const LESSON_KEYS = new Set([
   "schemaVersion",
   "sequence",
   "skill",
+  "skills",
+  "status",
+  "tags",
+  "entries",
   "slug",
   "sources",
   "src",

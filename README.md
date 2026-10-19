@@ -1,6 +1,6 @@
 # Daily Learning Pack (public view)
 
-**Display-only** Wonder Daily archive for **2nd grade (roughly ages 7–8)**. This repository hosts committed static files. Families open a morning on GitHub Pages; they do not run generators here.
+**Display-only** Wonder Daily archive and library for shared family learning. This repository hosts committed static files. Families open a morning on GitHub Pages; they do not run generators here.
 
 Live:
 
@@ -73,3 +73,19 @@ generators (`npm run little:nightly` there). Its only identifier is the opaque i
 configuration, age, grade, birthday or name is ever published, and `scripts/privacy-check.mjs` applies a
 stricter ban list inside `/little/`. `tests/little.test.mjs` and `tests/little-browser.mjs` (phone and
 desktop widths, axe) cover it.
+
+## Library index
+
+`dist/library/6-8.json` and `dist/library/4-5.json` are generated in the private
+repo from pack tags and publication dates. Each contains `schemaVersion: 1`
+and `entries` with exactly `id`, `band`, `topic`, `skills`, `date`, `format`,
+`status`, and `hidden`. Ids are day slugs, unique within a band. Each published
+day has at least three distinct skills and a format (`curiosity-day` or
+`picture-pack`). `hidden` controls listing visibility; it is not access control.
+The manifests contain no learner identity or settings.
+
+`npm run archive` validates the manifests against all published days and their
+tags, then renders `/library/` and derives the archive's band labels. The
+library links to both bands; `/little/` retains its opaque tags and age-free
+child pages. The library remains unlisted and outside Wonder Together marketing
+navigation. No browser JavaScript is needed to browse it.
