@@ -1,0 +1,30 @@
+{
+  "title": "How a Bike Chain Works",
+  "intent": "A quiet garage-to-table investigation of links, teeth, a pulling chain, and back-wheel turns.",
+  "scenes": [
+    {
+      "id": "wake",
+      "intent": "A cozy garage workbench in soft lamp light. A friendly small bicycle rests completely still upside down on a woven mat, supported on saddle and handlebars. Its drivetrain is the focal point: a large front chainring attached to a pedal, one continuous chain loop, a smaller rear sprocket at the back wheel axle. Big Wonderer steadies the frame, away from the drivetrain, beside Little Wonderer who looks with hands resting near a notebook. Clear side view of the chain, faint ochre curved explanatory arrows, no written text. Keep the chainring and chain centered for a cover crop."
+    },
+    {
+      "id": "reach",
+      "intent": "A close scenic view of a stationary bicycle chain wrapping around the edge of a toothed chainring, warmly lit on the garage workbench. Clearly drawn paired metal side plates, round pins and cylindrical rollers; sprocket teeth enter between neighboring rollers, not through side plates. A brass magnifier enlarges two joints. Big and Little Wonderer watch from behind with their hands resting away from the chain. An open notebook and warm lamp softly out of focus, no text."
+    },
+    {
+      "id": "change",
+      "intent": "Big and Little Wonderer count the teeth of a completely still upside-down small bike on a woven garage mat. Big holds the upper frame firmly, away from chain and spokes. Little stands beside Big with a notebook held against the body and looks at the exposed front chainring and small rear sprocket without touching either. A simple pencil drawing of two toothed circles in the notebook, no legible words. Intimate low side view, quiet amber light, no motion marks."
+    },
+    {
+      "id": "notice",
+      "intent": "At a warm kitchen table, Big and Little Wonderer study a homemade cardboard gear model lying flat on cream paper. One large notched cardboard wheel and a smaller one are joined by a continuous loop of wooden beads on string, with the beads nestled in the edge notches. Big gently turns the large cardboard circle by its central cardboard handle while Little watches the loop. Tape, spare paper strips and notebook nearby. No metal pins, paper clips, oil or repair tools. One clear model, no text."
+    },
+    {
+      "id": "return",
+      "intent": "A quiet overhead-oblique view of Big and Little Wonderer beside a notebook on the kitchen table. The notebook drawing shows one large front toothed wheel joined by a continuous chain loop to one small back toothed wheel, with one curved arrow at the large wheel and two curved arrows at the small wheel. A small tidy wooden bead-chain cardboard model rests beyond the page, softly out of focus. Their shared gaze follows the notebook arrows. Restrained gold highlights and pencil marks, no letters or numbers."
+    },
+    {
+      "id": "keep",
+      "intent": "Little Wonderer rides a small cream and muted-sage bicycle slowly along a flat quiet garden path in warm morning light, wearing a properly fitted simple bicycle helmet with its strap fastened. Both hands hold the handlebar and both feet are on pedals. Big Wonderer walks immediately beside Little with a calm steady presence, also looking along the path. Bicycle chain connects the front pedal chainring to the rear wheel sprocket. No traffic, road, steep slope or danger. Wide peaceful scene with grass and a low wooden fence, no text."
+    }
+  ]
+}
