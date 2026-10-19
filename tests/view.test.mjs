@@ -493,12 +493,18 @@ test("renderArchive uses validated library bands instead of a pack's grade", asy
   await writeFile(`${dir}/days/sample/index.html`, "A discovery.");
   await writeFile(
     `${dir}/days/sample/pack.json`,
-    JSON.stringify({ topic: "sample", gradeLevel: 9, tags }),
+    JSON.stringify({
+      topic: "sample",
+      why: "Picture clues help a child explain an idea.",
+      gradeLevel: 9,
+      tags,
+    }),
   );
   const row = {
     id: day.slug,
     band: tags.band,
     topic: day.topic,
+    why: "Picture clues help a child explain an idea.",
     skills: tags.skills,
     date: day.date,
     format: tags.format,
