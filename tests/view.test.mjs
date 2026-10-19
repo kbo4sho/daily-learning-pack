@@ -314,8 +314,8 @@ test("every packet is one named native link without ritual chrome", async () => 
     assert.equal(packets.length, days.length + 1);
     assert.equal(
       (html.match(/<a /g) || []).length,
-      days.length + 3,
-      "only the skip-to-content and library links are outside the packets",
+      days.length + 2,
+      "only the skip-to-content link is outside the packets",
     );
     for (const [i, packet] of packets.entries()) {
       const day = ordered[i];

@@ -133,7 +133,6 @@ ${shelf}
 </main>
 <footer class="archive-footer">
 <p>Small discoveries. Time together.</p>
-<p><a href="${homePrefix}library/">Browse the library</a></p>
 <p class="small-note">Family dogfood surface. Not a Wonder Together marketing page.</p>
 </footer>
 </div>

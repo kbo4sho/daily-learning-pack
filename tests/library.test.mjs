@@ -4,8 +4,7 @@ import { readFile, mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { readLibrary } from "../src/library.mjs";
-import { validateLibrary, libraryHref } from "../src/library-contract.mjs";
-import { libraryPage } from "../src/library-render.mjs";
+import { validateLibrary } from "../src/library-contract.mjs";
 import { scanPrivacy } from "../scripts/privacy-check.mjs";
 
 const sample = {
@@ -36,16 +35,10 @@ test("library manifests cover every published day with valid band, skills, forma
     expected.sort(),
   );
   assert.ok(entries.some((row) => row.band === "4-5"));
-  const html = await readFile("dist/library/index.html", "utf8");
-  for (const row of entries)
-    assert.ok(html.includes(`href="${libraryHref(row)}"`));
-  assert.match(html, /Ages 6-8/);
-  assert.match(html, /Ages 4-5/);
   for (const file of ["dist/index.html", "dist/archive/index.html"]) {
     const archive = await readFile(file, "utf8");
     assert.match(archive, /Ages 6-8/);
     assert.doesNotMatch(archive, /Grade \d/);
-    assert.match(archive, /Browse the library/);
   }
 });
 
@@ -74,15 +67,6 @@ test("library schema rejects missing, duplicate, unsafe and private metadata", (
   assert.throws(() =>
     validateLibrary({ schemaVersion: 1, entries: [sample, sample] }, "6-8"),
   );
-});
-
-test("library renders only visible published entries and escapes topic copy", () => {
-  const html = libraryPage([
-    { ...sample, topic: "<img onerror=bad>" },
-    { ...sample, id: "hidden", hidden: true },
-  ]);
-  assert.match(html, /&lt;img onerror=bad&gt;/);
-  assert.doesNotMatch(html, /days\/hidden|<img onerror/);
 });
 
 test("privacy guard covers library files, decoded names and learner settings", async (t) => {

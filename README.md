@@ -85,7 +85,6 @@ day has at least three distinct skills and a format (`curiosity-day` or
 The manifests contain no learner identity or settings.
 
 `npm run archive` validates the manifests against all published days and their
-tags, then renders `/library/` and derives the archive's band labels. The
-library links to both bands; `/little/` retains its opaque tags and age-free
-child pages. The library remains unlisted and outside Wonder Together marketing
-navigation. No browser JavaScript is needed to browse it.
+tags and derives the archive's band labels. `/little/` retains its opaque tags
+and age-free child pages. `dist/library/` contains only JSON manifests and
+remains outside Wonder Together marketing navigation.
