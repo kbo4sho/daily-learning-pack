@@ -1,465 +1,474 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-speakers-turn-waves-into-sound",
-  "topic": "how speakers turn waves into sound",
-  "teaser": "Follow a wiggle from a paper cone, through the air, to your ear.",
+  "slug": "how-a-bike-chain-works",
+  "topic": "how a bike chain works",
+  "teaser": "Follow one pedal push all the way to the back wheel.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "number-crunch",
+  "mathTemplate": "story-problems",
   "ageRange": [
     7,
-    8
+    9
   ],
-  "editionLabel": "GRADE 3 · SPEAKERS",
+  "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "How Speakers Turn Waves Into Sound",
-  "question": "Where does the wiggle go after it leaves the speaker?",
-  "idea": "A changing electric signal moves a speaker’s coil and cone. The cone sends pressure waves through air, and those waves make an eardrum vibrate.",
+  "title": "How a Bike Chain Works",
+  "question": "How does one push of the pedal reach all the way to the back wheel?",
+  "idea": "Teeth and links turn a pedal push into a pull that turns the back wheel.",
   "curiosity": {
-    "intro": "Bring a notebook to the kitchen table and follow one small wiggle.",
-    "carryForward": "Draw the path from the cone to an ear.",
+    "intro": "A quiet bike, a loop of links, and a push to follow.",
+    "carryForward": "Find the path from your pedals to your wheel.",
     "questions": [
       {
-        "id": "speaker",
-        "plate": "wake",
-        "question": "How can a wave become a sound?",
-        "notice": "Find the smooth wiggle beside the speaker.",
-        "say": "Sound begins with vibration, a back-and-forth motion. A speaker turns a changing electric signal into motion. A pure note can follow a sine wave’s smooth wiggle. Music uses many wiggles together.",
-        "try": "Draw a smooth wave, then move your hand gently back and forth to follow its rhythm."
-      },
-      {
-        "id": "cone",
+        "id": "links",
         "plate": "reach",
-        "question": "What makes the cone wiggle?",
-        "notice": "Look for the wide paper cone on the speaker.",
-        "say": "A speaker has a cone made of paper or plastic. A wire coil is attached behind it, near a magnet. The changing electric signal makes the coil push and pull against the magnet. The cone moves with it.",
-        "try": "Use the diorama to follow the coil, the cone, and the air in that order."
+        "question": "How can metal bend around a wheel?",
+        "notice": "Find the little round pins between links.",
+        "say": "A chain is a loop of links joined by tiny pins. Each joint lets neighboring links turn. The links stay the same length while the whole loop bends around a sprocket.",
+        "try": "Draw three links joined by dots for pins. Bend your drawn path around a circle."
       },
       {
-        "id": "rice",
+        "id": "pull",
+        "plate": "wake",
+        "question": "How does the pedal reach the back wheel?",
+        "notice": "Follow the top of the chain between the two sprockets.",
+        "say": "A sprocket is a toothed wheel. The front one, called the chainring, turns with the pedals. Its teeth pull the chain; the chain pulls the back sprocket’s teeth. That sprocket turns the back wheel as you pedal forward.",
+        "try": "Use the diorama to follow turning, pulling, then turning again."
+      },
+      {
+        "id": "count",
         "plate": "change",
-        "question": "Can you see a vibration?",
-        "notice": "Look just above the tight wrap.",
-        "say": "Rice can hop when the surface under it vibrates. Try a toy drum, or a bowl with plastic wrap pulled tight across its top. A tiny tap makes the motion easier to spot.",
-        "try": "Place a pinch of rice on the tight wrap or a toy drum. Hum or sing softly nearby and look closely. If the rice stays still, gently tap the bowl’s side or the drum rim. Draw what changes. Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet."
+        "question": "What can a still bike show us?",
+        "notice": "Look for the chain’s links and the sprockets’ teeth.",
+        "say": "Teeth fit into the spaces between the chain’s rollers. This fit lets the sprocket pull the chain without slipping. Count the front and back teeth while everything is still.",
+        "try": "Count teeth first, then watch one slow pedal turn. Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. At the table, try notched cardboard wheels and a bead loop, or tape paper strips into a chain. Use child scissors only with Big’s yes."
       },
       {
-        "id": "ear",
-        "plate": "keep",
-        "question": "How does the wiggle reach your ear?",
-        "notice": "Follow the air-wave marks toward the ear.",
-        "say": "The cone squeezes air, then lets it spread out. These pressure changes travel as a wave. At your ear, the eardrum vibrates. Faster wiggles make a higher pitch. Bigger wiggles make a louder sound.",
-        "try": "Draw a path from speaker to air to ear. Add one question about where the wiggle goes next."
+        "id": "gears",
+        "plate": "return",
+        "question": "Can one pedal turn make two wheel turns?",
+        "notice": "Compare the big front sprocket with the small back one.",
+        "say": "With 32 teeth in front and 16 behind, one pedal turn gives two back-wheel turns. A big front and small back help with faster riding. A small front and big back make pedaling easier uphill. These choices are gears.",
+        "try": "Draw one circle for a pedal turn and two circles for the back wheel’s turns."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-speakers-turn-waves-into-sound/01-speaker.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/01-speaker.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/01-speaker-fold.jpg",
-      "title": "A wiggle begins",
-      "alt": "Big and Little examine an intact speaker beside a notebook with a smooth wave drawing.",
-      "caption": "A speaker gives a smooth signal a moving cone."
+      "src": "assets/how-a-bike-chain-works/01-pedal.jpg",
+      "original": "assets/how-a-bike-chain-works/01-pedal.png",
+      "foldSrc": "assets/how-a-bike-chain-works/01-pedal-fold.jpg",
+      "title": "A push has a path",
+      "alt": "Big steadies a still upside-down bike on a mat while Little studies the chain between its front and back sprockets.",
+      "caption": "The chain connects the pedal’s sprocket to the back wheel’s sprocket."
     },
     {
       "id": "reach",
-      "src": "assets/how-speakers-turn-waves-into-sound/02-cone.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/02-cone.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/02-cone-fold.jpg",
-      "title": "A cone moves air",
-      "alt": "A speaker’s paper cone has back-and-forth motion marks while Big and Little watch.",
-      "caption": "The coil moves the cone, and the cone moves air."
+      "src": "assets/how-a-bike-chain-works/02-links.jpg",
+      "original": "assets/how-a-bike-chain-works/02-links.png",
+      "foldSrc": "assets/how-a-bike-chain-works/02-links-fold.jpg",
+      "title": "Bend at each pin",
+      "alt": "A magnifier shows chain links, round pins, and rollers fitting around sprocket teeth while Big and Little watch.",
+      "caption": "Pins let links bend; teeth catch the chain."
     },
     {
       "id": "change",
-      "src": "assets/how-speakers-turn-waves-into-sound/03-bowl.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/03-bowl.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/03-bowl-fold.jpg",
-      "title": "Rice gives a clue",
-      "alt": "Big and Little watch a few rice grains hop above plastic wrap stretched over a bowl.",
-      "caption": "A vibrating surface can make rice hop."
+      "src": "assets/how-a-bike-chain-works/03-count.jpg",
+      "original": "assets/how-a-bike-chain-works/03-count.png",
+      "foldSrc": "assets/how-a-bike-chain-works/03-count-fold.jpg",
+      "title": "Teeth to count",
+      "alt": "Big holds the frame of a still upside-down bike while Little counts sprocket teeth with a notebook.",
+      "caption": "Count teeth while every part is still."
     },
     {
       "id": "notice",
-      "src": "assets/how-speakers-turn-waves-into-sound/04-drum.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/04-drum.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/04-drum-fold.jpg",
-      "title": "A drum can wiggle too",
-      "alt": "Rice hops on a toy drum as Big gently touches the rim beside Little.",
-      "caption": "A drumhead can pass its wiggle to rice."
+      "src": "assets/how-a-bike-chain-works/04-model.jpg",
+      "original": "assets/how-a-bike-chain-works/04-model.png",
+      "foldSrc": "assets/how-a-bike-chain-works/04-model-fold.jpg",
+      "title": "A loop on the table",
+      "alt": "Big and Little follow a wooden bead loop joining a big notched cardboard wheel and a small one.",
+      "caption": "The big wheel pulls a loop that turns the small wheel."
     },
     {
       "id": "return",
-      "src": "assets/how-speakers-turn-waves-into-sound/05-cups.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/05-cups.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/05-cups-fold.jpg",
-      "title": "Another path for a wiggle",
-      "alt": "Big speaks softly into one paper cup while Little listens at a second cup joined by a taut string.",
-      "caption": "A taut string carries vibration between cups."
+      "src": "assets/how-a-bike-chain-works/05-turns.jpg",
+      "original": "assets/how-a-bike-chain-works/05-turns.png",
+      "foldSrc": "assets/how-a-bike-chain-works/05-turns-fold.jpg",
+      "title": "One turn becomes two",
+      "alt": "Big and Little study a notebook drawing of a large front sprocket, a smaller back sprocket, and curved turn arrows.",
+      "caption": "More front teeth can mean more back-wheel turns."
     },
     {
       "id": "keep",
-      "src": "assets/how-speakers-turn-waves-into-sound/06-ear.jpg",
-      "original": "assets/how-speakers-turn-waves-into-sound/06-ear.png",
-      "foldSrc": "assets/how-speakers-turn-waves-into-sound/06-ear-fold.jpg",
-      "title": "The wiggle reaches you",
-      "alt": "Air-wave marks lead from a small speaker toward Little’s ear beside a notebook of wave drawings.",
-      "caption": "Pressure waves make an eardrum vibrate."
+      "src": "assets/how-a-bike-chain-works/06-ride.jpg",
+      "original": "assets/how-a-bike-chain-works/06-ride.png",
+      "foldSrc": "assets/how-a-bike-chain-works/06-ride-fold.jpg",
+      "title": "A push goes with you",
+      "alt": "Helmeted Little rides slowly on a quiet garden path with Big walking beside the bike.",
+      "caption": "A chain carries each pedal pull to the back wheel."
     }
   ],
   "reading": {
-    "title": "Follow the little wiggle",
+    "title": "Follow one pedal push",
     "coverPlate": "wake",
-    "coverText": "From a paper cone to a listening ear.",
-    "foldableTitle": "A little book of wiggles",
-    "foldableCoverLine": "How Speakers Make Sound",
-    "foldableNote": "Follow the motion and carry a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
+    "coverText": "A loop of links connects two turning wheels.",
+    "foldableTitle": "A little book of pedal pushes",
+    "foldableCoverLine": "How a Bike Chain Works",
+    "foldableNote": "Carry the path of a pedal push in a small book.",
+    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Trace the causal path together and use the pictures to support the new words.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A wiggle begins",
-        "passage": "A soft note came from the speaker on the table. Little Wonderer found the smooth wave drawn in the notebook. “Could that wiggle become a sound?” Big Wonderer nodded. A speaker changes an electric signal into vibration: a back-and-forth motion. For a pure note, that motion follows the smooth shape of a sine wave.",
-        "prompt": "What changes inside a speaker when it makes a note?",
+        "title": "A push has a path",
+        "passage": "Little Wonderer studied the bike resting on its mat. The pedals sat far from the back wheel. “How does one push reach all that way?” A chain joined them. It was a loop of small metal pieces called links. Big pointed along the loop, from the front sprocket to the back.",
+        "prompt": "What connects the pedals to the back wheel?",
         "foldable": {
-          "heading": "A wiggle begins",
-          "body": "Little heard a note from the speaker. A wiggly electric signal made something move. Could the notebook’s smooth wave become a sound?"
+          "heading": "A push has a path",
+          "body": "The pedals were far from the back wheel. A loop of small metal links joined them. Little wondered how a push could travel."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "A cone moves air",
-        "passage": "The speaker’s cone was a thin piece of paper shaped like a shallow bowl. Behind it, a coil of wire sat near a magnet. The changing signal made the coil push and pull against the magnet. The attached cone moved back and forth, squeezing nearby air, then letting it spread out.",
-        "prompt": "Why does the cone move when the coil moves?",
+        "title": "Bend at each pin",
+        "passage": "Each link joined the next with a tiny pin. The links could turn at these joints, so the chain bent around a wheel without stretching like rubber. That toothed wheel was a sprocket. Its teeth fitted between the chain’s rollers. The hooked-together shapes kept the chain from slipping as it pulled.",
+        "prompt": "Why do joints help a chain fit around a sprocket?",
         "foldable": {
-          "heading": "Push, then pull",
-          "body": "A wire coil sat near a magnet. The changing signal made it push and pull. The attached paper cone moved back and forth."
+          "heading": "Bend at each pin",
+          "body": "Tiny pins join the links. The chain bends at these joints without stretching like rubber. Sprocket teeth hook into the chain as it moves."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Rice gives a clue",
-        "passage": "Big stretched plastic wrap over a bowl and added a pinch of rice. Little hummed nearby. Nothing moved yet. Big gently tapped the bowl, and a few grains hopped. The tight wrap was vibrating beneath them. Rice made a small motion easier to see. Little drew the tiny hops.",
-        "prompt": "What does the moving rice tell you about the wrap?",
+        "title": "Teeth to count",
+        "passage": "With the bike completely still, Little counted teeth. The big front sprocket, called the chainring, turned with the pedals. Its teeth pulled the top of the chain toward the front. The moving chain pulled the back sprocket’s teeth. While pedaling forward, that sprocket drove the back wheel. Turning became pulling, then turning again.",
+        "prompt": "Which part pulls the top of the chain?",
         "foldable": {
-          "heading": "A tiny hop",
-          "body": "Little hummed near the rice bowl. Big gently tapped its side. The tight wrap vibrated, and rice hopped. A small motion became visible."
+          "heading": "Turning, then pulling",
+          "body": "Pedals turn the front sprocket. Its teeth pull the chain. The chain pulls the back sprocket, which turns the back wheel."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A drum can wiggle too",
-        "passage": "A toy drum waited beside the bowl. Big gave its rim a gentle tap. Rice on the drumhead bounced. The drumhead and the bowl’s wrap could both vibrate. Faster wiggles make a higher pitch, or higher-sounding note. Bigger wiggles make a louder sound. Little kept the taps soft.",
-        "prompt": "How is a higher sound different from a louder sound?",
+        "title": "A loop on the table",
+        "passage": "At the table, Big turned a cardboard wheel by its middle. A loop of beads sat in notches around its edge. As the big wheel turned, it pulled the bead loop. The loop turned a smaller wheel. Little followed one bead around. Each part passed the motion to the next.",
+        "prompt": "How does the bead loop pass motion between wheels?",
         "foldable": {
-          "heading": "Two kinds of change",
-          "body": "Rice hopped on the vibrating drumhead too. Faster wiggles make higher sounds. Bigger wiggles make louder sounds. Little kept the taps gentle."
+          "heading": "A loop on the table",
+          "body": "Big turned a cardboard wheel. It pulled the bead loop, and the loop turned the smaller wheel. Little followed one bead around."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Another path for a wiggle",
-        "passage": "Big spoke softly into a paper cup. Little listened at a second cup, joined by a taut string. The first cup’s bottom vibrated. The string carried the motion to the other cup. That cup moved the air near Little’s ear. A wiggle could travel through more than air.",
-        "prompt": "What carries the vibration between the two cups?",
+        "title": "One turn becomes two",
+        "passage": "The notebook showed 32 teeth in front and 16 at the back. One pedal turn moved the chain past 32 teeth: enough for two back-wheel turns. A big front and small back suit faster riding. A small front and big back make pedaling easier uphill. These choices are called gears.",
+        "prompt": "Which gear choice would make an uphill pedal push easier?",
         "foldable": {
-          "heading": "Along a string",
-          "body": "Big spoke into a paper cup. Its bottom vibrated. A taut string carried the motion to Little’s cup, which moved the air nearby."
+          "heading": "One turn becomes two",
+          "body": "The front had 32 teeth. The back had 16. One pedal turn carried enough chain past the back sprocket to turn it twice."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "The wiggle reaches you",
-        "passage": "A pattern of squeezed and spread-out air traveled as pressure waves. Air wiggled in place. Little’s eardrum vibrated, helping the ear sense sound. “Where does the wiggle go after it leaves the speaker?” Little wondered.",
-        "prompt": "How does the wiggle get from the cone to your ear?",
+        "title": "A push goes with you",
+        "passage": "Little’s helmet was snug for a gentle ride beside Big. The chain carried each pedal pull to the back wheel. A drill bit’s spiral carries chips; a bike chain carries a pull. Turning shapes could do different jobs. “Where else could a loop carry motion?” Little wondered.",
+        "prompt": "Where else might a loop carry a pull?",
         "foldable": {
-          "heading": "A wiggle reaches you",
-          "body": "The cone sent pressure waves through air. Little’s eardrum vibrated when they arrived. Where would the wiggle travel next?"
+          "heading": "A push goes with you",
+          "body": "Little pedaled beside Big. The chain carried each pull to the back wheel. Where else could a loop carry motion?"
         }
       }
     ],
     "words": [
       {
-        "word": "speaker",
-        "meaning": "a device that changes an electric signal into sound"
+        "word": "chain",
+        "meaning": "a loop of joined links that carries a pull"
       },
       {
-        "word": "cone",
-        "meaning": "the thin paper or plastic part that moves air"
+        "word": "link",
+        "meaning": "one small piece in a chain"
       },
       {
-        "word": "coil",
-        "meaning": "wire wound into loops"
+        "word": "pin",
+        "meaning": "a tiny rod that joins neighboring links"
       },
       {
-        "word": "magnet",
-        "meaning": "a part that pushes or pulls on the coil when its signal changes"
+        "word": "sprocket",
+        "meaning": "a wheel with teeth that fit a chain"
       },
       {
-        "word": "vibration",
-        "meaning": "a back-and-forth wiggle"
+        "word": "teeth",
+        "meaning": "the points around a sprocket that engage the chain"
       },
       {
-        "word": "pressure wave",
-        "meaning": "a traveling pattern of squeezed and spread-out air"
+        "word": "pedal",
+        "meaning": "the part your foot pushes to turn the front sprocket"
       },
       {
-        "word": "eardrum",
-        "meaning": "a thin surface inside the ear that vibrates with sound"
+        "word": "gear",
+        "meaning": "a choice of sprockets that changes effort and wheel turns"
       },
       {
-        "word": "pitch",
-        "meaning": "how high or low a sound seems"
+        "word": "pull",
+        "meaning": "a force that draws something toward it"
+      },
+      {
+        "word": "turn",
+        "meaning": "to move around a center"
+      },
+      {
+        "word": "wheel",
+        "meaning": "the round part that rolls the bike along"
       }
     ],
     "questions": [
-      "Why must the cone be attached to the coil?",
-      "What do the hopping rice and the listening ear have in common?",
-      "How would faster wiggles change a note differently from bigger wiggles?"
+      "Why can the chain bend around a sprocket without stretching like rubber?",
+      "How do teeth and links help a pedal push reach the back wheel?",
+      "Why does a back sprocket with 16 teeth turn twice when a front sprocket with 32 teeth turns once?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for watching a vibration.",
-      "example": "Example: Hum near the bowl, then draw how the rice moved."
+      "prompt": "Write one command sentence for studying a still sprocket.",
+      "example": "Example: Count the teeth on the big sprocket, then draw the chain hugging it."
     }
   },
   "math": {
-    "title": "Count the little wiggles",
+    "title": "Small stories around a bike",
     "plate": "notice",
-    "intro": "Add or subtract. Trade a ten when you need one.",
-    "eyebrow": "SIX SOUND COUNTS",
-    "actionLabel": "Add and subtract",
+    "intro": "Find the two amounts in each story, then add or subtract.",
+    "eyebrow": "SIX BIKE-CHAIN STORIES",
+    "actionLabel": "Follow each little story",
     "tasks": [
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          27,
-          36
+          28,
+          17
         ],
-        "prompt": "Little marks 27 cone wiggles, then 36 more. How many wiggles are marked?",
-        "equation": "27 + 36 =",
-        "hint": "Add the ones, then trade 10 ones for 1 ten.",
-        "answer": 63,
-        "worked": "7 + 6 = 13 ones: 1 ten and 3 ones. Add 2 + 3 + 1 tens to get 63.",
+        "prompt": "Little joins 28 paper links, then adds 17 more. How many links are in the paper chain?",
+        "equation": "28 + 17 =",
+        "hint": "Combine the links from both groups.",
+        "answer": 45,
+        "worked": "28 + 17 = 45 links. Add 10 to get 38, then add 7.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
           64,
-          28
+          26
         ],
-        "prompt": "Of 64 rice grains on the drum, 28 hop during a gentle tap. How many stay still?",
-        "equation": "64 − 28 =",
-        "hint": "Trade 1 ten for 10 ones before subtracting 8 ones.",
-        "answer": 36,
-        "worked": "64 is 5 tens and 14 ones. Subtract 2 tens and 8 ones to get 36.",
+        "prompt": "Big has 64 beads and threads 26 onto a model chain. How many beads are left?",
+        "equation": "64 − 26 =",
+        "hint": "Take away the beads already threaded.",
+        "answer": 38,
+        "worked": "64 − 26 = 38 beads. Subtract 20 to get 44, then subtract 6.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          38,
-          45
+          23,
+          19
         ],
-        "prompt": "Big records 38 drum taps on one page and 45 on another. How many taps are recorded?",
-        "equation": "38 + 45 =",
-        "hint": "Combine the ones first, then regroup a ten.",
-        "answer": 83,
-        "worked": "8 + 5 = 13 ones: 1 ten and 3 ones. Add 3 + 4 + 1 tens to get 83.",
+        "prompt": "Little records 23 slow pedal turns, then 19 more. How many pedal turns are recorded?",
+        "equation": "23 + 19 =",
+        "hint": "Join the two counts of pedal turns.",
+        "answer": 42,
+        "worked": "23 + 19 = 42 turns. Add 20 to get 43, then take back 1.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          72,
-          46
+          52,
+          18
         ],
-        "prompt": "Little draws 72 waves and colors 46 of them. How many waves are left to color?",
-        "equation": "72 − 46 =",
-        "hint": "Rename 72 as 6 tens and 12 ones.",
-        "answer": 26,
-        "worked": "72 is 6 tens and 12 ones. Subtract 4 tens and 6 ones to get 26.",
+        "prompt": "A paper gear has 52 drawn teeth. Little colors 18. How many teeth still need color?",
+        "equation": "52 − 18 =",
+        "hint": "Subtract the teeth that are colored.",
+        "answer": 34,
+        "worked": "52 − 18 = 34 teeth. Subtract 10 to get 42, then subtract 8.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          46,
-          29
+          32,
+          16
         ],
-        "prompt": "A speaker drawing shows 46 wire loops, then Little adds 29. How many loops are drawn?",
-        "equation": "46 + 29 =",
-        "hint": "Add 6 ones and 9 ones, then regroup.",
-        "answer": 75,
-        "worked": "6 + 9 = 15 ones: 1 ten and 5 ones. Add 4 + 2 + 1 tens to get 75.",
+        "prompt": "A bike has 32 teeth on its front sprocket and 16 on its back sprocket. How many teeth is that in all?",
+        "equation": "32 + 16 =",
+        "hint": "Add the teeth on the two sprockets.",
+        "answer": 48,
+        "worked": "32 + 16 = 48 teeth. Add 10 to get 42, then add 6.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          91,
-          57
+          15,
+          7
         ],
-        "prompt": "A notebook has 91 cup-phone turns planned and 57 finished. How many turns remain?",
-        "equation": "91 − 57 =",
-        "hint": "Rename 91 as 8 tens and 11 ones.",
-        "answer": 34,
-        "worked": "91 is 8 tens and 11 ones. Subtract 5 tens and 7 ones to get 34.",
+        "prompt": "Little plans 15 gentle driveway laps and finishes 7. How many laps are left?",
+        "equation": "15 − 7 =",
+        "hint": "Take the finished laps away from the plan.",
+        "answer": 8,
+        "worked": "15 − 7 = 8 laps. Count from 7 up to 15 to find the difference.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one task and show the trade with tens and ones.",
-    "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
+    "extension": "Draw the amounts in one story to show how you found the answer.",
+    "printNote": "Use numbers or a drawing to share your thinking.",
+    "parentNote": "Grade 2 math. Six one-step addition and subtraction stories stay within 100. Quantities are supplied in the questions; there is no need to count painted details.",
+    "answerKeyIntro": "Grade 2 math. Join the amounts for addition or find what remains for subtraction. Each story takes one step."
   },
   "writing": {
-    "title": "Put a wiggle into words",
-    "intro": "Give a clear command for watching rice move.",
+    "title": "Give the chain a clear command",
+    "intro": "Choose a still view and tell what to count or draw.",
     "plateIds": [
+      "reach",
       "change",
-      "notice",
-      "return"
+      "notice"
     ],
-    "draw": "Draw the bowl before and after a gentle tap. Show the rice.",
-    "starter": "My vibration-watching command",
+    "draw": "Draw two sprockets joined by a chain. Add an arrow along the top of the chain.",
+    "starter": "My chain-watching command",
     "frames": [
       {
+        "plate": "reach",
+        "start": "Trace",
+        "hint": "name the loop you will follow"
+      },
+      {
         "plate": "change",
-        "start": "Hum",
-        "hint": "tell where to make a soft sound"
+        "start": "Count",
+        "hint": "name the teeth on a still sprocket"
       },
       {
         "plate": "notice",
-        "start": "Watch",
-        "hint": "tell which surface to observe"
-      },
-      {
-        "plate": "return",
         "start": "Draw",
-        "hint": "tell how to show the motion"
+        "hint": "show how a loop joins two wheels"
       }
     ],
     "words": [
-      "speaker",
-      "cone",
-      "coil",
-      "magnet",
-      "air",
-      "wave",
-      "ear",
-      "rice",
-      "gently"
+      "chain",
+      "link",
+      "pin",
+      "sprocket",
+      "teeth",
+      "pedal",
+      "gear",
+      "pull",
+      "turn",
+      "wheel"
     ],
-    "check": "Does your command begin with an action word, such as Hum, Watch, or Draw?",
-    "parentNote": "Welcome speaking, dictation, drawing, or writing. One command is enough. Example: “Hum near the bowl, then draw how the rice moved.”"
+    "check": "Does your command begin with an action word, such as Trace, Count, or Draw?",
+    "parentNote": "Accept speech, dictation, drawing, or writing. One clear command is plenty. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The coil pushes and pulls near the magnet. Its attachment passes that back-and-forth motion to the cone."
+      "text": "The rigid links turn at joints joined by tiny pins. The chain bends at those joints instead of stretching like rubber."
     },
     {
       "label": "Reading · 2",
-      "text": "Both reveal vibration. A moving surface makes rice hop; arriving pressure waves make an eardrum vibrate."
+      "text": "The pedal turns the front sprocket. Its teeth pull the chain, which pulls the back sprocket’s teeth and turns the back wheel."
     },
     {
       "label": "Reading · 3",
-      "text": "Faster wiggles make a higher pitch. Bigger wiggles make a louder sound."
+      "text": "One front turn moves the chain past 32 teeth. That is two groups of 16, so the back sprocket and wheel turn twice."
     },
     {
       "label": "Writing",
-      "text": "Accept a spoken, dictated, drawn, or written command. Example: “Hum near the bowl, then draw how the rice moved.”"
+      "text": "A spoken, dictated, drawn, or written command counts. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
     }
   ],
-  "parentGuidance": "Keep Big beside you, sounds gentle, and rice on the table, away from mouths and ears. Leave devices closed; use no wall power or soldering, and let Big hold any magnet. Rice may not move with a gentle voice; a light tap on the bowl’s side is a reliable next step. The model slows and enlarges motion and does not play audio. Air particles move locally back and forth while the pressure pattern travels. The electric signal stays in the speaker circuit; sound through air is mechanical vibration. The coil’s magnetic interaction with a fixed magnet moves the attached cone. Pure tones are sinusoidal; speech and music combine more complex motions. At a fixed pitch and distance, greater vibration amplitude generally sounds louder. The inner ear changes the eardrum’s arriving vibration into signals for the brain. The cup phone carries mechanical vibration along its taut string.",
   "sources": [
     {
-      "label": "Washington University · speaker coil and magnet",
-      "url": "https://web.physics.wustl.edu/introphys/Archives/SP14/Speakers_SP14.pdf"
+      "label": "Exploratorium · bicycle drives and gears",
+      "url": "https://annex.exploratorium.edu/cycling/gears1.html"
     },
     {
-      "label": "NIDCD · how hearing works",
-      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+      "label": "Canada Science and Technology Museum · Cycle-ology",
+      "url": "https://publications.gc.ca/collections/collection_2017/mstc-cstm/NM34-4-2008-eng.pdf"
     },
     {
-      "label": "The Physics Classroom · sound waves",
-      "url": "https://www.physicsclassroom.com/Class/sound/soundtoc.cfm"
+      "label": "Tsubaki · chain structure",
+      "url": "https://catalog.ustsubaki.com/view/303981549"
     }
   ],
   "surfaces": {
     "layout": "six",
-    "diorama": "speakers"
+    "diorama": "bike-chain"
   },
   "titleCard": {
     "plate": "wake",
-    "edition": "SPEAKERS · 2026-10-16",
-    "subtitle": "A little wiggle, all the way to your ear."
+    "edition": "BIKE CHAINS · 2026-10-19",
+    "subtitle": "One pedal push. A whole path of motion."
   },
   "quiz": {
-    "title": "Four stops for a wiggle",
-    "intro": "Follow the motion from the speaker to the ear.",
+    "title": "Four stops along the chain",
+    "intro": "Follow the pull from pedal to wheel.",
     "questions": [
       {
-        "id": "coil",
-        "prompt": "What moves the cone in a speaker?",
+        "id": "pins",
+        "prompt": "Why can a bike chain bend around a sprocket?",
         "choices": [
-          "Air arriving from your ear",
-          "A coil pushing and pulling near a magnet",
-          "Rice inside the cone"
+          "Its metal stretches like rubber",
+          "Its links turn at joints joined by pins",
+          "Its teeth fold in half"
         ],
         "answerIndex": 1,
-        "answer": "The changing electric signal makes the coil push and pull near the magnet, moving the attached cone."
+        "answer": "Tiny pins join the links and let neighboring links turn at their joints."
       },
       {
-        "id": "air",
-        "prompt": "What travels through the air from the cone?",
+        "id": "path",
+        "prompt": "What does the front sprocket do as you pedal forward?",
         "choices": [
-          "Pressure waves",
-          "Wire loops",
-          "A stream of electricity"
+          "It pulls the chain with its teeth",
+          "It pushes the back tire through the air",
+          "It stretches each chain link"
         ],
         "answerIndex": 0,
-        "answer": "Pressure waves carry a pattern of squeezed and spread-out air toward the ear."
+        "answer": "The front sprocket’s teeth pull the chain. The chain then pulls the back sprocket’s teeth."
       },
       {
-        "id": "pitch",
-        "prompt": "What makes a note higher in pitch?",
+        "id": "turns",
+        "prompt": "With 32 teeth in front and 16 behind, how many back-wheel turns come from one pedal turn?",
         "choices": [
-          "Bigger wiggles",
-          "A larger bowl",
-          "Faster wiggles"
+          "One",
+          "Three",
+          "Two"
         ],
         "answerIndex": 2,
-        "answer": "Faster wiggles make a higher pitch; bigger wiggles make a louder sound."
+        "answer": "The back wheel turns twice: 32 front teeth move the chain past two groups of 16 back teeth."
       },
       {
-        "id": "rice",
-        "prompt": "Why can rice hop on a drumhead?",
+        "id": "hill",
+        "prompt": "Which sprocket pair makes pedaling easier uphill?",
         "choices": [
-          "The rice hears the music",
-          "The vibrating drumhead moves the rice",
-          "Air turns the rice into sound"
+          "Big front and small back",
+          "Small front and big back",
+          "Two sprockets without a chain"
         ],
         "answerIndex": 1,
-        "answer": "The drumhead vibrates beneath the rice and gives it little pushes upward."
+        "answer": "A small front sprocket and a big back sprocket make pedaling easier uphill, with fewer wheel turns per pedal turn."
       }
     ]
-  }
+  },
+  "parentGuidance": "Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. Oil helps the joints bend smoothly. Links do not stretch like elastic during ordinary pedaling; wear at pins and bushings can lengthen a chain over time. The diorama shows a single chainring and rear sprocket with a fixed 32-to-16 tooth ratio. It isolates forward pedaling, when the rear freewheel engages; coasting lets a wheel continue without turning the pedals. The top run carries the greater pulling tension. The lower run returns the chain. A bead loop needs matching notches to engage a cardboard model; a smooth string can show the path but may slip. A smaller front-to-back tooth ratio gives more turning force at the wheel for the same pedal effort, at the cost of fewer wheel turns. Helmet on for a ride beside Big."
 }

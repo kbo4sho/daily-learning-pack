@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T02:10:47.292Z",
-  "latest": "how-speakers-turn-waves-into-sound",
+  "generatedAt": "2026-10-19T02:07:37.180Z",
+  "latest": "how-a-bike-chain-works",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-a-bike-chain-works",
+      "date": "2026-10-19",
+      "topic": "how a bike chain works",
+      "title": "How a Bike Chain Works",
+      "teaser": "Follow one pedal push all the way to the back wheel.",
+      "href": "./days/how-a-bike-chain-works/",
+      "latest": true
+    },
     {
       "slug": "how-speakers-turn-waves-into-sound",
       "date": "2026-10-16",
@@ -11,7 +20,7 @@
       "title": "How Speakers Turn Waves Into Sound",
       "teaser": "Follow a wiggle from a paper cone, through the air, to your ear.",
       "href": "./days/how-speakers-turn-waves-into-sound/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "pinecones",

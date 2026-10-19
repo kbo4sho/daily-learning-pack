@@ -1,0 +1,152 @@
+.chain-bench {
+  max-width: 1020px;
+  margin: 0 auto;
+  border: 1px solid var(--line, #d6d8cc);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fffdf8;
+}
+.chain-controls {
+  padding: 20px 24px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.chain-controls[hidden],
+.chain-static[hidden] {
+  display: none;
+}
+.chain-controls fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.chain-controls legend {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.chain-guesses,
+.chain-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chain-panel button {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 11px 16px;
+  font-size: 15px;
+}
+.chain-panel button[aria-pressed="true"] {
+  background: #e9eddf;
+  border-color: #293b35;
+  box-shadow: inset 0 0 0 1px #293b35;
+}
+.chain-panel button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+.chain-panel button:focus-visible {
+  outline: 3px solid #477e98;
+  outline-offset: 3px;
+}
+.chain-figure {
+  margin: 0;
+}
+.chain-drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.chain-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #deded2;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.chain-labels b,
+.chain-labels span span {
+  display: block;
+}
+.chain-labels span span {
+  font-size: 14px;
+  color: #59645d;
+}
+.chain-counts {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  padding: 12px 24px 0;
+  font-size: 15px;
+}
+.chain-counts p {
+  margin: 0;
+}
+.chain-counts b {
+  display: inline-block;
+  min-width: 1.2em;
+  margin-left: 8px;
+  font-family: var(--font-story, Georgia, serif);
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.chain-notice {
+  margin: 0;
+  padding: 12px 24px 24px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.chain-static {
+  padding: 0 24px 24px;
+}
+.chain-static h3 {
+  font: 400 24px var(--font-story, Georgia, serif);
+  margin: 8px 0;
+}
+.chain-static ol {
+  padding-left: 22px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .chain-controls {
+    padding: 16px;
+    gap: 16px;
+  }
+  .chain-controls fieldset,
+  .chain-actions {
+    width: 100%;
+  }
+  .chain-guesses button,
+  .chain-actions button {
+    flex: 1 1 auto;
+  }
+  .chain-labels {
+    padding: 12px 16px;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .chain-counts {
+    padding: 12px 16px 0;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .chain-counts b {
+    display: block;
+    margin: 0;
+  }
+  .chain-notice {
+    padding: 12px 16px 20px;
+  }
+  .chain-static {
+    padding: 0 16px 20px;
+  }
+}
