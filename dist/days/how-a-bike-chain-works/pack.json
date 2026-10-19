@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-a-bike-chain-works",
+  "topic": "how a bike chain works",
+  "teaser": "Follow one pedal push all the way to the back wheel.",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "story-problems",
+  "ageRange": [
+    7,
+    9
+  ],
+  "editionLabel": "GRADE 3 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "How a Bike Chain Works",
+  "question": "How does one push of the pedal reach all the way to the back wheel?",
+  "idea": "Teeth and links turn a pedal push into a pull that turns the back wheel.",
+  "curiosity": {
+    "intro": "A quiet bike, a loop of links, and a push to follow.",
+    "carryForward": "Find the path from your pedals to your wheel.",
+    "questions": [
+      {
+        "id": "links",
+        "plate": "reach",
+        "question": "How can metal bend around a wheel?",
+        "notice": "Find the little round pins between links.",
+        "say": "A chain is a loop of links joined by tiny pins. Each joint lets neighboring links turn. The links stay the same length while the whole loop bends around a sprocket.",
+        "try": "Draw three links joined by dots for pins. Bend your drawn path around a circle."
+      },
+      {
+        "id": "pull",
+        "plate": "wake",
+        "question": "How does the pedal reach the back wheel?",
+        "notice": "Follow the top of the chain between the two sprockets.",
+        "say": "A sprocket is a toothed wheel. The front one, called the chainring, turns with the pedals. Its teeth pull the chain; the chain pulls the back sprocket’s teeth. That sprocket turns the back wheel as you pedal forward.",
+        "try": "Use the diorama to follow turning, pulling, then turning again."
+      },
+      {
+        "id": "count",
+        "plate": "change",
+        "question": "What can a still bike show us?",
+        "notice": "Look for the chain’s links and the sprockets’ teeth.",
+        "say": "Teeth fit into the spaces between the chain’s rollers. This fit lets the sprocket pull the chain without slipping. Count the front and back teeth while everything is still.",
+        "try": "Count teeth first, then watch one slow pedal turn. Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. At the table, try notched cardboard wheels and a bead loop, or tape paper strips into a chain. Use child scissors only with Big’s yes."
+      },
+      {
+        "id": "gears",
+        "plate": "return",
+        "question": "Can one pedal turn make two wheel turns?",
+        "notice": "Compare the big front sprocket with the small back one.",
+        "say": "With 32 teeth in front and 16 behind, one pedal turn gives two back-wheel turns. A big front and small back help with faster riding. A small front and big back make pedaling easier uphill. These choices are gears.",
+        "try": "Draw one circle for a pedal turn and two circles for the back wheel’s turns."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-a-bike-chain-works/01-pedal.jpg",
+      "original": "assets/how-a-bike-chain-works/01-pedal.png",
+      "foldSrc": "assets/how-a-bike-chain-works/01-pedal-fold.jpg",
+      "title": "A push has a path",
+      "alt": "Big steadies a still upside-down bike on a mat while Little studies the chain between its front and back sprockets.",
+      "caption": "The chain connects the pedal’s sprocket to the back wheel’s sprocket."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-a-bike-chain-works/02-links.jpg",
+      "original": "assets/how-a-bike-chain-works/02-links.png",
+      "foldSrc": "assets/how-a-bike-chain-works/02-links-fold.jpg",
+      "title": "Bend at each pin",
+      "alt": "A magnifier shows chain links, round pins, and rollers fitting around sprocket teeth while Big and Little watch.",
+      "caption": "Pins let links bend; teeth catch the chain."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-a-bike-chain-works/03-count.jpg",
+      "original": "assets/how-a-bike-chain-works/03-count.png",
+      "foldSrc": "assets/how-a-bike-chain-works/03-count-fold.jpg",
+      "title": "Teeth to count",
+      "alt": "Big holds the frame of a still upside-down bike while Little counts sprocket teeth with a notebook.",
+      "caption": "Count teeth while every part is still."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-a-bike-chain-works/04-model.jpg",
+      "original": "assets/how-a-bike-chain-works/04-model.png",
+      "foldSrc": "assets/how-a-bike-chain-works/04-model-fold.jpg",
+      "title": "A loop on the table",
+      "alt": "Big and Little follow a wooden bead loop joining a big notched cardboard wheel and a small one.",
+      "caption": "The big wheel pulls a loop that turns the small wheel."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-a-bike-chain-works/05-turns.jpg",
+      "original": "assets/how-a-bike-chain-works/05-turns.png",
+      "foldSrc": "assets/how-a-bike-chain-works/05-turns-fold.jpg",
+      "title": "One turn becomes two",
+      "alt": "Big and Little study a notebook drawing of a large front sprocket, a smaller back sprocket, and curved turn arrows.",
+      "caption": "More front teeth can mean more back-wheel turns."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-a-bike-chain-works/06-ride.jpg",
+      "original": "assets/how-a-bike-chain-works/06-ride.png",
+      "foldSrc": "assets/how-a-bike-chain-works/06-ride-fold.jpg",
+      "title": "A push goes with you",
+      "alt": "Helmeted Little rides slowly on a quiet garden path with Big walking beside the bike.",
+      "caption": "A chain carries each pedal pull to the back wheel."
+    }
+  ],
+  "reading": {
+    "title": "Follow one pedal push",
+    "coverPlate": "wake",
+    "coverText": "A loop of links connects two turning wheels.",
+    "foldableTitle": "A little book of pedal pushes",
+    "foldableCoverLine": "How a Bike Chain Works",
+    "foldableNote": "Carry the path of a pedal push in a small book.",
+    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Trace the causal path together and use the pictures to support the new words.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A push has a path",
+        "passage": "Little Wonderer studied the bike resting on its mat. The pedals sat far from the back wheel. “How does one push reach all that way?” A chain joined them. It was a loop of small metal pieces called links. Big pointed along the loop, from the front sprocket to the back.",
+        "prompt": "What connects the pedals to the back wheel?",
+        "foldable": {
+          "heading": "A push has a path",
+          "body": "The pedals were far from the back wheel. A loop of small metal links joined them. Little wondered how a push could travel."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Bend at each pin",
+        "passage": "Each link joined the next with a tiny pin. The links could turn at these joints, so the chain bent around a wheel without stretching like rubber. That toothed wheel was a sprocket. Its teeth fitted between the chain’s rollers. The hooked-together shapes kept the chain from slipping as it pulled.",
+        "prompt": "Why do joints help a chain fit around a sprocket?",
+        "foldable": {
+          "heading": "Bend at each pin",
+          "body": "Tiny pins join the links. The chain bends at these joints without stretching like rubber. Sprocket teeth hook into the chain as it moves."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Teeth to count",
+        "passage": "With the bike completely still, Little counted teeth. The big front sprocket, called the chainring, turned with the pedals. Its teeth pulled the top of the chain toward the front. The moving chain pulled the back sprocket’s teeth. While pedaling forward, that sprocket drove the back wheel. Turning became pulling, then turning again.",
+        "prompt": "Which part pulls the top of the chain?",
+        "foldable": {
+          "heading": "Turning, then pulling",
+          "body": "Pedals turn the front sprocket. Its teeth pull the chain. The chain pulls the back sprocket, which turns the back wheel."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A loop on the table",
+        "passage": "At the table, Big turned a cardboard wheel by its middle. A loop of beads sat in notches around its edge. As the big wheel turned, it pulled the bead loop. The loop turned a smaller wheel. Little followed one bead around. Each part passed the motion to the next.",
+        "prompt": "How does the bead loop pass motion between wheels?",
+        "foldable": {
+          "heading": "A loop on the table",
+          "body": "Big turned a cardboard wheel. It pulled the bead loop, and the loop turned the smaller wheel. Little followed one bead around."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "One turn becomes two",
+        "passage": "The notebook showed 32 teeth in front and 16 at the back. One pedal turn moved the chain past 32 teeth: enough for two back-wheel turns. A big front and small back suit faster riding. A small front and big back make pedaling easier uphill. These choices are called gears.",
+        "prompt": "Which gear choice would make an uphill pedal push easier?",
+        "foldable": {
+          "heading": "One turn becomes two",
+          "body": "The front had 32 teeth. The back had 16. One pedal turn carried enough chain past the back sprocket to turn it twice."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "A push goes with you",
+        "passage": "Little’s helmet was snug for a gentle ride beside Big. The chain carried each pedal pull to the back wheel. A drill bit’s spiral carries chips; a bike chain carries a pull. Turning shapes could do different jobs. “Where else could a loop carry motion?” Little wondered.",
+        "prompt": "Where else might a loop carry a pull?",
+        "foldable": {
+          "heading": "A push goes with you",
+          "body": "Little pedaled beside Big. The chain carried each pull to the back wheel. Where else could a loop carry motion?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "chain",
+        "meaning": "a loop of joined links that carries a pull"
+      },
+      {
+        "word": "link",
+        "meaning": "one small piece in a chain"
+      },
+      {
+        "word": "pin",
+        "meaning": "a tiny rod that joins neighboring links"
+      },
+      {
+        "word": "sprocket",
+        "meaning": "a wheel with teeth that fit a chain"
+      },
+      {
+        "word": "teeth",
+        "meaning": "the points around a sprocket that engage the chain"
+      },
+      {
+        "word": "pedal",
+        "meaning": "the part your foot pushes to turn the front sprocket"
+      },
+      {
+        "word": "gear",
+        "meaning": "a choice of sprockets that changes effort and wheel turns"
+      },
+      {
+        "word": "pull",
+        "meaning": "a force that draws something toward it"
+      },
+      {
+        "word": "turn",
+        "meaning": "to move around a center"
+      },
+      {
+        "word": "wheel",
+        "meaning": "the round part that rolls the bike along"
+      }
+    ],
+    "questions": [
+      "Why can the chain bend around a sprocket without stretching like rubber?",
+      "How do teeth and links help a pedal push reach the back wheel?",
+      "Why does a back sprocket with 16 teeth turn twice when a front sprocket with 32 teeth turns once?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one command sentence for studying a still sprocket.",
+      "example": "Example: Count the teeth on the big sprocket, then draw the chain hugging it."
+    }
+  },
+  "math": {
+    "title": "Small stories around a bike",
+    "plate": "notice",
+    "intro": "Find the two amounts in each story, then add or subtract.",
+    "eyebrow": "SIX BIKE-CHAIN STORIES",
+    "actionLabel": "Follow each little story",
+    "tasks": [
+      {
+        "skill": "one-step-add",
+        "operands": [
+          28,
+          17
+        ],
+        "prompt": "Little joins 28 paper links, then adds 17 more. How many links are in the paper chain?",
+        "equation": "28 + 17 =",
+        "hint": "Combine the links from both groups.",
+        "answer": 45,
+        "worked": "28 + 17 = 45 links. Add 10 to get 38, then add 7.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          64,
+          26
+        ],
+        "prompt": "Big has 64 beads and threads 26 onto a model chain. How many beads are left?",
+        "equation": "64 − 26 =",
+        "hint": "Take away the beads already threaded.",
+        "answer": 38,
+        "worked": "64 − 26 = 38 beads. Subtract 20 to get 44, then subtract 6.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          23,
+          19
+        ],
+        "prompt": "Little records 23 slow pedal turns, then 19 more. How many pedal turns are recorded?",
+        "equation": "23 + 19 =",
+        "hint": "Join the two counts of pedal turns.",
+        "answer": 42,
+        "worked": "23 + 19 = 42 turns. Add 20 to get 43, then take back 1.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          52,
+          18
+        ],
+        "prompt": "A paper gear has 52 drawn teeth. Little colors 18. How many teeth still need color?",
+        "equation": "52 − 18 =",
+        "hint": "Subtract the teeth that are colored.",
+        "answer": 34,
+        "worked": "52 − 18 = 34 teeth. Subtract 10 to get 42, then subtract 8.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          32,
+          16
+        ],
+        "prompt": "A bike has 32 teeth on its front sprocket and 16 on its back sprocket. How many teeth is that in all?",
+        "equation": "32 + 16 =",
+        "hint": "Add the teeth on the two sprockets.",
+        "answer": 48,
+        "worked": "32 + 16 = 48 teeth. Add 10 to get 42, then add 6.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          15,
+          7
+        ],
+        "prompt": "Little plans 15 gentle driveway laps and finishes 7. How many laps are left?",
+        "equation": "15 − 7 =",
+        "hint": "Take the finished laps away from the plan.",
+        "answer": 8,
+        "worked": "15 − 7 = 8 laps. Count from 7 up to 15 to find the difference.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Draw the amounts in one story to show how you found the answer.",
+    "printNote": "Use numbers or a drawing to share your thinking.",
+    "parentNote": "Grade 2 math. Six one-step addition and subtraction stories stay within 100. Quantities are supplied in the questions; there is no need to count painted details.",
+    "answerKeyIntro": "Grade 2 math. Join the amounts for addition or find what remains for subtraction. Each story takes one step."
+  },
+  "writing": {
+    "title": "Give the chain a clear command",
+    "intro": "Choose a still view and tell what to count or draw.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw two sprockets joined by a chain. Add an arrow along the top of the chain.",
+    "starter": "My chain-watching command",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "Trace",
+        "hint": "name the loop you will follow"
+      },
+      {
+        "plate": "change",
+        "start": "Count",
+        "hint": "name the teeth on a still sprocket"
+      },
+      {
+        "plate": "notice",
+        "start": "Draw",
+        "hint": "show how a loop joins two wheels"
+      }
+    ],
+    "words": [
+      "chain",
+      "link",
+      "pin",
+      "sprocket",
+      "teeth",
+      "pedal",
+      "gear",
+      "pull",
+      "turn",
+      "wheel"
+    ],
+    "check": "Does your command begin with an action word, such as Trace, Count, or Draw?",
+    "parentNote": "Accept speech, dictation, drawing, or writing. One clear command is plenty. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The rigid links turn at joints joined by tiny pins. The chain bends at those joints instead of stretching like rubber."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "The pedal turns the front sprocket. Its teeth pull the chain, which pulls the back sprocket’s teeth and turns the back wheel."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "One front turn moves the chain past 32 teeth. That is two groups of 16, so the back sprocket and wheel turn twice."
+    },
+    {
+      "label": "Writing",
+      "text": "A spoken, dictated, drawn, or written command counts. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Exploratorium · bicycle drives and gears",
+      "url": "https://annex.exploratorium.edu/cycling/gears1.html"
+    },
+    {
+      "label": "Canada Science and Technology Museum · Cycle-ology",
+      "url": "https://publications.gc.ca/collections/collection_2017/mstc-cstm/NM34-4-2008-eng.pdf"
+    },
+    {
+      "label": "Tsubaki · chain structure",
+      "url": "https://catalog.ustsubaki.com/view/303981549"
+    }
+  ],
+  "surfaces": {
+    "layout": "six",
+    "diorama": "bike-chain"
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "BIKE CHAINS · 2026-10-19",
+    "subtitle": "One pedal push. A whole path of motion."
+  },
+  "quiz": {
+    "title": "Four stops along the chain",
+    "intro": "Follow the pull from pedal to wheel.",
+    "questions": [
+      {
+        "id": "pins",
+        "prompt": "Why can a bike chain bend around a sprocket?",
+        "choices": [
+          "Its metal stretches like rubber",
+          "Its links turn at joints joined by pins",
+          "Its teeth fold in half"
+        ],
+        "answerIndex": 1,
+        "answer": "Tiny pins join the links and let neighboring links turn at their joints."
+      },
+      {
+        "id": "path",
+        "prompt": "What does the front sprocket do as you pedal forward?",
+        "choices": [
+          "It pulls the chain with its teeth",
+          "It pushes the back tire through the air",
+          "It stretches each chain link"
+        ],
+        "answerIndex": 0,
+        "answer": "The front sprocket’s teeth pull the chain. The chain then pulls the back sprocket’s teeth."
+      },
+      {
+        "id": "turns",
+        "prompt": "With 32 teeth in front and 16 behind, how many back-wheel turns come from one pedal turn?",
+        "choices": [
+          "One",
+          "Three",
+          "Two"
+        ],
+        "answerIndex": 2,
+        "answer": "The back wheel turns twice: 32 front teeth move the chain past two groups of 16 back teeth."
+      },
+      {
+        "id": "hill",
+        "prompt": "Which sprocket pair makes pedaling easier uphill?",
+        "choices": [
+          "Big front and small back",
+          "Small front and big back",
+          "Two sprockets without a chain"
+        ],
+        "answerIndex": 1,
+        "answer": "A small front sprocket and a big back sprocket make pedaling easier uphill, with fewer wheel turns per pedal turn."
+      }
+    ]
+  },
+  "parentGuidance": "Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. Oil helps the joints bend smoothly. Links do not stretch like elastic during ordinary pedaling; wear at pins and bushings can lengthen a chain over time. The diorama shows a single chainring and rear sprocket with a fixed 32-to-16 tooth ratio. It isolates forward pedaling, when the rear freewheel engages; coasting lets a wheel continue without turning the pedals. The top run carries the greater pulling tension. The lower run returns the chain. A bead loop needs matching notches to engage a cardboard model; a smooth string can show the path but may slip. A smaller front-to-back tooth ratio gives more turning force at the wheel for the same pedal effort, at the cost of fewer wheel turns. Helmet on for a ride beside Big."
+}
