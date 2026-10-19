@@ -5,6 +5,7 @@
       "id": "how-a-bike-chain-works",
       "band": "6-8",
       "topic": "how a bike chain works",
+      "why": "Following a pedal push helps your child connect the jobs of teeth, links and wheels in one moving system.",
       "skills": [
         "one-step-add",
         "one-step-subtract",
@@ -21,6 +22,7 @@
       "id": "how-speakers-turn-waves-into-sound",
       "band": "6-8",
       "topic": "how speakers turn waves into sound",
+      "why": "Following a speaker’s moving cone helps your child connect an electrical signal to air waves and hearing.",
       "skills": [
         "addition-regrouping",
         "subtraction-regrouping",
@@ -37,6 +39,7 @@
       "id": "pinecones",
       "band": "6-8",
       "topic": "pinecones",
+      "why": "Comparing wet and dry pinecones helps your child connect a change in shape to water and seed release.",
       "skills": [
         "compare",
         "round-ten",
@@ -53,6 +56,7 @@
       "id": "why-electronics-use-sine-waves",
       "band": "6-8",
       "topic": "why electronics use sine waves",
+      "why": "Connecting swings, springs and speakers helps your child recognize a repeating pattern and explain what a wave drawing records.",
       "skills": [
         "equal-groups",
         "array",
@@ -69,6 +73,7 @@
       "id": "fridge-magnets",
       "band": "6-8",
       "topic": "fridge magnets",
+      "why": "Comparing what a magnet attracts helps your child test a prediction and notice how distance changes a pull.",
       "skills": [
         "skip-next",
         "skip-missing",
@@ -85,6 +90,7 @@
       "id": "how-drill-bits-work",
       "band": "6-8",
       "topic": "how drill bits work",
+      "why": "Following a drill bit’s cutting edges and spiral grooves helps your child explain how tool shape supports a job.",
       "skills": [
         "one-step-add",
         "one-step-subtract",
@@ -101,6 +107,7 @@
       "id": "electrons",
       "band": "6-8",
       "topic": "electrons",
+      "why": "A clinging sock gives your child a familiar starting point for explaining how moving electrons change electric charge.",
       "skills": [
         "addition-regrouping",
         "subtraction-regrouping",
@@ -117,6 +124,7 @@
       "id": "a-kitchen-sponge",
       "band": "6-8",
       "topic": "a kitchen sponge",
+      "why": "Tracing water into and out of a sponge helps your child explain an everyday change using a hidden structure.",
       "skills": [
         "compare",
         "round-ten",
@@ -133,6 +141,7 @@
       "id": "shadows-at-noon",
       "band": "6-8",
       "topic": "shadows at noon",
+      "why": "Comparing two shadow measurements helps your child use evidence to connect the sun’s height with shadow length.",
       "skills": [
         "array",
         "equal-groups",
@@ -149,6 +158,7 @@
       "id": "tungsten-carbide",
       "band": "6-8",
       "topic": "tungsten carbide",
+      "why": "Comparing hard and tough materials helps your child explain why different parts of a tool need different properties.",
       "skills": [
         "skip-next",
         "skip-missing",
@@ -165,6 +175,7 @@
       "id": "tiny-guests",
       "band": "6-8",
       "topic": "tiny guests",
+      "why": "Comparing bacteria and viruses helps your child understand how tiny germs differ and why handwashing helps remove them.",
       "skills": [
         "one-step-add",
         "one-step-subtract",
@@ -181,6 +192,7 @@
       "id": "a-paper-boat",
       "band": "6-8",
       "topic": "a paper boat",
+      "why": "Testing a paper boat helps your child connect shape, load and soaking to why something floats or sinks.",
       "skills": [
         "addition-regrouping",
         "subtraction-regrouping",
@@ -197,6 +209,7 @@
       "id": "morning-dew",
       "band": "6-8",
       "topic": "morning dew",
+      "why": "Comparing a cool leaf and its disappearing drops helps your child explain where dew comes from and where it goes.",
       "skills": [
         "addition-regrouping",
         "subtraction-regrouping",
@@ -217,6 +230,7 @@
       "id": "how-black-lights-work",
       "band": "6-8",
       "topic": "how black lights work",
+      "why": "Comparing two paper stars helps your child use visible clues to explain the effect of light our eyes cannot see.",
       "skills": [
         "compare-lengths",
         "addition",
@@ -235,6 +249,7 @@
       "id": "how-code-turns-into-lesson",
       "band": "6-8",
       "topic": "how code turns into a lesson",
+      "why": "Following code from ordered jobs to a finished page helps your child explain how a sequence of instructions produces a result.",
       "skills": [
         "sequencing",
         "addition",
@@ -253,6 +268,7 @@
       "id": "curiosity-inchworms",
       "band": "6-8",
       "topic": "inchworms",
+      "why": "Watching an inchworm grip and reach helps your child use position clues to explain how movement happens.",
       "skills": [
         "two-step",
         "compare-distances",
@@ -270,6 +286,7 @@
       "id": "how-pianos-work",
       "band": "6-8",
       "topic": "how pianos work",
+      "why": "Following a piano key’s motion to vibrating strings helps your child explain how connected parts produce a sound.",
       "skills": [
         "compare-lengths",
         "addition",
@@ -288,6 +305,7 @@
       "id": "diamond",
       "band": "6-8",
       "topic": "diamond",
+      "why": "Following a diamond’s sparkle helps your child revise a first guess using evidence about light and materials.",
       "skills": [
         "compare-measurements",
         "addition",
@@ -306,6 +324,7 @@
       "id": "curiosity-bean",
       "band": "6-8",
       "topic": "curiosity bean",
+      "why": "Following a sprouting bean helps your child explain how a plant starts growing before it has leaves.",
       "skills": [
         "compare-lengths",
         "addition",

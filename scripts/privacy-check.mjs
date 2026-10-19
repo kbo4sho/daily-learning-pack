@@ -304,6 +304,7 @@ const LESSON_KEYS = new Set([
   "try",
   "url",
   "values",
+  "why",
   "wink",
   "wonderLabel",
   "word",
