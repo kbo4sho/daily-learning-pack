@@ -1,7 +1,36 @@
 {
   "id": "little",
-  "latest": "puddles",
+  "latest": "leaves-changing-color",
   "days": [
+    {
+      "slug": "leaves-changing-color",
+      "date": "2026-10-19",
+      "title": "Leaves Changing Color",
+      "question": "Why do leaves change color?",
+      "tags": {
+        "band": "little",
+        "topic": "leaves changing color",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-19"
+      }
+    },
     {
       "slug": "puddles",
       "date": "2026-10-17",
