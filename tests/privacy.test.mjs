@@ -250,20 +250,6 @@ test("archive publishing rejects private copy without changing existing dist", a
         { slug: "sample", date: "2026-10-12", title: "A morning.", teaser: "" },
       ],
     };
-    for (const [copy, kind] of [
-      [String.fromCharCode(76, 101, 111), "NAME"],
-      ["/Us" + "ers/example/image.png", "LOCAL"],
-    ]) {
-      data.days[0].teaser = copy;
-      await writeFile(join(output, "archive.json"), JSON.stringify(data));
-      const before = await hashes(output);
-      await assert.rejects(
-        renderArchive(output),
-        new RegExp(`Privacy guard failed:[\\s\\S]*${kind}`),
-      );
-      assert.deepEqual(await hashes(output), before);
-      assert.deepEqual(await readdir(root), ["dist"]);
-    }
     await mkdir(join(output, "library"));
     await mkdir(join(output, "days/sample"), { recursive: true });
     const tags = {
@@ -299,6 +285,20 @@ test("archive publishing rejects private copy without changing existing dist", a
         ],
       }),
     );
+    for (const [copy, kind] of [
+      [String.fromCharCode(76, 101, 111), "NAME"],
+      ["/Us" + "ers/example/image.png", "LOCAL"],
+    ]) {
+      data.days[0].teaser = copy;
+      await writeFile(join(output, "archive.json"), JSON.stringify(data));
+      const before = await hashes(output);
+      await assert.rejects(
+        renderArchive(output),
+        new RegExp(`Privacy guard failed:[\\s\\S]*${kind}`),
+      );
+      assert.deepEqual(await hashes(output), before);
+      assert.deepEqual(await readdir(root), ["dist"]);
+    }
     data.days[0].teaser = "A small discovery.";
     await writeFile(join(output, "archive.json"), JSON.stringify(data));
     await renderArchive(output);
