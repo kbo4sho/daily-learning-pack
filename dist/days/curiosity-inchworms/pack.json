@@ -352,5 +352,17 @@
       "label": "University of Kentucky Entomology · Cankerworms and variation in rear prolegs",
       "url": "https://entomology.ca.uky.edu/sites/entomology.ca.uky.edu/files/ef401_0.pdf"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "two-step",
+      "compare-distances",
+      "infer-from-evidence",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
 }

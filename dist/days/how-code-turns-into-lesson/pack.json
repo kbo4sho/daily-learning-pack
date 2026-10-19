@@ -302,5 +302,18 @@
     {
       "label": "Family craft model"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "sequencing",
+      "addition",
+      "subtraction",
+      "follow-instructions",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
 }

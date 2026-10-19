@@ -1,4 +1,5 @@
 import { esc } from "./html.mjs";
+import { bandLabel } from "./library-contract.mjs";
 
 /** Public view date chrome. Same UTC en-GB format as the overnight ship. */
 export function formatArchiveDate(iso, compact = false) {
@@ -44,10 +45,7 @@ function packetLink(entry, { isLatest, href, position = "shelf" }) {
     position === "door"
       ? `Open today’s pack: ${title}, ${date}`
       : `Open ${title}, ${date}`;
-  const grade =
-    Number.isInteger(entry.gradeLevel) && entry.gradeLevel > 0
-      ? ` · Grade ${entry.gradeLevel}`
-      : "";
+  const band = entry.band ? ` · ${bandLabel(entry.band)}` : "";
   const mark = isLatest ? `<span class="packet-mark">This morning</span>` : "";
   // Explicit tab stops also include these links in WebKit's default Tab order.
   return `<a class="seed-packet-link${position === "door" ? " door-packet" : ""}" href="${href}" tabindex="0" aria-label="${esc(label)}">
@@ -56,7 +54,7 @@ function packetLink(entry, { isLatest, href, position = "shelf" }) {
 ${packetWindow(entry)}
 <span class="packet-cultivar">${esc(title)}</span>
 <span class="packet-note">${esc(entry.teaser)}</span>
-<span class="packet-small-print">Wonder Daily · <time datetime="${esc(entry.date)}">${esc(formatArchiveDate(entry.date, true).replace(",", ""))}</time>${grade}</span>
+<span class="packet-small-print">Wonder Daily · <time datetime="${esc(entry.date)}">${esc(formatArchiveDate(entry.date, true).replace(",", ""))}</time>${band}</span>
 ${mark}</span></span></a>`;
 }
 
@@ -118,7 +116,7 @@ export function archivePage(
 <div class="archive-shell">
 <header class="archive-header">
 <p class="brand">Wonder Together<span>WONDER DAILY</span></p>
-<p class="house-note">For this family. Grade 2.</p>
+<p class="house-note">For this family.${today.band ? ` ${bandLabel(today.band)}.` : ""}</p>
 </header>
 <main id="mornings">
 <section class="today-door" aria-labelledby="today-heading">
@@ -135,6 +133,7 @@ ${shelf}
 </main>
 <footer class="archive-footer">
 <p>Small discoveries. Time together.</p>
+<p><a href="${homePrefix}library/">Browse the library</a></p>
 <p class="small-note">Family dogfood surface. Not a Wonder Together marketing page.</p>
 </footer>
 </div>

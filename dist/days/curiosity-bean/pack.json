@@ -314,5 +314,18 @@
       "label": "NASA · Plant gravity perception",
       "url": "https://www.nasa.gov/ames/space-biosciences/plant-gravity-perception-spacex-13/"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare-lengths",
+      "addition",
+      "subtraction",
+      "explain-growth",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
 }

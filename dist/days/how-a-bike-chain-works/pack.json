@@ -118,7 +118,7 @@
     "foldableTitle": "A little book of pedal pushes",
     "foldableCoverLine": "How a Bike Chain Works",
     "foldableNote": "Carry the path of a pedal push in a small book.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Trace the causal path together and use the pictures to support the new words.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Trace the causal path together and use the pictures to support the new words.",
     "beats": [
       {
         "id": "wake",
@@ -470,5 +470,16 @@
       }
     ]
   },
-  "parentGuidance": "Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. Oil helps the joints bend smoothly. Links do not stretch like elastic during ordinary pedaling; wear at pins and bushings can lengthen a chain over time. The diorama shows a single chainring and rear sprocket with a fixed 32-to-16 tooth ratio. It isolates forward pedaling, when the rear freewheel engages; coasting lets a wheel continue without turning the pedals. The top run carries the greater pulling tension. The lower run returns the chain. A bead loop needs matching notches to engage a cardboard model; a smooth string can show the path but may slip. A smaller front-to-back tooth ratio gives more turning force at the wheel for the same pedal effort, at the cost of fewer wheel turns. Helmet on for a ride beside Big."
+  "parentGuidance": "Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. Oil helps the joints bend smoothly. Links do not stretch like elastic during ordinary pedaling; wear at pins and bushings can lengthen a chain over time. The diorama shows a single chainring and rear sprocket with a fixed 32-to-16 tooth ratio. It isolates forward pedaling, when the rear freewheel engages; coasting lets a wheel continue without turning the pedals. The top run carries the greater pulling tension. The lower run returns the chain. A bead loop needs matching notches to engage a cardboard model; a smooth string can show the path but may slip. A smaller front-to-back tooth ratio gives more turning force at the wheel for the same pedal effort, at the cost of fewer wheel turns. Helmet on for a ride beside Big.",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "one-step-add",
+      "one-step-subtract",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
 }

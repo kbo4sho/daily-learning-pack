@@ -413,5 +413,18 @@
       "label": "FDA · UV categories and adult equipment care",
       "url": "https://www.fda.gov/radiation-emitting-products/tanning/ultraviolet-uv-radiation"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare-lengths",
+      "addition",
+      "subtraction",
+      "compare-materials",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
 }

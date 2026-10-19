@@ -118,7 +118,7 @@
     "foldableTitle": "A little book of very hard things",
     "foldableCoverLine": "Very hard. Not always tough.",
     "foldableNote": "Predict, watch a grown-up test, and pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Connect hard, tough, brittle, scratch, tip and material to the objects in the story.",
     "beats": [
       {
         "id": "wake",
@@ -323,7 +323,7 @@
       }
     ],
     "extension": "Choose a pattern and say its step. How could you check a missing count?",
-    "parentNote": "Age 8 / Grade 2 math. Six skip-counting patterns within 100, with steps 2, 5 and 10. Say counts aloud or draw equal groups.",
+    "parentNote": "Ages 6-8 math. Six skip-counting patterns within 100, with steps 2, 5 and 10. Say counts aloud or draw equal groups.",
     "eyebrow": "SIX COUNTING PATTERNS",
     "actionLabel": "Find each missing count",
     "printNote": "Show the equal steps with numbers or small jumps."
@@ -386,7 +386,7 @@
       "text": "Accept one sensible command, spoken, dictated or written. Example: Ask Big to hold the soap and gently drag the craft stick across it."
     }
   ],
-  "parentGuidance": "Age 8 / Grade 3 reading and Grade 2 math. A grown-up leads every step of the optional household test; the child watches, predicts and records. Work over a tray and keep faces back. Use only soap, a smooth wooden craft stick, chalk and a flexible rubber eraser. The grown-up holds the soap and gently drags the craft stick across it, then separately bends chalk gently over the tray and bends the eraser. Stop if extra force is needed; keep crumbs on the tray. No knives, nails, glass, ceramic tiles, files, drills, saws or sharp tools; use nothing that makes shards. Never touch real saw blades or drill bits. Do not scratch with a pen tip or any tungsten carbide. WC is tungsten joined with carbon; carbide is manufactured, rather than mined as a finished tool material. Pressing and sintering usually use a cobalt binder, not household glue. Hardness and toughness vary with grain size, binder and grade. The bench gives qualitative comparisons, not measured tests or a promise that every bump chips carbide. Its scratch contact is a carbide point; on carbide it leaves no visible mark under the shown light contact. Its bump is strong enough to reveal different responses. The chalk/eraser activity is a separate bending comparison, not a ranking of toughness by measurement. Materials differ in softness as well as brittleness. Tools stay resting in pictures. Welcome dictation and a pause at any time.",
+  "parentGuidance": "Ages 6-8. A grown-up leads every step of the optional household test; the child watches, predicts and records. Work over a tray and keep faces back. Use only soap, a smooth wooden craft stick, chalk and a flexible rubber eraser. The grown-up holds the soap and gently drags the craft stick across it, then separately bends chalk gently over the tray and bends the eraser. Stop if extra force is needed; keep crumbs on the tray. No knives, nails, glass, ceramic tiles, files, drills, saws or sharp tools; use nothing that makes shards. Never touch real saw blades or drill bits. Do not scratch with a pen tip or any tungsten carbide. WC is tungsten joined with carbon; carbide is manufactured, rather than mined as a finished tool material. Pressing and sintering usually use a cobalt binder, not household glue. Hardness and toughness vary with grain size, binder and grade. The bench gives qualitative comparisons, not measured tests or a promise that every bump chips carbide. Its scratch contact is a carbide point; on carbide it leaves no visible mark under the shown light contact. Its bump is strong enough to reveal different responses. The chalk/eraser activity is a separate bending comparison, not a ranking of toughness by measurement. Materials differ in softness as well as brittleness. Tools stay resting in pictures. Welcome dictation and a pause at any time.",
   "sources": [
     {
       "label": "CERATIZIT · making cemented carbide",
@@ -463,5 +463,16 @@
         "answer": "Many ballpoint pens use a tiny tungsten-carbide ball at the tip. The hard ball rolls ink onto paper and resists wear."
       }
     ]
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "skip-next",
+      "skip-missing",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
   }
 }
