@@ -24,7 +24,7 @@ links.forEach((link) =>
     showPanel(link.dataset.go);
   }),
 );
-showPanel("curiosity", false);
+showPanel(panels[0].id, false);
 
 // The header print menu closes on Escape (focus back to its button) or an outside click.
 const printMenu = document.querySelector(".print-menu");
