@@ -15,14 +15,6 @@ export const FAMILY_DOORS = [
     archiveHref: "./little/archive/",
   },
 ];
-export const BIG_PDFS = [
-  ["kid-worksheets.pdf", "Print the pack"],
-  ["foldable.pdf", "Foldable story"],
-  ["reading.pdf", "Reading pages"],
-  ["math.pdf", "Math"],
-  ["writing.pdf", "Writing"],
-  ["parent-answer-key.pdf", "Answer key"],
-];
 const keys = (value, fields) =>
   value &&
   typeof value === "object" &&
@@ -57,23 +49,21 @@ export function validateFamily(manifest) {
     const today = door.today;
     if (today !== null) {
       if (
-        !keys(today, "href,topic,why,skills,date,printHref,pdfs") ||
+        !keys(today, "href,topic,why,skills,date,pdfs") ||
         today.href !== expected.href ||
         !text(today.topic) ||
         !date(today.date) ||
         topicMetadataIssues(today).length ||
-        today.printHref !== door.printHref ||
-        !Array.isArray(today.pdfs)
+        !Array.isArray(today.pdfs) ||
+        today.pdfs.length > 1
       )
         throw new Error("Invalid family today.");
       const seen = new Set();
       for (const pdf of today.pdfs) {
         const allowed =
           door.id === "big"
-            ? BIG_PDFS.some(
-                ([file, label]) =>
-                  pdf?.href === `./today/pdf/${file}` && pdf.label === label,
-              )
+            ? pdf?.href === "./today/pdf/kid-worksheets.pdf" &&
+              pdf.label === "Print the pack"
             : /^\.\/little\/days\/[a-z0-9]+(?:-[a-z0-9]+)*\/little-pack\.pdf$/.test(
                 pdf?.href,
               ) && pdf.label === "Print the pack";
@@ -82,12 +72,7 @@ export function validateFamily(manifest) {
         seen.add(pdf.href);
       }
     }
-    const complete =
-      today && today.pdfs.length === (door.id === "big" ? BIG_PDFS.length : 1);
-    const nextMorning =
-      complete && today.date >= manifest.nextDate
-        ? "ready"
-        : "ready-by-morning";
+    const nextMorning = today?.pdfs.length === 1 ? "ready" : "ready-by-morning";
     if (door.nextMorning !== nextMorning)
       throw new Error("Invalid next morning status.");
   });

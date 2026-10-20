@@ -1,10 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
+
+const manifest = JSON.parse(
+  await readFile(resolve("dist/family/family.json"), "utf8"),
+);
 
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   await test(`${engine}: family doors, local nicknames, print and story-first flow`, async (t) => {
@@ -53,6 +57,14 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           ),
           [],
         );
+        assert.equal(await page.getByText("Practice together:").count(), 0);
+        if (route === "print/") {
+          for (const door of manifest.doors)
+            assert.equal(
+              await page.locator(`#${door.id} a[href$=".pdf"]`).count(),
+              door.today?.pdfs.length || 0,
+            );
+        }
         for (const link of await page.locator('a[href$=".pdf"]').all()) {
           const response = await page.request.get(
             new URL(await link.getAttribute("href"), page.url()).href,

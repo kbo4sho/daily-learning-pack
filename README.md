@@ -104,6 +104,9 @@ preserves these files without adding navigation to them.
 All family pages are static, `noindex,nofollow`, and work without JavaScript.
 An optional nickname editor stores text only in that browser’s localStorage;
 no nickname enters artifacts, cookies, URLs or network requests. The print
-shelf lists existing current PDFs and a static next-morning readiness state.
+shelf offers one verified combined PDF per door. Readiness depends on that
+current pack’s PDF, regardless of its publication date; missing or mismatched
+PDFs show “Ready by morning.” The shelf link lives only on the door in the
+manifest, without a duplicate link in its current-pack record.
 The stricter family privacy guard rejects learner identities and audience
 labels. No account, selection service or marketing navigation is added.
