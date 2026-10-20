@@ -85,10 +85,25 @@ day has at least three distinct skills and a format (`curiosity-day` or
 The manifests contain no learner identity or settings. `why` is a required
 parent-facing sentence: one nonempty trimmed line, at most 180 characters.
 It must match the published `pack.json` or second-learner `day.json` (and its
-archive record). Day HTML and reading order remain unchanged; this field is
-metadata for future parent discovery surfaces.
+archive record). The family surface uses this metadata. Day sections follow story → why →
+activities; the second learner’s pages show the same required why sentence.
 
 `npm run archive` validates the manifests against all published days and their
 tags and derives the archive's band labels. `/little/` retains its opaque tags
 and age-free child pages. `dist/library/` contains only JSON manifests and
 remains outside Wonder Together marketing navigation.
+
+## Bookmark-only family surface
+
+The private generators also publish `dist/family/`: two character doors, each
+opening the current default pack, past days, and a stable print shelf. The
+family manifest has a strict schema in `src/family-contract.mjs`; it contains
+only public pack metadata and same-origin links. The public archive renderer
+preserves these files without adding navigation to them.
+
+All family pages are static, `noindex,nofollow`, and work without JavaScript.
+An optional nickname editor stores text only in that browser’s localStorage;
+no nickname enters artifacts, cookies, URLs or network requests. The print
+shelf lists existing current PDFs and a static next-morning readiness state.
+The stricter family privacy guard rejects learner identities and audience
+labels. No account, selection service or marketing navigation is added.

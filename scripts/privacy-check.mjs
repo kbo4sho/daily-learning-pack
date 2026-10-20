@@ -113,6 +113,34 @@ export function privacyIssues(text, label = "content") {
       issues.push(`${label}:${line}: ${kind}`);
     }
   }
+  if (/(?:^|\/)family(?:\/|$)/.test(label)) {
+    issues.push(
+      ...littleIssues(text, label).map((issue) =>
+        issue.replace("LITTLE_", "FAMILY_"),
+      ),
+    );
+    const normalized = text
+      .replace(/&#(?:x([0-9a-f]+)|(\d+));/gi, (_, hex, dec) =>
+        String.fromCodePoint(
+          Math.min(parseInt(hex || dec, hex ? 16 : 10), 0x10ffff),
+        ),
+      )
+      .replace(/&(?:ndash|mdash|hyphen);/gi, "-");
+    if (new RegExp(`\\b${spelling}\\b`, "i").test(normalized))
+      issues.push(`${label}: FAMILY_NAME`);
+    if (
+      /\bband\b|\b[46]\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*[58]\b|\b(?:four|six)\s*(?:to|through|[-–—])\s*(?:five|eight)\b|\b(?:four|five|six|seven|eight)[ -]years?[ -]olds?\b/gi.test(
+        normalized,
+      )
+    )
+      issues.push(`${label}: FAMILY_BAND`);
+    if (normalized !== text)
+      issues.push(
+        ...littleIssues(normalized, label).map((issue) =>
+          issue.replace("LITTLE_", "FAMILY_"),
+        ),
+      );
+  }
   if (LITTLE_TREE.test(label)) issues.push(...littleIssues(text, label));
   return issues;
 }
