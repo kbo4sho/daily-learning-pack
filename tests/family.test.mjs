@@ -1,4 +1,5 @@
 import test from "node:test";
+import { execFileSync } from "node:child_process";
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -30,12 +31,65 @@ test("family schema and metadata describe the exact current defaults", async () 
     assert.equal(door.today.topic, index ? record.tags.topic : record.topic);
     assert.equal(door.today.why, record.why);
     assert.deepEqual(door.today.skills, record.tags.skills);
-    for (const pdf of door.today.pdfs)
+    assert.ok(!("printHref" in door.today));
+    assert.ok(door.today.pdfs.length <= 1);
+    assert.equal(
+      door.nextMorning,
+      door.today.pdfs.length === 1 ? "ready" : "ready-by-morning",
+    );
+    for (const pdf of door.today.pdfs) {
       assert.ok((await stat(resolve(root, pdf.href))).size > 0);
+      const info = execFileSync("pdfinfo", [resolve(root, pdf.href)], {
+        encoding: "utf8",
+      });
+      const title = info.match(/^Title:\s+(.+)$/m)?.[1];
+      assert.equal(
+        title,
+        index
+          ? `Wonder Daily · ${record.title} · for little explorers`
+          : `${record.topic} · Daily Learning Pack`,
+      );
+      if (index) {
+        assert.equal(record.slug, little.latest);
+        assert.equal(pdf.href, `./little/days/${record.slug}/little-pack.pdf`);
+      } else {
+        const archived = await json(`days/${record.slug}/pack.json`);
+        assert.equal(archived.slug, record.slug);
+        assert.equal(archived.topic, record.topic);
+        assert.deepEqual(
+          await readFile(resolve(root, pdf.href)),
+          await readFile(
+            resolve(root, `days/${record.slug}/pdf/kid-worksheets.pdf`),
+          ),
+        );
+      }
+    }
   }
-  const bad = structuredClone(manifest);
-  bad.doors[0].today.href = "https://example.com/";
-  assert.throws(() => validateFamily(bad));
+  for (const change of [
+    (m) => {
+      m.doors[0].today.href = "https://example.com/";
+    },
+    (m) => {
+      m.doors[0].today.printHref = m.doors[0].printHref;
+    },
+    (m) => {
+      m.doors[0].today.pdfs.push({
+        href: "./today/pdf/math.pdf",
+        label: "Math",
+      });
+    },
+    (m) => {
+      m.doors[0].today.pdfs = [];
+      m.doors[0].nextMorning = "ready";
+    },
+  ]) {
+    const bad = structuredClone(manifest);
+    change(bad);
+    assert.throws(() => validateFamily(bad));
+  }
+  const later = structuredClone(manifest);
+  later.nextDate = "2099-01-01";
+  assert.doesNotThrow(() => validateFamily(later));
 });
 
 test("family pages are unlisted, static, same-origin and usable without scripts", async () => {
@@ -49,6 +103,17 @@ test("family pages are unlisted, static, same-origin and usable without scripts"
     assert.match(html, /name="robots" content="noindex,nofollow"/);
     assert.match(html, /connect-src 'none'; form-action 'none'/);
     assert.doesNotMatch(html, /<form|https?:\/\//);
+    assert.doesNotMatch(html, /Practice together|class="skills"/);
+    if (path === "family/print/index.html") {
+      const manifest = await json("family/family.json");
+      assert.equal(
+        [...html.matchAll(/href="[^"]+\.pdf"/g)].length,
+        manifest.doors.reduce(
+          (sum, door) => sum + (door.today?.pdfs.length || 0),
+          0,
+        ),
+      );
+    }
     const base = new URL(path, "https://example.test/daily-learning-pack/");
     for (const [, href] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
       if (href === "data:,") continue;

@@ -19,35 +19,14 @@
           "explain-with-words-and-pictures"
         ],
         "date": "2026-10-19",
-        "printHref": "./family/print/#big",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
-          },
-          {
-            "href": "./today/pdf/foldable.pdf",
-            "label": "Foldable story"
-          },
-          {
-            "href": "./today/pdf/reading.pdf",
-            "label": "Reading pages"
-          },
-          {
-            "href": "./today/pdf/math.pdf",
-            "label": "Math"
-          },
-          {
-            "href": "./today/pdf/writing.pdf",
-            "label": "Writing"
-          },
-          {
-            "href": "./today/pdf/parent-answer-key.pdf",
-            "label": "Answer key"
           }
         ]
       },
-      "nextMorning": "ready-by-morning"
+      "nextMorning": "ready"
     },
     {
       "id": "little",
@@ -77,7 +56,6 @@
           "tracing"
         ],
         "date": "2026-10-19",
-        "printHref": "./family/print/#little",
         "pdfs": [
           {
             "href": "./little/days/leaves-changing-color/little-pack.pdf",
@@ -85,7 +63,7 @@
           }
         ]
       },
-      "nextMorning": "ready-by-morning"
+      "nextMorning": "ready"
     }
   ]
 }
