@@ -22,6 +22,8 @@ const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
 // id "little"), and no private names. Names come only from
 // the untracked WD_PRIVATE_NAMES list (comma separated), never from git.
 const LITTLE_TREE = /(?:^|\/)little(?:\/|$)/;
+const LEARNER_KEYS =
+  "knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog";
 const LITTLE_BANS = [
   [
     "AGE",
@@ -39,7 +41,10 @@ const LITTLE_BANS = [
   ],
   [
     "LEARNER_CONFIG",
-    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:(?!\s*"little")|\blearners\//g,
+    new RegExp(
+      `\\b(?:${LEARNER_KEYS})\\b|"band"\\s*:(?!\\s*"little")|\\blearners/`,
+      "g",
+    ),
   ],
 ];
 
@@ -83,9 +88,7 @@ export function privacyIssues(text, label = "content") {
     issues.push(`${label}: PRIVATE_NAME`);
   if (
     /\.(?:json|html)(?:$| \()/i.test(label) &&
-    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|\blearners\//i.test(
-      text,
-    )
+    new RegExp(`\\b(?:${LEARNER_KEYS})\\b|\\blearners/`, "i").test(text)
   )
     issues.push(`${label}: LEARNER_CONFIG`);
   const identifiers =
