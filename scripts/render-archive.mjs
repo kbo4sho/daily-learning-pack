@@ -13,6 +13,7 @@ import {
 import { dirname, join, resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
+import { readLibrary } from "../src/library.mjs";
 
 async function readable(path) {
   try {
@@ -61,13 +62,14 @@ export async function resolvePacketFace(entry, root, homePrefix = "./") {
   return faceFromPack(root, entry, homePrefix, await readDayPack(root, entry));
 }
 
-async function withFaces(entries, root) {
+async function withFaces(entries, root, library) {
   return Promise.all(
     entries.map(async (entry) => {
       const pack = await readDayPack(root, entry);
       return {
         ...entry,
-        gradeLevel: pack?.gradeLevel,
+        band: library.find((row) => row.band === "6-8" && row.id === entry.slug)
+          ?.band,
         face: await faceFromPack(root, entry, "./", pack),
       };
     }),
@@ -150,7 +152,8 @@ async function writeArchive(root) {
       `dist/archive.json latest “${json.latest}” must match a days[].slug.`,
     );
   await mkdir(`${root}/archive`, { recursive: true });
-  const home = await withFaces(entries, root);
+  const library = await readLibrary(root);
+  const home = await withFaces(entries, root, library);
   const nested = nestFaces(home);
   const homeLatest = facedLatest(home, latest.slug);
   const nestedLatest = facedLatest(nested, latest.slug);

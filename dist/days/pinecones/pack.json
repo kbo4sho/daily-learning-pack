@@ -118,7 +118,7 @@
     "foldableTitle": "Open, close, and wonder",
     "foldableCoverLine": "Pinecones",
     "foldableNote": "Watch the scales and keep a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect pinecone, scale, moisture, humid, tissue, and seed to the scenes.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Connect pinecone, scale, moisture, humid, tissue, and seed to the scenes.",
     "beats": [
       {
         "id": "wake",
@@ -318,8 +318,8 @@
     ],
     "extension": "Choose a rounding task and show its two nearby tens on a number line.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Compare two-digit counts and round to the nearest ten. A ones digit of 5 rounds up. Counts describe story collections, not a fixed number of scales on each cone.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Compare tens, then ones. For rounding, locate the two nearby tens and find the closer one; halfway rounds up."
+    "parentNote": "Ages 6-8 math. Compare two-digit counts and round to the nearest ten. A ones digit of 5 rounds up. Counts describe story collections, not a fixed number of scales on each cone.",
+    "answerKeyIntro": "Ages 6-8 math. Compare tens, then ones. For rounding, locate the two nearby tens and find the closer one; halfway rounds up."
   },
   "writing": {
     "title": "A small change, in words",
@@ -379,7 +379,7 @@
       "text": "Accept a command spoken, dictated, drawn, or written. Example: “Watch one dry cone and one damp cone, then draw how the scales look.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward. Use shallow dishes, with a grown-up nearby. Changes may take hours; revisit later without a timer or deadline. Many mature common pinecones open dry and close wet, but species differ, and some cones need special conditions to first open. Mature scale tissue is no longer living; its structure still swells unevenly with moisture and bends. The cone is not choosing or using muscles. Empty fallen cones can still change shape. The diorama shows this moisture response faster than it happens at the table, with a qualitative view inside the cone rather than a measured scale angle.",
+  "parentGuidance": "Ages 6-8. Collect fallen brown cones with Big nearby; leave green cones on branches, keep feet on the ground, and wash hands afterward. Use shallow dishes, with a grown-up nearby. Changes may take hours; revisit later without a timer or deadline. Many mature common pinecones open dry and close wet, but species differ, and some cones need special conditions to first open. Mature scale tissue is no longer living; its structure still swells unevenly with moisture and bends. The cone is not choosing or using muscles. Empty fallen cones can still change shape. The diorama shows this moisture response faster than it happens at the table, with a qualitative view inside the cone rather than a measured scale angle.",
   "sources": [
     {
       "label": "Nature · how pine cones open",
@@ -452,5 +452,16 @@
         "answer": "A dry winged seed can drift on a breeze. Wet seeds can cling to the cone instead."
       }
     ]
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare",
+      "round-ten",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
   }
 }

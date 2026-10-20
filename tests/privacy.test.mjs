@@ -250,6 +250,36 @@ test("archive publishing rejects private copy without changing existing dist", a
         { slug: "sample", date: "2026-10-12", title: "A morning.", teaser: "" },
       ],
     };
+    await mkdir(join(output, "library"));
+    await mkdir(join(output, "days/sample"), { recursive: true });
+    const tags = {
+      band: "6-8",
+      skills: ["reading", "counting", "drawing"],
+      format: "curiosity-day",
+    };
+    await writeFile(join(output, "days/sample/index.html"), "A morning.");
+    await writeFile(
+      join(output, "days/sample/pack.json"),
+      JSON.stringify({ topic: "sample", tags }),
+    );
+    await writeFile(
+      join(output, "library/6-8.json"),
+      JSON.stringify({
+        schemaVersion: 1,
+        entries: [
+          {
+            id: "sample",
+            band: tags.band,
+            topic: "sample",
+            skills: tags.skills,
+            date: "2026-10-12",
+            format: tags.format,
+            status: "published",
+            hidden: false,
+          },
+        ],
+      }),
+    );
     for (const [copy, kind] of [
       [String.fromCharCode(76, 101, 111), "NAME"],
       ["/Us" + "ers/example/image.png", "LOCAL"],

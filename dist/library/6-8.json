@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "how-a-bike-chain-works",
+      "band": "6-8",
+      "topic": "how a bike chain works",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-19",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-speakers-turn-waves-into-sound",
+      "band": "6-8",
+      "topic": "how speakers turn waves into sound",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-16",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "pinecones",
+      "band": "6-8",
+      "topic": "pinecones",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-15",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "why-electronics-use-sine-waves",
+      "band": "6-8",
+      "topic": "why electronics use sine waves",
+      "skills": [
+        "equal-groups",
+        "array",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-14",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "fridge-magnets",
+      "band": "6-8",
+      "topic": "fridge magnets",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-13",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-drill-bits-work",
+      "band": "6-8",
+      "topic": "how drill bits work",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-12",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "electrons",
+      "band": "6-8",
+      "topic": "electrons",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-09",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-kitchen-sponge",
+      "band": "6-8",
+      "topic": "a kitchen sponge",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-08",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "shadows-at-noon",
+      "band": "6-8",
+      "topic": "shadows at noon",
+      "skills": [
+        "array",
+        "equal-groups",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-06",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "tungsten-carbide",
+      "band": "6-8",
+      "topic": "tungsten carbide",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-05",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "tiny-guests",
+      "band": "6-8",
+      "topic": "tiny guests",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-02",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-paper-boat",
+      "band": "6-8",
+      "topic": "a paper boat",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-01",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "morning-dew",
+      "band": "6-8",
+      "topic": "morning dew",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "two-step",
+        "equal-groups",
+        "missing-addend",
+        "pattern-sequencing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-29",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-black-lights-work",
+      "band": "6-8",
+      "topic": "how black lights work",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "compare-materials",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-28",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-code-turns-into-lesson",
+      "band": "6-8",
+      "topic": "how code turns into a lesson",
+      "skills": [
+        "sequencing",
+        "addition",
+        "subtraction",
+        "follow-instructions",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-27",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "curiosity-inchworms",
+      "band": "6-8",
+      "topic": "inchworms",
+      "skills": [
+        "two-step",
+        "compare-distances",
+        "infer-from-evidence",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-26",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-pianos-work",
+      "band": "6-8",
+      "topic": "how pianos work",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "explain-cause-and-effect",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-25",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "diamond",
+      "band": "6-8",
+      "topic": "diamond",
+      "skills": [
+        "compare-measurements",
+        "addition",
+        "subtraction",
+        "compare-materials",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-24",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "curiosity-bean",
+      "band": "6-8",
+      "topic": "curiosity bean",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "explain-growth",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-23",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    }
+  ]
+}
