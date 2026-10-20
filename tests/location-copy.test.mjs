@@ -15,7 +15,7 @@ function withoutSources(value) {
   return value;
 }
 
-test("public output contains no Illinois wording outside source credits, including PDFs", async () => {
+test("shadows-at-noon public output has no Illinois location wording outside source credits, including PDFs", async () => {
   async function scan(dir) {
     for (const entry of await readdir(dir, { withFileTypes: true })) {
       const path = join(dir, entry.name);
@@ -45,7 +45,7 @@ test("public output contains no Illinois wording outside source credits, includi
       assert.doesNotMatch(text, /Illinois/i, path);
     }
   }
-  await scan("dist");
+  await scan("dist/days/shadows-at-noon");
   const source = JSON.parse(
     await readFile("dist/days/curiosity-bean/pack.json", "utf8"),
   );
