@@ -71,11 +71,12 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-a-bike-chain-works");
-  assert.equal(latest.date, "2026-10-19");
+  assert.equal(latest.slug, "how-rhythm-is-math");
+  assert.equal(latest.date, "2026-10-21");
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-rhythm-is-math",
       "how-a-bike-chain-works",
       "how-speakers-turn-waves-into-sound",
       "pinecones",
@@ -102,12 +103,13 @@ test("committed archive landing and the child’s /today/ are present", async ()
     "curiosity",
     "math",
     "reading",
-    "diorama",
     "quiz",
     "foldable",
     "writing",
   ])
     assert.ok(today.includes(`data-go="${surface}"`));
+  assert.doesNotMatch(today, /data-go="diorama"|\bdiorama\b/i);
+  assert.doesNotMatch(today, /data-surfaces="six"/);
   // TASK 127: no dev chrome on kid pages; hedges sit in one grown-ups note.
   const kidToday = today.split('<footer class="daily-footer">')[0];
   assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes/);
@@ -115,18 +117,26 @@ test("committed archive landing and the child’s /today/ are present", async ()
     assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
   assert.match(today, /About the pictures and numbers\./);
   assert.match(today, /data-quiz-feedback aria-live="polite"/);
-  assert.match(today, /bike-chain-diorama\.js/);
-  assert.equal(await exists("dist/today/bike-chain-diorama.css"), true);
-  assert.equal(await exists("dist/today/bike-chain-diorama.js"), true);
+  assert.deepEqual(
+    (await readdir(new URL("../dist/today/", import.meta.url))).filter((name) =>
+      name.endsWith("-diorama.js"),
+    ),
+    [],
+  );
   assert.equal(todayPack.targetAge, 8);
   assert.equal(todayPack.gradeLevel, 3);
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [45, 38, 42, 34, 48, 8],
+    [9, 4, 25, 20, 50, 30],
   );
-  assert.equal(todayPack.mathTemplate, "story-problems");
+  assert.equal(todayPack.mathTemplate, "pattern-detective");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
+  assert.deepEqual(
+    new Set(todayPack.math.tasks.map((t) => t.step)),
+    new Set([2, 5, 10]),
+  );
+  assert.equal(todayPack.surfaces, undefined);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
   assert.ok(!todayPack.answers.some((a) => a.label.startsWith("Quiz")));
@@ -136,6 +146,14 @@ test("committed archive landing and the child’s /today/ are present", async ()
     new URL("../dist/today/pdf/foldable.pdf", import.meta.url),
   );
   assert.ok(fold.length < 1_000_000);
+  assert.equal(
+    await exists("dist/days/how-a-bike-chain-works/bike-chain-diorama.js"),
+    true,
+  );
+  assert.equal(
+    await exists("dist/days/how-a-bike-chain-works/bike-chain-diorama.css"),
+    true,
+  );
   const pianoDay = await read("dist/days/how-pianos-work/index.html");
   assert.match(pianoDay, /id="piano-pilot"/);
   assert.doesNotMatch(pianoDay, /data-piano-assets/);

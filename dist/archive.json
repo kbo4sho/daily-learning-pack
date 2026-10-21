@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T02:07:37.180Z",
-  "latest": "how-a-bike-chain-works",
+  "generatedAt": "2026-10-21T13:52:10.354Z",
+  "latest": "how-rhythm-is-math",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-rhythm-is-math",
+      "date": "2026-10-21",
+      "topic": "how rhythm is math",
+      "title": "How Rhythm Is Math",
+      "teaser": "Count a beat, find a pattern, and make a rhythm of your own.",
+      "href": "./days/how-rhythm-is-math/",
+      "latest": true
+    },
     {
       "slug": "how-a-bike-chain-works",
       "date": "2026-10-19",
@@ -11,7 +20,7 @@
       "title": "How a Bike Chain Works",
       "teaser": "Follow one pedal push all the way to the back wheel.",
       "href": "./days/how-a-bike-chain-works/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-speakers-turn-waves-into-sound",
