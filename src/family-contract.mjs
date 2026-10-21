@@ -1,5 +1,5 @@
 // Mirrored in the public view. All hrefs are relative to the Pages site root.
-import { topicMetadataIssues } from "./library-contract.mjs";
+import { whyIssues } from "./library-contract.mjs";
 
 export const FAMILY_DOORS = [
   {
@@ -48,11 +48,11 @@ export function validateFamily(manifest) {
     const today = door.today;
     if (today !== null) {
       if (
-        !keys(today, "href,topic,why,skills,date,pdfs") ||
+        !keys(today, "href,topic,why,date,pdfs") ||
         today.href !== expected.href ||
         !text(today.topic) ||
         !date(today.date) ||
-        topicMetadataIssues(today).length ||
+        whyIssues(today.why).length ||
         !Array.isArray(today.pdfs) ||
         today.pdfs.length > 1
       )
