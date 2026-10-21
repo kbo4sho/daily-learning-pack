@@ -1,7 +1,36 @@
 {
   "id": "little",
-  "latest": "leaves-changing-color",
+  "latest": "snails",
   "days": [
+    {
+      "slug": "snails",
+      "date": "2026-11-02",
+      "title": "Snails",
+      "question": "How does a snail move?",
+      "tags": {
+        "band": "little",
+        "topic": "snails",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-11-02"
+      }
+    },
     {
       "slug": "leaves-changing-color",
       "date": "2026-10-19",
