@@ -187,14 +187,8 @@ async function writeArchive(root) {
  */
 async function writeWelcome(root, latest) {
   const pack = await readDayPack(root, latest);
-  const plates = Array.isArray(pack?.plates) ? pack.plates : [];
-  const doorArt = [];
-  for (const plate of plates.slice(1, 3)) {
-    const src = plate?.src && packetImageHref("../", latest.slug, plate.src);
-    if (src && (await readable(resolve(root, src.replace("../", "./")))))
-      doorArt.push({ src });
-  }
-  await mkdir(`${root}/welcome`, { recursive: true });
+  await rm(`${root}/welcome`, { recursive: true, force: true });
+  await cp("src/welcome-assets", `${root}/welcome`, { recursive: true });
   await writeFile(
     `${root}/welcome/index.html`,
     welcomePage({
@@ -202,7 +196,6 @@ async function writeWelcome(root, latest) {
         ...latest,
         face: await faceFromPack(root, latest, "../", pack),
       },
-      doorArt,
     }),
   );
   await copyFile("src/welcome.css", `${root}/welcome/welcome.css`);
