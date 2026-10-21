@@ -13,6 +13,7 @@ import {
 import { dirname, join, resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
+import { welcomePage } from "../src/welcome-render.mjs";
 
 async function readable(path) {
   try {
@@ -175,8 +176,36 @@ async function writeArchive(root) {
   await copyFile("src/archive.js", `${root}/archive.js`);
   await copyFile("src/archive.js", `${root}/archive/archive.js`);
   await copyArchiveFonts(root);
+  await writeWelcome(root, latest);
   await dropRootDayRuntime(root);
   return { latest, count: entries.length };
+}
+
+/**
+ * Hidden parent welcome page: dist/welcome/. Not linked from any nav and
+ * marked noindex. Tonight's card is the latest archive day and its plate.
+ */
+async function writeWelcome(root, latest) {
+  const pack = await readDayPack(root, latest);
+  const plates = Array.isArray(pack?.plates) ? pack.plates : [];
+  const doorArt = [];
+  for (const plate of plates.slice(1, 3)) {
+    const src = plate?.src && packetImageHref("../", latest.slug, plate.src);
+    if (src && (await readable(resolve(root, src.replace("../", "./")))))
+      doorArt.push({ src });
+  }
+  await mkdir(`${root}/welcome`, { recursive: true });
+  await writeFile(
+    `${root}/welcome/index.html`,
+    welcomePage({
+      tonight: {
+        ...latest,
+        face: await faceFromPack(root, latest, "../", pack),
+      },
+      doorArt,
+    }),
+  );
+  await copyFile("src/welcome.css", `${root}/welcome/welcome.css`);
 }
 
 export async function renderArchive(root = resolve("dist")) {
