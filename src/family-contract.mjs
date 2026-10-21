@@ -29,9 +29,8 @@ const text = (value) =>
 
 export function validateFamily(manifest) {
   if (
-    !keys(manifest, "schemaVersion,nextDate,doors") ||
+    !keys(manifest, "schemaVersion,doors") ||
     manifest.schemaVersion !== 1 ||
-    !date(manifest.nextDate) ||
     !Array.isArray(manifest.doors) ||
     manifest.doors.length !== 2
   )
@@ -39,7 +38,7 @@ export function validateFamily(manifest) {
   manifest.doors.forEach((door, index) => {
     const expected = FAMILY_DOORS[index];
     if (
-      !keys(door, "id,label,archiveHref,printHref,today,nextMorning") ||
+      !keys(door, "id,label,archiveHref,printHref,today") ||
       door.id !== expected.id ||
       door.label !== expected.label ||
       door.archiveHref !== expected.archiveHref ||
@@ -72,9 +71,6 @@ export function validateFamily(manifest) {
         seen.add(pdf.href);
       }
     }
-    const nextMorning = today?.pdfs.length === 1 ? "ready" : "ready-by-morning";
-    if (door.nextMorning !== nextMorning)
-      throw new Error("Invalid next morning status.");
   });
   return manifest.doors;
 }

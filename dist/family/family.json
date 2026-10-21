@@ -1,6 +1,5 @@
 {
   "schemaVersion": 1,
-  "nextDate": "2026-10-20",
   "doors": [
     {
       "id": "big",
@@ -25,8 +24,7 @@
             "label": "Print the pack"
           }
         ]
-      },
-      "nextMorning": "ready"
+      }
     },
     {
       "id": "little",
@@ -62,8 +60,7 @@
             "label": "Print the pack"
           }
         ]
-      },
-      "nextMorning": "ready"
+      }
     }
   ]
 }
