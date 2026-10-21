@@ -209,6 +209,7 @@ test("every archived morning retains its five working print downloads", async ()
 test("every curiosity day ships the direct-draw foldable runtime", async () => {
   const paths = [
     "dist/today/zine.js",
+    "dist/days/how-rhythm-is-math/zine.js",
     "dist/days/curiosity-inchworms/zine.js",
     "dist/days/diamond/zine.js",
     "dist/days/curiosity-bean/zine.js",
@@ -221,7 +222,13 @@ test("every curiosity day ships the direct-draw foldable runtime", async () => {
     assert.match(runtime, /pushGraphicsState\(\)/, paths[index]);
     assert.match(runtime, /rotateDegrees\(slot\.rotation\)/, paths[index]);
   }
-  for (const runtime of runtimes.slice(1)) assert.equal(runtime, runtimes[0]);
+  const neutralComment =
+    "// Foldable zine layout runtime. Daily binds its own pack/plate registry.\n";
+  for (const runtime of runtimes.slice(0, 2))
+    assert.ok(runtime.startsWith(neutralComment));
+  const withoutComment = (runtime) => runtime.replace(/^\/\/[^\n]*\n/, "");
+  for (const runtime of runtimes.slice(1))
+    assert.equal(withoutComment(runtime), withoutComment(runtimes[0]));
 });
 
 test("committed pack JSON never includes API key names", async () => {
