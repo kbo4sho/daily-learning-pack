@@ -73,9 +73,15 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.slug, latest.slug);
   assert.equal(latest.slug, "how-a-bike-chain-works");
   assert.equal(latest.date, "2026-10-19");
+  const fingerprints = json.days.find((day) => day.slug === "fingerprints");
+  assert.equal(fingerprints.date, "2026-11-01");
+  assert.equal(fingerprints.latest, false);
+  const fingerprintsPage = await read("dist/days/fingerprints/index.html");
+  assert.doesNotMatch(fingerprintsPage, /data-go="diorama"/);
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "fingerprints",
       "how-a-bike-chain-works",
       "how-speakers-turn-waves-into-sound",
       "pinecones",
