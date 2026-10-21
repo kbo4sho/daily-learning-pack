@@ -260,7 +260,11 @@ test("archive publishing rejects private copy without changing existing dist", a
     await writeFile(join(output, "days/sample/index.html"), "A morning.");
     await writeFile(
       join(output, "days/sample/pack.json"),
-      JSON.stringify({ topic: "sample", tags }),
+      JSON.stringify({
+        topic: "sample",
+        why: "Picture clues help a child explain an idea.",
+        tags,
+      }),
     );
     await writeFile(
       join(output, "library/6-8.json"),
@@ -271,6 +275,7 @@ test("archive publishing rejects private copy without changing existing dist", a
             id: "sample",
             band: tags.band,
             topic: "sample",
+            why: "Picture clues help a child explain an idea.",
             skills: tags.skills,
             date: "2026-10-12",
             format: tags.format,
