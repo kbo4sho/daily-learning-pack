@@ -13,8 +13,8 @@ test("welcome page is noindex, name-free, and shows tonight's real pack", async 
   const archive = JSON.parse(await read("dist/archive.json"));
   const latest = archive.days.find((d) => d.slug === archive.latest);
   assert.match(html, /<meta name="robots" content="noindex, nofollow">/);
-  assert.ok(html.includes("A little wonder.<br>A softer goodnight."));
-  assert.ok(html.includes("One family page.<br>A door for each kid."));
+  assert.ok(html.includes("A little wonder.<br><em>A softer goodnight.</em>"));
+  assert.ok(html.includes("One family page.<br><em>A door for each kid.</em>"));
   for (const step of [
     "They pick tomorrow.",
     "Read tonight’s pack.",
@@ -62,4 +62,19 @@ test("welcomePage requires tonight and falls back to type without art", () => {
   assert.throws(() => welcomePage({}));
   const html = welcomePage({ tonight: { title: "Pinecones", teaser: "x" } });
   assert.doesNotMatch(html, /w-card-art/);
+});
+
+test("welcome scenes ship as local, optimized webp with motion guarded", async () => {
+  const html = await read("dist/welcome/index.html");
+  const css = await read("dist/welcome/welcome.css");
+  const srcs = [...html.matchAll(/\.\/img\/([\w-]+\.webp)/g)].map((m) => m[1]);
+  assert.ok(new Set(srcs).size >= 12);
+  for (const name of new Set(srcs)) {
+    const bytes = (
+      await readFile(new URL(`../dist/welcome/img/${name}`, import.meta.url))
+    ).length;
+    assert.ok(bytes < 260_000, `${name} is ${bytes} bytes`);
+  }
+  assert.match(css, /prefers-reduced-motion: reduce/);
+  assert.doesNotMatch(html + css, /https?:\/\/(?!www\.w3\.org)/);
 });
