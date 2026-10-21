@@ -81,6 +81,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       }
       await page.goto(base + "big/");
       await page.locator("a.today-door").click();
+      // Module scripts hide later sections after parse; wait for them.
+      await page.waitForURL("**/today/");
+      await page.waitForLoadState("load");
       assert.equal(await page.locator("#reading").isVisible(), true);
       assert.equal(await page.locator("#curiosity").isVisible(), false);
       await page
