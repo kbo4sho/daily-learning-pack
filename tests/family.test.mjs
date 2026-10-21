@@ -30,7 +30,7 @@ test("family schema and metadata describe the exact current defaults", async () 
     const record = records[index];
     assert.equal(door.today.topic, index ? record.tags.topic : record.topic);
     assert.equal(door.today.why, record.why);
-    assert.deepEqual(door.today.skills, record.tags.skills);
+    assert.ok(!("skills" in door.today));
     assert.ok(!("printHref" in door.today));
     assert.ok(door.today.pdfs.length <= 1);
     for (const pdf of door.today.pdfs) {
