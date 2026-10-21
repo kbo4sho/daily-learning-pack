@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T02:07:37.180Z",
+  "generatedAt": "2026-10-21T14:46:22.300Z",
   "latest": "how-a-bike-chain-works",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "fingerprints",
+      "date": "2026-11-01",
+      "topic": "fingerprints",
+      "title": "Fingerprints",
+      "teaser": "Loops, whorls, and arches are only the beginning of the pattern.",
+      "href": "./days/fingerprints/",
+      "latest": false
+    },
     {
       "slug": "how-a-bike-chain-works",
       "date": "2026-10-19",
