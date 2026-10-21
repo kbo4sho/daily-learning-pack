@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { welcomePage } from "../src/welcome-render.mjs";
+import { esc } from "../src/html.mjs";
 import { privacyIssues } from "../scripts/privacy-check.mjs";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
@@ -20,7 +21,7 @@ test("welcome page is noindex, name-free, and shows tonight's real pack", async 
     "A note for you.",
   ])
     assert.ok(html.includes(step), step);
-  assert.ok(html.includes(latest.title.replace(/'/g, "&#39;")));
+  assert.ok(html.includes(esc(latest.title)));
   assert.ok(html.includes(`../days/${latest.slug}/`));
   assert.deepEqual(privacyIssues(html, "welcome/index.html"), []);
   assert.doesNotMatch(
