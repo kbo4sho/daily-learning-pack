@@ -44,6 +44,8 @@ const squiggle = `<svg class="w-squiggle" viewBox="0 0 160 12" aria-hidden="true
  * Wonderer characters only. `tonight` is the latest archive day with its
  * resolved story plate (face may be null; the card falls back to type).
  */
+// TODO(next step): the Start email capture below is a placeholder. It is not
+// wired to any service and sends nothing. Wire it to a real signup endpoint.
 export function welcomePage({ tonight }) {
   if (!tonight?.title) throw new Error("welcomePage requires tonight's day.");
   const face = tonight.face?.src
@@ -123,8 +125,6 @@ export function welcomePage({ tonight }) {
       <p class="w-kicker">Start</p>
       <h2 id="w-cta-title"><em>Their curiosity.</em><br>Your company.</h2>
     </div>
-    <!-- TODO(next step): email capture is a placeholder. It is not wired to any
-         service and sends nothing. Wire it to a real signup endpoint later. -->
     <form class="w-form" data-stub="email-capture" action="#start" onsubmit="return false" novalidate>
       <label for="w-email">Where should tonight’s note go?</label>
       <div class="w-form-row">
