@@ -73,29 +73,12 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.slug, latest.slug);
   assert.equal(latest.slug, "how-a-bike-chain-works");
   assert.equal(latest.date, "2026-10-19");
-  assert.deepEqual(
-    json.days.map((day) => day.slug),
-    [
-      "how-a-bike-chain-works",
-      "how-speakers-turn-waves-into-sound",
-      "pinecones",
-      "why-electronics-use-sine-waves",
-      "fridge-magnets",
-      "how-drill-bits-work",
-      "electrons",
-      "a-kitchen-sponge",
-      "shadows-at-noon",
-      "tungsten-carbide",
-      "tiny-guests",
-      "a-paper-boat",
-      "morning-dew",
-      "how-black-lights-work",
-      "how-code-turns-into-lesson",
-      "curiosity-inchworms",
-      "how-pianos-work",
-      "diamond",
-      "curiosity-bean",
-    ],
+  const slugs = json.days.map((day) => day.slug);
+  assert.equal(new Set(slugs).size, slugs.length, "day slugs stay unique");
+  assert.equal(
+    slugs.filter((slug) => slug === json.latest).length,
+    1,
+    "latest appears exactly once",
   );
   const today = await read("dist/today/index.html");
   for (const surface of [

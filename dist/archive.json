@@ -5,6 +5,16 @@
   "todayEntry": "./today/",
   "days": [
     {
+      "slug": "how-a-zipper-works",
+      "date": "2026-11-01",
+      "topic": "how a zipper works",
+      "title": "A zipper clicks together.",
+      "teaser": "Tiny teeth, one slider, and a neat click together.",
+      "href": "./days/how-a-zipper-works/",
+      "status": "draft",
+      "latest": false
+    },
+    {
       "slug": "how-a-bike-chain-works",
       "date": "2026-10-19",
       "topic": "how a bike chain works",
