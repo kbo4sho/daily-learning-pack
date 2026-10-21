@@ -33,10 +33,6 @@ test("family schema and metadata describe the exact current defaults", async () 
     assert.deepEqual(door.today.skills, record.tags.skills);
     assert.ok(!("printHref" in door.today));
     assert.ok(door.today.pdfs.length <= 1);
-    assert.equal(
-      door.nextMorning,
-      door.today.pdfs.length === 1 ? "ready" : "ready-by-morning",
-    );
     for (const pdf of door.today.pdfs) {
       assert.ok((await stat(resolve(root, pdf.href))).size > 0);
       const info = execFileSync("pdfinfo", [resolve(root, pdf.href)], {
@@ -78,18 +74,11 @@ test("family schema and metadata describe the exact current defaults", async () 
         label: "Math",
       });
     },
-    (m) => {
-      m.doors[0].today.pdfs = [];
-      m.doors[0].nextMorning = "ready";
-    },
   ]) {
     const bad = structuredClone(manifest);
     change(bad);
     assert.throws(() => validateFamily(bad));
   }
-  const later = structuredClone(manifest);
-  later.nextDate = "2099-01-01";
-  assert.doesNotThrow(() => validateFamily(later));
 });
 
 test("family pages are unlisted, static, same-origin and usable without scripts", async () => {
@@ -112,6 +101,11 @@ test("family pages are unlisted, static, same-origin and usable without scripts"
           (sum, door) => sum + (door.today?.pdfs.length || 0),
           0,
         ),
+      );
+      assert.doesNotMatch(html, /Next morning/);
+      assert.equal(
+        [...html.matchAll(/Ready to print/g)].length,
+        manifest.doors.filter((door) => door.today?.pdfs.length === 1).length,
       );
     }
     const base = new URL(path, "https://example.test/daily-learning-pack/");
