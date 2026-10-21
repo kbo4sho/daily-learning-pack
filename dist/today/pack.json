@@ -1,474 +1,501 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-a-bike-chain-works",
-  "topic": "how a bike chain works",
-  "teaser": "Follow one pedal push all the way to the back wheel.",
+  "slug": "how-rhythm-is-math",
+  "topic": "how rhythm is math",
+  "teaser": "Count a beat, find a pattern, and make a rhythm of your own.",
   "aliases": [],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "story-problems",
+  "mathTemplate": "pattern-detective",
   "ageRange": [
     7,
     9
   ],
   "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "How a Bike Chain Works",
-  "question": "How does one push of the pedal reach all the way to the back wheel?",
-  "idea": "Teeth and links turn a pedal push into a pull that turns the back wheel.",
+  "title": "How Rhythm Is Math",
+  "question": "How can counting turn into music you can feel?",
+  "idea": "A steady beat gives us places to count, and rhythm makes patterns across those places.",
   "curiosity": {
-    "intro": "A quiet bike, a loop of links, and a push to follow.",
-    "carryForward": "Find the path from your pedals to your wheel.",
+    "intro": "A soft boom through the wall, a steady count, and a pattern to discover.",
+    "carryForward": "Keep the beat going, even when one count is quiet.",
     "questions": [
       {
-        "id": "links",
-        "plate": "reach",
-        "question": "How can metal bend around a wheel?",
-        "notice": "Find the little round pins between links.",
-        "say": "A chain is a loop of links joined by tiny pins. Each joint lets neighboring links turn. The links stay the same length while the whole loop bends around a sprocket.",
-        "try": "Draw three links joined by dots for pins. Bend your drawn path around a circle."
-      },
-      {
-        "id": "pull",
+        "id": "pulse",
         "plate": "wake",
-        "question": "How does the pedal reach the back wheel?",
-        "notice": "Follow the top of the chain between the two sprockets.",
-        "say": "A sprocket is a toothed wheel. The front one, called the chainring, turns with the pedals. Its teeth pull the chain; the chain pulls the back sprocket’s teeth. That sprocket turns the back wheel as you pedal forward.",
-        "try": "Use the diorama to follow turning, pulling, then turning again."
+        "question": "What makes a beat feel steady?",
+        "notice": "Find Little listening to the drum and feeling the gentle pulse in their chest.",
+        "say": "A beat is the steady pulse underneath a rhythm. A heartbeat can remind us what a pulse feels like, although a real heart speeds up and slows down. It is steady-ish, not a perfect metronome.",
+        "try": "Put a hand on your chest for a quiet moment. Then tap a table at your own comfortable, even speed."
       },
       {
-        "id": "count",
-        "plate": "change",
-        "question": "What can a still bike show us?",
-        "notice": "Look for the chain’s links and the sprockets’ teeth.",
-        "say": "Teeth fit into the spaces between the chain’s rollers. This fit lets the sprocket pull the chain without slipping. Count the front and back teeth while everything is still.",
-        "try": "Count teeth first, then watch one slow pedal turn. Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. At the table, try notched cardboard wheels and a bead loop, or tape paper strips into a chain. Use child scissors only with Big’s yes."
+        "id": "bar",
+        "plate": "reach",
+        "question": "Why does ONE help us find our place?",
+        "notice": "Watch Big and Little clap while four small beat marks repeat nearby.",
+        "say": "Musicians group beats so they can find their place. In 4/4 time, each bar has four beats: ONE, two, three, four. A stronger ONE can mark the start of the next group. Many songs use four, but not every song does.",
+        "try": "Clap four even beats. Make ONE a little louder, then repeat the group."
       },
       {
-        "id": "gears",
+        "id": "rest",
+        "plate": "notice",
+        "question": "Can silence belong inside a rhythm?",
+        "notice": "One piano key glows on ONE while the other counted beats stay quiet.",
+        "say": "Yes. A rest is a counted place of silence. The beat keeps moving underneath it. Sound on counts one, two, and four with silence on three still makes a four-beat rhythm.",
+        "try": "Clap one, clap two, stay silent on three, and clap four. Keep your counting steady."
+      },
+      {
+        "id": "pattern",
         "plate": "return",
-        "question": "Can one pedal turn make two wheel turns?",
-        "notice": "Compare the big front sprocket with the small back one.",
-        "say": "With 32 teeth in front and 16 behind, one pedal turn gives two back-wheel turns. A big front and small back help with faster riding. A small front and big back make pedaling easier uphill. These choices are gears.",
-        "try": "Draw one circle for a pedal turn and two circles for the back wheel’s turns."
+        "question": "How can four boxes hold a rhythm?",
+        "notice": "Each box on the beat card holds one clap or one rest symbol.",
+        "say": "Rhythm is a pattern of sounds and silences across a beat. It can use long and short sounds, claps and rests, then repeat. Musicians are pattern detectives: they count, group, notice, and repeat.",
+        "try": "Draw four boxes. Put CLAP or REST in each one, play the row, and teach it to someone."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-a-bike-chain-works/01-pedal.jpg",
-      "original": "assets/how-a-bike-chain-works/01-pedal.png",
-      "foldSrc": "assets/how-a-bike-chain-works/01-pedal-fold.jpg",
-      "title": "A push has a path",
-      "alt": "Big steadies a still upside-down bike on a mat while Little studies the chain between its front and back sprockets.",
-      "caption": "The chain connects the pedal’s sprocket to the back wheel’s sprocket."
+      "src": "assets/how-rhythm-is-math/01-wall.jpg",
+      "original": "assets/how-rhythm-is-math/01-wall.png",
+      "foldSrc": "assets/how-rhythm-is-math/01-wall-fold.jpg",
+      "title": "A beat nearby",
+      "alt": "Little Wonderer listens to a hand drum sounding softly through a wall while Big Wonderer sits nearby at a warm kitchen table.",
+      "caption": "A faraway drum and a heartbeat offer two gentle clues about pulse."
     },
     {
       "id": "reach",
-      "src": "assets/how-a-bike-chain-works/02-links.jpg",
-      "original": "assets/how-a-bike-chain-works/02-links.png",
-      "foldSrc": "assets/how-a-bike-chain-works/02-links-fold.jpg",
-      "title": "Bend at each pin",
-      "alt": "A magnifier shows chain links, round pins, and rollers fitting around sprocket teeth while Big and Little watch.",
-      "caption": "Pins let links bend; teeth catch the chain."
+      "src": "assets/how-rhythm-is-math/02-count.jpg",
+      "original": "assets/how-rhythm-is-math/02-count.png",
+      "foldSrc": "assets/how-rhythm-is-math/02-count-fold.jpg",
+      "title": "A tick to count",
+      "alt": "Big and Little Wonderer clap together beside four simple beat marks in warm kitchen light.",
+      "caption": "An even count gives every clap a place to land."
     },
     {
       "id": "change",
-      "src": "assets/how-a-bike-chain-works/03-count.jpg",
-      "original": "assets/how-a-bike-chain-works/03-count.png",
-      "foldSrc": "assets/how-a-bike-chain-works/03-count-fold.jpg",
-      "title": "Teeth to count",
-      "alt": "Big holds the frame of a still upside-down bike while Little counts sprocket teeth with a notebook.",
-      "caption": "Count teeth while every part is still."
+      "src": "assets/how-rhythm-is-math/03-walk.jpg",
+      "original": "assets/how-rhythm-is-math/03-walk.png",
+      "foldSrc": "assets/how-rhythm-is-math/03-walk-fold.jpg",
+      "title": "Steady steps",
+      "alt": "Big and Little Wonderer walk left then right along four stepping stones on a quiet garden path.",
+      "caption": "Even groups can feel balanced, like feet taking turns."
     },
     {
       "id": "notice",
-      "src": "assets/how-a-bike-chain-works/04-model.jpg",
-      "original": "assets/how-a-bike-chain-works/04-model.png",
-      "foldSrc": "assets/how-a-bike-chain-works/04-model-fold.jpg",
-      "title": "A loop on the table",
-      "alt": "Big and Little follow a wooden bead loop joining a big notched cardboard wheel and a small one.",
-      "caption": "The big wheel pulls a loop that turns the small wheel."
+      "src": "assets/how-rhythm-is-math/04-piano.jpg",
+      "original": "assets/how-rhythm-is-math/04-piano.png",
+      "foldSrc": "assets/how-rhythm-is-math/04-piano-fold.jpg",
+      "title": "Sound and silence",
+      "alt": "Little Wonderer taps one piano key while Big Wonderer counts four even beats beside the bench.",
+      "caption": "A sound can land on ONE while the steady count continues."
     },
     {
       "id": "return",
-      "src": "assets/how-a-bike-chain-works/05-turns.jpg",
-      "original": "assets/how-a-bike-chain-works/05-turns.png",
-      "foldSrc": "assets/how-a-bike-chain-works/05-turns-fold.jpg",
-      "title": "One turn becomes two",
-      "alt": "Big and Little study a notebook drawing of a large front sprocket, a smaller back sprocket, and curved turn arrows.",
-      "caption": "More front teeth can mean more back-wheel turns."
+      "src": "assets/how-rhythm-is-math/05-card.jpg",
+      "original": "assets/how-rhythm-is-math/05-card.png",
+      "foldSrc": "assets/how-rhythm-is-math/05-card-fold.jpg",
+      "title": "Patterns to repeat",
+      "alt": "Big and Little Wonderer study a handmade four-box beat card filled with simple clap and rest symbols.",
+      "caption": "Four boxes make a small pattern that can sound, pause, and repeat."
     },
     {
       "id": "keep",
-      "src": "assets/how-a-bike-chain-works/06-ride.jpg",
-      "original": "assets/how-a-bike-chain-works/06-ride.png",
-      "foldSrc": "assets/how-a-bike-chain-works/06-ride-fold.jpg",
-      "title": "A push goes with you",
-      "alt": "Helmeted Little rides slowly on a quiet garden path with Big walking beside the bike.",
-      "caption": "A chain carries each pedal pull to the back wheel."
+      "src": "assets/how-rhythm-is-math/06-teach.jpg",
+      "original": "assets/how-rhythm-is-math/06-teach.png",
+      "foldSrc": "assets/how-rhythm-is-math/06-teach-fold.jpg",
+      "title": "Teach your rhythm",
+      "alt": "Little Wonderer teaches a four-beat clap-and-pat rhythm to Big Wonderer across the kitchen table.",
+      "caption": "A pattern becomes shared when someone else can repeat it."
     }
   ],
   "reading": {
-    "title": "Follow one pedal push",
+    "title": "Count the rhythm you can feel",
     "coverPlate": "wake",
-    "coverText": "A loop of links connects two turning wheels.",
-    "foldableTitle": "A little book of pedal pushes",
-    "foldableCoverLine": "How a Bike Chain Works",
-    "foldableNote": "Carry the path of a pedal push in a small book.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Trace the causal path together and use the pictures to support the new words.",
+    "coverText": "A beat gives rhythm a steady path through time.",
+    "foldableTitle": "A little book of beats",
+    "foldableCoverLine": "How Rhythm Is Math",
+    "foldableNote": "Carry a four-beat pattern in a small book.",
+    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Clap the examples slowly enough that the count stays comfortable.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A push has a path",
-        "passage": "Little Wonderer studied the bike resting on its mat. The pedals sat far from the back wheel. “How does one push reach all that way?” A chain joined them. It was a loop of small metal pieces called links. Big pointed along the loop, from the front sprocket to the back.",
-        "prompt": "What connects the pedals to the back wheel?",
+        "title": "A beat nearby",
+        "passage": "Boom-tap-tap-tap came softly through the wall. Little Wonderer put a hand on their chest. A heartbeat was already making a steady-ish pattern. It was not a perfect clock, but it offered a gentle clue: rhythm begins when sounds or movements meet a pulse we can feel.",
+        "prompt": "Why is a heartbeat only a gentle clue for a beat?",
         "foldable": {
-          "heading": "A push has a path",
-          "body": "The pedals were far from the back wheel. A loop of small metal links joined them. Little wondered how a push could travel."
+          "heading": "A beat nearby",
+          "body": "A drum sounded through the wall. Little felt a heartbeat too. It was steady-ish, not a perfect clock, but it offered a clue."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Bend at each pin",
-        "passage": "Each link joined the next with a tiny pin. The links could turn at these joints, so the chain bent around a wheel without stretching like rubber. That toothed wheel was a sprocket. Its teeth fitted between the chain’s rollers. The hooked-together shapes kept the chain from slipping as it pulled.",
-        "prompt": "Why do joints help a chain fit around a sprocket?",
+        "title": "A tick to count",
+        "passage": "Big tapped the table evenly. Little counted, “One, two, three, four.” Each number landed on a steady tick. That steady pulse was the beat. The claps could change, but the beat kept giving them places in time. Count was the tool that helped both Wonderers stay together.",
+        "prompt": "What stays steady while the claps change?",
         "foldable": {
-          "heading": "Bend at each pin",
-          "body": "Tiny pins join the links. The chain bends at these joints without stretching like rubber. Sprocket teeth hook into the chain as it moves."
+          "heading": "A tick to count",
+          "body": "Big tapped evenly while Little counted. Each number landed on a steady beat. Counting helped them stay together."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Teeth to count",
-        "passage": "With the bike completely still, Little counted teeth. The big front sprocket, called the chainring, turned with the pedals. Its teeth pulled the top of the chain toward the front. The moving chain pulled the back sprocket’s teeth. While pedaling forward, that sprocket drove the back wheel. Turning became pulling, then turning again.",
-        "prompt": "Which part pulls the top of the chain?",
+        "title": "Four make a bar",
+        "passage": "Musicians often gather beats into groups. In 4/4 time, one bar holds four beats. Little clapped ONE, two, three, four, making ONE a little louder. The stronger first beat pointed to the start of the group. Not every song uses four, but this group was easy to find again.",
+        "prompt": "What does the louder ONE help a musician find?",
         "foldable": {
-          "heading": "Turning, then pulling",
-          "body": "Pedals turn the front sprocket. Its teeth pull the chain. The chain pulls the back sprocket, which turns the back wheel."
+          "heading": "Four make a bar",
+          "body": "In 4/4 time, one bar has four beats. A louder ONE can show where the group begins again."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A loop on the table",
-        "passage": "At the table, Big turned a cardboard wheel by its middle. A loop of beads sat in notches around its edge. As the big wheel turned, it pulled the bead loop. The loop turned a smaller wheel. Little followed one bead around. Each part passed the motion to the next.",
-        "prompt": "How does the bead loop pass motion between wheels?",
+        "title": "Steady steps",
+        "passage": "Four even beats felt balanced, like walking left-right-left-right. At the piano, Little played one key on every beat. Next came a key only on ONE, then keys on one and three. The sounds moved around, yet Big’s quiet count stayed steady underneath them.",
+        "prompt": "How can the sounds move while the beat stays steady?",
         "foldable": {
-          "heading": "A loop on the table",
-          "body": "Big turned a cardboard wheel. It pulled the bead loop, and the loop turned the smaller wheel. Little followed one bead around."
+          "heading": "Steady steps",
+          "body": "Four beats felt balanced, like left-right-left-right. The sounds changed, but the quiet count stayed steady underneath."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "One turn becomes two",
-        "passage": "The notebook showed 32 teeth in front and 16 at the back. One pedal turn moved the chain past 32 teeth: enough for two back-wheel turns. A big front and small back suit faster riding. A small front and big back make pedaling easier uphill. These choices are called gears.",
-        "prompt": "Which gear choice would make an uphill pedal push easier?",
+        "title": "Pattern detectives",
+        "passage": "Rhythm was the pattern placed across the beat: long or short, clap or rest, sound or silence, then repeat. A rest was not a lost beat. It was a beat of silence that still had to be counted. Little clapped one, two, rested on three, and clapped four.",
+        "prompt": "Why does a rest still need to be counted?",
         "foldable": {
-          "heading": "One turn becomes two",
-          "body": "The front had 32 teeth. The back had 16. One pedal turn carried enough chain past the back sprocket to turn it twice."
+          "heading": "Pattern detectives",
+          "body": "Rhythm uses sounds and silences across a beat. A rest is counted silence, not a lost beat. Patterns can repeat."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A push goes with you",
-        "passage": "Little’s helmet was snug for a gentle ride beside Big. The chain carried each pedal pull to the back wheel. A drill bit’s spiral carries chips; a bike chain carries a pull. Turning shapes could do different jobs. “Where else could a loop carry motion?” Little wondered.",
-        "prompt": "Where else might a loop carry a pull?",
+        "title": "Teach your rhythm",
+        "passage": "Little drew four boxes on a beat card. Each box held CLAP, pat, or rest. Then Little played the whole row and taught it to Big. Big repeated it. Rhythm was counting they could feel. Together they had become pattern detectives: count, group, notice, repeat.",
+        "prompt": "What makes a four-beat pattern easy to teach?",
         "foldable": {
-          "heading": "A push goes with you",
-          "body": "Little pedaled beside Big. The chain carried each pull to the back wheel. Where else could a loop carry motion?"
+          "heading": "Teach your rhythm",
+          "body": "Little filled four boxes with CLAP, pat, or rest, played the row, and taught the pattern to Big."
         }
       }
     ],
     "words": [
       {
-        "word": "chain",
-        "meaning": "a loop of joined links that carries a pull"
+        "word": "beat",
+        "meaning": "the steady pulse underneath a rhythm"
       },
       {
-        "word": "link",
-        "meaning": "one small piece in a chain"
+        "word": "rhythm",
+        "meaning": "a pattern of sounds and silences across a beat"
       },
       {
-        "word": "pin",
-        "meaning": "a tiny rod that joins neighboring links"
+        "word": "pattern",
+        "meaning": "an order that can be noticed or repeated"
       },
       {
-        "word": "sprocket",
-        "meaning": "a wheel with teeth that fit a chain"
+        "word": "count",
+        "meaning": "to name the beats in order"
       },
       {
-        "word": "teeth",
-        "meaning": "the points around a sprocket that engage the chain"
+        "word": "group",
+        "meaning": "to gather beats so their order is easier to find"
       },
       {
-        "word": "pedal",
-        "meaning": "the part your foot pushes to turn the front sprocket"
+        "word": "bar",
+        "meaning": "one group of beats in music"
       },
       {
-        "word": "gear",
-        "meaning": "a choice of sprockets that changes effort and wheel turns"
+        "word": "rest",
+        "meaning": "a counted place of silence"
       },
       {
-        "word": "pull",
-        "meaning": "a force that draws something toward it"
+        "word": "repeat",
+        "meaning": "to do the pattern again"
       },
       {
-        "word": "turn",
-        "meaning": "to move around a center"
+        "word": "steady",
+        "meaning": "continuing at an even pace"
       },
       {
-        "word": "wheel",
-        "meaning": "the round part that rolls the bike along"
+        "word": "loud",
+        "meaning": "making a stronger sound"
       }
     ],
     "questions": [
-      "Why can the chain bend around a sprocket without stretching like rubber?",
-      "How do teeth and links help a pedal push reach the back wheel?",
-      "Why does a back sprocket with 16 teeth turn twice when a front sprocket with 32 teeth turns once?"
+      "How is a beat different from a rhythm?",
+      "What does the louder ONE do in a four-beat bar?",
+      "Why is a rest part of the pattern even though it is silent?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one command sentence for studying a still sprocket.",
-      "example": "Example: Count the teeth on the big sprocket, then draw the chain hugging it."
+      "prompt": "Write your 4-beat pattern with words: CLAP, pat, or rest.",
+      "example": "My rhythm feels like ___ because ___."
     }
   },
   "math": {
-    "title": "Small stories around a bike",
-    "plate": "notice",
-    "intro": "Find the two amounts in each story, then add or subtract.",
-    "eyebrow": "SIX BIKE-CHAIN STORIES",
-    "actionLabel": "Follow each little story",
+    "title": "Pattern detectives at practice",
+    "plate": "return",
+    "intro": "Each sequence grows by the same step. Find the one missing count.",
+    "eyebrow": "SIX RHYTHM PATTERNS",
+    "actionLabel": "Find the next or missing count",
     "tasks": [
       {
-        "skill": "one-step-add",
-        "operands": [
-          28,
-          17
+        "skill": "skip-next",
+        "sequence": [
+          1,
+          3,
+          5,
+          7,
+          9
         ],
-        "prompt": "Little joins 28 paper links, then adds 17 more. How many links are in the paper chain?",
-        "equation": "28 + 17 =",
-        "hint": "Combine the links from both groups.",
-        "answer": 45,
-        "worked": "28 + 17 = 45 links. Add 10 to get 38, then add 7.",
-        "plate": "wake",
+        "step": 2,
+        "blankIndex": 4,
+        "prompt": "Little’s clap counts grow by 2 each time. Which count comes next?",
+        "equation": "1, 3, 5, 7, ___",
+        "hint": "Add 2 to each clap count.",
+        "answer": 9,
+        "worked": "7 + 2 = 9, so the next clap count is 9.",
+        "plate": "reach",
         "label": "TASK 1"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          64,
-          26
+        "skill": "skip-missing",
+        "sequence": [
+          2,
+          4,
+          6,
+          8
         ],
-        "prompt": "Big has 64 beads and threads 26 onto a model chain. How many beads are left?",
-        "equation": "64 − 26 =",
-        "hint": "Take away the beads already threaded.",
-        "answer": 38,
-        "worked": "64 − 26 = 38 beads. Subtract 20 to get 44, then subtract 6.",
+        "step": 2,
+        "blankIndex": 1,
+        "prompt": "Big marks every other count in a repeating rhythm. Which count is missing?",
+        "equation": "2, ___, 6, 8",
+        "hint": "Start at 2 and add 2 each time.",
+        "answer": 4,
+        "worked": "2 + 2 = 4, so the missing count is 4.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          23,
-          19
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20,
+          25
         ],
-        "prompt": "Little records 23 slow pedal turns, then 19 more. How many pedal turns are recorded?",
-        "equation": "23 + 19 =",
-        "hint": "Join the two counts of pedal turns.",
-        "answer": 42,
-        "worked": "23 + 19 = 42 turns. Add 20 to get 43, then take back 1.",
-        "plate": "change",
+        "step": 5,
+        "blankIndex": 4,
+        "prompt": "A stack of beat cards grows by 5 each time. Which total comes next?",
+        "equation": "5, 10, 15, 20, ___",
+        "hint": "Add 5 to the last total.",
+        "answer": 25,
+        "worked": "20 + 5 = 25, so 25 comes next.",
+        "plate": "return",
         "label": "TASK 3"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          52,
-          18
+        "skill": "skip-missing",
+        "sequence": [
+          10,
+          15,
+          20,
+          25
         ],
-        "prompt": "A paper gear has 52 drawn teeth. Little colors 18. How many teeth still need color?",
-        "equation": "52 − 18 =",
-        "hint": "Subtract the teeth that are colored.",
-        "answer": 34,
-        "worked": "52 − 18 = 34 teeth. Subtract 10 to get 42, then subtract 8.",
-        "plate": "notice",
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "Little counts pattern cards in steps of 5. Which total is missing?",
+        "equation": "10, 15, ___, 25",
+        "hint": "Add 5 after 15 and check that one more step reaches 25.",
+        "answer": 20,
+        "worked": "15 + 5 = 20, and 20 + 5 = 25.",
+        "plate": "return",
         "label": "TASK 4"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          32,
-          16
+        "skill": "skip-next",
+        "sequence": [
+          10,
+          20,
+          30,
+          40,
+          50
         ],
-        "prompt": "A bike has 32 teeth on its front sprocket and 16 on its back sprocket. How many teeth is that in all?",
-        "equation": "32 + 16 =",
-        "hint": "Add the teeth on the two sprockets.",
-        "answer": 48,
-        "worked": "32 + 16 = 48 teeth. Add 10 to get 42, then add 6.",
-        "plate": "return",
+        "step": 10,
+        "blankIndex": 4,
+        "prompt": "Practice taps are counted in steps of 10. Which total comes next?",
+        "equation": "10, 20, 30, 40, ___",
+        "hint": "Add 10 to 40.",
+        "answer": 50,
+        "worked": "40 + 10 = 50, so 50 comes next.",
+        "plate": "notice",
         "label": "TASK 5"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          15,
-          7
+        "skill": "skip-missing",
+        "sequence": [
+          20,
+          30,
+          40,
+          50
         ],
-        "prompt": "Little plans 15 gentle driveway laps and finishes 7. How many laps are left?",
-        "equation": "15 − 7 =",
-        "hint": "Take the finished laps away from the plan.",
-        "answer": 8,
-        "worked": "15 − 7 = 8 laps. Count from 7 up to 15 to find the difference.",
+        "step": 10,
+        "blankIndex": 1,
+        "prompt": "Big counts all the claps from several rounds in steps of 10. Which total is missing?",
+        "equation": "20, ___, 40, 50",
+        "hint": "Add 10 after 20.",
+        "answer": 30,
+        "worked": "20 + 10 = 30, so the missing total is 30.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Draw the amounts in one story to show how you found the answer.",
-    "printNote": "Use numbers or a drawing to share your thinking.",
-    "parentNote": "Grade 2 math. Six one-step addition and subtraction stories stay within 100. Quantities are supplied in the questions; there is no need to count painted details.",
-    "answerKeyIntro": "Grade 2 math. Join the amounts for addition or find what remains for subtraction. Each story takes one step."
+    "extension": "Make a new count-by-2, count-by-5, or count-by-10 rhythm sequence with one blank.",
+    "printNote": "Write one number in each blank, then explain the step you found.",
+    "parentNote": "Grade 2 math. Six skip-counting patterns use steps of 2, 5, and 10. Each sequence has exactly one missing number.",
+    "answerKeyIntro": "Grade 2 math. Find the constant step, then add it to reach the next term or fill the gap."
   },
   "writing": {
-    "title": "Give the chain a clear command",
-    "intro": "Choose a still view and tell what to count or draw.",
+    "title": "Write a rhythm someone can follow",
+    "intro": "Choose a scene. Say your pattern first, then draw or write it.",
     "plateIds": [
       "reach",
-      "change",
-      "notice"
+      "return",
+      "keep"
     ],
-    "draw": "Draw two sprockets joined by a chain. Add an arrow along the top of the chain.",
-    "starter": "My chain-watching command",
+    "draw": "Draw four boxes. Fill each box with CLAP, pat, or rest.",
+    "starter": "My four-beat rhythm",
     "frames": [
       {
         "plate": "reach",
-        "start": "Trace",
-        "hint": "name the loop you will follow"
+        "start": "ONE, two, three, four feels",
+        "hint": "dictate a feeling word"
       },
       {
-        "plate": "change",
-        "start": "Count",
-        "hint": "name the teeth on a still sprocket"
+        "plate": "return",
+        "start": "My pattern is",
+        "hint": "say CLAP, pat, or rest four times"
       },
       {
-        "plate": "notice",
-        "start": "Draw",
-        "hint": "show how a loop joins two wheels"
+        "plate": "keep",
+        "start": "To teach it, I will",
+        "hint": "tell how someone can follow your beat"
       }
     ],
     "words": [
-      "chain",
-      "link",
-      "pin",
-      "sprocket",
-      "teeth",
-      "pedal",
-      "gear",
-      "pull",
-      "turn",
-      "wheel"
+      "beat",
+      "rhythm",
+      "pattern",
+      "count",
+      "group",
+      "bar",
+      "rest",
+      "repeat",
+      "steady",
+      "loud"
     ],
-    "check": "Does your command begin with an action word, such as Trace, Count, or Draw?",
-    "parentNote": "Accept speech, dictation, drawing, or writing. One clear command is plenty. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
+    "check": "Does your pattern have four places? Read or dictate each place in order.",
+    "parentNote": "Offer dictation: say each beat aloud while the child points to a box. Speech, drawing, invented spelling, or a written sentence all count."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The rigid links turn at joints joined by tiny pins. The chain bends at those joints instead of stretching like rubber."
+      "text": "A beat is the steady pulse; rhythm is the pattern of sounds and silences placed across it."
     },
     {
       "label": "Reading · 2",
-      "text": "The pedal turns the front sprocket. Its teeth pull the chain, which pulls the back sprocket’s teeth and turns the back wheel."
+      "text": "The louder ONE marks the start of the four-beat group, helping a musician find their place."
     },
     {
       "label": "Reading · 3",
-      "text": "One front turn moves the chain past 32 teeth. That is two groups of 16, so the back sprocket and wheel turn twice."
+      "text": "A rest takes up a counted place in time, so the beat continues even when no sound is made."
     },
     {
       "label": "Writing",
-      "text": "A spoken, dictated, drawn, or written command counts. Example: “Count the teeth on the big sprocket, then draw the chain hugging it.”"
+      "text": "A spoken, dictated, drawn, or written four-place pattern counts. Each place may say CLAP, pat, or rest."
     }
   ],
-  "sources": [
-    {
-      "label": "Exploratorium · bicycle drives and gears",
-      "url": "https://annex.exploratorium.edu/cycling/gears1.html"
-    },
-    {
-      "label": "Canada Science and Technology Museum · Cycle-ology",
-      "url": "https://publications.gc.ca/collections/collection_2017/mstc-cstm/NM34-4-2008-eng.pdf"
-    },
-    {
-      "label": "Tsubaki · chain structure",
-      "url": "https://catalog.ustsubaki.com/view/303981549"
-    }
-  ],
-  "surfaces": {
-    "layout": "six",
-    "diorama": "bike-chain"
-  },
-  "titleCard": {
-    "plate": "wake",
-    "edition": "BIKE CHAINS · 2026-10-19",
-    "subtitle": "One pedal push. A whole path of motion."
-  },
   "quiz": {
-    "title": "Four stops along the chain",
-    "intro": "Follow the pull from pedal to wheel.",
+    "title": "Four stops in the rhythm",
+    "intro": "Keep the beat, find the group, and notice the pattern.",
     "questions": [
       {
-        "id": "pins",
-        "prompt": "Why can a bike chain bend around a sprocket?",
+        "id": "beat",
+        "prompt": "What is a beat?",
         "choices": [
-          "Its metal stretches like rubber",
-          "Its links turn at joints joined by pins",
-          "Its teeth fold in half"
-        ],
-        "answerIndex": 1,
-        "answer": "Tiny pins join the links and let neighboring links turn at their joints."
-      },
-      {
-        "id": "path",
-        "prompt": "What does the front sprocket do as you pedal forward?",
-        "choices": [
-          "It pulls the chain with its teeth",
-          "It pushes the back tire through the air",
-          "It stretches each chain link"
+          "A steady pulse",
+          "Only the loudest sound",
+          "A song that must use four"
         ],
         "answerIndex": 0,
-        "answer": "The front sprocket’s teeth pull the chain. The chain then pulls the back sprocket’s teeth."
+        "answer": "A beat is the steady pulse underneath a rhythm."
       },
       {
-        "id": "turns",
-        "prompt": "With 32 teeth in front and 16 behind, how many back-wheel turns come from one pedal turn?",
+        "id": "bar",
+        "prompt": "How many beats are in one bar of 4/4 time?",
         "choices": [
-          "One",
-          "Three",
-          "Two"
-        ],
-        "answerIndex": 2,
-        "answer": "The back wheel turns twice: 32 front teeth move the chain past two groups of 16 back teeth."
-      },
-      {
-        "id": "hill",
-        "prompt": "Which sprocket pair makes pedaling easier uphill?",
-        "choices": [
-          "Big front and small back",
-          "Small front and big back",
-          "Two sprockets without a chain"
+          "Two",
+          "Four",
+          "Every song has a different answer"
         ],
         "answerIndex": 1,
-        "answer": "A small front sprocket and a big back sprocket make pedaling easier uphill, with fewer wheel turns per pedal turn."
+        "answer": "One bar of 4/4 time has four beats."
+      },
+      {
+        "id": "rest",
+        "prompt": "What happens during a rest?",
+        "choices": [
+          "The counted beat is silent",
+          "The beat disappears",
+          "The song must stop forever"
+        ],
+        "answerIndex": 0,
+        "answer": "A rest is a counted place of silence, so the beat keeps moving."
+      },
+      {
+        "id": "rhythm",
+        "prompt": "What makes a rhythm?",
+        "choices": [
+          "A pattern of sounds and silences",
+          "Only loud claps",
+          "Four notes in every song"
+        ],
+        "answerIndex": 0,
+        "answer": "Rhythm is a pattern of sounds and silences across a beat."
       }
     ]
   },
-  "parentGuidance": "Keep Big beside you. Count only while the bike is still. Big holds an upside-down bike steady on a mat; turn only the pedal slowly by hand, with fingers well away from chain, sprockets, and spokes whenever anything moves. Leave oiling and repairs to Big. Oil helps the joints bend smoothly. Links do not stretch like elastic during ordinary pedaling; wear at pins and bushings can lengthen a chain over time. The diorama shows a single chainring and rear sprocket with a fixed 32-to-16 tooth ratio. It isolates forward pedaling, when the rear freewheel engages; coasting lets a wheel continue without turning the pedals. The top run carries the greater pulling tension. The lower run returns the chain. A bead loop needs matching notches to engage a cardboard model; a smooth string can show the path but may slip. A smaller front-to-back tooth ratio gives more turning force at the wheel for the same pedal effort, at the cost of fewer wheel turns. Helmet on for a ride beside Big."
+  "parentGuidance": "A beat is a steady pulse; rhythm is the pattern placed across it. A heartbeat is only a gentle analogy because real heart rate changes and is not a metronome. In 4/4 time there are four beats per bar, often with a stronger first beat, but not every song is in four. A rest is counted silence. Clap and table-tap freely; an optional piano activity needs only one ordinary key and a grown-up nearby. The scenes are not measured music notation. Welcome speech, dictation, drawing, movement, or writing, and stop when the shared play feels complete.",
+  "sources": [
+    {
+      "label": "Open Music Theory · meter and time signatures",
+      "url": "https://openmusictheory.github.io/meter.html"
+    },
+    {
+      "label": "Open Music Theory · rhythmic values and rests",
+      "url": "https://openmusictheory.github.io/rhythmicValues.html"
+    },
+    {
+      "label": "musictheory.net · rest duration",
+      "url": "https://www.musictheory.net/lessons/13"
+    },
+    {
+      "label": "NAfME · elementary rhythm-card practice",
+      "url": "https://nafme.org/wp-content/uploads/2025/03/MIOSM-2025-Inspire-Music-Curriculum-Composition-Projects.pdf"
+    }
+  ],
+  "titleCard": {
+    "plate": "wake",
+    "edition": "RHYTHM · 2026-10-21",
+    "subtitle": "Count it. Group it. Feel the pattern."
+  }
 }
