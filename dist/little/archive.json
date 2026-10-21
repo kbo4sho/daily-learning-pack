@@ -32,6 +32,35 @@
       }
     },
     {
+      "slug": "sorting-socks",
+      "date": "2026-11-03",
+      "title": "Sorting Socks",
+      "question": "How can we sort a jumble of socks?",
+      "tags": {
+        "band": "little",
+        "topic": "sorting socks",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-11-03"
+      }
+    },
+    {
       "slug": "puddles",
       "date": "2026-10-17",
       "title": "Puddles",
