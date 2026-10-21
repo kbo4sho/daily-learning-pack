@@ -39,7 +39,6 @@ test("email capture is a disabled, unwired stub", async () => {
   assert.match(form, /onsubmit="return false"/);
   assert.match(form, /<button type="submit" disabled/);
   assert.doesNotMatch(form, /https?:/);
-  assert.match(html, /TODO\(next step\)/);
 });
 
 test("no committed page links to the hidden welcome page", async () => {
@@ -61,7 +60,7 @@ test("no committed page links to the hidden welcome page", async () => {
 test("welcomePage requires tonight and falls back to type without art", () => {
   assert.throws(() => welcomePage({}));
   const html = welcomePage({ tonight: { title: "Pinecones", teaser: "x" } });
-  assert.doesNotMatch(html, /w-card-art/);
+  assert.doesNotMatch(html, /w-pack-art/);
 });
 
 test("welcome scenes ship as local, optimized webp with motion guarded", async () => {
