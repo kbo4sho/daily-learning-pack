@@ -15,6 +15,12 @@ const identifier = new RegExp(
 );
 const home = /\/Users\/|~\/|\$(?:HOME\b|\{HOME\})/g;
 const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
+// Private upstream repo names never reach public output.
+// Built from parts so this guard file does not match itself.
+const privateRepo = new RegExp(
+  `\\b${["super", "dad"].join("[\\s_-]?")}\\b`,
+  "gi",
+);
 
 // Stricter ban list for the second learner's public /little/ tree
 // (reports/FM-2026-10-16-02.md update 3): no age, band, grade or birthday
@@ -82,6 +88,7 @@ export function privacyIssues(text, label = "content") {
     ["IDENTIFIER", identifier],
     ["LOCAL", home],
     ["LOCAL", host],
+    ["PRIVATE_REPO", privateRepo],
   ]) {
     // Third-party minified identifiers are arbitrary short symbols, not reader
     // identifiers. Do not exempt our own minified/inline output or vendor copy
