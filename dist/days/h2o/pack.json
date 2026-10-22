@@ -108,7 +108,7 @@
       "src": "assets/h2o/06-dissolve.jpg",
       "original": "assets/h2o/06-dissolve.png",
       "foldSrc": "assets/h2o/06-dissolve-fold.jpg",
-      "title": "Some things disappear",
+      "title": "Some things dissolve",
       "alt": "Big and Little Wonderer compare clear cups of water beside small bowls of sugar and salt at the kitchen table.",
       "caption": "Water can dissolve many substances by surrounding and carrying away their tiny pieces."
     }
@@ -181,7 +181,7 @@
         "id": "keep",
         "plate": "keep",
         "title": "Water makes room",
-        "passage": "A spoonful of sugar seemed to disappear in water, but its tiny pieces had not vanished. Water molecules surrounded those pieces and carried them through the glass. Water can dissolve many substances, including sugar and salt, though it cannot dissolve everything. One small molecule had many remarkable ways to act.",
+        "passage": "A spoonful of sugar seemed to disappear in water, but its tiny pieces had not vanished. Water molecules surrounded those pieces and spread them through the water in the glass. Water can dissolve many substances, including sugar and salt, though it cannot dissolve everything. One small molecule had many remarkable ways to act.",
         "prompt": "What happens to sugar when it dissolves in water?",
         "foldable": {
           "heading": "Water dissolves",
