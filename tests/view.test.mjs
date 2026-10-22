@@ -129,18 +129,19 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [12, 12, 10, 15, 10, 20],
+    [8, 9, 10, 15, 16, 20],
   );
+  assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
   assert.equal(todayPack.mathTemplate, "groups-and-arrays");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
     todayPack.math.tasks.map(({ rows, columns }) => [rows, columns]),
     [
-      [3, 4],
-      [4, 3],
+      [2, 4],
+      [3, 3],
       [5, 2],
       [3, 5],
-      [2, 5],
+      [4, 4],
       [5, 4],
     ],
   );
