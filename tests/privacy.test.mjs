@@ -534,3 +534,15 @@ test("previously published pack.json and day pages fail the pack JSON guard", as
     await rm(dir, { recursive: true, force: true });
   }
 });
+
+test("privacy guard rejects the private upstream repo name in public output", () => {
+  const repo = ["super", "dad"].join("-");
+  for (const value of [
+    `// Light port of kbo4sho/${repo} PR #37.`,
+    repo.toUpperCase(),
+    repo.replace("-", ""),
+    repo.replace("-", "_"),
+  ])
+    assert.match(privacyIssues(value, "zine.js").join("\n"), /PRIVATE_REPO/);
+  assert.equal(privacyIssues("a super dadaist", "zine.js").length, 0);
+});
