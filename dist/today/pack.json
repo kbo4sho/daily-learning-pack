@@ -1,473 +1,483 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "a-coffee-filter-parachute",
-  "topic": "a coffee filter parachute",
-  "teaser": "Turn a flat coffee filter into a tiny canopy and test how air slows its fall.",
+  "slug": "how-bike-derailleurs-work",
+  "topic": "how do bike derailleurs work?",
+  "teaser": "Follow one shifter click from the cable to the chain, then see why different cogs make hills feel easier or harder.",
   "aliases": [
-    "coffee filter parachute",
-    "parachutes"
+    "bike derailleurs",
+    "bicycle gears",
+    "how derailleurs work"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "compare-and-round",
+  "mathTemplate": "number-crunch",
   "ageRange": [
     7,
     9
   ],
   "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "A Coffee Filter Parachute",
-  "question": "Why does a wide coffee filter parachute float down more slowly than a crumpled filter?",
-  "idea": "Gravity pulls a parachute down while moving air pushes back; a wide canopy catches more air, creating more drag and slowing the fall.",
+  "title": "How Bike Derailleurs Work",
+  "question": "How does one click at the shifter move a bike chain onto a different gear?",
+  "idea": "A derailleur guides a moving chain sideways between gears while a spring and two small pulley wheels keep the chain snug.",
   "curiosity": {
-    "intro": "Build one tiny parachute, then change one thing at a time to discover what slows and steadies its fall.",
-    "carryForward": "Watch how the canopy meets the air, and keep every comparison fair.",
+    "intro": "Trace the chain's loop, follow the shifter cable, and watch a small sideways nudge choose a new gear.",
+    "carryForward": "Keep looking for three jobs: guide the chain, move it sideways, and take up extra slack.",
     "questions": [
       {
-        "id": "drag",
+        "id": "loop",
         "plate": "wake",
-        "question": "What slows the parachute?",
-        "notice": "Find the wide canopy above the hanging paperclip and notice the open space it covers.",
-        "say": "Gravity pulls the parachute down. As it moves, tiny moving pieces of air push back. That air resistance, also called drag, slows the fall; it does not turn gravity off.",
-        "try": "An adult stays beside you while you attach equal strings or yarn and a paperclip or small toy to a coffee filter. Ask that adult to use the scissors. Drop from standing height, or let the adult hold it higher. Never climb on chairs, stair railings, windows, or balconies."
+        "question": "Where does the chain travel?",
+        "notice": "Follow the chain around the front chainring, back to one cog in the cassette, and through the two small pulley wheels below.",
+        "say": "The chain forms one long loop. It grips teeth on a front gear, called a chainring, and on one back gear, called a cog. Turning the pedals pulls the chain and turns the back wheel.",
+        "try": "Use a finger in the air to trace the whole loop without touching the bike. Name the front chainring, back cog, and lower pulley wheels."
       },
       {
-        "id": "shape",
+        "id": "rear",
         "plate": "reach",
-        "question": "Why does the flat filter fall more slowly?",
-        "notice": "Compare the open, wide filter with the same kind of filter crumpled into a small shape.",
-        "say": "The wide filter has more surface area facing the moving air. It catches more air and makes more drag, so it falls more slowly than the crumpled filter even though both filters weigh the same.",
-        "try": "Drop one filter flat and the same filter crumpled. Count the fall time or use a timer, then open the filter and repeat."
+        "question": "What does the rear derailleur move?",
+        "notice": "Look below the back cogs for the small arm that lines its upper pulley with the cog holding the chain.",
+        "say": "On a mechanical bike, the shifter pulls or lets go of a cable. The cable and a return spring move the rear derailleur sideways. Its upper pulley guides the moving chain from one back cog to the next.",
+        "try": "Hold two hands apart like neighboring cogs. Move one finger sideways from one hand to the other to model the chain's short trip."
       },
       {
-        "id": "weight",
+        "id": "slack",
         "plate": "change",
-        "question": "What changes when the load is heavier?",
-        "notice": "Look for one paperclip under one canopy and two paperclips under the matching canopy.",
-        "say": "With the same canopy, a second paperclip adds weight, so gravity pulls down harder while the canopy area stays the same. In this test, that parachute usually descends faster. Without air, the extra paperclip would not make it fall faster.",
-        "try": "Keep the filter and strings the same. Compare one paperclip with two paperclips over several drops."
+        "question": "Why are there two small pulley wheels?",
+        "notice": "See the chain bend around an upper guide pulley and a lower tension pulley before it heads forward again.",
+        "say": "Different cogs need slightly different amounts of chain. A spring turns the derailleur cage, and the lower pulley moves with it to take up slack. The upper pulley guides the chain toward the chosen cog.",
+        "try": "Curve a piece of yarn around two bottle caps on a table. Move the lower cap gently and notice how the extra loop becomes longer or shorter."
       },
       {
-        "id": "steady",
-        "plate": "return",
-        "question": "How can a tiny hole make the fall steadier?",
-        "notice": "Find the small centered hole and watch the canopy stay open with less side-to-side wobble.",
-        "say": "A small hole at the canopy top lets some air flow through. That can keep air from spilling unevenly around the edges, so the parachute may wobble less.",
-        "try": "Predict what a tiny centered hole will change. Test the uncut canopy first, then ask an adult to make the hole and measure several more drops."
+        "id": "gears",
+        "plate": "keep",
+        "question": "Why do big and small back cogs feel different?",
+        "notice": "Compare the largest back cog with the smallest, then find the teeth that catch the chain.",
+        "say": "A big back cog is an easy gear for hills: the wheel turns less for each pedal turn, so the pedals need less push. A small back cog is a hard gear that can carry the bike farther per pedal turn on flat ground. With 32 teeth in front and 16 in back, the wheel turns 2 times for one pedal turn.",
+        "try": "With an adult, place the bike upside down on a flat floor or secure it in a stand. Turn one pedal slowly forward by hand while only the adult shifts. Watch the derailleur move the chain. Count teeth on the smallest and biggest back cogs, then count wheel turns for one pedal turn in an easy gear and a hard gear. Keep fingers away from the chain, gears, and spokes whenever anything is turning. No riding is needed."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/a-coffee-filter-parachute/01-build.jpg",
-      "original": "assets/a-coffee-filter-parachute/01-build.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/01-build-fold.jpg",
-      "title": "A canopy takes shape",
-      "alt": "Big and Little Wonderer study a finished coffee filter parachute with four equal strings and one paperclip at a warm kitchen table.",
-      "caption": "A wide canopy meets lots of air as gravity pulls the parachute down."
+      "src": "assets/how-bike-derailleurs-work/01-chain-loop.jpg",
+      "original": "assets/how-bike-derailleurs-work/01-chain-loop.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/01-chain-loop-fold.jpg",
+      "title": "One connected loop",
+      "alt": "Big and Little Wonderer study the drive side of a bicycle held securely on a stand, with the chain around a front chainring, a back cog, and the rear derailleur pulleys.",
+      "caption": "The chain loops around a front chainring and one cog in the back cassette."
     },
     {
       "id": "reach",
-      "src": "assets/a-coffee-filter-parachute/02-flat-crumpled.jpg",
-      "original": "assets/a-coffee-filter-parachute/02-flat-crumpled.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/02-flat-crumpled-fold.jpg",
-      "title": "Wide catches more air",
-      "alt": "Big and Little Wonderer compare two matching coffee filter parachutes with equal strings and one paperclip each, one flat and one crumpled.",
-      "caption": "The flat, wide filter has more surface area facing the air."
+      "src": "assets/how-bike-derailleurs-work/02-sideways-shift.jpg",
+      "original": "assets/how-bike-derailleurs-work/02-sideways-shift.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/02-sideways-shift-fold.jpg",
+      "title": "A sideways nudge",
+      "alt": "Big and Little Wonderer look closely at a rear derailleur aligned beneath a middle cog while its cable runs forward toward the shifter.",
+      "caption": "Cable pull and spring return move the rear derailleur sideways from cog to cog."
     },
     {
       "id": "change",
-      "src": "assets/a-coffee-filter-parachute/03-weight.jpg",
-      "original": "assets/a-coffee-filter-parachute/03-weight.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/03-weight-fold.jpg",
-      "title": "One more paperclip",
-      "alt": "Two matching coffee filter parachutes descend above a rug, one carrying one paperclip and one carrying two.",
-      "caption": "A second paperclip adds weight, so gravity pulls down harder while the same canopy provides drag."
+      "src": "assets/how-bike-derailleurs-work/03-pulley-wheels.jpg",
+      "original": "assets/how-bike-derailleurs-work/03-pulley-wheels.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/03-pulley-wheels-fold.jpg",
+      "title": "Two little wheels",
+      "alt": "The bicycle chain follows its correct bent path around the upper guide pulley and lower tension pulley of a rear derailleur as Big and Little Wonderer observe.",
+      "caption": "One pulley guides the chain while the other moves to take up slack."
     },
     {
       "id": "notice",
-      "src": "assets/a-coffee-filter-parachute/04-fair-test.jpg",
-      "original": "assets/a-coffee-filter-parachute/04-fair-test.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/04-fair-test-fold.jpg",
-      "title": "One change at a time",
-      "alt": "Big and Little Wonderer compare large and small coffee filter canopies with equal strings and one paperclip each beside tally marks and a timer.",
-      "caption": "A fair test changes one thing, repeats the drop, and measures what happens."
+      "src": "assets/how-bike-derailleurs-work/04-front-cage.jpg",
+      "original": "assets/how-bike-derailleurs-work/04-front-cage.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/04-front-cage-fold.jpg",
+      "title": "The cage up front",
+      "alt": "Big and Little Wonderer inspect a front derailleur cage surrounding the chain beside two front chainrings on a bicycle stand.",
+      "caption": "A front derailleur cage pushes the moving chain between front chainrings."
     },
     {
       "id": "return",
-      "src": "assets/a-coffee-filter-parachute/05-vent.jpg",
-      "original": "assets/a-coffee-filter-parachute/05-vent.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/05-vent-fold.jpg",
-      "title": "A steadier path",
-      "alt": "A coffee filter parachute with one tiny centered top hole descends steadily while Big and Little Wonderer watch from the floor.",
-      "caption": "A tiny top hole can let air through and reduce side-to-side wobble."
+      "src": "assets/how-bike-derailleurs-work/05-moving-chain.jpg",
+      "original": "assets/how-bike-derailleurs-work/05-moving-chain.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/05-moving-chain-fold.jpg",
+      "title": "Moving forward",
+      "alt": "On a bicycle stand, Big Wonderer holds the handlebar shifter while Little Wonderer slowly turns one pedal by its outer end, safely away from the chain and spokes.",
+      "caption": "The chain must move forward before a derailleur can guide it onto another gear."
     },
     {
       "id": "keep",
-      "src": "assets/a-coffee-filter-parachute/06-real-parachutes.jpg",
-      "original": "assets/a-coffee-filter-parachute/06-real-parachutes.png",
-      "foldSrc": "assets/a-coffee-filter-parachute/06-real-parachutes-fold.jpg",
-      "title": "The same big idea",
-      "alt": "Big and Little Wonderer study a field guide showing a human parachute and a space lander parachute beside their coffee filter model.",
-      "caption": "Parachutes for people and space landers use drag to slow their descent."
+      "src": "assets/how-bike-derailleurs-work/06-easy-hard.jpg",
+      "original": "assets/how-bike-derailleurs-work/06-easy-hard.png",
+      "foldSrc": "assets/how-bike-derailleurs-work/06-easy-hard-fold.jpg",
+      "title": "Easy gear, hard gear",
+      "alt": "Big and Little Wonderer compare the largest and smallest cogs in a bicycle cassette while the bike rests still on a stand near a window facing a gentle hill and a flat path.",
+      "caption": "A big back cog makes hills easier; a small back cog gives more wheel turns on flat ground."
     }
   ],
   "reading": {
-    "title": "Six clues in a slow fall",
+    "title": "Six clues in one shifter click",
     "coverPlate": "wake",
-    "coverText": "Follow gravity down and feel the air push back.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers, pointing, drawing, and dictation; the scenic plates show the test ideas rather than exact measurements.",
-    "foldableTitle": "A little book of parachute clues",
-    "foldableCoverLine": "A Coffee Filter Parachute",
-    "foldableNote": "Carry six slow-fall clues in a small book.",
+    "coverText": "Follow the chain, cable, spring, and gears.",
+    "parentNote": "Grade 3 reading. Welcome spoken responses, pointing, sketches, and dictation; the scenic plates show the parts in context.",
+    "foldableTitle": "A little book of shifting clues",
+    "foldableCoverLine": "How Bike Derailleurs Work",
+    "foldableNote": "Carry six gear-changing clues in a small book.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A pull and a push",
-        "passage": "Big held the coffee filter open like a tiny canopy. Gravity pulled the parachute toward the floor. As it moved, tiny moving pieces of air pushed back. This air resistance, or drag, slowed the fall but did not stop gravity.",
-        "prompt": "Which two forces act in different directions during the fall?",
+        "title": "A loop with teeth",
+        "passage": "Little traced the chain without touching it. The loop wrapped around a front chainring and one cog in the back cassette. Each gear had teeth that fit between the chain's rollers. When the pedals turned forward, the chain carried that turn toward the back wheel.",
+        "prompt": "How do the gear teeth help the chain carry a pedal turn?",
         "foldable": {
-          "heading": "A pull and a push",
-          "body": "Gravity pulls the parachute down. Moving air pushes back with air resistance, or drag, slowing the fall without stopping gravity."
+          "heading": "A loop with teeth",
+          "body": "The chain loops around a front chainring and one back cog. When the pedals turn forward, the moving chain helps turn the rear wheel."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Wide meets more air",
-        "passage": "Little dropped the filter flat, then crumpled the same filter and dropped it again. Its weight had not changed, but its shape had. The wide filter showed more surface area to the air, made more drag, and floated down longer.",
-        "prompt": "Why is shape—not weight—the best explanation for this result?",
+        "title": "A click pulls a cable",
+        "passage": "Big pressed the shifter once while the chain moved. The lever pulled a short length of cable. That pull moved the rear derailleur sideways. When the shifter let cable out, a spring drew the derailleur back the other way.",
+        "prompt": "What evidence connects the shifter click to the derailleur's sideways motion?",
         "foldable": {
-          "heading": "Wide meets air",
-          "body": "The flat filter and crumpled filter weigh the same. The wide shape meets more air, makes more drag, and falls more slowly."
+          "heading": "Cable and spring",
+          "body": "A shifter pulls or releases a cable. The rear derailleur swings sideways and guides the moving chain toward the next back cog."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A heavier load",
-        "passage": "Next they kept the canopy and strings the same. One parachute carried one paperclip; another carried two. The second paperclip added weight, so gravity pulled down harder while the same canopy provided drag. In this test, that parachute descended faster. Without air, the extra paperclip would not make it fall faster.",
-        "prompt": "What stayed the same, and what changed in the paperclip test?",
+        "title": "Guide it and keep it snug",
+        "passage": "Two small wheels turned inside the derailleur cage. The upper guide pulley lined the chain up with a cog. The lower tension pulley moved as the spring turned the cage. That motion took up extra chain, called slack, so the long loop stayed snug in every gear.",
+        "prompt": "How are the two pulley jobs different?",
         "foldable": {
-          "heading": "Change the weight",
-          "body": "A second paperclip adds weight, so gravity pulls down harder while the canopy stays the same size. In air, it usually reaches the floor sooner."
+          "heading": "Two pulley jobs",
+          "body": "The upper pulley guides the chain. The lower pulley and a spring take up extra chain, keeping the long loop snug."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A fair test",
-        "passage": "Big suggested a fair test: change one thing at a time. They predicted a bigger canopy would fall more slowly, then kept the weight and string length equal. They measured several drops because one wobbly fall could fool them.",
-        "prompt": "Why did they keep the weight and strings equal and repeat each drop?",
+        "title": "A cage at the chainrings",
+        "passage": "This bike had two chainrings in front. A second derailleur sat above them. Its narrow cage surrounded the chain. As the cage moved sideways, it pressed the moving chain off one chainring so the neighboring chainring could catch it.",
+        "prompt": "How does the front derailleur move the chain without carrying it around?",
         "foldable": {
-          "heading": "A fair test",
-          "body": "Change one thing at a time, keep the others equal, and measure several drops. Repeating helps a result become more trustworthy."
+          "heading": "The front cage",
+          "body": "On bikes with several front chainrings, a metal cage nudges the moving chain sideways from one chainring to another."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A tiny steadying hole",
-        "passage": "Sometimes the canopy rocked from side to side as air spilled unevenly around its rim. A small hole at the top let a little air pass through. The parachute wobbled less, so its path became steadier.",
-        "prompt": "How can letting some air through reduce wobble?",
+        "title": "The chain must move",
+        "passage": "Little noticed that a click did not lift a still chain onto new teeth. The pedals had to turn forward. Then each arriving chain link could meet the shaped teeth on the next cog and climb into place. A derailleur guides; the moving chain completes the shift.",
+        "prompt": "Why can a derailleur guide a moving chain but not place a still chain?",
         "foldable": {
-          "heading": "A steadier fall",
-          "body": "A tiny hole at the canopy top lets some air through. The flow can become more even, so the parachute wobbles less."
+          "heading": "Keep it moving",
+          "body": "The chain must move forward to climb onto another cog. A shifter click alone cannot slide a still chain into place."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "From filters to landers",
-        "passage": "Their paper parachute was small, but its mechanism was real. Parachutes for people and space landers also spread a large canopy through air. Gravity keeps pulling down while drag pushes against motion, helping the load land more slowly.",
-        "prompt": "What big idea do the model, a human parachute, and a lander parachute share?",
+        "title": "Choose the useful gear",
+        "passage": "On the biggest back cog, one pedal turn produced fewer wheel turns and needed less push. That easy gear suited a hill. On a small back cog, the wheel turned farther for each pedal turn, making a harder gear useful on flat ground. Tooth counts tell the ratio: 32 front teeth divided by 16 back teeth equals 2 wheel turns for one pedal turn.",
+        "prompt": "Why does moving to a bigger back cog trade wheel turns for an easier push?",
         "foldable": {
-          "heading": "The same big idea",
-          "body": "Human and space-lander parachutes use wide canopies too. Gravity pulls down while drag pushes against motion and slows the descent."
+          "heading": "Easy or hard",
+          "body": "A big back cog makes climbing easier. A small back cog turns the wheel farther per pedal turn but needs more push."
         }
       }
     ],
     "words": [
       {
-        "word": "gravity",
-        "meaning": "the pull that draws objects toward Earth"
+        "word": "gear",
+        "meaning": "a toothed wheel that helps transfer a turn"
       },
       {
-        "word": "air",
-        "meaning": "tiny moving pieces of gas all around us"
+        "word": "chain",
+        "meaning": "linked metal pieces that carry a pedal turn to the back wheel"
       },
       {
-        "word": "air resistance / drag",
-        "meaning": "air pushing against an object moving through it"
+        "word": "cog",
+        "meaning": "one toothed gear in the stack on the back wheel"
       },
       {
-        "word": "canopy",
-        "meaning": "the wide top of a parachute"
+        "word": "teeth",
+        "meaning": "the points on a gear that fit the chain"
       },
       {
-        "word": "surface area",
-        "meaning": "how much outside space a surface covers"
+        "word": "derailleur",
+        "meaning": "a bike part that guides the chain sideways between gears"
       },
       {
-        "word": "weight",
-        "meaning": "the pull of gravity on an object"
+        "word": "cable",
+        "meaning": "a thin wire that carries a shifter's pull"
       },
       {
-        "word": "fair test",
-        "meaning": "a test that changes one thing at a time"
+        "word": "spring",
+        "meaning": "a part that stores a pull and moves the derailleur back"
       },
       {
-        "word": "predict",
-        "meaning": "say what you think will happen before a test"
+        "word": "lever",
+        "meaning": "a handle that moves when someone presses or pulls it"
       },
       {
-        "word": "measure",
-        "meaning": "use numbers to describe what happens"
+        "word": "shift",
+        "meaning": "move the chain from one gear to another"
+      },
+      {
+        "word": "easy / hard gear",
+        "meaning": "less pedal push with fewer wheel turns / more pedal push with more wheel turns"
       }
     ],
     "questions": [
-      "Why does a flat coffee filter fall more slowly than the same filter crumpled?",
-      "How do repeated drops make the result of a fair test more trustworthy?",
-      "How do gravity and drag work together when a parachute descends?"
+      "How do the cable and spring move the rear derailleur in opposite directions?",
+      "Why does the rear derailleur need both a guide pulley and a tension pulley?",
+      "How does the evidence about tooth counts explain two wheel turns from a 32-tooth chainring and a 16-tooth cog?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one parachute prediction and name what you would measure.",
-      "example": "Example: I predict the bigger canopy will fall longer, so I will measure its drop time."
+      "prompt": "Write one sentence that follows a shifter click to the chain.",
+      "example": "Example: The lever pulls the cable, so the rear derailleur guides the moving chain sideways."
     }
   },
   "math": {
-    "title": "Compare and round parachute measures",
-    "plate": "notice",
-    "intro": "Compare test notes, then round measurements to the nearest ten.",
-    "eyebrow": "SIX PARACHUTE MEASURES",
-    "actionLabel": "Compare or round",
+    "title": "Bike number crunch",
+    "plate": "keep",
+    "intro": "Add or subtract each set of bike numbers, regrouping ones and tens.",
+    "eyebrow": "SIX BIKE CALCULATIONS",
+    "actionLabel": "Regroup and solve",
     "tasks": [
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
           28,
-          42
+          35
         ],
-        "symbol": "<",
-        "prompt": "Across several drops, a crumpled filter floats for 28 counted seconds in all and a flat filter for 42. Put >, <, or = in the circle. What is the greater total?",
-        "equation": "28 ○ 42",
-        "hint": "Compare tens first, then ones. The smaller total is written first, so the symbol opens toward 42. Then give the greater total.",
-        "answer": 42,
-        "worked": "28 < 42. Two tens are fewer than four tens, so the greater total is 42 seconds.",
-        "plate": "reach",
+        "prompt": "One parts tray holds 28 gear teeth cutouts and another holds 35. How many teeth cutouts are there in all?",
+        "equation": "28 + 35 =",
+        "hint": "Add 8 and 5 first. Trade 10 ones for 1 ten, then add the tens.",
+        "answer": 63,
+        "worked": "28 + 35 = 63. The 13 ones become 1 ten and 3 ones, making 63.",
+        "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "compare",
+        "skill": "subtraction-regrouping",
         "operands": [
-          76,
-          67
+          72,
+          38
         ],
-        "symbol": ">",
-        "prompt": "One set of parachute strings is 76 centimeters long and another is 67 centimeters. Put >, <, or = in the circle. What is the greater length?",
-        "equation": "76 ○ 67",
-        "hint": "Compare tens first, then ones. Write the symbol, then give the greater length.",
-        "answer": 76,
-        "worked": "76 > 67. Seven tens are more than six tens, so the greater length is 76 centimeters.",
-        "plate": "wake",
+        "prompt": "A rider plans 72 pedal turns and has finished 38. How many pedal turns remain?",
+        "equation": "72 − 38 =",
+        "hint": "Trade 1 ten for 10 ones. Subtract 8 from 12, then subtract the tens.",
+        "answer": 34,
+        "worked": "72 − 38 = 34. Regroup 72 as 6 tens and 12 ones, then subtract to get 34.",
+        "plate": "return",
         "label": "TASK 2"
       },
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          48,
-          48
+          47,
+          18
         ],
-        "symbol": "=",
-        "prompt": "Big and Little each record 48 test drops. Put >, <, or = in the circle. What is the shared number when the totals are equal?",
-        "equation": "48 ○ 48",
-        "hint": "Compare tens and ones. When both totals match, use = and give that shared number.",
-        "answer": 48,
-        "worked": "48 = 48. Both totals match, so the shared number is 48 drops.",
-        "plate": "notice",
+        "prompt": "Two ride notes record 47 wheel turns and 18 more wheel turns. How many wheel turns do they record altogether?",
+        "equation": "47 + 18 =",
+        "hint": "Add 7 and 8. Regroup 15 ones as 1 ten and 5 ones.",
+        "answer": 65,
+        "worked": "47 + 18 = 65. Add the regrouped ten to the other tens to make 65 wheel turns.",
+        "plate": "keep",
         "label": "TASK 3"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          23
+          61,
+          24
         ],
-        "prompt": "The supply box holds 23 paperclips. What is 23 rounded to the nearest ten?",
-        "equation": "23 → nearest ten: ___",
-        "hint": "Look at the ones digit. With 4 or less, round down to the ten before.",
-        "answer": 20,
-        "worked": "23 has 3 ones, so round down to 20 paperclips.",
-        "plate": "change",
+        "prompt": "A box begins with 61 gear-number cards and 24 are used. How many gear-number cards are left?",
+        "equation": "61 − 24 =",
+        "hint": "Trade 1 ten so 1 one becomes 11 ones. Subtract ones, then tens.",
+        "answer": 37,
+        "worked": "61 − 24 = 37. Regroup 61 as 5 tens and 11 ones, leaving 37 cards.",
+        "plate": "reach",
         "label": "TASK 4"
       },
       {
-        "skill": "round-ten",
+        "skill": "addition-regrouping",
         "operands": [
-          57
+          56,
+          28
         ],
-        "prompt": "A piece of string is 57 centimeters long. What is 57 rounded to the nearest ten?",
-        "equation": "57 → nearest ten: ___",
-        "hint": "Look at the ones digit. With 5 or more, round up to the next ten.",
-        "answer": 60,
-        "worked": "57 has 7 ones, so round up to 60 centimeters.",
-        "plate": "wake",
+        "prompt": "One bike outing lasts 56 minutes and another lasts 28 minutes. How many minutes is that in all?",
+        "equation": "56 + 28 =",
+        "hint": "Combine 6 ones and 8 ones. Trade 14 ones for 1 ten and 4 ones.",
+        "answer": 84,
+        "worked": "56 + 28 = 84. Regroup the 14 ones, then add the tens to make 84 minutes.",
+        "plate": "keep",
         "label": "TASK 5"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          95
+          93,
+          47
         ],
-        "prompt": "A safe standing-height drop is measured as 95 centimeters. What is 95 rounded to the nearest ten?",
-        "equation": "95 → nearest ten: ___",
-        "hint": "A ones digit of 5 rounds up to the next ten.",
-        "answer": 100,
-        "worked": "95 has 5 ones, so round up to 100 centimeters.",
+        "prompt": "A gear maker checks 93 teeth and marks 47 as finished. How many teeth still need checking?",
+        "equation": "93 − 47 =",
+        "hint": "Trade 1 ten so there are 13 ones. Subtract 7, then subtract the tens.",
+        "answer": 46,
+        "worked": "93 − 47 = 46. Regroup 93 as 8 tens and 13 ones, so 46 teeth remain.",
         "plate": "notice",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one two-digit measurement from a new drop test. Compare it with another result, then round it to the nearest ten.",
-    "printNote": "Write one answer in each blank. For comparisons, also put >, <, or = in the circle.",
-    "parentNote": "Grade 2 math. Six tasks compare two-digit values or round a two-digit value to the nearest ten.",
-    "answerKeyIntro": "Grade 2 math. Compare tens before ones; for rounding, 5 or more rounds up and 4 or less rounds down."
+    "extension": "Create another bike addition or subtraction equation with two two-digit numbers that needs regrouping.",
+    "printNote": "Write one answer in each blank. Show how you traded ones and tens when you regrouped.",
+    "parentNote": "Grade 2 math. Six tasks use two-digit addition or subtraction with regrouping and answers no greater than 100.",
+    "answerKeyIntro": "Grade 2 math. Each problem regroups ones and tens; addition and subtraction are both included."
   },
   "writing": {
-    "title": "Write a fair-test note",
-    "intro": "Choose one clue. Say your idea first, then draw or write it.",
+    "title": "Write the path of a shift",
+    "intro": "Choose one clue. Say the whole idea, then draw or write it.",
     "plateIds": [
       "reach",
-      "notice",
-      "return"
+      "change",
+      "keep"
     ],
-    "draw": "Draw one parachute test and add a small arrow to the part you changed.",
-    "starter": "My parachute test",
+    "draw": "Draw one bike gear clue and add a small arrow to the part whose job you explain.",
+    "starter": "My shifting clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "The wide filter fell more slowly because",
-        "hint": "dictate how it meets the air"
+        "start": "When the lever pulls the cable,",
+        "hint": "dictate what the rear derailleur does"
       },
       {
-        "plate": "notice",
-        "start": "To make the test fair, I would",
-        "hint": "dictate what stays the same"
+        "plate": "change",
+        "start": "The lower pulley keeps the chain snug by",
+        "hint": "dictate how it takes up slack"
       },
       {
-        "plate": "return",
-        "start": "The tiny top hole may",
-        "hint": "dictate how the fall changes"
+        "plate": "keep",
+        "start": "A big back cog feels easier because",
+        "hint": "dictate what changes for each pedal turn"
       }
     ],
     "words": [
-      "gravity",
-      "air",
-      "air resistance",
-      "drag",
-      "canopy",
-      "surface area",
-      "weight",
-      "fair test",
-      "predict",
-      "measure"
+      "gear",
+      "chain",
+      "cog",
+      "teeth",
+      "derailleur",
+      "cable",
+      "spring",
+      "lever",
+      "shift",
+      "easy gear",
+      "hard gear"
     ],
-    "check": "Does your sentence name one change and explain what you would predict or measure?",
-    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
+    "check": "Does your sentence name a part, tell what it does, and connect that job to the chain?",
+    "parentNote": "Offer dictation: invite a complete spoken explanation, write it down, and leave room for a picture, label, or added sentence."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The flat filter has more surface area facing the air, so it makes more drag and falls more slowly than the same filter crumpled."
+      "text": "The shifter pulls or releases the cable; cable pull moves the derailleur one way, and the return spring moves it back the other way."
     },
     {
       "label": "Reading · 2",
-      "text": "Several drops reduce the chance that one wobble or unusual release will decide the result."
+      "text": "The upper pulley guides the chain toward the selected cog, while the lower pulley and spring take up slack to keep the chain snug."
     },
     {
       "label": "Reading · 3",
-      "text": "Gravity pulls the parachute down while drag pushes against its motion and slows the descent."
+      "text": "The front chainring has twice as many teeth as the back cog: 32 ÷ 16 = 2, so the wheel turns twice per pedal turn."
     },
     {
       "label": "Writing",
-      "text": "Accept a spoken, dictated, drawn, or written prediction that names one changed feature and one measurement."
+      "text": "Accept a spoken, dictated, drawn, or written explanation that links one derailleur part to its job."
     }
   ],
   "quiz": {
-    "title": "Four parachute clues",
-    "intro": "Follow gravity, drag, weight, and a steadier fall.",
+    "title": "Four shifting clues",
+    "intro": "Follow the lever, cable, pulleys, and gears.",
     "questions": [
       {
-        "id": "drag",
-        "prompt": "What does air resistance do to a falling parachute?",
+        "id": "cable",
+        "prompt": "What happens after a mechanical shifter pulls its cable?",
         "choices": [
-          "It pushes against the motion and slows the fall",
-          "It switches gravity off",
-          "It pulls the load toward the floor"
+          "The rear derailleur moves sideways",
+          "The back wheel leaves the frame",
+          "The chain stops needing gear teeth"
         ],
         "answerIndex": 0,
-        "answer": "Air resistance, or drag, pushes against the parachute's motion and slows its fall."
+        "answer": "Cable pull moves the rear derailleur sideways so its guide pulley can line the moving chain up with another cog."
       },
       {
-        "id": "area",
-        "prompt": "Why does a flat coffee filter usually fall more slowly than the same filter crumpled?",
+        "id": "pulleys",
+        "prompt": "What does the lower tension pulley help do?",
         "choices": [
-          "It has more gravity",
-          "Its wide surface meets more air",
-          "Its paper becomes lighter"
+          "Take up extra chain and keep it snug",
+          "Steer the front wheel",
+          "Push the brake pads"
         ],
-        "answerIndex": 1,
-        "answer": "The wide filter shows more surface area to the air, creating more drag while its weight stays the same."
+        "answerIndex": 0,
+        "answer": "The lower pulley moves with the spring-loaded cage to take up chain slack and keep the loop snug."
       },
       {
-        "id": "fair",
-        "prompt": "Which plan makes a fair canopy-size test?",
+        "id": "front",
+        "prompt": "How does a front derailleur change gears?",
         "choices": [
-          "Change canopy, weight, and strings together",
-          "Drop each parachute only once",
-          "Change canopy size but keep weight and strings equal"
+          "Its cage pushes the moving chain between chainrings",
+          "Its pulley adds teeth to the cassette",
+          "Its lever turns the back wheel directly"
         ],
-        "answerIndex": 2,
-        "answer": "Change only canopy size, keep weight and strings equal, and repeat the drops."
+        "answerIndex": 0,
+        "answer": "A front derailleur's cage nudges the moving chain sideways from one front chainring to another."
       },
       {
-        "id": "vent",
-        "prompt": "What can a tiny centered hole at the canopy top do?",
+        "id": "easy",
+        "prompt": "Which back cog usually makes a hill easier to pedal?",
         "choices": [
-          "Remove gravity",
-          "Let some air through and reduce wobble",
-          "Make the canopy catch every bit of air"
+          "The biggest back cog",
+          "The smallest back cog",
+          "Every cog feels exactly the same"
         ],
-        "answerIndex": 1,
-        "answer": "A tiny top hole can let some air through more evenly, which may reduce wobble."
+        "answerIndex": 0,
+        "answer": "The biggest back cog is an easier gear: the wheel turns less per pedal turn, so less pedal push is needed."
       }
     ]
   },
-  "parentGuidance": "Gravity pulls a parachute down while air resistance, or drag, pushes against its motion. A wide canopy creates more drag; weight, canopy area, shape, release, and air currents can all affect a test, so change one thing at a time and repeat drops. Stay beside the child, use scissors only with grown-up help, and drop only from standing height or from a grown-up's raised hand—never climb on chairs, stair railings, windows, or balconies. Keep paperclips and small toys away from mouths.",
+  "parentGuidance": "A rear derailleur guides a moving chain between the cassette cogs, while its spring-loaded cage and two pulleys take up slack and keep the chain aligned. A front derailleur uses a cage to move the chain between chainrings. A large back cog is easier for climbing; a small one is harder and gives more wheel turns per pedal turn. For the observation, an adult should place the bike upside down on a flat floor or secure it in a stand, operate the shifter, and supervise every moment. The child may turn only the pedal slowly by hand. Keep all fingers, hair, and loose clothing away from the chain, gears, derailleur, wheel, and spokes whenever anything is turning. Stop all movement before counting teeth, and do not ride for this activity.",
   "sources": [
     {
-      "label": "NASA Glenn · What is drag?",
-      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/what-is-drag/"
+      "label": "Park Tool · How a rear derailleur works",
+      "url": "https://www.parktool.com/en-int/blog/repair-help/how-a-rear-derailleur-works"
     },
     {
-      "label": "NASA Glenn · Falling object with air resistance",
-      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/falling-object-with-air-resistance/"
+      "label": "Park Tool · How a front derailleur works",
+      "url": "https://www.parktool.com/en-us/blog/repair-help/how-a-front-derailleur-works"
     },
     {
-      "label": "NASA · Where in the Air classroom guide",
-      "url": "https://www.nasa.gov/wp-content/uploads/2023/05/where-in-the-air-classroom-activity-student-guide.pdf"
+      "label": "Shimano · Indexed shifting explained",
+      "url": "https://bike.shimano.com/nl-NL/stories/article/shimano-shifting-explained.html"
     },
     {
-      "label": "NASA Science · Mars 2020 parachute test",
-      "url": "https://science.nasa.gov/resource/nasas-mars-2020-supersonic-parachute-test-flight-1/"
+      "label": "Shimano · Shifting while the chainwheel turns",
+      "url": "https://si.shimano.com/fr/pdfs/si/6LP0A/SI-6LP0A-000-ENG.pdf"
+    },
+    {
+      "label": "Park Tool · Chainring-to-cog gear ratio",
+      "url": "https://www.parktool.com/en-us/blog/calvins-corner/shimano-coasting-system"
     }
   ],
   "titleCard": {
     "plate": "wake",
-    "edition": "AIR · 2026-10-23",
-    "subtitle": "A wide canopy. A slower fall."
+    "edition": "BIKES · 2026-10-26",
+    "subtitle": "One click. One sideways shift."
   }
 }
