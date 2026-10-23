@@ -1,466 +1,473 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "h2o",
-  "topic": "H2O",
-  "teaser": "Meet one tiny molecule, then discover the clues that make water unlike most other liquids.",
+  "slug": "a-coffee-filter-parachute",
+  "topic": "a coffee filter parachute",
+  "teaser": "Turn a flat coffee filter into a tiny canopy and test how air slows its fall.",
   "aliases": [
-    "water"
+    "coffee filter parachute",
+    "parachutes"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "groups-and-arrays",
+  "mathTemplate": "compare-and-round",
   "ageRange": [
     7,
     9
   ],
   "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "H2O: Why Water Is Special",
-  "question": "How can one tiny kind of molecule make drops bead, ice float, and so many things dissolve?",
-  "idea": "Every water molecule has two hydrogen atoms and one oxygen atom, and the way water molecules attract and arrange themselves gives water some unusual properties.",
+  "title": "A Coffee Filter Parachute",
+  "question": "Why does a wide coffee filter parachute float down more slowly than a crumpled filter?",
+  "idea": "Gravity pulls a parachute down while moving air pushes back; a wide canopy catches more air, creating more drag and slowing the fall.",
   "curiosity": {
-    "intro": "Start with a tiny molecule, then follow four clues you can see at the kitchen table.",
-    "carryForward": "Look for the same water molecules acting differently in ice, drops, and liquid water.",
+    "intro": "Build one tiny parachute, then change one thing at a time to discover what slows and steadies its fall.",
+    "carryForward": "Watch how the canopy meets the air, and keep every comparison fair.",
     "questions": [
       {
-        "id": "molecule",
+        "id": "drag",
         "plate": "wake",
-        "question": "What does H2O mean?",
-        "notice": "Find the small three-part model beside the glass: two matching pieces and one larger piece.",
-        "say": "Water is made of tiny pieces called molecules. Each water molecule is H2O: two hydrogen atoms joined to one oxygen atom. Atoms are even smaller pieces that can join to make molecules.",
-        "try": "Put one ice cube on a plate and start a timer. Use only cool water, keep a towel nearby, and wipe up every spill. Watch until the ice melts."
+        "question": "What slows the parachute?",
+        "notice": "Find the wide canopy above the hanging paperclip and notice the open space it covers.",
+        "say": "Gravity pulls the parachute down. As it moves, tiny moving pieces of air push back. That air resistance, also called drag, slows the fall; it does not turn gravity off.",
+        "try": "An adult stays beside you while you attach equal strings or yarn and a paperclip or small toy to a coffee filter. Ask that adult to use the scissors. Drop from standing height, or let the adult hold it higher. Never climb on chairs, stair railings, windows, or balconies."
       },
       {
-        "id": "drops",
+        "id": "shape",
+        "plate": "reach",
+        "question": "Why does the flat filter fall more slowly?",
+        "notice": "Compare the open, wide filter with the same kind of filter crumpled into a small shape.",
+        "say": "The wide filter has more surface area facing the moving air. It catches more air and makes more drag, so it falls more slowly than the crumpled filter even though both filters weigh the same.",
+        "try": "Drop one filter flat and the same filter crumpled. Count the fall time or use a timer, then open the filter and repeat."
+      },
+      {
+        "id": "weight",
         "plate": "change",
-        "question": "Why do water drops bead up?",
-        "notice": "Look at the rounded drops on wax paper and the larger drop where two small ones have joined.",
-        "say": "Water molecules attract one another. At the surface, their pull creates surface tension, which helps a drop gather into a rounded bead instead of spreading flat.",
-        "try": "Use a dropper or the end of a straw to place a few water drops on wax paper. Nudge two drops together and watch them join."
+        "question": "What changes when the load is heavier?",
+        "notice": "Look for one paperclip under one canopy and two paperclips under the matching canopy.",
+        "say": "With the same canopy, adding a second paperclip gives gravity more weight to pull while the canopy area stays the same. In this test, the heavier parachute usually descends faster. Without air, extra weight would not make an object fall faster.",
+        "try": "Keep the filter and strings the same. Compare one paperclip with two paperclips over several drops."
       },
       {
-        "id": "surface",
-        "plate": "notice",
-        "question": "How can a paperclip rest on water?",
-        "notice": "See how the paperclip rests across the surface while the water bends slightly beneath it.",
-        "say": "Surface tension makes the top of the water resist being pulled apart. It can act a little like a skin, but it is not a real solid skin. A paperclip can rest there if it is placed gently.",
-        "try": "Lay a small piece of tissue on water, place a clean paperclip on the tissue, and wait for the tissue to sink while the paperclip stays."
-      },
-      {
-        "id": "ice",
+        "id": "steady",
         "plate": "return",
-        "question": "Why does ice float?",
-        "notice": "Compare the ice cube above the waterline with the liquid below it and the winter pond beyond the window.",
-        "say": "When water freezes, its molecules settle into a roomier pattern. Ice is lighter for its size than liquid water, so it floats. That unusual clue helps ponds freeze from the top while liquid water remains below.",
-        "try": "Drop an ice cube into a clear cup of water. Look from the side and notice how part of the cube stays above the surface."
+        "question": "How can a tiny hole make the fall steadier?",
+        "notice": "Find the small centered hole and watch the canopy stay open with less side-to-side wobble.",
+        "say": "A small hole at the canopy top lets some air flow through. That can keep air from spilling unevenly around the edges, so the parachute may wobble less.",
+        "try": "Predict what a tiny centered hole will change. Test the uncut canopy first, then ask an adult to make the hole and measure several more drops."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/h2o/01-molecule.jpg",
-      "original": "assets/h2o/01-molecule.png",
-      "foldSrc": "assets/h2o/01-molecule-fold.jpg",
-      "title": "Three atoms together",
-      "alt": "Big and Little Wonderer study a simple three-piece water molecule model beside a clear glass at a warm kitchen table.",
-      "caption": "Two hydrogen atoms and one oxygen atom join to make one water molecule."
+      "src": "assets/a-coffee-filter-parachute/01-build.jpg",
+      "original": "assets/a-coffee-filter-parachute/01-build.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/01-build-fold.jpg",
+      "title": "A canopy takes shape",
+      "alt": "Big and Little Wonderer study a finished coffee filter parachute with four equal strings and one paperclip at a warm kitchen table.",
+      "caption": "A wide canopy meets lots of air as gravity pulls the parachute down."
     },
     {
       "id": "reach",
-      "src": "assets/h2o/02-states.jpg",
-      "original": "assets/h2o/02-states.png",
-      "foldSrc": "assets/h2o/02-states-fold.jpg",
-      "title": "Water changes state",
-      "alt": "Big and Little Wonderer watch an ice cube melt beside a glass of liquid water near a clear window; invisible water vapor is present in the air.",
-      "caption": "Water can be solid ice, flowing liquid, or invisible water vapor."
+      "src": "assets/a-coffee-filter-parachute/02-flat-crumpled.jpg",
+      "original": "assets/a-coffee-filter-parachute/02-flat-crumpled.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/02-flat-crumpled-fold.jpg",
+      "title": "Wide catches more air",
+      "alt": "Little Wonderer releases a wide coffee filter parachute above a rug while a crumpled matching filter rests nearby for comparison.",
+      "caption": "The flat, wide filter has more surface area facing the air."
     },
     {
       "id": "change",
-      "src": "assets/h2o/03-drops.jpg",
-      "original": "assets/h2o/03-drops.png",
-      "foldSrc": "assets/h2o/03-drops-fold.jpg",
-      "title": "Drops pull together",
-      "alt": "Little Wonderer uses a dropper over wax paper as rounded drops bead up and two drops join under Big Wonderer's careful gaze.",
-      "caption": "The attraction between water molecules helps drops gather into rounded beads."
+      "src": "assets/a-coffee-filter-parachute/03-weight.jpg",
+      "original": "assets/a-coffee-filter-parachute/03-weight.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/03-weight-fold.jpg",
+      "title": "One more paperclip",
+      "alt": "Two matching coffee filter parachutes descend above a rug, one carrying one paperclip and one carrying two.",
+      "caption": "With the same canopy, an added paperclip can make the parachute descend faster."
     },
     {
       "id": "notice",
-      "src": "assets/h2o/04-paperclip.jpg",
-      "original": "assets/h2o/04-paperclip.png",
-      "foldSrc": "assets/h2o/04-paperclip-fold.jpg",
-      "title": "A careful surface",
-      "alt": "A paperclip rests on the surface of a shallow glass bowl while Big and Little Wonderer look closely from the side.",
-      "caption": "Surface tension lets gently placed paperclips rest on the top of water."
+      "src": "assets/a-coffee-filter-parachute/04-fair-test.jpg",
+      "original": "assets/a-coffee-filter-parachute/04-fair-test.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/04-fair-test-fold.jpg",
+      "title": "One change at a time",
+      "alt": "Big and Little Wonderer compare a large and small coffee filter canopy beside simple tally marks and a timer at floor level.",
+      "caption": "A fair test changes one thing, repeats the drop, and measures what happens."
     },
     {
       "id": "return",
-      "src": "assets/h2o/05-ice.jpg",
-      "original": "assets/h2o/05-ice.png",
-      "foldSrc": "assets/h2o/05-ice-fold.jpg",
-      "title": "Ice floats high",
-      "alt": "Big and Little Wonderer see an ice cube floating in a clear cup, with a quiet pond frozen at the surface beyond the kitchen window.",
-      "caption": "Ice is lighter for its size than liquid water, so it floats."
+      "src": "assets/a-coffee-filter-parachute/05-vent.jpg",
+      "original": "assets/a-coffee-filter-parachute/05-vent.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/05-vent-fold.jpg",
+      "title": "A steadier path",
+      "alt": "A coffee filter parachute with one tiny centered top hole descends steadily while Big and Little Wonderer watch from the floor.",
+      "caption": "A tiny top hole can let air through and reduce side-to-side wobble."
     },
     {
       "id": "keep",
-      "src": "assets/h2o/06-dissolve.jpg",
-      "original": "assets/h2o/06-dissolve.png",
-      "foldSrc": "assets/h2o/06-dissolve-fold.jpg",
-      "title": "Some things dissolve",
-      "alt": "Big and Little Wonderer compare clear cups of water beside small bowls of sugar and salt at the kitchen table.",
-      "caption": "Water can dissolve many substances by surrounding and carrying away their tiny pieces."
+      "src": "assets/a-coffee-filter-parachute/06-real-parachutes.jpg",
+      "original": "assets/a-coffee-filter-parachute/06-real-parachutes.png",
+      "foldSrc": "assets/a-coffee-filter-parachute/06-real-parachutes-fold.jpg",
+      "title": "The same big idea",
+      "alt": "Big and Little Wonderer study a field guide showing a human parachute and a space lander parachute beside their coffee filter model.",
+      "caption": "Parachutes for people and space landers use drag to slow their descent."
     }
   ],
   "reading": {
-    "title": "Six clues hidden in water",
+    "title": "Six clues in a slow fall",
     "coverPlate": "wake",
-    "coverText": "Meet one molecule, then follow what it can do.",
-    "foldableTitle": "A little book of water clues",
-    "foldableCoverLine": "H2O: Why Water Is Special",
-    "foldableNote": "Carry six water clues in a small book.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers, pointing, drawing, and dictation; the molecular scenes are explanatory illustrations.",
+    "coverText": "Follow gravity down and feel the air push back.",
+    "parentNote": "Grade 3 reading. Welcome spoken answers, pointing, drawing, and dictation; the scenic plates show the test ideas rather than exact measurements.",
+    "foldableTitle": "A little book of parachute clues",
+    "foldableCoverLine": "A Coffee Filter Parachute",
+    "foldableNote": "Carry six slow-fall clues in a small book.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "Three atoms together",
-        "passage": "Little held a clear glass to the light. Tiny molecules moved inside. Every water molecule has the same recipe: two hydrogen atoms joined to one oxygen atom. H2O records that recipe.",
-        "prompt": "What does the 2 in H2O tell us about one water molecule?",
+        "title": "Two pulls in one fall",
+        "passage": "Big held the coffee filter open like a tiny canopy. Gravity pulled the parachute toward the floor. As it moved, tiny moving pieces of air pushed back. This air resistance, or drag, slowed the fall but did not stop gravity.",
+        "prompt": "Which two forces act in different directions during the fall?",
         "foldable": {
-          "heading": "Three atoms",
-          "body": "Every bit of water is made of molecules. Each H2O molecule has two hydrogen atoms joined to one oxygen atom."
+          "heading": "Gravity and drag",
+          "body": "Gravity pulls the parachute down. Moving air pushes back with air resistance, or drag, slowing the fall without stopping gravity."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "The same water, three ways",
-        "passage": "An ice cube softened into a puddle. Solid ice had melted into liquid water. Water can also become a gas called water vapor. These changes rearrange the molecules, but they remain water molecules.",
-        "prompt": "What changes when ice melts, and what stays the same?",
+        "title": "Wide meets more air",
+        "passage": "Little dropped the filter flat, then crumpled the same filter and dropped it again. Its weight had not changed, but its shape had. The wide filter showed more surface area to the air, made more drag, and floated down longer.",
+        "prompt": "Why is shape—not weight—the best explanation for this result?",
         "foldable": {
-          "heading": "Three states",
-          "body": "The same water can be solid ice, flowing liquid, or invisible water vapor. Melting and freezing change its state."
+          "heading": "Wide meets air",
+          "body": "The flat filter and crumpled filter weigh the same. The wide shape meets more air, makes more drag, and falls more slowly."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Drops that gather",
-        "passage": "Little placed drops on wax paper. Each curved into a bead instead of spreading flat. Water molecules attract one another, pulling the surface together. Two nearby beads joined into one larger drop.",
-        "prompt": "What evidence shows that water molecules pull toward one another?",
+        "title": "A heavier load",
+        "passage": "Next they kept the canopy and strings the same. One parachute carried one paperclip; another carried two. The extra weight made that parachute descend faster in air. This does not mean heavier things always fall faster: without air, there would be no drag.",
+        "prompt": "What stayed the same, and what changed in the paperclip test?",
         "foldable": {
-          "heading": "Drops gather",
-          "body": "Water molecules attract one another. At the surface, that pull gathers drops into rounded beads that can join together."
+          "heading": "Change the weight",
+          "body": "With the same canopy and strings, two paperclips add weight. In air, that parachute usually reaches the floor sooner."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "A surface that holds",
-        "passage": "Big lowered a paperclip on a small raft of tissue. The tissue sank, but the clip stayed at the top. The water was not covered by a solid skin. Its surface tension came from water molecules pulling together, making the surface resist being broken.",
-        "prompt": "Why is water's “skin” only a comparison, not a real skin?",
+        "title": "A fair test",
+        "passage": "Big suggested a fair test: change one thing at a time. They predicted a bigger canopy would fall more slowly, then kept the weight and string length equal. They measured several drops because one wobbly fall could fool them.",
+        "prompt": "Why did they keep the weight and strings equal and repeat each drop?",
         "foldable": {
-          "heading": "Surface tension",
-          "body": "Surface tension makes the top of water resist being pulled apart. A gently placed paperclip can rest there without sinking."
+          "heading": "A fair test",
+          "body": "Change one thing at a time, keep the others equal, and measure several drops. Repeating helps a result become more trustworthy."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Roomier ice",
-        "passage": "In liquid water, molecules slide close together. When water freezes, the molecules lock into a roomier pattern. That makes ice lighter for its size than liquid water, so it floats. On a pond, floating ice forms first at the top while liquid water—and fish—can remain below.",
-        "prompt": "How does the roomier pattern in ice help pond life?",
+        "title": "A tiny steadying hole",
+        "passage": "Sometimes the canopy rocked from side to side as air spilled unevenly around its rim. A small hole at the top let a little air pass through. The parachute wobbled less, so its path became steadier.",
+        "prompt": "How can letting some air through reduce wobble?",
         "foldable": {
-          "heading": "Roomier ice",
-          "body": "Ice molecules form a roomier pattern. Ice is lighter for its size than liquid water, so it floats on top."
+          "heading": "A steadier fall",
+          "body": "A tiny hole at the canopy top lets some air through. The flow can become more even, so the parachute wobbles less."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Water makes room",
-        "passage": "A spoonful of sugar seemed to disappear in water, but its tiny pieces had not vanished. Water molecules surrounded those pieces and spread them through the water in the glass. Water can dissolve many substances, including sugar and salt, though it cannot dissolve everything. One small molecule had many remarkable ways to act.",
-        "prompt": "What happens to sugar when it dissolves in water?",
+        "title": "From filters to landers",
+        "passage": "Their paper parachute was small, but its mechanism was real. Parachutes for people and space landers also spread a large canopy through air. Gravity keeps pulling down while drag pushes against motion, helping the load land more slowly.",
+        "prompt": "What big idea do the model, a human parachute, and a lander parachute share?",
         "foldable": {
-          "heading": "Water dissolves",
-          "body": "Water can surround and carry away tiny pieces of salt or sugar. That is called dissolving, but not everything dissolves."
+          "heading": "The same big idea",
+          "body": "Human and space-lander parachutes use wide canopies too. Gravity pulls down while drag pushes against motion and slows the descent."
         }
       }
     ],
     "words": [
       {
-        "word": "water",
-        "meaning": "a substance made of H2O molecules"
+        "word": "gravity",
+        "meaning": "the pull that draws objects toward Earth"
       },
       {
-        "word": "molecule",
-        "meaning": "atoms joined as one tiny unit"
+        "word": "air",
+        "meaning": "tiny moving pieces of gas all around us"
       },
       {
-        "word": "atom",
-        "meaning": "a tiny piece of matter"
+        "word": "air resistance / drag",
+        "meaning": "air pushing against an object moving through it"
       },
       {
-        "word": "hydrogen / oxygen",
-        "meaning": "the H and O atoms in H2O"
+        "word": "canopy",
+        "meaning": "the wide top of a parachute"
       },
       {
-        "word": "ice",
-        "meaning": "solid water"
+        "word": "surface area",
+        "meaning": "how much outside space a surface covers"
       },
       {
-        "word": "melt / freeze",
-        "meaning": "solid to liquid / liquid to solid"
+        "word": "weight",
+        "meaning": "the pull of gravity on an object"
       },
       {
-        "word": "vapor",
-        "meaning": "water in its gas state"
+        "word": "fair test",
+        "meaning": "a test that changes one thing at a time"
       },
       {
-        "word": "surface tension",
-        "meaning": "a liquid surface resisting a pull"
+        "word": "predict",
+        "meaning": "say what you think will happen before a test"
       },
       {
-        "word": "float",
-        "meaning": "stay at a liquid's top"
-      },
-      {
-        "word": "dissolve",
-        "meaning": "spread through a liquid in tiny pieces"
+        "word": "measure",
+        "meaning": "use numbers to describe what happens"
       }
     ],
     "questions": [
-      "What does H2O tell you about the atoms in one water molecule?",
-      "How do both rounded drops and a resting paperclip give evidence that water molecules attract one another?",
-      "Why can floating ice help fish survive beneath a frozen pond?"
+      "Why does a flat coffee filter fall more slowly than the same filter crumpled?",
+      "How do repeated drops make the result of a fair test more trustworthy?",
+      "How do gravity and drag work together when a parachute descends?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write one clue that shows why water is special.",
-      "example": "Example: Ice floats because it is lighter for its size than liquid water."
+      "prompt": "Write one parachute prediction and name what you would measure.",
+      "example": "Example: I predict the bigger canopy will fall longer, so I will measure its drop time."
     }
   },
   "math": {
-    "title": "Water groups and arrays",
-    "plate": "change",
-    "intro": "Use repeated addition to count equal groups and rows.",
-    "eyebrow": "SIX WATER ARRAYS",
-    "actionLabel": "Add the equal groups",
+    "title": "Compare and round parachute measures",
+    "plate": "notice",
+    "intro": "Compare test notes, then round measurements to the nearest ten.",
+    "eyebrow": "SIX PARACHUTE MEASURES",
+    "actionLabel": "Compare or round",
     "tasks": [
       {
-        "skill": "equal-groups",
-        "rows": 2,
-        "columns": 4,
-        "prompt": "Big fills 2 ice trays with 4 ice cubes in each tray. How many ice cubes are there altogether?",
-        "equation": "4 + 4 =",
-        "hint": "Add the equal groups: 4 + 4.",
-        "answer": 8,
-        "worked": "4 + 4 = 8, so there are 8 ice cubes.",
-        "plate": "return",
+        "skill": "compare",
+        "operands": [
+          42,
+          28
+        ],
+        "symbol": ">",
+        "prompt": "Across several drops, a flat filter floats for 42 counted seconds in all and a crumpled filter for 28. Put >, <, or = in the circle. What is the greater total?",
+        "equation": "42 ○ 28",
+        "hint": "Compare tens first, then ones. Write the symbol, then give the greater total.",
+        "answer": 42,
+        "worked": "42 > 28. Four tens are more than two tens, so the greater total is 42 seconds.",
+        "plate": "reach",
         "label": "TASK 1"
       },
       {
-        "skill": "array",
-        "rows": 3,
-        "columns": 3,
-        "prompt": "Little makes 3 rows of 3 water drops on wax paper. How many drops are in the array?",
-        "equation": "3 + 3 + 3 =",
-        "hint": "Add one row at a time: 3 + 3 + 3.",
-        "answer": 9,
-        "worked": "3 + 3 + 3 = 9, so the array has 9 drops.",
-        "plate": "change",
+        "skill": "compare",
+        "operands": [
+          76,
+          67
+        ],
+        "symbol": ">",
+        "prompt": "One set of parachute strings is 76 centimeters long and another is 67 centimeters. Put >, <, or = in the circle. What is the greater length?",
+        "equation": "76 ○ 67",
+        "hint": "Compare tens first, then ones. Write the symbol, then give the greater length.",
+        "answer": 76,
+        "worked": "76 > 67. Seven tens are more than six tens, so the greater length is 76 centimeters.",
+        "plate": "wake",
         "label": "TASK 2"
       },
       {
-        "skill": "equal-groups",
-        "rows": 5,
-        "columns": 2,
-        "prompt": "There are 5 cups with 2 paper straws beside each cup. How many paper straws are there altogether?",
-        "equation": "2 + 2 + 2 + 2 + 2 =",
-        "hint": "Add the 5 equal groups: 2 + 2 + 2 + 2 + 2.",
-        "answer": 10,
-        "worked": "2 + 2 + 2 + 2 + 2 = 10, so there are 10 paper straws.",
-        "plate": "keep",
+        "skill": "compare",
+        "operands": [
+          48,
+          48
+        ],
+        "symbol": "=",
+        "prompt": "Big and Little each record 48 test drops. Put >, <, or = in the circle. What is the shared number when the totals are equal?",
+        "equation": "48 ○ 48",
+        "hint": "Compare tens and ones. When both totals match, use = and give that shared number.",
+        "answer": 48,
+        "worked": "48 = 48. Both totals match, so the shared number is 48 drops.",
+        "plate": "notice",
         "label": "TASK 3"
       },
       {
-        "skill": "array",
-        "rows": 3,
-        "columns": 5,
-        "prompt": "Big arranges 3 rows of 5 paperclips for a water test. How many paperclips are in the array?",
-        "equation": "5 + 5 + 5 =",
-        "hint": "Add the rows: 5 + 5 + 5.",
-        "answer": 15,
-        "worked": "5 + 5 + 5 = 15, so the array has 15 paperclips.",
-        "plate": "notice",
+        "skill": "round-ten",
+        "operands": [
+          23
+        ],
+        "prompt": "The supply box holds 23 paperclips. What is 23 rounded to the nearest ten?",
+        "equation": "23 → nearest ten: ___",
+        "hint": "Look at the ones digit. With 4 or less, round down to the ten before.",
+        "answer": 20,
+        "worked": "23 has 3 ones, so round down to 20 paperclips.",
+        "plate": "change",
         "label": "TASK 4"
       },
       {
-        "skill": "equal-groups",
-        "rows": 4,
-        "columns": 4,
-        "prompt": "Little sets 4 trays with 4 small bowls of water on each tray. How many bowls are there altogether?",
-        "equation": "4 + 4 + 4 + 4 =",
-        "hint": "Add the 4 equal groups: 4 + 4 + 4 + 4.",
-        "answer": 16,
-        "worked": "4 + 4 + 4 + 4 = 16, so there are 16 bowls.",
-        "plate": "keep",
+        "skill": "round-ten",
+        "operands": [
+          57
+        ],
+        "prompt": "A piece of string is 57 centimeters long. What is 57 rounded to the nearest ten?",
+        "equation": "57 → nearest ten: ___",
+        "hint": "Look at the ones digit. With 5 or more, round up to the next ten.",
+        "answer": 60,
+        "worked": "57 has 7 ones, so round up to 60 centimeters.",
+        "plate": "wake",
         "label": "TASK 5"
       },
       {
-        "skill": "array",
-        "rows": 5,
-        "columns": 4,
-        "prompt": "Big arranges 5 rows of 4 cups of water. How many cups are in the array?",
-        "equation": "4 + 4 + 4 + 4 + 4 =",
-        "hint": "Add one row at a time: 4 + 4 + 4 + 4 + 4.",
-        "answer": 20,
-        "worked": "4 + 4 + 4 + 4 + 4 = 20, so the array has 20 cups.",
-        "plate": "keep",
+        "skill": "round-ten",
+        "operands": [
+          95
+        ],
+        "prompt": "A safe standing-height drop is measured as 95 centimeters. What is 95 rounded to the nearest ten?",
+        "equation": "95 → nearest ten: ___",
+        "hint": "A ones digit of 5 rounds up to the next ten.",
+        "answer": 100,
+        "worked": "95 has 5 ones, so round up to 100 centimeters.",
+        "plate": "notice",
         "label": "TASK 6"
       }
     ],
-    "extension": "Draw your own water-drop array with 2 to 5 rows and 2 to 5 drops in each row.",
-    "printNote": "Write one answer in each blank. Use repeated addition to show every equal group or row.",
-    "parentNote": "Grade 2 math. Six tasks use rows and columns from 2 through 5, with repeated addition and totals no greater than 25.",
-    "answerKeyIntro": "Grade 2 math. Read rows as equal groups and add the same number once for each row."
+    "extension": "Choose one two-digit measurement from a new drop test. Compare it with another result, then round it to the nearest ten.",
+    "printNote": "Write one answer in each blank. For comparisons, also put >, <, or = in the circle.",
+    "parentNote": "Grade 2 math. Six tasks compare two-digit values or round a two-digit value to the nearest ten.",
+    "answerKeyIntro": "Grade 2 math. Compare tens before ones; for rounding, 5 or more rounds up and 4 or less rounds down."
   },
   "writing": {
-    "title": "Write what water can do",
-    "intro": "Choose a clue. Say your idea first, then draw or write it.",
+    "title": "Write a fair-test note",
+    "intro": "Choose one clue. Say your idea first, then draw or write it.",
     "plateIds": [
-      "wake",
-      "change",
+      "reach",
+      "notice",
       "return"
     ],
-    "draw": "Draw one water clue and add a small arrow to the part you want a reader to notice.",
-    "starter": "My water clue",
+    "draw": "Draw one parachute test and add a small arrow to the part you changed.",
+    "starter": "My parachute test",
     "frames": [
       {
-        "plate": "wake",
-        "start": "One water molecule has",
-        "hint": "dictate the number and kinds of atoms"
+        "plate": "reach",
+        "start": "The wide filter fell more slowly because",
+        "hint": "dictate how it meets the air"
       },
       {
-        "plate": "change",
-        "start": "A drop beads up because",
-        "hint": "dictate what the molecules do"
+        "plate": "notice",
+        "start": "To make the test fair, I would",
+        "hint": "dictate what stays the same"
       },
       {
         "plate": "return",
-        "start": "Ice floats because",
-        "hint": "dictate how ice compares with liquid water"
+        "start": "The tiny top hole may",
+        "hint": "dictate how the fall changes"
       }
     ],
     "words": [
-      "water",
-      "molecule",
-      "atom",
-      "hydrogen",
-      "oxygen",
-      "ice",
-      "melt",
-      "freeze",
-      "vapor",
-      "surface tension",
-      "float",
-      "dissolve"
+      "gravity",
+      "air",
+      "air resistance",
+      "drag",
+      "canopy",
+      "surface area",
+      "weight",
+      "fair test",
+      "predict",
+      "measure"
     ],
-    "check": "Does your sentence name a water clue and explain why it happens?",
+    "check": "Does your sentence name one change and explain what you would predict or measure?",
     "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "H2O means each water molecule contains two hydrogen atoms and one oxygen atom."
+      "text": "The flat filter has more surface area facing the air, so it makes more drag and falls more slowly than the same filter crumpled."
     },
     {
       "label": "Reading · 2",
-      "text": "Rounded drops and the supported paperclip both show the effect of water molecules attracting one another at the surface."
+      "text": "Several drops reduce the chance that one wobble or unusual release will decide the result."
     },
     {
       "label": "Reading · 3",
-      "text": "Because ice floats, a pond can freeze at the top while liquid water remains below for fish."
+      "text": "Gravity pulls the parachute down while drag pushes against its motion and slows the descent."
     },
     {
       "label": "Writing",
-      "text": "Accept a spoken, dictated, drawn, or written explanation that connects one water property to its cause."
+      "text": "Accept a spoken, dictated, drawn, or written prediction that names one changed feature and one measurement."
     }
   ],
   "quiz": {
-    "title": "Four water clues",
-    "intro": "Follow one molecule through four surprising properties.",
+    "title": "Four parachute clues",
+    "intro": "Follow gravity, drag, weight, and a steadier fall.",
     "questions": [
       {
-        "id": "formula",
-        "prompt": "What is inside one H2O molecule?",
+        "id": "drag",
+        "prompt": "What does air resistance do to a falling parachute?",
         "choices": [
-          "Two hydrogen atoms and one oxygen atom",
-          "Two oxygen atoms and one hydrogen atom",
-          "Only one kind of atom"
+          "It pushes against the motion and slows the fall",
+          "It switches gravity off",
+          "It pulls the load toward the floor"
         ],
         "answerIndex": 0,
-        "answer": "One H2O molecule has two hydrogen atoms and one oxygen atom."
+        "answer": "Air resistance, or drag, pushes against the parachute's motion and slows its fall."
       },
       {
-        "id": "tension",
-        "prompt": "Why can water form rounded beads on wax paper?",
+        "id": "area",
+        "prompt": "Why does a flat coffee filter usually fall more slowly than the same filter crumpled?",
         "choices": [
-          "Water molecules attract one another",
-          "Wax turns water into ice",
-          "Every drop contains air"
+          "Its wide surface meets more air",
+          "It has more gravity",
+          "Its paper becomes lighter"
         ],
         "answerIndex": 0,
-        "answer": "Water molecules attract one another, and surface tension helps pull a drop into a rounded bead."
+        "answer": "The wide filter shows more surface area to the air, creating more drag while its weight stays the same."
       },
       {
-        "id": "floating",
-        "prompt": "Why does ordinary ice float in liquid water?",
+        "id": "fair",
+        "prompt": "Which plan makes a fair canopy-size test?",
         "choices": [
-          "Ice is lighter for its size",
-          "Ice has no molecules",
-          "Liquid water pushes every solid upward"
+          "Change canopy size but keep weight and strings equal",
+          "Change canopy, weight, and strings together",
+          "Drop each parachute only once"
         ],
         "answerIndex": 0,
-        "answer": "Ice is lighter for its size than liquid water because its molecules form a roomier pattern."
+        "answer": "Change only canopy size, keep weight and strings equal, and repeat the drops."
       },
       {
-        "id": "dissolve",
-        "prompt": "What happens when sugar dissolves in water?",
+        "id": "vent",
+        "prompt": "What can a tiny centered hole at the canopy top do?",
         "choices": [
-          "Water spreads the sugar's tiny pieces through the liquid",
-          "The sugar stops existing",
-          "The water freezes around the sugar"
+          "Let some air through and reduce wobble",
+          "Remove gravity",
+          "Make the canopy catch every bit of air"
         ],
         "answerIndex": 0,
-        "answer": "Water molecules surround the sugar's tiny pieces and spread them through the liquid."
+        "answer": "A tiny top hole can let some air through more evenly, which may reduce wobble."
       }
     ]
   },
-  "parentGuidance": "H2O names one water molecule: two hydrogen atoms joined to one oxygen atom. Attraction between water molecules helps explain rounded drops and surface tension. Ice has a more open structure, making it less dense than liquid water, so it floats; this helps ponds freeze from the top. Water dissolves many substances, not everything. Stay beside the child for every activity, use only cool water, keep small items away from mouths, and wipe up spills promptly.",
+  "parentGuidance": "Gravity pulls a parachute down while air resistance, or drag, pushes against its motion. A wide canopy creates more drag; weight, canopy area, shape, release, and air currents can all affect a test, so change one thing at a time and repeat drops. Stay beside the child, use scissors only with grown-up help, and drop only from standing height or from a grown-up's raised hand—never climb on chairs, stair railings, windows, or balconies. Keep paperclips and small toys away from mouths.",
   "sources": [
     {
-      "label": "NOAA · water molecules and three states",
-      "url": "https://www.nesdis.noaa.gov/about/k-12-education/understanding-our-planet/water-cycle-board-game"
+      "label": "NASA Glenn · What is drag?",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/what-is-drag/"
     },
     {
-      "label": "USGS · surface tension and water",
-      "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water"
+      "label": "NASA Glenn · Falling object with air resistance",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/falling-object-with-air-resistance/"
     },
     {
-      "label": "USGS · water density and floating ice",
-      "url": "https://www.usgs.gov/water-science-school/science/water-density"
+      "label": "NASA · Where in the Air classroom guide",
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/05/where-in-the-air-classroom-activity-student-guide.pdf"
     },
     {
-      "label": "USGS · why water dissolves many substances",
-      "url": "https://www.usgs.gov/water-science-school/science/water-qa-why-water-universal-solvent"
+      "label": "NASA Science · Mars 2020 parachute test",
+      "url": "https://science.nasa.gov/resource/nasas-mars-2020-supersonic-parachute-test-flight-1/"
     }
   ],
   "titleCard": {
     "plate": "wake",
-    "edition": "WATER · 2026-10-22",
-    "subtitle": "Tiny molecules. Surprising clues."
+    "edition": "AIR · 2026-10-23",
+    "subtitle": "A wide canopy. A slower fall."
   }
 }
