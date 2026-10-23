@@ -45,7 +45,7 @@
         "plate": "change",
         "question": "What changes when the load is heavier?",
         "notice": "Look for one paperclip under one canopy and two paperclips under the matching canopy.",
-        "say": "With the same canopy, adding a second paperclip gives gravity more weight to pull while the canopy area stays the same. In this test, the heavier parachute usually descends faster. Without air, extra weight would not make an object fall faster.",
+        "say": "With the same canopy, a second paperclip adds weight, so gravity pulls down harder while the canopy area stays the same. In this test, that parachute usually descends faster. Without air, the extra paperclip would not make it fall faster.",
         "try": "Keep the filter and strings the same. Compare one paperclip with two paperclips over several drops."
       },
       {
@@ -84,7 +84,7 @@
       "foldSrc": "assets/a-coffee-filter-parachute/03-weight-fold.jpg",
       "title": "One more paperclip",
       "alt": "Two matching coffee filter parachutes descend above a rug, one carrying one paperclip and one carrying two.",
-      "caption": "With the same canopy, an added paperclip can make the parachute descend faster."
+      "caption": "A second paperclip adds weight, so gravity pulls down harder while the same canopy provides drag."
     },
     {
       "id": "notice",
@@ -149,11 +149,11 @@
         "id": "change",
         "plate": "change",
         "title": "A heavier load",
-        "passage": "Next they kept the canopy and strings the same. One parachute carried one paperclip; another carried two. The extra weight made that parachute descend faster in air. This does not mean heavier things always fall faster: without air, there would be no drag.",
+        "passage": "Next they kept the canopy and strings the same. One parachute carried one paperclip; another carried two. The second paperclip added weight, so gravity pulled down harder while the same canopy provided drag. In this test, that parachute descended faster. Without air, the extra paperclip would not make it fall faster.",
         "prompt": "What stayed the same, and what changed in the paperclip test?",
         "foldable": {
           "heading": "Change the weight",
-          "body": "With the same canopy and strings, two paperclips add weight. In air, that parachute usually reaches the floor sooner."
+          "body": "A second paperclip adds weight, so gravity pulls down harder while the canopy stays the same size. In air, it usually reaches the floor sooner."
         }
       },
       {
