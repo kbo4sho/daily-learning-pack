@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T03:33:57.201Z",
-  "latest": "a-coffee-filter-parachute",
+  "generatedAt": "2026-10-23T13:28:24.369Z",
+  "latest": "how-bike-derailleurs-work",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-bike-derailleurs-work",
+      "date": "2026-10-26",
+      "topic": "how do bike derailleurs work?",
+      "title": "How Bike Derailleurs Work",
+      "teaser": "Follow one shifter click from the cable to the chain, then see why different cogs make hills feel easier or harder.",
+      "href": "./days/how-bike-derailleurs-work/",
+      "latest": true
+    },
     {
       "slug": "a-coffee-filter-parachute",
       "date": "2026-10-23",
@@ -11,7 +20,7 @@
       "title": "A Coffee Filter Parachute",
       "teaser": "Turn a flat coffee filter into a tiny canopy and test how air slows its fall.",
       "href": "./days/a-coffee-filter-parachute/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "h2o",
