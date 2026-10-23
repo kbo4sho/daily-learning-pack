@@ -404,18 +404,34 @@ function requireTools() {
     // The public CI runs npm test before installing browsers. Provision this
     // audit dependency on its ephemeral Ubuntu runner without changing workflows.
     if (process.env.GITHUB_ACTIONS === "true" && process.platform === "linux") {
-      execFileSync("sudo", ["apt-get", "update", "-qq"], {
-        stdio: "pipe",
-        timeout: 120000,
-      });
-      execFileSync(
-        "sudo",
-        ["apt-get", "install", "-y", "poppler-utils", "libimage-exiftool-perl"],
-        {
-          stdio: "pipe",
-          timeout: 120000,
-        },
-      );
+      // A slow apt mirror used to fail this with "spawnSync sudo ETIMEDOUT"
+      // (one 120s update, no retry). Try the runner's cached package lists
+      // first, then refresh and retry, each attempt bounded.
+      const apt = (args, timeout) =>
+        execFileSync(
+          "sudo",
+          [
+            "DEBIAN_FRONTEND=noninteractive",
+            "apt-get",
+            "-o",
+            "Acquire::Retries=3",
+            ...args,
+          ],
+          { stdio: "pipe", timeout },
+        );
+      const install = () =>
+        apt(
+          ["install", "-y", "-qq", "poppler-utils", "libimage-exiftool-perl"],
+          300000,
+        );
+      for (let attempt = 0; attempt < 3 && !available(); attempt++) {
+        try {
+          if (attempt > 0) apt(["update", "-qq"], 300000);
+          install();
+        } catch (error) {
+          if (attempt === 2) throw error;
+        }
+      }
     }
     if (!available())
       throw new Error(
