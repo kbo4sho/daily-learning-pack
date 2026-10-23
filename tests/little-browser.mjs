@@ -5,7 +5,12 @@ import { resolve } from "node:path";
 import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
-import { bounded, imagesAndFontsReady, watchdog } from "./bounded.mjs";
+import {
+  bounded,
+  imagesAndFontsReady,
+  watchdog,
+  withContext,
+} from "./bounded.mjs";
 
 watchdog(9 * 60_000, "little-browser");
 
@@ -45,70 +50,82 @@ await test(
       ["phone", { width: 390, height: 844 }],
       ["desktop", { width: 1280, height: 900 }],
     ]) {
-      const context = await bounded(
-        browser.newContext({ viewport }),
-        30_000,
-        "newContext",
+      await withContext(
+        browser,
+        { viewport },
+        async (page) => {
+          for (const route of routes) {
+            // Each route is bounded so a wedged page fails with its route name.
+            await bounded(
+              (async () => {
+                const response = await page.goto(`${origin}${route}`);
+                assert.equal(response.status(), 200, route);
+                await imagesAndFontsReady(page);
+                const width = await page.evaluate(
+                  () => document.documentElement.scrollWidth,
+                );
+                assert.ok(
+                  width <= viewport.width,
+                  `${label} ${route}: overflow ${width}`,
+                );
+                const broken = await page.evaluate(() =>
+                  [...document.images]
+                    .filter((img) => !img.naturalWidth)
+                    .map((img) => img.src),
+                );
+                assert.deepEqual(broken, [], `${label} ${route}`);
+                assert.ok(
+                  (await page.locator("body").textContent()).includes(
+                    "little explorers",
+                  ),
+                  route,
+                );
+                const results = await bounded(
+                  new AxeBuilder({ page }).analyze(),
+                  60_000,
+                  "axe analyze",
+                );
+                assert.deepEqual(
+                  results.violations.map((v) => `${v.id}: ${v.nodes.length}`),
+                  [],
+                  `${label} ${route}`,
+                );
+                if (route.includes("/days/")) {
+                  const pdf = page.locator('a[href$="little-pack.pdf"]');
+                  const href = await pdf.getAttribute("href");
+                  const res = await page.request.get(
+                    new URL(href, page.url()).href,
+                  );
+                  assert.equal(res.status(), 200);
+                  assert.equal(
+                    res.headers()["content-type"],
+                    "application/pdf",
+                  );
+                  const box = await pdf.boundingBox();
+                  assert.ok(
+                    box.height >= 44,
+                    "Print tap target is at least 44px",
+                  );
+                }
+                if (shotDir) {
+                  const name =
+                    route
+                      .replace("/daily-learning-pack/", "")
+                      .replace(/\/$/, "")
+                      .replaceAll("/", "-") || "little";
+                  await page.screenshot({
+                    path: `${shotDir}/${label}-${name}.png`,
+                    fullPage: true,
+                  });
+                }
+              })(),
+              90_000,
+              `${label} ${route}`,
+            );
+          }
+        },
+        { bodyMs: 4 * 60_000 },
       );
-      try {
-        const page = await context.newPage();
-        for (const route of routes) {
-          const response = await page.goto(`${origin}${route}`);
-          assert.equal(response.status(), 200, route);
-          await imagesAndFontsReady(page);
-          const width = await page.evaluate(
-            () => document.documentElement.scrollWidth,
-          );
-          assert.ok(
-            width <= viewport.width,
-            `${label} ${route}: overflow ${width}`,
-          );
-          const broken = await page.evaluate(() =>
-            [...document.images]
-              .filter((img) => !img.naturalWidth)
-              .map((img) => img.src),
-          );
-          assert.deepEqual(broken, [], `${label} ${route}`);
-          assert.ok(
-            (await page.locator("body").textContent()).includes(
-              "little explorers",
-            ),
-            route,
-          );
-          const results = await bounded(
-            new AxeBuilder({ page }).analyze(),
-            60_000,
-            "axe analyze",
-          );
-          assert.deepEqual(
-            results.violations.map((v) => `${v.id}: ${v.nodes.length}`),
-            [],
-            `${label} ${route}`,
-          );
-          if (route.includes("/days/")) {
-            const pdf = page.locator('a[href$="little-pack.pdf"]');
-            const href = await pdf.getAttribute("href");
-            const res = await page.request.get(new URL(href, page.url()).href);
-            assert.equal(res.status(), 200);
-            assert.equal(res.headers()["content-type"], "application/pdf");
-            const box = await pdf.boundingBox();
-            assert.ok(box.height >= 44, "Print tap target is at least 44px");
-          }
-          if (shotDir) {
-            const name =
-              route
-                .replace("/daily-learning-pack/", "")
-                .replace(/\/$/, "")
-                .replaceAll("/", "-") || "little";
-            await page.screenshot({
-              path: `${shotDir}/${label}-${name}.png`,
-              fullPage: true,
-            });
-          }
-        }
-      } finally {
-        await bounded(context.close(), 30_000, "context.close").catch(() => {});
-      }
     }
   },
 );

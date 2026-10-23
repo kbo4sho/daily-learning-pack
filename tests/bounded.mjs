@@ -35,3 +35,36 @@ export function imagesAndFontsReady(page, ms = 30_000) {
     "fonts.ready + img.decode()",
   );
 }
+
+/**
+ * Run `fn(page)` in a fresh context. The body is raced against `bodyMs` (set
+ * below the node:test timeout, which reports but does not cancel), so the
+ * context is always closed. A close failure fails an otherwise passing test.
+ */
+export async function withContext(
+  browser,
+  options,
+  fn,
+  { bodyMs = 75_000, stepMs = 30_000 } = {},
+) {
+  const context = await bounded(
+    browser.newContext(options),
+    stepMs,
+    "newContext",
+  );
+  let failure;
+  try {
+    const page = await bounded(context.newPage(), stepMs, "newPage");
+    return await bounded(fn(page), bodyMs, "test body");
+  } catch (error) {
+    failure = error;
+    throw error;
+  } finally {
+    try {
+      await bounded(context.close(), stepMs, "context.close");
+    } catch (closeError) {
+      if (!failure) throw closeError;
+      failure.message += ` (and context.close failed: ${closeError.message})`;
+    }
+  }
+}
