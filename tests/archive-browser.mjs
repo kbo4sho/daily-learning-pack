@@ -4,6 +4,9 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import { serve } from "../scripts/serve.mjs";
+import { bounded, imagesAndFontsReady, watchdog } from "./bounded.mjs";
+
+watchdog(14 * 60_000, "archive-browser");
 
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
@@ -38,24 +41,23 @@ const TEST = { timeout: 90_000 };
 
 async function ready(page, url) {
   await page.goto(url, { timeout: STEP_TIMEOUT });
-  // Same readiness as before (fonts loaded, every image decoded with pixels),
-  // polled by Playwright so it can time out.
-  await page.waitForFunction(
-    () =>
-      document.fonts.status === "loaded" &&
-      [...document.images].every((img) => img.complete && img.naturalWidth > 0),
-    null,
-    { timeout: STEP_TIMEOUT },
-  );
+  // The original readiness contract, bounded so a wedged page fails.
+  await imagesAndFontsReady(page, STEP_TIMEOUT);
 }
 
 // A fresh context per test: one wedged WebKit page cannot poison later tests.
 async function withPage(browser, options, fn) {
-  const context = await browser.newContext(options);
+  const context = await bounded(
+    browser.newContext(options),
+    STEP_TIMEOUT,
+    "newContext",
+  );
   try {
-    return await fn(await context.newPage());
+    return await fn(await bounded(context.newPage(), STEP_TIMEOUT, "newPage"));
   } finally {
-    await context.close();
+    await bounded(context.close(), STEP_TIMEOUT, "context.close").catch(
+      () => {},
+    );
   }
 }
 
@@ -95,9 +97,18 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     { timeout: 20 * 60_000 },
     async (t) => {
       const server = await serve(root, 0);
-      t.after(() => new Promise((done) => server.close(done)));
+      t.after(() =>
+        bounded(
+          new Promise((done) => {
+            server.closeAllConnections();
+            server.close(done);
+          }),
+          30_000,
+          "server.close",
+        ),
+      );
       const browser = await browserType.launch();
-      t.after(() => browser.close());
+      t.after(() => bounded(browser.close(), 30_000, "browser.close"));
       const origin = `http://127.0.0.1:${server.address().port}`;
       for (const route of [
         "/daily-learning-pack/",
@@ -298,11 +309,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
           `${routeName}: reduced motion stays still on hover`,
           TEST,
           async () => {
-            const reduced = await browser.newContext({
-              reducedMotion: "reduce",
-            });
-            try {
-              const p = await reduced.newPage();
+            await withPage(browser, { reducedMotion: "reduce" }, async (p) => {
               await ready(p, url);
               for (const link of await p.locator("a.seed-packet-link").all()) {
                 await link.hover();
@@ -320,9 +327,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
                   assert.equal(style.transform, "none");
                 }
               }
-            } finally {
-              await reduced.close();
-            }
+            });
           },
         );
 

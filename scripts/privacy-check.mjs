@@ -394,6 +394,7 @@ function requireTools() {
       for (const command of ["pdftotext", "pdfinfo", "exiftool"])
         execFileSync(command, [command === "exiftool" ? "-ver" : "-v"], {
           stdio: "pipe",
+          timeout: 30000,
         });
       return true;
     } catch {
@@ -422,16 +423,28 @@ function requireTools() {
       const install = () =>
         apt(
           ["install", "-y", "-qq", "poppler-utils", "libimage-exiftool-perl"],
-          300000,
+          240000,
         );
-      for (let attempt = 0; attempt < 3 && !available(); attempt++) {
+      // Three attempts within one overall ~10 minute provisioning budget.
+      const deadline = Date.now() + 600000;
+      let lastError;
+      for (
+        let attempt = 0;
+        attempt < 3 && Date.now() < deadline && !available();
+        attempt++
+      ) {
         try {
-          if (attempt > 0) apt(["update", "-qq"], 300000);
+          if (attempt > 0) apt(["update", "-qq"], 180000);
           install();
         } catch (error) {
-          if (attempt === 2) throw error;
+          lastError = error;
         }
       }
+      if (!available())
+        throw new Error(
+          "Privacy scan requires Poppler (pdftotext, pdfinfo) and ExifTool; provisioning failed.",
+          { cause: lastError },
+        );
     }
     if (!available())
       throw new Error(
@@ -447,6 +460,7 @@ function pdfText(command, args) {
     return execFileSync(command, args, {
       encoding: "utf8",
       maxBuffer: 64 * 1024 * 1024,
+      timeout: 120000,
     });
   } catch (error) {
     throw new Error(
@@ -538,6 +552,7 @@ export async function scanPrivacy(
       execFileSync("exiftool", ["-j", "-G1", "-a", "-s", ...images], {
         encoding: "utf8",
         maxBuffer: 64 * 1024 * 1024,
+        timeout: 300000,
       }),
     );
     for (const record of records) {
