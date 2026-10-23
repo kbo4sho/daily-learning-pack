@@ -138,7 +138,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, operands]),
     [
-      ["compare", [42, 28]],
+      ["compare", [28, 42]],
       ["compare", [76, 67]],
       ["compare", [48, 48]],
       ["round-ten", [23]],
