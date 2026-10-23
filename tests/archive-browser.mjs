@@ -4,7 +4,12 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import { serve } from "../scripts/serve.mjs";
-import { bounded, imagesAndFontsReady, watchdog } from "./bounded.mjs";
+import {
+  bounded,
+  imagesAndFontsReady,
+  watchdog,
+  withContext,
+} from "./bounded.mjs";
 
 watchdog(14 * 60_000, "archive-browser");
 
@@ -46,20 +51,7 @@ async function ready(page, url) {
 }
 
 // A fresh context per test: one wedged WebKit page cannot poison later tests.
-async function withPage(browser, options, fn) {
-  const context = await bounded(
-    browser.newContext(options),
-    STEP_TIMEOUT,
-    "newContext",
-  );
-  try {
-    return await fn(await bounded(context.newPage(), STEP_TIMEOUT, "newPage"));
-  } finally {
-    await bounded(context.close(), STEP_TIMEOUT, "context.close").catch(
-      () => {},
-    );
-  }
-}
+const withPage = (browser, options, fn) => withContext(browser, options, fn);
 
 async function opensPack(page, packet, activate) {
   await Promise.all([

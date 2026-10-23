@@ -408,7 +408,13 @@ function requireTools() {
       // A slow apt mirror used to fail this with "spawnSync sudo ETIMEDOUT"
       // (one 120s update, no retry). Try the runner's cached package lists
       // first, then refresh and retry, each attempt bounded.
-      const apt = (args, timeout) =>
+      // One overall ~10 minute provisioning budget; every call is capped to
+      // what remains of it, and nothing starts once it is spent.
+      const deadline = Date.now() + 600000;
+      const remaining = (cap) => Math.min(cap, deadline - Date.now());
+      const apt = (args, cap) => {
+        const timeout = remaining(cap);
+        if (timeout <= 0) throw new Error("apt provisioning budget spent");
         execFileSync(
           "sudo",
           [
@@ -420,29 +426,26 @@ function requireTools() {
           ],
           { stdio: "pipe", timeout },
         );
-      const install = () =>
-        apt(
-          ["install", "-y", "-qq", "poppler-utils", "libimage-exiftool-perl"],
-          240000,
-        );
-      // Three attempts within one overall ~10 minute provisioning budget.
-      const deadline = Date.now() + 600000;
+      };
       let lastError;
       for (
         let attempt = 0;
-        attempt < 3 && Date.now() < deadline && !available();
+        attempt < 3 && remaining(Infinity) > 0 && !available();
         attempt++
       ) {
         try {
           if (attempt > 0) apt(["update", "-qq"], 180000);
-          install();
+          apt(
+            ["install", "-y", "-qq", "poppler-utils", "libimage-exiftool-perl"],
+            240000,
+          );
         } catch (error) {
           lastError = error;
         }
       }
       if (!available())
         throw new Error(
-          "Privacy scan requires Poppler (pdftotext, pdfinfo) and ExifTool; provisioning failed.",
+          `Privacy scan requires Poppler (pdftotext, pdfinfo) and ExifTool; provisioning failed${lastError ? `: ${lastError.message}` : " (apt succeeded but the tools are still missing)"}.`,
           { cause: lastError },
         );
     }
