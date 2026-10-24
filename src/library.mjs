@@ -40,6 +40,8 @@ export async function readLibrary(root) {
       if (
         row.date !== day.date ||
         row.topic !== (band === "4-5" ? tags?.topic : pack?.topic) ||
+        row.why !== pack?.why ||
+        (band === "4-5" && row.why !== day.why) ||
         (band === "6-8" &&
           (tags?.band !== band || tags?.format !== row.format)) ||
         (band === "4-5" &&
