@@ -15,6 +15,12 @@ const identifier = new RegExp(
 );
 const home = /\/Users\/|~\/|\$(?:HOME\b|\{HOME\})/g;
 const host = /(?<![\w.$-])[a-z0-9-]+\.local\b/gi;
+// Private upstream repo names never reach public output.
+// Built from parts so this guard file does not match itself.
+const privateRepo = new RegExp(
+  `\\b${["super", "dad"].join("[\\s_-]?")}\\b`,
+  "gi",
+);
 
 // Stricter ban list for the second learner's public /little/ tree
 // (reports/FM-2026-10-16-02.md update 3): no age, band, grade or birthday
@@ -82,6 +88,7 @@ export function privacyIssues(text, label = "content") {
     ["IDENTIFIER", identifier],
     ["LOCAL", home],
     ["LOCAL", host],
+    ["PRIVATE_REPO", privateRepo],
   ]) {
     // Third-party minified identifiers are arbitrary short symbols, not reader
     // identifiers. Do not exempt our own minified/inline output or vendor copy
@@ -387,6 +394,7 @@ function requireTools() {
       for (const command of ["pdftotext", "pdfinfo", "exiftool"])
         execFileSync(command, [command === "exiftool" ? "-ver" : "-v"], {
           stdio: "pipe",
+          timeout: 30000,
         });
       return true;
     } catch {
@@ -397,18 +405,49 @@ function requireTools() {
     // The public CI runs npm test before installing browsers. Provision this
     // audit dependency on its ephemeral Ubuntu runner without changing workflows.
     if (process.env.GITHUB_ACTIONS === "true" && process.platform === "linux") {
-      execFileSync("sudo", ["apt-get", "update", "-qq"], {
-        stdio: "pipe",
-        timeout: 120000,
-      });
-      execFileSync(
-        "sudo",
-        ["apt-get", "install", "-y", "poppler-utils", "libimage-exiftool-perl"],
-        {
-          stdio: "pipe",
-          timeout: 120000,
-        },
-      );
+      // A slow apt mirror used to fail this with "spawnSync sudo ETIMEDOUT"
+      // (one 120s update, no retry). Try the runner's cached package lists
+      // first, then refresh and retry, each attempt bounded.
+      // One overall ~10 minute provisioning budget; every call is capped to
+      // what remains of it, and nothing starts once it is spent.
+      const deadline = Date.now() + 600000;
+      const remaining = (cap) => Math.min(cap, deadline - Date.now());
+      const apt = (args, cap) => {
+        const timeout = remaining(cap);
+        if (timeout <= 0) throw new Error("apt provisioning budget spent");
+        execFileSync(
+          "sudo",
+          [
+            "DEBIAN_FRONTEND=noninteractive",
+            "apt-get",
+            "-o",
+            "Acquire::Retries=3",
+            ...args,
+          ],
+          { stdio: "pipe", timeout },
+        );
+      };
+      let lastError;
+      for (
+        let attempt = 0;
+        attempt < 3 && remaining(Infinity) > 0 && !available();
+        attempt++
+      ) {
+        try {
+          if (attempt > 0) apt(["update", "-qq"], 180000);
+          apt(
+            ["install", "-y", "-qq", "poppler-utils", "libimage-exiftool-perl"],
+            240000,
+          );
+        } catch (error) {
+          lastError = error;
+        }
+      }
+      if (!available())
+        throw new Error(
+          `Privacy scan requires Poppler (pdftotext, pdfinfo) and ExifTool; provisioning failed${lastError ? `: ${lastError.message}` : " (apt succeeded but the tools are still missing)"}.`,
+          { cause: lastError },
+        );
     }
     if (!available())
       throw new Error(
@@ -424,6 +463,7 @@ function pdfText(command, args) {
     return execFileSync(command, args, {
       encoding: "utf8",
       maxBuffer: 64 * 1024 * 1024,
+      timeout: 120000,
     });
   } catch (error) {
     throw new Error(
@@ -515,6 +555,7 @@ export async function scanPrivacy(
       execFileSync("exiftool", ["-j", "-G1", "-a", "-s", ...images], {
         encoding: "utf8",
         maxBuffer: 64 * 1024 * 1024,
+        timeout: 300000,
       }),
     );
     for (const record of records) {
