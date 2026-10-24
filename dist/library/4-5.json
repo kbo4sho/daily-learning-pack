@@ -2,6 +2,33 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-cats-talk",
+      "band": "4-5",
+      "topic": "how cats talk",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-21",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "leaves-changing-color",
       "band": "4-5",
       "topic": "leaves changing color",

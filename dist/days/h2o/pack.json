@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "h2o",
+  "topic": "H2O",
+  "teaser": "Meet one tiny molecule, then discover the clues that make water unlike most other liquids.",
+  "aliases": [
+    "water"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "groups-and-arrays",
+  "ageRange": [
+    7,
+    9
+  ],
+  "editionLabel": "GRADE 3 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "H2O: Why Water Is Special",
+  "question": "How can one tiny kind of molecule make drops bead, ice float, and so many things dissolve?",
+  "idea": "Every water molecule has two hydrogen atoms and one oxygen atom, and the way water molecules attract and arrange themselves gives water some unusual properties.",
+  "curiosity": {
+    "intro": "Start with a tiny molecule, then follow four clues you can see at the kitchen table.",
+    "carryForward": "Look for the same water molecules acting differently in ice, drops, and liquid water.",
+    "questions": [
+      {
+        "id": "molecule",
+        "plate": "wake",
+        "question": "What does H2O mean?",
+        "notice": "Find the small three-part model beside the glass: two matching pieces and one larger piece.",
+        "say": "Water is made of tiny pieces called molecules. Each water molecule is H2O: two hydrogen atoms joined to one oxygen atom. Atoms are even smaller pieces that can join to make molecules.",
+        "try": "Put one ice cube on a plate and start a timer. Use only cool water, keep a towel nearby, and wipe up every spill. Watch until the ice melts."
+      },
+      {
+        "id": "drops",
+        "plate": "change",
+        "question": "Why do water drops bead up?",
+        "notice": "Look at the rounded drops on wax paper and the larger drop where two small ones have joined.",
+        "say": "Water molecules attract one another. At the surface, their pull creates surface tension, which helps a drop gather into a rounded bead instead of spreading flat.",
+        "try": "Use a dropper or the end of a straw to place a few water drops on wax paper. Nudge two drops together and watch them join."
+      },
+      {
+        "id": "surface",
+        "plate": "notice",
+        "question": "How can a paperclip rest on water?",
+        "notice": "See how the paperclip rests across the surface while the water bends slightly beneath it.",
+        "say": "Surface tension makes the top of the water resist being pulled apart. It can act a little like a skin, but it is not a real solid skin. A paperclip can rest there if it is placed gently.",
+        "try": "Lay a small piece of tissue on water, place a clean paperclip on the tissue, and wait for the tissue to sink while the paperclip stays."
+      },
+      {
+        "id": "ice",
+        "plate": "return",
+        "question": "Why does ice float?",
+        "notice": "Compare the ice cube above the waterline with the liquid below it and the winter pond beyond the window.",
+        "say": "When water freezes, its molecules settle into a roomier pattern. Ice is lighter for its size than liquid water, so it floats. That unusual clue helps ponds freeze from the top while liquid water remains below.",
+        "try": "Drop an ice cube into a clear cup of water. Look from the side and notice how part of the cube stays above the surface."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/h2o/01-molecule.jpg",
+      "original": "assets/h2o/01-molecule.png",
+      "foldSrc": "assets/h2o/01-molecule-fold.jpg",
+      "title": "Three atoms together",
+      "alt": "Big and Little Wonderer study a simple three-piece water molecule model beside a clear glass at a warm kitchen table.",
+      "caption": "Two hydrogen atoms and one oxygen atom join to make one water molecule."
+    },
+    {
+      "id": "reach",
+      "src": "assets/h2o/02-states.jpg",
+      "original": "assets/h2o/02-states.png",
+      "foldSrc": "assets/h2o/02-states-fold.jpg",
+      "title": "Water changes state",
+      "alt": "Big and Little Wonderer watch an ice cube melt beside a glass of liquid water near a clear window; invisible water vapor is present in the air.",
+      "caption": "Water can be solid ice, flowing liquid, or invisible water vapor."
+    },
+    {
+      "id": "change",
+      "src": "assets/h2o/03-drops.jpg",
+      "original": "assets/h2o/03-drops.png",
+      "foldSrc": "assets/h2o/03-drops-fold.jpg",
+      "title": "Drops pull together",
+      "alt": "Little Wonderer uses a dropper over wax paper as rounded drops bead up and two drops join under Big Wonderer's careful gaze.",
+      "caption": "The attraction between water molecules helps drops gather into rounded beads."
+    },
+    {
+      "id": "notice",
+      "src": "assets/h2o/04-paperclip.jpg",
+      "original": "assets/h2o/04-paperclip.png",
+      "foldSrc": "assets/h2o/04-paperclip-fold.jpg",
+      "title": "A careful surface",
+      "alt": "A paperclip rests on the surface of a shallow glass bowl while Big and Little Wonderer look closely from the side.",
+      "caption": "Surface tension lets gently placed paperclips rest on the top of water."
+    },
+    {
+      "id": "return",
+      "src": "assets/h2o/05-ice.jpg",
+      "original": "assets/h2o/05-ice.png",
+      "foldSrc": "assets/h2o/05-ice-fold.jpg",
+      "title": "Ice floats high",
+      "alt": "Big and Little Wonderer see an ice cube floating in a clear cup, with a quiet pond frozen at the surface beyond the kitchen window.",
+      "caption": "Ice is lighter for its size than liquid water, so it floats."
+    },
+    {
+      "id": "keep",
+      "src": "assets/h2o/06-dissolve.jpg",
+      "original": "assets/h2o/06-dissolve.png",
+      "foldSrc": "assets/h2o/06-dissolve-fold.jpg",
+      "title": "Some things dissolve",
+      "alt": "Big and Little Wonderer compare clear cups of water beside small bowls of sugar and salt at the kitchen table.",
+      "caption": "Water can dissolve many substances by surrounding and carrying away their tiny pieces."
+    }
+  ],
+  "reading": {
+    "title": "Six clues hidden in water",
+    "coverPlate": "wake",
+    "coverText": "Meet one molecule, then follow what it can do.",
+    "foldableTitle": "A little book of water clues",
+    "foldableCoverLine": "H2O: Why Water Is Special",
+    "foldableNote": "Carry six water clues in a small book.",
+    "parentNote": "Ages 6-8. Welcome spoken answers, pointing, drawing, and dictation; the molecular scenes are explanatory illustrations.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Three atoms together",
+        "passage": "Little held a clear glass to the light. Tiny molecules moved inside. Every water molecule has the same recipe: two hydrogen atoms joined to one oxygen atom. H2O records that recipe.",
+        "prompt": "What does the 2 in H2O tell us about one water molecule?",
+        "foldable": {
+          "heading": "Three atoms",
+          "body": "Every bit of water is made of molecules. Each H2O molecule has two hydrogen atoms joined to one oxygen atom."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "The same water, three ways",
+        "passage": "An ice cube softened into a puddle. Solid ice had melted into liquid water. Water can also become a gas called water vapor. These changes rearrange the molecules, but they remain water molecules.",
+        "prompt": "What changes when ice melts, and what stays the same?",
+        "foldable": {
+          "heading": "Three states",
+          "body": "The same water can be solid ice, flowing liquid, or invisible water vapor. Melting and freezing change its state."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Drops that gather",
+        "passage": "Little placed drops on wax paper. Each curved into a bead instead of spreading flat. Water molecules attract one another, pulling the surface together. Two nearby beads joined into one larger drop.",
+        "prompt": "What evidence shows that water molecules pull toward one another?",
+        "foldable": {
+          "heading": "Drops gather",
+          "body": "Water molecules attract one another. At the surface, that pull gathers drops into rounded beads that can join together."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A surface that holds",
+        "passage": "Big lowered a paperclip on a small raft of tissue. The tissue sank, but the clip stayed at the top. The water was not covered by a solid skin. Its surface tension came from water molecules pulling together, making the surface resist being broken.",
+        "prompt": "Why is water's “skin” only a comparison, not a real skin?",
+        "foldable": {
+          "heading": "Surface tension",
+          "body": "Surface tension makes the top of water resist being pulled apart. A gently placed paperclip can rest there without sinking."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "Roomier ice",
+        "passage": "In liquid water, molecules slide close together. When water freezes, the molecules lock into a roomier pattern. That makes ice lighter for its size than liquid water, so it floats. On a pond, floating ice forms first at the top while liquid water—and fish—can remain below.",
+        "prompt": "How does the roomier pattern in ice help pond life?",
+        "foldable": {
+          "heading": "Roomier ice",
+          "body": "Ice molecules form a roomier pattern. Ice is lighter for its size than liquid water, so it floats on top."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Water makes room",
+        "passage": "A spoonful of sugar seemed to disappear in water, but its tiny pieces had not vanished. Water molecules surrounded those pieces and spread them through the water in the glass. Water can dissolve many substances, including sugar and salt, though it cannot dissolve everything. One small molecule had many remarkable ways to act.",
+        "prompt": "What happens to sugar when it dissolves in water?",
+        "foldable": {
+          "heading": "Water dissolves",
+          "body": "Water can surround and carry away tiny pieces of salt or sugar. That is called dissolving, but not everything dissolves."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "water",
+        "meaning": "a substance made of H2O molecules"
+      },
+      {
+        "word": "molecule",
+        "meaning": "atoms joined as one tiny unit"
+      },
+      {
+        "word": "atom",
+        "meaning": "a tiny piece of matter"
+      },
+      {
+        "word": "hydrogen / oxygen",
+        "meaning": "the H and O atoms in H2O"
+      },
+      {
+        "word": "ice",
+        "meaning": "solid water"
+      },
+      {
+        "word": "melt / freeze",
+        "meaning": "solid to liquid / liquid to solid"
+      },
+      {
+        "word": "vapor",
+        "meaning": "water in its gas state"
+      },
+      {
+        "word": "surface tension",
+        "meaning": "a liquid surface resisting a pull"
+      },
+      {
+        "word": "float",
+        "meaning": "stay at a liquid's top"
+      },
+      {
+        "word": "dissolve",
+        "meaning": "spread through a liquid in tiny pieces"
+      }
+    ],
+    "questions": [
+      "What does H2O tell you about the atoms in one water molecule?",
+      "How do both rounded drops and a resting paperclip give evidence that water molecules attract one another?",
+      "Why can floating ice help fish survive beneath a frozen pond?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one clue that shows why water is special.",
+      "example": "Example: Ice floats because it is lighter for its size than liquid water."
+    }
+  },
+  "math": {
+    "title": "Water groups and arrays",
+    "plate": "change",
+    "intro": "Use repeated addition to count equal groups and rows.",
+    "eyebrow": "SIX WATER ARRAYS",
+    "actionLabel": "Add the equal groups",
+    "tasks": [
+      {
+        "skill": "equal-groups",
+        "rows": 2,
+        "columns": 4,
+        "prompt": "Big fills 2 ice trays with 4 ice cubes in each tray. How many ice cubes are there altogether?",
+        "equation": "4 + 4 =",
+        "hint": "Add the equal groups: 4 + 4.",
+        "answer": 8,
+        "worked": "4 + 4 = 8, so there are 8 ice cubes.",
+        "plate": "return",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "array",
+        "rows": 3,
+        "columns": 3,
+        "prompt": "Little makes 3 rows of 3 water drops on wax paper. How many drops are in the array?",
+        "equation": "3 + 3 + 3 =",
+        "hint": "Add one row at a time: 3 + 3 + 3.",
+        "answer": 9,
+        "worked": "3 + 3 + 3 = 9, so the array has 9 drops.",
+        "plate": "change",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 2,
+        "prompt": "There are 5 cups with 2 paper straws beside each cup. How many paper straws are there altogether?",
+        "equation": "2 + 2 + 2 + 2 + 2 =",
+        "hint": "Add the 5 equal groups: 2 + 2 + 2 + 2 + 2.",
+        "answer": 10,
+        "worked": "2 + 2 + 2 + 2 + 2 = 10, so there are 10 paper straws.",
+        "plate": "keep",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "array",
+        "rows": 3,
+        "columns": 5,
+        "prompt": "Big arranges 3 rows of 5 paperclips for a water test. How many paperclips are in the array?",
+        "equation": "5 + 5 + 5 =",
+        "hint": "Add the rows: 5 + 5 + 5.",
+        "answer": 15,
+        "worked": "5 + 5 + 5 = 15, so the array has 15 paperclips.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "equal-groups",
+        "rows": 4,
+        "columns": 4,
+        "prompt": "Little sets 4 trays with 4 small bowls of water on each tray. How many bowls are there altogether?",
+        "equation": "4 + 4 + 4 + 4 =",
+        "hint": "Add the 4 equal groups: 4 + 4 + 4 + 4.",
+        "answer": 16,
+        "worked": "4 + 4 + 4 + 4 = 16, so there are 16 bowls.",
+        "plate": "keep",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "array",
+        "rows": 5,
+        "columns": 4,
+        "prompt": "Big arranges 5 rows of 4 cups of water. How many cups are in the array?",
+        "equation": "4 + 4 + 4 + 4 + 4 =",
+        "hint": "Add one row at a time: 4 + 4 + 4 + 4 + 4.",
+        "answer": 20,
+        "worked": "4 + 4 + 4 + 4 + 4 = 20, so the array has 20 cups.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Draw your own water-drop array with 2 to 5 rows and 2 to 5 drops in each row.",
+    "printNote": "Write one answer in each blank. Use repeated addition to show every equal group or row.",
+    "parentNote": "Grade 2 math. Six tasks use rows and columns from 2 through 5, with repeated addition and totals no greater than 25.",
+    "answerKeyIntro": "Grade 2 math. Read rows as equal groups and add the same number once for each row."
+  },
+  "writing": {
+    "title": "Write what water can do",
+    "intro": "Choose a clue. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "wake",
+      "change",
+      "return"
+    ],
+    "draw": "Draw one water clue and add a small arrow to the part you want a reader to notice.",
+    "starter": "My water clue",
+    "frames": [
+      {
+        "plate": "wake",
+        "start": "One water molecule has",
+        "hint": "dictate the number and kinds of atoms"
+      },
+      {
+        "plate": "change",
+        "start": "A drop beads up because",
+        "hint": "dictate what the molecules do"
+      },
+      {
+        "plate": "return",
+        "start": "Ice floats because",
+        "hint": "dictate how ice compares with liquid water"
+      }
+    ],
+    "words": [
+      "water",
+      "molecule",
+      "atom",
+      "hydrogen",
+      "oxygen",
+      "ice",
+      "melt",
+      "freeze",
+      "vapor",
+      "surface tension",
+      "float",
+      "dissolve"
+    ],
+    "check": "Does your sentence name a water clue and explain why it happens?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "H2O means each water molecule contains two hydrogen atoms and one oxygen atom."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Rounded drops and the supported paperclip both show the effect of water molecules attracting one another at the surface."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "Because ice floats, a pond can freeze at the top while liquid water remains below for fish."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a spoken, dictated, drawn, or written explanation that connects one water property to its cause."
+    }
+  ],
+  "quiz": {
+    "title": "Four water clues",
+    "intro": "Follow one molecule through four surprising properties.",
+    "questions": [
+      {
+        "id": "formula",
+        "prompt": "What is inside one H2O molecule?",
+        "choices": [
+          "Two hydrogen atoms and one oxygen atom",
+          "Two oxygen atoms and one hydrogen atom",
+          "Only one kind of atom"
+        ],
+        "answerIndex": 0,
+        "answer": "One H2O molecule has two hydrogen atoms and one oxygen atom."
+      },
+      {
+        "id": "tension",
+        "prompt": "Why can water form rounded beads on wax paper?",
+        "choices": [
+          "Water molecules attract one another",
+          "Wax turns water into ice",
+          "Every drop contains air"
+        ],
+        "answerIndex": 0,
+        "answer": "Water molecules attract one another, and surface tension helps pull a drop into a rounded bead."
+      },
+      {
+        "id": "floating",
+        "prompt": "Why does ordinary ice float in liquid water?",
+        "choices": [
+          "Ice is lighter for its size",
+          "Ice has no molecules",
+          "Liquid water pushes every solid upward"
+        ],
+        "answerIndex": 0,
+        "answer": "Ice is lighter for its size than liquid water because its molecules form a roomier pattern."
+      },
+      {
+        "id": "dissolve",
+        "prompt": "What happens when sugar dissolves in water?",
+        "choices": [
+          "Water spreads the sugar's tiny pieces through the liquid",
+          "The sugar stops existing",
+          "The water freezes around the sugar"
+        ],
+        "answerIndex": 0,
+        "answer": "Water molecules surround the sugar's tiny pieces and spread them through the liquid."
+      }
+    ]
+  },
+  "parentGuidance": "H2O names one water molecule: two hydrogen atoms joined to one oxygen atom. Attraction between water molecules helps explain rounded drops and surface tension. Ice has a more open structure, making it less dense than liquid water, so it floats; this helps ponds freeze from the top. Water dissolves many substances, not everything. Stay beside the child for every activity, use only cool water, keep small items away from mouths, and wipe up spills promptly.",
+  "sources": [
+    {
+      "label": "NOAA · water molecules and three states",
+      "url": "https://www.nesdis.noaa.gov/about/k-12-education/understanding-our-planet/water-cycle-board-game"
+    },
+    {
+      "label": "USGS · surface tension and water",
+      "url": "https://www.usgs.gov/water-science-school/science/surface-tension-and-water"
+    },
+    {
+      "label": "USGS · water density and floating ice",
+      "url": "https://www.usgs.gov/water-science-school/science/water-density"
+    },
+    {
+      "label": "USGS · why water dissolves many substances",
+      "url": "https://www.usgs.gov/water-science-school/science/water-qa-why-water-universal-solvent"
+    }
+  ],
+  "titleCard": {
+    "plate": "wake",
+    "edition": "WATER · 2026-10-22",
+    "subtitle": "Tiny molecules. Surprising clues."
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "equal-groups",
+      "array",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  }
+}
