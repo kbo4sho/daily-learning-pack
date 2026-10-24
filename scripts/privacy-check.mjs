@@ -28,6 +28,8 @@ const privateRepo = new RegExp(
 // id "little"), and no private names. Names come only from
 // the untracked WD_PRIVATE_NAMES list (comma separated), never from git.
 const LITTLE_TREE = /(?:^|\/)little(?:\/|$)/;
+const LEARNER_KEYS =
+  "knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog";
 const LITTLE_BANS = [
   [
     "AGE",
@@ -45,7 +47,10 @@ const LITTLE_BANS = [
   ],
   [
     "LEARNER_CONFIG",
-    /\b(?:knownLetters(?:Placeholder)?|letterWork|readingMode|readingGrade|foldableVariant|activitySafety|maxLinks|queueFile|rosterFile|publishPath|feedbackLog)\b|"band"\s*:(?!\s*"little")|\blearners\//g,
+    new RegExp(
+      `\\b(?:${LEARNER_KEYS})\\b|"band"\\s*:(?!\\s*"little")|\\blearners/`,
+      "g",
+    ),
   ],
 ];
 
@@ -81,6 +86,17 @@ export function privacyIssues(text, label = "content") {
     " ".repeat(blob.length),
   );
   const issues = [];
+  const names = privateNames();
+  if (
+    names.length &&
+    new RegExp(`(?<![\\w])(?:${names.join("|")})(?![\\w])`, "i").test(text)
+  )
+    issues.push(`${label}: PRIVATE_NAME`);
+  if (
+    /\.(?:json|html)(?:$| \()/i.test(label) &&
+    new RegExp(`\\b(?:${LEARNER_KEYS})\\b|\\blearners/`, "i").test(text)
+  )
+    issues.push(`${label}: LEARNER_CONFIG`);
   const identifiers =
     label === "content" || /\.(?:html|css|[cm]?js|json)(?:$| \()/.test(label);
   for (const [kind, pattern] of [
@@ -194,6 +210,7 @@ const LESSON_KEYS = new Set([
   "answerKeyIntro",
   "answers",
   "beats",
+  "band",
   "blankIndex",
   "body",
   "caption",
@@ -226,12 +243,14 @@ const LESSON_KEYS = new Set([
   "foldableNote",
   "foldableTitle",
   "frames",
+  "format",
   "generatedAt",
   "gesture",
   "gradeLevel",
   "heading",
   "height",
   "hint",
+  "hidden",
   "hints",
   "href",
   "id",
@@ -269,6 +288,10 @@ const LESSON_KEYS = new Set([
   "schemaVersion",
   "sequence",
   "skill",
+  "skills",
+  "status",
+  "tags",
+  "entries",
   "slug",
   "sources",
   "src",
