@@ -2,6 +2,74 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-bike-derailleurs-work",
+      "band": "6-8",
+      "topic": "how do bike derailleurs work?",
+      "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-26",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-coffee-filter-parachute",
+      "band": "6-8",
+      "topic": "a coffee filter parachute",
+      "why": "Testing a flat and a crumpled filter helps your child connect a wide canopy to more air pushing back and a slower fall.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-23",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "h2o",
+      "band": "6-8",
+      "topic": "H2O",
+      "why": "Looking at one tiny molecule helps your child connect water's odd behavior, like beading drops and floating ice, to how its molecules attract.",
+      "skills": [
+        "equal-groups",
+        "array",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-22",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-rhythm-is-math",
+      "band": "6-8",
+      "topic": "how rhythm is math",
+      "why": "Counting beats and finding patterns helps your child see how steady counting turns into music they can feel and make.",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-21",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-a-bike-chain-works",
       "band": "6-8",
       "topic": "how a bike chain works",
