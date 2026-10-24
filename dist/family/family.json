@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how a bike chain works",
-        "why": "Following a pedal push helps your child connect the jobs of teeth, links and wheels in one moving system.",
-        "date": "2026-10-19",
+        "topic": "how do bike derailleurs work?",
+        "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears.",
+        "date": "2026-10-26",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -26,12 +26,12 @@
       "printHref": "./family/print/#little",
       "today": {
         "href": "./little/today/",
-        "topic": "leaves changing color",
-        "why": "Noticing autumn leaf colors helps your child explain a seasonal change while practicing matching, sounds and counting.",
-        "date": "2026-10-19",
+        "topic": "how cats talk",
+        "why": "Listening to how cats talk helps your child notice sounds and body signals while practicing counting, letter sounds and tracing.",
+        "date": "2026-10-21",
         "pdfs": [
           {
-            "href": "./little/days/leaves-changing-color/little-pack.pdf",
+            "href": "./little/days/how-cats-talk/little-pack.pdf",
             "label": "Print the pack"
           }
         ]

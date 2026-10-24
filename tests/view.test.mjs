@@ -71,11 +71,15 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-a-bike-chain-works");
-  assert.equal(latest.date, "2026-10-19");
+  assert.equal(latest.slug, "how-bike-derailleurs-work");
+  assert.equal(latest.date, "2026-10-26");
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-bike-derailleurs-work",
+      "a-coffee-filter-parachute",
+      "h2o",
+      "how-rhythm-is-math",
       "how-a-bike-chain-works",
       "how-speakers-turn-waves-into-sound",
       "pinecones",
@@ -102,12 +106,13 @@ test("committed archive landing and the child’s /today/ are present", async ()
     "curiosity",
     "math",
     "reading",
-    "diorama",
     "quiz",
     "foldable",
     "writing",
   ])
     assert.ok(today.includes(`data-go="${surface}"`));
+  assert.doesNotMatch(today, /data-go="diorama"|\bdiorama\b/i);
+  assert.doesNotMatch(today, /data-surfaces="six"/);
   // TASK 127: no dev chrome on kid pages; hedges sit in one grown-ups note.
   const kidToday = today.split('<footer class="daily-footer">')[0];
   assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes/);
@@ -115,18 +120,34 @@ test("committed archive landing and the child’s /today/ are present", async ()
     assert.doesNotMatch(cap, /imagined|pretend|enlarged|not to scale/i);
   assert.match(today, /About the pictures and numbers\./);
   assert.match(today, /data-quiz-feedback aria-live="polite"/);
-  assert.match(today, /bike-chain-diorama\.js/);
-  assert.equal(await exists("dist/today/bike-chain-diorama.css"), true);
-  assert.equal(await exists("dist/today/bike-chain-diorama.js"), true);
+  assert.deepEqual(
+    (await readdir(new URL("../dist/today/", import.meta.url))).filter((name) =>
+      name.endsWith("-diorama.js"),
+    ),
+    [],
+  );
   assert.equal(todayPack.targetAge, 8);
   assert.equal(todayPack.gradeLevel, 3);
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [45, 38, 42, 34, 48, 8],
+    [63, 34, 65, 37, 84, 46],
   );
-  assert.equal(todayPack.mathTemplate, "story-problems");
+  assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
+  assert.equal(todayPack.mathTemplate, "number-crunch");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
+  assert.deepEqual(
+    todayPack.math.tasks.map(({ skill, operands }) => [skill, operands]),
+    [
+      ["addition-regrouping", [28, 35]],
+      ["subtraction-regrouping", [72, 38]],
+      ["addition-regrouping", [47, 18]],
+      ["subtraction-regrouping", [61, 24]],
+      ["addition-regrouping", [56, 28]],
+      ["subtraction-regrouping", [93, 47]],
+    ],
+  );
+  assert.equal(todayPack.surfaces, undefined);
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
   assert.ok(!todayPack.answers.some((a) => a.label.startsWith("Quiz")));
@@ -136,6 +157,14 @@ test("committed archive landing and the child’s /today/ are present", async ()
     new URL("../dist/today/pdf/foldable.pdf", import.meta.url),
   );
   assert.ok(fold.length < 1_000_000);
+  assert.equal(
+    await exists("dist/days/how-a-bike-chain-works/bike-chain-diorama.js"),
+    true,
+  );
+  assert.equal(
+    await exists("dist/days/how-a-bike-chain-works/bike-chain-diorama.css"),
+    true,
+  );
   const pianoDay = await read("dist/days/how-pianos-work/index.html");
   assert.match(pianoDay, /id="piano-pilot"/);
   assert.doesNotMatch(pianoDay, /data-piano-assets/);
@@ -191,6 +220,7 @@ test("every archived morning retains its five working print downloads", async ()
 test("every curiosity day ships the direct-draw foldable runtime", async () => {
   const paths = [
     "dist/today/zine.js",
+    "dist/days/how-rhythm-is-math/zine.js",
     "dist/days/curiosity-inchworms/zine.js",
     "dist/days/diamond/zine.js",
     "dist/days/curiosity-bean/zine.js",
@@ -203,7 +233,13 @@ test("every curiosity day ships the direct-draw foldable runtime", async () => {
     assert.match(runtime, /pushGraphicsState\(\)/, paths[index]);
     assert.match(runtime, /rotateDegrees\(slot\.rotation\)/, paths[index]);
   }
-  for (const runtime of runtimes.slice(1)) assert.equal(runtime, runtimes[0]);
+  const neutralComment =
+    "// Foldable zine layout runtime. Daily binds its own pack/plate registry.\n";
+  for (const runtime of runtimes.slice(0, 2))
+    assert.ok(runtime.startsWith(neutralComment));
+  const withoutComment = (runtime) => runtime.replace(/^\/\/[^\n]*\n/, "");
+  for (const runtime of runtimes.slice(1))
+    assert.equal(withoutComment(runtime), withoutComment(runtimes[0]));
 });
 
 test("committed pack JSON never includes API key names", async () => {
