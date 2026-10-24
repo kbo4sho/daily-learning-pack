@@ -1,7 +1,36 @@
 {
   "id": "little",
-  "latest": "leaves-changing-color",
+  "latest": "how-cats-talk",
   "days": [
+    {
+      "slug": "how-cats-talk",
+      "date": "2026-10-21",
+      "title": "How Cats Talk",
+      "question": "How do cats talk?",
+      "tags": {
+        "band": "little",
+        "topic": "how cats talk",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-21"
+      }
+    },
     {
       "slug": "leaves-changing-color",
       "date": "2026-10-19",
