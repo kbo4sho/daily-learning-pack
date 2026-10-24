@@ -1,4 +1,3 @@
-// Light port of kbo4sho/super-dad PR #37. Daily binds its own pack/plate registry.
 export const ZINE_IMPOSITION = [
   { panel: 5, rotation: 180 },
   { panel: 4, rotation: 180 },
