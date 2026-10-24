@@ -78,11 +78,15 @@ desktop widths, axe) cover it.
 
 `dist/library/6-8.json` and `dist/library/4-5.json` are generated in the private
 repo from pack tags and publication dates. Each contains `schemaVersion: 1`
-and `entries` with exactly `id`, `band`, `topic`, `skills`, `date`, `format`,
+and `entries` with exactly `id`, `band`, `topic`, `why`, `skills`, `date`, `format`,
 `status`, and `hidden`. Ids are day slugs, unique within a band. Each published
 day has at least three distinct skills and a format (`curiosity-day` or
 `picture-pack`). `hidden` controls listing visibility; it is not access control.
-The manifests contain no learner identity or settings.
+The manifests contain no learner identity or settings. `why` is a required
+parent-facing sentence: one nonempty trimmed line, at most 180 characters.
+It must match the published `pack.json` or second-learner `day.json` (and its
+archive record). Day HTML and reading order remain unchanged; this field is
+metadata for future parent discovery surfaces.
 
 `npm run archive` validates the manifests against all published days and their
 tags and derives the archive's band labels. `/little/` retains its opaque tags

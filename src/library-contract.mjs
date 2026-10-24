@@ -2,10 +2,43 @@
 export const LIBRARY_BANDS = ["6-8", "4-5"];
 export const LIBRARY_FORMATS = ["curiosity-day", "picture-pack"];
 const TOKEN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export const WHY_MAX_LENGTH = 180;
+
+// Shared by authored packs, topic queues and the public manifest.
+export function topicMetadataIssues({ why, skills } = {}) {
+  const issues = [];
+  if (
+    typeof why !== "string" ||
+    !why.trim() ||
+    why !== why.trim() ||
+    why.length > WHY_MAX_LENGTH ||
+    /[\p{Cc}\p{Zl}\p{Zp}]/u.test(why)
+  )
+    issues.push(
+      `why must be one nonempty line of at most ${WHY_MAX_LENGTH} characters.`,
+    );
+  if (
+    !Array.isArray(skills) ||
+    skills.length < 3 ||
+    new Set(skills).size !== skills.length ||
+    !skills.every((skill) => typeof skill === "string" && TOKEN.test(skill))
+  )
+    issues.push(
+      "skills must contain at least three distinct lowercase skill ids.",
+    );
+  return issues;
+}
+
+export function assertTopicMetadata(metadata) {
+  const issues = topicMetadataIssues(metadata);
+  if (issues.length) throw new Error(issues.join("\n"));
+}
+
 const FIELDS = [
   "id",
   "band",
   "topic",
+  "why",
   "skills",
   "date",
   "format",
@@ -37,10 +70,7 @@ export function validateLibrary(manifest, band) {
       row.band !== band ||
       typeof row.topic !== "string" ||
       !row.topic.trim() ||
-      !Array.isArray(row.skills) ||
-      row.skills.length < 3 ||
-      new Set(row.skills).size !== row.skills.length ||
-      !row.skills.every((s) => typeof s === "string" && TOKEN.test(s)) ||
+      topicMetadataIssues(row).length ||
       !/^\d{4}-\d{2}-\d{2}$/.test(row.date) ||
       Number.isNaN(Date.parse(row.date)) ||
       new Date(row.date).toISOString().slice(0, 10) !== row.date ||
@@ -49,7 +79,7 @@ export function validateLibrary(manifest, band) {
       typeof row.hidden !== "boolean"
     )
       throw new Error(
-        "Invalid library entry (id, band, topic, skills, date, format, status or hidden).",
+        "Invalid library entry (id, band, topic, why, skills, date, format, status or hidden).",
       );
     seen.add(row.id);
   }
