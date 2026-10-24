@@ -1,0 +1,60 @@
+.bl-quiz {
+  max-width: 760px;
+}
+.bl-quiz fieldset {
+  border: 0;
+  border-top: 1px solid #d9d1c1;
+  padding: 26px 0;
+  margin: 0;
+}
+.bl-quiz legend {
+  font:
+    400 26px/1.2 Newsreader,
+    serif;
+  float: left;
+  width: 100%;
+  margin: 0 0 16px;
+}
+.bl-quiz label {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #cfc4ae;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bl-quiz input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #685737;
+}
+.bl-quiz label:has(input:checked) {
+  background: #ede4ce;
+  border-color: #87704b;
+}
+.bl-quiz details {
+  border-top: 1px solid #d9d1c1;
+  padding-top: 20px;
+}
+.bl-quiz summary {
+  padding: 12px 0;
+  min-height: 48px;
+  cursor: pointer;
+}
+.bl-quiz dd {
+  margin: 0 0 16px;
+}
+.bl-foldable {
+  max-width: 760px;
+}
+.bl-foldable .primary-button {
+  margin: 16px 0;
+}
+.bl-foldable ol {
+  line-height: 1.8;
+}
