@@ -1,0 +1,359 @@
+.derailleur-panel {
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.derailleur-panel [hidden] {
+  display: none !important;
+}
+.derailleur-invitation {
+  font: 400 clamp(24px, 3vw, 32px) / 1.3 var(--font-story);
+  margin: 20px 0 28px;
+}
+.derailleur-bench {
+  border: 1px solid #b4aa96;
+  border-radius: 8px;
+  background: #faf6ec;
+  overflow: hidden;
+  margin: 0;
+}
+.derailleur-card-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 18px 22px;
+  font: 400 14px/1.5 var(--font-body);
+  color: #514733;
+}
+.derailleur-card-top b {
+  font-weight: 600;
+}
+.derailleur-stage {
+  position: relative;
+  width: min(100%, 560px);
+  margin-inline: auto;
+}
+.derailleur-drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.derailleur-drawing [data-part] {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.derailleur-panel[data-selected]:not([data-selected=""])
+  .derailleur-drawing
+  [data-part]:not([data-on]) {
+  opacity: 0.28;
+}
+.derailleur-drawing [data-on] {
+  filter: drop-shadow(0 0 2.5px #a7864a);
+}
+.derailleur-drawing [data-on] .e {
+  stroke-width: 1;
+}
+.derailleur-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: #293b35;
+  font: 600 14px/1.15 var(--font-body);
+  cursor: pointer;
+  justify-content: center;
+}
+.derailleur-pin-n,
+.derailleur-pick-n {
+  display: inline-grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid #293b35;
+  background: #fffdf8;
+  font: 700 14px/1 var(--font-body);
+}
+.derailleur-pin-t {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fffdf8ee;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.derailleur-pin[data-side="r"] .derailleur-pin-t {
+  left: calc(50% + 18px);
+}
+.derailleur-pin[data-side="l"] .derailleur-pin-t {
+  right: calc(50% + 18px);
+}
+.derailleur-pin[aria-pressed="true"] {
+  z-index: 2;
+}
+.derailleur-pin[aria-pressed="true"] .derailleur-pin-n,
+.derailleur-picks button[aria-pressed="true"] .derailleur-pick-n {
+  background: #293b35;
+  color: #fffdf8;
+}
+.derailleur-pin:focus-visible,
+.derailleur-panel button:focus-visible {
+  outline: 3px solid #426e83;
+  outline-offset: 3px;
+}
+.derailleur-picks {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 16px;
+}
+.derailleur-picks button {
+  width: 100%;
+}
+.derailleur-panel button:not(.derailleur-pin) {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 16px/1.4 var(--font-body);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.derailleur-picks button[aria-pressed="true"] {
+  background: #ede4ce;
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.derailleur-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.derailleur-steps button:nth-child(2) {
+  background: var(--ink);
+  color: var(--surface);
+}
+.derailleur-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 28px;
+  align-items: start;
+}
+.derailleur-readout {
+  display: block;
+  min-height: 136px;
+  padding: 16px 22px 18px;
+  border-top: 1px solid #d8ceba;
+  border-left: 4px solid var(--gold);
+  background: #fffdf8;
+}
+.derailleur-readout > span {
+  display: block;
+}
+.derailleur-readout-name {
+  font: 400 26px/1.3 var(--font-story);
+}
+.derailleur-readout-does {
+  font: 400 18px/1.55 var(--font-body);
+  margin-top: 6px;
+}
+.derailleur-readout-scene {
+  font: 400 14px/1.5 var(--font-body);
+  color: #514733;
+  margin-top: 8px;
+}
+.derailleur-static {
+  font: 400 16px/1.65 var(--font-body);
+  margin-top: 24px;
+}
+.derailleur-static h3 {
+  font: 400 28px/1.3 var(--font-story);
+}
+.derailleur-static li {
+  margin-block: 10px;
+}
+.derailleur-credit {
+  margin-top: 28px;
+  font: 400 14px/1.6 var(--font-body);
+  color: #514733;
+}
+.derailleur-credit a {
+  color: inherit;
+}
+.derailleur-panel .activity-footer a {
+  font-size: 14px;
+}
+.derailleur-drawing {
+  --f: #e8e0cf;
+  --t: #f7f1e4;
+  --s0: #a29983;
+  --s1: #bcb39d;
+  --s2: #d6ccb6;
+  --s3: #ece3d0;
+  --e: #716752;
+}
+.derailleur-drawing .f {
+  fill: var(--f);
+}
+.derailleur-drawing .t {
+  fill: var(--t);
+}
+.derailleur-drawing .s0 {
+  fill: var(--s0);
+}
+.derailleur-drawing .s1 {
+  fill: var(--s1);
+}
+.derailleur-drawing .s2 {
+  fill: var(--s2);
+}
+.derailleur-drawing .s3 {
+  fill: var(--s3);
+}
+.derailleur-drawing .e {
+  fill: none;
+  stroke: var(--e);
+  stroke-width: 0.6;
+  stroke-linejoin: round;
+}
+.derailleur-drawing .d-gear {
+  --f: #d8cdb0;
+  --t: #efe6cf;
+  --s0: #948a72;
+  --s1: #aca288;
+  --s2: #c2b89c;
+  --s3: #d6ccb0;
+  --e: #5f563f;
+}
+.derailleur-drawing .d-gear-b {
+  --f: #cbbf9f;
+  --t: #e3d8bb;
+  --s1: #9d9379;
+}
+.derailleur-drawing .d-alloy {
+  --f: #6f8a80;
+  --t: #97b0a6;
+  --s0: #3f5750;
+  --s1: #4e675f;
+  --s2: #617c72;
+  --s3: #7d978d;
+  --e: #293b35;
+}
+.derailleur-drawing .d-wheel {
+  --f: #3d4a45;
+  --t: #667771;
+  --s0: #27312d;
+  --s1: #2f3b37;
+  --s2: #3d4a45;
+  --s3: #4f5e58;
+  --e: #1c2421;
+}
+.derailleur-drawing .d-frame {
+  --f: #bdb6a1;
+  --t: #d9d3bf;
+  --s0: #827b66;
+  --s1: #958e79;
+  --s2: #a8a18c;
+  --s3: #c1bba6;
+  --e: #5c564a;
+}
+.derailleur-drawing .d-frame-b {
+  --f: #a9a28d;
+  --t: #c4bda8;
+}
+.derailleur-drawing .d-screw {
+  --f: #c68c43;
+  --t: #e9bf80;
+  --s0: #8f5f26;
+  --s1: #a8742f;
+  --s2: #c68c43;
+  --s3: #d9a45e;
+  --e: #6b4519;
+}
+.derailleur-drawing .d-ghost .f,
+.derailleur-drawing .d-ghost .t,
+.derailleur-drawing .d-ghost [class^="s"] {
+  fill-opacity: 0.32;
+}
+.derailleur-drawing .d-chain-edge,
+.derailleur-drawing .d-chain-body,
+.derailleur-drawing .d-chain-links,
+.derailleur-drawing .d-tube-edge,
+.derailleur-drawing .d-tube-body {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.derailleur-drawing .d-chain-edge {
+  stroke: #1d241f;
+  stroke-width: 5;
+}
+.derailleur-drawing .d-chain-body {
+  stroke: #98a29b;
+  stroke-width: 3.4;
+}
+.derailleur-drawing .d-chain-links {
+  stroke: #1d241f;
+  stroke-width: 3.4;
+  stroke-dasharray: 0.9 3.1;
+}
+.derailleur-drawing .d-tube-edge {
+  stroke: #6b531f;
+  stroke-width: 4.4;
+}
+.derailleur-drawing .d-tube-body {
+  stroke: #c9a35a;
+  stroke-width: 2.6;
+}
+@media (max-width: 900px) {
+  .derailleur-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .derailleur-picks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .derailleur-picks button {
+    width: auto;
+  }
+}
+@media (max-width: 650px) {
+  .derailleur-pin-t {
+    display: none;
+  }
+  .derailleur-card-top {
+    padding: 14px 12px;
+  }
+  .derailleur-readout {
+    min-height: 0;
+    padding: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .derailleur-panel * {
+    transition: none !important;
+  }
+}
+/* The seven-tab nav comes from dew-diorama.css; the story's title picture keeps its full, uncropped shape. */
+.bl-title-plate img {
+  max-height: none;
+  object-fit: fill;
+}
