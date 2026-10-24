@@ -84,14 +84,24 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       // Module scripts hide later sections after parse; wait for them.
       await page.waitForURL("**/today/");
       await page.waitForLoadState("load");
-      assert.equal(await page.locator("#reading").isVisible(), true);
-      assert.equal(await page.locator("#curiosity").isVisible(), false);
-      await page
-        .locator('#reading [data-go="curiosity"]')
-        .evaluate((el) => el.click());
-      assert.equal(await page.locator("#curiosity").isVisible(), true);
-      await page.locator('#curiosity [data-go="math"]').click();
-      assert.equal(await page.locator("#math").isVisible(), true);
+      if (await page.locator("#reading").isVisible()) {
+        // Story-first layout.
+        assert.equal(await page.locator("#curiosity").isVisible(), false);
+        await page
+          .locator('#reading [data-go="curiosity"]')
+          .evaluate((el) => el.click());
+        assert.equal(await page.locator("#curiosity").isVisible(), true);
+        await page.locator('#curiosity [data-go="math"]').click();
+        assert.equal(await page.locator("#math").isVisible(), true);
+      } else {
+        // Complete layout (explainer first): the story is one tab away.
+        assert.equal(await page.locator("#curiosity").isVisible(), true);
+        await page
+          .locator('nav [data-go="reading"]')
+          .first()
+          .evaluate((el) => el.click());
+        assert.equal(await page.locator("#reading").isVisible(), true);
+      }
       await context.close();
     }
     const noScript = await browser.newContext({ javaScriptEnabled: false });

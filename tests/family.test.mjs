@@ -162,7 +162,13 @@ test("published day section order is story, why, activities for both doors", asy
     const story = html.indexOf('<section id="reading"');
     const why = html.indexOf('<section id="curiosity"');
     const activities = html.indexOf('<section id="math"');
-    assert.ok(story >= 0 && story < why && why < activities, path);
+    // Complete-layout days open with the explainer, then math, then the story.
+    const complete = why >= 0 && why < story;
+    assert.ok(
+      story >= 0 &&
+        (complete ? why < activities : story < why && why < activities),
+      path,
+    );
   }
   const archive = await json("little/archive.json");
   for (const path of [
