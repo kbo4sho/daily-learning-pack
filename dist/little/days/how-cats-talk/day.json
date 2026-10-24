@@ -1,0 +1,96 @@
+{
+  "slug": "how-cats-talk",
+  "date": "2026-10-21",
+  "title": "How Cats Talk",
+  "question": "How do cats talk?",
+  "coverAlt": "Big and Little Wonderer: How Cats Talk",
+  "readAloud": [
+    [
+      {
+        "b": "Mrrp! Meow!"
+      },
+      {
+        "say": "(Make two gentle cat sounds.)"
+      },
+      "Big Wonderer and Little Wonderer watch two cats meet in a sunny window. One cat walks closer with its tail held high."
+    ],
+    [
+      "Cats talk with sounds and with their bodies. A meow may ask for food, company, or an open door. A quick mrrp can be a friendly hello."
+    ],
+    [
+      {
+        "ask": "Can you point to the cat saying hello with its tail?"
+      }
+    ],
+    [
+      "A purr often comes when a cat feels cozy, but a worried cat may purr too. We look at the whole cat for clues."
+    ],
+    [
+      "One cat turns its ears sideways.",
+      {
+        "b": "Not now, please."
+      },
+      "Cats may hiss when they need more space. We stay back and let the cat choose.",
+      {
+        "say": "(Hold up a quiet stop hand.)"
+      }
+    ],
+    [
+      {
+        "ask": "Can you make your arm into a high hello tail?"
+      }
+    ],
+    [
+      "The cats rest on a pillow and slowly close their eyes. A slow blink can say, “I trust you.” Then one rubs its cheek on a chair leg, leaving a familiar scent."
+    ],
+    [
+      {
+        "ask": "What cat message would you like to copy?"
+      },
+      "Big Wonderer and Little Wonderer slow-blink from a calm distance. Cats talk with sounds, tails, ears, eyes, and smells."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "how cats talk",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-21"
+  }
+}
