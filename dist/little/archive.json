@@ -1,15 +1,15 @@
 {
   "id": "little",
-  "latest": "snails",
+  "latest": "how-cats-talk",
   "days": [
     {
-      "slug": "snails",
-      "date": "2026-11-02",
-      "title": "Snails",
-      "question": "How does a snail move?",
+      "slug": "how-cats-talk",
+      "date": "2026-10-21",
+      "title": "How Cats Talk",
+      "question": "How do cats talk?",
       "tags": {
         "band": "little",
-        "topic": "snails",
+        "topic": "how cats talk",
         "skills": [
           "addition-picture-story",
           "beginning-sounds",
@@ -28,7 +28,7 @@
           "shapes",
           "tracing"
         ],
-        "date": "2026-11-02"
+        "date": "2026-10-21"
       }
     },
     {
@@ -87,6 +87,35 @@
           "tracing"
         ],
         "date": "2026-10-17"
+      }
+    },
+    {
+      "slug": "snails",
+      "date": "2026-10-12",
+      "title": "Snails",
+      "question": "How does a snail move?",
+      "tags": {
+        "band": "little",
+        "topic": "snails",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-12"
       }
     }
   ]
