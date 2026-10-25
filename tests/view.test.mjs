@@ -112,17 +112,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
     ],
   );
   const today = await read("dist/today/index.html");
+  // The bike derailleurs day is an on-request piece with an Anatomy tab
+  // (surfaces.layout "six"), so its seven tabs include "diorama".
   for (const surface of [
     "curiosity",
     "math",
     "reading",
+    "diorama",
     "quiz",
     "foldable",
     "writing",
   ])
     assert.ok(today.includes(`data-go="${surface}"`));
-  assert.doesNotMatch(today, /data-go="diorama"|\bdiorama\b/i);
-  assert.doesNotMatch(today, /data-surfaces="six"/);
+  assert.match(today, /data-go="diorama">Anatomy</);
+  assert.match(today, /data-surfaces="six"/);
   // TASK 127: no dev chrome on kid pages; hedges sit in one grown-ups note.
   const kidToday = today.split('<footer class="daily-footer">')[0];
   assert.doesNotMatch(kidToday, /DOGFOOD|Visual &amp; asset notes/);
@@ -134,7 +137,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
     (await readdir(new URL("../dist/today/", import.meta.url))).filter((name) =>
       name.endsWith("-diorama.js"),
     ),
-    [],
+    ["derailleur-diorama.js"],
   );
   assert.equal(todayPack.targetAge, 8);
   assert.equal(todayPack.gradeLevel, 3);
@@ -157,7 +160,11 @@ test("committed archive landing and the child’s /today/ are present", async ()
       ["subtraction-regrouping", [93, 47]],
     ],
   );
-  assert.equal(todayPack.surfaces, undefined);
+  assert.equal(todayPack.onRequest, true);
+  assert.deepEqual(todayPack.surfaces, {
+    layout: "six",
+    diorama: "derailleur",
+  });
   assert.equal(todayPack.plates.length, 6);
   assert.equal(todayPack.quiz.questions.length, 4);
   assert.ok(!todayPack.answers.some((a) => a.label.startsWith("Quiz")));
