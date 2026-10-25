@@ -42,6 +42,7 @@ test("/little/ has today, archive and one folder per day", async () => {
       "slug",
       "tags",
       "title",
+      "why",
     ]);
     // Library model: tagged by band (opaque id only), topic, skills and date.
     assert.deepEqual(Object.keys(day.tags).sort(), [

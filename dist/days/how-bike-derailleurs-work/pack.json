@@ -119,7 +119,7 @@
     "title": "Six clues in one shifter click",
     "coverPlate": "wake",
     "coverText": "Follow the chain, cable, spring, and gears.",
-    "parentNote": "Grade 3 reading. Welcome spoken responses, pointing, sketches, and dictation; the scenic plates show the parts in context.",
+    "parentNote": "Ages 6-8. Welcome spoken responses, pointing, sketches, and dictation; the scenic plates show the parts in context.",
     "foldableTitle": "A little book of shifting clues",
     "foldableCoverLine": "How Bike Derailleurs Work",
     "foldableNote": "Carry six gear-changing clues in a small book.",
@@ -484,5 +484,17 @@
     "plate": "wake",
     "edition": "BIKES · 2026-10-26",
     "subtitle": "One click. One sideways shift."
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "addition-regrouping",
+      "subtraction-regrouping",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears."
 }

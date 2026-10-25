@@ -13,6 +13,8 @@ import {
 import { dirname, join, resolve } from "node:path";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
+import { readLibrary } from "../src/library.mjs";
+import { welcomePage } from "../src/welcome-render.mjs";
 
 async function readable(path) {
   try {
@@ -61,13 +63,14 @@ export async function resolvePacketFace(entry, root, homePrefix = "./") {
   return faceFromPack(root, entry, homePrefix, await readDayPack(root, entry));
 }
 
-async function withFaces(entries, root) {
+async function withFaces(entries, root, library) {
   return Promise.all(
     entries.map(async (entry) => {
       const pack = await readDayPack(root, entry);
       return {
         ...entry,
-        gradeLevel: pack?.gradeLevel,
+        band: library.find((row) => row.band === "6-8" && row.id === entry.slug)
+          ?.band,
         face: await faceFromPack(root, entry, "./", pack),
       };
     }),
@@ -150,7 +153,8 @@ async function writeArchive(root) {
       `dist/archive.json latest “${json.latest}” must match a days[].slug.`,
     );
   await mkdir(`${root}/archive`, { recursive: true });
-  const home = await withFaces(entries, root);
+  const library = await readLibrary(root);
+  const home = await withFaces(entries, root, library);
   const nested = nestFaces(home);
   const homeLatest = facedLatest(home, latest.slug);
   const nestedLatest = facedLatest(nested, latest.slug);
@@ -175,8 +179,29 @@ async function writeArchive(root) {
   await copyFile("src/archive.js", `${root}/archive.js`);
   await copyFile("src/archive.js", `${root}/archive/archive.js`);
   await copyArchiveFonts(root);
+  await writeWelcome(root, latest);
   await dropRootDayRuntime(root);
   return { latest, count: entries.length };
+}
+
+/**
+ * Hidden parent welcome page: dist/welcome/. Not linked from any nav and
+ * marked noindex. Tonight's card is the latest archive day and its plate.
+ */
+async function writeWelcome(root, latest) {
+  const pack = await readDayPack(root, latest);
+  await rm(`${root}/welcome`, { recursive: true, force: true });
+  await cp("src/welcome-assets", `${root}/welcome`, { recursive: true });
+  await writeFile(
+    `${root}/welcome/index.html`,
+    welcomePage({
+      tonight: {
+        ...latest,
+        face: await faceFromPack(root, latest, "../", pack),
+      },
+    }),
+  );
+  await copyFile("src/welcome.css", `${root}/welcome/welcome.css`);
 }
 
 export async function renderArchive(root = resolve("dist")) {
