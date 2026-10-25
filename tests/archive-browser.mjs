@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, webkit } from "playwright";
 import { serve } from "../scripts/serve.mjs";
+import AxeBuilder from "@axe-core/playwright";
 import {
   bounded,
   imagesAndFontsReady,

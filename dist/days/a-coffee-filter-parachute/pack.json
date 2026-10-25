@@ -118,7 +118,7 @@
     "title": "Six clues in a slow fall",
     "coverPlate": "wake",
     "coverText": "Follow gravity down and feel the air push back.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers, pointing, drawing, and dictation; the scenic plates show the test ideas rather than exact measurements.",
+    "parentNote": "Ages 6-8. Welcome spoken answers, pointing, drawing, and dictation; the scenic plates show the test ideas rather than exact measurements.",
     "foldableTitle": "A little book of parachute clues",
     "foldableCoverLine": "A Coffee Filter Parachute",
     "foldableNote": "Carry six slow-fall clues in a small book.",
@@ -469,5 +469,17 @@
     "plate": "wake",
     "edition": "AIR · 2026-10-23",
     "subtitle": "A wide canopy. A slower fall."
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare",
+      "round-ten",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Testing a flat and a crumpled filter helps your child connect a wide canopy to more air pushing back and a slower fall."
 }
