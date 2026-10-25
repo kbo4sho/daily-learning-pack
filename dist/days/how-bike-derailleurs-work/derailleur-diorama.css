@@ -1,3 +1,103 @@
+/* Shared six-tab page rules (seven-tab nav, title picture, quiz, foldable). Selected from the shared six-layout sheet so the derailleur page does not load the dew apparatus styles. */
+.bl-title-plate {
+  margin: 0 0 24px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bl-quiz {
+  max-width: 760px;
+}
+.bl-quiz fieldset {
+  border: 0;
+  border-top: 1px solid #d9d1c1;
+  padding: 26px 0;
+  margin: 0;
+}
+.bl-quiz legend {
+  font:
+    400 26px/1.2 Newsreader,
+    serif;
+  float: left;
+  width: 100%;
+  margin: 0 0 16px;
+}
+.bl-quiz label {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 1px solid #cfc4ae;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bl-quiz input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #685737;
+}
+.bl-quiz label:has(input:checked) {
+  background: #ede4ce;
+  border-color: #87704b;
+}
+.bl-quiz details {
+  border-top: 1px solid #d9d1c1;
+  padding-top: 20px;
+}
+.bl-quiz summary {
+  padding: 12px 0;
+  min-height: 48px;
+  cursor: pointer;
+}
+.bl-quiz dd {
+  margin: 0 0 16px;
+}
+.bl-foldable {
+  max-width: 760px;
+}
+.bl-foldable .primary-button {
+  margin: 16px 0;
+}
+.bl-foldable ol {
+  line-height: 1.8;
+}
+body[data-surfaces="six"] .daily-nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+}
+body[data-surfaces="six"] .daily-nav a {
+  padding: 16px 8px;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  body[data-surfaces="six"] .daily-nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body[data-surfaces="six"] .daily-nav a {
+    padding: 11px 5px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+  body[data-surfaces="six"].reader-open .daily-nav {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  body[data-surfaces="six"].reader-open .daily-nav a {
+    font-size: 10px;
+    padding: 12px 1px;
+  }
+  body[data-surfaces="six"] .family-reader .curiosity-plate {
+    max-width: 220px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  body[data-surfaces="six"] .family-reader .curiosity-plate {
+    max-width: 540px;
+  }
+}
 .derailleur-panel {
   max-width: 1040px;
   margin-inline: auto;
@@ -40,7 +140,6 @@
   overflow: visible;
 }
 .derailleur-drawing [data-part] {
-  cursor: pointer;
   transition: opacity 0.15s;
 }
 .derailleur-panel[data-selected]:not([data-selected=""])
@@ -351,9 +450,4 @@
   .derailleur-panel * {
     transition: none !important;
   }
-}
-/* The seven-tab nav comes from dew-diorama.css; the story's title picture keeps its full, uncropped shape. */
-.bl-title-plate img {
-  max-height: none;
-  object-fit: fill;
 }
