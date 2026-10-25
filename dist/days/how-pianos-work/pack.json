@@ -321,5 +321,19 @@
       "label": "Yamaha instrument guide · Acoustic and digital sound mechanisms",
       "url": "https://www.yamaha.com/en/musical_instrument_guide/piano/selection/selection002.html"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare-lengths",
+      "addition",
+      "subtraction",
+      "explain-cause-and-effect",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Following a piano key’s motion to vibrating strings helps your child explain how connected parts produce a sound."
 }

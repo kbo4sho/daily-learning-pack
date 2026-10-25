@@ -118,7 +118,7 @@
     "foldableTitle": "Where did the water go?",
     "foldableCoverLine": "Tiny holes. A big squeeze.",
     "foldableNote": "Dip, squeeze, notice, and pause whenever you like.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Connect sponge, pores, soak, squeeze, spring back, and absorb to the tray experiment.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Connect sponge, pores, soak, squeeze, spring back, and absorb to the tray experiment.",
     "beats": [
       {
         "id": "wake",
@@ -291,11 +291,11 @@
       }
     ],
     "extension": "Choose one answer and explain how the tens and ones helped you.",
-    "parentNote": "Age 8 / Grade 2 math. Three two-digit comparisons and three nearest-ten rounding tasks. Rounding is a requested extension. A ones digit of 5 rounds up. The comparison answer key gives the greater number and the completed comparison. These story quantities are practice data, not measurements of the paintings or sponge capacity.",
+    "parentNote": "Ages 6-8 math. Three two-digit comparisons and three nearest-ten rounding tasks. Rounding is a requested extension. A ones digit of 5 rounds up. The comparison answer key gives the greater number and the completed comparison. These story quantities are practice data, not measurements of the paintings or sponge capacity.",
     "eyebrow": "SIX WATER QUESTIONS",
     "actionLabel": "Compare or round to the nearest ten",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Compare tens and ones. For rounding, locate the two nearby tens; a halfway value rounds up. Welcome spoken reasoning or a number line."
+    "answerKeyIntro": "Ages 6-8 math. Compare tens and ones. For rounding, locate the two nearby tens; a halfway value rounds up. Welcome spoken reasoning or a number line."
   },
   "writing": {
     "title": "Give a sponge test its words",
@@ -355,7 +355,7 @@
       "text": "Accept a sensible command, spoken, dictated, or written. Example: “Dip the sponge in the water, then squeeze it over the empty cup.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, and Grade 2 math. Lead the optional water test with a new, clean sponge, not the used dish sponge. Use a tray, two clear cups, a measuring cup or spoon, and water. Dip, lift, squeeze over a cup, and compare amounts. Wipe up drips so floors stay dry. Water enters connected pores through wetting and capillary action; cellulose fibres also take up water. Damp cellulose often wets faster than bone-dry cellulose, but materials vary. Compare same-size pieces of the same material, equal water, and equal time. For uptake speed, compare water left in the dishes. Water squeezed from a damp sponge includes water already present, so cup volume alone is not a fair measure of newly absorbed water. The diorama shows qualitative levels during one short dip, not millilitres, capacity, or guaranteed results. It keeps a small amount of water in the sponge after squeezing. Most kitchen sponges are manufactured from cellulose or foam; sea sponges are animals.",
+  "parentGuidance": "Ages 6-8. Lead the optional water test with a new, clean sponge, not the used dish sponge. Use a tray, two clear cups, a measuring cup or spoon, and water. Dip, lift, squeeze over a cup, and compare amounts. Wipe up drips so floors stay dry. Water enters connected pores through wetting and capillary action; cellulose fibres also take up water. Damp cellulose often wets faster than bone-dry cellulose, but materials vary. Compare same-size pieces of the same material, equal water, and equal time. For uptake speed, compare water left in the dishes. Water squeezed from a damp sponge includes water already present, so cup volume alone is not a fair measure of newly absorbed water. The diorama shows qualitative levels during one short dip, not millilitres, capacity, or guaranteed results. It keeps a small amount of water in the sponge after squeezing. Most kitchen sponges are manufactured from cellulose or foam; sea sponges are animals.",
   "sources": [
     {
       "label": "USGS · water clings and moves into small spaces",
@@ -428,5 +428,17 @@
         "answer": "Most kitchen sponges are made by people from cellulose or foam. Many sea sponges are simple animals."
       }
     ]
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare",
+      "round-ten",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Tracing water into and out of a sponge helps your child explain an everyday change using a hidden structure."
 }
