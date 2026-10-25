@@ -118,7 +118,7 @@
     "foldableTitle": "A little book of wiggles",
     "foldableCoverLine": "How Speakers Make Sound",
     "foldableNote": "Follow the motion and carry a question.",
-    "parentNote": "Age 8 / Grade 3 reading. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
+    "parentNote": "Ages 6-8. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
     "beats": [
       {
         "id": "wake",
@@ -326,8 +326,8 @@
     ],
     "extension": "Choose one task and show the trade with tens and ones.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
+    "parentNote": "Ages 6-8 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
+    "answerKeyIntro": "Ages 6-8 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
   },
   "writing": {
     "title": "Put a wiggle into words",
@@ -461,5 +461,17 @@
         "answer": "The drumhead vibrates beneath the rice and gives it little pushes upward."
       }
     ]
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "addition-regrouping",
+      "subtraction-regrouping",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Following a speaker’s moving cone helps your child connect an electrical signal to air waves and hearing."
 }

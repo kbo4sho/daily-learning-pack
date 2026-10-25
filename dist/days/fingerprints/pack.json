@@ -118,7 +118,7 @@
     "foldableTitle": "A little book of ridge maps",
     "foldableCoverLine": "Fingerprints",
     "foldableNote": "Follow one faint mark from its broad flow to its tiniest details.",
-    "parentNote": "Grade 3 reading. Welcome pointing, speech, drawing, or dictation. Keep any paper prints at home and do not upload or share them.",
+    "parentNote": "Ages 6-8. Welcome pointing, speech, drawing, or dictation. Keep any paper prints at home and do not upload or share them.",
     "beats": [
       {
         "id": "wake",
@@ -414,5 +414,17 @@
     "plate": "wake",
     "edition": "FINGERPRINTS · FIELD GUIDE",
     "subtitle": "Loops, whorls, arches, and the tiny details inside them."
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "addition-regrouping",
+      "subtraction-regrouping",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Comparing loops, whorls and arches helps your child connect shared patterns and tiny ridge details to why every fingerprint is different."
 }
