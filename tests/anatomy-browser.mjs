@@ -105,10 +105,16 @@ const tests = {
       .locator('[data-derailleur-action="NEXT"]')
       .click({ timeout: STEP });
     assert.equal(await readout(page), "1 · Hanger");
-    await page
-      .locator("svg [data-part='chain']")
-      .first()
-      .dispatchEvent("click", {}, { timeout: STEP });
+    // The drawing itself is not a control: no pointer cursor, and a tap on it
+    // does not change the selection.
+    const chain = page.locator("svg [data-part='chain']").first();
+    assert.notEqual(
+      await chain.evaluate((el) => getComputedStyle(el).cursor),
+      "pointer",
+    );
+    await chain.dispatchEvent("click", {}, { timeout: STEP });
+    assert.equal(await readout(page), "1 · Hanger");
+    await page.locator('[data-part-pin="chain"]').click({ timeout: STEP });
     assert.equal(await readout(page), "9 · Chain");
     await page
       .locator('[data-derailleur-action="CLEAR"]')

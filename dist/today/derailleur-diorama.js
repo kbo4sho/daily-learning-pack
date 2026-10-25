@@ -48,7 +48,7 @@ function mount() {
       ? `${state.order.indexOf(key) + 1} · ${pick.dataset.name}`
       : idle[0];
     does.textContent = pick ? pick.dataset.does : idle[1];
-    scene.textContent = pick ? `From the story: ${pick.dataset.scene}` : "";
+    scene.textContent = pick ? pick.dataset.scene : "";
   }
   function dispatch(event) {
     const next = reduceDerailleur(state, event);
@@ -57,14 +57,11 @@ function mount() {
     render();
   }
   root.addEventListener("click", (event) => {
-    const part = event.target.closest(
-      "[data-part-pick],[data-part-pin],[data-part]",
-    );
+    const part = event.target.closest("[data-part-pick],[data-part-pin]");
     if (part)
       return dispatch({
         type: "SELECT",
-        value:
-          part.dataset.partPick || part.dataset.partPin || part.dataset.part,
+        value: part.dataset.partPick || part.dataset.partPin,
       });
     const button = event.target.closest("[data-derailleur-action]");
     if (button) dispatch({ type: button.dataset.derailleurAction });
