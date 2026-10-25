@@ -475,6 +475,11 @@
       "url": "https://www.parktool.com/en-us/blog/calvins-corner/shimano-coasting-system"
     }
   ],
+  "onRequest": true,
+  "surfaces": {
+    "layout": "six",
+    "diorama": "derailleur"
+  },
   "titleCard": {
     "plate": "wake",
     "edition": "BIKES · 2026-10-26",
