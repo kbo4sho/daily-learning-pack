@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "how-cats-talk",
+      "band": "4-5",
+      "topic": "how cats talk",
+      "why": "Listening to how cats talk helps your child notice sounds and body signals while practicing counting, letter sounds and tracing.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-21",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "leaves-changing-color",
+      "band": "4-5",
+      "topic": "leaves changing color",
+      "why": "Noticing autumn leaf colors helps your child explain a seasonal change while practicing matching, sounds and counting.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-19",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "puddles",
+      "band": "4-5",
+      "topic": "puddles",
+      "why": "Following a puddle from rain to a dry path helps your child notice change while practicing counting, sounds and tracing.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-17",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
+    }
+  ]
+}
