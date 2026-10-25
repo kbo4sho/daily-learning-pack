@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "doors": [
+    {
+      "id": "big",
+      "label": "Big Wonderer",
+      "archiveHref": "./archive/",
+      "printHref": "./family/print/#big",
+      "today": {
+        "href": "./today/",
+        "topic": "how do bike derailleurs work?",
+        "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears.",
+        "date": "2026-10-26",
+        "pdfs": [
+          {
+            "href": "./today/pdf/kid-worksheets.pdf",
+            "label": "Print the pack"
+          }
+        ]
+      }
+    },
+    {
+      "id": "little",
+      "label": "Little Wonderer",
+      "archiveHref": "./little/archive/",
+      "printHref": "./family/print/#little",
+      "today": {
+        "href": "./little/today/",
+        "topic": "how cats talk",
+        "why": "Listening to how cats talk helps your child notice sounds and body signals while practicing counting, letter sounds and tracing.",
+        "date": "2026-10-21",
+        "pdfs": [
+          {
+            "href": "./little/days/how-cats-talk/little-pack.pdf",
+            "label": "Print the pack"
+          }
+        ]
+      }
+    }
+  ]
+}

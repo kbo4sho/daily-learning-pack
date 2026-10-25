@@ -5,18 +5,18 @@ const TOKEN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const WHY_MAX_LENGTH = 180;
 
 // Shared by authored packs, topic queues and the public manifest.
-export function topicMetadataIssues({ why, skills } = {}) {
-  const issues = [];
-  if (
-    typeof why !== "string" ||
+export function whyIssues(why) {
+  return typeof why !== "string" ||
     !why.trim() ||
     why !== why.trim() ||
     why.length > WHY_MAX_LENGTH ||
     /[\p{Cc}\p{Zl}\p{Zp}]/u.test(why)
-  )
-    issues.push(
-      `why must be one nonempty line of at most ${WHY_MAX_LENGTH} characters.`,
-    );
+    ? [`why must be one nonempty line of at most ${WHY_MAX_LENGTH} characters.`]
+    : [];
+}
+
+export function topicMetadataIssues({ why, skills } = {}) {
+  const issues = whyIssues(why);
   if (
     !Array.isArray(skills) ||
     skills.length < 3 ||
