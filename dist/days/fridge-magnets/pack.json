@@ -118,7 +118,7 @@
     "foldableTitle": "Fridge Magnets",
     "foldableCoverLine": "Some things stick. Some things slide.",
     "foldableNote": "Keep a question from the kitchen.",
-    "parentNote": "Age 8 / Grade 3 reading. Welcome spoken answers and dictation. Use the story to explain magnet, stick, pull, metal, fridge, and slide.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Use the story to explain magnet, stick, pull, metal, fridge, and slide.",
     "beats": [
       {
         "id": "wake",
@@ -342,8 +342,8 @@
     ],
     "extension": "Choose one pattern and tell how you know the missing number fits.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Age 8 / Grade 2 math. Six skip-counting sequences use steps of 2, 5, and 10 within 100. The supplied numbers are for counting practice, not measurements of magnetic reach.",
-    "answerKeyIntro": "Age 8 / Grade 2 math. Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
+    "parentNote": "Ages 6-8 math. Six skip-counting sequences use steps of 2, 5, and 10 within 100. The supplied numbers are for counting practice, not measurements of magnetic reach.",
+    "answerKeyIntro": "Ages 6-8 math. Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
   },
   "writing": {
     "title": "Give your magnet test its words",
@@ -403,7 +403,7 @@
       "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Hold the magnet near the fridge, then slowly pull it away and notice when it lets go.”"
     }
   ],
-  "parentGuidance": "Age 8, Grade 3 reading, Grade 2 math. A grown-up stays nearby, chooses large intact fridge magnets, and leads the tray activity. Keep magnets away from screens, cards with stripes, and mouths. Use a steel fridge door or cookie sheet; some stainless-steel doors do not hold magnets. Iron and many steels attract strongly; ordinary fridge magnets do not stick to aluminum or copper. Paper, wood, plastic, and cloth are nonmagnetic test surfaces, though a thin layer can let a magnet hold against steel behind it. The magnet and steel attract each other; friction helps keep the magnet from sliding down the door. The diorama shows a qualitative comparison, not a measured range or force: its slider has near/far positions, and the contact test shows whether this magnet stays on the selected surface. Real reach depends on the magnet, object, gap, and friction. Two magnets can attract or repel depending on which poles face; flat fridge magnets may have several alternating poles, so use a pair of large bar magnets for the optional turning test.",
+  "parentGuidance": "Ages 6-8. A grown-up stays nearby, chooses large intact fridge magnets, and leads the tray activity. Keep magnets away from screens, cards with stripes, and mouths. Use a steel fridge door or cookie sheet; some stainless-steel doors do not hold magnets. Iron and many steels attract strongly; ordinary fridge magnets do not stick to aluminum or copper. Paper, wood, plastic, and cloth are nonmagnetic test surfaces, though a thin layer can let a magnet hold against steel behind it. The magnet and steel attract each other; friction helps keep the magnet from sliding down the door. The diorama shows a qualitative comparison, not a measured range or force: its slider has near/far positions, and the contact test shows whether this magnet stays on the selected surface. Real reach depends on the magnet, object, gap, and friction. Two magnets can attract or repel depending on which poles face; flat fridge magnets may have several alternating poles, so use a pair of large bar magnets for the optional turning test.",
   "sources": [
     {
       "label": "Exploratorium · exploring magnets",
@@ -472,5 +472,17 @@
         "answer": "Turning one magnet can change a pull to a push because different ends face each other."
       }
     ]
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "skip-next",
+      "skip-missing",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Comparing what a magnet attracts helps your child test a prediction and notice how distance changes a pull."
 }

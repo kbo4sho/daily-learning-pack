@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "how-bike-derailleurs-work",
+      "band": "6-8",
+      "topic": "how do bike derailleurs work?",
+      "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-26",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-coffee-filter-parachute",
+      "band": "6-8",
+      "topic": "a coffee filter parachute",
+      "why": "Testing a flat and a crumpled filter helps your child connect a wide canopy to more air pushing back and a slower fall.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-23",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "h2o",
+      "band": "6-8",
+      "topic": "H2O",
+      "why": "Looking at one tiny molecule helps your child connect water's odd behavior, like beading drops and floating ice, to how its molecules attract.",
+      "skills": [
+        "equal-groups",
+        "array",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-22",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-rhythm-is-math",
+      "band": "6-8",
+      "topic": "how rhythm is math",
+      "why": "Counting beats and finding patterns helps your child see how steady counting turns into music they can feel and make.",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-21",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-a-bike-chain-works",
+      "band": "6-8",
+      "topic": "how a bike chain works",
+      "why": "Following a pedal push helps your child connect the jobs of teeth, links and wheels in one moving system.",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-19",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-speakers-turn-waves-into-sound",
+      "band": "6-8",
+      "topic": "how speakers turn waves into sound",
+      "why": "Following a speaker’s moving cone helps your child connect an electrical signal to air waves and hearing.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-16",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "pinecones",
+      "band": "6-8",
+      "topic": "pinecones",
+      "why": "Comparing wet and dry pinecones helps your child connect a change in shape to water and seed release.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-15",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "why-electronics-use-sine-waves",
+      "band": "6-8",
+      "topic": "why electronics use sine waves",
+      "why": "Connecting swings, springs and speakers helps your child recognize a repeating pattern and explain what a wave drawing records.",
+      "skills": [
+        "equal-groups",
+        "array",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-14",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "fridge-magnets",
+      "band": "6-8",
+      "topic": "fridge magnets",
+      "why": "Comparing what a magnet attracts helps your child test a prediction and notice how distance changes a pull.",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-13",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-drill-bits-work",
+      "band": "6-8",
+      "topic": "how drill bits work",
+      "why": "Following a drill bit’s cutting edges and spiral grooves helps your child explain how tool shape supports a job.",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-12",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "electrons",
+      "band": "6-8",
+      "topic": "electrons",
+      "why": "A clinging sock gives your child a familiar starting point for explaining how moving electrons change electric charge.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-09",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-kitchen-sponge",
+      "band": "6-8",
+      "topic": "a kitchen sponge",
+      "why": "Tracing water into and out of a sponge helps your child explain an everyday change using a hidden structure.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-08",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "shadows-at-noon",
+      "band": "6-8",
+      "topic": "shadows at noon",
+      "why": "Comparing two shadow measurements helps your child use evidence to connect the sun’s height with shadow length.",
+      "skills": [
+        "array",
+        "equal-groups",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-06",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "tungsten-carbide",
+      "band": "6-8",
+      "topic": "tungsten carbide",
+      "why": "Comparing hard and tough materials helps your child explain why different parts of a tool need different properties.",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-05",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "tiny-guests",
+      "band": "6-8",
+      "topic": "tiny guests",
+      "why": "Comparing bacteria and viruses helps your child understand how tiny germs differ and why handwashing helps remove them.",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-02",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "a-paper-boat",
+      "band": "6-8",
+      "topic": "a paper boat",
+      "why": "Testing a paper boat helps your child connect shape, load and soaking to why something floats or sinks.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-01",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "morning-dew",
+      "band": "6-8",
+      "topic": "morning dew",
+      "why": "Comparing a cool leaf and its disappearing drops helps your child explain where dew comes from and where it goes.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "two-step",
+        "equal-groups",
+        "missing-addend",
+        "pattern-sequencing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-29",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-black-lights-work",
+      "band": "6-8",
+      "topic": "how black lights work",
+      "why": "Comparing two paper stars helps your child use visible clues to explain the effect of light our eyes cannot see.",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "compare-materials",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-28",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-code-turns-into-lesson",
+      "band": "6-8",
+      "topic": "how code turns into a lesson",
+      "why": "Following code from ordered jobs to a finished page helps your child explain how a sequence of instructions produces a result.",
+      "skills": [
+        "sequencing",
+        "addition",
+        "subtraction",
+        "follow-instructions",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-27",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "curiosity-inchworms",
+      "band": "6-8",
+      "topic": "inchworms",
+      "why": "Watching an inchworm grip and reach helps your child use position clues to explain how movement happens.",
+      "skills": [
+        "two-step",
+        "compare-distances",
+        "infer-from-evidence",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-26",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "how-pianos-work",
+      "band": "6-8",
+      "topic": "how pianos work",
+      "why": "Following a piano key’s motion to vibrating strings helps your child explain how connected parts produce a sound.",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "explain-cause-and-effect",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-25",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "diamond",
+      "band": "6-8",
+      "topic": "diamond",
+      "why": "Following a diamond’s sparkle helps your child revise a first guess using evidence about light and materials.",
+      "skills": [
+        "compare-measurements",
+        "addition",
+        "subtraction",
+        "compare-materials",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-24",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "curiosity-bean",
+      "band": "6-8",
+      "topic": "curiosity bean",
+      "why": "Following a sprouting bean helps your child explain how a plant starts growing before it has leaves.",
+      "skills": [
+        "compare-lengths",
+        "addition",
+        "subtraction",
+        "explain-growth",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-23",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    }
+  ]
+}
