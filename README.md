@@ -1,6 +1,6 @@
 # Daily Learning Pack (public view)
 
-**Display-only** Wonder Daily archive for **2nd grade (roughly ages 7–8)**. This repository hosts committed static files. Families open a morning on GitHub Pages; they do not run generators here.
+**Display-only** Wonder Daily archive and library for shared family learning. This repository hosts committed static files. Families open a morning on GitHub Pages; they do not run generators here.
 
 Live:
 
@@ -73,3 +73,40 @@ generators (`npm run little:nightly` there). Its only identifier is the opaque i
 configuration, age, grade, birthday or name is ever published, and `scripts/privacy-check.mjs` applies a
 stricter ban list inside `/little/`. `tests/little.test.mjs` and `tests/little-browser.mjs` (phone and
 desktop widths, axe) cover it.
+
+## Library index
+
+`dist/library/6-8.json` and `dist/library/4-5.json` are generated in the private
+repo from pack tags and publication dates. Each contains `schemaVersion: 1`
+and `entries` with exactly `id`, `band`, `topic`, `why`, `skills`, `date`, `format`,
+`status`, and `hidden`. Ids are day slugs, unique within a band. Each published
+day has at least three distinct skills and a format (`curiosity-day` or
+`picture-pack`). `hidden` controls listing visibility; it is not access control.
+The manifests contain no learner identity or settings. `why` is a required
+parent-facing sentence: one nonempty trimmed line, at most 180 characters.
+It must match the published `pack.json` or second-learner `day.json` (and its
+archive record). The family surface uses this metadata. Day sections follow story → why →
+activities; the second learner’s pages show the same required why sentence.
+
+`npm run archive` validates the manifests against all published days and their
+tags and derives the archive's band labels. `/little/` retains its opaque tags
+and age-free child pages. `dist/library/` contains only JSON manifests and
+remains outside Wonder Together marketing navigation.
+
+## Bookmark-only family surface
+
+The private generators also publish `dist/family/`: two character doors, each
+opening the current default pack, past days, and a stable print shelf. The
+family manifest has a strict schema in `src/family-contract.mjs`; it contains
+only public pack metadata and same-origin links. The public archive renderer
+preserves these files without adding navigation to them.
+
+All family pages are static, `noindex,nofollow`, and work without JavaScript.
+An optional nickname editor stores text only in that browser’s localStorage;
+no nickname enters artifacts, cookies, URLs or network requests. The print
+shelf offers one verified combined PDF per door. Readiness depends on that
+current pack’s PDF, regardless of its publication date; missing or mismatched
+PDFs show “Ready by morning.” The shelf link lives only on the door in the
+manifest, without a duplicate link in its current-pack record.
+The stricter family privacy guard rejects learner identities and audience
+labels. No account, selection service or marketing navigation is added.

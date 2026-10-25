@@ -117,7 +117,7 @@
     "foldableTitle": "A little book of tiny teeth",
     "foldableCoverLine": "How a Zipper Works",
     "foldableNote": "Follow two rows through one hidden path.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers and dictation. Use an intact zipper only, and keep fingers and loose fabric away from the moving slider.",
+    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Use an intact zipper only, and keep fingers and loose fabric away from the moving slider.",
     "beats": [
       {
         "id": "wake",
@@ -399,5 +399,17 @@
       "label": "WIPO patent publication · interlocking teeth and Y-shaped channel",
       "url": "https://patents.google.com/patent/WO2012024177A1/en"
     }
-  ]
+  ],
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "compare",
+      "round-ten",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Following one slider along the teeth helps your child connect a Y-shaped path to how two rows of tiny teeth lock into one smooth line."
 }

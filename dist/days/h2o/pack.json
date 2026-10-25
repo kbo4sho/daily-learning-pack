@@ -120,7 +120,7 @@
     "foldableTitle": "A little book of water clues",
     "foldableCoverLine": "H2O: Why Water Is Special",
     "foldableNote": "Carry six water clues in a small book.",
-    "parentNote": "Grade 3 reading. Welcome spoken answers, pointing, drawing, and dictation; the molecular scenes are explanatory illustrations.",
+    "parentNote": "Ages 6-8. Welcome spoken answers, pointing, drawing, and dictation; the molecular scenes are explanatory illustrations.",
     "beats": [
       {
         "id": "wake",
@@ -462,5 +462,17 @@
     "plate": "wake",
     "edition": "WATER · 2026-10-22",
     "subtitle": "Tiny molecules. Surprising clues."
-  }
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "equal-groups",
+      "array",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Looking at one tiny molecule helps your child connect water's odd behavior, like beading drops and floating ice, to how its molecules attract."
 }
