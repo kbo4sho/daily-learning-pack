@@ -398,9 +398,8 @@ test("every packet is one named native link without ritual chrome", async () => 
       for (const [img] of packet.matchAll(/<img [^>]+>/g))
         assert.match(img, /alt=""/);
       const pack = JSON.parse(await read(`dist/days/${day.slug}/pack.json`));
-      if (Number.isInteger(pack.gradeLevel) && pack.gradeLevel > 0)
-        assert.ok(packet.includes(`Grade ${pack.gradeLevel}`));
-      else assert.doesNotMatch(packet, /Grade/);
+      assert.ok(packet.includes(`Ages ${pack.tags.band}`));
+      assert.doesNotMatch(packet, /Grade/);
     }
     assert.match(html, /name="robots" content="noindex, nofollow"/);
     assert.doesNotMatch(
@@ -513,64 +512,74 @@ test("renderArchive fails closed when latest is missing from days", async () => 
   );
 });
 
-test("renderArchive uses only each pack’s positive integer grade, even without art", async (t) => {
-  const dir = await mkdtemp(join(tmpdir(), "wd-packet-grades-"));
+test("renderArchive uses validated library bands instead of a pack's grade", async (t) => {
+  const dir = await mkdtemp(join(tmpdir(), "wd-packet-bands-"));
   t.after(() => rm(dir, { recursive: true, force: true }));
-  const grades = [4, undefined, 0, -1, 2.5, "2", null];
-  const days = grades.map((grade, index) => ({
-    slug: `grade-${index}`,
-    date: "2026-09-29",
-    title: `Morning ${index}.`,
-    teaser: "A small discovery.",
-    gradeLevel: 9,
-  }));
-  days.push({
-    slug: "missing-pack",
-    date: "2026-09-28",
-    title: "No pack.",
-    teaser: "A title only.",
-    gradeLevel: 9,
-  });
-  days.push({
-    slug: "invalid-pack",
-    date: "2026-09-27",
-    title: "Unreadable pack.",
-    teaser: "A title only.",
-    gradeLevel: 9,
-  });
+  const day = {
+    slug: "sample",
+    date: "2026-10-19",
+    title: "Sample.",
+    topic: "sample",
+    teaser: "A discovery.",
+  };
+  const tags = {
+    band: "6-8",
+    skills: ["reading", "counting", "drawing"],
+    format: "curiosity-day",
+  };
+  await mkdir(`${dir}/days/sample`, { recursive: true });
+  await mkdir(`${dir}/library`);
   await writeFile(
     `${dir}/archive.json`,
-    JSON.stringify({ latest: days[0].slug, days }),
+    JSON.stringify({ latest: day.slug, days: [day] }),
   );
-  for (const [i, gradeLevel] of grades.entries()) {
-    await mkdir(`${dir}/days/${days[i].slug}`, { recursive: true });
-    await writeFile(
-      `${dir}/days/${days[i].slug}/pack.json`,
-      JSON.stringify({ gradeLevel }),
-    );
-  }
-  await mkdir(`${dir}/days/invalid-pack`, { recursive: true });
-  await writeFile(`${dir}/days/invalid-pack/pack.json`, "null");
+  await writeFile(`${dir}/days/sample/index.html`, "A discovery.");
+  await writeFile(
+    `${dir}/days/sample/pack.json`,
+    JSON.stringify({
+      topic: "sample",
+      why: "Picture clues help a child explain an idea.",
+      gradeLevel: 9,
+      tags,
+    }),
+  );
+  const row = {
+    id: day.slug,
+    band: tags.band,
+    topic: day.topic,
+    why: "Picture clues help a child explain an idea.",
+    skills: tags.skills,
+    date: day.date,
+    format: tags.format,
+    status: "published",
+    hidden: false,
+  };
+  await writeFile(
+    `${dir}/library/6-8.json`,
+    JSON.stringify({ schemaVersion: 1, entries: [row] }),
+  );
   await renderArchive(dir);
   for (const file of ["index.html", "archive/index.html"]) {
     const html = await readFile(`${dir}/${file}`, "utf8");
-    const packets = [
-      ...html.matchAll(/<a class="seed-packet-link[^"]*"[\s\S]*?<\/a>/g),
-    ].map(([packet]) => packet);
-    assert.equal(packets.length, days.length + 1);
-    // Door and today's shelf packet are the same day.
-    for (const packet of packets.slice(0, 2)) {
-      assert.match(packet, /Grade 4/);
-      assert.match(packet, /is-typeface/);
-    }
-    for (const packet of packets.slice(2)) {
-      assert.doesNotMatch(packet, /Grade/);
-      assert.match(packet, /is-typeface/);
-    }
+    assert.match(html, /Ages 6-8/);
+    assert.doesNotMatch(html, /Grade/);
+    assert.match(html, /is-typeface/);
   }
-  // Missing pack data may omit its grade; malformed published JSON fails closed.
-  await writeFile(`${dir}/days/invalid-pack/pack.json`, "not json");
-  await assert.rejects(renderArchive(dir), SyntaxError);
+  // A missing row must not silently drop a published day from the library.
+  await writeFile(
+    `${dir}/library/6-8.json`,
+    JSON.stringify({ schemaVersion: 1, entries: [] }),
+  );
+  await assert.rejects(renderArchive(dir), /every published day/);
+  await writeFile(
+    `${dir}/library/6-8.json`,
+    JSON.stringify({ schemaVersion: 1, entries: [row] }),
+  );
+  await writeFile(
+    `${dir}/days/sample/pack.json`,
+    JSON.stringify({ topic: "sample", tags: { ...tags, band: "4-5" } }),
+  );
+  await assert.rejects(renderArchive(dir), /disagrees/);
 });
 
 test("every published /days/<slug>/ is listed in archive.json and on both shelves", async () => {
