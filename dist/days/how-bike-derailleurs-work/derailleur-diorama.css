@@ -273,11 +273,6 @@ body[data-surfaces="six"] .daily-nav a {
   font: 400 18px/1.55 var(--font-body);
   margin-top: 6px;
 }
-.derailleur-readout-scene {
-  font: 400 14px/1.5 var(--font-body);
-  color: #514733;
-  margin-top: 8px;
-}
 .derailleur-static {
   font: 400 16px/1.65 var(--font-body);
   margin-top: 24px;
