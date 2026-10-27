@@ -72,11 +72,16 @@ const tests = {
     assert.equal(await readout(page), "6 · Cage");
     assert.match(
       await page.locator("[data-derailleur-does]").textContent(),
-      /side plates/,
+      /thin plates/,
     );
-    assert.match(
-      await page.locator("[data-derailleur-scene]").textContent(),
-      /^From the story: /,
+    // The card is the name and its description, nothing else.
+    assert.equal(
+      await page.locator("[data-derailleur-readout] > span").count(),
+      2,
+    );
+    assert.doesNotMatch(
+      await page.locator("[data-derailleur-readout]").innerText(),
+      /\bstory\b|did not name|helpers inside/i,
     );
     assert.equal(
       await page
