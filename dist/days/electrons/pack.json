@@ -118,7 +118,7 @@
     "foldableTitle": "Where did the tiny bits go?",
     "foldableCoverLine": "Tiny bits. A gentle charge.",
     "foldableNote": "Look closely, notice the cling, and pause whenever you like.",
-    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Explain electron, charge, atom, nucleus, wire, and static cling through the story.",
+    "parentNote": "Age 8. Welcome spoken answers and dictation. Explain electron, charge, atom, nucleus, wire, and static cling through the story.",
     "beats": [
       {
         "id": "wake",
@@ -294,8 +294,8 @@
     ],
     "extension": "Choose one problem and explain where you regrouped a ten.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Ages 6-8 math. Six number-crunch tasks, all within 100, with two-digit operands and actual regrouping. Quantities describe craft supplies and model marks, not actual electron counts or measurements from art.",
-    "answerKeyIntro": "Ages 6-8 math. Regroup ten ones as one ten for addition, or trade one ten for ten ones for subtraction. Welcome a sketch or spoken explanation."
+    "parentNote": "Age 8 math. Six number-crunch tasks, all within 100, with two-digit operands and actual regrouping. Quantities describe craft supplies and model marks, not actual electron counts or measurements from art.",
+    "answerKeyIntro": "Age 8 math. Regroup ten ones as one ten for addition, or trade one ten for ten ones for subtraction. Welcome a sketch or spoken explanation."
   },
   "writing": {
     "title": "Give the balloon test its words",
@@ -355,7 +355,7 @@
       "text": "Accept a clear command spoken, dictated, drawn, or written. Example: “Rub the balloon on your sweater, then hold it near the paper bits.”"
     }
   ],
-  "parentGuidance": "Ages 6-8. A grown-up leads every demo. Keep fingers out of outlets, and keep hands dry around plugs and switches. Use a balloon, sweater, paper bits, and a tray, or simply notice laundry cling. Keep balloon pieces and model beads with the grown-up. Use a battery-and-lamp activity only with a grown-up and a ready-made snap circuit or kit; leave wall outlets closed. The atom is a simplified spatial model, not a scale view or circular planetary orbit. Electrons have far less mass than protons and neutrons; the common hydrogen nucleus has no neutron. Charge marks in the diorama stand for an imbalance across many atoms, not one atom or measured particle counts. Its pieces exchange electrons without creating any or moving the positive nuclei. Static attraction can also involve polarization: a neutral object’s charges shift slightly without changing its total charge. Real transfer and cling depend on materials and humidity. The wire scene shows a low-voltage complete circuit; a lamp transfers energy, not a supply of used-up electrons.",
+  "parentGuidance": "Age 8. A grown-up leads every demo. Keep fingers out of outlets, and keep hands dry around plugs and switches. Use a balloon, sweater, paper bits, and a tray, or simply notice laundry cling. Keep balloon pieces and model beads with the grown-up. Use a battery-and-lamp activity only with a grown-up and a ready-made snap circuit or kit; leave wall outlets closed. The atom is a simplified spatial model, not a scale view or circular planetary orbit. Electrons have far less mass than protons and neutrons; the common hydrogen nucleus has no neutron. Charge marks in the diorama stand for an imbalance across many atoms, not one atom or measured particle counts. Its pieces exchange electrons without creating any or moving the positive nuclei. Static attraction can also involve polarization: a neutral object’s charges shift slightly without changing its total charge. Real transfer and cling depend on materials and humidity. The wire scene shows a low-voltage complete circuit; a lamp transfers energy, not a supply of used-up electrons.",
   "sources": [
     {
       "label": "DOE · electrons and atoms",
