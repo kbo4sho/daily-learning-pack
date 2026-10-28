@@ -7,10 +7,12 @@ import {
   readFile,
   readdir,
   rename,
+  stat,
   rm,
   writeFile,
 } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
+import sharp from "sharp";
 import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
 import { readLibrary } from "../src/library.mjs";
@@ -184,6 +186,63 @@ async function writeArchive(root) {
   return { latest, count: entries.length };
 }
 
+/** Widths of the pack-card plate copies, in CSS-pixel-times-density steps. */
+export const PLATE_WIDTHS = [640, 1024];
+/** Byte caps per copy, so no daily plate can make the welcome page heavy. */
+export const PLATE_MAX_BYTES = { 640: 55_000, 1024: 100_000 };
+
+/**
+ * The card plate is a 1.5K-wide story illustration. The welcome card shows it
+ * at about 320 to 420 CSS px, so write small webp copies next to the page and
+ * point the card at them.
+ *
+ * Returns the face with webp sources, or `null` (the card then falls back to
+ * type) when the plate cannot be read, or cannot be made to fit the byte caps.
+ * The one case that keeps the original file is a readable image narrower than
+ * the smallest copy that is already under the cap.
+ */
+export async function webFace(root, face) {
+  if (!face?.src) return face;
+  const source = resolve(root, face.src.replace(/^\.\.\//, "./"));
+  try {
+    const meta = await sharp(source).metadata();
+    if (!meta.width || !meta.height) return null;
+    const widths = PLATE_WIDTHS.filter((w) => w <= meta.width);
+    if (!widths.length) {
+      await sharp(source).raw().toBuffer(); // must decode, not only parse
+      const { size } = await stat(source);
+      return size <= PLATE_MAX_BYTES[PLATE_WIDTHS[0]] ? face : null;
+    }
+    const copies = [];
+    for (const w of widths) {
+      // Step the quality down until the copy fits its cap.
+      let bytes;
+      for (const quality of [74, 66, 58, 50, 42, 34, 26, 18, 10, 4]) {
+        bytes = await sharp(source)
+          .resize({ width: w })
+          .webp({ quality, effort: 5 })
+          .toBuffer();
+        if (bytes.length <= PLATE_MAX_BYTES[w]) break;
+      }
+      if (bytes.length > PLATE_MAX_BYTES[w]) return null;
+      copies.push([w, bytes]);
+    }
+    await mkdir(`${root}/welcome/img`, { recursive: true });
+    for (const [w, bytes] of copies)
+      await writeFile(`${root}/welcome/img/plate-${w}.webp`, bytes);
+    const widest = widths.at(-1);
+    return {
+      ...face,
+      src: `./img/plate-${widest}.webp`,
+      srcset: widths.map((w) => `./img/plate-${w}.webp ${w}w`).join(", "),
+      width: widest,
+      height: Math.round((widest * meta.height) / meta.width),
+    };
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Hidden parent welcome page: dist/welcome/. Not linked from any nav and
  * marked noindex. Tonight's card is the latest archive day and its plate.
@@ -192,13 +251,11 @@ async function writeWelcome(root, latest) {
   const pack = await readDayPack(root, latest);
   await rm(`${root}/welcome`, { recursive: true, force: true });
   await cp("src/welcome-assets", `${root}/welcome`, { recursive: true });
+  const face = await faceFromPack(root, latest, "../", pack);
   await writeFile(
     `${root}/welcome/index.html`,
     welcomePage({
-      tonight: {
-        ...latest,
-        face: await faceFromPack(root, latest, "../", pack),
-      },
+      tonight: { ...latest, face: await webFace(root, face) },
     }),
   );
   await copyFile("src/welcome.css", `${root}/welcome/welcome.css`);
