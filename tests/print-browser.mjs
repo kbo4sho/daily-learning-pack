@@ -53,6 +53,8 @@ watchdog(5 * 60_000, "print-browser");
 const INK_MIN = 0.01;
 const INK_MIN_BROWSER = 0.002;
 const MAX_PAGES = 40;
+// A picture-only sheet (the foldable) fills at least this much of a Letter page.
+const PAGE_PICTURE_SQIN = 0.4 * 8.5 * 11;
 const LETTER = [612, 792];
 // name -> label the parent reads in the Print menu.
 const MENU = {
@@ -69,7 +71,7 @@ const BUNDLE = ["math", "foldable", "writing"];
 // Local paths: Unix-style system and home directories (at the start of a word),
 // Windows drive and UNC paths. The shared policy knows fewer of them.
 const LOCAL_PATH =
-  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/[\w.]|\bfile:\/\/|\b[A-Za-z]:[\\/][\w.-]|\\\\[\w.-]+\\[\w$.-]+/;
+  /(?:^|[^\w./-])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)(?![\w-])|\bfile:\/\/|\b[A-Za-z]:[\\/][\w.-]|\\\\[\w.-]+\\[\w$.-]+/i;
 for (const bad of [
   "/root/build/x",
   "file:///home/runner/work/a.pdf",
@@ -78,6 +80,12 @@ for (const bad of [
   "D:/out.pdf",
   ["C:", "out.pdf"].join("\\"),
   "/tmp/.secret",
+  "FILE:///home/runner/a.pdf",
+  "/tmp",
+  "/tmp/",
+  "/tmp/-secret",
+  "[/tmp/x]",
+  "path=/var/log",
   "see /workspace/job/out.pdf",
   "/home/runner/work/f",
   ["", "Users", "me", "f"].join("/"),
@@ -96,6 +104,9 @@ for (const fine of [
   "https://example.org/home/page",
   "at 10:30/11:00",
   "Q: and/or",
+  "http://home/x",
+  "a /tmpl file",
+  "the Users/guide",
   "see https://example.org/x",
 ])
   assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
@@ -116,7 +127,7 @@ const summary = { pdfs: {}, browserPrints: {}, menu: {} };
 const MARKER = ".print-verify";
 // Evidence never goes inside the site it reads, and only into a folder that is
 // new, empty, or marked by an earlier run of this script. Cleanup removes only
-// the files that earlier run listed in its marker.
+// the files that earlier run listed in its marker; anything else stops the run.
 assert.ok(
   relative(root, evidence).startsWith("..") &&
     !isAbsolute(relative(root, evidence)),
@@ -127,16 +138,15 @@ if (existsSync(join(evidence, MARKER))) {
   for (const old of JSON.parse(readFileSync(join(evidence, MARKER), "utf8"))
     .files)
     if (/^[\w.-]+$/.test(old)) rmSync(join(evidence, old), { force: true });
-} else {
-  assert.deepEqual(
-    readdirSync(evidence),
-    [],
-    `${evidence} is not empty and was not made by this check`,
-  );
 }
+// After an earlier run's own files are gone the folder must hold nothing else,
+// so this run never overwrites, removes or records a file it did not create.
+assert.deepEqual(
+  readdirSync(evidence).filter((f) => f !== MARKER),
+  [],
+  `${evidence} holds files this check did not create: use an empty folder`,
+);
 writeFileSync(join(evidence, MARKER), `${JSON.stringify({ files: [] })}\n`);
-// Anything here now is not ours (an earlier run's files are gone): never touch it.
-const preexisting = new Set(readdirSync(evidence));
 
 const run = (cmd, args) =>
   execFileSync(cmd, args, {
@@ -193,18 +203,19 @@ function pictures(path) {
     .slice(2)
     .map((line) => line.trim().split(/\s+/))
     .filter((c) => c.length > 5 && c[2] === "image")
-    .map((c) => ({ page: Number(c[0]), pixels: Number(c[3]) * Number(c[4]) }));
+    .map((c) => ({
+      page: Number(c[0]),
+      pixels: Number(c[3]) * Number(c[4]),
+      // Printed size in square inches (pixels over the image's own ppi).
+      area: (Number(c[3]) / Number(c[12])) * (Number(c[4]) / Number(c[13])),
+    }));
 }
 
 /** One PNG per printed page into the evidence folder; returns ink per page. */
 async function render(path, name) {
   const prefix = join(evidence, name);
   for (const old of readdirSync(evidence))
-    if (
-      old.startsWith(`${name}-p-`) &&
-      old.endsWith(".png") &&
-      !preexisting.has(old)
-    )
+    if (old.startsWith(`${name}-p-`) && old.endsWith(".png"))
       rmSync(join(evidence, old));
   run("pdftoppm", ["-r", "50", "-png", path, `${prefix}-p`]);
   const files = readdirSync(evidence)
@@ -258,6 +269,7 @@ async function checkPdf(
     needPicture = false,
     title = null,
     exempt = new Set(),
+    imageOnly = new Set(),
     sheetTitles = true,
   } = {},
 ) {
@@ -289,7 +301,7 @@ async function checkPdf(
   const rows = pictures(path);
   if (needPicture)
     assert.ok(
-      rows.some((r) => r.pixels >= 100_000),
+      rows.some((r) => r.pixels >= 100_000 && r.area >= PAGE_PICTURE_SQIN),
       `${name}: no full-size picture on the sheet`,
     );
   const pages = [];
@@ -297,10 +309,13 @@ async function checkPdf(
   for (let at = 1; at <= meta.pages; at += 1) {
     const t = texts[at - 1];
     // A sheet may be one picture (the foldable inside Print today).
-    const hasPicture = rows.some((r) => r.page === at);
+    // Only the listed pages may be one picture, and it must fill the sheet.
+    const hasPicture = rows.some(
+      (r) => r.page === at && r.area >= PAGE_PICTURE_SQIN,
+    );
     assert.ok(
-      t.trim().length >= 20 || hasPicture,
-      `${name}: page ${at} has no text and no picture`,
+      t.trim().length >= 20 || (imageOnly.has(at) && hasPicture),
+      `${name}: page ${at} has no text${imageOnly.has(at) ? " and no full-page picture" : " (only the foldable may be a picture)"}`,
     );
     // Every text sheet names today's pack, so one stale sheet copied from an
     // earlier day cannot hide inside a PDF.
@@ -834,7 +849,9 @@ try {
       assert.deepEqual(linked.slice().sort(), shipped, "linked PDFs differ");
       // Foldable first: its sheets are the ones allowed to carry no title.
       const order = [...linked].sort(
-        (a, b) => (b === "foldable") - (a === "foldable"),
+        (a, b) =>
+          (b === "foldable") - (a === "foldable") ||
+          (b === "math") - (a === "math"),
       );
       for (const name of order) {
         const path = join(pdfDir, `${name}.pdf`);
@@ -843,6 +860,13 @@ try {
         checked[name] = await checkPdf(path, name, {
           text: !foldable,
           needPicture: foldable,
+          // The foldable is one picture; inside Print today it is the sheet
+          // right after Math.
+          imageOnly: foldable
+            ? new Set([1])
+            : name === "kid-worksheets"
+              ? new Set([checked.math.pages + 1])
+              : new Set(),
           title: pack.title,
           sheetTitles: !foldable,
           exempt: new Set((checked.foldable?.pageTexts ?? []).map(squash)),
@@ -919,13 +943,14 @@ try {
         );
       for (const a of pack.answers)
         has("parent-answer-key", a.text, `answer "${a.text.slice(0, 24)}"`);
-      for (const q of pack.quiz?.questions ?? [])
-        if (filled(q.answer))
-          has(
-            "parent-answer-key",
-            q.answer,
-            `quiz answer "${q.answer.slice(0, 24)}"`,
-          );
+      for (const q of pack.quiz?.questions ?? []) {
+        assert.ok(filled(q?.answer), "pack.quiz has a question with no answer");
+        has(
+          "parent-answer-key",
+          q.answer,
+          `quiz answer "${q.answer.slice(0, 24)}"`,
+        );
+      }
       // Optional quiz cards: every prompt and choice on the cards, every
       // answer on the key. A pack that declares them must carry quiz data.
       if (extras.includes("quiz-cards")) {
@@ -1134,7 +1159,7 @@ for (const name of Object.keys(checked).concat("lab-page", "lab-page-key"))
     );
 writeFileSync(
   join(evidence, MARKER),
-  `${JSON.stringify({ files: readdirSync(evidence).filter((f) => !preexisting.has(f)) })}\n`,
+  `${JSON.stringify({ files: readdirSync(evidence).filter((f) => f !== MARKER) })}\n`,
 );
 if (failures.length) {
   console.error(
