@@ -32,7 +32,7 @@ const pic = ([srcset, src], { alt = "", sizes, w, h, cls = "", lazy = true }) =>
     .join(
       ", ",
     )}" sizes="${sizes}" alt="${esc(alt)}" width="${w}" height="${h}"${
-    lazy ? ' loading="lazy" decoding="async"' : ""
+    lazy ? ' loading="lazy" decoding="async"' : ' fetchpriority="high"'
   }>`;
 
 /** Hand-drawn wobble rule, reused under headings and between steps. */
@@ -53,7 +53,7 @@ export function welcomePage({ tonight }) {
         tonight.face.srcset
           ? ` srcset="${esc(tonight.face.srcset)}" sizes="(min-width: 900px) 420px, (min-width: 700px) 38vw, calc(100vw - 72px)"`
           : ""
-      } alt="${esc(tonight.face.alt)}" width="${tonight.face.width || 1536}" height="${tonight.face.height || 1024}" decoding="async">`
+      } alt="${esc(tonight.face.alt)}" width="${tonight.face.width || 1536}" height="${tonight.face.height || 1024}" loading="lazy" decoding="async">`
     : "";
   const door = (art, name, line, cls) => `
         <figure class="w-door ${cls}">
@@ -76,6 +76,8 @@ export function welcomePage({ tonight }) {
 <meta name="theme-color" content="#F7F3EB">
 <title>Wonder Daily · A printable learning pack</title>
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/newsreader-latin-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./welcome.css">
 </head>
 <body>
@@ -130,12 +132,15 @@ export function welcomePage({ tonight }) {
       <h2 id="w-cta-title"><em>Sign-up is not open.</em><br>Nothing is sent.</h2>
     </div>
     <form class="w-form" data-stub="email-capture" action="#start" onsubmit="return false" novalidate>
-      <label for="w-email">Email address</label>
-      <div class="w-form-row">
-        <input id="w-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
-        <button type="submit" disabled aria-describedby="w-form-note">Sign up</button>
-      </div>
-      <p id="w-form-note" class="w-form-note">The button is off, and nothing you type here is sent. The packs themselves need no account.</p>
+      <p id="w-form-note" class="w-form-note">This form is switched off. Nothing you type here is sent. The packs themselves need no account.</p>
+      <fieldset disabled aria-describedby="w-form-note">
+        <legend class="w-sr">Email sign-up, not open</legend>
+        <label for="w-email">Email address</label>
+        <div class="w-form-row">
+          <input id="w-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="w-form-note">
+          <button type="submit" disabled aria-describedby="w-form-note">Sign up</button>
+        </div>
+      </fieldset>
     </form>
   </section>
 </main>
