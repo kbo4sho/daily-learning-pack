@@ -1,0 +1,90 @@
+{
+  "slug": "ducks",
+  "date": "2026-10-16",
+  "title": "Ducks",
+  "question": "How do ducks paddle and stay dry?",
+  "coverAlt": "Big and Little Wonderer: Ducks",
+  "readAloud": [
+    [
+      {
+        "b": "Quack. Paddle. Swish."
+      },
+      {
+        "say": "(Move your hands like gentle paddles.)"
+      },
+      "Big Wonderer and Little Wonderer stand together on a dry path beside a shallow pond. A duck family glides past."
+    ],
+    [
+      "A duck's feathers overlap like tiny roof tiles. They make a smooth coat around the duck's body."
+    ],
+    [
+      {
+        "ask": "Can you point to the feathers along the duck's back?"
+      }
+    ],
+    [
+      "The duck reaches its bill toward a special oil near its tail. Then it smooths the oil over its feathers.",
+      {
+        "b": "Brush, brush, brush."
+      }
+    ],
+    [
+      "Water beads up and rolls away. Air held among the feathers helps the duck stay warm and buoyant while the water supports its body."
+    ],
+    [
+      "Under the water, wide webbed feet press backward. The duck's body moves forward."
+    ],
+    [
+      {
+        "ask": "Can your hands open wide like webbed feet?"
+      }
+    ],
+    [
+      "The duck family tucks close near the reeds. Big Wonderer and Little Wonderer watch quietly from the path."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "ducks",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-16"
+  },
+  "why": "Watching a duck paddle and shed water helps your child notice how feathers keep it dry while practicing counting, sounds and tracing."
+}
