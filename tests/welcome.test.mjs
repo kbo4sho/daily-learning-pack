@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
-import { welcomePage } from "../src/welcome-render.mjs";
+import { WELCOME_URL, welcomePage } from "../src/welcome-render.mjs";
 import { esc } from "../src/html.mjs";
 import { privacyIssues } from "../scripts/privacy-check.mjs";
 import {
@@ -173,7 +173,11 @@ test("welcome scenes ship as local, optimized webp with motion guarded", async (
     assert.ok(bytes < 260_000, `${name} is ${bytes} bytes`);
   }
   assert.match(css, /prefers-reduced-motion: reduce/);
-  assert.doesNotMatch(html + css, /https?:\/\/(?!www\.w3\.org)/);
+  // The only outside-looking address is this page's own, in share tags.
+  assert.doesNotMatch(
+    (html + css).replaceAll(WELCOME_URL, ""),
+    /https?:\/\/(?!www\.w3\.org)/,
+  );
 });
 
 /** Slop the welcome copy must never bring back. Lowercase, matched on visible text and alt text. */
@@ -498,4 +502,112 @@ test("welcome motion never leaves content invisible", async () => {
   for (const [, name, body] of frames)
     assert.doesNotMatch(body, /opacity/, `${name} must not animate opacity`);
   assert.match(css, /prefers-reduced-motion: reduce/);
+});
+
+test("welcome share tags: description, Open Graph, Twitter card, icons", async () => {
+  const html = await read("dist/welcome/index.html");
+  const metas = tags(html, "meta");
+  const by = (key, value) =>
+    metas.find((m) => m.attrs[key] === value)?.attrs.content;
+  const description = by("name", "description");
+  assert.ok(
+    description.length >= 50 && description.length <= 160,
+    `description is ${description.length} characters`,
+  );
+  const title = textOf(html.match(/<title>([\s\S]*?)<\/title>/)[1]);
+  assert.equal(by("property", "og:title"), title);
+  assert.equal(by("property", "og:description"), description);
+  assert.equal(by("property", "og:type"), "website");
+  assert.equal(by("property", "og:url"), WELCOME_URL);
+  assert.equal(by("name", "twitter:card"), "summary_large_image");
+  assert.equal(by("name", "twitter:title"), title);
+  assert.equal(by("name", "twitter:description"), description);
+  assert.ok(by("property", "og:image:alt").length > 20);
+  assert.equal(by("name", "twitter:image:alt"), by("property", "og:image:alt"));
+  // Share image: absolute, on this page's own address, a real 1200x630 file.
+  const image = by("property", "og:image");
+  assert.equal(by("name", "twitter:image"), image);
+  assert.ok(image.startsWith(WELCOME_URL), image);
+  const file = new URL(
+    `../dist/welcome/${image.slice(WELCOME_URL.length)}`,
+    import.meta.url,
+  );
+  const meta = await sharp(file.pathname).metadata();
+  assert.equal(`${meta.width}x${meta.height}`, "1200x630");
+  assert.equal(by("property", "og:image:width"), "1200");
+  assert.equal(by("property", "og:image:height"), "630");
+  assert.ok((await stat(file)).size <= 150_000, "share image over 150 KB");
+  // The share text names no child.
+  assert.deepEqual(
+    privacyIssues(
+      [title, description, by("property", "og:image:alt")].join(" "),
+      "welcome/share-text.html",
+    ),
+    [],
+  );
+  // Icons: named in the head, present on disk, and the right size.
+  const icons = tags(html, "link").filter((l) =>
+    /icon/.test(l.attrs.rel || ""),
+  );
+  assert.ok(
+    icons.some((l) => l.attrs.rel === "icon"),
+    "favicon link",
+  );
+  assert.ok(
+    icons.some((l) => l.attrs.rel === "apple-touch-icon"),
+    "touch icon",
+  );
+  for (const { attrs } of icons) {
+    assert.match(attrs.href, /^\.\/[\w-]+\.png$/);
+    const icon = await sharp(
+      new URL(`../dist/welcome/${attrs.href.slice(2)}`, import.meta.url)
+        .pathname,
+    ).metadata();
+    assert.equal(icon.width, icon.height);
+    assert.ok(icon.width >= 32);
+  }
+  // Still hidden: noindex stays and no canonical points search engines here.
+  assert.match(by("name", "robots"), /\bnoindex\b/);
+  assert.doesNotMatch(html, /rel="canonical"/);
+});
+
+test("welcome links and resources stay on the page: no outside address in any href, src or action", async () => {
+  const html = await read("dist/welcome/index.html");
+  const outside = /^(https?:)?\/\//i;
+  for (const [name, attr] of [
+    ["a", "href"],
+    ["link", "href"],
+    ["img", "src"],
+    ["img", "srcset"],
+    ["script", "src"],
+    ["form", "action"],
+    ["iframe", "src"],
+  ])
+    for (const t of tags(html, name))
+      if (t.attrs[attr] !== undefined)
+        assert.doesNotMatch(t.attrs[attr], outside, t.raw.slice(0, 80));
+  // Share URLs appear only as meta content, never as something the page loads.
+  for (const m of html.matchAll(/https?:\/\/[^"'\s)]+/g)) {
+    const around = html.slice(Math.max(0, m.index - 60), m.index);
+    assert.match(
+      around,
+      /<meta (property|name)="(og|twitter):[a-z:]+" content="$/,
+      m[0],
+    );
+  }
+});
+
+test("welcome print styles: a print block that hides the button link and prints the dark card light", async () => {
+  const css = await read("src/welcome.css");
+  const print = css.slice(css.indexOf("@media print"));
+  assert.ok(print.startsWith("@media print"), "print block exists");
+  assert.match(print, /\.w-start[\s\S]*display: none/);
+  assert.match(
+    print,
+    /\.w-cta \{[^}]*background: none[^}]*color: var\(--ink\)/,
+  );
+  assert.match(print, /break-inside: avoid/);
+  assert.match(print, /print-color-adjust: exact/);
+  const html = await read("dist/welcome/index.html");
+  assert.match(html, /addEventListener\("beforeprint"/);
 });
