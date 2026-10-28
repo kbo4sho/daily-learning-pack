@@ -14,9 +14,7 @@ test("welcome page is noindex, name-free, and shows tonight's real pack", async 
   const latest = archive.days.find((d) => d.slug === archive.latest);
   assert.match(html, /<meta name="robots" content="noindex, nofollow">/);
   assert.ok(
-    html.includes(
-      "One learning pack a day.<br><em>Built around one question.</em>",
-    ),
+    html.includes("One learning pack.<br><em>Built around one question.</em>"),
   );
   assert.ok(html.includes("One family page.<br><em>Two doors.</em>"));
   for (const step of [
@@ -163,7 +161,7 @@ test("welcome copy has no filler or slop phrases", async () => {
 
 test("welcome copy states what it is and promises no signup or email", async () => {
   const copy = copyOf(await read("dist/welcome/index.html"));
-  assert.ok(copy.includes("one printable learning pack a day"));
+  assert.ok(copy.includes("packs are made for one day each"));
   assert.ok(copy.includes("sign-up is not open"));
   assert.doesNotMatch(copy, /arrives by email|we.ll email|join the waitlist/);
 });

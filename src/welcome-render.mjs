@@ -70,14 +70,14 @@ export function welcomePage({ tonight }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F7F3EB">
-<title>Wonder Daily · One learning pack a day</title>
+<title>Wonder Daily · A printable learning pack</title>
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./welcome.css">
 </head>
 <body>
 <header class="w-top">
   <p class="w-brand">Wonder Together<span>Wonder Daily</span></p>
-  <p class="w-top-note">A pack a day</p>
+  <p class="w-top-note">Printable packs</p>
 </header>
 <main>
   <section class="w-hero" aria-labelledby="w-hero-title">
@@ -86,8 +86,8 @@ export function welcomePage({ tonight }) {
     </div>
     <div class="w-hero-copy">
       <p class="w-kicker">For parents</p>
-      <h1 id="w-hero-title">One learning pack a day.<br><em>Built around one question.</em></h1>
-      <p class="w-lede">Wonder Daily is one printable learning pack a day. Each pack has a story to read, a few problems, and something to do or make. Print the pages, or open the pack on a tablet. You sit with your child while they work.</p>
+      <h1 id="w-hero-title">One learning pack.<br><em>Built around one question.</em></h1>
+      <p class="w-lede">Wonder Daily packs are made for one day each. A pack has a story to read, a few problems, and something to do or make. Print the pages, or open the pack on a tablet. You sit with your child while they work.</p>
       <a class="w-start" href="#start">Sign-up status <span aria-hidden="true">→</span></a>
     </div>
     <article class="w-pack" aria-label="Latest pack">
@@ -114,7 +114,7 @@ export function welcomePage({ tonight }) {
 
   <section class="w-how" aria-labelledby="w-how-title">
     <p class="w-kicker">How it works</p>
-    <h2 id="w-how-title">Three steps.<br><em>One pack a day.</em></h2>
+    <h2 id="w-how-title">Three steps.<br><em>One pack at a time.</em></h2>
     ${squiggle}
     <ol class="w-steps">${step("i.", WELCOME_ART.stepPick, "Start with one question.", "Each pack is built around one everyday question. The story, math, and activities all come back to it.", "A big bear and a small bear look at a moon pebble, a snail shell and a tiny raincloud in a jar on a low table.")}${step("ii.", WELCOME_ART.stepRead, "Work through it together.", "Read the story aloud, then work through the problems and the activity. Print the pages, or open the pack on a tablet.", "A big bear and a small bear reading a printed booklet together on a bed under lamplight.")}${step("iii.", WELCOME_ART.stepNote, "Check the answers.", "Big Wonderer’s pack comes with a separate answer key for grown-ups. Print it apart from your child’s pages.", "A big bear alone at a kitchen table with a cup of tea, reading a small folded note.")}
     </ol>
