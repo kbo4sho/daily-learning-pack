@@ -328,16 +328,40 @@ test("a heavy daily plate cannot make the welcome card heavy", async () => {
           PLATE_MAX_BYTES[w],
         `plate-${w}.webp is over its cap`,
       );
-    // A file that cannot be read keeps the original plate.
+    // Unreadable files, small or large, are dropped: the card shows type.
     await writeFile(`${root}/days/heavy/bad.jpg`, "not an image");
-    const bad = { src: "../days/heavy/bad.jpg", alt: "x" };
-    assert.deepEqual(await webFace(root, bad), bad);
-    // A heavy file that cannot be converted is dropped, not shipped as is.
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/bad.jpg", alt: "x" }),
+      null,
+    );
     await writeFile(`${root}/days/heavy/bad-big.jpg`, Buffer.alloc(300_000, 7));
     assert.equal(
       await webFace(root, { src: "../days/heavy/bad-big.jpg", alt: "x" }),
       null,
     );
+    // A plate that cannot fit the caps even at the lowest quality is dropped.
+    const square = Buffer.alloc(1024 * 1024 * 3);
+    for (let i = 0; i < square.length; i++) square[i] = (i * 2654435761) >>> 24;
+    await sharp(square, { raw: { width: 1024, height: 1024, channels: 3 } })
+      .jpeg({ quality: 95 })
+      .toFile(`${root}/days/heavy/square.jpg`);
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/square.jpg", alt: "x" }),
+      null,
+    );
+    // A small, readable image narrower than the smallest copy is kept as is.
+    await sharp({
+      create: {
+        width: 400,
+        height: 300,
+        channels: 3,
+        background: { r: 230, g: 220, b: 200 },
+      },
+    })
+      .jpeg()
+      .toFile(`${root}/days/heavy/small.jpg`);
+    const small = { src: "../days/heavy/small.jpg", alt: "x" };
+    assert.deepEqual(await webFace(root, small), small);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
