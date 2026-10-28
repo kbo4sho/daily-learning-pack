@@ -5,7 +5,8 @@
 - Closed by default; opens from the **Print** button.
 - Entries: Print today (first), Foldable story, Math, Reading pages, Writing,
   Answer key. Extras (Table-top lab and its grown-ups guide) appear only on days
-  that have them; the check validates them when present and never requires them.
+  that have them; the check does not require them, but a lab PDF that ships must
+  be linked and is checked like the rest.
 - Closes on Escape (focus returns to Print) and on an outside click.
 - The menu links exactly the PDFs in `dist/today/pdf/`. Every `.pdf` link stays on the site under `/today/pdf/` and
   answers 200 `application/pdf` with bytes equal to `dist/today/pdf/<name>.pdf`.
