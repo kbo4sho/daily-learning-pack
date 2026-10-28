@@ -2,8 +2,8 @@
 
 ## Sub-features
 
-- Ctrl+P of the live day is deliberately short (at most 3 sheets), shows
-  today's title, and tells the parent to use the Print menu.
+- Ctrl+P of the live day is deliberately short (at most 3 sheets), names
+  today's pack (its title or its reading title), and tells the parent to use the Print menu.
 - Every image on the page finished loading by the time it prints.
 
 ## How to get to it (user POV)
