@@ -194,24 +194,26 @@ export const PLATE_MAX_BYTES = { 640: 55_000, 1024: 100_000 };
 /**
  * The card plate is a 1.5K-wide story illustration. The welcome card shows it
  * at about 320 to 420 CSS px, so write small webp copies next to the page and
- * point the card at them. Any failure (unreadable or odd file) keeps the
- * original plate, so the page still renders.
+ * point the card at them.
+ *
+ * Returns the face with webp sources, or `null` (the card then falls back to
+ * type) when the plate cannot be read, or cannot be made to fit the byte caps.
+ * The one case that keeps the original file is a readable image narrower than
+ * the smallest copy that is already under the cap.
  */
 export async function webFace(root, face) {
   if (!face?.src) return face;
   const source = resolve(root, face.src.replace(/^\.\.\//, "./"));
-  // Keep the original only when it is already small. A heavy original that
-  // cannot be converted is dropped: the card then falls back to type.
-  const original = async () =>
-    (await stat(source).catch(() => null))?.size <= PLATE_MAX_BYTES[1024]
-      ? face
-      : null;
   try {
     const meta = await sharp(source).metadata();
-    if (!meta.width || !meta.height) return await original();
+    if (!meta.width || !meta.height) return null;
     const widths = PLATE_WIDTHS.filter((w) => w <= meta.width);
-    if (!widths.length) return await original();
-    await mkdir(`${root}/welcome/img`, { recursive: true });
+    if (!widths.length) {
+      await sharp(source).raw().toBuffer(); // must decode, not only parse
+      const { size } = await stat(source);
+      return size <= PLATE_MAX_BYTES[PLATE_WIDTHS[0]] ? face : null;
+    }
+    const copies = [];
     for (const w of widths) {
       // Step the quality down until the copy fits its cap.
       let bytes;
@@ -222,8 +224,12 @@ export async function webFace(root, face) {
           .toBuffer();
         if (bytes.length <= PLATE_MAX_BYTES[w]) break;
       }
-      await writeFile(`${root}/welcome/img/plate-${w}.webp`, bytes);
+      if (bytes.length > PLATE_MAX_BYTES[w]) return null;
+      copies.push([w, bytes]);
     }
+    await mkdir(`${root}/welcome/img`, { recursive: true });
+    for (const [w, bytes] of copies)
+      await writeFile(`${root}/welcome/img/plate-${w}.webp`, bytes);
     const widest = widths.at(-1);
     return {
       ...face,
@@ -233,7 +239,7 @@ export async function webFace(root, face) {
       height: Math.round((widest * meta.height) / meta.width),
     };
   } catch {
-    return await original();
+    return null;
   }
 }
 
