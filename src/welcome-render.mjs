@@ -46,7 +46,7 @@ const SHARE_TITLE = "Wonder Daily · A printable learning pack";
 const SHARE_DESCRIPTION =
   "Wonder Daily is a printable learning pack made for one day: a story to read, a few problems, and something to do or make.";
 const SHARE_ALT =
-  "Two round, cream-colored cartoon characters, one big and one small, sit on a patchwork quilt looking at an open picture book, with a lamp and a crescent moon in the window.";
+  "Two cartoon bears, one big and one small, curled up in a bed reading a picture book by lamplight, with a crescent moon in the window.";
 
 /** Hand-drawn wobble rule, reused under headings and between steps. */
 const squiggle = `<svg class="w-squiggle" viewBox="0 0 160 12" aria-hidden="true" focusable="false"><path d="M2 7c14-6 24 4 38 0s24-6 38-1 24 5 38 0 24-5 40 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`;
