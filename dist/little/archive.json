@@ -121,6 +121,36 @@
         "date": "2026-10-16"
       },
       "why": "Watching a duck paddle and shed water helps your child notice how feathers keep it dry while practicing counting, sounds and tracing."
+    },
+    {
+      "slug": "sorting-socks",
+      "date": "2026-10-14",
+      "title": "Sorting Socks",
+      "question": "How can we sort a jumble of socks?",
+      "tags": {
+        "band": "little",
+        "topic": "sorting socks",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-14"
+      },
+      "why": "Sorting a jumble of socks by one clue helps your child group and compare while practicing counting, sounds and tracing."
     }
   ]
 }
