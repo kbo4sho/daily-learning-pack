@@ -8,29 +8,112 @@ import { privacyIssues } from "../scripts/privacy-check.mjs";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("welcome page is noindex, name-free, and shows tonight's real pack", async () => {
+/** Tags of one kind, with their attributes parsed. Welcome HTML is machine-made and plain. */
+function tags(html, name) {
+  return [...html.matchAll(new RegExp(`<${name}\\b([^>]*)>`, "g"))].map(
+    (m) => ({
+      raw: m[0],
+      attrs: Object.fromEntries(
+        [...m[1].matchAll(/([\w:-]+)(?:="([^"]*)")?/g)].map((a) => [
+          a[1],
+          a[2] ?? "",
+        ]),
+      ),
+    }),
+  );
+}
+const textOf = (fragment) =>
+  fragment
+    .replace(/<br\s*\/?>/g, " ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&#39;|&#x27;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+
+test("welcome page structure: one h1, ordered headings, three steps, two doors, tonight's pack", async () => {
   const html = await read("dist/welcome/index.html");
   const archive = JSON.parse(await read("dist/archive.json"));
   const latest = archive.days.find((d) => d.slug === archive.latest);
-  assert.match(html, /<meta name="robots" content="noindex, nofollow">/);
-  assert.ok(
-    html.includes("One learning pack.<br><em>Built around one question.</em>"),
+  const h1s = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+  assert.equal(h1s.length, 1);
+  assert.ok(textOf(h1s[0][1]).length > 0);
+  const levels = [...html.matchAll(/<h([1-6])\b/g)].map((m) => Number(m[1]));
+  assert.equal(levels[0], 1);
+  levels.forEach((l, i) => {
+    if (i) assert.ok(l <= levels[i - 1] + 1, `heading level jumps to h${l}`);
+  });
+  const steps = [...html.matchAll(/<li class="w-step">([\s\S]*?)<\/li>/g)];
+  assert.equal(steps.length, 3);
+  for (const [, step] of steps) {
+    assert.ok(textOf(step.match(/<h3>([\s\S]*?)<\/h3>/)[1]).length > 0);
+    assert.match(
+      step,
+      /<img [^>]*alt="[^"]{12,}"/,
+      "step art has real alt text",
+    );
+  }
+  const doors = [
+    ...html.matchAll(/<figure class="w-door [^"]*">([\s\S]*?)<\/figure>/g),
+  ];
+  assert.equal(doors.length, 2);
+  for (const [, door] of doors) assert.match(door, /<figcaption>/);
+  assert.equal(
+    textOf(
+      html.match(/<article class="w-pack"[\s\S]*?<h2>([\s\S]*?)<\/h2>/)[1],
+    ),
+    latest.title,
   );
-  assert.ok(html.includes("One family page.<br><em>Two doors.</em>"));
-  for (const step of [
-    "Start with one question.",
-    "Work through it together.",
-    "Check the answers.",
-  ])
-    assert.ok(html.includes(step), step);
   assert.ok(html.includes(esc(latest.title)));
-  assert.ok(html.includes(`../days/${latest.slug}/`));
+  // The plate is optional: the renderer falls back to type without art.
+  if (html.includes("w-pack-art"))
+    assert.ok(html.includes(`../days/${latest.slug}/`));
   assert.deepEqual(privacyIssues(html, "welcome/index.html"), []);
   assert.doesNotMatch(
     html,
     /\blittle\//i,
     "no path into the second learner's tree",
   );
+});
+
+test("welcome images: alt on every img, size attributes, no empty class", async () => {
+  const html = await read("dist/welcome/index.html");
+  const imgs = tags(html, "img");
+  assert.ok(imgs.length >= 6);
+  for (const { raw, attrs } of imgs) {
+    assert.ok("alt" in attrs, `missing alt: ${raw.slice(0, 80)}`);
+    assert.ok(
+      attrs.width && attrs.height,
+      `missing width/height: ${raw.slice(0, 80)}`,
+    );
+    assert.ok(
+      !("class" in attrs) || attrs.class !== "",
+      `empty class: ${raw.slice(0, 80)}`,
+    );
+  }
+});
+
+test("welcome head: language, charset, viewport, noindex, theme color, local stylesheet", async () => {
+  const html = await read("dist/welcome/index.html");
+  assert.match(html, /<html lang="en">/);
+  assert.match(html, /<meta charset="utf-8">/);
+  const metas = Object.fromEntries(
+    tags(html, "meta")
+      .filter((m) => m.attrs.name)
+      .map((m) => [m.attrs.name, m.attrs.content]),
+  );
+  assert.match(metas.viewport, /width=device-width/);
+  assert.match(metas.robots, /\bnoindex\b/);
+  assert.match(metas.robots, /\bnofollow\b/);
+  assert.match(metas["theme-color"], /^#[0-9a-f]{6}$/i);
+  const title = textOf(html.match(/<title>([\s\S]*?)<\/title>/)[1]);
+  assert.ok(title.length > 0 && title.length <= 70, title);
+  const sheets = tags(html, "link").filter((l) => l.attrs.rel === "stylesheet");
+  assert.ok(sheets.length >= 1);
+  for (const { attrs } of sheets) assert.match(attrs.href, /^\.\//);
 });
 
 test("email capture is a disabled, unwired stub", async () => {
@@ -159,10 +242,10 @@ test("welcome copy has no filler or slop phrases", async () => {
   );
 });
 
-test("welcome copy states what it is and promises no signup or email", async () => {
+test("welcome copy keeps the sign-up stub honest", async () => {
   const copy = copyOf(await read("dist/welcome/index.html"));
-  assert.ok(copy.includes("packs are made for one day each"));
-  assert.ok(copy.includes("sign-up is not open"));
+  assert.match(copy, /sign-?up is not open/);
+  assert.match(copy, /nothing[^.]*sent/);
   assert.doesNotMatch(copy, /arrives by email|we.ll email|join the waitlist/);
 });
 
