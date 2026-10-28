@@ -263,6 +263,22 @@ async function checkPdf(
   // Lesson text gets the lesson-aware policy (names, paths, hosts). Metadata is
   // not lesson copy, so it also gets the process-note phrase check.
   assert.ok(!LOCAL_PATH.test(all), `${name}: a local path is in the PDF text`);
+  // Header and footer lines are page chrome, not lesson copy, so they get the
+  // process-note phrase check that lesson text is exempt from.
+  const chrome = pages
+    .flatMap((t) => {
+      const lines = t
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean);
+      return [...lines.slice(0, 2), ...lines.slice(-2)];
+    })
+    .join("\n");
+  assert.deepEqual(
+    metadataProcessIssues(chrome, `${name}.pdf (header/footer)`),
+    [],
+    `${name}: a process note in a header or footer`,
+  );
   assert.deepEqual(
     privacyIssues(all, `${name}.pdf (text)`),
     [],
@@ -302,7 +318,7 @@ const shipped = readdirSync(pdfDir)
   .filter((f) => f.endsWith(".pdf"))
   .map((f) => f.replace(/\.pdf$/, ""))
   .sort();
-assert.ok(shipped.length >= CORE.length, `only ${shipped.length} PDFs shipped`);
+
 const age = squash(`AGE${pack.targetAge}`);
 // The pack must have the fields the checks lean on, so none of them is vacuous.
 assert.ok(
@@ -329,8 +345,24 @@ for (const t of pack.math.tasks)
 for (const f of pack.writing.frames)
   assert.ok(filled(f.start), "a writing frame has no starter");
 assert.ok(
-  Array.isArray(pack.answers) && pack.answers.every((a) => filled(a.text)),
+  Array.isArray(pack.answers) &&
+    pack.answers.length >= 1 &&
+    pack.answers.every((a) => filled(a.text)),
   "pack.json answers are empty",
+);
+// Optional sheets come from the pack's own list (screenFree), each with its
+// grown-ups key, so a vanished extra cannot make a smaller set look right.
+const extras = pack.screenFree ?? [];
+for (const id of extras)
+  assert.ok(
+    Object.hasOwn(SCREEN_FREE_PDF_LABELS, id) && !id.endsWith("-key"),
+    `pack.screenFree names an unknown sheet "${id}"`,
+  );
+const expected = [...CORE, ...extras.flatMap((id) => [id, `${id}-key`])].sort();
+assert.deepEqual(
+  shipped,
+  expected,
+  "dist/today/pdf is not the pack's sheet set",
 );
 let server;
 let origin;
@@ -417,6 +449,62 @@ try {
         await page.screenshot({
           path: join(evidence, `today-${label}-menu-closed.png`),
         });
+        // The button parents look for: labelled Print, tappable, readable, on
+        // screen, and what a tap at its centre reaches.
+        const trigger = await menu.locator("summary").evaluate((el) => {
+          const r = el.getBoundingClientRect();
+          const c = getComputedStyle(el);
+          let opacity = 1;
+          for (let n = el; n; n = n.parentElement)
+            opacity *= Number(getComputedStyle(n).opacity);
+          const lum = (rgb) => {
+            const v = rgb
+              .match(/[\d.]+/g)
+              .slice(0, 3)
+              .map(Number)
+              .map((x) => {
+                x /= 255;
+                return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
+              });
+            return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+          };
+          const [hi, lo] = [lum(c.color), lum(c.backgroundColor)].sort(
+            (a, b) => b - a,
+          );
+          const hit = document.elementFromPoint(
+            r.x + r.width / 2,
+            r.y + r.height / 2,
+          );
+          return {
+            text: el.textContent.trim(),
+            box: { x: r.x, y: r.y, width: r.width, height: r.height },
+            opacity,
+            contrast: (hi + 0.05) / (lo + 0.05),
+            hit: Boolean(hit && (hit === el || el.contains(hit))),
+          };
+        });
+        assert.equal(
+          trigger.text,
+          "Print",
+          "the menu button is not labelled Print",
+        );
+        assert.ok(
+          trigger.box.width >= 44 &&
+            trigger.box.height >= 44 &&
+            trigger.box.x >= 0 &&
+            trigger.box.y >= 0 &&
+            trigger.box.x + trigger.box.width <= viewport.width &&
+            trigger.box.y + trigger.box.height <= viewport.height,
+          `the Print button is too small or off screen: ${JSON.stringify(trigger.box)}`,
+        );
+        assert.ok(
+          trigger.opacity > 0.9 && trigger.hit,
+          "the Print button is faded or covered",
+        );
+        assert.ok(
+          trigger.contrast >= 4.5,
+          `the Print button has contrast ${trigger.contrast.toFixed(1)}`,
+        );
         await menu.locator("summary").click();
         assert.equal(
           await menu.evaluate((el) => el.open),
@@ -480,7 +568,7 @@ try {
         for (const e of entries)
           assert.ok(
             e.box.width > 40 &&
-              e.box.height > 14 &&
+              e.box.height >= 40 &&
               e.box.x >= 0 &&
               e.box.y >= 0 &&
               e.box.y + e.box.height <= viewport.height &&
@@ -500,9 +588,10 @@ try {
           false,
           "Escape closes the menu",
         );
-        assert.equal(
-          await page.evaluate(() => document.activeElement?.tagName),
-          "SUMMARY",
+        assert.ok(
+          await menu
+            .locator("summary")
+            .evaluate((el) => el === document.activeElement),
           "focus returns to the Print button",
         );
         await menu.locator("summary").click();
@@ -720,6 +809,15 @@ try {
         );
       for (const a of pack.answers)
         has("parent-answer-key", a.text, `answer "${a.text.slice(0, 24)}"`);
+      for (const q of pack.quiz?.questions ?? [])
+        if (filled(q.answer))
+          has(
+            "parent-answer-key",
+            q.answer,
+            `quiz answer "${q.answer.slice(0, 24)}"`,
+          );
+      if (checked["lab-page-key"])
+        has("lab-page-key", "grown-ups only", "the grown-ups label");
       // Optional table-top lab: its materials are on its sheet.
       if (checked["lab-page"])
         for (const m of pack.labPage?.materials ?? [])
