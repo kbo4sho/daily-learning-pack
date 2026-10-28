@@ -24,7 +24,7 @@ npm run verify:print                     # the whole proof (about 5 s)
 
 `verify:print` is `node tests/print-browser.mjs`. It starts its own static
 server on a random port (so it never collides with `npm run preview` on 4173)
-and tears it down. It needs `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages`
+and tears it down. It needs `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages`, `pdftohtml`
 (poppler-utils; `brew install poppler` on macOS). The script checks for them
 first and stops with a clear message. CI already needs `pdfinfo` for
 `tests/family.test.mjs`.
@@ -33,7 +33,7 @@ CI runs it inside the existing `check` job via `npm run test:browser`.
 
 ## Doctor
 
-Read-only: `command -v pdfinfo pdftotext pdftoppm pdfimages && ls dist/today/pdf dist/today/pack.json && node -e "console.log(JSON.parse(require('fs').readFileSync('dist/today/pack.json')).targetAge)"`.
+Read-only: `command -v pdfinfo pdftotext pdftoppm pdfimages pdftohtml && ls dist/today/pdf dist/today/pack.json && node -e "console.log(JSON.parse(require('fs').readFileSync('dist/today/pack.json')).targetAge)"`.
 If `dist/today/pdf` is missing, the checkout is incomplete: `git status`, then
 `git checkout -- dist` (the day's PDFs are committed; `npm run archive` only
 reapplies chrome and cannot recreate them). If
