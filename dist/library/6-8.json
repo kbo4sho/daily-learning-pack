@@ -223,6 +223,23 @@
       "hidden": false
     },
     {
+      "id": "fingerprints",
+      "band": "6-8",
+      "topic": "fingerprints",
+      "why": "Comparing loops, whorls and arches helps your child connect shared patterns and tiny ridge details to why every fingerprint is different.",
+      "skills": [
+        "addition-regrouping",
+        "subtraction-regrouping",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-07",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "shadows-at-noon",
       "band": "6-8",
       "topic": "shadows at noon",
