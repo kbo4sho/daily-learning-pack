@@ -748,3 +748,221 @@ section + section::before {
     gap: var(--s1);
   }
 }
+
+/* ---------- print: two sheets, art in, buttons out ---------- */
+@media print {
+  @page {
+    margin: 0.4in;
+  }
+  :root {
+    --gutter: 0px;
+    --shadow: none;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+  body {
+    background-image: none;
+    font-size: 10.5pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .w-top {
+    padding-block: 0 var(--s2);
+  }
+  .w-start,
+  .w-top-note {
+    display: none;
+  }
+  section {
+    padding-block: var(--s4);
+  }
+  /* Sheet one: the words beside the picture, tonight's card across, then the doors. */
+  .w-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: var(--s5);
+    row-gap: var(--s4);
+    padding-block: var(--s3) var(--s4);
+  }
+  .w-hero-scene {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin: 0;
+  }
+  .w-hero-img {
+    border-radius: 12px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .w-hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+  .w-hero h1 {
+    font-size: 26pt;
+  }
+  .w-lede {
+    margin-block: var(--s2) 0;
+  }
+  .w-pack {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 38% minmax(0, 1fr);
+    column-gap: var(--s4);
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: var(--s3);
+    rotate: none;
+    z-index: auto;
+    box-shadow: none;
+  }
+  .w-pack::before {
+    display: none;
+  }
+  .w-pack > * {
+    grid-column: 2;
+  }
+  .w-pack-window {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+  }
+  .w-pack h2 {
+    margin-top: 0;
+    font-size: 17pt;
+  }
+  .w-pack-label {
+    margin-bottom: var(--s2);
+  }
+  .w-doors h2,
+  .w-how h2,
+  .w-cta h2 {
+    font-size: 22pt;
+  }
+  .w-doors,
+  .w-how {
+    padding-block: var(--s3);
+  }
+  .w-doors .w-lede {
+    margin-block: var(--s2) 0;
+  }
+  .w-squiggle {
+    display: none;
+  }
+  /* Words on the left, the family card on the right. */
+  .w-doors {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    column-gap: var(--s5);
+    align-items: center;
+    text-align: left;
+  }
+  .w-doors > * {
+    grid-column: 1;
+  }
+  .w-doors .w-kicker {
+    justify-content: flex-start;
+  }
+  .w-doors .w-lede {
+    margin-inline: 0;
+  }
+  .w-doors .w-family {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    margin: 0;
+  }
+  .w-family {
+    margin-top: var(--s3);
+    padding: var(--s3) var(--s4);
+    box-shadow: none;
+  }
+  .w-door-row {
+    max-width: 260px;
+    gap: var(--s3);
+  }
+  .w-door-name {
+    font-size: 12pt;
+  }
+  .w-family-foot {
+    margin-top: var(--s2);
+    padding-top: var(--s2);
+    font-size: 10pt;
+  }
+  .w-family-label {
+    margin-bottom: var(--s2);
+  }
+  .w-door figcaption {
+    margin-top: var(--s2);
+  }
+  .w-steps {
+    margin-block: var(--s4) var(--s5);
+    gap: var(--s4);
+  }
+  .w-step:nth-child(2) {
+    margin-top: 0;
+  }
+  .w-step-art {
+    rotate: none !important;
+    box-shadow: none;
+    padding: var(--s2);
+  }
+  .w-step-num {
+    margin-top: var(--s3);
+  }
+  .w-step h3 {
+    font-size: 14pt;
+  }
+  /* The dark card prints light, with ink for text, so it reads on any
+     printer and with background graphics off. */
+  .w-cta {
+    background: none;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    padding: var(--s5);
+    margin-bottom: var(--s4);
+    gap: var(--s4);
+  }
+  .w-cta .w-kicker,
+  .w-cta em {
+    color: var(--gold-deep);
+  }
+  .w-cta .w-kicker::before {
+    background: var(--gold-deep);
+  }
+  .w-form input {
+    border-color: var(--ink);
+    background: none;
+    color: var(--ink);
+  }
+  .w-form button {
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    box-shadow: none;
+  }
+  .w-form input::placeholder {
+    color: var(--muted);
+  }
+  .w-form-note {
+    color: var(--ink);
+  }
+  .w-foot {
+    padding-block: var(--s3) 0;
+  }
+  .w-pack,
+  .w-family,
+  .w-step,
+  .w-cta,
+  .w-door {
+    break-inside: avoid;
+  }
+  /* Sheet two starts at the steps. */
+  .w-how {
+    break-before: page;
+  }
+}
