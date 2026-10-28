@@ -232,6 +232,10 @@ async function weigh(browser, viewport) {
     const page = await context.newPage();
     const sizes = [];
     const pending = [];
+    const statuses = [];
+    page.on("response", (res) => {
+      statuses.push([res.url(), res.status()]);
+    });
     page.on("response", (res) =>
       pending.push(
         res
@@ -245,11 +249,74 @@ async function weigh(browser, viewport) {
     await page.waitForLoadState("networkidle", { timeout: STEP });
     await bounded(Promise.all(pending), STEP, "response bodies");
     assert.ok(!sizes.some(([, n]) => n === 0), "a response body was empty");
+    // Nothing 404s, the favicon included.
+    assert.deepEqual(
+      statuses.filter(([, status]) => status >= 400),
+      [],
+      "a request failed",
+    );
+    // Headless browsers skip the favicon request, so fetch the icons the head names.
+    const icons = await page.evaluate(() =>
+      [
+        ...document.querySelectorAll(
+          'link[rel~="icon"], link[rel="apple-touch-icon"]',
+        ),
+      ].map((l) => l.href),
+    );
+    assert.ok(icons.length >= 2, "the head names a favicon and a touch icon");
+    for (const href of icons) {
+      const res = await page.request.get(href);
+      assert.equal(res.status(), 200, href);
+      assert.match(res.headers()["content-type"], /^image\//, href);
+    }
     // Whatever file the card shows is the plate, generated copy or fallback.
     const plateUrl = await page.evaluate(
       () => document.querySelector(".w-pack-art")?.currentSrc || null,
     );
     return { sizes, plateUrl };
+  } finally {
+    await context.close();
+  }
+}
+
+/**
+ * Print: the page makes one or two sheets with every picture on them. The
+ * sheet is made the way a browser makes it, with lazy pictures asked to load
+ * by the page's own beforeprint handler. Chromium only (page.pdf).
+ */
+async function checkPrint(browser) {
+  const context = await browser.newContext({
+    viewport: { width: 1280, height: 800 },
+  });
+  try {
+    const page = await context.newPage();
+    await page.goto(url, { waitUntil: "load", timeout: STEP });
+    await page.evaluate(() => dispatchEvent(new Event("beforeprint")));
+    await page.waitForFunction(
+      () => [...document.images].every((i) => i.complete && i.naturalWidth > 0),
+      null,
+      { timeout: STEP },
+    );
+    await page.emulateMedia({ media: "print" });
+    const dark = await page.evaluate(() => {
+      const cta = getComputedStyle(document.querySelector(".w-cta"));
+      return [cta.backgroundImage, cta.color];
+    });
+    assert.equal(dark[0], "none", "the sign-up card has no dark fill in print");
+    assert.equal(
+      await page.evaluate(
+        () => getComputedStyle(document.querySelector(".w-start")).display,
+      ),
+      "none",
+      "the sign-up button link is hidden in print",
+    );
+    const pdf = (
+      await bounded(page.pdf({ format: "Letter" }), STEP, "pdf")
+    ).toString("latin1");
+    const pages = (pdf.match(/\/Type \/Page\b/g) || []).length;
+    const images = (pdf.match(/\/Subtype \/Image/g) || []).length;
+    assert.ok(pages >= 1 && pages <= 2, `printed ${pages} pages`);
+    assert.ok(images >= 7, `only ${images} pictures printed`);
   } finally {
     await context.close();
   }
@@ -278,6 +345,15 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       } catch (error) {
         failures.push(label);
         console.error(`FAIL ${label}\n${error.message}`);
+      }
+    }
+    if (engine === "chromium") {
+      try {
+        await bounded(checkPrint(browser), TEST, "print");
+        console.log("ok   chromium: prints on one or two sheets with the art");
+      } catch (error) {
+        failures.push("chromium print");
+        console.error(`FAIL chromium print\n${error.message}`);
       }
     }
     if (engine === "chromium")
