@@ -26,7 +26,7 @@ export const WELCOME_ART = {
 };
 
 const pic = ([srcset, src], { alt = "", sizes, w, h, cls = "", lazy = true }) =>
-  `<img class="${cls}" src="./img/${src}" srcset="${srcset
+  `<img${cls ? ` class="${cls}"` : ""} src="./img/${src}" srcset="${srcset
     .split(", ")
     .map((s) => `./img/${s}`)
     .join(
