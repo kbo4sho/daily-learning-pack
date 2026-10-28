@@ -118,7 +118,7 @@
     "foldableTitle": "A smooth back-and-forth wiggle",
     "foldableCoverLine": "Why electronics use sine waves",
     "foldableNote": "Watch the swing, the spring, and the speaker — then pause whenever you like.",
-    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Connect sine wave, wiggle, swing, spring, generator, and speaker to the scenes.",
+    "parentNote": "Age 8. Welcome spoken answers and dictation. Connect sine wave, wiggle, swing, spring, generator, and speaker to the scenes.",
     "beats": [
       {
         "id": "wake",
@@ -306,8 +306,8 @@
     ],
     "extension": "Choose one task and draw its equal groups or rows.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Ages 6-8 math. Six equal-group and array tasks use rows and columns from 2 to 5. Repeated addition gives totals from 6 to 20. These are story counts, not measurements of sound or power.",
-    "answerKeyIntro": "Ages 6-8 math. Add once for each equal group or row. Welcome a drawing or spoken explanation."
+    "parentNote": "Age 8 math. Six equal-group and array tasks use rows and columns from 2 to 5. Repeated addition gives totals from 6 to 20. These are story counts, not measurements of sound or power.",
+    "answerKeyIntro": "Age 8 math. Add once for each equal group or row. Welcome a drawing or spoken explanation."
   },
   "writing": {
     "title": "Give a wiggle its words",
@@ -367,7 +367,7 @@
       "text": "Accept a command spoken, dictated, drawn, or written. Example: “Swing gently, then draw the smooth path you felt.”"
     }
   ],
-  "parentGuidance": "Ages 6-8. A grown-up stays nearby and sets speaker volume low. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker. Do not open an outlet or take apart a powered device. A small-angle swing is approximately sinusoidal over time; its physical path is an arc. Real spring motion loses energy and settles. AC voltage from an ideal uniformly spinning generator is sinusoidal: relative rotation of a magnet and coil changes magnetic flux through the wire. This is the changing electric push in the story. Grid power also comes from sources with electronic converters, and many devices convert AC to steady DC internally. A speaker cone’s motion for a pure tone is approximately sinusoidal; sound travels as pressure changes, not as a rope-shaped path through air. Smooth sine waves can reduce unwanted harmonics in machines and pure tones; digital electronics intentionally use other waveforms. The tracing diorama compares an ideal sine shape with a triangle wave. Its marker and moving paper show position over time, not an electrical experiment or measured device output.",
+  "parentGuidance": "Age 8. A grown-up stays nearby and sets speaker volume low. Keep wall power and plugged-in devices closed and untouched; these are activities with a swing, spring, rope, paper, or an intact battery speaker. Do not open an outlet or take apart a powered device. A small-angle swing is approximately sinusoidal over time; its physical path is an arc. Real spring motion loses energy and settles. AC voltage from an ideal uniformly spinning generator is sinusoidal: relative rotation of a magnet and coil changes magnetic flux through the wire. This is the changing electric push in the story. Grid power also comes from sources with electronic converters, and many devices convert AC to steady DC internally. A speaker cone’s motion for a pure tone is approximately sinusoidal; sound travels as pressure changes, not as a rope-shaped path through air. Smooth sine waves can reduce unwanted harmonics in machines and pure tones; digital electronics intentionally use other waveforms. The tracing diorama compares an ideal sine shape with a triangle wave. Its marker and moving paper show position over time, not an electrical experiment or measured device output.",
   "sources": [
     {
       "label": "OpenStax · electric generators",

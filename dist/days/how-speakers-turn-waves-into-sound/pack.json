@@ -118,7 +118,7 @@
     "foldableTitle": "A little book of wiggles",
     "foldableCoverLine": "How Speakers Make Sound",
     "foldableNote": "Follow the motion and carry a question.",
-    "parentNote": "Ages 6-8. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
+    "parentNote": "Age 8. Spoken answers and dictation are welcome. Connect signal, coil, cone, vibration, pressure wave, and eardrum to the pictures.",
     "beats": [
       {
         "id": "wake",
@@ -326,8 +326,8 @@
     ],
     "extension": "Choose one task and show the trade with tens and ones.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Ages 6-8 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
-    "answerKeyIntro": "Ages 6-8 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
+    "parentNote": "Age 8 math. Three additions and three subtractions all require regrouping. Numbers are story counts, not measurements of speaker motion.",
+    "answerKeyIntro": "Age 8 math. Trade 10 ones for 1 ten in addition, or 1 ten for 10 ones in subtraction."
   },
   "writing": {
     "title": "Put a wiggle into words",
