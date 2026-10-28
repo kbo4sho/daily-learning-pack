@@ -308,6 +308,23 @@
       "hidden": false
     },
     {
+      "id": "how-a-zipper-works",
+      "band": "6-8",
+      "topic": "how a zipper works",
+      "why": "Following one slider along the teeth helps your child connect a Y-shaped path to how two rows of tiny teeth lock into one smooth line.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-09-30",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "morning-dew",
       "band": "6-8",
       "topic": "morning dew",
