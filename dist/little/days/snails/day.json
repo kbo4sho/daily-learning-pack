@@ -1,0 +1,95 @@
+{
+  "slug": "snails",
+  "date": "2026-10-12",
+  "title": "Snails",
+  "question": "How does a snail move?",
+  "coverAlt": "Big and Little Wonderer: Snails",
+  "readAloud": [
+    [
+      {
+        "b": "Drip. Drop. Glimmer."
+      },
+      {
+        "say": "(Wiggle two fingers like snail tentacles.)"
+      },
+      "Big Wonderer and Little Wonderer visit the garden after rain. Beside a leaf, a round shell seems to move."
+    ],
+    [
+      "A garden snail peeks out. Two long tentacles stretch into the air. On many land snails, tiny eyes sit at their tips. Shorter tentacles help sense what is nearby."
+    ],
+    [
+      {
+        "ask": "Can you point to the snail's longest tentacles?"
+      }
+    ],
+    [
+      "Under the shell, a wide, muscular foot makes gentle ripples. The snail glides forward on a thin layer of slippery mucus.",
+      {
+        "b": "Slowly, smoothly, softly."
+      },
+      {
+        "say": "(Slide one hand across the other.)"
+      }
+    ],
+    [
+      {
+        "ask": "What shiny trail can you spot behind the snail?"
+      }
+    ],
+    [
+      "The shell is part of the snail's body. It grows as the snail grows and helps protect the soft body. When the garden feels dry or dangerous, the snail can pull inside."
+    ],
+    [
+      {
+        "ask": "How slowly can your finger glide like a snail?"
+      }
+    ],
+    [
+      "Big Wonderer and Little Wonderer watch without touching. The snail reaches a tender leaf, and its tentacles gently wave. One small traveler has crossed a very big garden path."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "snails",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-12"
+  },
+  "why": "Following a snail's slow glide helps your child notice how animals move while practicing counting, sounds and tracing."
+}
