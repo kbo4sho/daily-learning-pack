@@ -4,9 +4,11 @@
 
 - Closed by default; opens from the **Print** button.
 - Entries: Print today (first), Foldable story, Math, Reading pages, Writing,
-  Answer key, then extras (Table-top lab and its grown-ups guide).
+  Answer key. Extras (Table-top lab and its grown-ups guide) appear only on days
+  that have them; the check validates them when present and never requires them.
 - Closes on Escape (focus returns to Print) and on an outside click.
-- Every `.pdf` link on the page answers 200 `application/pdf` with a `%PDF-` body.
+- Every `.pdf` link on the page stays on the site under `/today/pdf/` and
+  answers 200 `application/pdf` with bytes equal to `dist/today/pdf/<name>.pdf`.
 
 ## How to get to it (user POV)
 
