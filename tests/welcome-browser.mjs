@@ -80,6 +80,56 @@ const tests = {
     }, MIN_TARGET);
     assert.deepEqual(small, []);
   },
+  async "no visible text under 14px"(page) {
+    const small = await page.evaluate(() => {
+      const found = [];
+      const walker = document.createTreeWalker(
+        document.querySelector("body"),
+        NodeFilter.SHOW_TEXT,
+      );
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+        if (!n.textContent.trim()) continue;
+        const el = n.parentElement;
+        if (el.closest("[hidden], [aria-hidden='true']")) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width === 0 || r.height === 0) continue;
+        const size = parseFloat(getComputedStyle(el).fontSize);
+        if (size < 14)
+          found.push(`${size}px ${n.textContent.trim().slice(0, 30)}`);
+      }
+      return found;
+    });
+    assert.deepEqual(small, []);
+  },
+  async "layout fits the width"(page, viewport) {
+    const m = await page.evaluate(() => {
+      const box = (sel) => document.querySelector(sel).getBoundingClientRect();
+      const hero = document.querySelector(".w-hero-img");
+      const steps = [...document.querySelectorAll(".w-step")].map((el) =>
+        Math.round(el.getBoundingClientRect().top),
+      );
+      return {
+        height: document.documentElement.scrollHeight,
+        door: box(".w-door-frame").width,
+        heroRatio: hero.clientWidth / hero.clientHeight,
+        naturalRatio: hero.naturalWidth / hero.naturalHeight,
+        stepTops: steps,
+        stepCols: getComputedStyle(
+          document.querySelector(".w-steps"),
+        ).gridTemplateColumns.split(" ").length,
+      };
+    });
+    if (viewport.width <= 450) assert.ok(m.door >= 140, `door ${m.door}px`);
+    if (viewport.width >= 700) {
+      assert.equal(m.stepCols, 3, "steps are three across from 700px");
+      assert.ok(m.height <= 4400, `page is ${m.height}px tall`);
+    }
+    if (viewport.width >= 900)
+      assert.ok(
+        Math.abs(m.heroRatio - m.naturalRatio) < 0.04,
+        `hero is cropped: shown ${m.heroRatio.toFixed(2)}, file ${m.naturalRatio.toFixed(2)}`,
+      );
+  },
   async "axe finds no violations"(page) {
     const { violations } = await new AxeBuilder({ page }).analyze();
     assert.deepEqual(
@@ -123,7 +173,7 @@ async function runOne(browser, viewport, name, fn) {
     const page = await bounded(context.newPage(), STEP, "newPage");
     await page.goto(url, { waitUntil: "load", timeout: STEP });
     await settle(page);
-    await bounded(fn(page), TEST, name);
+    await bounded(fn(page, viewport), TEST, name);
   } finally {
     await bounded(context.close(), STEP, "context.close");
   }

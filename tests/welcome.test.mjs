@@ -70,7 +70,12 @@ test("welcome page structure: one h1, ordered headings, three steps, two doors, 
   assert.ok(html.includes(esc(latest.title)));
   // The plate is optional: the renderer falls back to type without art.
   if (html.includes("w-pack-art"))
-    assert.ok(html.includes(`../days/${latest.slug}/`));
+    assert.match(
+      html,
+      new RegExp(
+        `class="w-pack-art" src="(?:\\.\\./days/${latest.slug}/|\\./img/plate-\\d+\\.webp)`,
+      ),
+    );
   assert.deepEqual(privacyIssues(html, "welcome/index.html"), []);
   assert.doesNotMatch(
     html,
@@ -270,4 +275,22 @@ test("committed welcome page matches the generator template", async () => {
     cut(html),
     cut(welcomePage({ tonight: { title: "x", teaser: "y" } })),
   );
+});
+
+test("the pack-card plate is a small webp copy, not the raw story plate", async () => {
+  const html = await read("dist/welcome/index.html");
+  const img = html.match(/<img class="w-pack-art"[^>]*>/)?.[0];
+  if (!img) return; // no plate today: the card falls back to type
+  assert.match(
+    img,
+    /srcset="\.\/img\/plate-640\.webp 640w, \.\/img\/plate-1024\.webp 1024w"/,
+  );
+  assert.match(img, /sizes="/);
+  assert.doesNotMatch(img, /\.jpe?g/);
+  for (const name of ["plate-640.webp", "plate-1024.webp"]) {
+    const bytes = (
+      await readFile(new URL(`../dist/welcome/img/${name}`, import.meta.url))
+    ).length;
+    assert.ok(bytes < 110_000, `${name} is ${bytes} bytes`);
+  }
 });

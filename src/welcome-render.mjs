@@ -62,7 +62,7 @@ export function welcomePage({ tonight }) {
         </figure>`;
   const step = (n, art, title, body, alt) => `
       <li class="w-step">
-        <div class="w-step-art">${pic(art, { alt, sizes: "(min-width: 900px) 320px, 86vw", w: 960, h: 960 })}</div>
+        <div class="w-step-art">${pic(art, { alt, sizes: "(min-width: 900px) 320px, (min-width: 700px) 27vw, 86vw", w: 960, h: 960 })}</div>
         <p class="w-step-num" aria-hidden="true">${n}</p>
         <h3>${title}</h3>
         <p>${body}</p>
