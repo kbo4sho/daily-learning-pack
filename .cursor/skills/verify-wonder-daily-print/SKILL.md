@@ -18,7 +18,7 @@ beyond `scripts/serve.mjs`, and nothing here calls the network.
 ```sh
 npm ci                                   # once
 npx playwright install chromium          # once (CI uses --with-deps)
-npm run archive                          # rebuild dist/ chrome; CI does the same
+npm run archive                          # reapply archive/welcome chrome to dist/; CI does the same
 npm run verify:print                     # the whole proof (about 5 s)
 ```
 
@@ -34,7 +34,9 @@ CI runs it inside the existing `check` job via `npm run test:browser`.
 ## Doctor
 
 Read-only: `command -v pdfinfo pdftotext pdftoppm pdfimages && ls dist/today/pdf dist/today/pack.json && node -e "console.log(JSON.parse(require('fs').readFileSync('dist/today/pack.json')).targetAge)"`.
-If `dist/today/pdf` is missing, `dist/` is stale: run `npm run archive`. If
+If `dist/today/pdf` is missing, the checkout is incomplete: `git status`, then
+`git checkout -- dist` (the day's PDFs are committed; `npm run archive` only
+reapplies chrome and cannot recreate them). If
 Chromium is missing, run `npx playwright install chromium`.
 
 ## Drive

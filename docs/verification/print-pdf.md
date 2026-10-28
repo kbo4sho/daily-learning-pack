@@ -10,9 +10,10 @@ checked on every pull request and every push to `main`.
 - Agent skill and feature map: `.cursor/skills/verify-wonder-daily-print/`.
 - Evidence a run leaves behind: `output/print-verify/` (sample PDFs, one PNG
   per printed page, menu screenshots, `summary.json`). Not committed: it is
-  rebuilt from the day on `/today/`, so it changes every morning. The script wipes
-  the PNG, PDF and JSON files of its own earlier run (it leaves a `.print-verify`
-  marker in the folder) before writing new ones.
+  rebuilt from the day on `/today/`, so it changes every morning. The folder must
+  be outside `dist/`, and new, empty, or made by this script before; the script
+  removes only the files its earlier run listed in the folder's `.print-verify`
+  marker.
 
 ## What the check does
 
@@ -25,14 +26,14 @@ clear message if `pdfinfo`, `pdftotext`, `pdftoppm` or `pdfimages` is missing
 | --- | --- | --- |
 | 1 | Open `/today/` at 390 px and 1280 px, tap **Print** | The menu starts closed, opens, lists Print today (first), Foldable story, Math, Reading pages, Writing, Answer key by those labels, lists exactly the PDFs in `dist/today/pdf/` (no hidden or missing link), and every entry present (the Table-top lab extras too) is visible and fully inside the viewport |
 | 2 | Escape, then an outside click | Menu closes; focus returns to the Print button |
-| 3 | Fetch every `.pdf` link on the page | Stays on the local site under `/today/pdf/`, HTTP 200, `application/pdf`, body starts `%PDF-` and equals `dist/today/pdf/<name>.pdf` byte for byte |
+| 3 | Fetch every menu link and every other same-site `.pdf` link on the page | Menu links stay on this site (a cited source on another site elsewhere on the page is left alone); same-site links sit under `/today/pdf/`, HTTP 200, `application/pdf`, body starts `%PDF-` and equals `dist/today/pdf/<name>.pdf` byte for byte |
 | 4 | Click **Print today** | The browser requests `kid-worksheets.pdf` and gets a PDF |
-| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order, compared page by page as pictures |
+| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
 | 6 | Header text | "Wonder Daily" and `Age <targetAge from pack.json>` on Print today, Math, Reading and Answer key; today's title present; no age range ("Ages 6-8"); every printed `AGE n` equals the pack age |
-| 7 | Privacy | No private name, host name or local path (`privacyIssues` from `scripts/privacy-check.mjs`, including `WD_PRIVATE_NAMES`), and no `firstmate`, `chatgpt`, `openai`, `gpt-N`, `TODO`, `FM-N` or `/Users`, `/home`, `/tmp` path (a local second look in the check) in PDF text or metadata. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
+| 7 | Privacy | Text and metadata of every PDF pass `privacyIssues` from `scripts/privacy-check.mjs` (private names including `WD_PRIVATE_NAMES`, local paths, host names); metadata also passes the process-note phrase check. Lesson text is not phrase-checked, as in that policy. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
 | 8 | Same bytes | `/today/pdf/*.pdf` equals `/days/<slug>/pdf/*.pdf` |
 | 9 | `/today/` text | Page text (scripts and styles removed) shows `Age <targetAge>` and no age range |
-| 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, today's title, points at the Print menu, every image loaded, no empty sheet (at least 0.2% ink) |
+| 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, names today's pack (title or reading title), points at the Print menu, every image loaded, no empty sheet (at least 0.2% ink) |
 | 11 | Browser Print of `/welcome/` | Exactly 2 Letter sheets, at least 6 real pictures in the PDF (`pdfimages`, soft masks excluded), every image loaded |
 
 No check in this file changes published pages; the script only reads `dist/`.
@@ -63,6 +64,14 @@ Escape handler removed, the welcome art deleted ("pictures not loaded for
 print"), "Age 8" changed to "Ages 6-8" on the page, and a name added to
 `WD_PRIVATE_NAMES` that appears in the PDFs.
 
+## Tomorrow's pack
+
+Content checks read `pack.json` and the PDFs, never fixed text. As a trial, each
+earlier day under `dist/days/` was copied over `dist/today/` and the check run:
+19 of 26 days pass (every day on the current schema, back to 2026-10-07). The
+other 7 predate the `targetAge` field or the "Age N" footer, so they are not
+expected to pass.
+
 ## When it fails
 
 1. Run `npm run archive && npm run verify:print` locally.
@@ -73,5 +82,7 @@ print"), "Age 8" changed to "Ages 6-8" on the page, and a name added to
 
 ## Not covered
 
+Text drawn inside the Foldable's picture (it has no text layer; its words come from
+`pack.json`, which the public privacy scan already reads),
 `/little/` print link (`tests/little-browser.mjs` covers the link), `/family/print/`,
 a physical printer, and Safari/Firefox print engines (`page.pdf` is Chromium only).
