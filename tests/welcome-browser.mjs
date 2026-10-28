@@ -8,7 +8,7 @@ import { chromium, webkit } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
 import { bounded, watchdog } from "./bounded.mjs";
-import { LIMIT, MAX_IMAGE } from "./welcome-budget.mjs";
+import { LIMIT, MAX_IMAGE, PLATE_LIMIT } from "./welcome-budget.mjs";
 
 const root = resolve(process.env.WD_TEST_ROOT || "dist");
 const STEP = 20_000;
@@ -225,8 +225,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         const label = `chromium ${viewport.width}px: page weight`;
         try {
           const sizes = await bounded(weigh(browser, viewport), TEST, label);
-          const total = sizes.reduce((a, [, n]) => a + n, 0);
-          const biggest = [...sizes].sort((a, b) => b[1] - a[1])[0];
+          // The daily pack-card plate is budgeted on its own (PLATE_MAX_BYTES),
+          // so tonight's art cannot decide whether the page fits.
+          const plate = sizes.filter(([u]) => /\/plate-\d+\.webp$/.test(u));
+          assert.ok(
+            plate.every(([, n]) => n <= PLATE_LIMIT),
+            `plate over ${PLATE_LIMIT} bytes`,
+          );
+          const fixed = sizes.filter(([u]) => !plate.some(([p]) => p === u));
+          const total = fixed.reduce((a, [, n]) => a + n, 0);
+          const biggest = [...fixed].sort((a, b) => b[1] - a[1])[0];
           console.log(
             `ok   ${label}: ${total} bytes, ${sizes.length} requests, largest ${biggest[1]} ${biggest[0].split("/").pop()}`,
           );
