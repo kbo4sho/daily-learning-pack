@@ -49,7 +49,11 @@ const squiggle = `<svg class="w-squiggle" viewBox="0 0 160 12" aria-hidden="true
 export function welcomePage({ tonight }) {
   if (!tonight?.title) throw new Error("welcomePage requires tonight's day.");
   const face = tonight.face?.src
-    ? `<img class="w-pack-art" src="${esc(tonight.face.src)}" alt="${esc(tonight.face.alt)}" width="1536" height="1024" decoding="async">`
+    ? `<img class="w-pack-art" src="${esc(tonight.face.src)}"${
+        tonight.face.srcset
+          ? ` srcset="${esc(tonight.face.srcset)}" sizes="(min-width: 900px) 420px, (min-width: 700px) 38vw, calc(100vw - 72px)"`
+          : ""
+      } alt="${esc(tonight.face.alt)}" width="${tonight.face.width || 1536}" height="${tonight.face.height || 1024}" decoding="async">`
     : "";
   const door = (art, name, line, cls) => `
         <figure class="w-door ${cls}">
@@ -58,7 +62,7 @@ export function welcomePage({ tonight }) {
         </figure>`;
   const step = (n, art, title, body, alt) => `
       <li class="w-step">
-        <div class="w-step-art">${pic(art, { alt, sizes: "(min-width: 900px) 320px, 86vw", w: 960, h: 960 })}</div>
+        <div class="w-step-art">${pic(art, { alt, sizes: "(min-width: 900px) 320px, (min-width: 700px) 27vw, 86vw", w: 960, h: 960 })}</div>
         <p class="w-step-num" aria-hidden="true">${n}</p>
         <h3>${title}</h3>
         <p>${body}</p>
@@ -82,7 +86,7 @@ export function welcomePage({ tonight }) {
 <main>
   <section class="w-hero" aria-labelledby="w-hero-title">
     <div class="w-hero-scene">
-      ${pic(WELCOME_ART.hero, { alt: "Two cartoon bears, one big and one small, curled up in a window nook at dusk, reading a picture book by lamplight under a crescent moon.", sizes: "(min-width: 900px) 62vw, 100vw", w: 1600, h: 1067, cls: "w-hero-img", lazy: false })}
+      ${pic(WELCOME_ART.hero, { alt: "Two cartoon bears, one big and one small, curled up in a window nook at dusk, reading a picture book by lamplight under a crescent moon.", sizes: "(min-width: 900px) 56vw, 100vw", w: 1600, h: 1067, cls: "w-hero-img", lazy: false })}
     </div>
     <div class="w-hero-copy">
       <p class="w-kicker">For parents</p>
