@@ -122,6 +122,15 @@
       "latest": false
     },
     {
+      "slug": "fingerprints",
+      "date": "2026-10-07",
+      "topic": "fingerprints",
+      "title": "Fingerprints",
+      "teaser": "Loops, whorls, and arches are only the beginning of the pattern.",
+      "href": "./days/fingerprints/",
+      "latest": false
+    },
+    {
       "slug": "shadows-at-noon",
       "date": "2026-10-06",
       "topic": "shadows at noon",
