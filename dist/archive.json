@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T13:28:24.369Z",
-  "latest": "how-bike-derailleurs-work",
+  "generatedAt": "2026-10-28T03:38:50.795Z",
+  "latest": "how-sidewalks-work",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-sidewalks-work",
+      "date": "2026-10-28",
+      "topic": "how sidewalks work",
+      "title": "How a Sidewalk Is Made and How It Works",
+      "teaser": "Mix four plain ingredients, watch them harden, and find out why a sidewalk has grooves.",
+      "href": "./days/how-sidewalks-work/",
+      "latest": true
+    },
     {
       "slug": "how-bike-derailleurs-work",
       "date": "2026-10-26",
@@ -11,7 +20,7 @@
       "title": "How Bike Derailleurs Work",
       "teaser": "Follow one shifter click from the cable to the chain, then see why different cogs make hills feel easier or harder.",
       "href": "./days/how-bike-derailleurs-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "a-coffee-filter-parachute",
