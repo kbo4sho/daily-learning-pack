@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "fingerprints",
+  "topic": "fingerprints",
+  "teaser": "Loops, whorls, and arches are only the beginning of the pattern.",
+  "aliases": [],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "ageRange": [
+    7,
+    9
+  ],
+  "editionLabel": "GRADE 3 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "Fingerprints",
+  "question": "How can fingertips share three big patterns yet keep different tiny details?",
+  "idea": "Raised friction ridges can flow in loops, whorls, or arches, while tiny ridge endings and splits make each print more detailed.",
+  "curiosity": {
+    "intro": "A faint mark, a magnifier, and a map hidden on every fingertip.",
+    "carryForward": "Follow the ridges from the big flow to the tiniest fork.",
+    "questions": [
+      {
+        "id": "impression",
+        "plate": "wake",
+        "question": "What made the curved lines on the glass?",
+        "notice": "Look for the pale ridges and the darker spaces between them.",
+        "say": "A fingertip has raised lines called friction ridges, with lower grooves between them. When ridge tops touch a surface, sweat and natural skin oils can leave a faint impression of their paths.",
+        "try": "Tilt a clean drinking glass toward a lamp and look for a faint print. Keep the glass on the table while you look."
+      },
+      {
+        "id": "families",
+        "plate": "change",
+        "question": "Which way do the ridges flow?",
+        "notice": "Trace one curve in each large pattern card with your eyes.",
+        "say": "Many fingerprints can be grouped by their broad ridge flow. A loop curves back toward one side, a whorl circles around a center, and an arch rises and crosses from one side to the other.",
+        "try": "Draw one loop, one circle-like whorl, and one hill-shaped arch on paper."
+      },
+      {
+        "id": "details",
+        "plate": "notice",
+        "question": "Can two loops still be different?",
+        "notice": "Find a ridge that ends and another that splits into two paths.",
+        "say": "The big pattern family is only a first clue. Along the ridges are smaller details: a line may end, split, shorten, or bend. Two prints can both be loops while their tiny details appear in different places.",
+        "try": "On two drawn loops, add endings and forks in different places. Compare your maps."
+      },
+      {
+        "id": "transfer",
+        "plate": "return",
+        "question": "Why does a print have dark lines and pale gaps?",
+        "notice": "Compare the inked fingertip with the print it leaves on paper.",
+        "say": "Washable ink touches the raised ridge tops. When the fingertip presses paper, those tops transfer dark lines while the lower grooves leave pale spaces. The print is a flat impression of a textured fingertip.",
+        "try": "Use a non-toxic washable stamp pad on one fingertip, press once on paper, and wash your hands. Keep the paper at home."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/fingerprints/01-clue.jpg",
+      "original": "assets/fingerprints/01-clue.png",
+      "foldSrc": "assets/fingerprints/01-clue-fold.jpg",
+      "title": "A mark on the glass",
+      "alt": "Big and Little Wonderer study a faint curved fingertip mark on a drinking glass under a warm table lamp.",
+      "caption": "A fingertip can leave a map of its raised ridges."
+    },
+    {
+      "id": "reach",
+      "src": "assets/fingerprints/02-ridges.jpg",
+      "original": "assets/fingerprints/02-ridges.png",
+      "foldSrc": "assets/fingerprints/02-ridges-fold.jpg",
+      "title": "Ridges and grooves",
+      "alt": "A field-guide close-up shows raised fingertip ridges separated by lower grooves while Big and Little Wonderer look through a magnifier.",
+      "caption": "Raised ridges run beside lower grooves."
+    },
+    {
+      "id": "change",
+      "src": "assets/fingerprints/03-families.jpg",
+      "original": "assets/fingerprints/03-families.png",
+      "foldSrc": "assets/fingerprints/03-families-fold.jpg",
+      "title": "Three broad flows",
+      "alt": "Three large inked pattern cards show a loop, a round whorl, and a hill-shaped arch as Big and Little Wonderer compare their paths.",
+      "caption": "Loops, whorls, and arches describe the broad ridge flow."
+    },
+    {
+      "id": "notice",
+      "src": "assets/fingerprints/04-details.jpg",
+      "original": "assets/fingerprints/04-details.png",
+      "foldSrc": "assets/fingerprints/04-details-fold.jpg",
+      "title": "Tiny turns and forks",
+      "alt": "Two enlarged loop fingerprints sit side by side with subtle gold marks pointing to different ridge endings and splits.",
+      "caption": "The same broad pattern can hold different tiny details."
+    },
+    {
+      "id": "return",
+      "src": "assets/fingerprints/05-transfer.jpg",
+      "original": "assets/fingerprints/05-transfer.png",
+      "foldSrc": "assets/fingerprints/05-transfer-fold.jpg",
+      "title": "From finger to paper",
+      "alt": "A clean field-guide cutaway shows washable ink on raised fingertip ridges and a matching paper impression, with Big Wonderer beside Little Wonderer.",
+      "caption": "Ridge tops transfer ink; lower grooves leave pale gaps."
+    },
+    {
+      "id": "keep",
+      "src": "assets/fingerprints/06-compare.jpg",
+      "original": "assets/fingerprints/06-compare.png",
+      "foldSrc": "assets/fingerprints/06-compare-fold.jpg",
+      "title": "A careful second look",
+      "alt": "Big and Little Wonderer compare three paper impressions with magnifiers, matching repeated ridge paths despite one lighter, smudged print.",
+      "caption": "Pressure can change a print's clarity without changing the ridge map."
+    }
+  ],
+  "reading": {
+    "title": "The map on a fingertip",
+    "coverPlate": "wake",
+    "coverText": "A faint mark becomes a map of ridges, curves, endings, and splits.",
+    "foldableTitle": "A little book of ridge maps",
+    "foldableCoverLine": "Fingerprints",
+    "foldableNote": "Follow one faint mark from its broad flow to its tiniest details.",
+    "parentNote": "Age 8. Welcome pointing, speech, drawing, or dictation. Keep any paper prints at home and do not upload or share them.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A mark on the glass",
+        "passage": "Morning light crossed the table, and a faint swirl appeared on a drinking glass. Little Wonderer tilted the magnifier. The mark was not one solid smudge. It held many curved lines. Big wondered aloud, “What part of a fingertip could leave a map like that?”",
+        "prompt": "What first showed that the mark held a pattern?",
+        "foldable": {
+          "heading": "A mark on the glass",
+          "body": "Morning light revealed a faint swirl on a glass. Under the magnifier, Little saw many curved lines instead of one plain smudge."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Ridges and grooves",
+        "passage": "A close look at a fingertip revealed raised lines with lower spaces between them. The raised lines were friction ridges; the lower spaces were grooves. Only the ridge tops had touched the glass, leaving a flat impression of the fingertip's textured surface.",
+        "prompt": "Why did the impression show separate lines instead of one dark patch?",
+        "foldable": {
+          "heading": "Ridges and grooves",
+          "body": "A fingertip has raised friction ridges and lower grooves. The ridge tops touched the glass and left separate curved lines."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Three broad flows",
+        "passage": "Big placed three field cards on the table. One pattern curved back toward the side: a loop. One circled a center: a whorl. One rose like a hill and crossed the card: an arch. These families described the broad flow, but they did not tell the whole story.",
+        "prompt": "How does an arch's flow differ from a loop's flow?",
+        "foldable": {
+          "heading": "Three broad flows",
+          "body": "Loops curve back, whorls circle a center, and arches rise across. These families describe the broad flow, not every tiny detail."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Look inside the loop",
+        "passage": "Two cards both held loops. At first they seemed alike. Then Little found a ridge that ended on one card and continued on the other. Another ridge split into two paths at a different place. The tiny endings and splits turned each broad loop into a more detailed map.",
+        "prompt": "Which evidence showed that the two loops were not the same map?",
+        "foldable": {
+          "heading": "Inside the loop",
+          "body": "Two prints were both loops, yet their small details differed. Ridges ended and split in different places across each map."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A print on paper",
+        "passage": "Little touched one fingertip to a washable stamp pad, then pressed paper once. Ink rode on the raised ridge tops. The lower grooves stayed pale. The paper held an impression: dark ridge paths with light spaces between them. After one careful look, the print stayed at home and hands were washed.",
+        "prompt": "Which parts of the fingertip carried ink to the paper?",
+        "foldable": {
+          "heading": "A print on paper",
+          "body": "Washable ink coated the raised ridge tops. They made dark paths on paper while the lower grooves left pale spaces."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Same map, new mark",
+        "passage": "A second press looked lighter and a little smudged, but the same turns, endings, and splits still lined up. Pressure had changed the impression's clarity, not the ridge map beneath it. Little set a different fingertip print beside the pair. Its broad flow and tiny details made a new map to explore.",
+        "prompt": "How could Little tell that the lighter print came from the same ridge map?",
+        "foldable": {
+          "heading": "Same map, new mark",
+          "body": "A lighter press looked smudged, but its turns, endings, and splits still lined up. Pressure changed the mark, not the ridge map."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "fingerprint",
+        "meaning": "an impression that shows the friction ridges of a fingertip"
+      },
+      {
+        "word": "friction ridge",
+        "meaning": "one raised line on the skin of a fingertip"
+      },
+      {
+        "word": "groove",
+        "meaning": "a lower space between two raised ridges"
+      },
+      {
+        "word": "impression",
+        "meaning": "a mark made when one surface presses another"
+      },
+      {
+        "word": "loop",
+        "meaning": "a ridge flow that curves back toward the side it came from"
+      },
+      {
+        "word": "whorl",
+        "meaning": "a ridge flow that circles around a center"
+      },
+      {
+        "word": "arch",
+        "meaning": "a ridge flow that rises and crosses from side to side"
+      },
+      {
+        "word": "ridge ending",
+        "meaning": "a place where one ridge stops"
+      },
+      {
+        "word": "bifurcation",
+        "meaning": "a place where one ridge splits into two paths"
+      },
+      {
+        "word": "clarity",
+        "meaning": "how clearly the details can be seen"
+      }
+    ],
+    "questions": [
+      "How do raised ridges and lower grooves make the light and dark lines in an impression?",
+      "Why are loop, whorl, and arch useful clues but not the whole fingerprint map?",
+      "What evidence could show that a light print and a dark print came from the same fingertip?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write a compare sentence about two ridge maps.",
+      "example": "Example: Both prints are loops, but this ridge ends sooner."
+    }
+  },
+  "math": {
+    "title": "Number crunch at the print table",
+    "plate": "notice",
+    "intro": "Regroup tens and ones while you count paper ridge marks, cards, and magnifiers.",
+    "eyebrow": "SIX FINGERPRINT NUMBER CRUNCHES",
+    "actionLabel": "Regroup each pair of numbers",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          47,
+          26
+        ],
+        "prompt": "Little draws 47 curved ridge marks, then adds 26 more. How many ridge marks are in the drawing?",
+        "equation": "47 + 26 =",
+        "hint": "Add the ones first. Regroup 13 ones as 1 ten and 3 ones.",
+        "answer": 73,
+        "worked": "47 + 26 = 73 ridge marks. Seven ones plus six ones makes 13, so regroup 10 ones as 1 ten.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          68,
+          29
+        ],
+        "prompt": "There are 68 paper pattern cards. Big puts away 29. How many cards remain on the table?",
+        "equation": "68 − 29 =",
+        "hint": "Regroup 1 ten so 18 ones can take away 9 ones.",
+        "answer": 39,
+        "worked": "68 − 29 = 39 cards. Regroup 68 as 5 tens and 18 ones, then subtract.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          36,
+          58
+        ],
+        "prompt": "A tray holds 36 loop sketches and 58 whorl sketches. How many sketches are there altogether?",
+        "equation": "36 + 58 =",
+        "hint": "Six ones plus eight ones makes 14 ones. Regroup 10 of them as 1 ten.",
+        "answer": 94,
+        "worked": "36 + 58 = 94 sketches. Regroup 14 ones as 1 ten and 4 ones, then add the tens.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          72,
+          46
+        ],
+        "prompt": "Little circles 46 details on a sheet with 72 ridge details. How many details are not circled?",
+        "equation": "72 − 46 =",
+        "hint": "Regroup 1 ten so 12 ones can take away 6 ones.",
+        "answer": 26,
+        "worked": "72 − 46 = 26 details. Regroup 72 as 6 tens and 12 ones, then subtract.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          59,
+          24
+        ],
+        "prompt": "Big sets out 59 cream print cards and 24 tan print cards. How many cards are ready?",
+        "equation": "59 + 24 =",
+        "hint": "Nine ones plus four ones makes 13 ones. Regroup 10 ones as 1 ten.",
+        "answer": 83,
+        "worked": "59 + 24 = 83 cards. Regroup 13 ones as 1 ten and 3 ones, then add the tens.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          81,
+          37
+        ],
+        "prompt": "The field table begins with 81 magnifier cards and uses 37. How many magnifier cards are left?",
+        "equation": "81 − 37 =",
+        "hint": "Regroup 1 ten so 11 ones can take away 7 ones.",
+        "answer": 44,
+        "worked": "81 − 37 = 44 cards. Regroup 81 as 7 tens and 11 ones, then subtract.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one equation and show the regrouping with tens and ones.",
+    "parentNote": "Grade 2 math. Each problem uses two two-digit numbers and requires regrouping. The quantities belong to the paper story, not to measurements of real fingerprints."
+  },
+  "writing": {
+    "title": "Describe a ridge map",
+    "intro": "Choose a close look and compare the paths you see.",
+    "plateIds": [
+      "change",
+      "notice",
+      "keep"
+    ],
+    "draw": "Draw two large ridge paths. Add one ending and one split, then circle what changed.",
+    "starter": "My fingerprint comparison",
+    "frames": [
+      {
+        "plate": "change",
+        "start": "Both patterns",
+        "hint": "name one feature they share"
+      },
+      {
+        "plate": "notice",
+        "start": "One ridge",
+        "hint": "tell where it ends or splits"
+      },
+      {
+        "plate": "keep",
+        "start": "The evidence shows",
+        "hint": "connect a detail to your conclusion"
+      }
+    ],
+    "words": [
+      "ridge",
+      "groove",
+      "loop",
+      "whorl",
+      "arch",
+      "ending",
+      "split",
+      "impression",
+      "detail",
+      "evidence"
+    ],
+    "check": "Did you name a detail and explain what that detail helped you notice?",
+    "parentNote": "Welcome speech, dictation, drawing, or writing. One careful comparison with evidence is enough."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Raised ridge tops touch the surface and leave lines; lower grooves do not touch, so they leave pale spaces."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Loop, whorl, and arch describe broad ridge flow. Ridge endings, splits, and other small details add a more specific map."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "The same turns, endings, and splits line up in both impressions even when pressure makes one lighter or smudged."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a spoken, dictated, drawn, or written comparison that names at least one visible ridge detail."
+    }
+  ],
+  "parentGuidance": "This pack treats fingerprints as a pattern-and-printmaking study, not as an identity or crime activity. Keep any paper impressions at home; do not photograph, scan, upload, or share them. Use only a non-toxic washable stamp pad, press gently, and wash hands afterward. A fingerprint impression may be incomplete or smudged even though the friction-ridge arrangement beneath it is stable. Loop, whorl, and arch are broad pattern families; trained comparison uses smaller ridge details too.",
+  "sources": [
+    {
+      "label": "Smithsonian Science Education Center · Biotechnology and Security, Part 7",
+      "url": "https://ssec.si.edu/sites/default/files/Biotech-Part7.pdf"
+    },
+    {
+      "label": "NIST · Quick Minutiae Search Profile: Pattern Classification",
+      "url": "https://tsapps.nist.gov/trainingtool/FundamentalAFISSearching/PatternClassification.html"
+    },
+    {
+      "label": "FBI Biometric Center of Excellence · Fingerprint Recognition",
+      "url": "https://ucr.fbi.gov/fingerprints_biometrics/biometric-center-of-excellence/files/fingerprint-recognition.pdf"
+    }
+  ],
+  "titleCard": {
+    "plate": "wake",
+    "edition": "FINGERPRINTS · FIELD GUIDE",
+    "subtitle": "Loops, whorls, arches, and the tiny details inside them."
+  },
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "addition-regrouping",
+      "subtraction-regrouping",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "why": "Comparing loops, whorls and arches helps your child connect shared patterns and tiny ridge details to why every fingerprint is different."
+}
