@@ -280,9 +280,13 @@ async function weigh(browser, viewport) {
 }
 
 /**
- * Print: the page makes one or two sheets with every picture on them. The
- * sheet is made the way a browser makes it, with lazy pictures asked to load
- * by the page's own beforeprint handler. Chromium only (page.pdf).
+ * Print: the page makes exactly two Letter sheets with every picture on them.
+ * The sheet is made straight after load, with no scrolling and no test-side
+ * wait or event: page.pdf() runs the real print path (it fires beforeprint
+ * itself), so lazy pictures below the fold are only there if print loads them.
+ * Chromium only (page.pdf). The picture count is a loose floor on raw PDF image
+ * objects (masks and duplicates add to it); the DOM check after the print is
+ * the exact one: every picture on the page finished loading.
  */
 async function checkPrint(browser) {
   const context = await browser.newContext({
@@ -291,12 +295,6 @@ async function checkPrint(browser) {
   try {
     const page = await context.newPage();
     await page.goto(url, { waitUntil: "load", timeout: STEP });
-    await page.evaluate(() => dispatchEvent(new Event("beforeprint")));
-    await page.waitForFunction(
-      () => [...document.images].every((i) => i.complete && i.naturalWidth > 0),
-      null,
-      { timeout: STEP },
-    );
     await page.emulateMedia({ media: "print" });
     const dark = await page.evaluate(() => {
       const cta = getComputedStyle(document.querySelector(".w-cta"));
@@ -313,10 +311,29 @@ async function checkPrint(browser) {
     const pdf = (
       await bounded(page.pdf({ format: "Letter" }), STEP, "pdf")
     ).toString("latin1");
-    const pages = (pdf.match(/\/Type \/Page\b/g) || []).length;
+    const leaves = (pdf.match(/\/Type \/Page\b/g) || []).length;
+    const counts = [...pdf.matchAll(/\/Type \/Pages\b[^>]*?\/Count (\d+)/g)];
+    const declared = counts.length ? Number(counts[0][1]) : leaves;
+    assert.equal(leaves, 2, `printed ${leaves} sheets`);
+    assert.equal(declared, 2, `the document declares ${declared} sheets`);
     const images = (pdf.match(/\/Subtype \/Image/g) || []).length;
-    assert.ok(pages >= 1 && pages <= 2, `printed ${pages} pages`);
     assert.ok(images >= 7, `only ${images} pictures printed`);
+    const pictures = await page.evaluate(() => {
+      const all = [...document.images];
+      return {
+        total: all.length,
+        loaded: all.filter((i) => i.complete && i.naturalWidth > 0).length,
+      };
+    });
+    assert.ok(
+      pictures.total >= 7,
+      `only ${pictures.total} pictures on the page`,
+    );
+    assert.equal(
+      pictures.loaded,
+      pictures.total,
+      "every picture loaded for print",
+    );
   } finally {
     await context.close();
   }
@@ -350,7 +367,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     if (engine === "chromium") {
       try {
         await bounded(checkPrint(browser), TEST, "print");
-        console.log("ok   chromium: prints on one or two sheets with the art");
+        console.log("ok   chromium: prints on two sheets with the art");
       } catch (error) {
         failures.push("chromium print");
         console.error(`FAIL chromium print\n${error.message}`);
