@@ -28,13 +28,13 @@ clear message if `pdfinfo`, `pdftotext`, `pdftoppm` or `pdfimages` is missing
 | 2 | Escape, then an outside click | Menu closes; focus returns to the Print button |
 | 3 | Fetch every menu link and every other same-site `.pdf` link on the page | Menu links stay on this site (a cited source on another site elsewhere on the page is left alone); same-site links sit under `/today/pdf/`, HTTP 200, `application/pdf`, body starts `%PDF-` and equals `dist/today/pdf/<name>.pdf` byte for byte |
 | 4 | Click **Print today** | The click hands over a download (or opens a popup) whose bytes equal `dist/today/pdf/kid-worksheets.pdf`; a handler that swallows the click fails |
-| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
+| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the answer key holds this pack's worked answers and reading answers; the table-top lab lists its materials; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
 | 6 | Header text | "Wonder Daily" and `Age <targetAge from pack.json>` on Print today, Math, Reading and Answer key; today's title present; no age range ("Ages 6-8"); every printed `AGE n` equals the pack age |
 | 7 | Privacy | Text and metadata of every PDF pass `privacyIssues` from `scripts/privacy-check.mjs` (private names including `WD_PRIVATE_NAMES`, local paths, host names); metadata also passes the process-note phrase check. Lesson text is not phrase-checked, as in that policy. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
 | 8 | Same bytes | `/today/pdf/*.pdf` equals `/days/<slug>/pdf/*.pdf` |
 | 9 | `/today/` age | A visible "For grown-ups · Age N" summary (N from `pack.json`), and no age range anywhere in the page text |
 | 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, names today's pack (title or reading title), points at the Print menu, every image loaded, no empty sheet (at least 0.2% ink) |
-| 11 | Browser Print of `/welcome/` | Exactly 2 Letter sheets, at least 6 real pictures in the PDF (`pdfimages`, soft masks excluded), every image loaded |
+| 11 | Browser Print of `/welcome/` | Exactly 2 Letter sheets; at least six pictures on the page and at least six image objects in the PDF (the same loose floor as `tests/welcome-browser.mjs`: masks and duplicates count, and Chromium builds size them differently); every image loaded |
 
 No check in this file changes published pages; the script only reads `dist/`.
 
@@ -58,7 +58,7 @@ Each of these was applied to a copy of `dist/` and the check went red:
 a PDF replaced by a blank page ("looks blank"), a PDF deleted (404), a see-through or covered menu, a swallowed Print today click, a link
 pointing off the site or at another folder, a renamed menu label, "Print today"
 made of Math twice ("sheet 3 is not foldable"), a stale sheet from an earlier day
-inside Print today, a lab PDF whose menu link was removed, the pack
+inside Print today, an answer key or lab sheet swapped for another PDF, a lab PDF whose menu link was removed, the pack
 age changed (header no longer says it), the Print menu markup removed, the
 Escape handler removed, the welcome art deleted ("pictures not loaded for
 print"), "Age 8" changed to "Ages 6-8" on the page, and a name added to
@@ -86,7 +86,9 @@ purpose.
 
 ## Not covered
 
-Text drawn inside the Foldable's picture (it has no text layer; its words come from
-`pack.json`, which the public privacy scan already reads),
+The Foldable's own picture: its copy is not read back (it has no text layer), so a wrong
+but well-formed raster there is caught only by size, ink, title and the page-for-page
+comparison inside Print today. Its words come from `pack.json`, which the public privacy
+scan already reads. Also not covered:
 `/little/` print link (`tests/little-browser.mjs` covers the link), `/family/print/`,
 a physical printer, and Safari/Firefox print engines (`page.pdf` is Chromium only).
