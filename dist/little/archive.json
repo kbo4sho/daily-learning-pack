@@ -151,6 +151,36 @@
         "date": "2026-10-14"
       },
       "why": "Sorting a jumble of socks by one clue helps your child group and compare while practicing counting, sounds and tracing."
+    },
+    {
+      "slug": "snails",
+      "date": "2026-10-12",
+      "title": "Snails",
+      "question": "How does a snail move?",
+      "tags": {
+        "band": "little",
+        "topic": "snails",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-12"
+      },
+      "why": "Following a snail's slow glide helps your child notice how animals move while practicing counting, sounds and tracing."
     }
   ]
 }
