@@ -116,7 +116,7 @@
     "coverPlate": "wake",
     "coverText": "Little has a magnifier and a question. Can two tiny guests be very different?",
     "foldableTitle": "A little book of tiny guests",
-    "parentNote": "Ages 6-8. Welcome shared reading, spoken answers, and dictation. Pause at cell, bacteria, virus, antibiotic, and immune system.",
+    "parentNote": "Age 8. Welcome shared reading, spoken answers, and dictation. Pause at cell, bacteria, virus, antibiotic, and immune system.",
     "beats": [
       {
         "id": "wake",
@@ -291,7 +291,7 @@
       }
     ],
     "extension": "Choose one story. Explain why you added or subtracted.",
-    "parentNote": "Ages 6-8 math. Six one-step story problems within 100, with three additions and three subtractions. Offer counters, tens-and-ones drawings, or spoken reasoning.",
+    "parentNote": "Age 8 math. Six one-step story problems within 100, with three additions and three subtractions. Offer counters, tens-and-ones drawings, or spoken reasoning.",
     "eyebrow": "SIX SMALL STORIES",
     "actionLabel": "Solve one story at a time",
     "printNote": "Show your thinking with a drawing, numbers, or words."
@@ -354,7 +354,7 @@
       "text": "Accept one sensible command, spoken, dictated, or written. Example: “First wet your hands, then scrub with soap for 20 seconds.”"
     }
   ],
-  "parentGuidance": "Ages 6-8. Grown-ups and doctors decide about medicine. Many bacteria are helpful. Soap disrupts oily membranes of susceptible germs; it does not break apart every bacterium or every virus. Scrubbing and rinsing remove germs too. The diorama compares a bacterium and a virus with an oily outer layer; its removal amounts are qualitative, not measured. Antibiotics differ in which bacteria they affect and do not act on viruses. Immune memory helps recognition but is not a promise of complete protection.",
+  "parentGuidance": "Age 8. Grown-ups and doctors decide about medicine. Many bacteria are helpful. Soap disrupts oily membranes of susceptible germs; it does not break apart every bacterium or every virus. Scrubbing and rinsing remove germs too. The diorama compares a bacterium and a virus with an oily outer layer; its removal amounts are qualitative, not measured. Antibiotics differ in which bacteria they affect and do not act on viruses. Immune memory helps recognition but is not a promise of complete protection.",
   "sources": [
     {
       "label": "NIH · bacteria and viruses",
