@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T03:38:50.795Z",
+  "generatedAt": "2026-10-28T04:00:33.653Z",
   "latest": "how-sidewalks-work",
   "todayEntry": "./today/",
   "days": [
@@ -9,7 +9,7 @@
       "date": "2026-10-28",
       "topic": "how sidewalks work",
       "title": "How a Sidewalk Is Made and How It Works",
-      "teaser": "Mix four plain ingredients, watch them harden, and find out why a sidewalk has grooves.",
+      "teaser": "Meet four plain ingredients, see how they harden, and find out why a sidewalk has grooves.",
       "href": "./days/how-sidewalks-work/",
       "latest": true
     },
