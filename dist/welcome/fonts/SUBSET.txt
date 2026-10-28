@@ -1,0 +1,13 @@
+Subset notes for the welcome page fonts.
+
+Newsreader and Inter are licensed under the SIL Open Font License 1.1 (see the
+two license files here). The license allows modified copies. Neither font
+declares a Reserved Font Name.
+
+The woff2 files here are smaller copies of the upstream latin files:
+- Characters kept: Basic Latin, Latin-1 Supplement, curly quotes, en and em
+  dash, ellipsis, bullet, arrow and minus.
+- Newsreader roman and italic: weight axis fixed at 400 (the page only uses
+  weight 400), optical size axis kept.
+- Inter 400 and 600: static, hinting removed.
+- Made with fontTools (instancer and subsetter), woff2 output.
