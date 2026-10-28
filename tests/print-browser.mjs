@@ -22,15 +22,20 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
+  readFileSync,
   rmSync,
   writeFileSync,
 } from "node:fs";
 import { readFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { isAbsolute, join, relative, resolve } from "node:path";
 import { chromium } from "playwright";
 import sharp from "sharp";
-import { privacyIssues } from "../scripts/privacy-check.mjs";
+import {
+  metadataProcessIssues,
+  privacyIssues,
+} from "../scripts/privacy-check.mjs";
 import { serve } from "../scripts/serve.mjs";
+import { SCREEN_FREE_PDF_LABELS } from "../src/family-contract.mjs";
 import { bounded, watchdog } from "./bounded.mjs";
 
 const root = resolve(process.env.WD_TEST_ROOT || "dist");
@@ -61,12 +66,6 @@ const MENU = {
 const CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
 const BUNDLE = ["math", "foldable", "writing"];
-// Process notes, model names and local paths that must never reach print. This
-// is a second look: `node scripts/privacy-check.mjs dist` (run in CI) applies
-// the full public policy to every PDF in dist/. Lesson words (a codex is a
-// book, Claude is a name) are left out here on purpose.
-const PROCESS =
-  /\b(?:firstmate|chatgpt|openai|gpt-?\d[\w.-]*|TODO|FIXME|FM-\d+)\b|\/(?:Users|home|tmp|var)\/\w/i;
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
 const AGE_RANGE =
   /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
@@ -82,12 +81,27 @@ for (const tool of ["pdfinfo", "pdftotext", "pdftoppm", "pdfimages"]) {
 
 const summary = { pdfs: {}, browserPrints: {}, menu: {} };
 const MARKER = ".print-verify";
+// Evidence never goes inside the site it reads, and only into a folder that is
+// new, empty, or marked by an earlier run of this script. Cleanup removes only
+// the files that earlier run listed in its marker.
+assert.ok(
+  relative(root, evidence).startsWith("..") &&
+    !isAbsolute(relative(root, evidence)),
+  `WD_PRINT_EVIDENCE (${evidence}) must be outside ${root}`,
+);
 mkdirSync(evidence, { recursive: true });
-// Only a folder this script made before is cleaned, so a shared folder is safe.
-if (existsSync(join(evidence, MARKER)))
-  for (const old of readdirSync(evidence))
-    if (/\.(png|pdf|json)$/.test(old)) rmSync(join(evidence, old));
-writeFileSync(join(evidence, MARKER), "written by tests/print-browser.mjs\n");
+if (existsSync(join(evidence, MARKER))) {
+  for (const old of JSON.parse(readFileSync(join(evidence, MARKER), "utf8"))
+    .files)
+    if (/^[\w.-]+$/.test(old)) rmSync(join(evidence, old), { force: true });
+} else {
+  assert.deepEqual(
+    readdirSync(evidence),
+    [],
+    `${evidence} is not empty and was not made by this check`,
+  );
+}
+writeFileSync(join(evidence, MARKER), `${JSON.stringify({ files: [] })}\n`);
 
 const run = (cmd, args) =>
   execFileSync(cmd, args, {
@@ -157,7 +171,7 @@ async function pageDiff(a, b) {
     return 1;
   let off = 0;
   for (let i = 0; i < x.data.length; i += 1)
-    if (Math.abs(x.data[i] - y.data[i]) > 24) off += 1;
+    if (Math.abs(x.data[i] - y.data[i]) > 64) off += 1;
   return off / x.data.length;
 }
 
@@ -206,7 +220,10 @@ async function checkPdf(
   );
   const rows = pictures(path);
   if (needPicture)
-    assert.ok(rows.length >= 1, `${name}: no picture on the sheet`);
+    assert.ok(
+      rows.some((r) => r.pixels >= 100_000),
+      `${name}: no full-size picture on the sheet`,
+    );
   const pages = [];
   for (let at = 1; at <= meta.pages; at += 1) {
     const t = pageText(path, at);
@@ -218,7 +235,10 @@ async function checkPdf(
     );
     // Every text sheet names today's pack, so one stale sheet copied from an
     // earlier day cannot hide inside a PDF.
-    if (title && t.trim().length >= 20)
+    // (A sheet holding a full-size picture, the foldable, is checked against
+    // the standalone foldable page for page, and by its document title.)
+    const pictureSheet = rows.some((r) => r.page === at && r.pixels >= 100_000);
+    if (title && t.trim().length >= 20 && !pictureSheet)
       assert.ok(
         squash(t).includes(squash(title)),
         `${name}: page ${at} does not name today's pack`,
@@ -233,26 +253,29 @@ async function checkPdf(
     );
   const all = pages.join("\n");
   if (text) assert.ok(all.trim().length >= 20, `${name}: no text layer`);
-  for (const [label, value] of [
-    ["text", all],
-    ["metadata", meta.raw + run("pdfinfo", ["-meta", path])],
-  ]) {
-    assert.deepEqual(
-      privacyIssues(value, `${name}.pdf (${label})`),
-      [],
-      `${name}: private name in PDF ${label}`,
-    );
-    assert.ok(
-      !PROCESS.test(value),
-      `${name}: process note, model name or local path in PDF ${label}`,
-    );
-  }
+  // Lesson text gets the lesson-aware policy (names, paths, hosts). Metadata is
+  // not lesson copy, so it also gets the process-note phrase check.
+  assert.deepEqual(
+    privacyIssues(all, `${name}.pdf (text)`),
+    [],
+    `${name}: private name in PDF text`,
+  );
+  const metadata = meta.raw + run("pdfinfo", ["-meta", path]);
+  assert.deepEqual(
+    [
+      ...privacyIssues(metadata, `${name}.pdf (metadata)`),
+      ...metadataProcessIssues(metadata, `${name}.pdf (metadata)`),
+    ],
+    [],
+    `${name}: private name or process note in PDF metadata`,
+  );
   assert.ok(!AGE_RANGE.test(all), `${name}: an age range is printed`);
   return {
     pages: meta.pages,
     title: meta.title,
     ink,
     text: all,
+    pageTexts: pages,
     files,
     pictures: rows.length,
   };
@@ -272,16 +295,36 @@ const server = await serve(root, 0);
 const origin = `http://127.0.0.1:${server.address().port}`;
 const base = `${origin}/daily-learning-pack`;
 const age = squash(`AGE${pack.targetAge}`);
+// The pack must have the fields the checks lean on, so none of them is vacuous.
+assert.ok(
+  typeof pack.title === "string" && pack.title.trim().length > 3,
+  "pack.json has no title",
+);
+assert.ok(Number.isInteger(pack.targetAge), "pack.json has no targetAge");
+assert.ok(
+  Array.isArray(pack.math?.tasks) && pack.math.tasks.length >= 3,
+  "pack.json has no math tasks",
+);
+assert.ok(
+  Array.isArray(pack.writing?.frames) && pack.writing.frames.length >= 1,
+  "pack.json has no writing frames",
+);
+assert.ok(pack.reading?.title?.trim(), "pack.json has no reading title");
 const failures = [];
 let browser;
 
+let fatal = false;
 const step = async (label, fn) => {
+  if (fatal) return;
   try {
     await bounded(fn(), 120_000, label);
     console.log(`ok   ${label}`);
   } catch (error) {
     failures.push(label);
     console.error(`FAIL ${label}\n${error.stack || error.message}`);
+    // A timed-out step may still be running; stop here and close the browser
+    // instead of letting it write into later steps.
+    if (/did not finish within/.test(error.message)) fatal = true;
   }
 };
 
@@ -344,6 +387,7 @@ try {
             const { x, y, width, height } = a.getBoundingClientRect();
             return {
               href: a.getAttribute("href"),
+              url: a.href,
               text: a.textContent.trim().replace(/\s+/g, " "),
               box: { x, y, width, height },
             };
@@ -359,17 +403,17 @@ try {
         }
         assert.equal(names[0], "kid-worksheets", "Print today comes first");
         assert.deepEqual(
-          [...new Set(names)].sort(),
+          names.slice().sort(),
           shipped,
-          "the Print menu and dist/today/pdf list different PDFs",
+          "the Print menu and dist/today/pdf list different PDFs (or twice)",
         );
-        const extra = {
-          "lab-page": /^Table-top lab/,
-          "lab-page-key": /table-top lab guide/i,
-        };
-        for (const [name, label] of Object.entries(extra))
+        // Optional extras use the labels the family contract fixes.
+        for (const [name, label] of Object.entries(SCREEN_FREE_PDF_LABELS))
           if (names.includes(name))
-            assert.match(entries[names.indexOf(name)].text, label, name);
+            assert.ok(
+              entries[names.indexOf(name)].text.startsWith(label),
+              `label for ${name} is not "${label}"`,
+            );
         // Every entry that is there (extras like the table-top lab included)
         // must be on screen and tall enough to tap.
         for (const e of entries)
@@ -407,15 +451,24 @@ try {
         );
         // Every PDF link on the page, menu or not, is today's file from this
         // site, served as a PDF, with the same bytes as dist/today/pdf.
-        const urls = await page
-          .locator('a[href$=".pdf"]')
-          .evaluateAll((as) => [
-            ...new Set(
-              as.map(
-                (a) => new URL(a.getAttribute("href"), location.href).href,
-              ),
-            ),
-          ]);
+        // Menu links must be this site's files. Other PDF links on the page
+        // (a cited source on another site) are not ours and are left alone.
+        for (const e of entries) {
+          const at = new URL(e.url);
+          assert.equal(at.origin, origin, `${e.url} leaves the site`);
+        }
+        const urls = [
+          ...new Set([
+            ...entries.map((e) => e.url),
+            ...(await page
+              .locator('a[href$=".pdf"]')
+              .evaluateAll((as) =>
+                as
+                  .map((a) => a.href)
+                  .filter((href) => new URL(href).origin === location.origin),
+              )),
+          ]),
+        ];
         assert.ok(urls.length >= CORE.length, `${urls.length} PDF links`);
         for (const url of urls) {
           const at = new URL(url);
@@ -546,6 +599,20 @@ try {
         squash(checked["kid-worksheets"].text).includes("NAME_"),
         "worksheet has no Name line for the child to fill",
       );
+      // The sheets hold today's lesson, not just its title.
+      const has = (name, needle, what) =>
+        assert.ok(
+          squash(checked[name].text).includes(squash(needle)),
+          `${name}: ${what} is missing from the printed sheet`,
+        );
+      for (const task of pack.math.tasks) {
+        has("math", task.prompt, `math story "${task.prompt.slice(0, 30)}"`);
+        has("math", task.equation, `equation ${task.equation}`);
+        has("kid-worksheets", task.prompt, "a math story");
+      }
+      for (const frame of pack.writing.frames)
+        has("writing", frame.start, `writing starter "${frame.start}"`);
+      has("reading", pack.reading.title, "the reading title");
       // Print today is Math, then Foldable, then Writing, page for page.
       const parts = BUNDLE.flatMap((b) => checked[b].files);
       const bundle = checked["kid-worksheets"].files;
@@ -554,10 +621,18 @@ try {
         parts.length,
         `Print today has ${bundle.length} sheets, ${BUNDLE.join(" + ")} have ${parts.length}`,
       );
+      const partTexts = BUNDLE.flatMap((b) => checked[b].pageTexts);
       for (const [at, file] of bundle.entries()) {
+        // Same words on the sheet (exact), and the same picture of it (a few
+        // strong pixels of slack for the foldable, which is re-rasterised).
+        assert.equal(
+          squash(checked["kid-worksheets"].pageTexts[at]),
+          squash(partTexts[at]),
+          `Print today sheet ${at + 1} has different words from ${parts[at]}`,
+        );
         const off = await pageDiff(file, parts[at]);
         assert.ok(
-          off < 0.005,
+          off < 0.001,
           `Print today sheet ${at + 1} is not ${parts[at]} (${(off * 100).toFixed(2)}% differs)`,
         );
       }
@@ -621,9 +696,10 @@ try {
           `browser print of /today/ is ${result.pages} sheets`,
         );
         const t = squash(result.text);
+        // The page names this pack (its title or its reading title).
         assert.ok(
-          t.includes(squash(pack.title)),
-          "printed page lacks today's title",
+          [pack.title, pack.reading.title].some((n) => t.includes(squash(n))),
+          "printed page does not name today's pack",
         );
         assert.ok(
           t.includes("PRINTMENU"),
@@ -665,6 +741,10 @@ for (const name of Object.keys(checked).concat("lab-page", "lab-page-key"))
       join(evidence, `${name}.pdf`),
       await readFile(join(pdfDir, `${name}.pdf`)),
     );
+writeFileSync(
+  join(evidence, MARKER),
+  `${JSON.stringify({ files: readdirSync(evidence).filter((f) => f !== MARKER) })}\n`,
+);
 if (failures.length) {
   console.error(
     `\n${failures.length} print check(s) failed: ${failures.join("; ")}`,

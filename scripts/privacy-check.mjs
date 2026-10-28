@@ -220,6 +220,10 @@ function processText(text, label, path) {
     ),
   );
 }
+// Phrase check for document metadata (never lesson copy), for other tools.
+export function metadataProcessIssues(text, label = "metadata") {
+  return processText(text, label, "");
+}
 // Lesson copy is never phrase-checked: a lesson may say "an electrical relay"
 // or "Gemini is a constellation". A value is lesson copy only when every key
 // on its path from the JSON root is a known lesson/metadata key of the public
