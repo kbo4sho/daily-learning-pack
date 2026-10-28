@@ -93,6 +93,36 @@
       "why": "Following a puddle from rain to a dry path helps your child notice change while practicing counting, sounds and tracing."
     },
     {
+      "slug": "ducks",
+      "date": "2026-10-16",
+      "title": "Ducks",
+      "question": "How do ducks paddle and stay dry?",
+      "tags": {
+        "band": "little",
+        "topic": "ducks",
+        "skills": [
+          "addition-picture-story",
+          "beginning-sounds",
+          "coloring-inside-lines",
+          "colors",
+          "count-objects-to-20",
+          "cutting-with-grown-up",
+          "cvc",
+          "first-then-last",
+          "letter-recognition",
+          "letter-sounds",
+          "maze",
+          "number-recognition",
+          "one-to-one",
+          "rhyming",
+          "shapes",
+          "tracing"
+        ],
+        "date": "2026-10-16"
+      },
+      "why": "Watching a duck paddle and shed water helps your child notice how feathers keep it dry while practicing counting, sounds and tracing."
+    },
+    {
       "slug": "sorting-socks",
       "date": "2026-10-14",
       "title": "Sorting Socks",
