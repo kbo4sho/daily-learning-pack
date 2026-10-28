@@ -232,6 +232,10 @@ async function weigh(browser, viewport) {
     const page = await context.newPage();
     const sizes = [];
     const pending = [];
+    const statuses = [];
+    page.on("response", (res) => {
+      statuses.push([res.url(), res.status()]);
+    });
     page.on("response", (res) =>
       pending.push(
         res
@@ -245,11 +249,95 @@ async function weigh(browser, viewport) {
     await page.waitForLoadState("networkidle", { timeout: STEP });
     await bounded(Promise.all(pending), STEP, "response bodies");
     assert.ok(!sizes.some(([, n]) => n === 0), "a response body was empty");
+    // Nothing 404s, the favicon included.
+    assert.deepEqual(
+      statuses.filter(([, status]) => status >= 400),
+      [],
+      "a request failed",
+    );
+    // Headless browsers skip the favicon request, so fetch the icons the head names.
+    const icons = await page.evaluate(() =>
+      [
+        ...document.querySelectorAll(
+          'link[rel~="icon"], link[rel="apple-touch-icon"]',
+        ),
+      ].map((l) => l.href),
+    );
+    assert.ok(icons.length >= 2, "the head names a favicon and a touch icon");
+    for (const href of icons) {
+      const res = await page.request.get(href);
+      assert.equal(res.status(), 200, href);
+      assert.match(res.headers()["content-type"], /^image\//, href);
+    }
     // Whatever file the card shows is the plate, generated copy or fallback.
     const plateUrl = await page.evaluate(
       () => document.querySelector(".w-pack-art")?.currentSrc || null,
     );
     return { sizes, plateUrl };
+  } finally {
+    await context.close();
+  }
+}
+
+/**
+ * Print: the page makes exactly two Letter sheets with every picture on them.
+ * The sheet is made straight after load, with no scrolling and no test-side
+ * wait or event: page.pdf() runs the real print path (it fires beforeprint
+ * itself), so lazy pictures below the fold are only there if print loads them.
+ * Chromium only (page.pdf). The picture count is a loose floor on raw PDF image
+ * objects (masks and duplicates add to it); the DOM check after the print is
+ * the exact one: every picture on the page finished loading.
+ */
+// Hero, two doors and three steps are always there; tonight's plate is the
+// seventh picture unless the page uses its typographic fallback.
+const FIXED_PICTURES = 6;
+
+async function checkPrint(browser) {
+  const context = await browser.newContext({
+    viewport: { width: 1280, height: 800 },
+  });
+  try {
+    const page = await context.newPage();
+    await page.goto(url, { waitUntil: "load", timeout: STEP });
+    await page.emulateMedia({ media: "print" });
+    const dark = await page.evaluate(() => {
+      const cta = getComputedStyle(document.querySelector(".w-cta"));
+      return [cta.backgroundImage, cta.color];
+    });
+    assert.equal(dark[0], "none", "the sign-up card has no dark fill in print");
+    assert.equal(
+      await page.evaluate(
+        () => getComputedStyle(document.querySelector(".w-start")).display,
+      ),
+      "none",
+      "the sign-up button link is hidden in print",
+    );
+    const pdf = (
+      await bounded(page.pdf({ format: "Letter" }), STEP, "pdf")
+    ).toString("latin1");
+    const leaves = (pdf.match(/\/Type \/Page\b/g) || []).length;
+    const counts = [...pdf.matchAll(/\/Type \/Pages\b[^>]*?\/Count (\d+)/g)];
+    const declared = counts.length ? Number(counts[0][1]) : leaves;
+    assert.equal(leaves, 2, `printed ${leaves} sheets`);
+    assert.equal(declared, 2, `the document declares ${declared} sheets`);
+    const images = (pdf.match(/\/Subtype \/Image/g) || []).length;
+    assert.ok(images >= FIXED_PICTURES, `only ${images} pictures printed`);
+    const pictures = await page.evaluate(() => {
+      const all = [...document.images];
+      return {
+        total: all.length,
+        loaded: all.filter((i) => i.complete && i.naturalWidth > 0).length,
+      };
+    });
+    assert.ok(
+      pictures.total >= FIXED_PICTURES,
+      `only ${pictures.total} pictures on the page`,
+    );
+    assert.equal(
+      pictures.loaded,
+      pictures.total,
+      "every picture loaded for print",
+    );
   } finally {
     await context.close();
   }
@@ -278,6 +366,15 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       } catch (error) {
         failures.push(label);
         console.error(`FAIL ${label}\n${error.message}`);
+      }
+    }
+    if (engine === "chromium") {
+      try {
+        await bounded(checkPrint(browser), TEST, "print");
+        console.log("ok   chromium: prints on two sheets with the art");
+      } catch (error) {
+        failures.push("chromium print");
+        console.error(`FAIL chromium print\n${error.message}`);
       }
     }
     if (engine === "chromium")
