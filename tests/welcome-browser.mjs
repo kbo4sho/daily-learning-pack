@@ -134,21 +134,21 @@ async function weigh(browser, viewport) {
   const context = await browser.newContext(contextOptions(viewport));
   try {
     const page = await context.newPage();
-    const sizes = new Map();
+    const sizes = [];
     const pending = [];
     page.on("response", (res) =>
       pending.push(
         res
           .body()
-          .then((body) => sizes.set(res.url(), body.length))
-          .catch(() => sizes.set(res.url(), 0)),
+          .then((body) => sizes.push([res.url(), body.length]))
+          .catch(() => sizes.push([res.url(), 0])),
       ),
     );
     await page.goto(url, { waitUntil: "load", timeout: STEP });
     await settle(page);
     await page.waitForLoadState("networkidle", { timeout: STEP });
     await bounded(Promise.all(pending), STEP, "response bodies");
-    assert.ok(![...sizes.values()].includes(0), "a response body was empty");
+    assert.ok(!sizes.some(([, n]) => n === 0), "a response body was empty");
     return sizes;
   } finally {
     await context.close();
@@ -175,8 +175,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         const label = `chromium ${viewport.width}px: page weight`;
         try {
           const sizes = await bounded(weigh(browser, viewport), TEST, label);
-          const total = [...sizes.values()].reduce((a, b) => a + b, 0);
-          const biggest = [...sizes.entries()].sort((a, b) => b[1] - a[1])[0];
+          const total = sizes.reduce((a, [, n]) => a + n, 0);
+          const biggest = [...sizes].sort((a, b) => b[1] - a[1])[0];
           console.log(
             `ok   ${label}: ${total} bytes, ${sizes.size} requests, largest ${biggest[1]} ${biggest[0].split("/").pop()}`,
           );
