@@ -18,11 +18,17 @@ watchdog(10 * 60_000, "welcome-browser");
 const server = await serve(root, 0);
 const url = `http://127.0.0.1:${server.address().port}/daily-learning-pack/welcome/`;
 const VIEWPORTS = [
-  { width: 390, height: 844, deviceScaleFactor: 2 },
-  { width: 820, height: 1180, deviceScaleFactor: 2 },
-  { width: 1440, height: 900, deviceScaleFactor: 1 },
+  { width: 390, height: 844, scale: 2 },
+  { width: 820, height: 1180, scale: 2 },
+  { width: 1440, height: 900, scale: 1 },
 ];
 const MIN_TARGET = 44;
+
+const contextOptions = ({ width, height, scale }) => ({
+  viewport: { width, height },
+  deviceScaleFactor: scale,
+  reducedMotion: "reduce",
+});
 
 /** Scroll the whole page so lazy images load, then wait for them. */
 async function settle(page) {
@@ -79,11 +85,19 @@ const tests = {
       [...document.images]
         .filter((img) => {
           const r = img.getBoundingClientRect();
-          const hidden = r.width === 0 || r.height === 0;
+          let faded = false;
+          for (let el = img; el; el = el.parentElement) {
+            const style = getComputedStyle(el);
+            if (Number(style.opacity) < 1 || style.visibility === "hidden")
+              faded = true;
+          }
+          // complete + naturalWidth > 0 means the file loaded and decoded.
           return (
+            !img.complete ||
             img.naturalWidth === 0 ||
-            hidden ||
-            Number(getComputedStyle(img).opacity) < 1
+            r.width === 0 ||
+            r.height === 0 ||
+            faded
           );
         })
         .map((img) => img.getAttribute("src")),
@@ -94,7 +108,7 @@ const tests = {
 
 async function runOne(browser, viewport, name, fn) {
   const context = await bounded(
-    browser.newContext({ viewport, reducedMotion: "reduce" }),
+    browser.newContext(contextOptions(viewport)),
     STEP,
     "newContext",
   );
@@ -110,21 +124,24 @@ async function runOne(browser, viewport, name, fn) {
 
 /** Page weight is a Chromium-only check: one engine is enough. */
 async function weigh(browser, viewport) {
-  const context = await browser.newContext({
-    viewport,
-    reducedMotion: "reduce",
-  });
+  const context = await browser.newContext(contextOptions(viewport));
   try {
     const page = await context.newPage();
     const sizes = new Map();
-    page.on("response", async (res) => {
-      try {
-        sizes.set(res.url(), (await res.body()).length);
-      } catch {}
-    });
+    const pending = [];
+    page.on("response", (res) =>
+      pending.push(
+        res
+          .body()
+          .then((body) => sizes.set(res.url(), body.length))
+          .catch(() => sizes.set(res.url(), 0)),
+      ),
+    );
     await page.goto(url, { waitUntil: "load", timeout: STEP });
     await settle(page);
     await page.waitForLoadState("networkidle", { timeout: STEP });
+    await bounded(Promise.all(pending), STEP, "response bodies");
+    assert.ok(![...sizes.values()].includes(0), "a response body was empty");
     return sizes;
   } finally {
     await context.close();

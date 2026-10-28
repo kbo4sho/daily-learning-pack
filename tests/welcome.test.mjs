@@ -26,6 +26,11 @@ const textOf = (fragment) =>
   fragment
     .replace(/<br\s*\/?>/g, " ")
     .replace(/<[^>]+>/g, "")
+    .replace(/&#39;|&#x27;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
     .replace(/\s+/g, " ")
     .trim();
 
