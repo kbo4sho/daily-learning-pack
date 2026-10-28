@@ -30,7 +30,6 @@ function mount() {
   const label = (key) => picks.find((b) => b.dataset.partPick === key);
   const name = root.querySelector("[data-derailleur-name]");
   const does = root.querySelector("[data-derailleur-does]");
-  const scene = root.querySelector("[data-derailleur-scene]");
   const idle = [name.textContent, does.textContent];
   let state = createDerailleurState(picks.map((b) => b.dataset.partPick));
   function render() {
@@ -48,7 +47,6 @@ function mount() {
       ? `${state.order.indexOf(key) + 1} · ${pick.dataset.name}`
       : idle[0];
     does.textContent = pick ? pick.dataset.does : idle[1];
-    scene.textContent = pick ? pick.dataset.scene : "";
   }
   function dispatch(event) {
     const next = reduceDerailleur(state, event);
