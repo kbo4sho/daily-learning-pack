@@ -118,7 +118,7 @@
     "foldableTitle": "The shadow that changed",
     "foldableCoverLine": "A short shadow. A high sun.",
     "foldableNote": "Measure, notice, and pause whenever you like.",
-    "parentNote": "Ages 6-8. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
+    "parentNote": "Age 8. Welcome shared reading, spoken answers, and dictation. Pause at noon, shadow, measure, chalk, stick, and sunlight.",
     "beats": [
       {
         "id": "wake",
@@ -279,7 +279,7 @@
       }
     ],
     "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
-    "parentNote": "Ages 6-8 math. Six equal-group and array tasks use repeated addition. Rows and columns are each 2–5. Welcome drawings, spoken reasoning, or arranging small objects. Use the quantities in each question, rather than counting painted details.",
+    "parentNote": "Age 8 math. Six equal-group and array tasks use repeated addition. Rows and columns are each 2–5. Welcome drawings, spoken reasoning, or arranging small objects. Use the quantities in each question, rather than counting painted details.",
     "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
     "actionLabel": "Add each equal group or row",
     "printNote": "Show your thinking with numbers, marks, or words."
@@ -342,7 +342,7 @@
       "text": "Accept one sensible command, spoken, dictated, or written. Example: “Measure from the stick’s base to the shadow tip with the same unit.”"
     }
   ],
-  "parentGuidance": "Ages 6-8. This story uses a sunny yard at middle latitudes. Solar noon is when the sun reaches its highest point that day; it need not be 12:00 by the clock. For the same vertical stick on level ground, that gives the shortest daytime shadow. The sun’s height varies with place and season; in most of the United States the noon sun is never straight overhead. Clear sunlight gives a distinct edge; clouds can soften it. The diorama isolates sun height and light direction, with equal chalk spaces for comparison, not a clock or local forecast. The math counts equal groups and rows of garden and notebook objects. For an optional outdoor try, an adult helps place a stable blunt stick beside a path. Enjoy watching the shadow on the ground; never look at the sun.",
+  "parentGuidance": "Age 8. This story uses a sunny yard at middle latitudes. Solar noon is when the sun reaches its highest point that day; it need not be 12:00 by the clock. For the same vertical stick on level ground, that gives the shortest daytime shadow. The sun’s height varies with place and season; in most of the United States the noon sun is never straight overhead. Clear sunlight gives a distinct edge; clouds can soften it. The diorama isolates sun height and light direction, with equal chalk spaces for comparison, not a clock or local forecast. The math counts equal groups and rows of garden and notebook objects. For an optional outdoor try, an adult helps place a stable blunt stick beside a path. Enjoy watching the shadow on the ground; never look at the sun.",
   "sources": [
     {
       "label": "NOAA · solar noon and a standing stick",
