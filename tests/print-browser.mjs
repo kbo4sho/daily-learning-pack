@@ -69,12 +69,15 @@ const BUNDLE = ["math", "foldable", "writing"];
 // Local paths: Unix-style system and home directories (at the start of a word),
 // Windows drive and UNC paths. The shared policy knows fewer of them.
 const LOCAL_PATH =
-  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/\w|\bfile:\/\/|\b[A-Za-z]:[\\/][\w .-]+[\\/]|\\\\[\w.-]+\\[\w$.-]+/;
+  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/[\w.]|\bfile:\/\/|\b[A-Za-z]:[\\/][\w.-]|\\\\[\w.-]+\\[\w$.-]+/;
 for (const bad of [
   "/root/build/x",
   "file:///home/runner/work/a.pdf",
   "file:///workspace/out.pdf",
   "D:/work/a.pdf",
+  "D:/out.pdf",
+  ["C:", "out.pdf"].join("\\"),
+  "/tmp/.secret",
   "see /workspace/job/out.pdf",
   "/home/runner/work/f",
   ["", "Users", "me", "f"].join("/"),
@@ -92,6 +95,8 @@ for (const fine of [
   "Note: 3/4 of a cup",
   "https://example.org/home/page",
   "at 10:30/11:00",
+  "Q: and/or",
+  "see https://example.org/x",
 ])
   assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
@@ -130,6 +135,8 @@ if (existsSync(join(evidence, MARKER))) {
   );
 }
 writeFileSync(join(evidence, MARKER), `${JSON.stringify({ files: [] })}\n`);
+// Anything here now is not ours (an earlier run's files are gone): never touch it.
+const preexisting = new Set(readdirSync(evidence));
 
 const run = (cmd, args) =>
   execFileSync(cmd, args, {
@@ -193,7 +200,11 @@ function pictures(path) {
 async function render(path, name) {
   const prefix = join(evidence, name);
   for (const old of readdirSync(evidence))
-    if (old.startsWith(`${name}-p-`) && old.endsWith(".png"))
+    if (
+      old.startsWith(`${name}-p-`) &&
+      old.endsWith(".png") &&
+      !preexisting.has(old)
+    )
       rmSync(join(evidence, old));
   run("pdftoppm", ["-r", "50", "-png", path, `${prefix}-p`]);
   const files = readdirSync(evidence)
@@ -915,6 +926,34 @@ try {
             q.answer,
             `quiz answer "${q.answer.slice(0, 24)}"`,
           );
+      // Optional quiz cards: every prompt and choice on the cards, every
+      // answer on the key. A pack that declares them must carry quiz data.
+      if (extras.includes("quiz-cards")) {
+        const qs = pack.quiz?.questions;
+        assert.ok(
+          Array.isArray(qs) &&
+            qs.length >= 1 &&
+            qs.every(
+              (q) =>
+                filled(q?.prompt) &&
+                filled(q?.answer) &&
+                Array.isArray(q.choices) &&
+                q.choices.length >= 2 &&
+                q.choices.every(filled2),
+            ),
+          "pack.screenFree has quiz-cards but pack.quiz has no complete questions",
+        );
+        for (const [i, q] of qs.entries()) {
+          has("quiz-cards", q.prompt, `quiz card ${i + 1} question`);
+          for (const c of q.choices)
+            has(
+              "quiz-cards",
+              c,
+              `quiz card ${i + 1} choice "${c.slice(0, 24)}"`,
+            );
+          has("quiz-cards-key", q.answer, `quiz key answer ${i + 1}`);
+        }
+      }
       if (checked["lab-page-key"])
         has("lab-page-key", "grown-ups only", "the grown-ups label");
       // Optional table-top lab: its materials are on its sheet.
@@ -1095,7 +1134,7 @@ for (const name of Object.keys(checked).concat("lab-page", "lab-page-key"))
     );
 writeFileSync(
   join(evidence, MARKER),
-  `${JSON.stringify({ files: readdirSync(evidence).filter((f) => f !== MARKER) })}\n`,
+  `${JSON.stringify({ files: readdirSync(evidence).filter((f) => !preexisting.has(f)) })}\n`,
 );
 if (failures.length) {
   console.error(
