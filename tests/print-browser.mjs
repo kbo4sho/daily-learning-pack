@@ -412,23 +412,30 @@ async function checkPdf(
   // just its edges. A match is fine only when the public pack.json (the lesson
   // source) says the same words, so a lesson may still mention "an electrical relay".
   const publicPack = JSON.stringify(pack).toLowerCase();
-  for (const issue of metadataProcessIssues(all, `${name}.pdf (text)`))
-    assert.ok(
-      publicPack.includes(
-        (issue.match(/ "(.*)" at /)?.[1] ?? "\0").toLowerCase(),
-      ),
-      `${name}: process note in the PDF text: ${issue}`,
+  const sourced = (text, label) =>
+    metadataProcessIssues(text, label).filter(
+      (issue) =>
+        !publicPack.includes(
+          (issue.match(/ "(.*)" at /)?.[1] ?? "\0").toLowerCase(),
+        ),
     );
+  assert.deepEqual(
+    sourced(all, `${name}.pdf (text)`),
+    [],
+    `${name}: process note in the PDF text`,
+  );
   assert.deepEqual(
     privacyIssues(all, `${name}.pdf (text)`),
     [],
     `${name}: private name in PDF text`,
   );
-  // The Title is checked against the pack above; every other field is chrome.
-  const metadata = (meta.raw + run("pdfinfo", ["-meta", path]))
-    .split("\n")
-    .filter((l) => !/^Title:/.test(l))
-    .join("\n");
+  // The whole metadata block is checked for paths and private names. The
+  // Title is lesson copy (it names the pack), so it gets the source-aware
+  // process-note check like the text; every other field gets the strict one.
+  const metadata = meta.raw + run("pdfinfo", ["-meta", path]);
+  const metaLines = metadata.split("\n");
+  const titleLines = metaLines.filter((l) => /^Title:/.test(l)).join("\n");
+  const otherLines = metaLines.filter((l) => !/^Title:/.test(l)).join("\n");
   assert.ok(
     !LOCAL_PATH.test(metadata),
     `${name}: a local path is in the PDF metadata`,
@@ -436,7 +443,8 @@ async function checkPdf(
   assert.deepEqual(
     [
       ...privacyIssues(metadata, `${name}.pdf (metadata)`),
-      ...metadataProcessIssues(metadata, `${name}.pdf (metadata)`),
+      ...metadataProcessIssues(otherLines, `${name}.pdf (metadata)`),
+      ...sourced(titleLines, `${name}.pdf (title)`),
     ],
     [],
     `${name}: private name or process note in PDF metadata`,
