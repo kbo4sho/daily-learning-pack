@@ -7,6 +7,8 @@
 <meta name="theme-color" content="#F7F3EB">
 <title>Wonder Daily · A printable learning pack</title>
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/newsreader-latin-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./welcome.css">
 </head>
 <body>
@@ -17,7 +19,7 @@
 <main>
   <section class="w-hero" aria-labelledby="w-hero-title">
     <div class="w-hero-scene">
-      <img class="w-hero-img" src="./img/hero-1600.webp" srcset="./img/hero-800.webp 800w, ./img/hero-1600.webp 1600w" sizes="(min-width: 900px) 56vw, 100vw" alt="Two cartoon bears, one big and one small, curled up in a window nook at dusk, reading a picture book by lamplight under a crescent moon." width="1600" height="1067">
+      <img class="w-hero-img" src="./img/hero-1600.webp" srcset="./img/hero-800.webp 800w, ./img/hero-1600.webp 1600w" sizes="(min-width: 900px) 56vw, 100vw" alt="Two cartoon bears, one big and one small, curled up in a window nook at dusk, reading a picture book by lamplight under a crescent moon." width="1600" height="1067" fetchpriority="high">
     </div>
     <div class="w-hero-copy">
       <p class="w-kicker">For parents</p>
@@ -27,7 +29,7 @@
     </div>
     <article class="w-pack" aria-label="Latest pack">
       <p class="w-pack-label">Latest pack <span>an example of one day</span></p>
-      <div class="w-pack-window"><img class="w-pack-art" src="./img/plate-1024.webp" srcset="./img/plate-640.webp 640w, ./img/plate-1024.webp 1024w" sizes="(min-width: 900px) 420px, (min-width: 700px) 38vw, calc(100vw - 72px)" alt="Big and Little Wonderer look at a chipped corner of a sidewalk square with tiny stones and a groove, beside four sealed clear jars holding gravel, sand, gray cement powder and water." width="1024" height="683" decoding="async"></div>
+      <div class="w-pack-window"><img class="w-pack-art" src="./img/plate-1024.webp" srcset="./img/plate-640.webp 640w, ./img/plate-1024.webp 1024w" sizes="(min-width: 900px) 420px, (min-width: 700px) 38vw, calc(100vw - 72px)" alt="Big and Little Wonderer look at a chipped corner of a sidewalk square with tiny stones and a groove, beside four sealed clear jars holding gravel, sand, gray cement powder and water." width="1024" height="683" loading="lazy" decoding="async"></div>
       <h2>How a Sidewalk Is Made and How It Works</h2>
       <p class="w-pack-teaser">Meet four plain ingredients, see how they harden, and find out why a sidewalk has grooves.</p>
       <ul class="w-pack-parts"><li>Story</li><li>Why</li><li>Activities</li><li>PDFs</li></ul>
@@ -87,12 +89,15 @@
       <h2 id="w-cta-title"><em>Sign-up is not open.</em><br>Nothing is sent.</h2>
     </div>
     <form class="w-form" data-stub="email-capture" action="#start" onsubmit="return false" novalidate>
-      <label for="w-email">Email address</label>
-      <div class="w-form-row">
-        <input id="w-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
-        <button type="submit" disabled aria-describedby="w-form-note">Sign up</button>
-      </div>
-      <p id="w-form-note" class="w-form-note">The button is off, and nothing you type here is sent. The packs themselves need no account.</p>
+      <p id="w-form-note" class="w-form-note">This form is switched off. Nothing you type here is sent. The packs themselves need no account.</p>
+      <fieldset disabled aria-describedby="w-form-note">
+        <legend class="w-sr">Email sign-up, not open</legend>
+        <label for="w-email">Email address</label>
+        <div class="w-form-row">
+          <input id="w-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="w-form-note">
+          <button type="submit" disabled aria-describedby="w-form-note">Sign up</button>
+        </div>
+      </fieldset>
     </form>
   </section>
 </main>
