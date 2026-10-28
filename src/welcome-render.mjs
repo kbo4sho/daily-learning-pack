@@ -35,6 +35,19 @@ const pic = ([srcset, src], { alt = "", sizes, w, h, cls = "", lazy = true }) =>
     lazy ? ' loading="lazy" decoding="async"' : ' fetchpriority="high"'
   }>`;
 
+/**
+ * Where this page lives. Share tags need absolute URLs, so the address is
+ * written once here and the tests allow exactly this prefix and no other
+ * outside address.
+ */
+export const WELCOME_URL =
+  "https://kbo4sho.github.io/daily-learning-pack/welcome/";
+const SHARE_TITLE = "Wonder Daily · A printable learning pack";
+const SHARE_DESCRIPTION =
+  "Wonder Daily is a printable learning pack made for one day: a story to read, a few problems, and something to do or make.";
+const SHARE_ALT =
+  "Two cartoon bears, one big and one small, curled up in a bed reading a picture book by lamplight, with a crescent moon in the window.";
+
 /** Hand-drawn wobble rule, reused under headings and between steps. */
 const squiggle = `<svg class="w-squiggle" viewBox="0 0 160 12" aria-hidden="true" focusable="false"><path d="M2 7c14-6 24 4 38 0s24-6 38-1 24 5 38 0 24-5 40 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`;
 
@@ -74,7 +87,26 @@ export function welcomePage({ tonight }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F7F3EB">
-<title>Wonder Daily · A printable learning pack</title>
+<title>${esc(SHARE_TITLE)}</title>
+<meta name="description" content="${esc(SHARE_DESCRIPTION)}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wonder Together">
+<meta property="og:title" content="${esc(SHARE_TITLE)}">
+<meta property="og:description" content="${esc(SHARE_DESCRIPTION)}">
+<meta property="og:url" content="${WELCOME_URL}">
+<meta property="og:image" content="${WELCOME_URL}share-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(SHARE_ALT)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(SHARE_TITLE)}">
+<meta name="twitter:description" content="${esc(SHARE_DESCRIPTION)}">
+<meta name="twitter:image" content="${WELCOME_URL}share-1200x630.jpg">
+<meta name="twitter:image:alt" content="${esc(SHARE_ALT)}">
+<link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/newsreader-latin-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -145,6 +177,12 @@ export function welcomePage({ tonight }) {
   </section>
 </main>
 <footer class="w-foot"><p><em>Past packs stay on the shelf. Open any one when you like.</em></p><p>Wonder Daily · from Wonder Together</p></footer>
+<script>
+/* Print every picture: lazy ones below the fold are loaded before the sheet is made. */
+addEventListener("beforeprint", () => {
+  for (const img of document.querySelectorAll('img[loading="lazy"]')) img.loading = "eager";
+});
+</script>
 </body>
 </html>
 `;
