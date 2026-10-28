@@ -124,11 +124,11 @@ const tests = {
       assert.equal(m.stepCols, 3, "steps are three across from 700px");
       assert.ok(m.height <= 4400, `page is ${m.height}px tall`);
     }
-    if (viewport.width >= 900)
-      assert.ok(
-        Math.abs(m.heroRatio - m.naturalRatio) < 0.04,
-        `hero is cropped: shown ${m.heroRatio.toFixed(2)}, file ${m.naturalRatio.toFixed(2)}`,
-      );
+    // The hero shows its whole picture at every width.
+    assert.ok(
+      Math.abs(m.heroRatio - m.naturalRatio) < 0.04,
+      `hero is cropped: shown ${m.heroRatio.toFixed(2)}, file ${m.naturalRatio.toFixed(2)}`,
+    );
   },
   async "axe finds no violations"(page) {
     const { violations } = await new AxeBuilder({ page }).analyze();

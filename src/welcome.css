@@ -624,7 +624,7 @@ section + section::before {
     grid-row: 1;
   }
   .w-hero-img {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 3 / 2;
   }
   .w-hero-copy {
     grid-column: 1;

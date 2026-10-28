@@ -51,7 +51,7 @@ export function welcomePage({ tonight }) {
   const face = tonight.face?.src
     ? `<img class="w-pack-art" src="${esc(tonight.face.src)}"${
         tonight.face.srcset
-          ? ` srcset="${esc(tonight.face.srcset)}" sizes="(min-width: 900px) 420px, calc(100vw - 72px)"`
+          ? ` srcset="${esc(tonight.face.srcset)}" sizes="(min-width: 900px) 420px, (min-width: 700px) 38vw, calc(100vw - 72px)"`
           : ""
       } alt="${esc(tonight.face.alt)}" width="${tonight.face.width || 1536}" height="${tonight.face.height || 1024}" decoding="async">`
     : "";
