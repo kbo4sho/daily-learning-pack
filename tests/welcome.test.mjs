@@ -332,6 +332,12 @@ test("a heavy daily plate cannot make the welcome card heavy", async () => {
     await writeFile(`${root}/days/heavy/bad.jpg`, "not an image");
     const bad = { src: "../days/heavy/bad.jpg", alt: "x" };
     assert.deepEqual(await webFace(root, bad), bad);
+    // A heavy file that cannot be converted is dropped, not shipped as is.
+    await writeFile(`${root}/days/heavy/bad-big.jpg`, Buffer.alloc(300_000, 7));
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/bad-big.jpg", alt: "x" }),
+      null,
+    );
   } finally {
     await rm(root, { recursive: true, force: true });
   }

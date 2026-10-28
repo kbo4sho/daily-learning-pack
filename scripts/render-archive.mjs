@@ -7,6 +7,7 @@ import {
   readFile,
   readdir,
   rename,
+  stat,
   rm,
   writeFile,
 } from "node:fs/promises";
@@ -198,12 +199,18 @@ export const PLATE_MAX_BYTES = { 640: 55_000, 1024: 100_000 };
  */
 export async function webFace(root, face) {
   if (!face?.src) return face;
+  const source = resolve(root, face.src.replace(/^\.\.\//, "./"));
+  // Keep the original only when it is already small. A heavy original that
+  // cannot be converted is dropped: the card then falls back to type.
+  const original = async () =>
+    (await stat(source).catch(() => null))?.size <= PLATE_MAX_BYTES[1024]
+      ? face
+      : null;
   try {
-    const source = resolve(root, face.src.replace(/^\.\.\//, "./"));
     const meta = await sharp(source).metadata();
-    if (!meta.width || !meta.height) return face;
+    if (!meta.width || !meta.height) return await original();
     const widths = PLATE_WIDTHS.filter((w) => w <= meta.width);
-    if (!widths.length) return face;
+    if (!widths.length) return await original();
     await mkdir(`${root}/welcome/img`, { recursive: true });
     for (const w of widths) {
       // Step the quality down until the copy fits its cap.
@@ -226,7 +233,7 @@ export async function webFace(root, face) {
       height: Math.round((widest * meta.height) / meta.width),
     };
   } catch {
-    return face;
+    return await original();
   }
 }
 
