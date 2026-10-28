@@ -1,6 +1,16 @@
 // Mirrored in the public view. All hrefs are relative to the Pages site root.
 import { whyIssues } from "./library-contract.mjs";
 
+// Standalone screen-free PDFs that may follow the pack PDF on the big door.
+// Kept literal because this contract is mirrored in the public repo, which has
+// no generator code; a test pins it to the option registry.
+export const SCREEN_FREE_PDF_LABELS = Object.freeze({
+  "quiz-cards": "Quiz cards",
+  "quiz-cards-key": "Grown-ups: quiz cards answer key",
+  "lab-page": "Table-top lab",
+  "lab-page-key": "Grown-ups: table-top lab guide",
+});
+
 export const FAMILY_DOORS = [
   {
     id: "big",
@@ -53,19 +63,26 @@ export function validateFamily(manifest) {
         !text(today.topic) ||
         !date(today.date) ||
         whyIssues(today.why).length ||
-        !Array.isArray(today.pdfs) ||
-        today.pdfs.length > 1
+        !Array.isArray(today.pdfs)
       )
         throw new Error("Invalid family today.");
       const seen = new Set();
-      for (const pdf of today.pdfs) {
+      const extras = SCREEN_FREE_PDF_LABELS;
+      for (const [at, pdf] of today.pdfs.entries()) {
+        const extra = /^\.\/today\/pdf\/([a-z-]+)\.pdf$/.exec(pdf?.href ?? "");
         const allowed =
           door.id === "big"
-            ? pdf?.href === "./today/pdf/kid-worksheets.pdf" &&
-              pdf.label === "Print the pack"
-            : /^\.\/little\/days\/[a-z0-9]+(?:-[a-z0-9]+)*\/little-pack\.pdf$/.test(
+            ? at === 0
+              ? pdf?.href === "./today/pdf/kid-worksheets.pdf" &&
+                pdf.label === "Print the pack"
+              : Boolean(extra) &&
+                Object.hasOwn(extras, extra[1]) &&
+                pdf.label === extras[extra[1]]
+            : at === 0 &&
+              /^\.\/little\/days\/[a-z0-9]+(?:-[a-z0-9]+)*\/little-pack\.pdf$/.test(
                 pdf?.href,
-              ) && pdf.label === "Print the pack";
+              ) &&
+              pdf.label === "Print the pack";
         if (!keys(pdf, "href,label") || !allowed || seen.has(pdf.href))
           throw new Error("Invalid family PDF.");
         seen.add(pdf.href);
