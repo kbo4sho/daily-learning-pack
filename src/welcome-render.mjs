@@ -120,7 +120,7 @@ export function welcomePage({ tonight }) {
 <main>
   <section class="w-hero" aria-labelledby="w-hero-title">
     <div class="w-hero-scene">
-      ${pic(WELCOME_ART.hero, { alt: "Two cartoon bears, one big and one small, curled up in a window nook at dusk, reading a picture book by lamplight under a crescent moon.", sizes: "(min-width: 900px) 56vw, 100vw", w: 1600, h: 1067, cls: "w-hero-img", lazy: false })}
+      ${pic(WELCOME_ART.hero, { alt: "Two round, cream-colored cartoon characters, one big and one small, sit side by side on a patchwork quilt in the early evening, looking at an open picture book. A small lamp glows on the sill of a window with a crescent moon.", sizes: "(min-width: 900px) 56vw, 100vw", w: 1600, h: 1067, cls: "w-hero-img", lazy: false })}
     </div>
     <div class="w-hero-copy">
       <p class="w-kicker">For parents</p>
