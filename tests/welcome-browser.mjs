@@ -179,6 +179,52 @@ async function runOne(browser, viewport, name, fn) {
   }
 }
 
+/**
+ * With motion allowed and no scrolling (a screenshot tool, a print preview),
+ * nothing may be invisible: scroll animations must not hide content.
+ */
+async function checkVisibleWithMotion(browser, viewport) {
+  const context = await bounded(
+    browser.newContext({
+      viewport: { width: viewport.width, height: viewport.height },
+      deviceScaleFactor: viewport.scale,
+    }),
+    STEP,
+    "newContext",
+  );
+  try {
+    const page = await bounded(context.newPage(), STEP, "newPage");
+    await page.goto(url, { waitUntil: "load", timeout: STEP });
+    await page.waitForTimeout(300);
+    const hidden = await page.evaluate(() =>
+      [...document.querySelectorAll("main *, header *, footer *")]
+        .filter((el) => Number(getComputedStyle(el).opacity) < 0.99)
+        .filter((el) => !el.closest("button[disabled], fieldset[disabled]"))
+        .map((el) => el.className || el.tagName),
+    );
+    assert.deepEqual(hidden, []);
+    // The local fonts load: none failed, and the ones the page uses are in.
+    const fonts = await bounded(
+      page.evaluate(async () => {
+        const settled = Date.now() + 8000;
+        const status = () => [...document.fonts].map((f) => f.status);
+        while (Date.now() < settled && !status().includes("loaded"))
+          await new Promise((resolve) => setTimeout(resolve, 100));
+        return status();
+      }),
+      STEP,
+      "fonts",
+    );
+    assert.ok(!fonts.includes("error"), `a font failed to load: ${fonts}`);
+    assert.ok(
+      fonts.filter((f) => f === "loaded").length >= 2,
+      `fonts loaded: ${fonts}`,
+    );
+  } finally {
+    await bounded(context.close(), STEP, "context.close");
+  }
+}
+
 /** Page weight is a Chromium-only check: one engine is enough. */
 async function weigh(browser, viewport) {
   const context = await browser.newContext(contextOptions(viewport));
@@ -224,6 +270,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           console.error(`FAIL ${label}\n${error.message}`);
         }
       }
+    for (const viewport of VIEWPORTS) {
+      const label = `${engine} ${viewport.width}px: visible with motion on`;
+      try {
+        await checkVisibleWithMotion(browser, viewport);
+        console.log(`ok   ${label}`);
+      } catch (error) {
+        failures.push(label);
+        console.error(`FAIL ${label}\n${error.message}`);
+      }
+    }
     if (engine === "chromium")
       for (const viewport of VIEWPORTS) {
         const label = `chromium ${viewport.width}px: page weight`;

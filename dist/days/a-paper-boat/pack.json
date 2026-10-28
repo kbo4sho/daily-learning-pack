@@ -116,7 +116,7 @@
     "coverPlate": "wake",
     "coverText": "Little follows a list of folds. A penny waits beside the tub. Will one sheet of paper carry it?",
     "foldableTitle": "A little book of folding and floating.",
-    "parentNote": "Ages 6-8. Read six scenes at the child’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
+    "parentNote": "Age 8. Read six scenes at the child’s pace and connect each new word to the same boat. Welcome shared reading, spoken answers, and dictation.",
     "beats": [
       {
         "id": "wake",
@@ -289,7 +289,7 @@
       }
     ],
     "extension": "Choose one equation and say its command in words: add or subtract. Follow the command one step at a time.",
-    "parentNote": "Ages 6-8 math, number-crunch template. Six two-digit regrouping equations. Offer tens-and-ones sketches, counters, spoken reasoning, or a pause between pages.",
+    "parentNote": "Age 8 math, number-crunch template. Six two-digit regrouping equations. Offer tens-and-ones sketches, counters, spoken reasoning, or a pause between pages.",
     "eyebrow": "PRETEND BOAT COUNTS · SIX CHALLENGES",
     "actionLabel": "Follow a counting command",
     "printNote": "All numbers are pretend. Show your tens and ones or write your steps.",
@@ -368,7 +368,7 @@
       "text": "Accept one sensible command, spoken, dictated, or written. Example: “First fold the paper in half, then fold the corners down.” A clear two-step sequence is welcome."
     }
   ],
-  "parentGuidance": "Ages 6-8. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
+  "parentGuidance": "Age 8. Welcome shared reading and dictation. Buoyancy is the upward force exerted by water; for a floating boat it balances total weight. The air-filled interior helps exclude water, rather than making air a source of upward force. A flat dry sheet can float briefly; paper type, folds, load, tipping and soaking affect the result. The story includes selected folding commands, not a complete boat-making guide. All math counts and diorama loads and times are invented comparisons, not real capacities. An at-home try is optional: use a tub or sink with an adult nearby.",
   "sources": [
     {
       "label": "OpenStax · Archimedes’ principle and buoyancy",

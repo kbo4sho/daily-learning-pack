@@ -366,3 +366,136 @@ test("a heavy daily plate cannot make the welcome card heavy", async () => {
     await rm(root, { recursive: true, force: true });
   }
 });
+
+/** WCAG contrast from sRGB. Colors are [r, g, b] in 0..255. */
+const luminance = ([r, g, b]) =>
+  [r, g, b]
+    .map((v) => v / 255)
+    .map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4))
+    .reduce((sum, v, i) => sum + v * [0.2126, 0.7152, 0.0722][i], 0);
+const contrast = (a, b) => {
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+};
+const hex = (value) =>
+  [1, 3, 5].map((i) => parseInt(value.slice(i, i + 2), 16));
+const over = (fg, alpha, bg) =>
+  fg.map((v, i) => v * alpha + bg[i] * (1 - alpha));
+
+test("welcome colors meet WCAG AA contrast", async () => {
+  const css = await read("src/welcome.css");
+  const token = (name) =>
+    hex(css.match(new RegExp(`--${name}: (#[0-9a-f]{6})`, "i"))[1]);
+  const canvas = token("canvas");
+  const ink = token("ink");
+  const surface = token("surface");
+  // Text: 4.5. Large text and interface parts: 3.
+  for (const [name, bg, min] of [
+    ["ink", canvas, 4.5],
+    ["muted", canvas, 4.5],
+    ["muted", surface, 4.5],
+    ["gold-deep", canvas, 4.5],
+  ])
+    assert.ok(contrast(token(name), bg) >= min, `${name} on its background`);
+  assert.ok(
+    contrast(token("stock"), ink) >= 4.5,
+    "cream text on the dark card",
+  );
+  assert.ok(contrast(token("sky"), canvas) >= 3, "focus ring on paper");
+  assert.ok(contrast(token("stock"), ink) >= 3, "focus ring on the dark card");
+  // Rules that carry those colors.
+  assert.match(
+    css,
+    /\.w-cta input:focus-visible\s*\{[^}]*outline-color: var\(--stock\)/,
+    "dark-card focus ring uses the cream token",
+  );
+  assert.match(
+    css,
+    /\.w-step-num\s*\{[^}]*color: var\(--gold-deep\)/,
+    "step numerals use the dark gold",
+  );
+  const border = css.match(
+    /\.w-form input \{[^}]*border: 1px solid rgb\(255 252 246 \/ ([\d.]+)\)/,
+  );
+  assert.ok(border, "input border rule");
+  assert.ok(
+    contrast(over(surface, Number(border[1]), ink), ink) >= 3,
+    "input border against the dark card",
+  );
+});
+
+test("welcome sign-up stub is one disabled fieldset with a note above it", async () => {
+  const html = await read("dist/welcome/index.html");
+  const form = html.match(/<form[\s\S]*?<\/form>/)[0];
+  const fieldsets = [
+    ...form.matchAll(/<fieldset\b([^>]*)>([\s\S]*?)<\/fieldset>/g),
+  ];
+  assert.equal(fieldsets.length, 1, "exactly one fieldset");
+  const [whole, attrs, inner] = fieldsets[0];
+  assert.match(attrs, /(^|\s)disabled(\s|=|$)/, "the fieldset is disabled");
+  assert.ok(form.indexOf('id="w-form-note"') > -1, "note exists");
+  assert.ok(
+    form.indexOf('id="w-form-note"') < form.indexOf(whole),
+    "note is above",
+  );
+  assert.match(inner, /<legend class="w-sr">/);
+  // Every control lives inside the disabled fieldset, so none can be used.
+  const controls = (text) =>
+    [...text.matchAll(/<(input|button|select|textarea)\b/g)].length;
+  assert.equal(
+    controls(form),
+    controls(inner),
+    "no control outside the fieldset",
+  );
+  assert.equal([...form.matchAll(/<input\b/g)].length, 1);
+  assert.match(inner, /<input [^>]*aria-describedby="w-form-note"/);
+  assert.doesNotMatch(form, /\bname="(?!email")/);
+});
+
+test("welcome loads fonts and the hero efficiently", async () => {
+  const html = await read("dist/welcome/index.html");
+  const css = await read("dist/welcome/welcome.css");
+  // Every preloaded font exists, is local woff2, and is used by the stylesheet.
+  const preloads = [
+    ...html.matchAll(
+      /<link rel="preload" href="(\.\/fonts\/[^"]+)" as="font" type="font\/woff2" crossorigin>/g,
+    ),
+  ].map((m) => m[1]);
+  assert.ok(preloads.length >= 2);
+  const dist = new URL("../dist/welcome/", import.meta.url);
+  const urls = [
+    ...css.matchAll(/url\((["']?)(\.\/fonts\/[^)"']+\.woff2)\1\)/g),
+  ].map((m) => m[2]);
+  assert.ok(urls.length >= 4, "stylesheet declares the font files");
+  for (const href of new Set([...preloads, ...urls])) {
+    // A real woff2 file, not an empty or misnamed one.
+    const bytes = await readFile(new URL(href, dist));
+    assert.ok(bytes.length > 5_000, `${href} is ${bytes.length} bytes`);
+    assert.equal(bytes.subarray(0, 4).toString("latin1"), "wOF2", href);
+  }
+  for (const href of preloads) assert.ok(css.includes(href), href);
+  // Font weight on disk: both families together stay small.
+  const dir = new URL("../dist/welcome/fonts/", import.meta.url);
+  let total = 0;
+  for (const name of await readdir(dir))
+    if (name.endsWith(".woff2"))
+      total += (await readFile(new URL(name, dir))).length;
+  assert.ok(total <= 160_000, `fonts are ${total} bytes`);
+  // The hero is the one image that loads first; everything else waits.
+  const imgs = [...html.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
+  const hero = imgs.filter((i) => i.includes("w-hero-img"));
+  assert.equal(hero.length, 1);
+  assert.match(hero[0], /fetchpriority="high"/);
+  assert.doesNotMatch(hero[0], /loading="lazy"/);
+  for (const img of imgs.filter((i) => !i.includes("w-hero-img")))
+    assert.match(img, /loading="lazy"/, img.slice(0, 60));
+});
+
+test("welcome motion never leaves content invisible", async () => {
+  const css = await read("src/welcome.css");
+  const frames = [...css.matchAll(/@keyframes (w-[\w-]+)\s*\{([\s\S]*?)\n\}/g)];
+  assert.ok(frames.length >= 2);
+  for (const [, name, body] of frames)
+    assert.doesNotMatch(body, /opacity/, `${name} must not animate opacity`);
+  assert.match(css, /prefers-reduced-motion: reduce/);
+});
