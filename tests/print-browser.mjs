@@ -61,10 +61,15 @@ const MENU = {
 const CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
 const BUNDLE = ["math", "foldable", "writing"];
-// Words that mean a process note, a model name, or a local path reached print.
+// Process notes, model names and local paths that must never reach print. This
+// is a second look: `node scripts/privacy-check.mjs dist` (run in CI) applies
+// the full public policy to every PDF in dist/. Lesson words (a codex is a
+// book, Claude is a name) are left out here on purpose.
 const PROCESS =
-  /\b(?:codex|firstmate|chatgpt|openai|claude|gpt-?\d[\w.-]*|TODO|FIXME|WIP|FM-\d+)\b|\/(?:Users|home|tmp|var)\/\w/i;
-const AGE_RANGE = /\bAges?\s*\d+\s*[-–]\s*\d+/i;
+  /\b(?:firstmate|chatgpt|openai|gpt-?\d[\w.-]*|TODO|FIXME|FM-\d+)\b|\/(?:Users|home|tmp|var)\/\w/i;
+// Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
+const AGE_RANGE =
+  /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
 
 for (const tool of ["pdfinfo", "pdftotext", "pdftoppm", "pdfimages"]) {
   const probe = spawnSync(tool, ["-v"], { timeout: TOOL });
@@ -172,7 +177,7 @@ function pageText(path, page) {
 async function checkPdf(
   path,
   name,
-  { text = true, inkMin = INK_MIN, needPicture = false } = {},
+  { text = true, inkMin = INK_MIN, needPicture = false, title = null } = {},
 ) {
   const bytes = await readFile(path);
   assert.equal(
@@ -211,8 +216,21 @@ async function checkPdf(
       t.trim().length >= 20 || hasPicture,
       `${name}: page ${at} has no text and no picture`,
     );
+    // Every text sheet names today's pack, so one stale sheet copied from an
+    // earlier day cannot hide inside a PDF.
+    if (title && t.trim().length >= 20)
+      assert.ok(
+        squash(t).includes(squash(title)),
+        `${name}: page ${at} does not name today's pack`,
+      );
     pages.push(t);
   }
+  if (title)
+    assert.ok(
+      squash(meta.title).includes(squash(title)) ||
+        squash(meta.title).includes(squash(pack.topic)),
+      `${name}: document title "${meta.title}" is not today's pack`,
+    );
   const all = pages.join("\n");
   if (text) assert.ok(all.trim().length >= 20, `${name}: no text layer`);
   for (const [label, value] of [
@@ -240,14 +258,20 @@ async function checkPdf(
   };
 }
 
-const server = await serve(root, 0);
-const origin = `http://127.0.0.1:${server.address().port}`;
-const base = `${origin}/daily-learning-pack`;
 const pack = JSON.parse(
   await readFile(join(root, "today", "pack.json"), "utf8"),
 );
-const age = squash(`AGE${pack.targetAge}`);
 const pdfDir = join(root, "today", "pdf");
+// Every PDF that ships on /today/: each must be linked from the page.
+const shipped = readdirSync(pdfDir)
+  .filter((f) => f.endsWith(".pdf"))
+  .map((f) => f.replace(/\.pdf$/, ""))
+  .sort();
+assert.ok(shipped.length >= CORE.length, `only ${shipped.length} PDFs shipped`);
+const server = await serve(root, 0);
+const origin = `http://127.0.0.1:${server.address().port}`;
+const base = `${origin}/daily-learning-pack`;
+const age = squash(`AGE${pack.targetAge}`);
 const failures = [];
 let browser;
 
@@ -334,6 +358,18 @@ try {
           assert.match(entries[at].text, MENU[name], `label for ${name}`);
         }
         assert.equal(names[0], "kid-worksheets", "Print today comes first");
+        assert.deepEqual(
+          [...new Set(names)].sort(),
+          shipped,
+          "the Print menu and dist/today/pdf list different PDFs",
+        );
+        const extra = {
+          "lab-page": /^Table-top lab/,
+          "lab-page-key": /table-top lab guide/i,
+        };
+        for (const [name, label] of Object.entries(extra))
+          if (names.includes(name))
+            assert.match(entries[names.indexOf(name)].text, label, name);
         // Every entry that is there (extras like the table-top lab included)
         // must be on screen and tall enough to tap.
         for (const e of entries)
@@ -342,6 +378,7 @@ try {
               e.box.height > 14 &&
               e.box.x >= 0 &&
               e.box.y >= 0 &&
+              e.box.y + e.box.height <= viewport.height &&
               e.box.x + e.box.width <= viewport.width + 1,
             `entry "${e.text}" is not on screen: ${JSON.stringify(e.box)}`,
           );
@@ -452,7 +489,7 @@ try {
   await step(
     "every printable PDF on /today/ is a clean Letter sheet",
     async () => {
-      assert.ok(linked.length >= CORE.length, "no PDFs were linked");
+      assert.deepEqual(linked.slice().sort(), shipped, "linked PDFs differ");
       for (const name of linked) {
         const path = join(pdfDir, `${name}.pdf`);
         // The foldable is a picture of the folded sheet and has no text layer.
@@ -460,6 +497,7 @@ try {
         checked[name] = await checkPdf(path, name, {
           text: !foldable,
           needPicture: foldable,
+          title: pack.title,
         });
         summary.pdfs[name] = {
           pages: checked[name].pages,
@@ -496,7 +534,9 @@ try {
         );
       }
       for (const [name, r] of Object.entries(checked)) {
-        const ages = [...squash(r.text).matchAll(/AGE(\d+)/g)].map((m) => m[1]);
+        const ages = [...squash(r.text).matchAll(/AGES?(\d+)/g)].map(
+          (m) => m[1],
+        );
         assert.ok(
           ages.every((n) => n === String(pack.targetAge)),
           `${name}: printed age ${ages} differs from pack age ${pack.targetAge}`,

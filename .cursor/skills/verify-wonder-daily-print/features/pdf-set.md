@@ -8,7 +8,8 @@
 - Every page of every PDF is US Letter.
 - Header text says Wonder Daily and `Age <targetAge>` (never an age range) on
   math, reading, answer key, and Print today.
-- No private name or process note in the text or metadata.
+- No private name, process note or local path in the text or metadata; every text
+  sheet names today's pack.
 - `/today/` and `/days/<slug>/` hold identical bytes.
 
 ## How to get to it (user POV)
