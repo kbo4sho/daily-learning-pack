@@ -46,7 +46,7 @@
       },
       {
         "id": "notice",
-        "plate": "notice",
+        "plate": "return",
         "question": "How can the same slider open the zipper again?",
         "notice": "Moving the other way sends the joined row toward the fork in the channel.",
         "say": "The center wedge guides the interlocked teeth apart and sends each row out a different side.",
@@ -117,7 +117,7 @@
     "foldableTitle": "A little book of tiny teeth",
     "foldableCoverLine": "How a Zipper Works",
     "foldableNote": "Follow two rows through one hidden path.",
-    "parentNote": "Ages 6-8. Welcome spoken answers and dictation. Use an intact zipper only, and keep fingers and loose fabric away from the moving slider.",
+    "parentNote": "Age 8. Welcome spoken answers and dictation. Use an intact zipper only, and keep fingers and loose fabric away from the moving slider.",
     "beats": [
       {
         "id": "wake",
