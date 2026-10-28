@@ -69,9 +69,12 @@ const BUNDLE = ["math", "foldable", "writing"];
 // Local paths: Unix-style system and home directories (at the start of a word),
 // Windows drive and UNC paths. The shared policy knows fewer of them.
 const LOCAL_PATH =
-  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/\w|\b[A-Za-z]:\\[\w .-]+\\|\\\\[\w.-]+\\[\w$.-]+/;
+  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/\w|\bfile:\/\/|\b[A-Za-z]:[\\/][\w .-]+[\\/]|\\\\[\w.-]+\\[\w$.-]+/;
 for (const bad of [
   "/root/build/x",
+  "file:///home/runner/work/a.pdf",
+  "file:///workspace/out.pdf",
+  "D:/work/a.pdf",
   "see /workspace/job/out.pdf",
   "/home/runner/work/f",
   ["", "Users", "me", "f"].join("/"),
@@ -86,6 +89,9 @@ for (const fine of [
   "a 1/2 cup",
   "home/work balance",
   "Add 40 to get 85",
+  "Note: 3/4 of a cup",
+  "https://example.org/home/page",
+  "at 10:30/11:00",
 ])
   assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
@@ -379,6 +385,22 @@ assert.ok(
   "pack.json has no writing frames",
 );
 assert.ok(pack.reading?.title?.trim(), "pack.json has no reading title");
+assert.ok(
+  Array.isArray(pack.reading?.beats) &&
+    pack.reading.beats.length >= 1 &&
+    pack.reading.beats.every(
+      (b) => typeof b?.passage === "string" && b.passage.trim().length > 20,
+    ),
+  "pack.json has no reading passages",
+);
+assert.ok(
+  Array.isArray(pack.reading?.questions) &&
+    pack.reading.questions.length >= 1 &&
+    pack.reading.questions.every(
+      (q) => typeof q === "string" && q.trim().length > 5,
+    ),
+  "pack.json has no reading questions",
+);
 const filled2 = (v) => typeof v === "string" && v.trim().length >= 2;
 const filled = (v) => typeof v === "string" && v.trim().length > 3;
 assert.ok(pack.topic?.trim().length >= 2, "pack.json has no topic");
@@ -873,6 +895,10 @@ try {
       for (const frame of pack.writing.frames)
         has("writing", frame.start, `writing starter "${frame.start}"`);
       has("reading", pack.reading.title, "the reading title");
+      for (const [i, b] of pack.reading.beats.entries())
+        has("reading", b.passage, `reading passage ${i + 1}`);
+      for (const [i, q] of pack.reading.questions.entries())
+        has("reading", q, `reading question ${i + 1}`);
       // The answer key holds this pack's answers, not another sheet's.
       for (const task of pack.math.tasks)
         has(
