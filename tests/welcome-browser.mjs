@@ -178,7 +178,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           const total = sizes.reduce((a, [, n]) => a + n, 0);
           const biggest = [...sizes].sort((a, b) => b[1] - a[1])[0];
           console.log(
-            `ok   ${label}: ${total} bytes, ${sizes.size} requests, largest ${biggest[1]} ${biggest[0].split("/").pop()}`,
+            `ok   ${label}: ${total} bytes, ${sizes.length} requests, largest ${biggest[1]} ${biggest[0].split("/").pop()}`,
           );
           assert.ok(
             total <= LIMIT[viewport.width],
