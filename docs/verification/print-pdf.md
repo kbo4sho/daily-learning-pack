@@ -24,16 +24,17 @@ clear message if `pdfinfo`, `pdftotext`, `pdftoppm` or `pdfimages` is missing
 
 | # | Step | Passes when |
 | --- | --- | --- |
-| 1 | Open `/today/` at 390 px and 1280 px, tap **Print** | The button reads "Print", is at least 44 px, on screen, opaque, reachable by a tap and has contrast of at least 4.5; the menu starts closed and opens; it lists Print today (first), Foldable story, Math, Reading pages, Writing, Answer key by those labels, and exactly the PDFs in `dist/today/pdf/`; `dist/today/pdf/` must itself equal those six plus every sheet in `pack.screenFree` and its `-key` sheet (so a vanished extra fails); every entry is at least 40 px tall, visible, opaque, not covered (five sample points) and inside the viewport |
+| 1 | Open `/today/` at 390 px and 1280 px, tap **Print** | The button reads "Print", is at least 44 px, on screen, opaque, reachable by a tap and has contrast of at least 4.5 (text colour and every ancestor background layer composited, so a see-through background cannot fake it); the menu starts closed and opens; it lists Print today (first), Foldable story, Math, Reading pages, Writing, Answer key by those labels, and exactly the PDFs in `dist/today/pdf/`; `dist/today/pdf/` must itself equal those six plus every sheet in `pack.screenFree` and its `-key` sheet (so a vanished extra fails); every entry is at least 40 px tall, visible, opaque, not covered (five sample points) and inside the viewport |
 | 2 | Escape, then an outside click | Menu closes; focus returns to the Print button itself |
 | 3 | Fetch every menu link and every other same-site `.pdf` link on the page | Menu links stay on this site (a cited source on another site elsewhere on the page is left alone); same-site links sit under `/today/pdf/`, HTTP 200, `application/pdf`, body starts `%PDF-` and equals `dist/today/pdf/<name>.pdf` byte for byte |
-| 4 | Click **Print today** | The click hands over a download (or opens a popup) whose bytes equal `dist/today/pdf/kid-worksheets.pdf`; a handler that swallows the click fails |
-| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the answer key holds this pack's worked answers, reading answers and quiz answers; header and footer lines also pass the process-note phrase check; the table-top lab lists its materials and its key says grown-ups only; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
-| 6 | Header text | "Wonder Daily" and `Age <targetAge from pack.json>` on Print today, Math, Reading and Answer key; today's title present; no age range ("Ages 6-8"); every printed `AGE n` equals the pack age |
-| 7 | Privacy | Text and metadata of every PDF pass `privacyIssues` from `scripts/privacy-check.mjs` (private names including `WD_PRIVATE_NAMES`, local paths, host names) and a local macOS/Linux/Windows path pattern; metadata and each page's header and footer lines also pass the process-note phrase check. Lesson body text is not phrase-checked, as in that policy. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
+| 4 | Click **every** Print menu entry, each in a fresh page | Each real click hands over a download, a popup or a navigation whose bytes equal `dist/today/pdf/<name>.pdf`; a handler that swallows the click on any entry (not only Print today) fails |
+| 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the answer key holds this pack's worked answers, reading answers and quiz answers; header and footer lines also pass the process-note phrase check; the table-top lab lists its materials and its key says grown-ups only; when `pack.screenFree` lists `lab-page`, `pack.labPage.materials` must be a non-empty list and every material is on the lab sheet (an empty or missing list fails instead of passing vacuously);
+ the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
+| 6 | Header text | "Wonder Daily" and `Age <targetAge from pack.json>` on Print today, Math, Reading and Answer key; today's title present; no age range ("Ages 6-8"); every printed `AGE n` equals the pack age. Each header line is split into segments and read on word boundaries, so "PAGE 8" is not an age and "Ages 6-8" or "Age 8-10" is an age range |
+| 7 | Privacy | Text and metadata of every PDF pass `privacyIssues` from `scripts/privacy-check.mjs` (private names including `WD_PRIVATE_NAMES`, local paths, host names) and a broad local-path pattern (`/root`, `/workspace`, `/home`, `/Users`, `/tmp`, `/var`, `/opt`, `/etc`, `/private`, `/mnt`, `/srv`, `/usr`, Windows drive and UNC paths; the pattern is itself asserted against good and bad samples); metadata and each page's header and footer lines also pass the process-note phrase check. Lesson body text is not phrase-checked, as in that policy. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
 | 8 | Same bytes | `/today/pdf/*.pdf` equals `/days/<slug>/pdf/*.pdf` |
-| 9 | `/today/` age | A visible "For grown-ups · Age N" summary (N from `pack.json`), and no age range anywhere in the page text |
-| 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, names today's pack (title or reading title), points at the Print menu, every image loaded, no empty sheet (at least 0.2% ink) |
+| 9 | `/today/` age | A visible summary whose text is exactly "For grown-ups · Age N" (N from `pack.json`), and no age range anywhere in the page text |
+| 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, names today's pack (title or reading title), points at the Print menu, every image loaded (waits up to 10 s for all pictures to finish before printing, and fails if any is broken or there are none), no empty sheet (at least 0.2% ink) |
 | 11 | Browser Print of `/welcome/` | Exactly 2 Letter sheets; at least six pictures on the page and at least six image objects in the PDF (the same loose floor as `tests/welcome-browser.mjs`: masks and duplicates count, and Chromium builds size them differently); every image loaded |
 
 No check in this file changes published pages; the script only reads `dist/`.
@@ -55,7 +56,7 @@ No check in this file changes published pages; the script only reads `dist/`.
 ## Proof that it can fail
 
 Each of these was applied to a copy of `dist/` and the check went red:
-a PDF replaced by a blank page ("looks blank"), a PDF deleted (404), a see-through or covered menu, a swallowed Print today click, a link
+a PDF replaced by a blank page ("looks blank"), a PDF deleted (404), a see-through or covered menu, a swallowed click on a Print menu entry (Math, not only Print today), a lab page declared with empty materials, a "Page 8" age footer, a see-through trigger background, a link
 pointing off the site or at another folder, a renamed menu label, "Print today"
 made of Math twice ("sheet 3 is not foldable"), a stale sheet from an earlier day
 inside Print today, an answer key or lab sheet swapped for another PDF, a lab PDF whose menu link was removed, the pack
@@ -84,9 +85,20 @@ purpose.
    change the check and this record in the same pull request. Do not loosen an
    assertion to get green.
 
+## Known limitation: the Foldable story has no text layer
+
+The Foldable story PDF is a single image-only sheet (a raster, no text layer), so
+`pdftotext` cannot read it. A wrong but well-formed picture there is caught only by
+its size, ink, document title, a real full-size picture, and the page-for-page picture
+comparison against the Foldable sheet inside Print today. Its copy is not tied back to
+`pack.json` by this check. This is a known, documented gap, and Firstmate has accepted it
+for now. Two things would close it: OCR on the CI runner (read the raster and compare to
+`pack.json`), or a text layer in the foldable generation (so `pdftotext` can read it).
+Either is a follow-up; neither is done in this change.
+
 ## Not covered
 
-The Foldable's own picture: its copy is not read back (it has no text layer), so a wrong
+The Foldable's own picture (see above): its copy is not read back (it has no text layer), so a wrong
 but well-formed raster there is caught only by size, ink, title and the page-for-page
 comparison inside Print today. Its words come from `pack.json`, which the public privacy
 scan already reads. Also not covered:

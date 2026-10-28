@@ -19,8 +19,10 @@ Open `/today/`, tap **Print** in the header.
 
 `details.print-menu summary` click, then read `details.print-menu a` boxes at
 390 px and 1280 px; `keyboard.press("Escape")`; `mouse.click` near the bottom
-edge; `context.request.get(url)` for each PDF; click
-`a[href$="kid-worksheets.pdf"]` and wait for the response.
+edge; `context.request.get(url)` for each PDF; then, in a fresh page per entry,
+click every `details.print-menu a` and wait for the download, popup or navigation
+and compare its bytes with `dist/today/pdf/<name>.pdf`. Contrast is computed
+with alpha (ancestor backgrounds composited).
 End state: menu closed again, all entries on screen, PDFs fetched.
 
 ## Gotchas
