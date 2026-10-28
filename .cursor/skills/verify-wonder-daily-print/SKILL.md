@@ -25,7 +25,9 @@ npm run verify:print                     # the whole proof (about 5 s)
 `verify:print` is `node tests/print-browser.mjs`. It starts its own static
 server on a random port (so it never collides with `npm run preview` on 4173)
 and tears it down. It needs `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages`
-(poppler-utils; `brew install poppler` on macOS; present on ubuntu-latest).
+(poppler-utils; `brew install poppler` on macOS). The script checks for them
+first and stops with a clear message. CI already needs `pdfinfo` for
+`tests/family.test.mjs`.
 Ready means the last line reads `print-browser: all checks passed`.
 CI runs it inside the existing `check` job via `npm run test:browser`.
 
@@ -63,9 +65,10 @@ poppler, not the HTML that links to them; look at the PNGs when a check fails.
 
 ## Cleanup
 
-The script closes its own browser and server. Scratch copies you make with
-`WD_TEST_ROOT` are yours to delete. Evidence is never deleted by the script;
-delete `output/print-verify/` only when you no longer need it. Never kill
+The script closes its own browser and server (also when a check fails). Scratch copies you make with
+`WD_TEST_ROOT` are yours to delete. The script only replaces the PNG, PDF and JSON files of its own earlier run
+(folders it marked with `.print-verify`); delete `output/print-verify/` when
+you no longer need it. Never kill
 processes by name.
 
 ## Features
