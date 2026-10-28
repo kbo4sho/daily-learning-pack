@@ -427,13 +427,29 @@ test("welcome colors meet WCAG AA contrast", async () => {
 test("welcome sign-up stub is one disabled fieldset with a note above it", async () => {
   const html = await read("dist/welcome/index.html");
   const form = html.match(/<form[\s\S]*?<\/form>/)[0];
-  const note = form.indexOf('id="w-form-note"');
-  const fieldset = form.indexOf("<fieldset disabled");
-  assert.ok(note > -1 && fieldset > note, "note comes before the fieldset");
-  assert.match(form, /<legend class="w-sr">/);
-  assert.match(form, /<input [^>]*aria-describedby="w-form-note"/);
-  assert.doesNotMatch(form, /\bname="(?!email")/);
+  const fieldsets = [
+    ...form.matchAll(/<fieldset\b([^>]*)>([\s\S]*?)<\/fieldset>/g),
+  ];
+  assert.equal(fieldsets.length, 1, "exactly one fieldset");
+  const [whole, attrs, inner] = fieldsets[0];
+  assert.match(attrs, /(^|\s)disabled(\s|=|$)/, "the fieldset is disabled");
+  assert.ok(form.indexOf('id="w-form-note"') > -1, "note exists");
+  assert.ok(
+    form.indexOf('id="w-form-note"') < form.indexOf(whole),
+    "note is above",
+  );
+  assert.match(inner, /<legend class="w-sr">/);
+  // Every control lives inside the disabled fieldset, so none can be used.
+  const controls = (text) =>
+    [...text.matchAll(/<(input|button|select|textarea)\b/g)].length;
+  assert.equal(
+    controls(form),
+    controls(inner),
+    "no control outside the fieldset",
+  );
   assert.equal([...form.matchAll(/<input\b/g)].length, 1);
+  assert.match(inner, /<input [^>]*aria-describedby="w-form-note"/);
+  assert.doesNotMatch(form, /\bname="(?!email")/);
 });
 
 test("welcome loads fonts and the hero efficiently", async () => {
@@ -446,6 +462,17 @@ test("welcome loads fonts and the hero efficiently", async () => {
     ),
   ].map((m) => m[1]);
   assert.ok(preloads.length >= 2);
+  const dist = new URL("../dist/welcome/", import.meta.url);
+  const urls = [
+    ...css.matchAll(/url\((["']?)(\.\/fonts\/[^)"']+\.woff2)\1\)/g),
+  ].map((m) => m[2]);
+  assert.ok(urls.length >= 4, "stylesheet declares the font files");
+  for (const href of new Set([...preloads, ...urls])) {
+    // A real woff2 file, not an empty or misnamed one.
+    const bytes = await readFile(new URL(href, dist));
+    assert.ok(bytes.length > 5_000, `${href} is ${bytes.length} bytes`);
+    assert.equal(bytes.subarray(0, 4).toString("latin1"), "wOF2", href);
+  }
   for (const href of preloads) assert.ok(css.includes(href), href);
   // Font weight on disk: both families together stay small.
   const dir = new URL("../dist/welcome/fonts/", import.meta.url);

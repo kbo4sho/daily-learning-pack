@@ -203,6 +203,23 @@ async function checkVisibleWithMotion(browser, viewport) {
         .map((el) => el.className || el.tagName),
     );
     assert.deepEqual(hidden, []);
+    // The local fonts load: none failed, and the ones the page uses are in.
+    const fonts = await bounded(
+      page.evaluate(async () => {
+        const settled = Date.now() + 8000;
+        const status = () => [...document.fonts].map((f) => f.status);
+        while (Date.now() < settled && !status().includes("loaded"))
+          await new Promise((resolve) => setTimeout(resolve, 100));
+        return status();
+      }),
+      STEP,
+      "fonts",
+    );
+    assert.ok(!fonts.includes("error"), `a font failed to load: ${fonts}`);
+    assert.ok(
+      fonts.filter((f) => f === "loaded").length >= 2,
+      `fonts loaded: ${fonts}`,
+    );
   } finally {
     await bounded(context.close(), STEP, "context.close");
   }
