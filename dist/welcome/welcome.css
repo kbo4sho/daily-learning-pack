@@ -2,13 +2,13 @@
 @font-face {
   font-family: Newsreader;
   src: url("./fonts/newsreader-latin-variable.woff2") format("woff2");
-  font-weight: 300 700;
+  font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: Newsreader;
   src: url("./fonts/newsreader-latin-italic-variable.woff2") format("woff2");
-  font-weight: 300 700;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
@@ -100,6 +100,13 @@ button:focus-visible,
 input:focus-visible {
   outline: 3px solid var(--sky);
   outline-offset: 3px;
+}
+
+/* On the dark card the blue ring is too faint; use the card's own cream. */
+.w-cta a:focus-visible,
+.w-cta button:focus-visible,
+.w-cta input:focus-visible {
+  outline-color: var(--stock);
 }
 
 /* ---------- masthead ---------- */
@@ -434,7 +441,7 @@ section + section::before {
 .w-step-num {
   margin: var(--s5) 0 var(--s1);
   font: italic 400 1.5rem/1 var(--serif);
-  color: var(--gold);
+  color: var(--gold-deep);
 }
 .w-step h3 {
   font-size: 1.75rem;
@@ -469,6 +476,20 @@ section + section::before {
 .w-cta em {
   color: var(--stock);
 }
+.w-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.w-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .w-form label {
   display: block;
   margin-bottom: var(--s2);
@@ -481,7 +502,7 @@ section + section::before {
 .w-form input {
   min-height: 52px;
   padding: 0 var(--s4);
-  border: 1px solid rgb(255 252 246 / 0.3);
+  border: 1px solid rgb(255 252 246 / 0.5);
   border-radius: 999px;
   background: rgb(255 252 246 / 0.06);
   color: var(--surface);
@@ -500,7 +521,7 @@ section + section::before {
   cursor: not-allowed;
 }
 .w-form-note {
-  margin: var(--s3) 0 0;
+  margin: 0 0 var(--s4);
   font-size: 0.875rem;
   color: rgb(255 252 246 / 0.72);
 }
@@ -533,9 +554,10 @@ section + section::before {
     }
   }
 }
+/* Movement only. Nothing starts invisible, so a page that never scrolls
+   (a screenshot, a print) still shows every block. */
 @keyframes w-settle {
   from {
-    opacity: 0;
     transform: translateY(18px);
   }
 }
@@ -546,7 +568,6 @@ section + section::before {
 }
 @keyframes w-dusk {
   from {
-    opacity: 0;
     filter: brightness(0.92);
   }
 }
