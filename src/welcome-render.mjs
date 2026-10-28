@@ -87,7 +87,7 @@ export function welcomePage({ tonight }) {
     <div class="w-hero-copy">
       <p class="w-kicker">For parents</p>
       <h1 id="w-hero-title">One learning pack a day.<br><em>Built around one question.</em></h1>
-      <p class="w-lede">Wonder Daily is one printable learning pack a day. Each pack has a story to read, a few problems, and something to do or make. Your child can work on paper or on a tablet. You sit with them.</p>
+      <p class="w-lede">Wonder Daily is one printable learning pack a day. Each pack has a story to read, a few problems, and something to do or make. Print the pages, or open the pack on a tablet. You sit with your child while they work.</p>
       <a class="w-start" href="#start">Sign-up status <span aria-hidden="true">→</span></a>
     </div>
     <article class="w-pack" aria-label="Latest pack">
@@ -101,9 +101,9 @@ export function welcomePage({ tonight }) {
 
   <section class="w-doors" aria-labelledby="w-doors-title">
     <p class="w-kicker">More than one child</p>
-    <h2 id="w-doors-title">One family page.<br><em>One door per child.</em></h2>
+    <h2 id="w-doors-title">One family page.<br><em>Two doors.</em></h2>
     ${squiggle}
-    <p class="w-lede">Bookmark one family page. Each child has a door to the latest pack, past packs, and printable PDFs.</p>
+    <p class="w-lede">Bookmark one family page. It has two doors, one for Big Wonderer and one for Little Wonderer.</p>
     <div class="w-family">
       <p class="w-family-label">Family page <span>bookmark it once</span></p>
       <div class="w-door-row">${door(WELCOME_ART.doorBig, "Big Wonderer’s door", "Reading, math, and writing.", "is-big")}${door(WELCOME_ART.doorLittle, "Little Wonderer’s door", "Picture stories, counting, and tracing.", "is-little")}
@@ -116,7 +116,7 @@ export function welcomePage({ tonight }) {
     <p class="w-kicker">How it works</p>
     <h2 id="w-how-title">Three steps.<br><em>One pack a day.</em></h2>
     ${squiggle}
-    <ol class="w-steps">${step("i.", WELCOME_ART.stepPick, "Start with one question.", "Each pack is built around one everyday question. The story, math, and activities all come back to it.", "A big bear and a small bear look at a moon pebble, a snail shell and a tiny raincloud in a jar on a low table.")}${step("ii.", WELCOME_ART.stepRead, "Work through it together.", "Read the story aloud, then do the math and the activity. Your child can use the printed pages or a tablet.", "A big bear and a small bear reading a printed booklet together on a bed under lamplight.")}${step("iii.", WELCOME_ART.stepNote, "Check the answers.", "A separate answer key for grown-ups has the answers and notes for you. Print it apart from your child’s pages.", "A big bear alone at a kitchen table with a cup of tea, reading a small folded note.")}
+    <ol class="w-steps">${step("i.", WELCOME_ART.stepPick, "Start with one question.", "Each pack is built around one everyday question. The story, math, and activities all come back to it.", "A big bear and a small bear look at a moon pebble, a snail shell and a tiny raincloud in a jar on a low table.")}${step("ii.", WELCOME_ART.stepRead, "Work through it together.", "Read the story aloud, then work through the problems and the activity. Print the pages, or open the pack on a tablet.", "A big bear and a small bear reading a printed booklet together on a bed under lamplight.")}${step("iii.", WELCOME_ART.stepNote, "Check the answers.", "Big Wonderer’s pack comes with a separate answer key for grown-ups. Print it apart from your child’s pages.", "A big bear alone at a kitchen table with a cup of tea, reading a small folded note.")}
     </ol>
   </section>
 
