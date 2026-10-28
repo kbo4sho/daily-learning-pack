@@ -9,12 +9,12 @@ const hero = new URL("img/hero-1600.webp", dir).pathname;
 // 1200x630 link-preview card: the hero scaled to 1200 wide, cropped in height.
 await sharp(hero)
   .resize(1200, 800)
-  .extract({ left: 0, top: 100, width: 1200, height: 630 })
+  .extract({ left: 0, top: 60, width: 1200, height: 630 })
   .jpeg({ quality: 82, mozjpeg: true })
   .toFile(new URL("share-1200x630.jpg", dir).pathname);
 
 // Icons: the two bears, square crop.
-const bears = { left: 440, top: 220, width: 800, height: 800 };
+const bears = { left: 520, top: 300, width: 560, height: 560 };
 for (const [name, size] of [
   ["favicon-32.png", 32],
   ["apple-touch-icon.png", 180],
