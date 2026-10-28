@@ -19,7 +19,7 @@ Pick an entry in the Print menu; the PDF opens or downloads, then prints.
 
 ## Driving it with poppler
 
-`pdfinfo` (pages, size, title), `pdftotext -layout -f N -l N` per page,
+`pdfinfo` (pages, size, title), one `pdftotext -layout` call per PDF (pages split on form feeds),
 `pdftoppm -r 50 -png` then ink share per page, `pdfimages -list` for
 picture-only sheets. End state: all assertions in `checkPdf` pass.
 
