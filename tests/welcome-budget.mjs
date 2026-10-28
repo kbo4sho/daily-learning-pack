@@ -6,5 +6,8 @@
 // Each of those PRs lowers LIMIT. The last step sets LIMIT to TARGET plus a
 // small margin. Never raise LIMIT to make a build pass.
 export const TARGET_390 = 600_000;
-export const LIMIT = { 390: 890_000, 820: 970_000, 1440: 780_000 };
+export const LIMIT = { 390: 840_000, 820: 880_000, 1440: 740_000 };
+// The pack-card plate changes every day and is budgeted by itself: the page
+// total below leaves it out, and each plate copy must stay under PLATE_LIMIT.
+export const PLATE_LIMIT = 100_000;
 export const MAX_IMAGE = 210_000;

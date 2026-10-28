@@ -5,6 +5,14 @@ import { join } from "node:path";
 import { welcomePage } from "../src/welcome-render.mjs";
 import { esc } from "../src/html.mjs";
 import { privacyIssues } from "../scripts/privacy-check.mjs";
+import {
+  PLATE_MAX_BYTES,
+  PLATE_WIDTHS,
+  webFace,
+} from "../scripts/render-archive.mjs";
+import { mkdir, mkdtemp, rm, stat, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import sharp from "sharp";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -292,5 +300,39 @@ test("the pack-card plate is a small webp copy, not the raw story plate", async 
       await readFile(new URL(`../dist/welcome/img/${name}`, import.meta.url))
     ).length;
     assert.ok(bytes < 110_000, `${name} is ${bytes} bytes`);
+  }
+});
+
+test("a heavy daily plate cannot make the welcome card heavy", async () => {
+  // Worst case for a lossy codec: full-size random noise. A real plate is far
+  // lighter, so if this fits the caps, any future day fits.
+  const root = await mkdtemp(join(tmpdir(), "welcome-plate-"));
+  try {
+    const width = 1536;
+    const height = 1024;
+    const noise = Buffer.alloc(width * height * 3);
+    for (let i = 0; i < noise.length; i++) noise[i] = (i * 2654435761) >>> 24;
+    await mkdir(`${root}/days/heavy`, { recursive: true });
+    await sharp(noise, { raw: { width, height, channels: 3 } })
+      .jpeg({ quality: 95 })
+      .toFile(`${root}/days/heavy/plate.jpg`);
+    assert.ok((await stat(`${root}/days/heavy/plate.jpg`)).size > 600_000);
+    const face = await webFace(root, {
+      src: "../days/heavy/plate.jpg",
+      alt: "x",
+    });
+    assert.match(face.src, /^\.\/img\/plate-1024\.webp$/);
+    for (const w of PLATE_WIDTHS)
+      assert.ok(
+        (await stat(`${root}/welcome/img/plate-${w}.webp`)).size <=
+          PLATE_MAX_BYTES[w],
+        `plate-${w}.webp is over its cap`,
+      );
+    // A file that cannot be read keeps the original plate.
+    await writeFile(`${root}/days/heavy/bad.jpg`, "not an image");
+    const bad = { src: "../days/heavy/bad.jpg", alt: "x" };
+    assert.deepEqual(await webFace(root, bad), bad);
+  } finally {
+    await rm(root, { recursive: true, force: true });
   }
 });

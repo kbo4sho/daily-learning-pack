@@ -187,6 +187,8 @@ async function writeArchive(root) {
 
 /** Widths of the pack-card plate copies, in CSS-pixel-times-density steps. */
 export const PLATE_WIDTHS = [640, 1024];
+/** Byte caps per copy, so no daily plate can make the welcome page heavy. */
+export const PLATE_MAX_BYTES = { 640: 55_000, 1024: 100_000 };
 
 /**
  * The card plate is a 1.5K-wide story illustration. The welcome card shows it
@@ -203,11 +205,18 @@ export async function webFace(root, face) {
     const widths = PLATE_WIDTHS.filter((w) => w <= meta.width);
     if (!widths.length) return face;
     await mkdir(`${root}/welcome/img`, { recursive: true });
-    for (const w of widths)
-      await sharp(source)
-        .resize({ width: w })
-        .webp({ quality: 74, effort: 5 })
-        .toFile(`${root}/welcome/img/plate-${w}.webp`);
+    for (const w of widths) {
+      // Step the quality down until the copy fits its cap.
+      let bytes;
+      for (const quality of [74, 66, 58, 50, 42, 34, 26, 18, 10, 4]) {
+        bytes = await sharp(source)
+          .resize({ width: w })
+          .webp({ quality, effort: 5 })
+          .toBuffer();
+        if (bytes.length <= PLATE_MAX_BYTES[w]) break;
+      }
+      await writeFile(`${root}/welcome/img/plate-${w}.webp`, bytes);
+    }
     const widest = widths.at(-1);
     return {
       ...face,
