@@ -14,12 +14,14 @@
 //   4. The hidden /welcome/ page prints on two Letter sheets with its art.
 // Evidence (sample PDFs, one PNG per printed page, menu screenshots, a JSON
 // summary) is written to WD_PRINT_EVIDENCE (default output/print-verify).
-// Needs poppler-utils (pdfinfo, pdftotext, pdftoppm, pdfimages); family.test.mjs
+// Needs poppler-utils (pdfinfo, pdftotext, pdftoppm, pdfimages, pdftohtml); family.test.mjs
 // already needs pdfinfo from the same package.
 import assert from "node:assert/strict";
 import { execFileSync, spawnSync } from "node:child_process";
 import {
   existsSync,
+  lstatSync,
+  realpathSync,
   mkdirSync,
   readdirSync,
   readFileSync,
@@ -111,16 +113,18 @@ for (const fine of [
 ])
   assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
-// Names of generation tools: never expected on a sheet unless pack.json (the
-// public lesson source) says the same word.
-const TOOL_WORDS =
-  /\b(?:codex|chatgpt|gpt-\d[\w.-]*|claude|openai|image_gen|firstmate)\b/gi;
-assert.ok("made by Codex today".match(TOOL_WORDS));
-assert.ok(!"How an Electrical Relay Works, Gemini twins".match(TOOL_WORDS));
+assert.ok(metadataProcessIssues("relayed by the team", "x").length > 0);
+assert.equal(metadataProcessIssues("A switch turns a lamp on.", "x").length, 0);
 const AGE_RANGE =
   /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
 
-for (const tool of ["pdfinfo", "pdftotext", "pdftoppm", "pdfimages"]) {
+for (const tool of [
+  "pdfinfo",
+  "pdftotext",
+  "pdftoppm",
+  "pdfimages",
+  "pdftohtml",
+]) {
   const probe = spawnSync(tool, ["-v"], { timeout: TOOL });
   assert.equal(
     probe.status,
@@ -134,12 +138,23 @@ const MARKER = ".print-verify";
 // Evidence never goes inside the site it reads, and only into a folder that is
 // new, empty, or marked by an earlier run of this script. Cleanup removes only
 // the files that earlier run listed in its marker; anything else stops the run.
+// Real locations, not spellings: a symlink (the folder or any parent) that
+// leads into the site is refused.
+const outsideSite = (dir) => {
+  const rel = relative(realpathSync(root), dir);
+  return rel.startsWith("..") || isAbsolute(rel);
+};
+let probe = evidence;
+while (!existsSync(probe)) probe = resolve(probe, "..");
 assert.ok(
-  relative(root, evidence).startsWith("..") &&
-    !isAbsolute(relative(root, evidence)),
+  outsideSite(join(realpathSync(probe), relative(probe, evidence))),
   `WD_PRINT_EVIDENCE (${evidence}) must be outside ${root}`,
 );
 mkdirSync(evidence, { recursive: true });
+assert.ok(
+  !lstatSync(evidence).isSymbolicLink() && outsideSite(realpathSync(evidence)),
+  `WD_PRINT_EVIDENCE (${evidence}) must be a real folder outside ${root}`,
+);
 const earlier = existsSync(join(evidence, MARKER))
   ? JSON.parse(readFileSync(join(evidence, MARKER), "utf8")).files
   : [];
@@ -161,6 +176,32 @@ const run = (cmd, args) =>
     timeout: TOOL,
   });
 const squash = (text) => text.replace(/\s+/g, "").toUpperCase();
+/**
+ * Is `needle` printed in `hay`? Long needles ignore all spacing (PDF line
+ * breaks and letter-spacing move it). Short ones ("I", "No", "Try") must be
+ * whole words, so they cannot hide inside other words.
+ */
+const contains = (hay, needle) => {
+  const n = needle.trim();
+  if (squash(n).length >= 16) return squash(hay).includes(squash(n));
+  const body = [...n.replace(/\s+/g, "")]
+    .map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("\\s*");
+  return new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "iu").test(
+    hay,
+  );
+};
+for (const [hay, needle, want] of [
+  ["I think so.", "I", true],
+  ["Nothing here", "No", false],
+  ["A cat sat.", "A", true],
+  ["Bat", "A", false],
+  ["Try again", "Try", true],
+  ["Trying hard", "Try", false],
+  ["x 12 y", "2", false],
+  ["3 + 4 = 7", "3+4=7", true],
+])
+  assert.equal(contains(hay, needle), want, `contains(${hay}, ${needle})`);
 /**
  * Age words printed in page headers. Headers are letter-spaced ("A G E 8 · M AT H"),
  * so each segment between dots or wide gaps is squashed on its own: "PAGE 8"
@@ -347,8 +388,7 @@ async function checkPdf(
   // not lesson copy, so it also gets the process-note phrase check.
   assert.ok(!LOCAL_PATH.test(all), `${name}: a local path is in the PDF text`);
   // Text must be dark enough to read on white paper (no white or pale text
-  // that the text layer still holds), and tool names may appear anywhere only
-  // when the public pack.json itself says them.
+  // that the text layer still holds).
   if (textColors) {
     const lum = (hex) => {
       const v = [1, 3, 5].map((i) => {
@@ -368,28 +408,17 @@ async function checkPdf(
         `${name}: text colour ${c} is too pale to read on white`,
       );
   }
+  // The shared process-note detector reads the whole text of the sheet, not
+  // just its edges. A match is fine only when the public pack.json (the lesson
+  // source) says the same words, so a lesson may still mention "an electrical relay".
   const publicPack = JSON.stringify(pack).toLowerCase();
-  for (const word of all.toLowerCase().match(TOOL_WORDS) ?? [])
+  for (const issue of metadataProcessIssues(all, `${name}.pdf (text)`))
     assert.ok(
-      publicPack.includes(word),
-      `${name}: "${word}" is printed but is not in the public pack`,
+      publicPack.includes(
+        (issue.match(/ "(.*)" at /)?.[1] ?? "\0").toLowerCase(),
+      ),
+      `${name}: process note in the PDF text: ${issue}`,
     );
-  // Header and footer lines are page chrome, not lesson copy, so they get the
-  // process-note phrase check that lesson text is exempt from.
-  const chrome = pages
-    .flatMap((t) => {
-      const lines = t
-        .split("\n")
-        .map((l) => l.trim())
-        .filter(Boolean);
-      return [...lines.slice(0, 2), ...lines.slice(-2)];
-    })
-    .join("\n");
-  assert.deepEqual(
-    metadataProcessIssues(chrome, `${name}.pdf (header/footer)`),
-    [],
-    `${name}: a process note in a header or footer`,
-  );
   assert.deepEqual(
     privacyIssues(all, `${name}.pdf (text)`),
     [],
@@ -977,7 +1006,7 @@ try {
       // The sheets hold today's lesson, not just its title.
       const has = (name, needle, what) =>
         assert.ok(
-          squash(checked[name].text).includes(squash(needle)),
+          contains(checked[name].text, needle),
           `${name}: ${what} is missing from the printed sheet`,
         );
       for (const task of pack.math.tasks) {
@@ -1009,6 +1038,39 @@ try {
           `quiz answer "${q.answer.slice(0, 24)}"`,
         );
       }
+      // Every page of a lesson sheet holds some of today's content (so a stray
+      // header-only page cannot hide) and no page repeats another.
+      const eachPage = (name, needles) => {
+        const seen = new Set();
+        for (const [at, t] of checked[name].pageTexts.entries()) {
+          assert.ok(
+            needles.some((n) => contains(t, n)),
+            `${name}: page ${at + 1} holds none of today's content`,
+          );
+          assert.ok(
+            !seen.has(squash(t)),
+            `${name}: page ${at + 1} repeats an earlier page`,
+          );
+          seen.add(squash(t));
+        }
+      };
+      eachPage("reading", [
+        ...pack.reading.beats.map((b) => b.passage),
+        ...pack.reading.questions,
+      ]);
+      eachPage(
+        "math",
+        pack.math.tasks.flatMap((x) => [x.prompt, x.equation]),
+      );
+      eachPage(
+        "writing",
+        pack.writing.frames.map((f) => f.start),
+      );
+      eachPage("parent-answer-key", [
+        ...pack.math.tasks.map((x) => x.worked),
+        ...pack.answers.map((a) => a.text),
+        ...(pack.quiz?.questions ?? []).map((q) => q.answer),
+      ]);
       // Optional quiz cards: every prompt and choice on the cards, every
       // answer on the key. A pack that declares them must carry quiz data.
       if (extras.includes("quiz-cards")) {
