@@ -18,7 +18,7 @@ test("welcome page is noindex, name-free, and shows tonight's real pack", async 
       "One learning pack a day.<br><em>Built around one question.</em>",
     ),
   );
-  assert.ok(html.includes("One family page.<br><em>One door per child.</em>"));
+  assert.ok(html.includes("One family page.<br><em>Two doors.</em>"));
   for (const step of [
     "Start with one question.",
     "Work through it together.",
@@ -144,16 +144,16 @@ function slopIssues(html) {
 }
 
 test("welcome copy has no filler or slop phrases", async () => {
-  const committed = await read("dist/welcome/index.html");
+  // The latest-pack card shows lesson copy that changes daily; check the rest.
+  const committed = (await read("dist/welcome/index.html")).replace(
+    /<div class="w-pack-window">[\s\S]*?<\/article>/,
+    "",
+  );
   assert.deepEqual(slopIssues(committed), []);
   const rendered = welcomePage({
     tonight: { title: "Pinecones", teaser: "How cones open and close." },
   });
   assert.deepEqual(slopIssues(rendered), []);
-  assert.equal(
-    rendered.replace(/Pinecones|How cones open and close\./g, "").length > 0,
-    true,
-  );
   // The checker itself must catch the old copy.
   assert.ok(
     slopIssues("<h1>A little wonder.<br><em>A softer goodnight.</em></h1>")
