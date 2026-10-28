@@ -42,6 +42,8 @@ Open [http://127.0.0.1:4173/daily-learning-pack/](http://127.0.0.1:4173/daily-le
 
 Browser checks: `npx playwright install chromium webkit`, then `npm run test:browser`. CI runs the same Chromium and WebKit suite.
 
+`tests/welcome-browser.mjs` checks the hidden `/welcome/` page at 390, 820 and 1440 px: no horizontal overflow, tap targets of at least 44 px, no axe violations, images decoded, and page weight against `tests/welcome-budget.mjs`.
+
 ## GitHub Pages
 
 Workflow: `.github/workflows/pages.yml`. On push to `main` (and manual **workflow_dispatch**), it runs `npm run archive` (copy public landing CSS/HTML onto `dist/archive.json`), checks that `dist/index.html` and `dist/today/index.html` exist, uploads `dist/`, and deploys. No `npm run site`, no Chromium.

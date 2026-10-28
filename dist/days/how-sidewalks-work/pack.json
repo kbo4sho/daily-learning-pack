@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-sidewalks-work",
+  "topic": "how sidewalks work",
+  "why": "Following concrete from gray powder to a hard slab helps your child explain how a sidewalk is made, why it has grooves, and why it holds up feet.",
+  "teaser": "Meet four plain ingredients, see how they harden, and find out why a sidewalk has grooves.",
+  "aliases": [
+    "sidewalks",
+    "concrete",
+    "how concrete is made",
+    "how concrete works"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "story-problems",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "one-step-add",
+      "one-step-subtract",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "How a Sidewalk Is Made and How It Works",
+  "question": "How is a sidewalk made from powder, water, sand and stones, and why does it have grooves?",
+  "idea": "Concrete is cement, water, sand and gravel: cement and water make a paste that hardens around the stones, and grooves tell a slab where to crack.",
+  "curiosity": {
+    "intro": "Start with one square of sidewalk. Find what it is made of, how it turned hard, and why it has lines.",
+    "carryForward": "Look for tiny stones, one groove, and the slow work of hardening.",
+    "questions": [
+      {
+        "id": "made",
+        "plate": "wake",
+        "question": "What is a sidewalk made of?",
+        "notice": "Find the tiny stones and sandy specks on the chipped corner, then look at the four sealed jars beside it.",
+        "say": "A sidewalk is made of concrete, and concrete is a mix of four things: gravel, sand, cement and water. Cement is a fine gray powder. It is only a small part of the mix, roughly one part in eight, and when it meets water it makes a paste that coats the sand and stones.",
+        "try": "Look closely at a sidewalk square outside, or at a photo of one. Find tiny stones, speckles and a groove. Draw one square on paper and mark where the groove runs."
+      },
+      {
+        "id": "harden",
+        "plate": "change",
+        "question": "How does wet concrete turn hard?",
+        "notice": "Find the smooth wet slab inside its wooden frame, and the rope and cones that keep everyone back.",
+        "say": "Wet concrete is poured into a wooden frame called a form, spread flat and smoothed. Then the cement and water begin a chemical reaction that links everything together. It hardens by that reaction, not just by drying out, which is why concrete can even harden under water.",
+        "try": "Stir two spoonfuls of flour with a little water in a paper cup to make a thick paste. Stir in a handful of dry rice so the paste coats every grain. Leave the cup for a day, then tap it and feel how hard it got. Flour paste only dries out, but real concrete hardens by a chemical reaction."
+      },
+      {
+        "id": "strong",
+        "plate": "keep",
+        "question": "Why is a sidewalk strong, and what holds it up?",
+        "notice": "Look at the edge of the path, where a thin layer of packed gravel sits under the slab.",
+        "say": "Concrete is very strong when it is squeezed, like when feet and bike wheels press down on it. It is weaker when it bends or stretches. A layer of packed gravel under the slab helps support it evenly and spread the weight out, so the slab bends less.",
+        "try": "Stand a stick of sidewalk chalk on end and press down on top with one finger to see that it holds. Now lay the chalk across two books and press gently in the middle until it snaps. Chalk is a stand-in for concrete: strong when squeezed, weak when bent."
+      },
+      {
+        "id": "groove",
+        "plate": "return",
+        "question": "Why does a sidewalk have grooves?",
+        "notice": "Follow the straight groove between two squares and find the thin crack that stays inside it.",
+        "say": "A new slab shrinks a little as it hardens, and heat and cold make it grow and shrink all year. Concrete can crack when that happens. A groove makes the slab thinner along one line, so a crack tends to start there and run straight instead of wandering anywhere.",
+        "try": "Look at the lines on a graham cracker. Break one cracker along a line. Then break another across the middle where there is no line. See which break is neat and straight."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-sidewalks-work/01-ingredients.jpg",
+      "original": "assets/how-sidewalks-work/01-ingredients.png",
+      "foldSrc": "assets/how-sidewalks-work/01-ingredients-fold.jpg",
+      "title": "Four ingredients",
+      "alt": "Big and Little Wonderer look at a chipped corner of a sidewalk square with tiny stones and a groove, beside four sealed clear jars holding gravel, sand, gray cement powder and water.",
+      "caption": "Concrete is gravel, sand, cement and water."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-sidewalks-work/02-paste.jpg",
+      "original": "assets/how-sidewalks-work/02-paste.png",
+      "foldSrc": "assets/how-sidewalks-work/02-paste-fold.jpg",
+      "title": "Paste that glues",
+      "alt": "Big and Little Wonderer study a hand-sized chunk of old concrete on a garden table with a round magnifier: small stones sit inside smooth gray paste.",
+      "caption": "Cement and water make a paste that holds every stone and grain of sand."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-sidewalks-work/03-pour-form.jpg",
+      "original": "assets/how-sidewalks-work/03-pour-form.png",
+      "foldSrc": "assets/how-sidewalks-work/03-pour-form-fold.jpg",
+      "title": "Poured into a frame",
+      "alt": "A smooth wet gray sidewalk slab fills a wooden frame while Big and Little Wonderer watch from the grass behind a rope and two cones.",
+      "caption": "Wet concrete fills a wooden form and then hardens by a chemical reaction."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-sidewalks-work/04-curing.jpg",
+      "original": "assets/how-sidewalks-work/04-curing.png",
+      "foldSrc": "assets/how-sidewalks-work/04-curing-fold.jpg",
+      "title": "Keep it damp",
+      "alt": "A new sidewalk slab lies inside its low wooden frame under a damp pale cloth beside a watering can while Big and Little Wonderer look at a row of seven small pebbles on the frame, one for each day.",
+      "caption": "A new slab is kept damp for days so the hardening can keep going."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-sidewalks-work/05-groove.jpg",
+      "original": "assets/how-sidewalks-work/05-groove.png",
+      "foldSrc": "assets/how-sidewalks-work/05-groove-fold.jpg",
+      "title": "A line for cracks",
+      "alt": "Big and Little Wonderer crouch beside a straight, shallow groove between two sidewalk squares, where one thin hairline crack runs along inside the groove.",
+      "caption": "A groove makes a planned weak line, so a crack tends to follow it."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-sidewalks-work/06-base.jpg",
+      "original": "assets/how-sidewalks-work/06-base.png",
+      "foldSrc": "assets/how-sidewalks-work/06-base-fold.jpg",
+      "title": "What holds it up",
+      "alt": "At the edge of a park path, a thin, even layer of packed gravel shows under the concrete slab while Big and Little Wonderer stand on the grass and look at it together.",
+      "caption": "Concrete is strong when squeezed, and packed gravel helps support the slab evenly."
+    }
+  ],
+  "reading": {
+    "title": "Six clues from powder to path",
+    "coverPlate": "wake",
+    "coverText": "Follow four ingredients all the way to a hard, grooved sidewalk.",
+    "parentNote": "Ages 6-8. Welcome spoken answers, pointing, drawing, and dictation; the scenic plates show the ideas rather than exact measurements.",
+    "foldableTitle": "A little book of sidewalk clues",
+    "foldableCoverLine": "How a Sidewalk Is Made",
+    "foldableNote": "Carry six clues from powder to path in a small book.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Four ingredients",
+        "passage": "Big and Little found a chipped corner on a sidewalk square. Inside, tiny stones and sandy specks sat packed together. Beside the chip stood four sealed jars: gravel, sand, a gray powder called cement, and water. A sidewalk is made of concrete, and concrete is a mix of all four.",
+        "prompt": "Which ingredient is the gray powder, and why is it only one part of concrete?",
+        "foldable": {
+          "heading": "Four ingredients",
+          "body": "A sidewalk is concrete: gravel, sand, gray cement powder and water mixed together. Cement is only one ingredient, not the whole thing."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Paste that glues",
+        "passage": "Little held a magnifier up to an old chunk of concrete. The stones sat inside smooth gray paste, like raisins in a muffin. Cement mixed with water makes that paste. The paste coats every grain of sand and every stone, and then it holds them tight.",
+        "prompt": "What job does the paste do for the sand and stones?",
+        "foldable": {
+          "heading": "Paste that glues",
+          "body": "Cement and water make a gray paste. It coats every stone and grain of sand and, once hard, holds them all tightly together."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Pour, spread, wait",
+        "passage": "Next came the pour. Wet concrete filled a wooden frame called a form, and then it was spread flat and smoothed. Big and Little watched from behind a rope, because wet concrete is not for touching. Soon the cement and water began a chemical reaction, a change that links them into something solid. Concrete hardens by that reaction, not just by drying, so it can even harden under water.",
+        "prompt": "How is hardening by a chemical reaction different from just drying out?",
+        "foldable": {
+          "heading": "Pour, spread, wait",
+          "body": "Wet concrete is poured into a wooden form and smoothed. Cement and water then react and link together, so it hardens, even under water."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Curing takes days",
+        "passage": "A new slab is not finished when it looks hard. It stays damp for about a week so the reaction can keep going, and most of its strength builds up in the first month. Big lined up seven pebbles on the frame, one for each day under the damp cloth. Keeping new concrete damp like this is called curing.",
+        "prompt": "Why do builders keep a new slab damp instead of letting it dry out fast?",
+        "foldable": {
+          "heading": "Curing takes days",
+          "body": "A new slab is kept damp for about a week while the reaction goes on. This is curing. Most strength builds in the first month."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A line for cracks",
+        "passage": "Concrete shrinks a little as it hardens, and heat and cold make it grow and shrink all year. Because concrete does not like bending or stretching, it can crack. So workers press a groove across each square. The groove makes the slab thinner along one line, so a crack tends to start there, neat and straight, instead of anywhere at all.",
+        "prompt": "Why is a crack that follows a groove better than a crack in a random place?",
+        "foldable": {
+          "heading": "A line for cracks",
+          "body": "Concrete shrinks as it hardens and can crack. Grooves make thin lines in the slab, so cracks tend to follow them in neat, straight lines."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Strong when squeezed",
+        "passage": "At the edge of a park path, Little spotted a thin layer of packed gravel under the slab. Concrete is very strong when it is squeezed, and feet and bike wheels squeeze it all day. It is weaker when it bends. The gravel helps support the slab evenly, so the weight spreads out and the slab bends less.",
+        "prompt": "Why does the gravel layer under the slab matter?",
+        "foldable": {
+          "heading": "Strong when squeezed",
+          "body": "Concrete is strong when squeezed but weaker when bent. Packed gravel under the slab helps spread the weight so it bends less."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "concrete",
+        "meaning": "a hard mix of cement, water, sand and gravel"
+      },
+      {
+        "word": "cement",
+        "meaning": "a fine gray powder that makes a paste when it meets water"
+      },
+      {
+        "word": "form",
+        "meaning": "a wooden frame that holds wet concrete in shape"
+      },
+      {
+        "word": "chemical reaction",
+        "meaning": "a change that makes something new, like cement and water linking together"
+      },
+      {
+        "word": "curing",
+        "meaning": "keeping new concrete damp while it gets stronger"
+      },
+      {
+        "word": "groove",
+        "meaning": "a thin line pressed into a slab to guide where a crack will go"
+      }
+    ],
+    "questions": [
+      "Why is cement only one ingredient of concrete, and what does it do when it meets water?",
+      "How is hardening by a chemical reaction different from drying, and why does curing matter?",
+      "Why do sidewalks have grooves, and how does a gravel base help a slab?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one sentence that follows concrete from powder to a hard slab.",
+      "example": "Example: Cement and water make a paste that holds the stones, so the slab turns hard."
+    }
+  },
+  "math": {
+    "title": "Sidewalk number stories",
+    "plate": "notice",
+    "intro": "Find the two amounts in each story, then add or subtract.",
+    "eyebrow": "SIX SIDEWALK STORIES",
+    "actionLabel": "Follow each little story",
+    "tasks": [
+      {
+        "skill": "one-step-add",
+        "operands": [
+          36,
+          29
+        ],
+        "prompt": "Little counts 36 tiny stones on one chip of concrete and 29 on another chip. How many stones is that in all?",
+        "equation": "36 + 29 =",
+        "hint": "Combine the stones from both chips.",
+        "answer": 65,
+        "worked": "36 + 29 = 65 stones. Add 30 to get 66, then take away 1.",
+        "plate": "reach",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          82,
+          47
+        ],
+        "prompt": "A long sidewalk has 82 squares, and 47 of them have been swept. How many squares are left to sweep?",
+        "equation": "82 − 47 =",
+        "hint": "Take away the squares that are already swept.",
+        "answer": 35,
+        "worked": "82 − 47 = 35 squares. Subtract 40 to get 42, then subtract 7.",
+        "plate": "wake",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          45,
+          38
+        ],
+        "prompt": "Big puts 45 pebbles in one jar and Little puts 38 pebbles in another jar. How many pebbles are in both jars?",
+        "equation": "45 + 38 =",
+        "hint": "Join the pebbles from the two jars.",
+        "answer": 83,
+        "worked": "45 + 38 = 83 pebbles. Add 40 to get 85, then subtract 2.",
+        "plate": "reach",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          71,
+          28
+        ],
+        "prompt": "A sample tray holds 71 pebbles. Little sorts 28 of them into a jar. How many pebbles are left in the tray?",
+        "equation": "71 − 28 =",
+        "hint": "Take away the pebbles Little put in the jar.",
+        "answer": 43,
+        "worked": "71 − 28 = 43 pebbles. Subtract 30 to get 41, then add 2.",
+        "plate": "change",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          7,
+          21
+        ],
+        "prompt": "A new slab is kept damp for 7 days. It then has 21 more days to keep getting stronger. How many days is that in all?",
+        "equation": "7 + 21 =",
+        "hint": "Add the two groups of days together.",
+        "answer": 28,
+        "worked": "7 + 21 = 28 days. Add 20 to get 27, then add 1.",
+        "plate": "notice",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          72,
+          48
+        ],
+        "prompt": "A new path needs 72 grooves. Workers have pressed 48 so far. How many grooves are left to press?",
+        "equation": "72 − 48 =",
+        "hint": "Find what is left after the grooves already pressed.",
+        "answer": 24,
+        "worked": "72 − 48 = 24 grooves. Subtract 50 to get 22, then add 2.",
+        "plate": "return",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Draw the amounts in one story to show how you found the answer.",
+    "printNote": "Use numbers or a drawing to share your thinking.",
+    "parentNote": "Grade 2 math. Six one-step addition and subtraction stories stay within 100. Quantities are supplied in the questions; there is no need to count painted details.",
+    "answerKeyIntro": "Grade 2 math. Join the amounts for addition or find what remains for subtraction. Each story takes one step."
+  },
+  "writing": {
+    "title": "Explain a sidewalk in your words",
+    "intro": "Choose one clue. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "return"
+    ],
+    "draw": "Draw one square of sidewalk and add a small arrow to the groove.",
+    "starter": "My sidewalk clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "Cement and water make a paste that",
+        "hint": "what does the paste hold?"
+      },
+      {
+        "plate": "change",
+        "start": "After it is poured, the concrete",
+        "hint": "how does it turn hard?"
+      },
+      {
+        "plate": "return",
+        "start": "A groove helps because",
+        "hint": "where does a crack go?"
+      }
+    ],
+    "words": [
+      "concrete",
+      "cement",
+      "form",
+      "chemical reaction",
+      "curing",
+      "groove",
+      "because",
+      "so"
+    ],
+    "check": "Does your sentence tell what happens and use because or so to explain why?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Cement is the gray powder, but concrete also needs water, sand and gravel. Cement and water make a paste that coats the sand and stones and holds them together."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Concrete hardens through a chemical reaction between cement and water, not just by losing water. Curing keeps the slab damp so the reaction can continue and the slab gets stronger."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "A groove makes a thin line, so a crack tends to follow it neatly. Packed gravel helps support the slab evenly, so the weight spreads out and the slab bends less."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a spoken, dictated, drawn, or written sentence that tells one step of how concrete is made or why a groove helps."
+    }
+  ],
+  "parentGuidance": "Cement is a fine gray powder that makes a paste with water, and it is only roughly 10 to 15 percent of the mix by volume. Concrete is cement plus sand, gravel and water. The cement and water react chemically (hydration), which is why concrete hardens even under water, and the slab is kept damp for about a week (curing) while most of its strength builds in the first month. Concrete shrinks slightly as it hardens, and grooves (control joints) give cracks a planned, neat line. Concrete is strong when squeezed and weak when bent, and a compacted gravel base helps support a slab evenly. Safety: wet concrete and dry cement powder can burn skin and irritate eyes and lungs, so children stay well back and never touch or taste either. The table-top activities use only flour, rice, chalk and crackers; check for food allergies, and keep the flour mix out of mouths. Chalk can snap into small pieces, so keep them off the floor.",
+  "sources": [
+    {
+      "label": "American Cement Association · Cement and concrete FAQ",
+      "url": "https://www.cement.org/cement-concrete/cement-concrete-faq/"
+    },
+    {
+      "label": "American Cement Association · Applications of cement",
+      "url": "https://www.cement.org/cement-concrete/applications-of-cement/"
+    },
+    {
+      "label": "American Cement Association · How cement is made",
+      "url": "https://www.cement.org/cement-concrete/how-cement-is-made/"
+    }
+  ],
+  "screenFree": [
+    "lab-page"
+  ],
+  "quiz": {
+    "title": "Four concrete clues",
+    "intro": "Follow cement, hardening, curing and grooves.",
+    "questions": [
+      {
+        "id": "cement",
+        "prompt": "What is cement?",
+        "choices": [
+          "The small stones in the mix",
+          "A fine gray powder that makes a paste with water",
+          "The wooden frame around wet concrete"
+        ],
+        "answerIndex": 1,
+        "answer": "Cement is a fine gray powder. With water it makes the paste that holds sand and stones together."
+      },
+      {
+        "id": "harden",
+        "prompt": "How does wet concrete turn hard?",
+        "choices": [
+          "Only by drying out like a puddle",
+          "By cooling down like melted wax",
+          "By a chemical reaction between cement and water"
+        ],
+        "answerIndex": 2,
+        "answer": "Cement and water react and link together, so concrete hardens even under water."
+      },
+      {
+        "id": "curing",
+        "prompt": "Why is a new slab kept damp for days?",
+        "choices": [
+          "So the reaction can keep going and the slab gets stronger",
+          "So it will stay soft forever",
+          "So the stones can float to the top"
+        ],
+        "answerIndex": 0,
+        "answer": "Curing keeps the slab damp so the hardening reaction can continue."
+      },
+      {
+        "id": "groove",
+        "prompt": "What is a groove in a sidewalk for?",
+        "choices": [
+          "To make the slab heavier",
+          "To guide a crack along a neat, straight line",
+          "To hold the sand in place"
+        ],
+        "answerIndex": 1,
+        "answer": "A groove makes a thin line, so a crack tends to follow it instead of wandering."
+      }
+    ]
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "CONCRETE · 2026-10-28",
+    "subtitle": "A powder. A paste. A slab."
+  },
+  "labPage": {
+    "materials": [
+      "Paper and pencil",
+      "Paper cup",
+      "Flour",
+      "Water",
+      "Dry rice",
+      "Stick of sidewalk chalk",
+      "Two books",
+      "Graham cracker"
+    ]
+  }
+}

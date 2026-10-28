@@ -125,8 +125,8 @@ main,
 .w-brand span {
   display: block;
   margin-top: var(--s1);
-  font: 500 0.6875rem/1.4 var(--sans);
-  letter-spacing: 0.14em;
+  font: 500 0.875rem/1.4 var(--sans);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -140,8 +140,8 @@ main,
   align-items: center;
   gap: var(--s3);
   margin: 0 0 var(--s4);
-  font: 600 0.6875rem/1.4 var(--sans);
-  letter-spacing: 0.16em;
+  font: 600 0.875rem/1.4 var(--sans);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold-deep);
 }
@@ -272,8 +272,8 @@ section + section::before {
   align-items: baseline;
   gap: var(--s3);
   margin: 0 0 var(--s3);
-  font: 600 0.625rem/1.4 var(--sans);
-  letter-spacing: 0.16em;
+  font: 600 0.875rem/1.4 var(--sans);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .w-pack-label span,
@@ -317,7 +317,7 @@ section + section::before {
   padding: var(--s1) var(--s3);
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   background: var(--canvas);
 }
 
@@ -332,7 +332,7 @@ section + section::before {
 .w-family {
   position: relative;
   margin-top: var(--s6);
-  padding: var(--s5) var(--s4);
+  padding: var(--s5) var(--s3);
   background: var(--grain), linear-gradient(180deg, var(--surface), #fbf6ec);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -350,7 +350,7 @@ section + section::before {
 .w-door-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--s4);
+  gap: var(--s3);
   align-items: end;
 }
 .w-door {
@@ -362,13 +362,13 @@ section + section::before {
   overflow: hidden;
   aspect-ratio: 4 / 5;
   border-radius: 999px 999px 10px 10px;
-  border: 6px solid var(--surface);
+  border: 4px solid var(--surface);
   outline: 1px solid var(--line);
   box-shadow: 0 14px 26px -16px rgb(48 39 31 / 0.45);
   background: var(--stock);
 }
 .w-door.is-little .w-door-frame {
-  width: 88%;
+  width: 92%;
   margin-inline: auto;
 }
 .w-door-frame img {
@@ -386,11 +386,11 @@ section + section::before {
   margin-top: var(--s3);
 }
 .w-door-name {
-  font: 400 1.1875rem/1.2 var(--serif);
+  font: 400 1.375rem/1.2 var(--serif);
   letter-spacing: -0.01em;
 }
 .w-door-line {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .w-family-foot {
@@ -501,7 +501,7 @@ section + section::before {
 }
 .w-form-note {
   margin: var(--s3) 0 0;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: rgb(255 252 246 / 0.72);
 }
 .w-foot {
@@ -510,7 +510,7 @@ section + section::before {
   justify-content: space-between;
   gap: var(--s2);
   padding-block: var(--s5) var(--s7);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .w-foot p {
@@ -562,44 +562,9 @@ section + section::before {
   }
 }
 
-/* ---------- desktop ---------- */
-@media (min-width: 900px) {
-  .w-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-    grid-template-rows: auto auto;
-    column-gap: var(--s7);
-    row-gap: 0;
-    padding-block: var(--s6) var(--s8);
-  }
-  .w-hero-copy {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
-    padding-block: var(--s7);
-  }
-  .w-hero-scene {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    margin: 0 calc(var(--gutter) * -1) 0 0;
-  }
-  .w-hero-img {
-    aspect-ratio: 4 / 3.4;
-    border-radius: 0 0 0 var(--s9);
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-  .w-start {
-    width: auto;
-    min-width: 220px;
-  }
-  .w-pack {
-    grid-column: 1;
-    grid-row: 2;
-    width: min(420px, 100%);
-    margin: 0 0 calc(var(--s8) * -1) var(--s7);
-    rotate: -1.5deg;
-    z-index: 1;
-  }
+/* ---------- iPad and up: 700px ---------- */
+/* Doors and steps get their roomy layout from 700px, not 900px. */
+@media (min-width: 700px) {
   .w-doors {
     text-align: center;
     padding-block: var(--s9) var(--s8);
@@ -617,25 +582,26 @@ section + section::before {
     padding: var(--s6) var(--s7);
     text-align: left;
   }
+  .w-family-label {
+    flex-direction: row;
+  }
   .w-door-row {
     max-width: 620px;
     margin: 0 auto;
     gap: var(--s6);
+  }
+  .w-door-frame {
+    border-width: 6px;
   }
   .w-how {
     padding-block: var(--s9);
   }
   .w-steps {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--s6);
+    gap: var(--s5);
   }
   .w-step:nth-child(2) {
     margin-top: var(--s7);
-  }
-  .w-cta {
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
-    padding: var(--s8) var(--s7);
   }
   .w-form-row {
     grid-template-columns: 1fr auto;
@@ -645,27 +611,119 @@ section + section::before {
   }
 }
 
+/* ---------- iPad portrait: 700 to 899px ---------- */
+/* The picture spans the top, then the words and tonight's card sit side by side. */
+@media (min-width: 700px) and (max-width: 899px) {
+  .w-hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: var(--s6);
+    row-gap: var(--s6);
+  }
+  .w-hero-scene {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .w-hero-img {
+    aspect-ratio: 3 / 2;
+  }
+  .w-hero-copy {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .w-hero h1 {
+    font-size: clamp(2.5rem, 6.4vw, 3.5rem);
+  }
+  .w-start {
+    width: auto;
+    min-width: 220px;
+  }
+  .w-pack {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    rotate: 1deg;
+  }
+  .w-doors h2,
+  .w-how h2,
+  .w-cta h2 {
+    font-size: clamp(2.125rem, 6vw, 3rem);
+  }
+  .w-step h3 {
+    font-size: 1.5rem;
+  }
+  .w-step-art {
+    padding: var(--s2) var(--s2) var(--s5);
+  }
+  .w-cta {
+    padding: var(--s7) var(--s6);
+  }
+}
+
+/* ---------- desktop: 900px and up ---------- */
+@media (min-width: 900px) {
+  .w-hero {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+    grid-template-rows: auto auto;
+    column-gap: var(--s7);
+    row-gap: 0;
+    padding-block: var(--s6) var(--s8);
+  }
+  .w-hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    padding-block: var(--s7);
+  }
+  .w-hero-scene {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    margin: 0 calc(var(--gutter) * -1) 0 0;
+  }
+  .w-hero-img {
+    /* The whole scene, at its own 3:2 shape. No cropping. */
+    aspect-ratio: 3 / 2;
+    border-radius: 0 0 0 var(--s9);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .w-hero h1 {
+    font-size: clamp(2.5rem, 4.4vw, 4rem);
+  }
+  .w-start {
+    width: auto;
+    min-width: 220px;
+  }
+  .w-pack {
+    grid-column: 1;
+    grid-row: 2;
+    width: min(420px, 100%);
+    margin: 0 0 calc(var(--s8) * -1) var(--s7);
+    rotate: -1.5deg;
+    z-index: 1;
+  }
+  .w-steps {
+    gap: var(--s6);
+  }
+  .w-cta {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    padding: var(--s8) var(--s7);
+  }
+}
+
 /* ---------- refinements ---------- */
 @media (max-width: 899px) {
   .w-kicker {
-    letter-spacing: 0.12em;
-  }
-  .w-family-label {
-    flex-direction: column;
-    gap: var(--s1);
+    letter-spacing: 0.08em;
   }
   .w-hero-copy .w-kicker::before {
     display: none;
   }
 }
-@media (min-width: 900px) {
-  .w-hero-scene {
-    align-self: stretch;
-  }
-  .w-hero-img {
-    height: 100%;
-    aspect-ratio: auto;
-    min-height: 640px;
-    object-position: 78% 50%;
+@media (max-width: 699px) {
+  .w-family-label {
+    flex-direction: column;
+    gap: var(--s1);
   }
 }
