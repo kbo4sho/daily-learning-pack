@@ -135,7 +135,7 @@ export function welcomePage({ tonight }) {
     </form>
   </section>
 </main>
-<footer class="w-foot"><p><em>Missed a day? Past packs stay on the shelf.</em></p><p>Wonder Daily · from Wonder Together</p></footer>
+<footer class="w-foot"><p><em>Past packs stay on the shelf. Open any one when you like.</em></p><p>Wonder Daily · from Wonder Together</p></footer>
 </body>
 </html>
 `;
