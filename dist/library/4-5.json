@@ -84,6 +84,62 @@
       "format": "picture-pack",
       "status": "published",
       "hidden": false
+    },
+    {
+      "id": "ducks",
+      "band": "4-5",
+      "topic": "ducks",
+      "why": "Watching a duck paddle and shed water helps your child notice how feathers keep it dry while practicing counting, sounds and tracing.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-16",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
+    },
+    {
+      "id": "sorting-socks",
+      "band": "4-5",
+      "topic": "sorting socks",
+      "why": "Sorting a jumble of socks by one clue helps your child group and compare while practicing counting, sounds and tracing.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-14",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
     }
   ]
 }

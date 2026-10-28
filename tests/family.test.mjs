@@ -32,9 +32,21 @@ test("family schema and metadata describe the exact current defaults", async () 
     assert.equal(door.today.why, record.why);
     assert.ok(!("skills" in door.today));
     assert.ok(!("printHref" in door.today));
-    assert.ok(door.today.pdfs.length <= 1);
-    for (const pdf of door.today.pdfs) {
+    // The pack PDF first; the big door may add standalone screen-free sheets.
+    assert.ok(
+      index ? door.today.pdfs.length <= 1 : door.today.pdfs.length <= 5,
+    );
+    for (const [at, pdf] of door.today.pdfs.entries()) {
       assert.ok((await stat(resolve(root, pdf.href))).size > 0);
+      if (at > 0) {
+        // Standalone screen-free sheet: kept byte-for-byte with the day's own copy.
+        const name = pdf.href.split("/").pop();
+        assert.deepEqual(
+          await readFile(resolve(root, pdf.href)),
+          await readFile(resolve(root, `days/${record.slug}/pdf/${name}`)),
+        );
+        continue;
+      }
       const info = execFileSync("pdfinfo", [resolve(root, pdf.href)], {
         encoding: "utf8",
       });
@@ -74,11 +86,36 @@ test("family schema and metadata describe the exact current defaults", async () 
         label: "Math",
       });
     },
+    (m) => {
+      m.doors[0].today.pdfs.push({
+        href: "./today/pdf/quiz-cards.pdf",
+        label: "Anything else",
+      });
+    },
+    (m) => {
+      m.doors[1].today.pdfs.push({
+        href: "./today/pdf/quiz-cards.pdf",
+        label: "Quiz cards",
+      });
+    },
   ]) {
     const bad = structuredClone(manifest);
     change(bad);
     assert.throws(() => validateFamily(bad));
   }
+  // Standalone screen-free sheets after the pack PDF are valid, once each.
+  const withSheets = structuredClone(manifest);
+  withSheets.doors[0].today.pdfs.splice(1);
+  withSheets.doors[0].today.pdfs.push(
+    { href: "./today/pdf/quiz-cards.pdf", label: "Quiz cards" },
+    {
+      href: "./today/pdf/quiz-cards-key.pdf",
+      label: "Grown-ups: quiz cards answer key",
+    },
+  );
+  assert.equal(validateFamily(withSheets).length, 2);
+  withSheets.doors[0].today.pdfs.push(withSheets.doors[0].today.pdfs[1]);
+  assert.throws(() => validateFamily(withSheets));
 });
 
 test("family pages are unlisted, static, same-origin and usable without scripts", async () => {
@@ -105,7 +142,7 @@ test("family pages are unlisted, static, same-origin and usable without scripts"
       assert.doesNotMatch(html, /Next morning/);
       assert.equal(
         [...html.matchAll(/Ready to print/g)].length,
-        manifest.doors.filter((door) => door.today?.pdfs.length === 1).length,
+        manifest.doors.filter((door) => door.today?.pdfs.length > 0).length,
       );
     }
     const base = new URL(path, "https://example.test/daily-learning-pack/");
