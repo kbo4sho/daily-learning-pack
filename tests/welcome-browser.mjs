@@ -288,6 +288,10 @@ async function weigh(browser, viewport) {
  * objects (masks and duplicates add to it); the DOM check after the print is
  * the exact one: every picture on the page finished loading.
  */
+// Hero, two doors and three steps are always there; tonight's plate is the
+// seventh picture unless the page uses its typographic fallback.
+const FIXED_PICTURES = 6;
+
 async function checkPrint(browser) {
   const context = await browser.newContext({
     viewport: { width: 1280, height: 800 },
@@ -317,7 +321,7 @@ async function checkPrint(browser) {
     assert.equal(leaves, 2, `printed ${leaves} sheets`);
     assert.equal(declared, 2, `the document declares ${declared} sheets`);
     const images = (pdf.match(/\/Subtype \/Image/g) || []).length;
-    assert.ok(images >= 7, `only ${images} pictures printed`);
+    assert.ok(images >= FIXED_PICTURES, `only ${images} pictures printed`);
     const pictures = await page.evaluate(() => {
       const all = [...document.images];
       return {
@@ -326,7 +330,7 @@ async function checkPrint(browser) {
       };
     });
     assert.ok(
-      pictures.total >= 7,
+      pictures.total >= FIXED_PICTURES,
       `only ${pictures.total} pictures on the page`,
     );
     assert.equal(
