@@ -67,6 +67,9 @@ const CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
 const BUNDLE = ["math", "foldable", "writing"];
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
+// Local paths on macOS, Linux and Windows (the central policy covers /Users).
+const LOCAL_PATH =
+  /\/(?:home|Users|tmp|var\/folders)\/\w|[A-Za-z]:\\(?:Users|Documents)\\/;
 const AGE_RANGE =
   /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
 
@@ -242,7 +245,7 @@ async function checkPdf(
     // earlier day cannot hide inside a PDF.
     // (Foldable sheets are exempt: they carry no title, and inside Print today
     // each one is compared with the standalone foldable's words and picture.)
-    if (title && t.trim().length >= 20 && !exempt.has(squash(t)))
+    if (title && sheetTitles && t.trim().length >= 20 && !exempt.has(squash(t)))
       assert.ok(
         squash(t).includes(squash(title)),
         `${name}: page ${at} does not name today's pack`,
@@ -259,12 +262,17 @@ async function checkPdf(
   if (text) assert.ok(all.trim().length >= 20, `${name}: no text layer`);
   // Lesson text gets the lesson-aware policy (names, paths, hosts). Metadata is
   // not lesson copy, so it also gets the process-note phrase check.
+  assert.ok(!LOCAL_PATH.test(all), `${name}: a local path is in the PDF text`);
   assert.deepEqual(
     privacyIssues(all, `${name}.pdf (text)`),
     [],
     `${name}: private name in PDF text`,
   );
   const metadata = meta.raw + run("pdfinfo", ["-meta", path]);
+  assert.ok(
+    !LOCAL_PATH.test(metadata),
+    `${name}: a local path is in the PDF metadata`,
+  );
   assert.deepEqual(
     [
       ...privacyIssues(metadata, `${name}.pdf (metadata)`),
@@ -295,9 +303,6 @@ const shipped = readdirSync(pdfDir)
   .map((f) => f.replace(/\.pdf$/, ""))
   .sort();
 assert.ok(shipped.length >= CORE.length, `only ${shipped.length} PDFs shipped`);
-const server = await serve(root, 0);
-const origin = `http://127.0.0.1:${server.address().port}`;
-const base = `${origin}/daily-learning-pack`;
 const age = squash(`AGE${pack.targetAge}`);
 // The pack must have the fields the checks lean on, so none of them is vacuous.
 assert.ok(
@@ -314,6 +319,22 @@ assert.ok(
   "pack.json has no writing frames",
 );
 assert.ok(pack.reading?.title?.trim(), "pack.json has no reading title");
+const filled = (v) => typeof v === "string" && v.trim().length > 3;
+assert.ok(pack.topic?.trim().length >= 2, "pack.json has no topic");
+for (const t of pack.math.tasks)
+  assert.ok(
+    filled(t.prompt) && filled(t.equation) && filled(t.worked),
+    "a math task lacks its prompt, equation or worked answer",
+  );
+for (const f of pack.writing.frames)
+  assert.ok(filled(f.start), "a writing frame has no starter");
+assert.ok(
+  Array.isArray(pack.answers) && pack.answers.every((a) => filled(a.text)),
+  "pack.json answers are empty",
+);
+let server;
+let origin;
+let base;
 const failures = [];
 let browser;
 
@@ -356,11 +377,27 @@ async function inContext(options, fn, { ignore = /^$/ } = {}) {
   }
 }
 
+/** First promise to resolve with a value; rejects when none does. */
+function firstOutcome(promises) {
+  return new Promise((resolve, reject) => {
+    let left = promises.length;
+    const miss = () => {
+      left -= 1;
+      if (left === 0)
+        reject(new Error("the click gave no download, popup or navigation"));
+    };
+    for (const p of promises) p.then((v) => (v ? resolve(v) : miss()), miss);
+  });
+}
+
 /** Names of the PDFs linked on /today/, set by the menu step. */
 let linked = [];
 const checked = {};
 
 try {
+  server = await serve(root, 0);
+  origin = `http://127.0.0.1:${server.address().port}`;
+  base = `${origin}/daily-learning-pack`;
   browser = await bounded(chromium.launch(), STEP, "chromium launch");
 
   for (const [label, viewport] of [
@@ -394,10 +431,19 @@ try {
             let opacity = 1;
             for (let el = a; el; el = el.parentElement)
               opacity *= Number(getComputedStyle(el).opacity);
-            const top = document.elementFromPoint(
-              x + width / 2,
-              y + height / 2,
+            // Five points: a cover over most of the entry still fails.
+            const spots = [
+              [0.5, 0.5],
+              [0.15, 0.3],
+              [0.85, 0.3],
+              [0.15, 0.7],
+              [0.85, 0.7],
+            ].map(([fx, fy]) =>
+              document.elementFromPoint(x + width * fx, y + height * fy),
             );
+            const top = spots.every((el) => el && (el === a || a.contains(el)))
+              ? a
+              : null;
             return {
               opacity,
               hit: Boolean(top && (top === a || a.contains(top))),
@@ -525,15 +571,27 @@ try {
         const link = page.locator(
           'details.print-menu a[href$="kid-worksheets.pdf"]',
         );
-        const outcome = Promise.race([
+        const outcome = firstOutcome([
           page.waitForEvent("download", { timeout: STEP }).then(async (d) => ({
             kind: "download",
             bytes: await readFile(await d.path()),
           })),
           page.waitForEvent("popup", { timeout: STEP }).then(async (popup) => {
+            await popup.waitForLoadState("domcontentloaded").catch(() => {});
             const res = await context.request.get(popup.url());
             return { kind: "popup", bytes: await res.body() };
           }),
+          page
+            .waitForEvent("framenavigated", {
+              timeout: STEP,
+              predicate: (f) =>
+                f === page.mainFrame() &&
+                f.url().endsWith("/pdf/kid-worksheets.pdf"),
+            })
+            .then(async (f) => ({
+              kind: "navigation",
+              bytes: await (await context.request.get(f.url())).body(),
+            })),
         ]);
         outcome.catch(() => {});
         await link.click();
@@ -653,6 +711,19 @@ try {
       for (const frame of pack.writing.frames)
         has("writing", frame.start, `writing starter "${frame.start}"`);
       has("reading", pack.reading.title, "the reading title");
+      // The answer key holds this pack's answers, not another sheet's.
+      for (const task of pack.math.tasks)
+        has(
+          "parent-answer-key",
+          task.worked,
+          `worked answer "${task.worked.slice(0, 24)}"`,
+        );
+      for (const a of pack.answers)
+        has("parent-answer-key", a.text, `answer "${a.text.slice(0, 24)}"`);
+      // Optional table-top lab: its materials are on its sheet.
+      if (checked["lab-page"])
+        for (const m of pack.labPage?.materials ?? [])
+          has("lab-page", m, `lab material "${m}"`);
       // Print today is Math, then Foldable, then Writing, page for page.
       const parts = BUNDLE.flatMap((b) => checked[b].files);
       const bundle = checked["kid-worksheets"].files;
@@ -753,6 +824,11 @@ try {
     () =>
       browserPrint("/welcome/", "welcome", async (result, file) => {
         assert.equal(result.pages, 2, `welcome printed ${result.pages} sheets`);
+        // Hero, two doors and three steps: six pictures on the page itself.
+        assert.ok(
+          summary.browserPrints.welcome.pictures.total >= 6,
+          "fewer than six pictures on the welcome page",
+        );
         // Hero, two doors and three steps are always there. Same loose floor as
         // tests/welcome-browser.mjs (raw image objects, masks and duplicates
         // included, and sized differently by each Chromium build); the exact
@@ -770,8 +846,10 @@ try {
     await bounded(browser.close(), STEP, "chromium close").catch((e) =>
       failures.push(`browser close: ${e.message}`),
     );
-  server.closeAllConnections();
-  server.close();
+  if (server) {
+    server.closeAllConnections();
+    await new Promise((done) => server.close(done));
+  }
 }
 summary.pack = { slug: pack.slug, title: pack.title, age: pack.targetAge };
 writeFileSync(
