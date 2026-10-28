@@ -6,6 +6,25 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F7F3EB">
 <title>Wonder Daily · A printable learning pack</title>
+<meta name="description" content="Wonder Daily is a printable learning pack made for one day: a story to read, a few problems, and something to do or make.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wonder Together">
+<meta property="og:title" content="Wonder Daily · A printable learning pack">
+<meta property="og:description" content="Wonder Daily is a printable learning pack made for one day: a story to read, a few problems, and something to do or make.">
+<meta property="og:url" content="https://kbo4sho.github.io/daily-learning-pack/welcome/">
+<meta property="og:image" content="https://kbo4sho.github.io/daily-learning-pack/welcome/share-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Two cartoon bears, one big and one small, curled up in a bed reading a picture book by lamplight, with a crescent moon in the window.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wonder Daily · A printable learning pack">
+<meta name="twitter:description" content="Wonder Daily is a printable learning pack made for one day: a story to read, a few problems, and something to do or make.">
+<meta name="twitter:image" content="https://kbo4sho.github.io/daily-learning-pack/welcome/share-1200x630.jpg">
+<meta name="twitter:image:alt" content="Two cartoon bears, one big and one small, curled up in a bed reading a picture book by lamplight, with a crescent moon in the window.">
+<link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/newsreader-latin-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -102,5 +121,11 @@
   </section>
 </main>
 <footer class="w-foot"><p><em>Past packs stay on the shelf. Open any one when you like.</em></p><p>Wonder Daily · from Wonder Together</p></footer>
+<script>
+/* Print every picture: lazy ones below the fold are loaded before the sheet is made. */
+addEventListener("beforeprint", () => {
+  for (const img of document.querySelectorAll('img[loading="lazy"]')) img.loading = "eager";
+});
+</script>
 </body>
 </html>

@@ -73,6 +73,15 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.slug, latest.slug);
   assert.equal(latest.slug, "how-sidewalks-work");
   assert.equal(latest.date, "2026-10-28");
+  const how_a_zipper_works = json.days.find(
+    (day) => day.slug === "how-a-zipper-works",
+  );
+  assert.equal(how_a_zipper_works.date, "2026-09-30");
+  assert.equal(how_a_zipper_works.latest, false);
+  const how_a_zipper_worksPage = await read(
+    "dist/days/how-a-zipper-works/index.html",
+  );
+  assert.doesNotMatch(how_a_zipper_worksPage, /data-go="diorama"/);
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
@@ -93,6 +102,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
       "tungsten-carbide",
       "tiny-guests",
       "a-paper-boat",
+      "how-a-zipper-works",
       "morning-dew",
       "how-black-lights-work",
       "how-code-turns-into-lesson",
