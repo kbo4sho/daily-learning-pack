@@ -429,13 +429,13 @@ async function checkPdf(
     [],
     `${name}: private name in PDF text`,
   );
-  // The whole metadata block is checked for paths and private names. The
-  // Title is lesson copy (it names the pack), so it gets the source-aware
-  // process-note check like the text; every other field gets the strict one.
-  const metadata = meta.raw + run("pdfinfo", ["-meta", path]);
-  const metaLines = metadata.split("\n");
-  const titleLines = metaLines.filter((l) => /^Title:/.test(l)).join("\n");
-  const otherLines = metaLines.filter((l) => !/^Title:/.test(l)).join("\n");
+  // The whole metadata block (standard, custom and XMP fields, every spelling
+  // of the title) is checked for paths and private names, and for process
+  // notes the way the text is: a match is fine only when pack.json says it.
+  const metadata =
+    meta.raw +
+    run("pdfinfo", ["-custom", path]) +
+    run("pdfinfo", ["-meta", path]);
   assert.ok(
     !LOCAL_PATH.test(metadata),
     `${name}: a local path is in the PDF metadata`,
@@ -443,8 +443,7 @@ async function checkPdf(
   assert.deepEqual(
     [
       ...privacyIssues(metadata, `${name}.pdf (metadata)`),
-      ...metadataProcessIssues(otherLines, `${name}.pdf (metadata)`),
-      ...sourced(titleLines, `${name}.pdf (title)`),
+      ...sourced(metadata, `${name}.pdf (metadata)`),
     ],
     [],
     `${name}: private name or process note in PDF metadata`,
@@ -1050,16 +1049,26 @@ try {
       // header-only page cannot hide) and no page repeats another.
       const eachPage = (name, needles) => {
         const seen = new Set();
+        // A page's body: no header or footer lines, no "2 / 3" counters, so the
+        // same worksheet printed again under a new counter still repeats.
+        const body = (t) => {
+          const lines = t
+            .split("\n")
+            .map((l) => l.trim())
+            .filter(Boolean);
+          const inner = lines.length > 6 ? lines.slice(2, -1) : lines;
+          return squash(inner.join("\n").replace(/\d+\s*\/\s*\d+/g, ""));
+        };
         for (const [at, t] of checked[name].pageTexts.entries()) {
           assert.ok(
             needles.some((n) => contains(t, n)),
             `${name}: page ${at + 1} holds none of today's content`,
           );
           assert.ok(
-            !seen.has(squash(t)),
-            `${name}: page ${at + 1} repeats an earlier page`,
+            body(t).length >= 40 && !seen.has(body(t)),
+            `${name}: page ${at + 1} repeats an earlier page or has no body`,
           );
-          seen.add(squash(t));
+          seen.add(body(t));
         }
       };
       eachPage("reading", [
