@@ -7,8 +7,9 @@
   compared page by page as pictures.
 - Every page of every PDF is US Letter.
 - Header text says Wonder Daily and `Age <targetAge>` (never an age range) on
-  math, reading, answer key, and Print today.
-- No private name or local path in the text, and none (plus no process note) in
+  math, reading, answer key, and Print today; header lines are read per segment on
+  word boundaries ("PAGE 8" is not an age).
+- No private name or local path (broad pattern: /root, /workspace, /home, /Users, /tmp, /var, /opt, /etc, /private, /mnt, /srv, /usr, drive and UNC) in the text, and none (plus no process note) in
   the metadata; every text
   sheet names today's pack.
 - `/today/` and `/days/<slug>/` hold identical bytes.

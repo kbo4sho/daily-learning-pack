@@ -2,7 +2,8 @@
 
 ## Sub-features
 
-- Two Letter sheets with the art, sign-up button hidden. The page is noindex
+- Two Letter sheets with the art. Only the header link (`.w-start`) is hidden
+  in print; the form's sign-up button (`.w-form button`) is printed. The page is noindex
   and unlinked; this check never links to it.
 
 ## How to get to it (user POV)

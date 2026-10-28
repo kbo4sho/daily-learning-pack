@@ -66,10 +66,29 @@ const MENU = {
 const CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
 const BUNDLE = ["math", "foldable", "writing"];
-// Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
-// Local paths on macOS, Linux and Windows (the central policy covers /Users).
+// Local paths: Unix-style system and home directories (at the start of a word),
+// Windows drive and UNC paths. The shared policy knows fewer of them.
 const LOCAL_PATH =
-  /\/(?:home|Users|tmp|var\/folders)\/\w|[A-Za-z]:\\(?:Users|Documents)\\/;
+  /(?:^|[\s"'(=:])\/(?:home|Users|tmp|var|root|workspace|opt|etc|private|mnt|srv|usr)\/\w|\b[A-Za-z]:\\[\w .-]+\\|\\\\[\w.-]+\\[\w$.-]+/;
+for (const bad of [
+  "/root/build/x",
+  "see /workspace/job/out.pdf",
+  "/home/runner/work/f",
+  ["", "Users", "me", "f"].join("/"),
+  "(/tmp/x)",
+  "D:\\work\\f.pdf",
+  ["C:", "Users", "me", "f"].join("\\"),
+  "\\\\server\\share\\f",
+])
+  assert.ok(LOCAL_PATH.test(bad), `LOCAL_PATH misses ${bad}`);
+for (const fine of [
+  "and/or",
+  "a 1/2 cup",
+  "home/work balance",
+  "Add 40 to get 85",
+])
+  assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
+// Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
 const AGE_RANGE =
   /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
 
@@ -113,6 +132,31 @@ const run = (cmd, args) =>
     timeout: TOOL,
   });
 const squash = (text) => text.replace(/\s+/g, "").toUpperCase();
+/**
+ * Age words printed in page headers. Headers are letter-spaced ("A G E 8 · M AT H"),
+ * so each segment between dots or wide gaps is squashed on its own: "PAGE 8"
+ * stays "PAGE8" and is not an age, "A G E 8-10" stays "AGE8-10" and is not "AGE8".
+ */
+function headerAges(text) {
+  return text
+    .split("\n")
+    .flatMap((line) => line.split(/\s{2,}|·/))
+    .map(squash)
+    .filter((seg) => /^AGES?\d/.test(seg));
+}
+// Fixtures for the header reader (guards the normalisation itself).
+assert.deepEqual(
+  headerAges("W O N D E R D A I LY    A G E 8 · M AT H · 1 / 2"),
+  ["AGE8"],
+);
+assert.deepEqual(headerAges("WONDER DAILY    AG E 8 · G R A D E 3"), ["AGE8"]);
+assert.deepEqual(headerAges("WONDER DAILY    P A G E 8 · M AT H"), []);
+assert.deepEqual(headerAges("WONDER DAILY    A G E S 6-8 · M AT H"), [
+  "AGES6-8",
+]);
+assert.deepEqual(headerAges("WONDER DAILY    A G E 8–10 · M AT H"), [
+  "AGE8–10",
+]);
 
 function info(path) {
   const first = run("pdfinfo", [path]);
@@ -335,6 +379,7 @@ assert.ok(
   "pack.json has no writing frames",
 );
 assert.ok(pack.reading?.title?.trim(), "pack.json has no reading title");
+const filled2 = (v) => typeof v === "string" && v.trim().length >= 2;
 const filled = (v) => typeof v === "string" && v.trim().length > 3;
 assert.ok(pack.topic?.trim().length >= 2, "pack.json has no topic");
 for (const t of pack.math.tasks)
@@ -457,20 +502,34 @@ try {
           let opacity = 1;
           for (let n = el; n; n = n.parentElement)
             opacity *= Number(getComputedStyle(n).opacity);
+          // Colours as [r, g, b, a]; backgrounds are composited down the
+          // ancestor chain onto white, and text over the result.
+          const parse = (v) => {
+            const n = v.match(/[\d.]+/g).map(Number);
+            return [n[0], n[1], n[2], n.length > 3 ? n[3] : 1];
+          };
+          const over = (top, base) => [
+            top[0] * top[3] + base[0] * (1 - top[3]),
+            top[1] * top[3] + base[1] * (1 - top[3]),
+            top[2] * top[3] + base[2] * (1 - top[3]),
+            1,
+          ];
+          const layers = [];
+          for (let n = el; n; n = n.parentElement)
+            layers.unshift(parse(getComputedStyle(n).backgroundColor));
+          const bg = layers.reduce(
+            (base, layer) => over(layer, base),
+            [255, 255, 255, 1],
+          );
+          const fg = over(parse(c.color), bg);
           const lum = (rgb) => {
-            const v = rgb
-              .match(/[\d.]+/g)
-              .slice(0, 3)
-              .map(Number)
-              .map((x) => {
-                x /= 255;
-                return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
-              });
+            const v = rgb.slice(0, 3).map((x) => {
+              x /= 255;
+              return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
+            });
             return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
           };
-          const [hi, lo] = [lum(c.color), lum(c.backgroundColor)].sort(
-            (a, b) => b - a,
-          );
+          const [hi, lo] = [lum(fg), lum(bg)].sort((a, b) => b - a);
           const hit = document.elementFromPoint(
             r.x + r.width / 2,
             r.y + r.height / 2,
@@ -648,51 +707,68 @@ try {
       }),
     );
 
-  await step("/today/ Print today click hands over the sheet", () =>
-    inContext(
-      { viewport: { width: 1280, height: 800 } },
-      async (page, context) => {
-        await page.goto(`${base}/today/`, { waitUntil: "load", timeout: STEP });
-        await page.locator("details.print-menu summary").click();
-        // A real click must hand the parent the PDF: headless Chromium turns it
-        // into a download (a popup or a navigation to the PDF would also be a
-        // working print path, so those count too).
-        const link = page.locator(
-          'details.print-menu a[href$="kid-worksheets.pdf"]',
-        );
-        const outcome = firstOutcome([
-          page.waitForEvent("download", { timeout: STEP }).then(async (d) => ({
-            kind: "download",
-            bytes: await readFile(await d.path()),
-          })),
-          page.waitForEvent("popup", { timeout: STEP }).then(async (popup) => {
-            await popup.waitForLoadState("domcontentloaded").catch(() => {});
-            const res = await context.request.get(popup.url());
-            return { kind: "popup", bytes: await res.body() };
-          }),
-          page
-            .waitForEvent("framenavigated", {
+  await step(
+    "every Print menu entry hands over its PDF on a real click",
+    async () => {
+      for (const name of shipped) {
+        await inContext(
+          { viewport: { width: 1280, height: 800 } },
+          async (page, context) => {
+            await page.goto(`${base}/today/`, {
+              waitUntil: "load",
               timeout: STEP,
-              predicate: (f) =>
-                f === page.mainFrame() &&
-                f.url().endsWith("/pdf/kid-worksheets.pdf"),
-            })
-            .then(async (f) => ({
-              kind: "navigation",
-              bytes: await (await context.request.get(f.url())).body(),
-            })),
-        ]);
-        outcome.catch(() => {});
-        await link.click();
-        const got = await outcome;
-        const want = await readFile(join(pdfDir, "kid-worksheets.pdf"));
-        assert.ok(
-          got.bytes.equals(want),
-          `the ${got.kind} is not today's sheet`,
+            });
+            await page.locator("details.print-menu summary").click();
+            // A real click must hand the parent the PDF: headless Chromium turns it
+            // into a download (a popup or a navigation to the PDF would also be a
+            // working print path, so those count too).
+            const link = page.locator(
+              `details.print-menu a[href$="/${name}.pdf"]`,
+            );
+            assert.equal(await link.count(), 1, `one menu entry for ${name}`);
+            const outcome = firstOutcome([
+              page
+                .waitForEvent("download", { timeout: STEP })
+                .then(async (d) => ({
+                  kind: "download",
+                  bytes: await readFile(await d.path()),
+                })),
+              page
+                .waitForEvent("popup", { timeout: STEP })
+                .then(async (popup) => {
+                  await popup
+                    .waitForLoadState("domcontentloaded")
+                    .catch(() => {});
+                  const res = await context.request.get(popup.url());
+                  return { kind: "popup", bytes: await res.body() };
+                }),
+              page
+                .waitForEvent("framenavigated", {
+                  timeout: STEP,
+                  predicate: (f) =>
+                    f === page.mainFrame() &&
+                    f.url().endsWith(`/pdf/${name}.pdf`),
+                })
+                .then(async (f) => ({
+                  kind: "navigation",
+                  bytes: await (await context.request.get(f.url())).body(),
+                })),
+            ]);
+            outcome.catch(() => {});
+            await link.click();
+            const got = await outcome;
+            const want = await readFile(join(pdfDir, `${name}.pdf`));
+            assert.ok(
+              got.bytes.equals(want),
+              `${name}: the ${got.kind} is not today's file`,
+            );
+          },
+          // Headless Chromium aborts the page's own request when a PDF click
+          // becomes a download; the download itself is the proof.
+          { ignore: /\/pdf\/[\w-]+\.pdf$/ },
         );
-      },
-      { ignore: /\/pdf\/kid-worksheets\.pdf$/ },
-    ),
+      }
+    },
   );
 
   await step("/today/ shows the pack's age and no age range", () =>
@@ -700,14 +776,13 @@ try {
       await page.goto(`${base}/today/`, { waitUntil: "load", timeout: STEP });
       // The age is on a visible element (the grown-ups summary), not only in
       // closed or hidden text or the pack JSON embedded in a script tag.
-      const ageNotes = page
-        .locator("summary", {
-          hasText: new RegExp(`\\bAge ${pack.targetAge}\\b`),
-        })
-        .filter({ visible: true });
+      const footers = await page
+        .locator("summary")
+        .filter({ visible: true })
+        .evaluateAll((all) => all.map((el) => el.textContent.trim()));
       assert.ok(
-        (await ageNotes.count()) >= 1,
-        `no visible "Age ${pack.targetAge}" on the page`,
+        footers.some((t) => t === `For grown-ups · Age ${pack.targetAge}`),
+        `no visible "For grown-ups · Age ${pack.targetAge}" summary (saw ${footers.join(" | ")})`,
       );
       // Range check over all page text except scripts and styles.
       const text = await page.evaluate(() => {
@@ -765,7 +840,7 @@ try {
         const t = squash(checked[name].text);
         assert.ok(t.includes("WONDERDAILY"), `${name}: no Wonder Daily header`);
         assert.ok(
-          t.includes(age),
+          headerAges(checked[name].text).includes(age),
           `${name}: header does not say Age ${pack.targetAge}`,
         );
         assert.ok(
@@ -774,11 +849,9 @@ try {
         );
       }
       for (const [name, r] of Object.entries(checked)) {
-        const ages = [...squash(r.text).matchAll(/AGES?(\d+)/g)].map(
-          (m) => m[1],
-        );
+        const ages = headerAges(r.text);
         assert.ok(
-          ages.every((n) => n === String(pack.targetAge)),
+          ages.every((a) => a === age),
           `${name}: printed age ${ages} differs from pack age ${pack.targetAge}`,
         );
       }
@@ -819,9 +892,16 @@ try {
       if (checked["lab-page-key"])
         has("lab-page-key", "grown-ups only", "the grown-ups label");
       // Optional table-top lab: its materials are on its sheet.
-      if (checked["lab-page"])
-        for (const m of pack.labPage?.materials ?? [])
-          has("lab-page", m, `lab material "${m}"`);
+      // A pack that declares the lab must list materials; one without a lab
+      // page has nothing to check.
+      if (extras.includes("lab-page")) {
+        const mats = pack.labPage?.materials;
+        assert.ok(
+          Array.isArray(mats) && mats.length >= 1 && mats.every(filled2),
+          "pack.screenFree has lab-page but pack.labPage.materials is missing or empty",
+        );
+        for (const m of mats) has("lab-page", m, `lab material "${m}"`);
+      }
       // Print today is Math, then Foldable, then Writing, page for page.
       const parts = BUNDLE.flatMap((b) => checked[b].files);
       const bundle = checked["kid-worksheets"].files;
@@ -849,7 +929,7 @@ try {
   );
 
   /** Browser print (page.pdf runs the real print path, firing beforeprint). */
-  async function browserPrint(path, name, check) {
+  async function browserPrint(path, name, check, { readyFirst = false } = {}) {
     await inContext(
       { viewport: { width: 1280, height: 800 } },
       async (page) => {
@@ -862,6 +942,28 @@ try {
           STEP,
           "fonts.ready",
         );
+        if (readyFirst) {
+          // /today/ has no lazy pictures: they must all be loaded before we
+          // print, so a late image cannot make the print look complete.
+          const before = await bounded(
+            page.evaluate(async () => {
+              const end = Date.now() + 10_000;
+              const done = () =>
+                [...document.images].every(
+                  (i) => i.complete && i.naturalWidth > 0,
+                );
+              while (!done() && Date.now() < end)
+                await new Promise((r) => setTimeout(r, 100));
+              return { total: document.images.length, ok: done() };
+            }),
+            STEP,
+            "images ready",
+          );
+          assert.ok(
+            before.total > 0 && before.ok,
+            `${name}: images not ready before print`,
+          );
+        }
         const pdf = await bounded(
           page.pdf({ format: "Letter", printBackground: true }),
           STEP,
@@ -899,22 +1001,27 @@ try {
   await step(
     "browser Print of /today/ is a short sheet that points at the Print menu",
     () =>
-      browserPrint("/today/", "today", async (result) => {
-        assert.ok(
-          result.pages <= 3,
-          `browser print of /today/ is ${result.pages} sheets`,
-        );
-        const t = squash(result.text);
-        // The page names this pack (its title or its reading title).
-        assert.ok(
-          [pack.title, pack.reading.title].some((n) => t.includes(squash(n))),
-          "printed page does not name today's pack",
-        );
-        assert.ok(
-          t.includes("PRINTMENU"),
-          "printed page does not point at the Print menu",
-        );
-      }),
+      browserPrint(
+        "/today/",
+        "today",
+        async (result) => {
+          assert.ok(
+            result.pages <= 3,
+            `browser print of /today/ is ${result.pages} sheets`,
+          );
+          const t = squash(result.text);
+          // The page names this pack (its title or its reading title).
+          assert.ok(
+            [pack.title, pack.reading.title].some((n) => t.includes(squash(n))),
+            "printed page does not name today's pack",
+          );
+          assert.ok(
+            t.includes("PRINTMENU"),
+            "printed page does not point at the Print menu",
+          );
+        },
+        { readyFirst: true },
+      ),
   );
 
   await step(
