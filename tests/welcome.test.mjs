@@ -13,12 +13,14 @@ test("welcome page is noindex, name-free, and shows tonight's real pack", async 
   const archive = JSON.parse(await read("dist/archive.json"));
   const latest = archive.days.find((d) => d.slug === archive.latest);
   assert.match(html, /<meta name="robots" content="noindex, nofollow">/);
-  assert.ok(html.includes("A little wonder.<br><em>A softer goodnight.</em>"));
-  assert.ok(html.includes("One family page.<br><em>A door for each kid.</em>"));
+  assert.ok(
+    html.includes("One learning pack.<br><em>Built around one question.</em>"),
+  );
+  assert.ok(html.includes("One family page.<br><em>Two doors.</em>"));
   for (const step of [
-    "They pick tomorrow.",
-    "Read tonight’s pack.",
-    "A note for you.",
+    "Start with one question.",
+    "Work through it together.",
+    "Check the answers.",
   ])
     assert.ok(html.includes(step), step);
   assert.ok(html.includes(esc(latest.title)));
@@ -76,4 +78,113 @@ test("welcome scenes ship as local, optimized webp with motion guarded", async (
   }
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.doesNotMatch(html + css, /https?:\/\/(?!www\.w3\.org)/);
+});
+
+/** Slop the welcome copy must never bring back. Lowercase, matched on visible text and alt text. */
+export const BANNED_WELCOME_COPY = [
+  "little wonderers",
+  "softer goodnight",
+  "a little wonder",
+  "their own way in",
+  "your time together",
+  "a moment together",
+  "a parent’s practice",
+  "a night of wonder",
+  "a little choice",
+  "door for each kid",
+  "shared place",
+  "nothing to catch up",
+  "their curiosity",
+  "your company",
+  "we bring the pack",
+  "after lights out",
+  "quiet moment",
+  "curious ideas",
+  "read it once, together",
+  "magic",
+  "journey",
+  "tapestry",
+  "delve",
+  "unlock",
+  "nurture",
+  "foster",
+  "cherish",
+  "in today’s",
+];
+
+/** Visible text plus alt text, with tags and entities removed. */
+function copyOf(html) {
+  const alts = [...html.matchAll(/\balt="([^"]*)"/g)].map((m) => m[1]);
+  const text = html
+    .replace(/<(script|style|svg)[\s\S]*?<\/\1>/g, " ")
+    .replace(/<title>([\s\S]*?)<\/title>/, " $1 ")
+    .replace(/<br\s*\/?>/g, " ")
+    .replace(/<[^>]+>/g, " ");
+  return [text, ...alts]
+    .join(" ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;|&apos;/g, "’")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+}
+
+function slopIssues(html) {
+  const copy = copyOf(html);
+  const issues = BANNED_WELCOME_COPY.filter((p) => copy.includes(p)).map(
+    (p) => `banned phrase: ${p}`,
+  );
+  if (/[—–]/.test(copy)) issues.push("em or en dash in copy");
+  for (const m of html.matchAll(/<p class="w-kicker">([^<]*)<\/p>/g))
+    if (m[1].includes("·")) issues.push(`kicker tagline: ${m[1]}`);
+  for (const m of html.matchAll(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/g))
+    if (/[—–]/.test(m[1])) issues.push(`dash in heading: ${m[1]}`);
+  return issues;
+}
+
+test("welcome copy has no filler or slop phrases", async () => {
+  // The latest-pack card shows lesson copy that changes daily; check the rest.
+  const committed = (await read("dist/welcome/index.html")).replace(
+    /<div class="w-pack-window">[\s\S]*?<\/article>/,
+    "",
+  );
+  assert.deepEqual(slopIssues(committed), []);
+  const rendered = welcomePage({
+    tonight: { title: "Pinecones", teaser: "How cones open and close." },
+  });
+  assert.deepEqual(slopIssues(rendered), []);
+  // The checker itself must catch the old copy.
+  assert.ok(
+    slopIssues("<h1>A little wonder.<br><em>A softer goodnight.</em></h1>")
+      .length >= 2,
+  );
+});
+
+test("welcome copy states what it is and promises no signup or email", async () => {
+  const copy = copyOf(await read("dist/welcome/index.html"));
+  assert.ok(copy.includes("packs are made for one day each"));
+  assert.ok(copy.includes("sign-up is not open"));
+  assert.doesNotMatch(copy, /arrives by email|we.ll email|join the waitlist/);
+});
+
+test("welcome page carries no personal names", async () => {
+  const html = await read("dist/welcome/index.html");
+  const rendered = welcomePage({ tonight: { title: "Pinecones" } });
+  for (const page of [html, rendered]) {
+    assert.deepEqual(privacyIssues(page, "welcome/index.html"), []);
+    for (const name of (process.env.WD_PRIVATE_NAMES || "")
+      .split(",")
+      .map((n) => n.trim())
+      .filter(Boolean))
+      assert.doesNotMatch(page, new RegExp(`\\b${name}\\b`, "i"));
+  }
+});
+
+test("committed welcome page matches the generator template", async () => {
+  const html = await read("dist/welcome/index.html");
+  const cut = (page) =>
+    page.replace(/<div class="w-pack-window">[\s\S]*?<\/article>/, "");
+  assert.equal(
+    cut(html),
+    cut(welcomePage({ tonight: { title: "x", teaser: "y" } })),
+  );
 });
