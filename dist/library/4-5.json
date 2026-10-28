@@ -140,6 +140,34 @@
       "format": "picture-pack",
       "status": "published",
       "hidden": false
+    },
+    {
+      "id": "snails",
+      "band": "4-5",
+      "topic": "snails",
+      "why": "Following a snail's slow glide helps your child notice how animals move while practicing counting, sounds and tracing.",
+      "skills": [
+        "addition-picture-story",
+        "beginning-sounds",
+        "coloring-inside-lines",
+        "colors",
+        "count-objects-to-20",
+        "cutting-with-grown-up",
+        "cvc",
+        "first-then-last",
+        "letter-recognition",
+        "letter-sounds",
+        "maze",
+        "number-recognition",
+        "one-to-one",
+        "rhyming",
+        "shapes",
+        "tracing"
+      ],
+      "date": "2026-10-12",
+      "format": "picture-pack",
+      "status": "published",
+      "hidden": false
     }
   ]
 }
