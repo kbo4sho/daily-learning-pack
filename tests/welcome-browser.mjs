@@ -30,21 +30,28 @@ const contextOptions = ({ width, height, scale }) => ({
   reducedMotion: "reduce",
 });
 
-/** Scroll the whole page so lazy images load, then wait for them. */
+/**
+ * Scroll the whole page so lazy images load, then wait for them. Polls
+ * img.complete instead of img.decode(): decode() can wait forever on a lazy
+ * image in Linux WebKit. A missing or broken image is caught by the later
+ * "every image decodes and is visible" check.
+ */
 async function settle(page) {
   await bounded(
     page.evaluate(async () => {
+      const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       for (let y = 0; y < document.body.scrollHeight; y += 500) {
         window.scrollTo(0, y);
-        await new Promise((r) => setTimeout(r, 60));
+        await wait(60);
       }
       window.scrollTo(0, 0);
-      await document.fonts.ready;
-      await Promise.all(
-        [...document.images].map((img) =>
-          img.complete ? 0 : img.decode().catch(() => 0),
-        ),
-      );
+      await Promise.race([document.fonts.ready, wait(5000)]);
+      const end = Date.now() + 10_000;
+      while (
+        ![...document.images].every((img) => img.complete) &&
+        Date.now() < end
+      )
+        await wait(100);
     }),
     STEP,
     "settle",
