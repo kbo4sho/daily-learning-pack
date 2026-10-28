@@ -8,13 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how do bike derailleurs work?",
-        "why": "Following one shifter click helps your child connect the cable, spring and pulley wheels to how a chain moves between gears.",
-        "date": "2026-10-26",
+        "topic": "how sidewalks work",
+        "why": "Following concrete from gray powder to a hard slab helps your child explain how a sidewalk is made, why it has grooves, and why it holds up feet.",
+        "date": "2026-10-28",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
+          },
+          {
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
+          },
+          {
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

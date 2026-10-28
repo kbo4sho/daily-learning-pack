@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-sidewalks-work",
+      "band": "6-8",
+      "topic": "how sidewalks work",
+      "why": "Following concrete from gray powder to a hard slab helps your child explain how a sidewalk is made, why it has grooves, and why it holds up feet.",
+      "skills": [
+        "one-step-add",
+        "one-step-subtract",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-28",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-bike-derailleurs-work",
       "band": "6-8",
       "topic": "how do bike derailleurs work?",
