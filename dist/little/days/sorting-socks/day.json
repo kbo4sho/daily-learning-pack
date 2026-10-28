@@ -1,0 +1,96 @@
+{
+  "slug": "sorting-socks",
+  "date": "2026-10-14",
+  "title": "Sorting Socks",
+  "question": "How can we sort a jumble of socks?",
+  "coverAlt": "Big and Little Wonderer: Sorting Socks",
+  "readAloud": [
+    [
+      {
+        "b": "Tumble, tumble, plop!"
+      },
+      {
+        "say": "(Pretend a soft sock lands in your lap.)"
+      },
+      "Big Wonderer tips a basket of clean socks onto the rug. Little Wonderer sees stripes, dots, stars, and many colors."
+    ],
+    [
+      "A jumble is easier to understand when we choose one thing to notice. First they look at color. Blue socks go together. Yellow socks go together."
+    ],
+    [
+      {
+        "ask": "Can you point to two socks that share a color?"
+      }
+    ],
+    [
+      "Next they look at patterns. Stripes join stripes. Dots join dots. Stars join stars.",
+      {
+        "b": "One rule at a time!"
+      },
+      {
+        "say": "(Trace pretend stripes in the air.)"
+      }
+    ],
+    [
+      "Then they compare size. A small sock may look like a big sock, but a matching pair needs the same size, color, and pattern.",
+      {
+        "ask": "Which sock looks biggest?"
+      }
+    ],
+    [
+      "Little Wonderer places each match side by side. Pair by pair, the jumble becomes tidy groups. One striped sock is left alone."
+    ],
+    [
+      {
+        "ask": "Where might its matching sock be?"
+      }
+    ],
+    [
+      "Big Wonderer finds it peeking from the empty basket. The last pair clicks together. Sorting helped them look closely and find every match."
+    ]
+  ],
+  "steps": [
+    "Read the story aloud together and stop at each “Ask”.",
+    "Print the pack and pick two or three pages; there is no need to do them all.",
+    "Point, circle, trace and color. Snip only with a grown-up.",
+    "Fold the picture book and read it again at bedtime."
+  ],
+  "pages": [
+    "cover",
+    "story",
+    "science",
+    "matching",
+    "sequencing",
+    "spot-difference",
+    "maze",
+    "counting",
+    "sums",
+    "letters",
+    "tracing",
+    "coloring"
+  ],
+  "tags": {
+    "band": "little",
+    "topic": "sorting socks",
+    "skills": [
+      "addition-picture-story",
+      "beginning-sounds",
+      "coloring-inside-lines",
+      "colors",
+      "count-objects-to-20",
+      "cutting-with-grown-up",
+      "cvc",
+      "first-then-last",
+      "letter-recognition",
+      "letter-sounds",
+      "maze",
+      "number-recognition",
+      "one-to-one",
+      "rhyming",
+      "shapes",
+      "tracing"
+    ],
+    "date": "2026-10-14"
+  },
+  "why": "Sorting a jumble of socks by one clue helps your child group and compare while practicing counting, sounds and tracing."
+}
