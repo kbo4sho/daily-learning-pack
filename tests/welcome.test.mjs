@@ -5,6 +5,14 @@ import { join } from "node:path";
 import { welcomePage } from "../src/welcome-render.mjs";
 import { esc } from "../src/html.mjs";
 import { privacyIssues } from "../scripts/privacy-check.mjs";
+import {
+  PLATE_MAX_BYTES,
+  PLATE_WIDTHS,
+  webFace,
+} from "../scripts/render-archive.mjs";
+import { mkdir, mkdtemp, rm, stat, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import sharp from "sharp";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
@@ -70,7 +78,12 @@ test("welcome page structure: one h1, ordered headings, three steps, two doors, 
   assert.ok(html.includes(esc(latest.title)));
   // The plate is optional: the renderer falls back to type without art.
   if (html.includes("w-pack-art"))
-    assert.ok(html.includes(`../days/${latest.slug}/`));
+    assert.match(
+      html,
+      new RegExp(
+        `class="w-pack-art" src="(?:\\.\\./days/${latest.slug}/|\\./img/plate-\\d+\\.webp)`,
+      ),
+    );
   assert.deepEqual(privacyIssues(html, "welcome/index.html"), []);
   assert.doesNotMatch(
     html,
@@ -270,4 +283,86 @@ test("committed welcome page matches the generator template", async () => {
     cut(html),
     cut(welcomePage({ tonight: { title: "x", teaser: "y" } })),
   );
+});
+
+test("the pack-card plate is a small webp copy, not the raw story plate", async () => {
+  const html = await read("dist/welcome/index.html");
+  const img = html.match(/<img class="w-pack-art"[^>]*>/)?.[0];
+  if (!img) return; // no plate today: the card falls back to type
+  assert.match(
+    img,
+    /srcset="\.\/img\/plate-640\.webp 640w, \.\/img\/plate-1024\.webp 1024w"/,
+  );
+  assert.match(img, /sizes="/);
+  assert.doesNotMatch(img, /\.jpe?g/);
+  for (const name of ["plate-640.webp", "plate-1024.webp"]) {
+    const bytes = (
+      await readFile(new URL(`../dist/welcome/img/${name}`, import.meta.url))
+    ).length;
+    assert.ok(bytes < 110_000, `${name} is ${bytes} bytes`);
+  }
+});
+
+test("a heavy daily plate cannot make the welcome card heavy", async () => {
+  // Worst case for a lossy codec: full-size random noise. A real plate is far
+  // lighter, so if this fits the caps, any future day fits.
+  const root = await mkdtemp(join(tmpdir(), "welcome-plate-"));
+  try {
+    const width = 1536;
+    const height = 1024;
+    const noise = Buffer.alloc(width * height * 3);
+    for (let i = 0; i < noise.length; i++) noise[i] = (i * 2654435761) >>> 24;
+    await mkdir(`${root}/days/heavy`, { recursive: true });
+    await sharp(noise, { raw: { width, height, channels: 3 } })
+      .jpeg({ quality: 95 })
+      .toFile(`${root}/days/heavy/plate.jpg`);
+    assert.ok((await stat(`${root}/days/heavy/plate.jpg`)).size > 600_000);
+    const face = await webFace(root, {
+      src: "../days/heavy/plate.jpg",
+      alt: "x",
+    });
+    assert.match(face.src, /^\.\/img\/plate-1024\.webp$/);
+    for (const w of PLATE_WIDTHS)
+      assert.ok(
+        (await stat(`${root}/welcome/img/plate-${w}.webp`)).size <=
+          PLATE_MAX_BYTES[w],
+        `plate-${w}.webp is over its cap`,
+      );
+    // Unreadable files, small or large, are dropped: the card shows type.
+    await writeFile(`${root}/days/heavy/bad.jpg`, "not an image");
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/bad.jpg", alt: "x" }),
+      null,
+    );
+    await writeFile(`${root}/days/heavy/bad-big.jpg`, Buffer.alloc(300_000, 7));
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/bad-big.jpg", alt: "x" }),
+      null,
+    );
+    // A plate that cannot fit the caps even at the lowest quality is dropped.
+    const square = Buffer.alloc(1024 * 1024 * 3);
+    for (let i = 0; i < square.length; i++) square[i] = (i * 2654435761) >>> 24;
+    await sharp(square, { raw: { width: 1024, height: 1024, channels: 3 } })
+      .jpeg({ quality: 95 })
+      .toFile(`${root}/days/heavy/square.jpg`);
+    assert.equal(
+      await webFace(root, { src: "../days/heavy/square.jpg", alt: "x" }),
+      null,
+    );
+    // A small, readable image narrower than the smallest copy is kept as is.
+    await sharp({
+      create: {
+        width: 400,
+        height: 300,
+        channels: 3,
+        background: { r: 230, g: 220, b: 200 },
+      },
+    })
+      .jpeg()
+      .toFile(`${root}/days/heavy/small.jpg`);
+    const small = { src: "../days/heavy/small.jpg", alt: "x" };
+    assert.deepEqual(await webFace(root, small), small);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
 });
