@@ -8,7 +8,7 @@ import { chromium, webkit } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import { serve } from "../scripts/serve.mjs";
 import { bounded, watchdog } from "./bounded.mjs";
-import { LIMIT, MAX_IMAGE } from "./welcome-budget.mjs";
+import { LIMIT, MAX_IMAGE, PLATE_LIMIT } from "./welcome-budget.mjs";
 
 const root = resolve(process.env.WD_TEST_ROOT || "dist");
 const STEP = 20_000;
@@ -80,6 +80,56 @@ const tests = {
     }, MIN_TARGET);
     assert.deepEqual(small, []);
   },
+  async "no visible text under 14px"(page) {
+    const small = await page.evaluate(() => {
+      const found = [];
+      const walker = document.createTreeWalker(
+        document.querySelector("body"),
+        NodeFilter.SHOW_TEXT,
+      );
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+        if (!n.textContent.trim()) continue;
+        const el = n.parentElement;
+        if (el.closest("[hidden], [aria-hidden='true']")) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width === 0 || r.height === 0) continue;
+        const size = parseFloat(getComputedStyle(el).fontSize);
+        if (size < 14)
+          found.push(`${size}px ${n.textContent.trim().slice(0, 30)}`);
+      }
+      return found;
+    });
+    assert.deepEqual(small, []);
+  },
+  async "layout fits the width"(page, viewport) {
+    const m = await page.evaluate(() => {
+      const box = (sel) => document.querySelector(sel).getBoundingClientRect();
+      const hero = document.querySelector(".w-hero-img");
+      const steps = [...document.querySelectorAll(".w-step")].map((el) =>
+        Math.round(el.getBoundingClientRect().top),
+      );
+      return {
+        height: document.documentElement.scrollHeight,
+        door: box(".w-door-frame").width,
+        heroRatio: hero.clientWidth / hero.clientHeight,
+        naturalRatio: hero.naturalWidth / hero.naturalHeight,
+        stepTops: steps,
+        stepCols: getComputedStyle(
+          document.querySelector(".w-steps"),
+        ).gridTemplateColumns.split(" ").length,
+      };
+    });
+    if (viewport.width <= 450) assert.ok(m.door >= 140, `door ${m.door}px`);
+    if (viewport.width >= 700) {
+      assert.equal(m.stepCols, 3, "steps are three across from 700px");
+      assert.ok(m.height <= 4400, `page is ${m.height}px tall`);
+    }
+    // The hero shows its whole picture at every width.
+    assert.ok(
+      Math.abs(m.heroRatio - m.naturalRatio) < 0.04,
+      `hero is cropped: shown ${m.heroRatio.toFixed(2)}, file ${m.naturalRatio.toFixed(2)}`,
+    );
+  },
   async "axe finds no violations"(page) {
     const { violations } = await new AxeBuilder({ page }).analyze();
     assert.deepEqual(
@@ -123,7 +173,7 @@ async function runOne(browser, viewport, name, fn) {
     const page = await bounded(context.newPage(), STEP, "newPage");
     await page.goto(url, { waitUntil: "load", timeout: STEP });
     await settle(page);
-    await bounded(fn(page), TEST, name);
+    await bounded(fn(page, viewport), TEST, name);
   } finally {
     await bounded(context.close(), STEP, "context.close");
   }
@@ -149,7 +199,11 @@ async function weigh(browser, viewport) {
     await page.waitForLoadState("networkidle", { timeout: STEP });
     await bounded(Promise.all(pending), STEP, "response bodies");
     assert.ok(!sizes.some(([, n]) => n === 0), "a response body was empty");
-    return sizes;
+    // Whatever file the card shows is the plate, generated copy or fallback.
+    const plateUrl = await page.evaluate(
+      () => document.querySelector(".w-pack-art")?.currentSrc || null,
+    );
+    return { sizes, plateUrl };
   } finally {
     await context.close();
   }
@@ -174,9 +228,21 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       for (const viewport of VIEWPORTS) {
         const label = `chromium ${viewport.width}px: page weight`;
         try {
-          const sizes = await bounded(weigh(browser, viewport), TEST, label);
-          const total = sizes.reduce((a, [, n]) => a + n, 0);
-          const biggest = [...sizes].sort((a, b) => b[1] - a[1])[0];
+          const { sizes, plateUrl } = await bounded(
+            weigh(browser, viewport),
+            TEST,
+            label,
+          );
+          // The daily pack-card plate is budgeted on its own (PLATE_MAX_BYTES),
+          // so tonight's art cannot decide whether the page fits.
+          const plate = sizes.filter(([u]) => u === plateUrl);
+          assert.ok(
+            plate.every(([, n]) => n <= PLATE_LIMIT),
+            `plate over ${PLATE_LIMIT} bytes`,
+          );
+          const fixed = sizes.filter(([u]) => !plate.some(([p]) => p === u));
+          const total = fixed.reduce((a, [, n]) => a + n, 0);
+          const biggest = [...fixed].sort((a, b) => b[1] - a[1])[0];
           console.log(
             `ok   ${label}: ${total} bytes, ${sizes.length} requests, largest ${biggest[1]} ${biggest[0].split("/").pop()}`,
           );
