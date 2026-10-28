@@ -24,15 +24,15 @@ clear message if `pdfinfo`, `pdftotext`, `pdftoppm` or `pdfimages` is missing
 
 | # | Step | Passes when |
 | --- | --- | --- |
-| 1 | Open `/today/` at 390 px and 1280 px, tap **Print** | The menu starts closed, opens, lists Print today (first), Foldable story, Math, Reading pages, Writing, Answer key by those labels, lists exactly the PDFs in `dist/today/pdf/` (no hidden or missing link), and every entry present (the Table-top lab extras too) is visible and fully inside the viewport |
+| 1 | Open `/today/` at 390 px and 1280 px, tap **Print** | The menu starts closed, opens, lists Print today (first), Foldable story, Math, Reading pages, Writing, Answer key by those labels, lists exactly the PDFs in `dist/today/pdf/` (no hidden or missing link), and every entry present (the Table-top lab extras too) is visible, not see-through, not covered, and fully inside the viewport |
 | 2 | Escape, then an outside click | Menu closes; focus returns to the Print button |
 | 3 | Fetch every menu link and every other same-site `.pdf` link on the page | Menu links stay on this site (a cited source on another site elsewhere on the page is left alone); same-site links sit under `/today/pdf/`, HTTP 200, `application/pdf`, body starts `%PDF-` and equals `dist/today/pdf/<name>.pdf` byte for byte |
-| 4 | Click **Print today** | The browser requests `kid-worksheets.pdf` and gets a PDF |
+| 4 | Click **Print today** | The click hands over a download (or opens a popup) whose bytes equal `dist/today/pdf/kid-worksheets.pdf`; a handler that swallows the click fails |
 | 5 | Read each linked PDF with `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages` | Every page is US Letter; has a title; every page renders with ink (no blank sheet, at least 1% dark pixels); every page has text or a picture; every text sheet names today's pack and the document title matches; today's math stories, equations, writing starters and reading title are on the right sheets; the Foldable is one sheet with a real picture; "Print today" is the Math, Foldable and Writing sheets in that order: same words on each sheet and a near-identical picture of it |
 | 6 | Header text | "Wonder Daily" and `Age <targetAge from pack.json>` on Print today, Math, Reading and Answer key; today's title present; no age range ("Ages 6-8"); every printed `AGE n` equals the pack age |
 | 7 | Privacy | Text and metadata of every PDF pass `privacyIssues` from `scripts/privacy-check.mjs` (private names including `WD_PRIVATE_NAMES`, local paths, host names); metadata also passes the process-note phrase check. Lesson text is not phrase-checked, as in that policy. The full public policy for every PDF is `node scripts/privacy-check.mjs dist`, which CI also runs |
 | 8 | Same bytes | `/today/pdf/*.pdf` equals `/days/<slug>/pdf/*.pdf` |
-| 9 | `/today/` text | Page text (scripts and styles removed) shows `Age <targetAge>` and no age range |
+| 9 | `/today/` age | A visible "For grown-ups · Age N" summary (N from `pack.json`), and no age range anywhere in the page text |
 | 10 | Browser Print of `/today/` (`page.pdf`, print media) | At most 3 sheets, names today's pack (title or reading title), points at the Print menu, every image loaded, no empty sheet (at least 0.2% ink) |
 | 11 | Browser Print of `/welcome/` | Exactly 2 Letter sheets, at least 6 real pictures in the PDF (`pdfimages`, soft masks excluded), every image loaded |
 
@@ -55,7 +55,7 @@ No check in this file changes published pages; the script only reads `dist/`.
 ## Proof that it can fail
 
 Each of these was applied to a copy of `dist/` and the check went red:
-a PDF replaced by a blank page ("looks blank"), a PDF deleted (404), a link
+a PDF replaced by a blank page ("looks blank"), a PDF deleted (404), a see-through or covered menu, a swallowed Print today click, a link
 pointing off the site or at another folder, a renamed menu label, "Print today"
 made of Math twice ("sheet 3 is not foldable"), a stale sheet from an earlier day
 inside Print today, a lab PDF whose menu link was removed, the pack
@@ -67,10 +67,14 @@ print"), "Age 8" changed to "Ages 6-8" on the page, and a name added to
 ## Tomorrow's pack
 
 Content checks read `pack.json` and the PDFs, never fixed text. As a trial, each
-earlier day under `dist/days/` was copied over `dist/today/` and the check run:
-19 of 26 days pass (every day on the current schema, back to 2026-10-07). The
-other 7 predate the `targetAge` field or the "Age N" footer, so they are not
-expected to pass.
+earlier day under `dist/days/` was copied over `dist/today/` and the check run.
+Four pass (2026-10-21, -22, -23 and -28). The rest carry older page templates:
+seven predate the `targetAge` field and fifteen hide the grown-ups footer in
+their own CSS, so they stop first at the visible-age check. Before that check
+was tightened, 19 of 26 passed every other step, so print layout and PDFs are
+stable across templates; the visible footer is what depends on the current
+page template. A generator change that hides it again fails this check on
+purpose.
 
 ## When it fails
 
