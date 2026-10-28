@@ -4,7 +4,7 @@
   "slug": "how-sidewalks-work",
   "topic": "how sidewalks work",
   "why": "Following concrete from gray powder to a hard slab helps your child explain how a sidewalk is made, why it has grooves, and why it holds up feet.",
-  "teaser": "Mix four plain ingredients, watch them harden, and find out why a sidewalk has grooves.",
+  "teaser": "Meet four plain ingredients, see how they harden, and find out why a sidewalk has grooves.",
   "aliases": [
     "sidewalks",
     "concrete",
@@ -43,7 +43,7 @@
         "plate": "wake",
         "question": "What is a sidewalk made of?",
         "notice": "Find the tiny stones and sandy specks on the chipped corner, then look at the four sealed jars beside it.",
-        "say": "A sidewalk is made of concrete, and concrete is a mix of four things: gravel, sand, cement and water. Cement is a fine gray powder. It is only one ingredient, and when it meets water it makes a paste that coats the sand and stones.",
+        "say": "A sidewalk is made of concrete, and concrete is a mix of four things: gravel, sand, cement and water. Cement is a fine gray powder. It is only a small part of the mix, roughly one part in eight, and when it meets water it makes a paste that coats the sand and stones.",
         "try": "Look closely at a sidewalk square outside, or at a photo of one. Find tiny stones, speckles and a groove. Draw one square on paper and mark where the groove runs."
       },
       {
@@ -59,7 +59,7 @@
         "plate": "keep",
         "question": "Why is a sidewalk strong, and what holds it up?",
         "notice": "Look at the edge of the path, where a thin layer of packed gravel sits under the slab.",
-        "say": "Concrete is very strong when it is squeezed, like when feet and bike wheels press down on it. It is weak when it bends or stretches. A layer of packed gravel under the slab keeps it level and spreads the weight out, so the slab does not bend.",
+        "say": "Concrete is very strong when it is squeezed, like when feet and bike wheels press down on it. It is weaker when it bends or stretches. A layer of packed gravel under the slab helps support it evenly and spread the weight out, so the slab bends less.",
         "try": "Stand a stick of sidewalk chalk on end and press down on top with one finger to see that it holds. Now lay the chalk across two books and press gently in the middle until it snaps. Chalk is a stand-in for concrete: strong when squeezed, weak when bent."
       },
       {
@@ -106,7 +106,7 @@
       "original": "assets/how-sidewalks-work/04-curing.png",
       "foldSrc": "assets/how-sidewalks-work/04-curing-fold.jpg",
       "title": "Keep it damp",
-      "alt": "A new sidewalk slab rests under a damp pale cloth beside a watering can while Big and Little Wonderer look at a row of small pebbles lined up along it, one for each day.",
+      "alt": "A new sidewalk slab lies inside its low wooden frame under a damp pale cloth beside a watering can while Big and Little Wonderer look at a row of seven small pebbles on the frame, one for each day.",
       "caption": "A new slab is kept damp for days so the hardening can keep going."
     },
     {
@@ -115,7 +115,7 @@
       "original": "assets/how-sidewalks-work/05-groove.png",
       "foldSrc": "assets/how-sidewalks-work/05-groove-fold.jpg",
       "title": "A line for cracks",
-      "alt": "Big and Little Wonderer crouch beside a sidewalk groove between two squares, where one thin crack runs along inside the groove.",
+      "alt": "Big and Little Wonderer crouch beside a straight, shallow groove between two sidewalk squares, where one thin hairline crack runs along inside the groove.",
       "caption": "A groove makes a planned weak line, so a crack tends to follow it."
     },
     {
@@ -124,8 +124,8 @@
       "original": "assets/how-sidewalks-work/06-base.png",
       "foldSrc": "assets/how-sidewalks-work/06-base-fold.jpg",
       "title": "What holds it up",
-      "alt": "At the edge of a park path, a thin layer of packed gravel shows under the concrete slab while Big and Little Wonderer look at it together.",
-      "caption": "Concrete is strong when squeezed, and packed gravel keeps the slab level."
+      "alt": "At the edge of a park path, a thin, even layer of packed gravel shows under the concrete slab while Big and Little Wonderer stand on the grass and look at it together.",
+      "caption": "Concrete is strong when squeezed, and packed gravel helps support the slab evenly."
     }
   ],
   "reading": {
@@ -174,7 +174,7 @@
         "id": "notice",
         "plate": "notice",
         "title": "Curing takes days",
-        "passage": "A new slab is not finished when it looks hard. It stays damp for about a week so the reaction can keep going, and most of its strength builds up in the first month. Big lined up pebbles beside the slab, one for each day under the damp cloth. Keeping new concrete damp like this is called curing.",
+        "passage": "A new slab is not finished when it looks hard. It stays damp for about a week so the reaction can keep going, and most of its strength builds up in the first month. Big lined up seven pebbles on the frame, one for each day under the damp cloth. Keeping new concrete damp like this is called curing.",
         "prompt": "Why do builders keep a new slab damp instead of letting it dry out fast?",
         "foldable": {
           "heading": "Curing takes days",
@@ -196,11 +196,11 @@
         "id": "keep",
         "plate": "keep",
         "title": "Strong when squeezed",
-        "passage": "At the edge of a park path, Little spotted a thin layer of packed gravel under the slab. Concrete is very strong when it is squeezed, and feet and bike wheels squeeze it all day. It is weak when it bends. The gravel keeps the slab level, so the weight spreads out and the slab does not bend.",
+        "passage": "At the edge of a park path, Little spotted a thin layer of packed gravel under the slab. Concrete is very strong when it is squeezed, and feet and bike wheels squeeze it all day. It is weaker when it bends. The gravel helps support the slab evenly, so the weight spreads out and the slab bends less.",
         "prompt": "Why does the gravel layer under the slab matter?",
         "foldable": {
           "heading": "Strong when squeezed",
-          "body": "Concrete is strong when squeezed but weak when bent. Packed gravel under the slab keeps it level so the weight spreads out."
+          "body": "Concrete is strong when squeezed but weaker when bent. Packed gravel under the slab helps spread the weight so it bends less."
         }
       }
     ],
@@ -233,7 +233,7 @@
     "questions": [
       "Why is cement only one ingredient of concrete, and what does it do when it meets water?",
       "How is hardening by a chemical reaction different from drying, and why does curing matter?",
-      "Why do sidewalks have grooves, and why does a gravel base help a slab?"
+      "Why do sidewalks have grooves, and how does a gravel base help a slab?"
     ],
     "yourTurn": {
       "title": "Your turn",
@@ -296,9 +296,9 @@
           71,
           28
         ],
-        "prompt": "A sample tray holds 71 pebbles. Little presses 28 of them into wet paste. How many pebbles are left in the tray?",
+        "prompt": "A sample tray holds 71 pebbles. Little sorts 28 of them into a jar. How many pebbles are left in the tray?",
         "equation": "71 − 28 =",
-        "hint": "Take away the pebbles Little pressed into the paste.",
+        "hint": "Take away the pebbles Little put in the jar.",
         "answer": 43,
         "worked": "71 − 28 = 43 pebbles. Subtract 30 to get 41, then add 2.",
         "plate": "change",
@@ -389,14 +389,14 @@
     },
     {
       "label": "Reading · 3",
-      "text": "A groove makes a thin line, so a crack tends to follow it neatly. Packed gravel keeps the slab level so the weight spreads out and the slab does not bend."
+      "text": "A groove makes a thin line, so a crack tends to follow it neatly. Packed gravel helps support the slab evenly, so the weight spreads out and the slab bends less."
     },
     {
       "label": "Writing",
       "text": "Accept a spoken, dictated, drawn, or written sentence that tells one step of how concrete is made or why a groove helps."
     }
   ],
-  "parentGuidance": "Cement is a fine gray powder that makes a paste with water. Concrete is cement plus sand, gravel and water. The cement and water react chemically (hydration), which is why concrete hardens even under water, and the slab is kept damp for about a week (curing) while most of its strength builds in the first month. Concrete shrinks slightly as it hardens, and grooves (control joints) give cracks a planned, neat line. Concrete is strong when squeezed and weak when bent, and a packed gravel base keeps a slab level. Safety: wet concrete and dry cement powder can burn skin and irritate eyes and lungs, so children stay well back and never touch or taste either. The table-top activities use only flour, rice, chalk and crackers; check for food allergies, and keep the flour mix out of mouths. Chalk can snap into small pieces, so keep them off the floor.",
+  "parentGuidance": "Cement is a fine gray powder that makes a paste with water, and it is only roughly 10 to 15 percent of the mix by volume. Concrete is cement plus sand, gravel and water. The cement and water react chemically (hydration), which is why concrete hardens even under water, and the slab is kept damp for about a week (curing) while most of its strength builds in the first month. Concrete shrinks slightly as it hardens, and grooves (control joints) give cracks a planned, neat line. Concrete is strong when squeezed and weak when bent, and a compacted gravel base helps support a slab evenly. Safety: wet concrete and dry cement powder can burn skin and irritate eyes and lungs, so children stay well back and never touch or taste either. The table-top activities use only flour, rice, chalk and crackers; check for food allergies, and keep the flour mix out of mouths. Chalk can snap into small pieces, so keep them off the floor.",
   "sources": [
     {
       "label": "American Cement Association · Cement and concrete FAQ",
