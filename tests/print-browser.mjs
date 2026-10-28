@@ -111,6 +111,12 @@ for (const fine of [
 ])
   assert.ok(!LOCAL_PATH.test(fine), `LOCAL_PATH flags ${fine}`);
 // Any dash (hyphen, non-breaking, en, em, minus) or "to"/"through" between ages.
+// Names of generation tools: never expected on a sheet unless pack.json (the
+// public lesson source) says the same word.
+const TOOL_WORDS =
+  /\b(?:codex|chatgpt|gpt-\d[\w.-]*|claude|openai|image_gen|firstmate)\b/gi;
+assert.ok("made by Codex today".match(TOOL_WORDS));
+assert.ok(!"How an Electrical Relay Works, Gemini twins".match(TOOL_WORDS));
 const AGE_RANGE =
   /\bAges?\s*\d+\s*(?:[-\u2010-\u2015\u2212]|to|through)\s*\d+/i;
 
@@ -134,18 +140,18 @@ assert.ok(
   `WD_PRINT_EVIDENCE (${evidence}) must be outside ${root}`,
 );
 mkdirSync(evidence, { recursive: true });
-if (existsSync(join(evidence, MARKER))) {
-  for (const old of JSON.parse(readFileSync(join(evidence, MARKER), "utf8"))
-    .files)
-    if (/^[\w.-]+$/.test(old)) rmSync(join(evidence, old), { force: true });
-}
-// After an earlier run's own files are gone the folder must hold nothing else,
-// so this run never overwrites, removes or records a file it did not create.
+const earlier = existsSync(join(evidence, MARKER))
+  ? JSON.parse(readFileSync(join(evidence, MARKER), "utf8")).files
+  : [];
+// Check first, remove after: the folder may hold only an earlier run's own
+// files, so this run never overwrites, removes or records anything else.
 assert.deepEqual(
-  readdirSync(evidence).filter((f) => f !== MARKER),
+  readdirSync(evidence).filter((f) => f !== MARKER && !earlier.includes(f)),
   [],
   `${evidence} holds files this check did not create: use an empty folder`,
 );
+for (const old of earlier)
+  if (/^[\w.-]+$/.test(old)) rmSync(join(evidence, old), { force: true });
 writeFileSync(join(evidence, MARKER), `${JSON.stringify({ files: [] })}\n`);
 
 const run = (cmd, args) =>
@@ -270,6 +276,7 @@ async function checkPdf(
     title = null,
     exempt = new Set(),
     imageOnly = new Set(),
+    textColors = true,
     sheetTitles = true,
   } = {},
 ) {
@@ -339,6 +346,34 @@ async function checkPdf(
   // Lesson text gets the lesson-aware policy (names, paths, hosts). Metadata is
   // not lesson copy, so it also gets the process-note phrase check.
   assert.ok(!LOCAL_PATH.test(all), `${name}: a local path is in the PDF text`);
+  // Text must be dark enough to read on white paper (no white or pale text
+  // that the text layer still holds), and tool names may appear anywhere only
+  // when the public pack.json itself says them.
+  if (textColors) {
+    const lum = (hex) => {
+      const v = [1, 3, 5].map((i) => {
+        const x = parseInt(hex.slice(i, i + 2), 16) / 255;
+        return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+    };
+    const colors = [
+      ...run("pdftohtml", ["-xml", "-stdout", "-i", "-q", path]).matchAll(
+        /<fontspec[^>]*color="(#[0-9a-fA-F]{6})"/g,
+      ),
+    ].map((m) => m[1]);
+    for (const c of colors)
+      assert.ok(
+        1.05 / (lum(c) + 0.05) >= 4.5,
+        `${name}: text colour ${c} is too pale to read on white`,
+      );
+  }
+  const publicPack = JSON.stringify(pack).toLowerCase();
+  for (const word of all.toLowerCase().match(TOOL_WORDS) ?? [])
+    assert.ok(
+      publicPack.includes(word),
+      `${name}: "${word}" is printed but is not in the public pack`,
+    );
   // Header and footer lines are page chrome, not lesson copy, so they get the
   // process-note phrase check that lesson text is exempt from.
   const chrome = pages
@@ -360,7 +395,11 @@ async function checkPdf(
     [],
     `${name}: private name in PDF text`,
   );
-  const metadata = meta.raw + run("pdfinfo", ["-meta", path]);
+  // The Title is checked against the pack above; every other field is chrome.
+  const metadata = (meta.raw + run("pdfinfo", ["-meta", path]))
+    .split("\n")
+    .filter((l) => !/^Title:/.test(l))
+    .join("\n");
   assert.ok(
     !LOCAL_PATH.test(metadata),
     `${name}: a local path is in the PDF metadata`,
@@ -428,7 +467,8 @@ assert.ok(
   "pack.json has no reading questions",
 );
 const filled2 = (v) => typeof v === "string" && v.trim().length >= 2;
-const filled = (v) => typeof v === "string" && v.trim().length > 3;
+// Non-empty text; short real values ("No", "Try") are fine.
+const filled = (v) => typeof v === "string" && v.trim().length >= 1;
 assert.ok(pack.topic?.trim().length >= 2, "pack.json has no topic");
 for (const t of pack.math.tasks)
   assert.ok(
@@ -482,6 +522,47 @@ async function inContext(options, fn, { ignore = /^$/ } = {}) {
   const context = await bounded(browser.newContext(options), STEP, "context");
   let failure;
   try {
+    // Contrast of the text in an element (and the text inside it) against its
+    // real background: ancestor backgrounds composited onto white, alpha kept.
+    await context.addInitScript(() => {
+      window.__wdContrast = (root) => {
+        const parse = (v) => {
+          const n = v.match(/[\d.]+/g).map(Number);
+          return [n[0], n[1], n[2], n.length > 3 ? n[3] : 1];
+        };
+        const over = (top, base) => [
+          top[0] * top[3] + base[0] * (1 - top[3]),
+          top[1] * top[3] + base[1] * (1 - top[3]),
+          top[2] * top[3] + base[2] * (1 - top[3]),
+          1,
+        ];
+        const lum = (rgb) => {
+          const v = rgb.slice(0, 3).map((x) => {
+            x /= 255;
+            return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
+          });
+          return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+        };
+        const one = (el) => {
+          const layers = [];
+          for (let n = el; n; n = n.parentElement)
+            layers.unshift(parse(getComputedStyle(n).backgroundColor));
+          const bg = layers.reduce(
+            (base, layer) => over(layer, base),
+            [255, 255, 255, 1],
+          );
+          const fg = over(parse(getComputedStyle(el).color), bg);
+          const [hi, lo] = [lum(fg), lum(bg)].sort((a, b) => b - a);
+          return (hi + 0.05) / (lo + 0.05);
+        };
+        const holders = [root, ...root.querySelectorAll("*")].filter((el) =>
+          [...el.childNodes].some(
+            (n) => n.nodeType === 3 && n.textContent.trim(),
+          ),
+        );
+        return Math.min(...holders.map(one));
+      };
+    });
     const page = await bounded(context.newPage(), STEP, "newPage");
     const problems = [];
     page.on("requestfailed", (r) => {
@@ -550,34 +631,6 @@ try {
           let opacity = 1;
           for (let n = el; n; n = n.parentElement)
             opacity *= Number(getComputedStyle(n).opacity);
-          // Colours as [r, g, b, a]; backgrounds are composited down the
-          // ancestor chain onto white, and text over the result.
-          const parse = (v) => {
-            const n = v.match(/[\d.]+/g).map(Number);
-            return [n[0], n[1], n[2], n.length > 3 ? n[3] : 1];
-          };
-          const over = (top, base) => [
-            top[0] * top[3] + base[0] * (1 - top[3]),
-            top[1] * top[3] + base[1] * (1 - top[3]),
-            top[2] * top[3] + base[2] * (1 - top[3]),
-            1,
-          ];
-          const layers = [];
-          for (let n = el; n; n = n.parentElement)
-            layers.unshift(parse(getComputedStyle(n).backgroundColor));
-          const bg = layers.reduce(
-            (base, layer) => over(layer, base),
-            [255, 255, 255, 1],
-          );
-          const fg = over(parse(c.color), bg);
-          const lum = (rgb) => {
-            const v = rgb.slice(0, 3).map((x) => {
-              x /= 255;
-              return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4;
-            });
-            return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
-          };
-          const [hi, lo] = [lum(fg), lum(bg)].sort((a, b) => b - a);
           const hit = document.elementFromPoint(
             r.x + r.width / 2,
             r.y + r.height / 2,
@@ -586,7 +639,7 @@ try {
             text: el.textContent.trim(),
             box: { x: r.x, y: r.y, width: r.width, height: r.height },
             opacity,
-            contrast: (hi + 0.05) / (lo + 0.05),
+            contrast: window.__wdContrast(el),
             hit: Boolean(hit && (hit === el || el.contains(hit))),
           };
         });
@@ -645,6 +698,7 @@ try {
               href: a.getAttribute("href"),
               url: a.href,
               text: a.textContent.trim().replace(/\s+/g, " "),
+              contrast: window.__wdContrast(a),
               box: { x, y, width, height },
             };
           }),
@@ -684,6 +738,10 @@ try {
           );
         for (const e of entries) {
           assert.ok(e.opacity > 0.9, `entry "${e.text}" is see-through`);
+          assert.ok(
+            e.contrast >= 4.5,
+            `entry "${e.text}" has contrast ${e.contrast.toFixed(1)}`,
+          );
           assert.ok(e.hit, `entry "${e.text}" is covered or not clickable`);
         }
         await page.screenshot({
@@ -1076,6 +1134,7 @@ try {
         );
         const result = await checkPdf(file, `${name}-browser-print`, {
           inkMin: INK_MIN_BROWSER,
+          textColors: false,
         });
         summary.browserPrints[name] = {
           pages: result.pages,
