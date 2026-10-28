@@ -199,7 +199,11 @@ async function weigh(browser, viewport) {
     await page.waitForLoadState("networkidle", { timeout: STEP });
     await bounded(Promise.all(pending), STEP, "response bodies");
     assert.ok(!sizes.some(([, n]) => n === 0), "a response body was empty");
-    return sizes;
+    // Whatever file the card shows is the plate, generated copy or fallback.
+    const plateUrl = await page.evaluate(
+      () => document.querySelector(".w-pack-art")?.currentSrc || null,
+    );
+    return { sizes, plateUrl };
   } finally {
     await context.close();
   }
@@ -224,10 +228,14 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       for (const viewport of VIEWPORTS) {
         const label = `chromium ${viewport.width}px: page weight`;
         try {
-          const sizes = await bounded(weigh(browser, viewport), TEST, label);
+          const { sizes, plateUrl } = await bounded(
+            weigh(browser, viewport),
+            TEST,
+            label,
+          );
           // The daily pack-card plate is budgeted on its own (PLATE_MAX_BYTES),
           // so tonight's art cannot decide whether the page fits.
-          const plate = sizes.filter(([u]) => /\/plate-\d+\.webp$/.test(u));
+          const plate = sizes.filter(([u]) => u === plateUrl);
           assert.ok(
             plate.every(([, n]) => n <= PLATE_LIMIT),
             `plate over ${PLATE_LIMIT} bytes`,
