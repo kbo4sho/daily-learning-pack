@@ -56,7 +56,7 @@
         "id": "lock",
         "plate": "notice",
         "question": "Why doesn't a zipper slide open on its own?",
-        "notice": "Look at the pull-tab lying flat against the slider, and the tiny bump under the slider that sits between two teeth.",
+        "notice": "Look at the pull-tab lying flat against the slider. In the cut-open slider beside it, find the small prong that reaches down toward the teeth.",
         "say": "Many sliders have a lock. When the pull-tab is let go or pressed flat, a tiny piece under the slider slips between the teeth and holds it still. Lifting the pull-tab moves that piece out of the way so the slider can move again.",
         "try": "Find a zipper with a pull-tab. Let go of the tab and gently tug the two sides of the cloth. Then lift the tab and slide it. Tell what changed."
       },
@@ -64,7 +64,7 @@
         "id": "start",
         "plate": "return",
         "question": "How does a jacket zipper come all the way apart and start again?",
-        "notice": "Find the thin pin at the bottom of one tape and the little box at the bottom of the other tape, where the slider waits.",
+        "notice": "Find the slider waiting on the little box at the bottom of one tape, and the thin pin on the other tape lined up to slide in.",
         "say": "The zipper down the front of a jacket is usually an open-end zipper. One tape ends in a thin insert pin. The other tape ends in a retainer box that holds the slider at the bottom. Pushing the pin fully into the box lines the two rows up, so the slider can start meshing teeth from the very first pair.",
         "try": "Look at the bottom of a jacket zipper. Find the pin and the box. Watch how the pin goes all the way in before the slider moves up."
       }
