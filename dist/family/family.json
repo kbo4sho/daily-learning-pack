@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how sidewalks work",
-        "why": "Following concrete from gray powder to a hard slab helps your child explain how a sidewalk is made, why it has grooves, and why it holds up feet.",
-        "date": "2026-10-28",
+        "topic": "how a jacket zipper works",
+        "why": "Following a jacket zipper's tape, teeth, slider, pin and stops helps your child explain how small parts work together to fasten something.",
+        "date": "2026-10-30",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

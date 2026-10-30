@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-a-zipper-works-2026-10-30",
+  "topic": "how a jacket zipper works",
+  "why": "Following a jacket zipper's tape, teeth, slider, pin and stops helps your child explain how small parts work together to fasten something.",
+  "teaser": "Meet the tape, teeth and slider, then find the hidden lock, the pin and the stops.",
+  "aliases": [
+    "zipper parts",
+    "jacket zippers"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "pattern-detective",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "skip-next",
+      "skip-missing",
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "GRADE 3 · CURIOSITY",
+  "wonderLabel": "FOUR LITTLE WONDERS",
+  "title": "How a Zipper Holds Shut and Comes Apart",
+  "question": "What holds a zipper shut, and what lets a jacket zipper come all the way apart?",
+  "idea": "A zipper is two cloth tapes with rows of teeth; the slider meshes or parts the teeth, a lock keeps it still, a pin and box start a jacket, and stops keep the slider on.",
+  "curiosity": {
+    "intro": "Start with one jacket zipper. Find its parts, how the teeth hold, and what each small piece at the ends is for.",
+    "carryForward": "Look for the tape, the teeth, the slider, and the little pieces at each end.",
+    "questions": [
+      {
+        "id": "parts",
+        "plate": "reach",
+        "question": "What are the main parts of a zipper?",
+        "notice": "Find the two cloth strips, the rows of small teeth on them, and the one slider that rides along the teeth.",
+        "say": "A zipper has three main parts. The tape is the cloth strip sewn to the jacket. The teeth, also called elements, are fixed in a row along each tape. The slider is the piece you pull up and down to join or part the teeth.",
+        "try": "Find a zipper on a jacket, bag or pencil case. Point to the tape, the teeth and the slider, and say each name out loud."
+      },
+      {
+        "id": "mesh",
+        "plate": "change",
+        "question": "How do the teeth hold the two sides together?",
+        "notice": "Compare the open teeth at the bottom with the joined teeth at the top. See how each tooth sits between two teeth on the other side.",
+        "say": "Each tooth has a little bump on one side and a hollow on the other. The teeth on the left are set halfway between the teeth on the right. When the slider presses them together, each bump tucks into the hollow of the next tooth, and a joined row of teeth is called the chain.",
+        "try": "Hold your hands flat with fingers spread. Slide them together so each finger fits between two fingers of the other hand. Now pull your hands apart sideways and feel how the fingers hold."
+      },
+      {
+        "id": "lock",
+        "plate": "notice",
+        "question": "Why doesn't a zipper slide open on its own?",
+        "notice": "Look at the pull-tab lying flat against the slider. In the cut-open slider beside it, find the small prong that reaches down toward the teeth.",
+        "say": "Many sliders have a lock. When the pull-tab is let go or pressed flat, a tiny piece under the slider slips between the teeth and holds it still. Lifting the pull-tab moves that piece out of the way so the slider can move again.",
+        "try": "Find a zipper with a pull-tab. Let go of the tab and gently tug the two sides of the cloth. Then lift the tab and slide it. Tell what changed."
+      },
+      {
+        "id": "start",
+        "plate": "return",
+        "question": "How does a jacket zipper come all the way apart and start again?",
+        "notice": "Find the slider waiting on the little box at the bottom of one tape, and the thin pin on the other tape lined up to slide in.",
+        "say": "The zipper down the front of a jacket is usually an open-end zipper. One tape ends in a thin insert pin. The other tape ends in a retainer box that holds the slider at the bottom. Pushing the pin fully into the box lines the two rows up, so the slider can start meshing teeth from the very first pair.",
+        "try": "Look at the bottom of a jacket zipper. Find the pin and the box. Watch how the pin goes all the way in before the slider moves up."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-a-zipper-works-2026-10-30/01-jacket.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/01-jacket.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/01-jacket-fold.jpg",
+      "title": "A jacket zipper",
+      "alt": "Big and Little Wonderer look together at a half-closed jacket zipper on a coat hanging from a wooden peg by a window.",
+      "caption": "One zipper, many small parts working together."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-a-zipper-works-2026-10-30/02-parts.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/02-parts.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/02-parts-fold.jpg",
+      "title": "Tape, teeth, slider",
+      "alt": "A closed-end zipper lies flat on a pale wooden table: two cloth tapes joined at the bottom stop, a row of small teeth on each, and one slider partway along.",
+      "caption": "A zipper has three main parts: tape, teeth and slider."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-a-zipper-works-2026-10-30/03-mesh.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/03-mesh.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/03-mesh-fold.jpg",
+      "title": "Teeth that mesh",
+      "alt": "A close view of zipper teeth: at the bottom the two rows are apart, and above the slider each tooth sits snugly between two teeth on the other side.",
+      "caption": "Each tooth tucks between two teeth on the other side."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-a-zipper-works-2026-10-30/04-lock.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/04-lock.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/04-lock-fold.jpg",
+      "title": "A hidden lock",
+      "alt": "A zipper slider with its pull-tab lying flat, beside a cutaway of a slider showing a small locking prong inside it that reaches down toward the teeth.",
+      "caption": "With the pull-tab flat, a tiny piece holds the slider still."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-a-zipper-works-2026-10-30/05-pin-box.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/05-pin-box.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/05-pin-box-fold.jpg",
+      "title": "Pin into box",
+      "alt": "Big and Little Wonderer watch closely at the bottom of an open jacket zipper: the slider waits on the small retainer box, and a thin insert pin on the other tape lines up to slide into it.",
+      "caption": "The pin slides fully into the box so both rows start lined up."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-a-zipper-works-2026-10-30/06-stops.jpg",
+      "original": "assets/how-a-zipper-works-2026-10-30/06-stops.png",
+      "foldSrc": "assets/how-a-zipper-works-2026-10-30/06-stops-fold.jpg",
+      "title": "Stops at the ends",
+      "alt": "The top end of a zipper with a small metal stop above the last teeth, and the slider resting just below it.",
+      "caption": "Stops at the ends keep the slider from sliding off."
+    }
+  ],
+  "reading": {
+    "title": "Six clues inside a zipper",
+    "coverPlate": "wake",
+    "coverText": "Follow one jacket zipper from its cloth tape to the tiny stops at each end.",
+    "parentNote": "Age 8. Welcome spoken answers, pointing, drawing, and dictation; the plates show the ideas rather than exact measurements.",
+    "foldableTitle": "A little book of zipper clues",
+    "foldableCoverLine": "How a Zipper Holds",
+    "foldableNote": "Carry six zipper clues in a small book.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A jacket zipper",
+        "passage": "Big and Little found a jacket hanging on a peg, its zipper half closed. Above the slider the two sides were joined in one neat row. Below it they hung apart. Little wondered how one small piece could close a whole jacket. Big said a zipper is a team of small parts, each with its own job.",
+        "prompt": "Where on the zipper are the two sides joined, and where are they apart?",
+        "foldable": {
+          "heading": "A jacket zipper",
+          "body": "Above the slider the two sides of a zipper are joined. Below it they hang apart. Each small part has its own job."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Tape, teeth, slider",
+        "passage": "Laid flat on a table, a zipper shows its three main parts. The tape is the cloth strip that gets sewn to the jacket. The teeth, also called elements, are fixed in a row along each tape. The slider rides along both rows. Pull it one way and it joins the teeth. Pull it the other way and it parts them.",
+        "prompt": "Which part moves, and which parts stay in place on the cloth?",
+        "foldable": {
+          "heading": "Tape, teeth, slider",
+          "body": "A zipper has three main parts: the cloth tape, the rows of teeth fixed on it, and the slider that joins or parts the teeth."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Teeth that mesh",
+        "passage": "Up close, each tooth has a little bump on one side and a hollow on the other. The left teeth sit halfway between the right teeth, like fingers ready to fold together. Inside the slider, the two rows are squeezed together at an angle, so each bump tucks into the hollow of the next tooth. Teeth that fit together like this mesh, and the joined row is called the chain.",
+        "prompt": "Why must the teeth on one side sit halfway between the teeth on the other side?",
+        "foldable": {
+          "heading": "Teeth that mesh",
+          "body": "Each tooth has a bump and a hollow. The slider squeezes the rows together, so each bump tucks into the next hollow."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "A hidden lock",
+        "passage": "Little tugged the two sides of the jacket, but the slider did not move. Big pointed under the slider. Many sliders hide a lock. When the pull-tab lies flat or is let go, a tiny piece slips between two teeth and holds the slider still. Lift the pull-tab and the piece moves out of the way, so the slider can glide again.",
+        "prompt": "What does lifting the pull-tab change inside the slider?",
+        "foldable": {
+          "heading": "A hidden lock",
+          "body": "When the pull-tab lies flat, a tiny piece slips between two teeth and holds the slider still. Lifting the tab frees it."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "Pin into box",
+        "passage": "The zipper down the front of a jacket usually comes all the way apart. It is called an open-end zipper. At the bottom, one tape ends in a thin insert pin, and the other ends in a small retainer box where the slider waits. The pin must go fully into the box. Then both rows start lined up, and the slider can mesh the very first pair of teeth.",
+        "prompt": "What could go wrong if the pin is only pushed halfway into the box?",
+        "foldable": {
+          "heading": "Pin into box",
+          "body": "A front jacket zipper comes apart. Its thin pin goes fully into a small box, so both rows start lined up for the slider."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Stops at the ends",
+        "passage": "At the very top of the zipper, Little found a tiny metal piece above the last teeth. It is a top stop. A stop at each end keeps the slider from running off the teeth. On a jacket, the retainer box is the stop at the bottom. Tape, teeth, slider, lock, pin, box and stops all work together each time a jacket closes.",
+        "prompt": "Why does a zipper need a stop at each end of the teeth?",
+        "foldable": {
+          "heading": "Stops at the ends",
+          "body": "A stop at each end keeps the slider from running off the teeth. On a jacket, the box is the stop at the bottom."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "tape",
+        "meaning": "the cloth strip of a zipper that gets sewn to a jacket or bag"
+      },
+      {
+        "word": "elements",
+        "meaning": "another name for a zipper's teeth"
+      },
+      {
+        "word": "slider",
+        "meaning": "the piece you pull to join or part the teeth"
+      },
+      {
+        "word": "mesh",
+        "meaning": "to fit together closely, like zipper teeth do"
+      },
+      {
+        "word": "chain",
+        "meaning": "the joined row of zipper teeth"
+      },
+      {
+        "word": "retainer box",
+        "meaning": "the small box at the bottom of an open-end zipper that holds the pin"
+      }
+    ],
+    "questions": [
+      "What are the three main parts of a zipper, and what job does each one do?",
+      "How do the teeth mesh, and why doesn't the slider slide open on its own?",
+      "Why must the pin go fully into the box, and what do the stops do?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write one sentence that tells how the slider closes a zipper.",
+      "example": "Example: The slider squeezes the two rows, so each tooth tucks into the next one."
+    }
+  },
+  "math": {
+    "title": "Find the zipper patterns",
+    "plate": "change",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "eyebrow": "SIX ZIPPER PATTERNS",
+    "actionLabel": "Find the step, then fill the gap",
+    "tasks": [
+      {
+        "skill": "skip-next",
+        "sequence": [
+          20,
+          30,
+          40,
+          50
+        ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Big counts zipper teeth in groups of ten. What number comes next?",
+        "equation": "20, 30, 40, ___",
+        "hint": "Each new group adds 10 teeth.",
+        "answer": 50,
+        "worked": "40 + 10 = 50. Each step adds 10.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
+          35,
+          40
+        ],
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "Little marks the zipper tape every 5 centimeters. What number is missing?",
+        "equation": "25, 30, ___, 40",
+        "hint": "Add 5 to the number before the blank.",
+        "answer": 35,
+        "worked": "30 + 5 = 35. Each step adds 5.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          8,
+          10,
+          12,
+          14
+        ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Each time the slider moves, one more pair of teeth meshes: one tooth from each side. Counting teeth by twos, what number comes next?",
+        "equation": "8, 10, 12, ___",
+        "hint": "Count forward by 2 each time.",
+        "answer": 14,
+        "worked": "12 + 2 = 14. Each step adds 2.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          40,
+          42,
+          44,
+          46
+        ],
+        "step": 2,
+        "blankIndex": 1,
+        "prompt": "Little counts the teeth on both sides of the chain, two at a time. What number is missing?",
+        "equation": "40, ___, 44, 46",
+        "hint": "The count goes up by 2 each time.",
+        "answer": 42,
+        "worked": "40 + 2 = 42. Each step adds 2.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          55,
+          60,
+          65,
+          70
+        ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Big counts jacket zippers in a shop, five on each rack. What number comes next?",
+        "equation": "55, 60, 65, ___",
+        "hint": "Keep adding 5.",
+        "answer": 70,
+        "worked": "65 + 5 = 70. Each step adds 5.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          35,
+          45,
+          55,
+          65
+        ],
+        "step": 10,
+        "blankIndex": 2,
+        "prompt": "Little draws 35 zipper teeth, then draws 10 more each time. What number is missing?",
+        "equation": "35, 45, ___, 65",
+        "hint": "Count on by 10 from the number before the blank.",
+        "answer": 55,
+        "worked": "45 + 10 = 55. Each step adds 10.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six skip-counting sequences use steps of 2, 5, and 10 within 100. The supplied numbers are for counting practice, not real zipper measurements.",
+    "answerKeyIntro": "Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
+  },
+  "writing": {
+    "title": "Explain a zipper in your words",
+    "intro": "Choose one clue. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "change",
+      "notice",
+      "return"
+    ],
+    "draw": "Draw two rows of zipper teeth and show where they mesh.",
+    "starter": "My zipper clue",
+    "frames": [
+      {
+        "plate": "change",
+        "start": "The teeth hold together because",
+        "hint": "where does each bump go?"
+      },
+      {
+        "plate": "notice",
+        "start": "The slider stays still when",
+        "hint": "what does the pull-tab do?"
+      },
+      {
+        "plate": "return",
+        "start": "The pin must go into the box so",
+        "hint": "how do the rows start?"
+      }
+    ],
+    "words": [
+      "tape",
+      "teeth",
+      "slider",
+      "mesh",
+      "chain",
+      "retainer box",
+      "because",
+      "so"
+    ],
+    "check": "Does your sentence tell what happens and use because or so to explain why?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The tape is the cloth strip sewn to the jacket, the teeth (elements) sit in a row on each tape, and the slider moves to join or part the teeth."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Each tooth has a bump and a hollow, and the rows are offset, so the slider squeezes each bump into the next hollow. A lock under the slider slips between the teeth when the pull-tab is flat, so it stays still."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "A pin pushed fully into the box lines both rows up so the first teeth can mesh; if it is only halfway in, the rows start uneven. Stops at each end keep the slider from running off the teeth."
+    },
+    {
+      "label": "Writing",
+      "text": "Accept a spoken, dictated, drawn, or written sentence that tells how one zipper part does its job."
+    }
+  ],
+  "parentGuidance": "A zipper has three main parts: the tape, the elements (teeth) and the slider. Teeth on the two tapes are offset; inside the slider the rows are pressed together at an angle so each tooth's bump seats in the next tooth's hollow, forming the chain. Many sliders are automatic-lock: when the pull-tab is released, a small pin or claw under the slider drops between the teeth. Front jacket zippers are usually open-end zippers: the insert pin must go fully into the retainer box before the slider is pulled up, or the rows start unevenly and the zipper may split or jam. Top and bottom stops keep the slider on the chain. Safety: keep fingers and loose skin clear of the slider and teeth; never zip near hair or skin, and keep small loose zipper parts away from young children.",
+  "sources": [
+    {
+      "label": "YKK Americas · Fastening catalogue: structure of zippers and slider types",
+      "url": "https://ykkamericas.com/wp-content/uploads/2021/10/FasteningCatalogue_update20220120.pdf"
+    },
+    {
+      "label": "YKK · Structure of a zipper",
+      "url": "https://www.ykkkorea.com/eng/product/dict/zipper_slider/comp"
+    }
+  ],
+  "screenFree": [
+    "quiz-cards"
+  ],
+  "quiz": {
+    "title": "Four zipper clues",
+    "intro": "Follow the teeth, the lock, the pin and the stops.",
+    "questions": [
+      {
+        "id": "mesh",
+        "prompt": "How do zipper teeth hold?",
+        "choices": [
+          "Bumps tuck into hollows",
+          "The slider glues them",
+          "Magnets pull them"
+        ],
+        "answerIndex": 0,
+        "answer": "Each tooth has a bump and a hollow, and the slider squeezes each bump into the next hollow."
+      },
+      {
+        "id": "lock",
+        "prompt": "Why won't the slider slip?",
+        "choices": [
+          "The tape is too stiff",
+          "A tiny lock holds it",
+          "The teeth are heavy"
+        ],
+        "answerIndex": 1,
+        "answer": "With the pull-tab flat, a tiny piece under the slider slips between two teeth and holds it still."
+      },
+      {
+        "id": "pin",
+        "prompt": "Why push the pin fully in?",
+        "choices": [
+          "So the slider comes off",
+          "So the jacket is warmer",
+          "So both rows line up"
+        ],
+        "answerIndex": 2,
+        "answer": "With the pin fully in the box, both rows start lined up and the first teeth can mesh."
+      },
+      {
+        "id": "stop",
+        "prompt": "What does a stop do?",
+        "choices": [
+          "Keeps the slider on",
+          "Locks the jacket forever",
+          "Makes the zipper longer"
+        ],
+        "answerIndex": 0,
+        "answer": "Stops at each end keep the slider on the teeth."
+      }
+    ]
+  },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "ZIPPERS · 2026-10-30",
+    "subtitle": "Two rows. One slider. Many small jobs."
+  },
+  "screenFreeCards": {
+    "challenge": [
+      {
+        "title": "Say it your way",
+        "text": "Explain “elements” to the table in your own words. Try not to say the word itself.",
+        "key": "elements: another name for a zipper's teeth."
+      },
+      {
+        "title": "Draw it",
+        "text": "Draw two rows of zipper teeth and show where they mesh. Show it to the table.",
+        "key": "Look for two offset rows, with each tooth fitting between two teeth on the other side."
+      }
+    ]
+  }
+}
