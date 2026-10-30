@@ -65,7 +65,7 @@
         "plate": "return",
         "question": "How does a jacket zipper come all the way apart and start again?",
         "notice": "Find the thin pin at the bottom of one tape and the little box at the bottom of the other tape, where the slider waits.",
-        "say": "A jacket zipper is an open-end zipper. One tape ends in a thin insert pin. The other tape ends in a retainer box that holds the slider at the bottom. Pushing the pin fully into the box lines the two rows up, so the slider can start meshing teeth from the very first pair.",
+        "say": "The zipper down the front of a jacket is usually an open-end zipper. One tape ends in a thin insert pin. The other tape ends in a retainer box that holds the slider at the bottom. Pushing the pin fully into the box lines the two rows up, so the slider can start meshing teeth from the very first pair.",
         "try": "Look at the bottom of a jacket zipper. Find the pin and the box. Watch how the pin goes all the way in before the slider moves up."
       }
     ]
@@ -183,11 +183,11 @@
         "id": "return",
         "plate": "return",
         "title": "Pin into box",
-        "passage": "A jacket zipper comes all the way apart. It is called an open-end zipper. At the bottom, one tape ends in a thin insert pin, and the other ends in a small retainer box where the slider waits. The pin must go fully into the box. Then both rows start lined up, and the slider can mesh the very first pair of teeth.",
+        "passage": "The zipper down the front of a jacket usually comes all the way apart. It is called an open-end zipper. At the bottom, one tape ends in a thin insert pin, and the other ends in a small retainer box where the slider waits. The pin must go fully into the box. Then both rows start lined up, and the slider can mesh the very first pair of teeth.",
         "prompt": "What could go wrong if the pin is only pushed halfway into the box?",
         "foldable": {
           "heading": "Pin into box",
-          "body": "A jacket zipper comes apart. Its thin pin goes fully into a small box, so both rows start lined up for the slider."
+          "body": "A front jacket zipper comes apart. Its thin pin goes fully into a small box, so both rows start lined up for the slider."
         }
       },
       {
@@ -225,7 +225,7 @@
       },
       {
         "word": "retainer box",
-        "meaning": "the small box at the bottom of a jacket zipper that holds the pin"
+        "meaning": "the small box at the bottom of an open-end zipper that holds the pin"
       }
     ],
     "questions": [
@@ -418,7 +418,7 @@
       "text": "Accept a spoken, dictated, drawn, or written sentence that tells how one zipper part does its job."
     }
   ],
-  "parentGuidance": "A zipper has three main parts: the tape, the elements (teeth) and the slider. Teeth on the two tapes are offset; inside the slider the rows are pressed together at an angle so each tooth's bump seats in the next tooth's hollow, forming the chain. Many sliders are automatic-lock: when the pull-tab is released, a small pin or claw under the slider drops between the teeth. Jacket zippers are open-end zippers: the insert pin must go fully into the retainer box before the slider is pulled up, or the rows start unevenly and the zipper may split or jam. Top and bottom stops keep the slider on the chain. Safety: keep fingers and loose skin clear of the slider and teeth; never zip near hair or skin, and keep small loose zipper parts away from young children.",
+  "parentGuidance": "A zipper has three main parts: the tape, the elements (teeth) and the slider. Teeth on the two tapes are offset; inside the slider the rows are pressed together at an angle so each tooth's bump seats in the next tooth's hollow, forming the chain. Many sliders are automatic-lock: when the pull-tab is released, a small pin or claw under the slider drops between the teeth. Front jacket zippers are usually open-end zippers: the insert pin must go fully into the retainer box before the slider is pulled up, or the rows start unevenly and the zipper may split or jam. Top and bottom stops keep the slider on the chain. Safety: keep fingers and loose skin clear of the slider and teeth; never zip near hair or skin, and keep small loose zipper parts away from young children.",
   "sources": [
     {
       "label": "YKK Americas · Fastening catalogue: structure of zippers and slider types",
