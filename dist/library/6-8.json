@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-a-zipper-works-2026-10-30",
+      "band": "6-8",
+      "topic": "how a jacket zipper works",
+      "why": "Following a jacket zipper's tape, teeth, slider, pin and stops helps your child explain how small parts work together to fasten something.",
+      "skills": [
+        "skip-next",
+        "skip-missing",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-10-30",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-sidewalks-work",
       "band": "6-8",
       "topic": "how sidewalks work",
