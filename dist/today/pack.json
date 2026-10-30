@@ -86,7 +86,7 @@
       "original": "assets/how-a-zipper-works-2026-10-30/02-parts.png",
       "foldSrc": "assets/how-a-zipper-works-2026-10-30/02-parts-fold.jpg",
       "title": "Tape, teeth, slider",
-      "alt": "A closed-end zipper lies flat on a pale wooden table: two cloth tapes, a row of small teeth on each, and one slider partway along.",
+      "alt": "A closed-end zipper lies flat on a pale wooden table: two cloth tapes joined at the bottom stop, a row of small teeth on each, and one slider partway along.",
       "caption": "A zipper has three main parts: tape, teeth and slider."
     },
     {
@@ -104,7 +104,7 @@
       "original": "assets/how-a-zipper-works-2026-10-30/04-lock.png",
       "foldSrc": "assets/how-a-zipper-works-2026-10-30/04-lock-fold.jpg",
       "title": "A hidden lock",
-      "alt": "A close view of a zipper slider with its pull-tab lying flat, a tiny bump under the slider resting between two teeth.",
+      "alt": "A zipper slider with its pull-tab lying flat, beside a cutaway of a slider showing a small locking prong inside it that reaches down toward the teeth.",
       "caption": "With the pull-tab flat, a tiny piece holds the slider still."
     },
     {
@@ -113,7 +113,7 @@
       "original": "assets/how-a-zipper-works-2026-10-30/05-pin-box.png",
       "foldSrc": "assets/how-a-zipper-works-2026-10-30/05-pin-box-fold.jpg",
       "title": "Pin into box",
-      "alt": "Big and Little Wonderer watch closely as the thin insert pin at the bottom of a jacket zipper sits fully inside the small retainer box below the slider.",
+      "alt": "Big and Little Wonderer watch closely at the bottom of an open jacket zipper, where the slider waits on the small retainer box and the two rows are still apart above it.",
       "caption": "The pin goes fully into the box so both rows start lined up."
     },
     {
@@ -346,7 +346,7 @@
         ],
         "step": 10,
         "blankIndex": 2,
-        "prompt": "Little counts zipper stops in bags of ten. What number is missing?",
+        "prompt": "Little draws 35 zipper teeth, then draws 10 more each time. What number is missing?",
         "equation": "35, 45, ___, 65",
         "hint": "Count on by 10 from the number before the blank.",
         "answer": 55,
@@ -486,5 +486,19 @@
     "plate": "wake",
     "edition": "ZIPPERS · 2026-10-30",
     "subtitle": "Two rows. One slider. Many small jobs."
+  },
+  "screenFreeCards": {
+    "challenge": [
+      {
+        "title": "Say it your way",
+        "text": "Explain “elements” to the table in your own words. Try not to say the word itself.",
+        "key": "elements: another name for a zipper's teeth."
+      },
+      {
+        "title": "Draw it",
+        "text": "Draw two rows of zipper teeth and show where they mesh. Show it to the table.",
+        "key": "Look for two offset rows, with each tooth fitting between two teeth on the other side."
+      }
+    ]
   }
 }
