@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T04:00:33.653Z",
-  "latest": "how-sidewalks-work",
+  "generatedAt": "2026-10-30T05:26:52.199Z",
+  "latest": "how-a-zipper-works-2026-10-30",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-a-zipper-works-2026-10-30",
+      "date": "2026-10-30",
+      "topic": "how a jacket zipper works",
+      "title": "How a Zipper Holds Shut and Comes Apart",
+      "teaser": "Meet the tape, teeth and slider, then find the hidden lock, the pin and the stops.",
+      "href": "./days/how-a-zipper-works-2026-10-30/",
+      "latest": true
+    },
     {
       "slug": "how-sidewalks-work",
       "date": "2026-10-28",
@@ -11,7 +20,7 @@
       "title": "How a Sidewalk Is Made and How It Works",
       "teaser": "Meet four plain ingredients, see how they harden, and find out why a sidewalk has grooves.",
       "href": "./days/how-sidewalks-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-bike-derailleurs-work",
