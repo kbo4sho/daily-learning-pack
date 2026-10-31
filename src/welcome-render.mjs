@@ -106,7 +106,9 @@ export function welcomePage({ tonight }) {
 <meta name="twitter:image" content="${WELCOME_URL}share-1200x630.jpg">
 <meta name="twitter:image:alt" content="${esc(SHARE_ALT)}">
 <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Wonder Daily">
 <link rel="preload" href="./fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/newsreader-latin-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>

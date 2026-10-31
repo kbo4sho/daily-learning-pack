@@ -17,6 +17,7 @@ import { archivePage, packetImageHref } from "../src/archive-render.mjs";
 import { scanPrivacy } from "./privacy-check.mjs";
 import { readLibrary } from "../src/library.mjs";
 import { welcomePage } from "../src/welcome-render.mjs";
+import { wireAppHeads, writeAppIcons } from "../src/app-icons.mjs";
 
 async function readable(path) {
   try {
@@ -183,6 +184,8 @@ async function writeArchive(root) {
   await copyArchiveFonts(root);
   await writeWelcome(root, latest);
   await dropRootDayRuntime(root);
+  await writeAppIcons(root);
+  await wireAppHeads(root);
   return { latest, count: entries.length };
 }
 
