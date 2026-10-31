@@ -1,4 +1,5 @@
 import { esc } from "./html.mjs";
+import { appHead } from "./app-icons.mjs";
 import { bandLabel } from "./library-contract.mjs";
 
 /** Public view date chrome. Same UTC en-GB format as the overnight ship. */
@@ -107,7 +108,7 @@ export function archivePage(
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#f8f5ee">
 <title>Wonder Daily · Mornings</title>
-<link rel="icon" href="data:,">
+${appHead("daily", homePrefix)}
 <link rel="stylesheet" href="${cssHref}?v=20261012-privacy">
 <script src="${jsHref}" defer></script>
 </head>

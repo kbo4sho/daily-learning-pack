@@ -112,3 +112,13 @@ PDFs show “Ready by morning.” The shelf link lives only on the door in the
 manifest, without a duplicate link in its current-pack record.
 The stricter family privacy guard rejects learner identities and audience
 labels. No account, selection service or marketing navigation is added.
+
+## Home-screen icons
+
+Two installable web apps share the site. Pages under `/little/` link
+`little/manifest.webmanifest` (Wonder Daily Littles); every other page links
+the root `manifest.webmanifest` (Wonder Daily). Icons live in
+`src/app-icons/{daily,little}/`; `npm run archive` copies them, writes both
+manifests and wires the head links into every built page, including pages the
+generators publish. `tests/app-icons.test.mjs` checks every page and both
+manifests. The icons are covered by [ART-NOTICE.md](ART-NOTICE.md).
