@@ -107,12 +107,21 @@ export async function wireAppHeads(root) {
   let wired = 0;
   for await (const file of htmlPages(root)) {
     const html = await readFile(file, "utf8");
-    if (/<link rel="manifest"/.test(html) || !/<\/head>/.test(html)) continue;
+    if (!/<\/head>/.test(html)) continue;
     const rel = relative(root, file).split(sep).join("/");
     const depth = rel.split("/").length - 1;
     const toRoot = depth ? "../".repeat(depth) : "./";
     const head = appHead(appFor(rel), toRoot);
     let next = html.replace(/<link rel="icon" href="data:,">\n?/, "");
+    // A strict page CSP must still let the browser read the manifest.
+    next = next.replace(
+      /(content="default-src 'none';)(?![^"]*manifest-src)/,
+      "$1 manifest-src 'self';",
+    );
+    if (/<link rel="manifest"/.test(next)) {
+      if (next !== html) await writeFile(file, next);
+      continue;
+    }
     if (!/<meta name="theme-color"/.test(next))
       next = next.replace(
         /<\/head>/,
