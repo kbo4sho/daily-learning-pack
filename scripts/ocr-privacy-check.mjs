@@ -138,7 +138,13 @@ const run = (bin, args, input) =>
     const child = execFile(
       bin,
       args,
-      { maxBuffer: 64 << 20, timeout: TIMEOUT, encoding: "buffer" },
+      {
+        maxBuffer: 64 << 20,
+        // One OCR thread per process; the worker pool supplies parallelism.
+        env: { ...process.env, OMP_THREAD_LIMIT: "1" },
+        timeout: TIMEOUT,
+        encoding: "buffer",
+      },
       (err, stdout) => ok(err ? null : stdout.toString("utf8")),
     );
     child.stdin.on("error", () => {});
@@ -206,18 +212,20 @@ export async function main(argv = process.argv.slice(2)) {
     );
     return 1;
   }
+  // A path that itself contains a private name is never echoed.
+  const safe = (p) => (textHasName(p, matcher) ? "[redacted path]" : p);
   ensureTools();
   const roots = argv.length ? argv : ["docs", "dist"];
   const files = [];
   for (const r of roots) {
     const dir = resolve(root, r);
     if (!existsSync(dir) || !lstatSync(dir).isDirectory()) {
-      console.error(`${r}: scan root missing`);
+      console.error(`${safe(r)}: scan root missing`);
       return 1;
     }
     const { out, bad } = walk(dir);
     for (const b of bad)
-      console.error(`${relative(root, b)}: symlink not allowed`);
+      console.error(`${safe(relative(root, b))}: symlink not allowed`);
     if (bad.length) return 1;
     files.push(...out);
   }
@@ -234,7 +242,7 @@ export async function main(argv = process.argv.slice(2)) {
   const worker = async () => {
     while (next < files.length) {
       const file = files[next++];
-      const label = relative(root, file);
+      const label = safe(relative(root, file));
       const parts = await textOf(file);
       if (parts.some((p) => p === null)) {
         unreadable++;
@@ -265,7 +273,13 @@ if (
   main().then(
     (code) => process.exit(code),
     (err) => {
-      console.error(err.message);
+      // Raw error messages can carry paths, so only the error code is shown.
+      const own = /^OCR privacy gate: [a-z -]+(?:WD_PRIVATE_NAMES)?[a-z -;]*$/i;
+      console.error(
+        own.test(err?.message || "")
+          ? err.message
+          : `OCR privacy gate: error (${err?.code || "internal"})`,
+      );
       process.exit(1);
     },
   );
