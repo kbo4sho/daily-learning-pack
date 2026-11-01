@@ -13,7 +13,7 @@ import {
   readdirSync,
   readFileSync,
   rmSync,
-  statSync,
+  lstatSync,
 } from "node:fs";
 import { availableParallelism, tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
@@ -50,11 +50,22 @@ export function loadMatcher(env = process.env, hashFile = HASH_FILE) {
     const { salt, maxWords, hashes } = JSON.parse(
       readFileSync(hashFile, "utf8"),
     );
-    if (salt && Array.isArray(hashes) && hashes.length) {
+    const valid =
+      typeof salt === "string" &&
+      salt.length > 0 &&
+      Number.isInteger(maxWords) &&
+      maxWords >= 1 &&
+      maxWords <= 8 &&
+      Array.isArray(hashes) &&
+      hashes.length > 0 &&
+      hashes.every((h) => typeof h === "string" && /^[0-9a-f]{64}$/.test(h));
+    // A malformed list must not quietly become a matcher that never matches.
+    if (!valid) throw new Error("OCR privacy gate: malformed hash list");
+    {
       const set = new Set(hashes);
       return {
         source: "hashes",
-        max: maxWords || 1,
+        max: maxWords,
         has: (words) => set.has(hashName(salt, words)),
       };
     }
@@ -78,7 +89,8 @@ function walk(dir, out = [], bad = []) {
     const p = join(dir, entry.name);
     if (entry.isSymbolicLink()) bad.push(p);
     else if (entry.isDirectory()) walk(p, out, bad);
-    else if (/\.(png|pdf)$/i.test(entry.name)) out.push(p);
+    else if (/\.(png|pdf)$/i.test(entry.name))
+      (entry.isFile() ? out : bad).push(p);
   }
   return { out, bad };
 }
@@ -118,23 +130,31 @@ const run = (bin, args, input) =>
 
 // Tesseract does not reliably auto-rotate, and fold-up sheets mix upright
 // and upside-down panels, so read every image at all four orientations.
+// Animated PNGs: every frame is read, not just the default one.
 async function ocrImage(path) {
   const texts = [];
-  for (const angle of [0, 90, 180, 270]) {
-    let png;
-    try {
-      png = await sharp(path).rotate(angle).png().toBuffer();
-    } catch {
-      return [null];
-    }
-    texts.push(
-      await run(
-        "tesseract",
-        ["stdin", "stdout", "--psm", "3", "-l", "eng"],
-        png,
-      ),
-    );
+  let pages;
+  try {
+    pages = (await sharp(path).metadata()).pages || 1;
+  } catch {
+    return [null];
   }
+  for (let page = 0; page < pages; page++)
+    for (const angle of [0, 90, 180, 270]) {
+      let png;
+      try {
+        png = await sharp(path, { page }).rotate(angle).png().toBuffer();
+      } catch {
+        return [null];
+      }
+      texts.push(
+        await run(
+          "tesseract",
+          ["stdin", "stdout", "--psm", "3", "-l", "eng"],
+          png,
+        ),
+      );
+    }
   return texts;
 }
 
@@ -174,7 +194,7 @@ export async function main(argv = process.argv.slice(2)) {
   const files = [];
   for (const r of roots) {
     const dir = resolve(root, r);
-    if (!existsSync(dir) || !statSync(dir).isDirectory()) {
+    if (!existsSync(dir) || !lstatSync(dir).isDirectory()) {
       console.error(`${r}: scan root missing`);
       return 1;
     }

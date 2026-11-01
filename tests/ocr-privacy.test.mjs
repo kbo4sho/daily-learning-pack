@@ -45,3 +45,16 @@ test("ocr gate: fails closed with no names", () => {
 test("ocr gate: committed hash list is present and non-empty", () => {
   assert.equal(loadMatcher({})?.source, "hashes");
 });
+
+test("ocr gate: a malformed hash list throws instead of never matching", () => {
+  const dir = mkdtempSync(join(tmpdir(), "ocr-gate-test-"));
+  for (const bad of [
+    { salt: "s", maxWords: -1, hashes: ["a".repeat(64)] },
+    { salt: "s", maxWords: 1, hashes: ["nothex"] },
+    { salt: "", maxWords: 1, hashes: ["a".repeat(64)] },
+  ]) {
+    const file = join(dir, "bad.json");
+    writeFileSync(file, JSON.stringify(bad));
+    assert.throws(() => loadMatcher({}, file), /malformed hash list/);
+  }
+});
