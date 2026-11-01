@@ -26,6 +26,8 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 3. A human merges. **No auto-merge.**
 4. GitHub Pages on `main` runs `npm run archive` (public chrome only) and deploys `dist/`. It does **not** run `npm run site`.
 
+**OCR privacy gate.** `npm run archive` ends with `npm run privacy:ocr`, which OCRs every PNG and PDF under `docs/` and `dist/` (all four orientations, every PDF page) and fails on a private-name hit. It prints only the file path. Names come from `WD_PRIVATE_NAMES` plus the salted hash list in `scripts/private-name-hashes.json`; with neither it fails closed. On CI it installs `tesseract-ocr` and `poppler-utils`; locally, install them yourself.
+
 Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **private** repo (Contents + Pull requests on this public repo only). This view repo does not hold that secret. First-time private checkout: [`docs/private-generators.md`](docs/private-generators.md).
 
 ## Preview committed artifacts
