@@ -1,4 +1,4 @@
-// OCR privacy gate: reads the text inside every PNG and PDF under the given
+// OCR privacy gate: reads the text inside every image (PNG, JPEG, WebP, GIF, AVIF) and PDF under the given
 // roots (default: docs dist) and fails when a private name shows up.
 // Names come from WD_PRIVATE_NAMES (comma separated). When that is unset, the
 // gate falls back to scripts/private-name-hashes.json (salted SHA-256 of each
@@ -106,7 +106,7 @@ function walk(dir, out = [], bad = []) {
     const p = join(dir, entry.name);
     if (entry.isSymbolicLink()) bad.push(p);
     else if (entry.isDirectory()) walk(p, out, bad);
-    else if (/\.(png|pdf)$/i.test(entry.name))
+    else if (/\.(png|pdf|jpe?g|webp|gif|avif)$/i.test(entry.name))
       (entry.isFile() ? out : bad).push(p);
   }
   return { out, bad };
@@ -117,12 +117,25 @@ const has = (bin) => spawnSync("sh", ["-c", `command -v ${bin}`]).status === 0;
 function ensureTools() {
   if (has("tesseract") && has("pdftoppm") && has("pdftotext")) return;
   if (process.env.CI && process.platform === "linux") {
-    execFileSync("sudo", ["apt-get", "update", "-qq"], { stdio: "ignore" });
-    execFileSync(
-      "sudo",
-      ["apt-get", "install", "-y", "-qq", "tesseract-ocr", "poppler-utils"],
-      { stdio: "ignore" },
-    );
+    // Bounded: three tries, five minutes per apt call, then fail closed.
+    const apt = (args) =>
+      execFileSync(
+        "sudo",
+        ["apt-get", "-o", "DPkg::Lock::Timeout=60", ...args],
+        {
+          stdio: "ignore",
+          timeout: 300_000,
+        },
+      );
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        apt(["update", "-qq"]);
+        apt(["install", "-y", "-qq", "tesseract-ocr", "poppler-utils"]);
+        break;
+      } catch {
+        if (attempt === 3) break;
+      }
+    }
   }
   if (!(has("tesseract") && has("pdftoppm") && has("pdftotext")))
     throw new Error(
@@ -182,7 +195,7 @@ async function ocrImage(path) {
 }
 
 async function textOf(file) {
-  if (/\.png$/i.test(file)) return ocrImage(file);
+  if (!/\.pdf$/i.test(file)) return ocrImage(file);
   const parts = [await run("pdftotext", ["-layout", file, "-"])];
   const dir = mkdtempSync(join(tmpdir(), "ocr-gate-"));
   try {
