@@ -15,6 +15,12 @@ test("ocr gate: env names match case-insensitively on word boundaries", () => {
   const m = loadMatcher({ WD_PRIVATE_NAMES: "Zed, Ann Lee" }, none);
   assert.equal(m.source, "env");
   assert.ok(textHasName("Then ZED said hi.", m));
+  const semi = loadMatcher({ WD_PRIVATE_NAMES: "Alpha;Beta\nGamma" }, none);
+  assert.ok(textHasName("beta", semi) && textHasName("gamma", semi));
+  assert.throws(
+    () => loadMatcher({ WD_PRIVATE_NAMES: ",,," }, none),
+    /malformed/,
+  );
   assert.ok(textHasName("says zed,", m));
   assert.ok(textHasName("ann\nlee waved", m));
   assert.ok(!textHasName("zebra zedonk", m));
@@ -44,6 +50,7 @@ test("ocr gate: fails closed with no names", () => {
 
 test("ocr gate: committed hash list is present and non-empty", () => {
   assert.equal(loadMatcher({})?.source, "hashes");
+  assert.equal(loadMatcher({ WD_PRIVATE_NAMES: "Zed" })?.source, "env+hashes");
 });
 
 test("ocr gate: a malformed hash list throws instead of never matching", () => {

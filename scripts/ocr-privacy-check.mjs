@@ -36,20 +36,34 @@ export const hashName = (salt, words) =>
     .update(`${salt}:${words.join(" ")}`)
     .digest("hex");
 
+// Env names and the committed hash list are both used when present.
+// Commas, semicolons and newlines all separate names; a set but unusable
+// WD_PRIVATE_NAMES, or a malformed hash list, throws (fail closed).
 export function loadMatcher(env = process.env, hashFile = HASH_FILE) {
-  const raw = (env.WD_PRIVATE_NAMES || "")
-    .split(",")
-    .map(normalize)
-    .filter((w) => w.length);
-  if (raw.length) {
+  const matchers = [];
+  const rawEnv = env.WD_PRIVATE_NAMES || "";
+  if (rawEnv.trim()) {
+    const raw = rawEnv
+      .split(/[,;\r\n]+/)
+      .map(normalize)
+      .filter((w) => w.length);
+    if (!raw.length)
+      throw new Error("OCR privacy gate: malformed WD_PRIVATE_NAMES");
     const set = new Set(raw.map((w) => w.join(" ")));
-    const max = Math.max(...raw.map((w) => w.length));
-    return { source: "env", max, has: (words) => set.has(words.join(" ")) };
+    matchers.push({
+      source: "env",
+      max: Math.max(...raw.map((w) => w.length)),
+      has: (words) => set.has(words.join(" ")),
+    });
   }
   if (existsSync(hashFile)) {
-    const { salt, maxWords, hashes } = JSON.parse(
-      readFileSync(hashFile, "utf8"),
-    );
+    let data;
+    try {
+      data = JSON.parse(readFileSync(hashFile, "utf8"));
+    } catch {
+      throw new Error("OCR privacy gate: malformed hash list");
+    }
+    const { salt, maxWords, hashes } = data || {};
     const valid =
       typeof salt === "string" &&
       salt.length > 0 &&
@@ -61,16 +75,19 @@ export function loadMatcher(env = process.env, hashFile = HASH_FILE) {
       hashes.every((h) => typeof h === "string" && /^[0-9a-f]{64}$/.test(h));
     // A malformed list must not quietly become a matcher that never matches.
     if (!valid) throw new Error("OCR privacy gate: malformed hash list");
-    {
-      const set = new Set(hashes);
-      return {
-        source: "hashes",
-        max: maxWords,
-        has: (words) => set.has(hashName(salt, words)),
-      };
-    }
+    const set = new Set(hashes);
+    matchers.push({
+      source: "hashes",
+      max: maxWords,
+      has: (words) => set.has(hashName(salt, words)),
+    });
   }
-  return null;
+  if (!matchers.length) return null;
+  return {
+    source: matchers.map((m) => m.source).join("+"),
+    max: Math.max(...matchers.map((m) => m.max)),
+    has: (words) => matchers.some((m) => words.length <= m.max && m.has(words)),
+  };
 }
 
 // Case-insensitive, word-boundary match: compare whole token runs only.
