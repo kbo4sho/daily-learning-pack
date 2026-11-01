@@ -5,7 +5,8 @@
 // normalized name). With neither, it fails closed. Output never contains a name:
 // only "<path>: private name hit".
 import { createHash } from "node:crypto";
-import { execFileSync, spawnSync } from "node:child_process";
+import { execFile, execFileSync, spawnSync } from "node:child_process";
+import sharp from "sharp";
 import {
   existsSync,
   mkdtempSync,
@@ -70,14 +71,16 @@ export function textHasName(text, matcher) {
   return false;
 }
 
-function walk(dir, out = []) {
-  if (!existsSync(dir)) return out;
+// Symlinks are refused outright: a link could point outside the scanned
+// roots or hide a directory from the walk.
+function walk(dir, out = [], bad = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const p = join(dir, entry.name);
-    if (entry.isDirectory()) walk(p, out);
+    if (entry.isSymbolicLink()) bad.push(p);
+    else if (entry.isDirectory()) walk(p, out, bad);
     else if (/\.(png|pdf)$/i.test(entry.name)) out.push(p);
   }
-  return out;
+  return { out, bad };
 }
 
 const has = (bin) => spawnSync("sh", ["-c", `command -v ${bin}`]).status === 0;
@@ -98,21 +101,45 @@ function ensureTools() {
     );
 }
 
-const run = (bin, args) =>
+const TIMEOUT = 180_000;
+
+// Resolves to stdout, or null on any error or timeout (counted as unreadable).
+const run = (bin, args, input) =>
   new Promise((ok) => {
-    import("node:child_process").then(({ execFile }) =>
-      execFile(bin, args, { maxBuffer: 64 << 20 }, (err, stdout) =>
-        ok(err ? null : String(stdout)),
-      ),
+    const child = execFile(
+      bin,
+      args,
+      { maxBuffer: 64 << 20, timeout: TIMEOUT, encoding: "buffer" },
+      (err, stdout) => ok(err ? null : stdout.toString("utf8")),
     );
+    child.stdin.on("error", () => {});
+    child.stdin.end(input || undefined);
   });
 
+// Tesseract does not reliably auto-rotate, and fold-up sheets mix upright
+// and upside-down panels, so read every image at all four orientations.
 async function ocrImage(path) {
-  return run("tesseract", [path, "-", "--psm", "3", "-l", "eng"]);
+  const texts = [];
+  for (const angle of [0, 90, 180, 270]) {
+    let png;
+    try {
+      png = await sharp(path).rotate(angle).png().toBuffer();
+    } catch {
+      return [null];
+    }
+    texts.push(
+      await run(
+        "tesseract",
+        ["stdin", "stdout", "--psm", "3", "-l", "eng"],
+        png,
+      ),
+    );
+  }
+  return texts;
 }
 
 async function textOf(file) {
-  if (/\.png$/i.test(file)) return [await ocrImage(file)];
+  if (/\.png$/i.test(file)) return ocrImage(file);
   const parts = [await run("pdftotext", ["-layout", file, "-"])];
   const dir = mkdtempSync(join(tmpdir(), "ocr-gate-"));
   try {
@@ -125,8 +152,9 @@ async function textOf(file) {
       join(dir, "p"),
     ]);
     if (r === null) parts.push(null);
-    for (const page of readdirSync(dir).sort())
-      parts.push(await ocrImage(join(dir, page)));
+    const pages = readdirSync(dir).sort();
+    if (!pages.length) parts.push(null);
+    for (const page of pages) parts.push(...(await ocrImage(join(dir, page))));
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -143,7 +171,26 @@ export async function main(argv = process.argv.slice(2)) {
   }
   ensureTools();
   const roots = argv.length ? argv : ["docs", "dist"];
-  const files = roots.flatMap((r) => walk(resolve(root, r))).sort();
+  const files = [];
+  for (const r of roots) {
+    const dir = resolve(root, r);
+    if (!existsSync(dir) || !statSync(dir).isDirectory()) {
+      console.error(`${r}: scan root missing`);
+      return 1;
+    }
+    const { out, bad } = walk(dir);
+    for (const b of bad)
+      console.error(`${relative(root, b)}: symlink not allowed`);
+    if (bad.length) return 1;
+    files.push(...out);
+  }
+  files.sort();
+  if (!files.length) {
+    console.error(
+      "OCR privacy gate: no PNG or PDF files found; failing closed",
+    );
+    return 1;
+  }
   let hits = 0;
   let unreadable = 0;
   let next = 0;
@@ -163,7 +210,10 @@ export async function main(argv = process.argv.slice(2)) {
     }
   };
   await Promise.all(
-    Array.from({ length: Math.max(1, availableParallelism()) }, worker),
+    Array.from(
+      { length: Math.min(8, Math.max(1, availableParallelism())) },
+      worker,
+    ),
   );
   console.log(
     `OCR privacy gate (${matcher.source}): ${files.length} files, ${hits} hit(s), ${unreadable} unreadable`,
