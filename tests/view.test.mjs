@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-a-zipper-works-2026-10-30");
-  assert.equal(latest.date, "2026-10-30");
+  assert.equal(latest.slug, "how-animals-get-ready-for-winter");
+  assert.equal(latest.date, "2026-11-02");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-animals-get-ready-for-winter",
       "how-a-zipper-works-2026-10-30",
       "how-sidewalks-work",
       "how-bike-derailleurs-work",
@@ -149,24 +150,24 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [50, 35, 14, 42, 70, 55],
+    [12, 10, 16, 25, 8, 15],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "pattern-detective");
+  assert.equal(todayPack.mathTemplate, "groups-and-arrays");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
-    todayPack.math.tasks.map(({ skill, step, blankIndex }) => [
+    todayPack.math.tasks.map(({ skill, rows, columns }) => [
       skill,
-      step,
-      blankIndex,
+      rows,
+      columns,
     ]),
     [
-      ["skip-next", 10, 3],
-      ["skip-missing", 5, 2],
-      ["skip-next", 2, 3],
-      ["skip-missing", 2, 1],
-      ["skip-next", 5, 3],
-      ["skip-missing", 10, 2],
+      ["equal-groups", 3, 4],
+      ["array", 2, 5],
+      ["equal-groups", 4, 4],
+      ["array", 5, 5],
+      ["equal-groups", 4, 2],
+      ["array", 3, 5],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

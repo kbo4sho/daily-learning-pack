@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-animals-get-ready-for-winter",
+      "band": "6-8",
+      "topic": "how animals get ready for winter",
+      "why": "Following how frogs, chipmunks, bees, voles and hares get through winter helps your child explain how a body or a home can hold on to heat or survive the cold.",
+      "skills": [
+        "equal-groups",
+        "array",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-11-02",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-a-zipper-works-2026-10-30",
       "band": "6-8",
       "topic": "how a jacket zipper works",
