@@ -4,16 +4,23 @@
 // gate falls back to scripts/private-name-hashes.json (salted SHA-256 of each
 // normalized name). With neither, it fails closed. Output never contains a name:
 // only "<path>: private name hit".
-import { createHash } from "node:crypto";
+import { createHash, createHmac, randomBytes } from "node:crypto";
 import { execFile, execFileSync, spawnSync } from "node:child_process";
 import sharp from "sharp";
 import {
+  chmodSync,
+  closeSync,
   existsSync,
+  fsyncSync,
+  linkSync,
   mkdtempSync,
+  openSync,
   readdirSync,
   readFileSync,
+  renameSync,
   rmSync,
   mkdirSync,
+  unlinkSync,
   writeFileSync,
   lstatSync,
 } from "node:fs";
@@ -24,6 +31,12 @@ import { fileURLToPath } from "node:url";
 const here = fileURLToPath(new URL(".", import.meta.url));
 const root = resolve(here, "..");
 const HASH_FILE = join(here, "private-name-hashes.json");
+const SCRIPT_PATH = fileURLToPath(import.meta.url);
+const TESSERACT_ARGS = ["stdin", "stdout", "--psm", "3", "-l", "eng"];
+const TESSERACT_CONFIG = JSON.stringify({
+  args: TESSERACT_ARGS,
+  env: { OMP_THREAD_LIMIT: "1" },
+});
 
 export const normalize = (s) =>
   String(s)
@@ -149,18 +162,92 @@ function ensureTools() {
 export const workerCount = (cores = availableParallelism()) =>
   Math.min(8, Math.max(1, Math.floor(cores / 2)));
 
-// Pass cache: content hashes of files that already passed (readable, no hit)
-// under the same matcher. Lives outside the repo (WD_OCR_CACHE_DIR, default
-// .cache/wd-ocr-gate in the home directory); WD_OCR_CACHE=0 turns it off. Only hashes are stored.
-export function passCache(env = process.env, hashFile = HASH_FILE) {
+function tesseractVersionConfig() {
+  const version = execFileSync("tesseract", ["--version"], {
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "pipe"],
+    timeout: 10_000,
+  }).trim();
+  return `${version}\n${TESSERACT_CONFIG}`;
+}
+
+function cacheSecret(dir) {
+  mkdirSync(dir, { recursive: true, mode: 0o700 });
+  chmodSync(dir, 0o700);
+  const path = join(dir, ".cache-secret");
+  const read = () => {
+    const stat = lstatSync(path);
+    if (!stat.isFile() || stat.isSymbolicLink())
+      throw new Error("invalid cache secret");
+    const secret = readFileSync(path);
+    if (secret.length !== 32) throw new Error("invalid cache secret");
+    chmodSync(path, 0o600);
+    return secret;
+  };
+  try {
+    return read();
+  } catch (err) {
+    if (err?.code !== "ENOENT") throw err;
+  }
+
+  const secret = randomBytes(32);
+  const temp = join(
+    dir,
+    `.cache-secret-${process.pid}-${randomBytes(8).toString("hex")}.tmp`,
+  );
+  let fd;
+  try {
+    fd = openSync(temp, "wx", 0o600);
+    writeFileSync(fd, secret);
+    fsyncSync(fd);
+    closeSync(fd);
+    fd = undefined;
+    try {
+      // Linking a complete temporary file publishes the secret without a
+      // window where another process can read a partial value.
+      linkSync(temp, path);
+    } catch (err) {
+      if (err?.code !== "EEXIST") throw err;
+    }
+  } finally {
+    if (fd !== undefined) closeSync(fd);
+    try {
+      unlinkSync(temp);
+    } catch {}
+  }
+  return read();
+}
+
+// Pass cache: processing-class/content hashes of files that already passed
+// (readable, no hit) under the same matcher and extraction implementation.
+// WD_OCR_CACHE=0 turns it off.
+export function passCache(
+  env = process.env,
+  hashFile = HASH_FILE,
+  keyInputs = {},
+) {
   if (env.WD_OCR_CACHE === "0") return null;
   const dir = env.WD_OCR_CACHE_DIR || join(homedir(), ".cache", "wd-ocr-gate");
-  const key = createHash("sha256")
-    .update(`v1:${env.WD_PRIVATE_NAMES || ""}:`)
-    .update(existsSync(hashFile) ? readFileSync(hashFile) : "")
-    .digest("hex")
-    .slice(0, 16);
-  const path = join(dir, `passed-${key}.json`);
+  let secret;
+  try {
+    secret = cacheSecret(dir);
+  } catch {
+    return null;
+  }
+  const scriptSourceSha256 =
+    keyInputs.scriptSourceSha256 ??
+    createHash("sha256").update(readFileSync(SCRIPT_PATH)).digest("hex");
+  const key = JSON.stringify({
+    scriptSourceSha256,
+    tesseractVersionConfig:
+      keyInputs.tesseractVersionConfig ?? tesseractVersionConfig(),
+    names: env.WD_PRIVATE_NAMES || "",
+    hashFile: existsSync(hashFile)
+      ? readFileSync(hashFile).toString("base64")
+      : null,
+  });
+  const digest = createHmac("sha256", secret).update(key).digest("hex");
+  const path = join(dir, `passed-${digest}.json`);
   let seen = new Set();
   try {
     seen = new Set(JSON.parse(readFileSync(path, "utf8")));
@@ -169,10 +256,24 @@ export function passCache(env = process.env, hashFile = HASH_FILE) {
     has: (h) => seen.has(h),
     add: (h) => seen.add(h),
     save() {
+      const temp = join(
+        dir,
+        `.passed-${process.pid}-${randomBytes(8).toString("hex")}.tmp`,
+      );
       try {
-        mkdirSync(dir, { recursive: true });
-        writeFileSync(path, JSON.stringify([...seen].sort()));
-      } catch {}
+        writeFileSync(temp, JSON.stringify([...seen].sort()), {
+          flag: "wx",
+          mode: 0o600,
+        });
+        chmodSync(temp, 0o600);
+        renameSync(temp, path);
+        chmodSync(path, 0o600);
+      } catch {
+      } finally {
+        try {
+          unlinkSync(temp);
+        } catch {}
+      }
     },
   };
 }
@@ -220,13 +321,7 @@ async function ocrImage(path) {
       } catch {
         return [null];
       }
-      texts.push(
-        await run(
-          "tesseract",
-          ["stdin", "stdout", "--psm", "3", "-l", "eng"],
-          png,
-        ),
-      );
+      texts.push(await run("tesseract", TESSERACT_ARGS, png));
     }
   return texts;
 }
@@ -254,69 +349,83 @@ async function textOf(file) {
   return parts;
 }
 
-export async function main(argv = process.argv.slice(2)) {
-  const matcher = loadMatcher();
+export async function scan(
+  argv = process.argv.slice(2),
+  {
+    env = process.env,
+    hashFile = HASH_FILE,
+    baseDir = root,
+    prepareTools = ensureTools,
+    extractText = textOf,
+    cacheKeyInputs,
+    output = console,
+  } = {},
+) {
+  const matcher = loadMatcher(env, hashFile);
   if (!matcher) {
-    console.error(
+    output.error(
       "OCR privacy gate: no WD_PRIVATE_NAMES and no hash list; failing closed",
     );
     return 1;
   }
   // A path that itself contains a private name is never echoed.
   const safe = (p) => (textHasName(p, matcher) ? "[redacted path]" : p);
-  ensureTools();
+  prepareTools();
   const roots = argv.length ? argv : ["docs", "dist"];
   const files = [];
   for (const r of roots) {
-    const dir = resolve(root, r);
+    const dir = resolve(baseDir, r);
     if (!existsSync(dir) || !lstatSync(dir).isDirectory()) {
-      console.error(`${safe(r)}: scan root missing`);
+      output.error(`${safe(r)}: scan root missing`);
       return 1;
     }
     const { out, bad } = walk(dir);
     for (const b of bad)
-      console.error(`${safe(relative(root, b))}: symlink not allowed`);
+      output.error(`${safe(relative(baseDir, b))}: symlink not allowed`);
     if (bad.length) return 1;
     files.push(...out);
   }
   files.sort();
   if (!files.length) {
-    console.error(
-      "OCR privacy gate: no PNG or PDF files found; failing closed",
-    );
+    output.error("OCR privacy gate: no PNG or PDF files found; failing closed");
     return 1;
   }
   let hits = 0;
   let unreadable = 0;
   let cached = 0;
   let next = 0;
-  const cache = passCache();
+  const cache = passCache(env, hashFile, cacheKeyInputs);
   const worker = async () => {
     while (next < files.length) {
       const file = files[next++];
-      const label = safe(relative(root, file));
-      const h = cache ? fileHash(file) : null;
+      const label = safe(relative(baseDir, file));
+      const processingClass = /\.pdf$/i.test(file) ? "pdf" : "img";
+      const h = cache ? `${processingClass}:${fileHash(file)}` : null;
       if (h && cache.has(h)) {
         cached++;
         continue;
       }
-      const parts = await textOf(file);
+      const parts = await extractText(file);
       if (parts.some((p) => p === null)) {
         unreadable++;
-        console.error(`${label}: unreadable`);
+        output.error(`${label}: unreadable`);
       }
       if (parts.some((p) => p && textHasName(p, matcher))) {
         hits++;
-        console.error(`${label}: private name hit`);
+        output.error(`${label}: private name hit`);
       } else if (h && !parts.some((p) => p === null)) cache.add(h);
     }
   };
   await Promise.all(Array.from({ length: workerCount() }, worker));
   cache?.save();
-  console.log(
+  output.log(
     `OCR privacy gate (${matcher.source}): ${files.length} files, ${hits} hit(s), ${unreadable} unreadable${cached ? `, ${cached} cached pass(es)` : ""}`,
   );
   return hits || unreadable ? 1 : 0;
+}
+
+export async function main(argv = process.argv.slice(2)) {
+  return scan(argv);
 }
 
 if (
