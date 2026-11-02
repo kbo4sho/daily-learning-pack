@@ -465,10 +465,17 @@ const pack = JSON.parse(
 );
 const pdfDir = join(root, "today", "pdf");
 // Every PDF that ships on /today/: each must be linked from the page.
-const shipped = readdirSync(pdfDir)
+// A hand-added poem's poem.pdf is linked from its own section, not the
+// Print menu, so it is checked on its own below.
+const allPdfs = readdirSync(pdfDir)
   .filter((f) => f.endsWith(".pdf"))
-  .map((f) => f.replace(/\.pdf$/, ""))
-  .sort();
+  .map((f) => f.replace(/\.pdf$/, ""));
+assert.equal(
+  allPdfs.includes("poem"),
+  Boolean(pack.poem),
+  "poem.pdf ships exactly when the pack has a poem",
+);
+const shipped = allPdfs.filter((n) => n !== "poem").sort();
 
 const age = squash(`AGE${pack.targetAge}`);
 // The pack must have the fields the checks lean on, so none of them is vacuous.
@@ -940,7 +947,12 @@ try {
   await step(
     "every printable PDF on /today/ is a clean Letter sheet",
     async () => {
-      assert.deepEqual(linked.slice().sort(), shipped, "linked PDFs differ");
+      // The page links every PDF, the poem sheet included.
+      assert.deepEqual(
+        linked.slice().sort(),
+        allPdfs.slice().sort(),
+        "linked PDFs differ",
+      );
       // Foldable first: its sheets are the ones allowed to carry no title.
       const order = [...linked].sort(
         (a, b) =>
