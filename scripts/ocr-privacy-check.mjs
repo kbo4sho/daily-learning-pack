@@ -171,6 +171,18 @@ function tesseractVersionConfig() {
   return `${version}\n${TESSERACT_CONFIG}`;
 }
 
+function commandVersion(bin) {
+  const result = spawnSync(bin, ["-v"], {
+    encoding: "utf8",
+    timeout: 10_000,
+  });
+  if (result.error?.code === "ENOENT") return "absent";
+  const output = `${result.stdout || ""}${result.stderr || ""}`.trim();
+  if (output) return output;
+  if (result.error) return `error:${result.error.code || result.error.name}`;
+  return `status:${result.status ?? "unknown"}`;
+}
+
 function cacheSecret(dir) {
   mkdirSync(dir, { recursive: true, mode: 0o700 });
   chmodSync(dir, 0o700);
@@ -237,10 +249,17 @@ export function passCache(
   const scriptSourceSha256 =
     keyInputs.scriptSourceSha256 ??
     createHash("sha256").update(readFileSync(SCRIPT_PATH)).digest("hex");
-  const key = JSON.stringify({
-    scriptSourceSha256,
+  const extractionStack = {
     tesseractVersionConfig:
       keyInputs.tesseractVersionConfig ?? tesseractVersionConfig(),
+    sharpVersion: keyInputs.sharpVersion ?? sharp.versions.sharp,
+    sharpVersions: keyInputs.sharpVersions ?? sharp.versions,
+    pdftotextVersion: keyInputs.pdftotextVersion ?? commandVersion("pdftotext"),
+    pdftoppmVersion: keyInputs.pdftoppmVersion ?? commandVersion("pdftoppm"),
+  };
+  const key = JSON.stringify({
+    scriptSourceSha256,
+    extractionStack,
     names: env.WD_PRIVATE_NAMES || "",
     hashFile: existsSync(hashFile)
       ? readFileSync(hashFile).toString("base64")
@@ -278,8 +297,7 @@ export function passCache(
   };
 }
 
-const fileHash = (file) =>
-  createHash("sha256").update(readFileSync(file)).digest("hex");
+const contentHash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 
 const TIMEOUT = 180_000;
 
@@ -305,11 +323,11 @@ const run = (bin, args, input) =>
 // Tesseract does not reliably auto-rotate, and fold-up sheets mix upright
 // and upside-down panels, so read every image at all four orientations.
 // Animated PNGs: every frame is read, not just the default one.
-async function ocrImage(path) {
+async function ocrImage(bytes) {
   const texts = [];
   let pages;
   try {
-    pages = (await sharp(path).metadata()).pages || 1;
+    pages = (await sharp(bytes).metadata()).pages || 1;
   } catch {
     return [null];
   }
@@ -317,7 +335,7 @@ async function ocrImage(path) {
     for (const angle of [0, 90, 180, 270]) {
       let png;
       try {
-        png = await sharp(path, { page }).rotate(angle).png().toBuffer();
+        png = await sharp(bytes, { page }).rotate(angle).png().toBuffer();
       } catch {
         return [null];
       }
@@ -326,27 +344,32 @@ async function ocrImage(path) {
   return texts;
 }
 
-async function textOf(file) {
-  if (!/\.pdf$/i.test(file)) return ocrImage(file);
-  const parts = [await run("pdftotext", ["-layout", file, "-"])];
+async function textOf(file, bytes) {
+  if (!/\.pdf$/i.test(file)) return ocrImage(bytes);
   const dir = mkdtempSync(join(tmpdir(), "ocr-gate-"));
+  chmodSync(dir, 0o700);
   try {
+    const source = join(dir, "source.pdf");
+    writeFileSync(source, bytes, { flag: "wx", mode: 0o600 });
+    const parts = [await run("pdftotext", ["-layout", source, "-"])];
     const r = await run("pdftoppm", [
       "-r",
       "150",
       "-gray",
       "-png",
-      file,
+      source,
       join(dir, "p"),
     ]);
     if (r === null) parts.push(null);
     const pages = readdirSync(dir).sort();
-    if (!pages.length) parts.push(null);
-    for (const page of pages) parts.push(...(await ocrImage(join(dir, page))));
+    const renderedPages = pages.filter((page) => page !== "source.pdf");
+    if (!renderedPages.length) parts.push(null);
+    for (const page of renderedPages)
+      parts.push(...(await ocrImage(readFileSync(join(dir, page)))));
+    return parts;
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
-  return parts;
 }
 
 export async function scan(
@@ -400,12 +423,13 @@ export async function scan(
       const file = files[next++];
       const label = safe(relative(baseDir, file));
       const processingClass = /\.pdf$/i.test(file) ? "pdf" : "img";
-      const h = cache ? `${processingClass}:${fileHash(file)}` : null;
+      const bytes = readFileSync(file);
+      const h = cache ? `${processingClass}:${contentHash(bytes)}` : null;
       if (h && cache.has(h)) {
         cached++;
         continue;
       }
-      const parts = await extractText(file);
+      const parts = await extractText(file, bytes);
       if (parts.some((p) => p === null)) {
         unreadable++;
         output.error(`${label}: unreadable`);
