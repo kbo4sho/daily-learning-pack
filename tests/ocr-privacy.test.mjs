@@ -1,15 +1,53 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import {
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  rmSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { basename, join } from "node:path";
 import test from "node:test";
 import {
   hashName,
   loadMatcher,
+  passCache,
+  scan,
   textHasName,
 } from "../scripts/ocr-privacy-check.mjs";
 
 const none = join(tmpdir(), "no-such-hash-file.json");
+const testKeyInputs = {
+  scriptSourceSha256: "a".repeat(64),
+  tesseractVersionConfig: "tesseract test version\ntest config",
+  sharpVersion: "sharp test version",
+  sharpVersions: { sharp: "sharp test version", vips: "vips test version" },
+  pdftotextVersion: "pdftotext test version",
+  pdftoppmVersion: "pdftoppm test version",
+};
+const quiet = { error() {}, log() {} };
+
+function temporaryDirectory(t, prefix) {
+  const dir = mkdtempSync(join(tmpdir(), prefix));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  return dir;
+}
+
+function scanOptions(env, extractText, extra = {}) {
+  return {
+    env,
+    hashFile: none,
+    prepareTools() {},
+    extractText,
+    cacheKeyInputs: testKeyInputs,
+    output: quiet,
+    ...extra,
+  };
+}
 
 test("ocr gate: env names match case-insensitively on word boundaries", () => {
   const m = loadMatcher({ WD_PRIVATE_NAMES: "Zed, Ann Lee" }, none);
@@ -64,4 +102,233 @@ test("ocr gate: a malformed hash list throws instead of never matching", () => {
     writeFileSync(file, JSON.stringify(bad));
     assert.throws(() => loadMatcher({}, file), /malformed hash list/);
   }
+});
+
+test("worker cap is about half the cores, between 1 and 8", async () => {
+  const { workerCount } = await import("../scripts/ocr-privacy-check.mjs");
+  assert.equal(workerCount(1), 1);
+  assert.equal(workerCount(4), 2);
+  assert.equal(workerCount(10), 5);
+  assert.equal(workerCount(64), 8);
+});
+
+test("pass cache protects its filename and private files", (t) => {
+  const dir = temporaryDirectory(t, "ocr-cache-");
+  const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "zz-alpha" };
+  const a = passCache(env, none, testKeyInputs);
+  a.add("img:abc123");
+  a.save();
+  assert.equal(passCache(env, none, testKeyInputs).has("img:abc123"), true);
+  assert.equal(
+    passCache({ ...env, WD_PRIVATE_NAMES: "zz-beta" }, none, testKeyInputs).has(
+      "img:abc123",
+    ),
+    false,
+  );
+  assert.equal(
+    passCache({ ...env, WD_OCR_CACHE: "0" }, none, testKeyInputs),
+    null,
+  );
+
+  const files = readdirSync(dir);
+  const cacheFiles = files.filter((file) => file.endsWith(".json"));
+  assert.equal(cacheFiles.length, 1);
+  const oldUnsaltedFingerprint = createHash("sha256")
+    .update(`v1:${env.WD_PRIVATE_NAMES}:`)
+    .digest("hex")
+    .slice(0, 16);
+  const namesHash = createHash("sha256")
+    .update(env.WD_PRIVATE_NAMES)
+    .digest("hex");
+  for (const file of files) {
+    assert.doesNotMatch(file, new RegExp(oldUnsaltedFingerprint));
+    assert.doesNotMatch(file, new RegExp(namesHash.slice(0, 16)));
+    assert.doesNotMatch(readFileSync(join(dir, file), "utf8"), /zz-alpha/);
+  }
+  assert.equal(statSync(dir).mode & 0o777, 0o700);
+  assert.equal(statSync(join(dir, ".cache-secret")).mode & 0o777, 0o600);
+  assert.equal(readFileSync(join(dir, ".cache-secret")).length, 32);
+  assert.equal(statSync(join(dir, cacheFiles[0])).mode & 0o777, 0o600);
+  assert.deepEqual(JSON.parse(readFileSync(join(dir, cacheFiles[0]))), [
+    "img:abc123",
+  ]);
+});
+
+test("pass cache key includes every extraction stack version", (t) => {
+  const dir = temporaryDirectory(t, "ocr-stack-cache-");
+  const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "Zed" };
+  const baseline = passCache(env, none, testKeyInputs);
+  baseline.add("img:abc123");
+  baseline.save();
+
+  for (const [input, value] of [
+    ["tesseractVersionConfig", "changed tesseract version"],
+    ["sharpVersion", "changed sharp version"],
+    ["sharpVersions", { sharp: "changed", vips: "changed" }],
+    ["pdftotextVersion", "changed pdftotext version"],
+    ["pdftoppmVersion", "changed pdftoppm version"],
+  ]) {
+    const changed = passCache(env, none, {
+      ...testKeyInputs,
+      [input]: value,
+    });
+    assert.equal(changed.has("img:abc123"), false, input);
+  }
+});
+
+test("scan caches only readable passes and skips them on the second run", async (t) => {
+  const dir = temporaryDirectory(t, "ocr-scan-");
+  const fixtures = join(dir, "fixtures");
+  const cache = join(dir, "cache");
+  mkdirSync(fixtures);
+  for (const file of ["pass.png", "hit.png", "unreadable.png"])
+    writeFileSync(join(fixtures, file), file);
+
+  const calls = new Map();
+  const extractText = async (file) => {
+    const name = basename(file);
+    calls.set(name, (calls.get(name) || 0) + 1);
+    if (name === "hit.png") return ["Zed"];
+    if (name === "unreadable.png") return [null];
+    return ["ordinary text"];
+  };
+  const env = { WD_OCR_CACHE_DIR: cache, WD_PRIVATE_NAMES: "Zed" };
+
+  assert.equal(await scan([fixtures], scanOptions(env, extractText)), 1);
+  assert.deepEqual(Object.fromEntries(calls), {
+    "hit.png": 1,
+    "pass.png": 1,
+    "unreadable.png": 1,
+  });
+  assert.equal(await scan([fixtures], scanOptions(env, extractText)), 1);
+  assert.deepEqual(Object.fromEntries(calls), {
+    "hit.png": 2,
+    "pass.png": 1,
+    "unreadable.png": 2,
+  });
+});
+
+test("scan does not share cached passes between image and PDF processing", async (t) => {
+  const dir = temporaryDirectory(t, "ocr-class-cache-");
+  const fixtures = join(dir, "fixtures");
+  const cache = join(dir, "cache");
+  mkdirSync(fixtures);
+  const bytes = Buffer.from("identical fixture bytes");
+  writeFileSync(join(fixtures, "same.png"), bytes);
+
+  const calls = [];
+  const extractText = async (file) => {
+    calls.push(basename(file));
+    return ["ordinary text"];
+  };
+  const env = { WD_OCR_CACHE_DIR: cache, WD_PRIVATE_NAMES: "Zed" };
+
+  assert.equal(await scan([fixtures], scanOptions(env, extractText)), 0);
+  writeFileSync(join(fixtures, "same.pdf"), bytes);
+  assert.equal(await scan([fixtures], scanOptions(env, extractText)), 0);
+  assert.deepEqual(calls, ["same.png", "same.pdf"]);
+});
+
+test("scan caches the hash of the exact buffer passed to extraction", async (t) => {
+  const dir = temporaryDirectory(t, "ocr-buffer-cache-");
+  const fixtures = join(dir, "fixtures");
+  const cache = join(dir, "cache");
+  const file = join(fixtures, "changing.png");
+  const original = Buffer.from("bytes read before extraction");
+  const replacement = Buffer.from("bytes written during extraction");
+  mkdirSync(fixtures);
+  writeFileSync(file, original);
+
+  let processedHash;
+  const extractText = async (path, bytes) => {
+    assert.ok(Buffer.isBuffer(bytes));
+    processedHash = createHash("sha256").update(bytes).digest("hex");
+    writeFileSync(path, replacement);
+    return ["ordinary text"];
+  };
+  const env = { WD_OCR_CACHE_DIR: cache, WD_PRIVATE_NAMES: "Zed" };
+
+  assert.equal(await scan([fixtures], scanOptions(env, extractText)), 0);
+  const cacheFile = readdirSync(cache).find((name) => name.endsWith(".json"));
+  assert.ok(cacheFile);
+  assert.equal(
+    processedHash,
+    createHash("sha256").update(original).digest("hex"),
+  );
+  assert.deepEqual(JSON.parse(readFileSync(join(cache, cacheFile), "utf8")), [
+    `img:${processedHash}`,
+  ]);
+});
+
+test("scan invalidates passes when any cache key input changes", async (t) => {
+  const dir = temporaryDirectory(t, "ocr-key-cache-");
+  const fixtures = join(dir, "fixtures");
+  const cache = join(dir, "cache");
+  const hashFile = join(dir, "hashes.json");
+  mkdirSync(fixtures);
+  writeFileSync(join(fixtures, "pass.png"), "fixture");
+  const writeHashes = (salt, name) =>
+    writeFileSync(
+      hashFile,
+      JSON.stringify({
+        salt,
+        maxWords: 1,
+        hashes: [hashName(salt, [name])],
+      }),
+    );
+  writeHashes("salt-a", "alpha");
+
+  let calls = 0;
+  const extractText = async () => {
+    calls++;
+    return ["ordinary text"];
+  };
+  const env = { WD_OCR_CACHE_DIR: cache, WD_PRIVATE_NAMES: "Zed" };
+  const options = (overrides = {}) =>
+    scanOptions(env, extractText, {
+      hashFile,
+      cacheKeyInputs: testKeyInputs,
+      ...overrides,
+    });
+
+  assert.equal(await scan([fixtures], options()), 0);
+  assert.equal(await scan([fixtures], options()), 0);
+  assert.equal(calls, 1);
+
+  env.WD_PRIVATE_NAMES = "Zedd";
+  assert.equal(await scan([fixtures], options()), 0);
+  assert.equal(calls, 2);
+
+  writeHashes("salt-b", "beta");
+  assert.equal(await scan([fixtures], options()), 0);
+  assert.equal(calls, 3);
+
+  assert.equal(
+    await scan(
+      [fixtures],
+      options({
+        cacheKeyInputs: {
+          ...testKeyInputs,
+          scriptSourceSha256: "b".repeat(64),
+        },
+      }),
+    ),
+    0,
+  );
+  assert.equal(calls, 4);
+
+  assert.equal(
+    await scan(
+      [fixtures],
+      options({
+        cacheKeyInputs: {
+          ...testKeyInputs,
+          scriptSourceSha256: "b".repeat(64),
+          tesseractVersionConfig: "tesseract changed version\ntest config",
+        },
+      }),
+    ),
+    0,
+  );
+  assert.equal(calls, 5);
 });
