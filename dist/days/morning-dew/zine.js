@@ -1,4 +1,3 @@
-// Foldable zine layout runtime. Daily binds its own pack/plate registry.
 export const ZINE_IMPOSITION = [
   { panel: 5, rotation: 180 },
   { panel: 4, rotation: 180 },
