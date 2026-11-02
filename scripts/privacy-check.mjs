@@ -1,6 +1,6 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
-import { join, relative, resolve } from "node:path";
+import { join, relative, resolve, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 
 // Keep the forbidden spelling out of files that this guard scans itself.
@@ -535,12 +535,20 @@ const isJson = (path) => /\.json$/i.test(path);
 // public sync); there every JSON file is public pack JSON, whatever its name.
 export async function scanPrivacy(
   paths,
-  { jsonOnly = false, publicOutput = false } = {},
+  { jsonOnly = false, publicOutput = false, excludePaths = [] } = {},
 ) {
   const issues = [];
   let files = 0;
   const images = [];
+  const excludedRoots = excludePaths.map((path) => resolve(path));
+  const isExcluded = (path) => {
+    const absolute = resolve(path);
+    return excludedRoots.some(
+      (root) => absolute === root || absolute.startsWith(`${root}${sep}`),
+    );
+  };
   async function visit(path) {
+    if (isExcluded(path)) return;
     const info = await stat(path); // Missing output is an error, never a silent pass.
     if (info.isDirectory()) {
       for (const entry of (await readdir(path)).sort())
