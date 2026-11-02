@@ -85,7 +85,10 @@ test("pass cache keys on the matcher, stores only hashes, and can be disabled", 
   a.add("abc123");
   a.save();
   assert.equal(passCache(env).has("abc123"), true);
-  assert.equal(passCache({ ...env, WD_PRIVATE_NAMES: "zz-beta" }).has("abc123"), false);
+  assert.equal(
+    passCache({ ...env, WD_PRIVATE_NAMES: "zz-beta" }).has("abc123"),
+    false,
+  );
   assert.equal(passCache({ ...env, WD_OCR_CACHE: "0" }), null);
   for (const f of readdirSync(dir))
     assert.doesNotMatch(readFileSync(join(dir, f), "utf8"), /zz-alpha/);

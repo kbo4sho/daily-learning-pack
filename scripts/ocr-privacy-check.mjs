@@ -145,14 +145,13 @@ function ensureTools() {
     );
 }
 
-
 // Worker cap: about half the cores (max 8) so the gate never saturates the box.
 export const workerCount = (cores = availableParallelism()) =>
   Math.min(8, Math.max(1, Math.floor(cores / 2)));
 
 // Pass cache: content hashes of files that already passed (readable, no hit)
 // under the same matcher. Lives outside the repo (WD_OCR_CACHE_DIR, default
-// ~/.cache/wd-ocr-gate); WD_OCR_CACHE=0 turns it off. Only hashes are stored.
+// .cache/wd-ocr-gate in the home directory); WD_OCR_CACHE=0 turns it off. Only hashes are stored.
 export function passCache(env = process.env, hashFile = HASH_FILE) {
   if (env.WD_OCR_CACHE === "0") return null;
   const dir = env.WD_OCR_CACHE_DIR || join(homedir(), ".cache", "wd-ocr-gate");
@@ -312,12 +311,7 @@ export async function main(argv = process.argv.slice(2)) {
       } else if (h && !parts.some((p) => p === null)) cache.add(h);
     }
   };
-  await Promise.all(
-    Array.from(
-      { length: workerCount() },
-      worker,
-    ),
-  );
+  await Promise.all(Array.from({ length: workerCount() }, worker));
   cache?.save();
   console.log(
     `OCR privacy gate (${matcher.source}): ${files.length} files, ${hits} hit(s), ${unreadable} unreadable${cached ? `, ${cached} cached pass(es)` : ""}`,
