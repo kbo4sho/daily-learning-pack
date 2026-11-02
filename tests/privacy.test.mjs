@@ -21,6 +21,8 @@ import {
 } from "../scripts/privacy-check.mjs";
 import { renderArchive } from "../scripts/render-archive.mjs";
 
+const SYNTHETIC_PROCESS_FIXTURES = "tests/fixtures/leaked-process";
+
 test("privacy guard rejects private copy, including escaped JSON, and keeps word boundaries", async () => {
   const forbidden = String.fromCharCode(76, 101, 111);
   assert.equal(
@@ -207,15 +209,38 @@ test("privacy guard scans decoded image metadata strings with newlines", async (
 
 test("all committed public output, README and tests pass privacy", async () => {
   await scanPrivacy(["dist"], { publicOutput: true });
-  await scanPrivacy([
-    "README.md",
-    "tests",
-    "src",
-    "scripts",
-    "docs",
-    "DESIGN.md",
-    "OUTCOME.md",
-  ]);
+  await scanPrivacy(
+    ["README.md", "tests", "src", "scripts", "docs", "DESIGN.md", "OUTCOME.md"],
+    { excludePaths: [SYNTHETIC_PROCESS_FIXTURES] },
+  );
+});
+
+test("the repo privacy exclusion covers only the synthetic leak fixture directory", async () => {
+  assert.equal(SYNTHETIC_PROCESS_FIXTURES, "tests/fixtures/leaked-process");
+  const root = await mkdtemp(join(tmpdir(), "privacy-exclusion-"));
+  const excluded = join(root, SYNTHETIC_PROCESS_FIXTURES);
+  const sibling = `${excluded}-neighbor`;
+  try {
+    for (const dir of [excluded, sibling]) {
+      await mkdir(dir, { recursive: true });
+      await writeFile(
+        join(dir, "pack.json"),
+        JSON.stringify({ title: "Synthetic", authoring: {} }),
+      );
+    }
+    await assert.rejects(
+      scanPrivacy([root], { excludePaths: [excluded] }),
+      /leaked-process-neighbor[\\/]pack\.json \(pack JSON\): PROCESS FIELD/,
+    );
+    await rm(sibling, { recursive: true });
+    assert.equal(await scanPrivacy([root], { excludePaths: [excluded] }), 0);
+    await assert.rejects(
+      scanPrivacy([excluded]),
+      /leaked-process[\\/]pack\.json \(pack JSON\): PROCESS FIELD/,
+    );
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
 });
 
 test("archive publishing rejects private copy without changing existing dist", async () => {
@@ -533,40 +558,73 @@ test("pack JSON guard rejects relay/process notes, model names, dates, ages and 
   }
 });
 
-// The last main commit that still published the leaked notes. CI fetches just
-// this commit so the test proves the guard fails on the exact old files.
-const LEAKED_MAIN = "207cda9954d7f27eee09a1284d2648d229e84bc8";
 test("previously published pack.json and day pages fail the pack JSON guard", async () => {
-  const dir = await mkdtemp(join(tmpdir(), "process-old-"));
-  try {
-    for (const [slug, kinds] of [
-      ["how-drill-bits-work", ["RELAY", "DATE", "AGE", "FIELD"]],
-      ["how-code-turns-into-lesson", ["RELAY", "MODEL", "FIELD"]],
-    ])
-      for (const file of ["pack.json", "index.html"]) {
-        const old = execFileSync(
-          "git",
-          ["show", `${LEAKED_MAIN}:dist/days/${slug}/${file}`],
-          { encoding: "utf8", maxBuffer: 16 * 1024 * 1024 },
+  const fixtures = [
+    {
+      slug: "how-drill-bits-work",
+      fragments: {
+        RELAY: "handoff",
+        DATE: "schedule",
+        AGE: "audience",
+        FIELD: "authoring",
+      },
+    },
+    {
+      slug: "how-code-turns-into-lesson",
+      fragments: {
+        RELAY: "handoff",
+        MODEL: "tooling",
+        FIELD: "authoring",
+      },
+    },
+  ];
+  const processKinds = (issues) =>
+    [
+      ...new Set(
+        issues.flatMap((issue) => {
+          const match = issue.match(/PROCESS (RELAY|MODEL|DATE|AGE|FIELD)\b/);
+          return match ? [match[1]] : [];
+        }),
+      ),
+    ].sort();
+
+  for (const { slug, fragments } of fixtures) {
+    const expectedKinds = Object.keys(fragments).sort();
+    assert.equal(
+      new Set(Object.values(fragments)).size,
+      expectedKinds.length,
+      `${slug} must use one distinct fragment per kind`,
+    );
+    for (const file of ["pack.json", "index.html"]) {
+      const fixture = join(SYNTHETIC_PROCESS_FIXTURES, slug, file);
+      const text = await readFile(fixture, "utf8");
+      const pack = JSON.parse(
+        file === "pack.json"
+          ? text
+          : text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1),
+      );
+      const error = await scanPrivacy([fixture]).then(
+        () => null,
+        (reason) => reason,
+      );
+      assert.ok(error, `${fixture} must fail`);
+      assert.deepEqual(
+        processKinds(error.message.split("\n")),
+        expectedKinds,
+        `${fixture} must reproduce only the expected process leak kinds`,
+      );
+      for (const [kind, fragment] of Object.entries(fragments)) {
+        const withoutFragment = structuredClone(pack);
+        delete withoutFragment[fragment];
+        assert.deepEqual(
+          processKinds(processNoteIssues(withoutFragment)),
+          expectedKinds.filter((expected) => expected !== kind),
+          `${fixture}: removing ${fragment} must remove only ${kind}`,
         );
-        await writeFile(join(dir, file), old);
-        const error = await scanPrivacy([dir]).then(
-          () => null,
-          (e) => e,
-        );
-        assert.ok(error, `${slug}/${file} must fail`);
-        for (const kind of kinds)
-          assert.match(
-            error.message,
-            new RegExp(`PROCESS ${kind}`),
-            `${slug}/${file}`,
-          );
-        await rm(join(dir, file));
-        // The committed replacement passes.
-        await scanPrivacy([`dist/days/${slug}/${file}`]);
       }
-  } finally {
-    await rm(dir, { recursive: true, force: true });
+      // The committed replacement passes.
+      await scanPrivacy([`dist/days/${slug}/${file}`]);
+    }
   }
 });
 
