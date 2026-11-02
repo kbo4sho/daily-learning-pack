@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T05:26:52.199Z",
-  "latest": "how-a-zipper-works-2026-10-30",
+  "generatedAt": "2026-11-02T06:53:09.907Z",
+  "latest": "how-animals-get-ready-for-winter",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-animals-get-ready-for-winter",
+      "date": "2026-11-02",
+      "topic": "how animals get ready for winter",
+      "title": "How Animals Get Ready for Winter",
+      "teaser": "Meet a frog that freezes, a chipmunk that cools down, bees that shiver and voles that live under the snow.",
+      "href": "./days/how-animals-get-ready-for-winter/",
+      "latest": true
+    },
     {
       "slug": "how-a-zipper-works-2026-10-30",
       "date": "2026-10-30",
@@ -11,7 +20,7 @@
       "title": "How a Zipper Holds Shut and Comes Apart",
       "teaser": "Meet the tape, teeth and slider, then find the hidden lock, the pin and the stops.",
       "href": "./days/how-a-zipper-works-2026-10-30/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-sidewalks-work",
