@@ -65,3 +65,28 @@ test("ocr gate: a malformed hash list throws instead of never matching", () => {
     assert.throws(() => loadMatcher({}, file), /malformed hash list/);
   }
 });
+
+test("worker cap is about half the cores, between 1 and 8", async () => {
+  const { workerCount } = await import("../scripts/ocr-privacy-check.mjs");
+  assert.equal(workerCount(1), 1);
+  assert.equal(workerCount(4), 2);
+  assert.equal(workerCount(10), 5);
+  assert.equal(workerCount(64), 8);
+});
+
+test("pass cache keys on the matcher, stores only hashes, and can be disabled", async () => {
+  const { passCache } = await import("../scripts/ocr-privacy-check.mjs");
+  const { mkdtempSync, readdirSync, readFileSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const dir = mkdtempSync(join(tmpdir(), "ocr-cache-"));
+  const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "zz-alpha" };
+  const a = passCache(env);
+  a.add("abc123");
+  a.save();
+  assert.equal(passCache(env).has("abc123"), true);
+  assert.equal(passCache({ ...env, WD_PRIVATE_NAMES: "zz-beta" }).has("abc123"), false);
+  assert.equal(passCache({ ...env, WD_OCR_CACHE: "0" }), null);
+  for (const f of readdirSync(dir))
+    assert.doesNotMatch(readFileSync(join(dir, f), "utf8"), /zz-alpha/);
+});

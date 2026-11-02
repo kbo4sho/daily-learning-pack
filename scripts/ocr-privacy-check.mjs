@@ -13,9 +13,11 @@ import {
   readdirSync,
   readFileSync,
   rmSync,
+  mkdirSync,
+  writeFileSync,
   lstatSync,
 } from "node:fs";
-import { availableParallelism, tmpdir } from "node:os";
+import { availableParallelism, homedir, tmpdir } from "node:os";
 import { join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -143,6 +145,42 @@ function ensureTools() {
     );
 }
 
+
+// Worker cap: about half the cores (max 8) so the gate never saturates the box.
+export const workerCount = (cores = availableParallelism()) =>
+  Math.min(8, Math.max(1, Math.floor(cores / 2)));
+
+// Pass cache: content hashes of files that already passed (readable, no hit)
+// under the same matcher. Lives outside the repo (WD_OCR_CACHE_DIR, default
+// ~/.cache/wd-ocr-gate); WD_OCR_CACHE=0 turns it off. Only hashes are stored.
+export function passCache(env = process.env, hashFile = HASH_FILE) {
+  if (env.WD_OCR_CACHE === "0") return null;
+  const dir = env.WD_OCR_CACHE_DIR || join(homedir(), ".cache", "wd-ocr-gate");
+  const key = createHash("sha256")
+    .update(`v1:${env.WD_PRIVATE_NAMES || ""}:`)
+    .update(existsSync(hashFile) ? readFileSync(hashFile) : "")
+    .digest("hex")
+    .slice(0, 16);
+  const path = join(dir, `passed-${key}.json`);
+  let seen = new Set();
+  try {
+    seen = new Set(JSON.parse(readFileSync(path, "utf8")));
+  } catch {}
+  return {
+    has: (h) => seen.has(h),
+    add: (h) => seen.add(h),
+    save() {
+      try {
+        mkdirSync(dir, { recursive: true });
+        writeFileSync(path, JSON.stringify([...seen].sort()));
+      } catch {}
+    },
+  };
+}
+
+const fileHash = (file) =>
+  createHash("sha256").update(readFileSync(file)).digest("hex");
+
 const TIMEOUT = 180_000;
 
 // Resolves to stdout, or null on any error or timeout (counted as unreadable).
@@ -251,11 +289,18 @@ export async function main(argv = process.argv.slice(2)) {
   }
   let hits = 0;
   let unreadable = 0;
+  let cached = 0;
   let next = 0;
+  const cache = passCache();
   const worker = async () => {
     while (next < files.length) {
       const file = files[next++];
       const label = safe(relative(root, file));
+      const h = cache ? fileHash(file) : null;
+      if (h && cache.has(h)) {
+        cached++;
+        continue;
+      }
       const parts = await textOf(file);
       if (parts.some((p) => p === null)) {
         unreadable++;
@@ -264,17 +309,18 @@ export async function main(argv = process.argv.slice(2)) {
       if (parts.some((p) => p && textHasName(p, matcher))) {
         hits++;
         console.error(`${label}: private name hit`);
-      }
+      } else if (h && !parts.some((p) => p === null)) cache.add(h);
     }
   };
   await Promise.all(
     Array.from(
-      { length: Math.min(8, Math.max(1, availableParallelism())) },
+      { length: workerCount() },
       worker,
     ),
   );
+  cache?.save();
   console.log(
-    `OCR privacy gate (${matcher.source}): ${files.length} files, ${hits} hit(s), ${unreadable} unreadable`,
+    `OCR privacy gate (${matcher.source}): ${files.length} files, ${hits} hit(s), ${unreadable} unreadable${cached ? `, ${cached} cached pass(es)` : ""}`,
   );
   return hits || unreadable ? 1 : 0;
 }
