@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-animals-get-ready-for-winter");
-  assert.equal(latest.date, "2026-11-02");
+  assert.equal(latest.slug, "fingerprints-2026-11-03");
+  assert.equal(latest.date, "2026-11-03");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "fingerprints-2026-11-03",
       "how-animals-get-ready-for-winter",
       "how-a-zipper-works-2026-10-30",
       "how-sidewalks-work",
@@ -150,24 +151,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [12, 10, 16, 25, 8, 15],
+    [52, 71, 45, 30, 90, 70],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "groups-and-arrays");
+  assert.equal(todayPack.mathTemplate, "compare-and-round");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
-    todayPack.math.tasks.map(({ skill, rows, columns }) => [
-      skill,
-      rows,
-      columns,
-    ]),
+    todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["equal-groups", 3, 4],
-      ["array", 2, 5],
-      ["equal-groups", 4, 4],
-      ["array", 5, 5],
-      ["equal-groups", 4, 2],
-      ["array", 3, 5],
+      ["compare", 38, 52],
+      ["compare", 71, 67],
+      ["compare", 45, 45],
+      ["round-ten", 34],
+      ["round-ten", 86],
+      ["round-ten", 65],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);
