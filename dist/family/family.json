@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how animals get ready for winter",
-        "why": "Following how frogs, chipmunks, bees, voles and hares get through winter helps your child explain how a body or a home can hold on to heat or survive the cold.",
-        "date": "2026-11-02",
+        "topic": "fingerprints up close",
+        "why": "Looking at fingerprint patterns, how ridges form and how hidden prints show up helps your child compare patterns and explain evidence.",
+        "date": "2026-11-03",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

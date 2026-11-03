@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "fingerprints-2026-11-03",
+      "band": "6-8",
+      "topic": "fingerprints up close",
+      "why": "Looking at fingerprint patterns, how ridges form and how hidden prints show up helps your child compare patterns and explain evidence.",
+      "skills": [
+        "compare",
+        "round-ten",
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures"
+      ],
+      "date": "2026-11-03",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-animals-get-ready-for-winter",
       "band": "6-8",
       "topic": "how animals get ready for winter",

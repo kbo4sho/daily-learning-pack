@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-animals-get-ready-for-winter",
-  "topic": "how animals get ready for winter",
-  "why": "Following how frogs, chipmunks, bees, voles and hares get through winter helps your child explain how a body or a home can hold on to heat or survive the cold.",
-  "teaser": "Meet a frog that freezes, a chipmunk that cools down, bees that shiver and voles that live under the snow.",
+  "slug": "fingerprints-2026-11-03",
+  "topic": "fingerprints up close",
+  "why": "Looking at fingerprint patterns, how ridges form and how hidden prints show up helps your child compare patterns and explain evidence.",
+  "teaser": "Find loops, whorls and arches, then go deeper: prints made before birth, koala prints, and wrinkly bath fingers.",
   "aliases": [
-    "animals in winter",
-    "winter animals",
-    "hibernation"
+    "fingerprints deep dive",
+    "finger ridges",
+    "how fingerprints form"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "groups-and-arrays",
+  "mathTemplate": "compare-and-round",
   "tags": {
     "band": "6-8",
     "skills": [
-      "equal-groups",
-      "array",
+      "compare",
+      "round-ten",
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures"
@@ -30,539 +30,550 @@
   ],
   "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "How Animals Get Ready for Winter",
-  "question": "How do animals stay alive through a cold winter?",
-  "idea": "Animals use different plans for winter: some hide food, some survive freezing with sugar or glycerol, some let their bodies cool down to save energy, some make heat by shivering, and some live under a snow blanket.",
+  "title": "Fingerprints Up Close",
+  "question": "What are fingerprints, and why do we have them?",
+  "idea": "Fingertips have tiny ridges that leave a pattern of sweat and oil. The pattern forms before birth, may help us feel fine textures, and no two have ever been found to match.",
   "curiosity": {
-    "intro": "Start with one cold woods. Find the animals that stay, and look at the plan each one uses.",
-    "carryForward": "Look for the plan: hide food, freeze safely, cool down, make heat, or stay under the snow.",
+    "intro": "Start with the basics: three patterns and a hidden print. Then go deep into how ridges form and what they might do.",
+    "carryForward": "Look for the pattern, then look closer for the tiny ridge details.",
     "questions": [
       {
-        "id": "freeze",
+        "id": "patterns",
         "plate": "reach",
-        "question": "How can a wood frog freeze and live?",
-        "notice": "Find the small frog tucked under the fallen leaves, and the fuzzy banded caterpillar resting on a leaf nearby.",
-        "say": "When a wood frog starts to freeze, its liver pours out a sugar called glucose. Ice forms in its body, but outside its cells, and the glucose helps protect the cells. When the frog thaws, its heart is the first part to start again.",
-        "try": "Draw a big circle for one frog cell. Draw ice crystals only outside the circle. Draw sugar dots near the cell. Tell how the sugar helps keep the cell safe while ice forms around it."
+        "question": "Is your print a loop, a whorl or an arch?",
+        "notice": "Find the three prints. One has ridges that curve back, one has a circle, and one has a small hill in the middle.",
+        "say": "A loop has ridges that come in and curve back out the same side. A whorl has circles or a spiral. An arch has ridges that flow across with a bump in the middle. Loops are the most common, and arches are the rarest.",
+        "try": "Rub a pencil hard on paper to make a dark gray patch. Press one fingertip on it. Press clear tape on your fingertip, peel it off, and stick it on white paper. Is your print a loop, a whorl or an arch?"
       },
       {
-        "id": "cool",
+        "id": "ridges",
         "plate": "change",
-        "question": "How does a chipmunk save energy all winter?",
-        "notice": "Find the chipmunk curled up tight in a nest of leaves under the snowy ground.",
-        "say": "A chipmunk is a small hibernator. Its body gets much colder on purpose. This is called torpor, and it saves energy. For most small hibernators like this one, hibernation is many long torpor stretches in a row, with short warm-ups between them. To help warm back up, many mammal hibernators burn a special fat called brown fat.",
-        "try": "Sit very still and count your breaths for 30 seconds. Then march in place for 30 seconds and count again. Tell which time used more energy. In torpor, an animal slows its body way down to save energy."
+        "question": "What tiny details are inside a print?",
+        "notice": "Find a ridge that stops, and a ridge that splits in two. Look for the tiny dots along the top of the ridges.",
+        "say": "Sweat pores sit in a row along the top of each ridge. Experts look at minutiae, the tiny places where a ridge ends or splits in two. A split is called a bifurcation. They compare these points, not just the pattern. Very rarely, a change in a gene called SMARCAD1 means a person is born with no fingerprints at all.",
+        "try": "Look at your tape print with a magnifying glass if you have one. Find one place where a ridge ends. Then find one place where a ridge splits in two."
       },
       {
-        "id": "cluster",
+        "id": "koala",
         "plate": "notice",
-        "question": "How do honeybees stay warm without hibernating?",
-        "notice": "Look at the round ball of bees on the comb. Find the bees on the outside and the bees packed in the middle.",
-        "say": "Honeybees do not hibernate. They pack into a ball called a winter cluster. The outside bees make a blanket. The inside bees shiver their flight muscles without moving their wings, which makes heat. When there are no baby bees in the hive, the middle of the cluster is kept above about 64 degrees Fahrenheit.",
-        "try": "Fill two jars with warm tap water and close the lids. Wrap one jar in a thick towel or some socks, like the outside bees. Leave the other jar bare. Wait 20 minutes, then touch both jars and tell which one stayed warmer."
+        "question": "Why does a koala have fingerprints?",
+        "notice": "Look at the koala's hand holding the branch. Find the tips of its fingers.",
+        "say": "Koala prints look very much like ours. But koalas are only distantly related to us, and their cousins, wombats and kangaroos, do not have prints. Scientists think prints formed separately in both because both grip and handle things.",
+        "try": "Draw a koala hand holding a branch. Then trace your own hand next to it. Tell one way they are alike."
       },
       {
-        "id": "snow",
-        "plate": "return",
-        "question": "Why can a mouse stay warmer under the snow?",
-        "notice": "Find the tunnel along the ground under the snow, the mouse inside it, and the small hole that reaches up to the air.",
-        "say": "The space between the ground and the snow is called the subnivean zone. About six inches of snow works like a blanket, so this space stays near 32 degrees Fahrenheit even when the air above is much colder. Voles and mice tunnel and eat there, and small air holes let carbon dioxide out.",
-        "try": "Put two kitchen thermometers in the freezer. Bury one in a thick pile of cotton balls, like a snow blanket. Leave the other one bare. After 20 minutes, read both and tell which one is warmer."
+        "id": "wrinkles",
+        "plate": "keep",
+        "question": "Why do fingers get wrinkly in the bath?",
+        "notice": "Find the two bowls, the wet marbles, and the bowl of water.",
+        "say": "Wrinkly bath fingers are not just skin soaking up water. Your nerves control them. Tiny blood vessels under the skin get narrower, and the skin puckers. Scientists think wrinkles might help us grip wet things, but studies disagree, so for now we say maybe.",
+        "try": "Time how fast you move wet marbles from one bowl to another with dry fingers. Soak your hands in warm water until they wrinkle, then try again. This is a fun try, not proof."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-animals-get-ready-for-winter/01-woods.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/01-woods.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/01-woods-fold.jpg",
-      "title": "A cold woods",
-      "alt": "Big and Little Wonderer stand at the edge of a quiet late-fall woods with a light dusting of snow, watching a small chickadee tuck a seed into the bark of a tree.",
-      "caption": "Winter is coming. Every animal here needs a plan."
+      "src": "assets/fingerprints-2026-11-03/01-glass.jpg",
+      "original": "assets/fingerprints-2026-11-03/01-glass.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/01-glass-fold.jpg",
+      "title": "A hidden print",
+      "alt": "Big and Little Wonderer stand at a sunny kitchen table and look closely at a clear drinking glass with one faint fingerprint on its side.",
+      "caption": "Every touch can leave a hidden print."
     },
     {
       "id": "reach",
-      "src": "assets/how-animals-get-ready-for-winter/02-frog.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/02-frog.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/02-frog-fold.jpg",
-      "title": "Freeze and wait",
-      "alt": "A small brown wood frog rests under a layer of fallen leaves on the forest floor, with a fuzzy black-and-brown woolly bear caterpillar resting on a leaf nearby.",
-      "caption": "A wood frog and a woolly bear can both freeze and live."
+      "src": "assets/fingerprints-2026-11-03/02-patterns.jpg",
+      "original": "assets/fingerprints-2026-11-03/02-patterns.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/02-patterns-fold.jpg",
+      "title": "Three patterns",
+      "alt": "Three gray fingerprints on a sheet of paper on a wooden table: a loop with ridges that curve back, a whorl with circles, and an arch with a small hill in the middle.",
+      "caption": "A loop, a whorl and an arch."
     },
     {
       "id": "change",
-      "src": "assets/how-animals-get-ready-for-winter/03-burrow.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/03-burrow.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/03-burrow-fold.jpg",
-      "title": "Cool and slow",
-      "alt": "A cutaway of the ground shows a chipmunk curled into a tight ball in a leaf nest under the snowy ground.",
-      "caption": "A chipmunk saves energy by letting its body cool down."
+      "src": "assets/fingerprints-2026-11-03/03-ridges.jpg",
+      "original": "assets/fingerprints-2026-11-03/03-ridges.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/03-ridges-fold.jpg",
+      "title": "Ridges up close",
+      "alt": "A very close look at fingertip skin shows curved ridges with tiny pores along their tops, one ridge that ends and one ridge that splits in two.",
+      "caption": "Up close, ridges end, split and carry tiny pores."
     },
     {
       "id": "notice",
-      "src": "assets/how-animals-get-ready-for-winter/04-bees.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/04-bees.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/04-bees-fold.jpg",
-      "title": "Shiver and huddle",
-      "alt": "A cutaway of a wooden beehive shows honeybees packed into one round ball on the honeycomb.",
-      "caption": "Honeybees huddle in a ball and shiver to make heat."
+      "src": "assets/fingerprints-2026-11-03/04-koala.jpg",
+      "original": "assets/fingerprints-2026-11-03/04-koala.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/04-koala-fold.jpg",
+      "title": "Koala prints",
+      "alt": "A koala sits in a eucalyptus tree and grips a branch with its hand, showing the pads of its fingers.",
+      "caption": "Koalas have prints that look very much like ours."
     },
     {
       "id": "return",
-      "src": "assets/how-animals-get-ready-for-winter/05-snow.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/05-snow.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/05-snow-fold.jpg",
-      "title": "Under the snow",
-      "alt": "Big and Little Wonderer kneel on a snowy meadow beside a small air hole, above a cutaway showing a small mouse in a tunnel along the ground beneath the snow.",
-      "caption": "The space under a thick snow blanket stays near freezing, not far below it."
+      "src": "assets/fingerprints-2026-11-03/05-tape.jpg",
+      "original": "assets/fingerprints-2026-11-03/05-tape.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/05-tape-fold.jpg",
+      "title": "A safe print lift",
+      "alt": "Big and Little Wonderer sit at a table beside a pencil-shaded paper patch, a roll of clear tape and a white card with one gray fingerprint stuck on it.",
+      "caption": "A pencil patch and tape make a print you can see."
     },
     {
       "id": "keep",
-      "src": "assets/how-animals-get-ready-for-winter/06-hare.jpg",
-      "original": "assets/how-animals-get-ready-for-winter/06-hare.png",
-      "foldSrc": "assets/how-animals-get-ready-for-winter/06-hare-fold.jpg",
-      "title": "A white coat",
-      "alt": "A white snowshoe hare sits on brown fallen leaves at the edge of a woods, with only small patches of snow around it.",
-      "caption": "A hare's coat may turn white before the snow comes."
+      "src": "assets/fingerprints-2026-11-03/06-marbles.jpg",
+      "original": "assets/fingerprints-2026-11-03/06-marbles.png",
+      "foldSrc": "assets/fingerprints-2026-11-03/06-marbles-fold.jpg",
+      "title": "Wet marbles",
+      "alt": "Two bowls on a table, one full of wet glass marbles and one empty, beside a small bowl of water.",
+      "caption": "Maybe wrinkly fingers help hold wet things."
     }
   ],
   "reading": {
-    "title": "Six winter plans",
+    "title": "Fingerprints, then deeper",
     "coverPlate": "wake",
-    "coverText": "Follow the animals of one cold woods and the plan each one uses to get through winter.",
-    "parentNote": "Age 8. Welcome spoken answers, pointing, drawing, and dictation; the plates show the ideas rather than exact measurements.",
-    "foldableTitle": "A little book of winter plans",
-    "foldableCoverLine": "Ready for Winter",
-    "foldableNote": "Carry six winter plans in a small book.",
+    "coverText": "Start with three patterns and a hidden print. Then go deep: prints before birth, koala prints and wrinkly fingers.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "foldableTitle": "A little book of fingerprints",
+    "foldableCoverLine": "Fingerprints Up Close",
+    "foldableNote": "Carry six fingerprint clues in a small book.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A cold woods",
-        "passage": "Big and Little walked to the edge of the woods. The days were getting short. A chickadee tucked a seed into a crack in the bark, then flew to another tree. Big said chickadees hide food in many spots in fall. They use a part of the brain called the hippocampus to find those spots again later.",
-        "prompt": "Why might a chickadee hide its seeds in many different places?",
+        "title": "A hidden print",
+        "passage": "Little held up a glass. \"I don't see anything,\" Little said. Big tipped it to the light. A faint print showed up. Your fingertips have tiny ridges. The ridges carry a thin film of sweat and oil. When you touch something, the film copies the ridge pattern. Most prints are latent, which means hidden until someone makes them show.",
+        "prompt": "Why can a fingertip leave a print on a glass?",
         "foldable": {
-          "heading": "A cold woods",
-          "body": "A chickadee hides seeds in many spots in fall. It uses a brain part called the hippocampus to find them again."
+          "heading": "A hidden print",
+          "body": "Tiny ridges carry sweat and oil. A touch copies their pattern, even when you cannot see it."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Freeze and wait",
-        "passage": "Under the leaves, a wood frog freezes. Ice forms in its body, but outside its cells. Its liver pours out glucose, a kind of sugar, that helps protect the cells. A woolly bear caterpillar makes glycerol, an antifreeze-like protectant. In a lab test, caterpillars cooled slowly for weeks moved again after a week frozen at about -4 degrees Fahrenheit.",
-        "prompt": "What does the sugar do for a wood frog as it freezes?",
+        "title": "Three patterns",
+        "passage": "Most prints belong to one of three pattern families. In a loop, ridges come in and curve back out the same side. In a whorl, ridges make circles or a spiral. In an arch, ridges flow across with a bump in the middle. Loops are the most common. Arches are the rarest. No two prints have ever been found to match, not even on identical twins.",
+        "prompt": "How is a loop different from an arch?",
         "foldable": {
-          "heading": "Freeze and wait",
-          "body": "A wood frog freezes, but the ice stays outside its cells. Sugar from its liver helps keep the cells safe."
+          "heading": "Three patterns",
+          "body": "Loops curve back. Whorls make circles. Arches flow across with a bump. No two have ever been found to match."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Cool and slow",
-        "passage": "In winter, a chipmunk's body gets much colder on purpose. This is called torpor, and it saves energy. For most small hibernators, hibernation is many long torpor stretches with short warm-ups between them. Many mammal hibernators burn brown fat, a special fat that makes heat, to warm back up. A bear is different. It cools only a few degrees.",
-        "prompt": "How does getting colder help a chipmunk save energy?",
+        "title": "Made before birth",
+        "passage": "Prints form before a baby is born. At about 7 to 8 weeks of growing, puffy pads appear on the fingertips. At about 10 to 11 weeks, ridges start to form. By about 15 to 17 weeks, the pattern is set. Twins get different prints because each fingertip grows in its own tiny way. After that, the pattern normally just grows bigger and keeps its shape, though a deep cut or some skin diseases can leave a scar.",
+        "prompt": "Why do identical twins have different prints?",
         "foldable": {
-          "heading": "Cool and slow",
-          "body": "A chipmunk lets its body get cold to save energy. Many mammal hibernators burn brown fat to warm up."
+          "heading": "Made before birth",
+          "body": "Prints form before birth. Each fingertip grows in its own tiny way, so even twins differ."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Shiver and huddle",
-        "passage": "Honeybees do not hibernate. In winter they pack together into one ball called a cluster. The bees on the outside make a living blanket. The bees in the middle shiver their flight muscles without moving their wings. That shivering makes heat. When there are no baby bees, the middle stays warmer than about 64 degrees Fahrenheit.",
-        "prompt": "Why do the outside bees and the inside bees have different jobs?",
+        "title": "Koala prints",
+        "passage": "Koalas have prints that look very much like ours. Koalas are only distantly related to us, and their cousins, wombats and kangaroos, have none. Scientists think prints formed separately in both because both grip things. What are ridges for? In one lab test, ridges made the shakes from rubbing a fine texture much stronger. So scientists think ridges help us feel fine textures.",
+        "prompt": "Why do scientists think both koalas and people have prints?",
         "foldable": {
-          "heading": "Shiver and huddle",
-          "body": "Bees pack into a ball. Outside bees make a blanket. Inside bees shiver their flight muscles to make heat."
+          "heading": "Koala prints",
+          "body": "Koalas and people both grip things. Scientists think ridges may help us feel fine textures."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Under the snow",
-        "passage": "Little found a tiny hole in the snow. Big said it was an air hole. Under the snow, voles and mice dig tunnels along the ground. This space is called the subnivean zone. About six inches of snow works like a blanket, so it stays near 32 degrees Fahrenheit there, even when the air above is much colder. The air holes let carbon dioxide out.",
-        "prompt": "Why is it warmer under the snow than in the air above it?",
+        "title": "A safe print lift",
+        "passage": "Detectives make hidden prints show up in a lab. They dust powder, use a chemical called ninhydrin that turns prints purple, or use superglue fumes. Those are jobs for trained lab workers, not for kids. Little and Big made a safe one. They rubbed a pencil on paper, pressed a fingertip on it, and lifted the print with clear tape. Big found a spot where a ridge split in two.",
+        "prompt": "How did Little and Big make a print show up safely?",
         "foldable": {
-          "heading": "Under the snow",
-          "body": "Under the snow, mice tunnel and eat. A thick snow blanket keeps their space near freezing, not far below it."
+          "heading": "A safe print lift",
+          "body": "Detective tools are for trained lab workers. A pencil patch and clear tape make a safe print."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "A white coat",
-        "passage": "In snowy places, most snowshoe hares grow a white coat in fall. In one study, the change started on about the same dates every year, snow or no snow. Scientists think the length of the day is the main trigger. The change takes about 40 days. So when snow comes late, a white hare can end up sitting on brown leaves.",
-        "prompt": "Why might a white hare be easy to spot when snow comes late?",
+        "title": "Wrinkly fingers",
+        "passage": "After a long bath, fingers get wrinkly. Your nerves cause it. Blood vessels under the skin get narrower, and the skin puckers. Fingers with cut nerves do not wrinkle. Maybe the wrinkles help us grip wet things, like treads on a tire. One study found people moved wet marbles faster with wrinkly fingers. Another found no difference. So for now, we say maybe.",
+        "prompt": "Why is the answer about wrinkly fingers still maybe?",
         "foldable": {
-          "heading": "A white coat",
-          "body": "In snowy places, most snowshoe hares turn white in fall. Scientists think day length starts it, even if snow is late."
+          "heading": "Wrinkly fingers",
+          "body": "Nerves make bath fingers wrinkle. Maybe wrinkles help grip wet things. Scientists are still checking."
         }
       }
     ],
     "words": [
       {
-        "word": "hippocampus",
-        "meaning": "a brain area chickadees use to find their hidden food"
+        "word": "ridge",
+        "meaning": "a tiny raised line of skin on your fingertip"
       },
       {
-        "word": "glycerol",
-        "meaning": "an antifreeze-like protectant a woolly bear makes"
+        "word": "latent",
+        "meaning": "hidden until someone makes it show"
       },
       {
-        "word": "glucose",
-        "meaning": "a kind of sugar that a wood frog's liver sends out to protect its cells"
+        "word": "whorl",
+        "meaning": "a print pattern with circles or a spiral"
       },
       {
-        "word": "torpor",
-        "meaning": "a time when an animal lets its body get cold and slow to save energy"
+        "word": "pore",
+        "meaning": "a tiny opening in the skin where sweat comes out"
       },
       {
-        "word": "hibernation",
-        "meaning": "in most small mammal hibernators, long torpor stretches with short warm-ups"
+        "word": "bifurcation",
+        "meaning": "a place where one ridge splits in two"
       },
       {
-        "word": "brown fat",
-        "meaning": "a special fat in some mammals that burns fuel to make heat"
-      },
-      {
-        "word": "cluster",
-        "meaning": "a tight ball of honeybees that keeps the middle warm"
-      },
-      {
-        "word": "subnivean zone",
-        "meaning": "the space between the ground and the snow above it"
+        "word": "minutiae",
+        "meaning": "tiny places where a ridge ends or splits"
       }
     ],
     "questions": [
-      "How does a wood frog stay alive when ice forms in its body?",
-      "How are a chipmunk's plan and a honeybee's plan for staying alive different?",
-      "Why is the space under the snow warmer than the air, and why can a white hare end up on brown leaves?"
+      "Why can a fingertip leave a hidden print on a glass?",
+      "How do fingerprints form, and why do identical twins still have different prints?",
+      "What might ridges and wrinkly fingers help us do, and why do scientists say maybe?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Pick one animal. Write one sentence that tells its winter plan.",
-      "example": "Example: Honeybees huddle in a ball, so the bees in the middle stay warm."
+      "prompt": "Make a pencil-and-tape print. Write one sentence about its pattern.",
+      "example": "Example: My print is a loop because the ridges curve back out the same side."
     }
   },
   "math": {
-    "title": "Winter groups and arrays",
-    "plate": "notice",
-    "intro": "Use repeated addition to count equal groups and rows. These numbers are for a math story.",
-    "eyebrow": "SIX WINTER COUNTS",
-    "actionLabel": "Add the equal groups",
+    "title": "Fingerprint counts",
+    "plate": "reach",
+    "intro": "Compare and round pretend counts from a fingerprint notebook.",
+    "eyebrow": "SIX FINGERPRINT COUNTS",
+    "actionLabel": "Compare, then round",
     "tasks": [
       {
-        "skill": "equal-groups",
-        "rows": 3,
-        "columns": 4,
-        "prompt": "A chickadee hides 4 seeds in each of 3 trees. How many seeds does it hide altogether?",
-        "equation": "4 + 4 + 4 =",
-        "hint": "Add the equal groups: 4 + 4 + 4.",
-        "answer": 12,
-        "worked": "4 + 4 + 4 = 12, so there are 12 seeds.",
-        "plate": "wake",
+        "skill": "compare",
+        "operands": [
+          38,
+          52
+        ],
+        "symbol": "<",
+        "prompt": "Little counts 38 ridges on one print and 52 ridges on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "38 ○ 52",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 52,
+        "worked": "38 < 52. Compare the tens first, so the greater count is 52.",
+        "plate": "reach",
         "label": "TASK 1"
       },
       {
-        "skill": "array",
-        "rows": 2,
-        "columns": 5,
-        "prompt": "Little lines up pinecones in 2 rows with 5 pinecones in each row. How many pinecones are there altogether?",
-        "equation": "5 + 5 =",
-        "hint": "Add the equal groups: 5 + 5.",
-        "answer": 10,
-        "worked": "5 + 5 = 10, so there are 10 pinecones.",
+        "skill": "compare",
+        "operands": [
+          71,
+          67
+        ],
+        "symbol": ">",
+        "prompt": "Big presses 71 prints on one page and 67 prints on the next page. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "71 ○ 67",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 71,
+        "worked": "71 > 67. Compare the tens first, so the greater count is 71.",
         "plate": "wake",
         "label": "TASK 2"
       },
       {
-        "skill": "equal-groups",
-        "rows": 4,
-        "columns": 4,
-        "prompt": "Big draws 4 sleeping chipmunks with 4 leaves on each one. How many leaves is that altogether?",
-        "equation": "4 + 4 + 4 + 4 =",
-        "hint": "Add the equal groups: 4 + 4 + 4 + 4.",
-        "answer": 16,
-        "worked": "4 + 4 + 4 + 4 = 16, so there are 16 leaves.",
+        "skill": "compare",
+        "operands": [
+          45,
+          45
+        ],
+        "symbol": "=",
+        "prompt": "Little finds 45 pores on one strip of tape and 45 pores on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "45 ○ 45",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 45,
+        "worked": "45 = 45. Both counts match, so the shared count is 45.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "array",
-        "rows": 5,
-        "columns": 5,
-        "prompt": "Big draws bees on a cluster in 5 rows with 5 bees in each row. How many bees are drawn altogether?",
-        "equation": "5 + 5 + 5 + 5 + 5 =",
-        "hint": "Add the equal groups: 5 + 5 + 5 + 5 + 5.",
-        "answer": 25,
-        "worked": "5 + 5 + 5 + 5 + 5 = 25, so there are 25 bees.",
-        "plate": "notice",
+        "skill": "round-ten",
+        "operands": [
+          34
+        ],
+        "prompt": "Big counts 34 ridge endings on a big drawing. What is 34 rounded to the nearest ten?",
+        "equation": "34 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 30,
+        "worked": "34 has 4 ones, so round down to 30.",
+        "plate": "change",
         "label": "TASK 4"
       },
       {
-        "skill": "equal-groups",
-        "rows": 4,
-        "columns": 2,
-        "prompt": "There are 4 vole tunnels under the snow, and each tunnel has 2 air holes. How many air holes are there altogether?",
-        "equation": "2 + 2 + 2 + 2 =",
-        "hint": "Add the equal groups: 2 + 2 + 2 + 2.",
-        "answer": 8,
-        "worked": "2 + 2 + 2 + 2 = 8, so there are 8 air holes.",
-        "plate": "return",
+        "skill": "round-ten",
+        "operands": [
+          86
+        ],
+        "prompt": "Little draws 86 tiny pore dots. What is 86 rounded to the nearest ten?",
+        "equation": "86 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 90,
+        "worked": "86 has 6 ones, so round up to 90.",
+        "plate": "change",
         "label": "TASK 5"
       },
       {
-        "skill": "array",
-        "rows": 3,
-        "columns": 5,
-        "prompt": "Little finds hare tracks in 3 rows with 5 tracks in each row. How many tracks are there altogether?",
-        "equation": "5 + 5 + 5 =",
-        "hint": "Add the equal groups: 5 + 5 + 5.",
-        "answer": 15,
-        "worked": "5 + 5 + 5 = 15, so there are 15 tracks.",
+        "skill": "round-ten",
+        "operands": [
+          65
+        ],
+        "prompt": "Big moves 65 wet marbles in a long game. What is 65 rounded to the nearest ten?",
+        "equation": "65 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 70,
+        "worked": "65 has 5 ones, so round up to 70.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one problem and draw it as rows of dots. Count the dots to check.",
+    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Six equal-group and array problems use rows and columns from 2 to 5 and repeated addition. The numbers are for practice, not real animal counts.",
-    "answerKeyIntro": "Add the same number once for each group or row. Welcome a drawing of dots as an explanation."
+    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real fingerprint counts.",
+    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
   },
   "writing": {
-    "title": "Explain a winter plan in your words",
-    "intro": "Choose one animal. Say your idea first, then draw or write it.",
+    "title": "Explain a fingerprint clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
-      "notice",
-      "return"
+      "change",
+      "keep"
     ],
-    "draw": "Draw one animal in its winter place and show how it stays alive.",
-    "starter": "My winter plan clue",
+    "draw": "Draw your own fingerprint big. Mark one place where a ridge ends or splits.",
+    "starter": "My fingerprint clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "A wood frog can freeze and live because",
-        "hint": "what does the sugar do?"
+        "start": "My print is a loop, whorl or arch because",
+        "hint": "how do the ridges flow?"
       },
       {
-        "plate": "notice",
-        "start": "The bees in the middle stay warm because",
-        "hint": "what do the inside bees do?"
+        "plate": "change",
+        "start": "Twins have different prints because",
+        "hint": "how does each fingertip grow?"
       },
       {
-        "plate": "return",
-        "start": "A mouse stays warmer under the snow because",
-        "hint": "what does the snow do?"
+        "plate": "keep",
+        "start": "Wrinkly fingers might help because",
+        "hint": "what might they grip?"
       }
     ],
     "words": [
-      "glucose",
-      "cluster",
-      "subnivean zone",
-      "insulate",
+      "ridge",
+      "loop",
+      "whorl",
+      "arch",
       "because",
-      "so"
+      "maybe"
     ],
-    "check": "Does your sentence tell what the animal does and use because or so to explain why?",
-    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite them to add a picture, label, or sentence."
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Ice forms in the frog's body but outside its cells, and glucose (sugar) from its liver helps protect the cells. When it thaws, its heart starts first."
+      "text": "Ridges carry a thin film of sweat and oil, and a touch copies the ridge pattern onto the glass. Most prints are latent, or hidden."
     },
     {
       "label": "Reading · 2",
-      "text": "A chipmunk saves energy by letting its body get cold in torpor, with short warm-ups; many mammal hibernators use brown fat to warm back up. Honeybees do not hibernate: they huddle in a cluster and the inside bees shiver their flight muscles."
+      "text": "Prints form before birth (pads at about 7 to 8 weeks, ridges at about 10 to 11, set by about 15 to 17). Each fingertip grows in its own tiny way, so twins differ."
     },
     {
       "label": "Reading · 3",
-      "text": "About six inches of snow works like a blanket, so the space under it stays near 32 degrees Fahrenheit. Scientists think day length starts a hare's coat change, so if snow comes late, a white hare can sit on brown leaves."
+      "text": "Scientists think ridges help us feel fine textures, and maybe wrinkles help grip wet things. Studies on wrinkles disagree, so for now we say maybe."
     },
     {
       "label": "Writing",
-      "text": "Accept a spoken, dictated, drawn, or written sentence that tells how one animal gets through winter."
+      "text": "Accept a spoken, dictated, drawn, or written sentence about one fingerprint clue."
     }
   ],
-  "parentGuidance": "Wood frogs: ice forms outside cells while liver glucose protects them; on thawing the heart returns first. Chickadees cache food and use the hippocampus to find it; one study found more new neurons there in fall, but later studies disagree and the cells seem to replace old ones, so we never say they grow bigger brains. In most small mammal hibernators, hibernation is long torpor bouts with brief rewarming, often fuelled by brown fat; a bear cools only a few degrees. With no brood, honeybee clusters keep the core above about 64 F. Day length is thought to trigger the hare molt (about 40 days). About 6 in of snow keeps the subnivean zone near 32 F. Woolly bears make glycerol; we skip the stripe folklore. Watch wildlife from a distance; use warm, not hot, water.",
+  "parentGuidance": "No two prints have ever been found to match (not a proof). Weeks count from when growth starts (pregnancy weeks run about 2 higher). Twins differ because each fingertip pad grows differently. Scientists think ridges help us feel fine textures; the grip idea is unsettled. Adermatoglyphia, a very rare SMARCAD1 change, means no prints from birth. Powder, ninhydrin and superglue fuming are adult lab work only; kids use pencil graphite and tape. Stay nearby for the wet-marble try and use warm, not hot, water.",
   "sources": [
     {
-      "label": "Costanzo et al. 1993, J Exp Biol: wood frog freeze tolerance",
-      "url": "https://doi.org/10.1242/jeb.181.1.245"
+      "label": "NIJ Fingerprint Sourcebook ch. 2: friction ridge skin",
+      "url": "https://www.ojp.gov/pdffiles1/nij/225322.pdf"
     },
     {
-      "label": "Storey & Storey 1986, Can J Zool: freeze tolerance and glucose",
-      "url": "https://doi.org/10.1139/z86-008"
+      "label": "NIJ Fingerprint Sourcebook ch. 3: embryology",
+      "url": "https://www.ojp.gov/pdffiles1/nij/225323.pdf"
     },
     {
-      "label": "Layne et al. 1989, Am J Physiol: wood frog heart during freezing",
-      "url": "https://doi.org/10.1152/ajpregu.1989.257.5.r1046"
+      "label": "NIJ Fingerprint Sourcebook ch. 5: classification",
+      "url": "https://www.ojp.gov/pdffiles1/nij/225325.pdf"
     },
     {
-      "label": "Layne & First 1991: recovery after thawing",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/1858939/"
+      "label": "NIJ Fingerprint Sourcebook ch. 7: latent print development",
+      "url": "https://www.ojp.gov/pdffiles1/nij/225327.pdf"
     },
     {
-      "label": "Barnea & Nottebohm 1994, PNAS: chickadee hippocampus",
-      "url": "https://doi.org/10.1073/pnas.91.23.11217"
+      "label": "NIJ Fingerprint Sourcebook ch. 9: examination process",
+      "url": "https://www.ojp.gov/pdffiles1/nij/225329.pdf"
     },
     {
-      "label": "Sherry & Hoshooley 2010, Phil Trans R Soc B: seasonal hippocampus",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2830249/"
+      "label": "FBI, The Science of Fingerprints",
+      "url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/science-fingerprints-classification-and-uses"
     },
     {
-      "label": "Pravosudov review (NSF PAR): food caching and memory",
-      "url": "https://par.nsf.gov/servlets/purl/10388983"
+      "label": "Jain, Prabhakar & Pankanti 2002: twin fingerprints",
+      "url": "https://doi.org/10.1016/S0031-3203(01)00218-7"
     },
     {
-      "label": "Open University OpenLearn: hibernation and torpor",
-      "url": "https://www.open.edu/openlearn/nature-environment/natural-history/animals-the-extremes-hibernation-and-torpor/content-section-2.1"
+      "label": "Glover et al. 2023, Cell: ridge-forming signals",
+      "url": "https://doi.org/10.1016/j.cell.2023.01.015"
     },
     {
-      "label": "Geiser, University of New England: torpor",
-      "url": "https://www.une.edu.au/staff-profiles/ers/fgeiser/Geiser_BehaviourTorpor-EncycBehav2019.pdf"
+      "label": "Scheibert et al. 2009, Science: ridges and touch",
+      "url": "https://doi.org/10.1126/science.1166467"
     },
     {
-      "label": "van Breukelen & Martin 2015, Physiology: hibernation",
-      "url": "https://journals.physiology.org/doi/full/10.1152/physiol.00010.2015"
+      "label": "Warman & Ennos 2009, J Exp Biol: fingerprints and friction",
+      "url": "https://doi.org/10.1242/jeb.028977"
     },
     {
-      "label": "Cannon & Nedergaard 2004, Physiol Rev: brown fat",
-      "url": "https://doi.org/10.1152/physrev.00015.2003"
+      "label": "Henneberg, Lambert & Leigh 1997: koala fingerprints",
+      "url": "http://hdl.handle.net/2440/5433"
     },
     {
-      "label": "Stabentheiner et al. 2003, J Exp Biol: honeybee winter cluster",
-      "url": "https://doi.org/10.1242/jeb.00082"
+      "label": "PBS NOVA: koala fingerprints",
+      "url": "https://www.pbs.org/wgbh/nova/article/koala-fingerprints/"
     },
     {
-      "label": "Stabentheiner et al. 2021, J Comp Physiol A: winter cluster heat",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8079341/"
+      "label": "Snopes: koala fingerprint fact-check",
+      "url": "https://www.snopes.com/fact-check/koala-fingerprints-crime-scene/"
     },
     {
-      "label": "Mills et al. 2013, PNAS: snowshoe hare molt timing",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3645584/"
+      "label": "Nousbeck et al. 2011, Am J Hum Genet: SMARCAD1",
+      "url": "https://doi.org/10.1016/j.ajhg.2011.07.004"
     },
     {
-      "label": "Jones et al. 2018, Science: winter-brown hares",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29930138/"
+      "label": "MedlinePlus Genetics: adermatoglyphia",
+      "url": "https://medlineplus.gov/genetics/condition/adermatoglyphia/"
     },
     {
-      "label": "National Park Service: Snug in the Snow",
-      "url": "https://www.nps.gov/teachers/classrooms/snug-in-the-snow.htm"
+      "label": "Wilder-Smith & Chow 2003, Muscle Nerve: water wrinkling",
+      "url": "https://doi.org/10.1002/mus.10323"
     },
     {
-      "label": "Idaho Fish and Game: the subnivean zone",
-      "url": "https://idfg.idaho.gov/sites/default/files/wildlife-express-subnivean-224.pdf"
+      "label": "Changizi et al. 2011: wrinkles as treads",
+      "url": "https://doi.org/10.1159/000328223"
     },
     {
-      "label": "Montana FWP: life under the snow",
-      "url": "https://fwp.mt.gov/binaries/content/assets/fwp/montana-outdoors/2024/subnivean.pdf"
+      "label": "Kareklas, Nettle & Smulders 2013, Biol Lett: wet objects",
+      "url": "https://doi.org/10.1098/rsbl.2012.0999"
     },
     {
-      "label": "Yi & Lee 2016, J Exp Biol: woolly bear freeze tolerance",
-      "url": "https://doi.org/10.1242/jeb.124875"
+      "label": "Haseleu et al. 2014, PLOS ONE: no grip difference",
+      "url": "https://doi.org/10.1371/journal.pone.0084949"
+    },
+    {
+      "label": "UK Home Office: Fingermark Visualisation Source Book",
+      "url": "https://www.gov.uk/government/publications/fingermark-visualisation-source-book"
     }
   ],
   "screenFree": [
-    "lab-page"
+    "quiz-cards"
   ],
-  "titleCard": {
-    "plate": "wake",
-    "edition": "WINTER · 2026-11-02",
-    "subtitle": "Hide. Freeze. Cool. Shiver. Tunnel. Change."
-  },
-  "labPage": {
-    "materials": [
-      "Paper and crayons",
-      "A timer",
-      "A freezer",
-      "Two jars with lids",
-      "Warm tap water",
-      "A thick towel or socks",
-      "Two kitchen thermometers",
-      "A bag of cotton balls",
-      "Paper and pencil"
-    ]
-  },
   "quiz": {
-    "title": "Four winter clues",
-    "intro": "Follow the frog, the chipmunk, the bees and the snow.",
+    "title": "Four fingerprint clues",
+    "intro": "Patterns, ridges, koalas and wrinkles.",
     "questions": [
       {
-        "id": "frog",
-        "prompt": "What protects a frog's cells?",
+        "id": "rare",
+        "prompt": "Which pattern is rarest?",
         "choices": [
-          "Sugar from its liver",
-          "A coat of fur",
-          "Warm mud"
-        ],
-        "answerIndex": 0,
-        "answer": "Glucose, a sugar from the frog's liver, helps protect its cells while ice forms outside them."
-      },
-      {
-        "id": "torpor",
-        "prompt": "Why does a chipmunk cool down?",
-        "choices": [
-          "To grow bigger",
-          "To save energy",
-          "To find food"
-        ],
-        "answerIndex": 1,
-        "answer": "In torpor its body gets colder and slower, which saves energy."
-      },
-      {
-        "id": "bees",
-        "prompt": "How do inside bees make heat?",
-        "choices": [
-          "They flap their wings",
-          "They eat snow",
-          "They shiver their muscles"
+          "Loop",
+          "Whorl",
+          "Arch"
         ],
         "answerIndex": 2,
-        "answer": "The inside bees shiver their flight muscles without moving their wings."
+        "answer": "Arches are the rarest. Loops are the most common."
       },
       {
-        "id": "snow",
-        "prompt": "Why is it warmer under snow?",
+        "id": "form",
+        "prompt": "When is the pattern set?",
         "choices": [
-          "Snow works like a blanket",
-          "The sun shines there",
-          "Snow makes its own heat"
+          "Before birth",
+          "On your first birthday",
+          "When you start school"
         ],
         "answerIndex": 0,
-        "answer": "About six inches of snow insulates the space, so it stays near 32 degrees Fahrenheit."
+        "answer": "Prints form before birth, and the pattern is set by about 15 to 17 weeks of growing."
+      },
+      {
+        "id": "koala",
+        "prompt": "Who has prints like ours?",
+        "choices": [
+          "Kangaroo",
+          "Koala",
+          "Wombat"
+        ],
+        "answerIndex": 1,
+        "answer": "Koalas. Their cousins, kangaroos and wombats, do not have prints."
+      },
+      {
+        "id": "wrinkle",
+        "prompt": "Why do bath fingers wrinkle?",
+        "choices": [
+          "Skin soaks up soap",
+          "Your nerves",
+          "Cold air"
+        ],
+        "answerIndex": 1,
+        "answer": "Your nerves narrow the blood vessels under the skin, and the skin puckers."
       }
     ]
   },
+  "titleCard": {
+    "plate": "wake",
+    "edition": "FINGERPRINTS · 2026-11-03",
+    "subtitle": "Loops. Ridges. Koalas. Wrinkles."
+  },
   "poem": {
-    "title": "Little Wonderer’s Winter Plan",
+    "title": "Little Wonderer Leaves Clues",
     "lines": [
-      "Little Wonderer said, “When the winter winds blow,",
-      "I’ll borrow a plan from the critters I know.",
+      "Little Wonderer touched the jam jar lid,",
+      "the window, the doorknob, the drum. Yes, it did.",
+      "It patted the mirror, it poked at the cake,",
+      "it tapped every spoon just for tapping’s sake.",
       "",
-      "I’ll freeze like a wood frog, all frosty and still,",
-      "with sugar to guard me through every chill.",
-      "I’ll hide lots of seeds like a chickadee might,",
-      "and find every one when I need them just right.",
+      "“Oh no!” Little cried. “There are clues everywhere!",
+      "A loop on the cupboard! A whorl on the chair!",
+      "A detective could follow my trail through the house.",
+      "I’m as easy to find as a jam-covered mouse!”",
       "",
-      "I’ll cool like a chipmunk and slow way down,",
-      "then warm myself up with some fat that is brown.",
-      "I’ll shiver like bees in a buzzy round ball,",
-      "and tunnel with mice underneath the snowfall.”",
+      "Big Wonderer nodded and wiped off a pane.",
+      "“Your swirls will grow bigger but mostly remain.",
+      "No two have been found to match, pair after pair,",
+      "so a print is a clue that says someone was there.”",
       "",
-      "Big Wonderer listened, then poured out some tea.",
-      "“Those plans are all splendid. But here’s one for me:",
-      "I’ll sit by the window, all cozy and fed,",
-      "and watch them do winter from in here instead.”"
+      "So Little wore socks on both hands for the day,",
+      "to tiptoe through mischief and sneak right away.",
+      "But it tripped on the rug and it fell in the dough,",
+      "and now there’s a Little-shaped print, head to toe."
     ],
     "drawing": {
-      "src": "assets/how-animals-get-ready-for-winter/poem.jpg",
-      "alt": "A black-ink drawing of Big and Little Wonderer sitting indoors with warm mugs, watching a chickadee on a snowy windowsill."
+      "src": "assets/fingerprints-2026-11-03/poem.jpg",
+      "alt": "A black-ink drawing of Little Wonderer, with socks on its hands, sitting beside a Little-shaped imprint in bread dough on a kitchen table while Big Wonderer looks on."
     }
+  },
+  "screenFreeCards": {
+    "challenge": [
+      {
+        "title": "Say it your way",
+        "text": "Explain “bifurcation” to the table in your own words. Try not to say the word itself.",
+        "key": "bifurcation: a place where one ridge splits in two."
+      },
+      {
+        "title": "Draw it",
+        "text": "Draw your own fingerprint big. Mark one place where a ridge ends or splits. Show it to the table.",
+        "key": "Look for: a big fingerprint drawing with at least one place marked where a ridge ends or splits in two."
+      }
+    ]
   }
 }
