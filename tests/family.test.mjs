@@ -193,9 +193,14 @@ test("family privacy rejects identity and audience labels, including encoded JSO
 
 test("published day section order is story, why, activities for both doors", async () => {
   for (const path of (await walk(resolve(root, "days")))
-    // Day pages only: days/<slug>/index.html, not a day's own poem page.
-    .filter((file) =>
-      /^[^/]+\/index\.html$/.test(relative(resolve(root, "days"), file)),
+    // Every page except a day's own poem page (days/<slug>/poem/), which
+    // has no day sections; poem pages are checked in print-browser.
+    .filter(
+      (file) =>
+        file.endsWith("/index.html") &&
+        !/^[^/]+\/poem\/index\.html$/.test(
+          relative(resolve(root, "days"), file),
+        ),
     )
     .concat(resolve(root, "today/index.html"))) {
     const html = await readFile(path, "utf8");
