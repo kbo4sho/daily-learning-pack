@@ -2,7 +2,7 @@ import test from "node:test";
 import { execFileSync } from "node:child_process";
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
-import { resolve } from "node:path";
+import { relative, resolve } from "node:path";
 import { validateFamily } from "../src/family-contract.mjs";
 import { privacyIssues, scanPrivacy } from "../scripts/privacy-check.mjs";
 
@@ -193,7 +193,10 @@ test("family privacy rejects identity and audience labels, including encoded JSO
 
 test("published day section order is story, why, activities for both doors", async () => {
   for (const path of (await walk(resolve(root, "days")))
-    .filter((file) => file.endsWith("/index.html"))
+    // Day pages only: days/<slug>/index.html, not a day's own poem page.
+    .filter((file) =>
+      /^[^/]+\/index\.html$/.test(relative(resolve(root, "days"), file)),
+    )
     .concat(resolve(root, "today/index.html"))) {
     const html = await readFile(path, "utf8");
     const story = html.indexOf('<section id="reading"');

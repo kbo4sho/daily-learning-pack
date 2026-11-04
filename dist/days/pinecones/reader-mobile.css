@@ -1,0 +1,16 @@
+/* WD-READ-IMG: on phones the Reading tab's story pictures run edge to edge,
+   with no side or bottom fade. Desktop, tablet and print keep curiosity.css.
+   Loaded after curiosity.css on every non-legacy curiosity day (the six
+   legacy days keep their frozen runtime bytes). */
+@media screen and (max-width: 650px) {
+  .family-reader .curiosity-plate {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .family-reader .curiosity-plate img {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
