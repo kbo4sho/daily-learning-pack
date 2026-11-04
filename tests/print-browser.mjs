@@ -67,9 +67,11 @@ const MENU = {
   writing: /^Writing$/,
   "parent-answer-key": /^Answer key$/,
 };
-const CORE = Object.keys(MENU);
+// CORE and BUNDLE are fixed below once pack.json is read: a pack with a
+// poem adds a "Poem" menu entry and ends Print today with the poem sheet.
+let CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
-const BUNDLE = ["math", "foldable", "writing"];
+let BUNDLE = ["math", "foldable", "writing"];
 // Local paths: Unix-style system and home directories (at the start of a word),
 // Windows drive and UNC paths. The shared policy knows fewer of them.
 const LOCAL_PATH =
@@ -465,8 +467,8 @@ const pack = JSON.parse(
 );
 const pdfDir = join(root, "today", "pdf");
 // Every PDF that ships on /today/: each must be linked from the page.
-// A hand-added poem's poem.pdf is linked from its own section, not the
-// Print menu, so it is checked on its own below.
+// A pack with a poem ships poem.pdf, lists it in the Print menu as "Poem",
+// and appends it as the last sheet of Print today (WD-POEM-TAB).
 const allPdfs = readdirSync(pdfDir)
   .filter((f) => f.endsWith(".pdf"))
   .map((f) => f.replace(/\.pdf$/, ""));
@@ -475,7 +477,37 @@ assert.equal(
   Boolean(pack.poem),
   "poem.pdf ships exactly when the pack has a poem",
 );
-const shipped = allPdfs.filter((n) => n !== "poem").sort();
+if (pack.poem) {
+  MENU.poem = /^Poem$/;
+  CORE = Object.keys(MENU);
+  BUNDLE = [...BUNDLE, "poem"];
+}
+const shipped = allPdfs.slice().sort();
+// The poem has its own page (today/poem/), the day page links to it, and no
+// poem renders inline on the day page.
+{
+  const day = await readFile(join(root, "today", "index.html"), "utf8");
+  assert.equal(
+    day.includes('href="./poem/"'),
+    Boolean(pack.poem),
+    "the day page links its poem page exactly when the pack has a poem",
+  );
+  assert.ok(
+    !/id="poem"|class="daily-poem"|poem-lines/.test(day),
+    "the poem renders inline on the day page",
+  );
+  if (pack.poem) {
+    const poemPage = await readFile(
+      join(root, "today", "poem", "index.html"),
+      "utf8",
+    );
+    assert.ok(
+      poemPage.includes('href="../pdf/poem.pdf"'),
+      "the poem page links poem.pdf",
+    );
+    assert.ok(poemPage.includes("poem-lines"), "the poem page has the poem");
+  }
+}
 
 const age = squash(`AGE${pack.targetAge}`);
 // The pack must have the fields the checks lean on, so none of them is vacuous.

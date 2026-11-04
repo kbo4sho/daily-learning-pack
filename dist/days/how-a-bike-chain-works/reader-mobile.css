@@ -1,0 +1,18 @@
+/* Phone story pictures: the Reading tab's pictures run edge to edge, with no
+   side or bottom fade. Desktop, tablet and print keep curiosity.css. The
+   selectors outrank the per-diorama phone sizes. */
+@media screen and (max-width: 650px) {
+  body[data-kind="curiosity"] .family-reader .curiosity-plate.curiosity-plate {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  body[data-kind="curiosity"]
+    .family-reader
+    .curiosity-plate.curiosity-plate
+    img {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
