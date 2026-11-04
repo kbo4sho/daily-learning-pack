@@ -496,6 +496,26 @@ const shipped = allPdfs.slice().sort();
     !/id="poem"|class="daily-poem"|poem-lines/.test(day),
     "the poem renders inline on the day page",
   );
+  // One Poem link, in the shared header next to All mornings; none below.
+  const header = day.match(
+    /<header class="daily-header">[\s\S]*?<\/header>/,
+  )[0];
+  assert.equal(
+    header.includes(
+      '<a class="archive-door poem-door" href="./poem/">Poem</a>',
+    ),
+    Boolean(pack.poem),
+    "the header has a Poem link exactly when the pack has a poem",
+  );
+  assert.equal(
+    (day.match(/href="\.\/poem\/"/g) || []).length,
+    pack.poem ? 1 : 0,
+    "the day page links its poem page once, from the header",
+  );
+  assert.ok(
+    !/daily-poem-link|Today’s poem/.test(day),
+    "a poem link under the explainer",
+  );
   if (pack.poem) {
     const poemPage = await readFile(
       join(root, "today", "poem", "index.html"),
@@ -506,6 +526,33 @@ const shipped = allPdfs.slice().sort();
       "the poem page links poem.pdf",
     );
     assert.ok(poemPage.includes("poem-lines"), "the poem page has the poem");
+    // FM-WD-POEM-HDR: the poem page carries the shared header and tab row,
+    // with Poem as the current page.
+    const chrome = poemPage.match(
+      /<header class="daily-header">[\s\S]*?<\/nav>/,
+    )?.[0];
+    assert.ok(chrome, "the poem page has the shared header and tab row");
+    assert.ok(chrome.includes("Wonder Together"), "poem page brand");
+    assert.ok(chrome.includes(">All mornings<"), "poem page All mornings");
+    assert.ok(
+      chrome.includes('<details class="print-menu"><summary>Print</summary>'),
+      "poem page Print menu",
+    );
+    assert.ok(
+      chrome.includes('href="./" aria-current="page">Poem</a>'),
+      "Poem is the current page",
+    );
+    const dayTabs = [
+      ...day
+        .match(/<nav class="daily-nav"[\s\S]*?<\/nav>/)[0]
+        .matchAll(/data-go="([^"]+)">([^<]+)</g),
+    ];
+    assert.ok(dayTabs.length >= 4, "day tab row");
+    for (const [, id, label] of dayTabs)
+      assert.ok(
+        chrome.includes(`<a href="../#${id}">${label}</a>`),
+        `poem page tab ${id}`,
+      );
   }
 }
 
