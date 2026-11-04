@@ -140,7 +140,7 @@
         "id": "wake",
         "plate": "wake",
         "title": "A hidden print",
-        "passage": "Little held up a glass. \"I don't see anything,\" Little said. Big tipped it to the light. A faint print showed up. Your fingertips have tiny ridges. The ridges carry a thin film of sweat and oil. When you touch something, the film copies the ridge pattern. Most prints are latent, which means hidden until someone makes them show.",
+        "passage": "Little Wonderer held up a glass. \"I don't see anything,\" the little one said. Big Wonderer tipped it to the light. A faint print showed up. Your fingertips have tiny ridges. The ridges carry a thin film of sweat and oil. When you touch something, the film copies the ridge pattern. Most prints are latent, which means hidden until someone makes them show.",
         "prompt": "Why can a fingertip leave a print on a glass?",
         "foldable": {
           "heading": "A hidden print",
@@ -184,8 +184,8 @@
         "id": "return",
         "plate": "return",
         "title": "A safe print lift",
-        "passage": "Detectives make hidden prints show up in a lab. They dust powder, use a chemical called ninhydrin that turns prints purple, or use superglue fumes. Those are jobs for trained lab workers, not for kids. Little and Big made a safe one. They rubbed a pencil on paper, pressed a fingertip on it, and lifted the print with clear tape. Big found a spot where a ridge split in two.",
-        "prompt": "How did Little and Big make a print show up safely?",
+        "passage": "Detectives make hidden prints show up in a lab. They dust powder, use a chemical called ninhydrin that turns prints purple, or use superglue fumes. Those are jobs for trained lab workers, not for kids. Little Wonderer and Big Wonderer made a safe one. They rubbed a pencil on paper, pressed a fingertip on it, and lifted the print with clear tape. The big one found a spot where a ridge split in two.",
+        "prompt": "How did the Wonderers make a print show up safely?",
         "foldable": {
           "heading": "A safe print lift",
           "body": "Detective tools are for trained lab workers. A pencil patch and clear tape make a safe print."
@@ -254,7 +254,7 @@
           52
         ],
         "symbol": "<",
-        "prompt": "Little counts 38 ridges on one print and 52 ridges on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "prompt": "Little Wonderer counts 38 ridges on one print and 52 ridges on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
         "equation": "38 ○ 52",
         "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
         "answer": 52,
@@ -269,7 +269,7 @@
           67
         ],
         "symbol": ">",
-        "prompt": "Big presses 71 prints on one page and 67 prints on the next page. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "prompt": "Next, Big Wonderer presses 71 prints on one page and 67 prints on the next page. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
         "equation": "71 ○ 67",
         "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
         "answer": 71,
@@ -284,7 +284,7 @@
           45
         ],
         "symbol": "=",
-        "prompt": "Little finds 45 pores on one strip of tape and 45 pores on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "prompt": "The little one finds 45 pores on one strip of tape and 45 pores on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
         "equation": "45 ○ 45",
         "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
         "answer": 45,
@@ -297,7 +297,7 @@
         "operands": [
           34
         ],
-        "prompt": "Big counts 34 ridge endings on a big drawing. What is 34 rounded to the nearest ten?",
+        "prompt": "The big one counts 34 ridge endings on a big drawing. What is 34 rounded to the nearest ten?",
         "equation": "34 → nearest ten: ___",
         "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
         "answer": 30,
@@ -310,7 +310,7 @@
         "operands": [
           86
         ],
-        "prompt": "Little draws 86 tiny pore dots. What is 86 rounded to the nearest ten?",
+        "prompt": "The little one draws 86 tiny pore dots. What is 86 rounded to the nearest ten?",
         "equation": "86 → nearest ten: ___",
         "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
         "answer": 90,
@@ -323,7 +323,7 @@
         "operands": [
           65
         ],
-        "prompt": "Big moves 65 wet marbles in a long game. What is 65 rounded to the nearest ten?",
+        "prompt": "The big one moves 65 wet marbles in a long game. What is 65 rounded to the nearest ten?",
         "equation": "65 → nearest ten: ___",
         "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
         "answer": 70,
@@ -542,7 +542,7 @@
       "It patted the mirror, it poked at the cake,",
       "it tapped every spoon just for tapping’s sake.",
       "",
-      "“Oh no!” Little cried. “There are clues everywhere!",
+      "“Oh no!” it cried out. “There are clues everywhere!",
       "A loop on the cupboard! A whorl on the chair!",
       "A detective could follow my trail through the house.",
       "I’m as easy to find as a jam-covered mouse!”",
@@ -552,7 +552,7 @@
       "No two have been found to match, pair after pair,",
       "so a print is a clue that says someone was there.”",
       "",
-      "So Little wore socks on both hands for the day,",
+      "So the little one wore socks on both hands all day,",
       "to tiptoe through mischief and sneak right away.",
       "But it tripped on the rug and it fell in the dough,",
       "and now there’s a Little-shaped print, head to toe."
