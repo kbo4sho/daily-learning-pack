@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "fingerprints-2026-11-03");
-  assert.equal(latest.date, "2026-11-03");
+  assert.equal(latest.slug, "spider-webs");
+  assert.equal(latest.date, "2026-11-05");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "spider-webs",
       "fingerprints-2026-11-03",
       "how-animals-get-ready-for-winter",
       "how-a-zipper-works-2026-10-30",
@@ -151,20 +152,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [52, 71, 45, 30, 90, 70],
+    [64, 34, 82, 44, 77, 35],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "compare-and-round");
+  assert.equal(todayPack.mathTemplate, "number-crunch");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["compare", 38, 52],
-      ["compare", 71, 67],
-      ["compare", 45, 45],
-      ["round-ten", 34],
-      ["round-ten", 86],
-      ["round-ten", 65],
+      ["addition-regrouping", 36, 28],
+      ["subtraction-regrouping", 81, 47],
+      ["addition-regrouping", 45, 37],
+      ["subtraction-regrouping", 70, 26],
+      ["addition-regrouping", 58, 19],
+      ["subtraction-regrouping", 93, 58],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);
