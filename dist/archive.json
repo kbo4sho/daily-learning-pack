@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T05:59:06.341Z",
-  "latest": "fingerprints-2026-11-03",
+  "generatedAt": "2026-11-05T05:05:26.618Z",
+  "latest": "spider-webs",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "spider-webs",
+      "date": "2026-11-05",
+      "topic": "spider webs",
+      "title": "Spider Webs",
+      "teaser": "Find hub, radii and a sticky spiral, then go deeper: silk types, glue vs woolly silk, and how spiders feel a tug.",
+      "href": "./days/spider-webs/",
+      "latest": true
+    },
     {
       "slug": "fingerprints-2026-11-03",
       "date": "2026-11-03",
@@ -11,7 +20,7 @@
       "title": "Fingerprints Up Close",
       "teaser": "Find loops, whorls and arches, then go deeper: prints made before birth, koala prints, and wrinkly bath fingers.",
       "href": "./days/fingerprints-2026-11-03/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-animals-get-ready-for-winter",
