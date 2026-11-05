@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "fingerprints up close",
-        "why": "Looking at fingerprint patterns, how ridges form and how hidden prints show up helps your child compare patterns and explain evidence.",
-        "date": "2026-11-03",
+        "topic": "spider webs",
+        "why": "Looking at silk lines and a sticky spiral helps your child describe a structure and ask how its parts work together.",
+        "date": "2026-11-05",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/quiz-cards.pdf",
-            "label": "Quiz cards"
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
           },
           {
-            "href": "./today/pdf/quiz-cards-key.pdf",
-            "label": "Grown-ups: quiz cards answer key"
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

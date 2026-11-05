@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "fingerprints-2026-11-03",
-  "topic": "fingerprints up close",
-  "why": "Looking at fingerprint patterns, how ridges form and how hidden prints show up helps your child compare patterns and explain evidence.",
-  "teaser": "Find loops, whorls and arches, then go deeper: prints made before birth, koala prints, and wrinkly bath fingers.",
+  "slug": "spider-webs",
+  "topic": "spider webs",
+  "why": "Looking at silk lines and a sticky spiral helps your child describe a structure and ask how its parts work together.",
+  "teaser": "Find hub, radii and a sticky spiral, then go deeper: silk types, glue vs woolly silk, and how spiders feel a tug.",
   "aliases": [
-    "fingerprints deep dive",
-    "finger ridges",
-    "how fingerprints form"
+    "orb webs",
+    "spider silk",
+    "how spider webs work"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "compare-and-round",
+  "mathTemplate": "number-crunch",
   "tags": {
     "band": "6-8",
     "skills": [
-      "compare",
-      "round-ten",
       "reading-comprehension",
       "vocabulary-in-context",
-      "explain-with-words-and-pictures"
+      "explain-with-words-and-pictures",
+      "addition-regrouping",
+      "subtraction-regrouping"
     ],
     "format": "curiosity-day"
   },
@@ -30,345 +30,346 @@
   ],
   "editionLabel": "GRADE 3 · CURIOSITY",
   "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Fingerprints Up Close",
-  "question": "What are fingerprints, and why do we have them?",
-  "idea": "Fingertips have tiny ridges that leave a pattern of sweat and oil. The pattern forms before birth, may help us feel fine textures, and no two have ever been found to match.",
+  "title": "Spider Webs",
+  "question": "How is a spider web built, and how do its parts work together?",
+  "idea": "Many orb webs use strong dry radii and a sticky capture spiral. Spiders feel tiny tugs through the silk. Look closely, and do not touch.",
   "curiosity": {
-    "intro": "Start with the basics: three patterns and a hidden print. Then go deep into how ridges form and what they might do.",
-    "carryForward": "Look for the pattern, then look closer for the tiny ridge details.",
+    "intro": "Start with a dew-bright web and its parts. Then go deep into silk kinds, sticky spirals, and vibration sensing.",
+    "carryForward": "Look for the parts, then ask which silk is sticky and which is not.",
     "questions": [
       {
-        "id": "patterns",
+        "id": "parts",
         "plate": "reach",
-        "question": "Is your print a loop, a whorl or an arch?",
-        "notice": "Find the three prints. One has ridges that curve back, one has a circle, and one has a small hill in the middle.",
-        "say": "A loop has ridges that come in and curve back out the same side. A whorl has circles or a spiral. An arch has ridges that flow across with a bump in the middle. Loops are the most common, and arches are the rarest.",
-        "try": "Rub a pencil hard on paper to make a dark gray patch. Press one fingertip on it. Press clear tape on your fingertip, peel it off, and stick it on white paper. Is your print a loop, a whorl or an arch?"
+        "question": "Which lines are sticky on an orb web?",
+        "notice": "Find the center hub, the straight lines that go out like spokes, and the spiral that winds around them.",
+        "say": "On many orb webs, the spokes (radii) and the small hub are dry and strong. The outer spiral often holds tiny glue beads. Spiders walk the dry lines and feel prey on the sticky spiral. Not every web is an orb, and not every spiral is sticky the same way.",
+        "try": "From a few steps away, sketch a web you can see. Mark the hub, three spokes, and one loop of the spiral. Do not touch the silk."
       },
       {
-        "id": "ridges",
+        "id": "silk",
         "plate": "change",
-        "question": "What tiny details are inside a print?",
-        "notice": "Find a ridge that stops, and a ridge that splits in two. Look for the tiny dots along the top of the ridges.",
-        "say": "Sweat pores sit in a row along the top of each ridge. Experts look at minutiae, the tiny places where a ridge ends or splits in two. A split is called a bifurcation. They compare these points, not just the pattern. Very rarely, a change in a gene called SMARCAD1 means a person is born with no fingerprints at all.",
-        "try": "Look at your tape print with a magnifying glass if you have one. Find one place where a ridge ends. Then find one place where a ridge splits in two."
+        "question": "How can silk catch without glue?",
+        "notice": "Find the two silk samples: one with shiny droplets, and one that looks soft and woolly.",
+        "say": "Some spiders make capture silk with glue droplets (ecribellate silk). Others comb out a dry, woolly silk with a special plate called a cribellum (cribellate silk). The woolly silk snags legs and wings without sticky glue. Scientists still study exactly how each kind works best.",
+        "try": "On your sketch, label one spiral loop 'maybe glue' and write one question you still have about silk."
       },
       {
-        "id": "koala",
+        "id": "sense",
         "plate": "notice",
-        "question": "Why does a koala have fingerprints?",
-        "notice": "Look at the koala's hand holding the branch. Find the tips of its fingers.",
-        "say": "Koala prints look very much like ours. But koalas are only distantly related to us, and their cousins, wombats and kangaroos, do not have prints. Scientists think prints formed separately in both because both grip and handle things.",
-        "try": "Draw a koala hand holding a branch. Then trace your own hand next to it. Tell one way they are alike."
+        "question": "How does a spider feel a tiny tug?",
+        "notice": "Find the spider resting near the hub, with one or two legs on the silk.",
+        "say": "Silk carries vibrations. Many spiders keep legs on the radii so a buzz or tug can travel to them. Tiny sensors in the legs help them tell a breeze from a struggling insect. They usually do not need sticky feet on every line because they know the dry paths.",
+        "try": "Tap a table lightly with a pencil, then harder. Tell which tap felt bigger through your hand. That is only a toy model of vibration, not a real web."
       },
       {
-        "id": "wrinkles",
+        "id": "dew",
         "plate": "keep",
-        "question": "Why do fingers get wrinkly in the bath?",
-        "notice": "Find the two bowls, the wet marbles, and the bowl of water.",
-        "say": "Wrinkly bath fingers are not just skin soaking up water. Your nerves control them. Tiny blood vessels under the skin get narrower, and the skin puckers. Scientists think wrinkles might help us grip wet things, but studies disagree, so for now we say maybe.",
-        "try": "Time how fast you move wet marbles from one bowl to another with dry fingers. Soak your hands in warm water until they wrinkle, then try again. This is a fun try, not proof."
+        "question": "Why does dew make a web easy to see?",
+        "notice": "Find the morning web with water beads shining on the spiral.",
+        "say": "Cool mornings leave tiny water drops on silk. The drops catch light, so the web that was nearly invisible overnight suddenly shows its pattern. As the air warms, many drops shrink or fall. Dew helps us look; it is not glue from the spider.",
+        "try": "On a cool morning, look for a web on a fence or bush. Count how many spiral loops you can see before the dew fades. Stay back and do not touch."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/fingerprints-2026-11-03/01-glass.jpg",
-      "original": "assets/fingerprints-2026-11-03/01-glass.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/01-glass-fold.jpg",
-      "title": "A hidden print",
-      "alt": "Big and Little Wonderer stand at a sunny kitchen table and look closely at a clear drinking glass with one faint fingerprint on its side.",
-      "caption": "Every touch can leave a hidden print."
+      "src": "assets/spider-webs/01-dew.jpg",
+      "original": "assets/spider-webs/01-dew.png",
+      "foldSrc": "assets/spider-webs/01-dew-fold.jpg",
+      "title": "A web in the dew",
+      "alt": "Big and Little Wonderer stand on a garden path at soft morning light and share one gaze toward an orb web on a bush, bright with dew beads on the spiral.",
+      "caption": "Dew makes a quiet web easy to see."
     },
     {
       "id": "reach",
-      "src": "assets/fingerprints-2026-11-03/02-patterns.jpg",
-      "original": "assets/fingerprints-2026-11-03/02-patterns.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/02-patterns-fold.jpg",
-      "title": "Three patterns",
-      "alt": "Three gray fingerprints on a sheet of paper on a wooden table: a loop with ridges that curve back, a whorl with circles, and an arch with a small hill in the middle.",
-      "caption": "A loop, a whorl and an arch."
+      "src": "assets/spider-webs/02-orb.jpg",
+      "original": "assets/spider-webs/02-orb.png",
+      "foldSrc": "assets/spider-webs/02-orb-fold.jpg",
+      "title": "Hub, radii, spiral",
+      "alt": "A clear field-guide study of an orb web: a small hub in the center, straight dry radii like spokes, and a capture spiral winding around them on a pale ivory background.",
+      "caption": "Strong dry spokes. A spiral that may hold glue."
     },
     {
       "id": "change",
-      "src": "assets/fingerprints-2026-11-03/03-ridges.jpg",
-      "original": "assets/fingerprints-2026-11-03/03-ridges.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/03-ridges-fold.jpg",
-      "title": "Ridges up close",
-      "alt": "A very close look at fingertip skin shows curved ridges with tiny pores along their tops, one ridge that ends and one ridge that splits in two.",
-      "caption": "Up close, ridges end, split and carry tiny pores."
+      "src": "assets/spider-webs/03-silk.jpg",
+      "original": "assets/spider-webs/03-silk.png",
+      "foldSrc": "assets/spider-webs/03-silk-fold.jpg",
+      "title": "Two kinds of catch silk",
+      "alt": "A close field-guide study of two silk strands side by side: one with neat shiny glue droplets, and one soft and woolly without droplets.",
+      "caption": "Glue beads, or woolly silk that snags."
     },
     {
       "id": "notice",
-      "src": "assets/fingerprints-2026-11-03/04-koala.jpg",
-      "original": "assets/fingerprints-2026-11-03/04-koala.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/04-koala-fold.jpg",
-      "title": "Koala prints",
-      "alt": "A koala sits in a eucalyptus tree and grips a branch with its hand, showing the pads of its fingers.",
-      "caption": "Koalas have prints that look very much like ours."
+      "src": "assets/spider-webs/04-sense.jpg",
+      "original": "assets/spider-webs/04-sense.png",
+      "foldSrc": "assets/spider-webs/04-sense-fold.jpg",
+      "title": "Feeling a tug",
+      "alt": "A calm spider rests near the hub of an orb web with legs touching the dry radii, while a small insect is caught on the outer spiral.",
+      "caption": "Vibrations travel along the silk."
     },
     {
       "id": "return",
-      "src": "assets/fingerprints-2026-11-03/05-tape.jpg",
-      "original": "assets/fingerprints-2026-11-03/05-tape.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/05-tape-fold.jpg",
-      "title": "A safe print lift",
-      "alt": "Big and Little Wonderer sit at a table beside a pencil-shaded paper patch, a roll of clear tape and a white card with one gray fingerprint stuck on it.",
-      "caption": "A pencil patch and tape make a print you can see."
+      "src": "assets/spider-webs/05-look.jpg",
+      "original": "assets/spider-webs/05-look.png",
+      "foldSrc": "assets/spider-webs/05-look-fold.jpg",
+      "title": "Look, don't touch",
+      "alt": "Big and Little Wonderer stand a few steps back on a path, sharing one gaze toward a garden web while Little holds a small notebook and pencil. No hands near the silk.",
+      "caption": "Watch from a safe step back."
     },
     {
       "id": "keep",
-      "src": "assets/fingerprints-2026-11-03/06-marbles.jpg",
-      "original": "assets/fingerprints-2026-11-03/06-marbles.png",
-      "foldSrc": "assets/fingerprints-2026-11-03/06-marbles-fold.jpg",
-      "title": "Wet marbles",
-      "alt": "Two bowls on a table, one full of wet glass marbles and one empty, beside a small bowl of water.",
-      "caption": "Maybe wrinkly fingers help hold wet things."
+      "src": "assets/spider-webs/06-dewdrop.jpg",
+      "original": "assets/spider-webs/06-dewdrop.png",
+      "foldSrc": "assets/spider-webs/06-dewdrop-fold.jpg",
+      "title": "Beads of morning light",
+      "alt": "A close still life of orb-web silk with clear dew beads spaced along a spiral thread, soft morning light, no spider in frame.",
+      "caption": "Dew catches light so we can see the pattern."
     }
   ],
   "reading": {
-    "title": "Fingerprints, then deeper",
+    "title": "Spider webs, then deeper",
     "coverPlate": "wake",
-    "coverText": "Start with three patterns and a hidden print. Then go deep: prints before birth, koala prints and wrinkly fingers.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
-    "foldableTitle": "A little book of fingerprints",
-    "foldableCoverLine": "Fingerprints Up Close",
-    "foldableNote": "Carry six fingerprint clues in a small book.",
+    "coverText": "Start with a dew-bright web and its parts. Then go deep: silk kinds, sticky spirals and vibration sensing.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Look-don't-touch outdoors.",
+    "foldableTitle": "A little book of webs",
+    "foldableCoverLine": "Spider Webs",
+    "foldableNote": "Carry six web clues in a small book.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A hidden print",
-        "passage": "Little Wonderer held up a glass. \"I don't see anything,\" the little one said. Big Wonderer tipped it to the light. A faint print showed up. Your fingertips have tiny ridges. The ridges carry a thin film of sweat and oil. When you touch something, the film copies the ridge pattern. Most prints are latent, which means hidden until someone makes them show.",
-        "prompt": "Why can a fingertip leave a print on a glass?",
+        "title": "A web in the dew",
+        "passage": "Little Wonderer stopped on the path. \"The bush is wearing lace,\" the little one whispered. Big Wonderer tipped its head. Overnight the web was almost invisible. Cool air left dew beads on the silk, and the beads caught the morning light. As the day warms, many drops shrink. Dew helps us see; it is not the spider's glue.",
+        "prompt": "Why can a web be hard to see at night, then easy at dawn?",
         "foldable": {
-          "heading": "A hidden print",
-          "body": "Tiny ridges carry sweat and oil. A touch copies their pattern, even when you cannot see it."
+          "heading": "A web in the dew",
+          "body": "Cool air leaves dew on silk. The beads catch light, so a quiet web suddenly shows."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Three patterns",
-        "passage": "Most prints belong to one of three pattern families. In a loop, ridges come in and curve back out the same side. In a whorl, ridges make circles or a spiral. In an arch, ridges flow across with a bump in the middle. Loops are the most common. Arches are the rarest. No two prints have ever been found to match, not even on identical twins.",
-        "prompt": "How is a loop different from an arch?",
+        "title": "Hub, radii, spiral",
+        "passage": "Many orb webs share three parts. The hub is the small center. Radii are the straight spokes. The capture spiral winds around them. On many webs the radii stay dry and strong, while the spiral holds tiny glue beads. Spiders often walk the dry lines. Not every spider builds an orb, so what you find outside may look different.",
+        "prompt": "Which parts of an orb web are often dry?",
         "foldable": {
-          "heading": "Three patterns",
-          "body": "Loops curve back. Whorls make circles. Arches flow across with a bump. No two have ever been found to match."
+          "heading": "Hub, radii, spiral",
+          "body": "Hub in the center. Radii like spokes. Spiral may hold glue. Many spiders walk the dry lines."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Made before birth",
-        "passage": "Prints form before a baby is born. At about 7 to 8 weeks of growing, puffy pads appear on the fingertips. At about 10 to 11 weeks, ridges start to form. By about 15 to 17 weeks, the pattern is set. Twins get different prints because each fingertip grows in its own tiny way. After that, the pattern normally just grows bigger and keeps its shape, though a deep cut or some skin diseases can leave a scar.",
-        "prompt": "Why do identical twins have different prints?",
+        "title": "Silk that catches",
+        "passage": "Spiders make more than one silk. Dragline silk is strong for bridges and safety lines. Capture silk is for catching. Some spiders coat the spiral with glue droplets. Others comb out a dry, woolly silk with a cribellum plate. That woolly silk can snag without sticky glue. Researchers still compare how each kind works in wind and rain.",
+        "prompt": "How can a web catch prey without sticky glue?",
         "foldable": {
-          "heading": "Made before birth",
-          "body": "Prints form before birth. Each fingertip grows in its own tiny way, so even twins differ."
+          "heading": "Silk that catches",
+          "body": "Dragline silk is strong. Capture silk may hold glue beads, or it may be woolly cribellate silk that snags without glue."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Koala prints",
-        "passage": "Koalas have prints that look very much like ours. Koalas are only distantly related to us, and their cousins, wombats and kangaroos, have none. Scientists think prints formed separately in both because both grip things. What are ridges for? In one lab test, ridges made the shakes from rubbing a fine texture much stronger. So scientists think ridges help us feel fine textures.",
-        "prompt": "Why do scientists think both koalas and people have prints?",
+        "title": "Feeling a tug",
+        "passage": "Big Wonderer watched the hub. A spider rested with legs on the radii. Silk carries vibrations, so a tiny tug can travel to those legs. Sensors help tell a breeze from prey. The spider usually does not need every line to be sticky, because it knows the dry paths home.",
+        "prompt": "How can a spider notice prey without watching every second?",
         "foldable": {
-          "heading": "Koala prints",
-          "body": "Koalas and people both grip things. Scientists think ridges may help us feel fine textures."
+          "heading": "Feeling a tug",
+          "body": "Silk carries tiny vibrations. Legs on dry radii feel a tug that may mean prey."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A safe print lift",
-        "passage": "Detectives make hidden prints show up in a lab. They dust powder, use a chemical called ninhydrin that turns prints purple, or use superglue fumes. Those are jobs for trained lab workers, not for kids. Little Wonderer and Big Wonderer made a safe one. They rubbed a pencil on paper, pressed a fingertip on it, and lifted the print with clear tape. The big one found a spot where a ridge split in two.",
-        "prompt": "How did the Wonderers make a print show up safely?",
+        "title": "Look, don't touch",
+        "passage": "Little Wonderer lifted a pencil. Big Wonderer stayed a step back. A web is a home and a trap. Touching can break hours of work and may put a spider or a child too close. Sketch from a safe distance. Use eyes, a notebook, or a camera zoom. Leave the silk where it is.",
+        "prompt": "Why should we look at webs without touching them?",
         "foldable": {
-          "heading": "A safe print lift",
-          "body": "Detective tools are for trained lab workers. A pencil patch and clear tape make a safe print."
+          "heading": "Look, don't touch",
+          "body": "A web is a home and a trap. Watch from a step back. Sketch, don't touch."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Wrinkly fingers",
-        "passage": "After a long bath, fingers get wrinkly. Your nerves cause it. Blood vessels under the skin get narrower, and the skin puckers. Fingers with cut nerves do not wrinkle. Maybe the wrinkles help us grip wet things, like treads on a tire. One study found people moved wet marbles faster with wrinkly fingers. Another found no difference. So for now, we say maybe.",
-        "prompt": "Why is the answer about wrinkly fingers still maybe?",
+        "title": "Beads of light",
+        "passage": "Morning dew is water from the air, not spider glue. The drops sit on silk and sparkle, so the spiral pattern pops into view. Later the air warms and many beads shrink or fall. If you miss the dew, a soft side light may still reveal dry radii. Keep looking with care.",
+        "prompt": "What makes dew different from the spider's sticky glue?",
         "foldable": {
-          "heading": "Wrinkly fingers",
-          "body": "Nerves make bath fingers wrinkle. Maybe wrinkles help grip wet things. Scientists are still checking."
+          "heading": "Beads of light",
+          "body": "Dew is water from cool air. It catches light so we can see the web's pattern."
         }
       }
     ],
     "words": [
       {
-        "word": "ridge",
-        "meaning": "a tiny raised line of skin on your fingertip"
+        "word": "orb",
+        "meaning": "a roundish wheel-shaped web with spokes and a spiral"
       },
       {
-        "word": "latent",
-        "meaning": "hidden until someone makes it show"
+        "word": "radii",
+        "meaning": "the straight spoke lines that run from the hub outward"
       },
       {
-        "word": "whorl",
-        "meaning": "a print pattern with circles or a spiral"
+        "word": "spiral",
+        "meaning": "the winding line that circles the spokes"
       },
       {
-        "word": "pore",
-        "meaning": "a tiny opening in the skin where sweat comes out"
+        "word": "silk",
+        "meaning": "the strong thread a spider makes from its body"
       },
       {
-        "word": "bifurcation",
-        "meaning": "a place where one ridge splits in two"
+        "word": "cribellum",
+        "meaning": "a tiny spinning plate that helps make woolly catch silk"
       },
       {
-        "word": "minutiae",
-        "meaning": "tiny places where a ridge ends or splits"
+        "word": "vibration",
+        "meaning": "a tiny shake that can travel along a line of silk"
       }
     ],
     "questions": [
-      "Why can a fingertip leave a hidden print on a glass?",
-      "How do fingerprints form, and why do identical twins still have different prints?",
-      "What might ridges and wrinkly fingers help us do, and why do scientists say maybe?"
+      "Why can a web be hard to see at night, then easy at dawn?",
+      "Which parts of an orb web are often dry, and which may hold glue?",
+      "How can some silk catch prey without sticky glue?",
+      "How does a spider feel a tiny tug on the web?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Make a pencil-and-tape print. Write one sentence about its pattern.",
-      "example": "Example: My print is a loop because the ridges curve back out the same side."
+      "prompt": "Write or dictate three sentences: one web part you noticed, one idea about sticky versus dry silk, and one safe way to look without touching.",
+      "example": "Example: I saw a hub and long radii. The spiral may hold glue beads. I will sketch from a step back."
     }
   },
   "math": {
-    "title": "Fingerprint counts",
-    "plate": "reach",
-    "intro": "Compare and round pretend counts from a fingerprint notebook.",
-    "eyebrow": "SIX FINGERPRINT COUNTS",
-    "actionLabel": "Compare, then round",
+    "title": "Web numbers",
+    "intro": "Six add-and-subtract puzzles tied to dew beads, silk lines and careful looking.",
     "tasks": [
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          38,
-          52
+          36,
+          28
         ],
-        "symbol": "<",
-        "prompt": "Little Wonderer counts 38 ridges on one print and 52 ridges on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "38 ○ 52",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 52,
-        "worked": "38 < 52. Compare the tens first, so the greater count is 52.",
-        "plate": "reach",
+        "prompt": "Little Wonderer counts 36 dew beads on one spiral loop, then 28 more on the next. How many beads is that together?",
+        "equation": "36 + 28 =",
+        "hint": "Add 6 and 8 ones. Trade 10 ones for 1 ten.",
+        "answer": 64,
+        "worked": "6 + 8 = 14. Add 3 tens, 2 tens, and the new ten: 36 + 28 = 64.",
+        "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "compare",
+        "skill": "subtraction-regrouping",
         "operands": [
-          71,
-          67
+          81,
+          47
         ],
-        "symbol": ">",
-        "prompt": "Next, Big Wonderer presses 71 prints on one page and 67 prints on the next page. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "71 ○ 67",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 71,
-        "worked": "71 > 67. Compare the tens first, so the greater count is 71.",
-        "plate": "wake",
+        "prompt": "Big Wonderer spots 81 silk lines in a sketch, then erases 47 that were practice marks. How many lines remain?",
+        "equation": "81 − 47 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract.",
+        "answer": 34,
+        "worked": "81 − 47 = 34. Regroup ones, then subtract tens.",
+        "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
           45,
-          45
+          37
         ],
-        "symbol": "=",
-        "prompt": "The little one finds 45 pores on one strip of tape and 45 pores on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "45 ○ 45",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 45,
-        "worked": "45 = 45. Both counts match, so the shared count is 45.",
+        "prompt": "The little one counts 45 dry radii marks and 37 spiral marks in a notebook. How many marks in all?",
+        "equation": "45 + 37 =",
+        "hint": "Add the ones, then the tens. Trade if you make 10 ones.",
+        "answer": 82,
+        "worked": "5 + 7 = 12. Add 4 tens, 3 tens, and the new ten: 45 + 37 = 82.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          34
+          70,
+          26
         ],
-        "prompt": "The big one counts 34 ridge endings on a big drawing. What is 34 rounded to the nearest ten?",
-        "equation": "34 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 30,
-        "worked": "34 has 4 ones, so round down to 30.",
-        "plate": "change",
+        "prompt": "A morning count shows 70 dew beads. Later 26 have dried. How many beads are left to see?",
+        "equation": "70 − 26 =",
+        "hint": "Trade 1 ten for 10 ones, then subtract ones and tens.",
+        "answer": 44,
+        "worked": "70 − 26 = 44. Regroup, then subtract.",
+        "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "round-ten",
+        "skill": "addition-regrouping",
         "operands": [
-          86
+          58,
+          19
         ],
-        "prompt": "The little one draws 86 tiny pore dots. What is 86 rounded to the nearest ten?",
-        "equation": "86 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 90,
-        "worked": "86 has 6 ones, so round up to 90.",
-        "plate": "change",
+        "prompt": "Big Wonderer times 58 soft table taps, then 19 harder taps. How many taps in the vibration try?",
+        "equation": "58 + 19 =",
+        "hint": "Add 8 and 9 ones. Trade 10 ones for 1 ten.",
+        "answer": 77,
+        "worked": "8 + 9 = 17. Add 5 tens, 1 ten, and the new ten: 58 + 19 = 77.",
+        "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          65
+          93,
+          58
         ],
-        "prompt": "The big one moves 65 wet marbles in a long game. What is 65 rounded to the nearest ten?",
-        "equation": "65 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 70,
-        "worked": "65 has 5 ones, so round up to 70.",
+        "prompt": "The big one sketches 93 spiral loops across pages, then crosses out 58 extras. How many loops stay?",
+        "equation": "93 − 58 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract.",
+        "answer": 35,
+        "worked": "93 − 58 = 35. Regroup ones, then subtract tens.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
-    "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real fingerprint counts.",
-    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
+    "plate": "reach",
+    "eyebrow": "NUMBER CRUNCH",
+    "actionLabel": "Solve",
+    "extension": "Choose one problem and draw tens as sticks and ones as dots to check your regrouping.",
+    "printNote": "Use these pretend notebook numbers about spider webs. The picture is not a ruler.",
+    "parentNote": "Six two-digit add/subtract puzzles with regrouping. Numbers are pretend practice, not real dew counts.",
+    "answerKeyIntro": "Math answers (pretend notebook numbers):"
   },
   "writing": {
-    "title": "Explain a fingerprint clue in your words",
+    "title": "Explain a web clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "keep"
     ],
-    "draw": "Draw your own fingerprint big. Mark one place where a ridge ends or splits.",
-    "starter": "My fingerprint clue",
+    "draw": "Draw an orb web. Mark the hub, one radius, and one spiral loop.",
+    "starter": "My spider-web clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "My print is a loop, whorl or arch because",
-        "hint": "how do the ridges flow?"
+        "start": "The dry lines are often the radii because",
+        "hint": "what job do the spokes do?"
       },
       {
         "plate": "change",
-        "start": "Twins have different prints because",
-        "hint": "how does each fingertip grow?"
+        "start": "Some silk can catch without glue because",
+        "hint": "what is woolly cribellate silk like?"
       },
       {
         "plate": "keep",
-        "start": "Wrinkly fingers might help because",
-        "hint": "what might they grip?"
+        "start": "Dew makes a web easier to see because",
+        "hint": "what do the beads do to light?"
       }
     ],
     "words": [
-      "ridge",
-      "loop",
-      "whorl",
-      "arch",
+      "hub",
+      "radii",
+      "spiral",
+      "silk",
       "because",
       "maybe"
     ],
@@ -378,201 +379,605 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Ridges carry a thin film of sweat and oil, and a touch copies the ridge pattern onto the glass. Most prints are latent, or hidden."
+      "text": "Overnight a web can be nearly invisible; cool air leaves dew beads that catch morning light so the pattern shows."
     },
     {
       "label": "Reading · 2",
-      "text": "Prints form before birth (pads at about 7 to 8 weeks, ridges at about 10 to 11, set by about 15 to 17). Each fingertip grows in its own tiny way, so twins differ."
+      "text": "On many orb webs the hub and radii are often dry and strong, while the capture spiral may hold glue beads. Spiders often walk the dry lines."
     },
     {
       "label": "Reading · 3",
-      "text": "Scientists think ridges help us feel fine textures, and maybe wrinkles help grip wet things. Studies on wrinkles disagree, so for now we say maybe."
+      "text": "Some spiders use woolly cribellate silk that snags without glue. Silk also carries vibrations so a spider can feel a tug through its legs. Dew is water from cool air, not spider glue."
+    },
+    {
+      "label": "Math",
+      "text": "64, 34, 82, 44, 77, 35"
     },
     {
       "label": "Writing",
-      "text": "Accept a spoken, dictated, drawn, or written sentence about one fingerprint clue."
+      "text": "Accept a drawing, dictation, or 1–3 sentences tied to a scene with because or maybe."
     }
   ],
-  "parentGuidance": "No two prints have ever been found to match (not a proof). Weeks count from when growth starts (pregnancy weeks run about 2 higher). Twins differ because each fingertip pad grows differently. Scientists think ridges help us feel fine textures; the grip idea is unsettled. Adermatoglyphia, a very rare SMARCAD1 change, means no prints from birth. Powder, ninhydrin and superglue fuming are adult lab work only; kids use pencil graphite and tape. Stay nearby for the wet-marble try and use warm, not hot, water.",
+  "parentGuidance": "Look-don't-touch: watch webs from a step back. Outdoor dew walks are best on cool mornings. If anyone is afraid of spiders, keep the lesson on pictures and sketches. Hedge aloud with your child: many orb webs work this way, but spiders build other shapes too.",
   "sources": [
     {
-      "label": "NIJ Fingerprint Sourcebook ch. 2: friction ridge skin",
-      "url": "https://www.ojp.gov/pdffiles1/nij/225322.pdf"
+      "label": "Britannica — spider silk",
+      "url": "https://www.britannica.com/science/spider-silk"
     },
     {
-      "label": "NIJ Fingerprint Sourcebook ch. 3: embryology",
-      "url": "https://www.ojp.gov/pdffiles1/nij/225323.pdf"
+      "label": "Ask A Biologist — orb webs",
+      "url": "https://askabiologist.asu.edu/spider-web"
     },
     {
-      "label": "NIJ Fingerprint Sourcebook ch. 5: classification",
-      "url": "https://www.ojp.gov/pdffiles1/nij/225325.pdf"
-    },
-    {
-      "label": "NIJ Fingerprint Sourcebook ch. 7: latent print development",
-      "url": "https://www.ojp.gov/pdffiles1/nij/225327.pdf"
-    },
-    {
-      "label": "NIJ Fingerprint Sourcebook ch. 9: examination process",
-      "url": "https://www.ojp.gov/pdffiles1/nij/225329.pdf"
-    },
-    {
-      "label": "FBI, The Science of Fingerprints",
-      "url": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/science-fingerprints-classification-and-uses"
-    },
-    {
-      "label": "Jain, Prabhakar & Pankanti 2002: twin fingerprints",
-      "url": "https://doi.org/10.1016/S0031-3203(01)00218-7"
-    },
-    {
-      "label": "Glover et al. 2023, Cell: ridge-forming signals",
-      "url": "https://doi.org/10.1016/j.cell.2023.01.015"
-    },
-    {
-      "label": "Scheibert et al. 2009, Science: ridges and touch",
-      "url": "https://doi.org/10.1126/science.1166467"
-    },
-    {
-      "label": "Warman & Ennos 2009, J Exp Biol: fingerprints and friction",
-      "url": "https://doi.org/10.1242/jeb.028977"
-    },
-    {
-      "label": "Henneberg, Lambert & Leigh 1997: koala fingerprints",
-      "url": "http://hdl.handle.net/2440/5433"
-    },
-    {
-      "label": "PBS NOVA: koala fingerprints",
-      "url": "https://www.pbs.org/wgbh/nova/article/koala-fingerprints/"
-    },
-    {
-      "label": "Snopes: koala fingerprint fact-check",
-      "url": "https://www.snopes.com/fact-check/koala-fingerprints-crime-scene/"
-    },
-    {
-      "label": "Nousbeck et al. 2011, Am J Hum Genet: SMARCAD1",
-      "url": "https://doi.org/10.1016/j.ajhg.2011.07.004"
-    },
-    {
-      "label": "MedlinePlus Genetics: adermatoglyphia",
-      "url": "https://medlineplus.gov/genetics/condition/adermatoglyphia/"
-    },
-    {
-      "label": "Wilder-Smith & Chow 2003, Muscle Nerve: water wrinkling",
-      "url": "https://doi.org/10.1002/mus.10323"
-    },
-    {
-      "label": "Changizi et al. 2011: wrinkles as treads",
-      "url": "https://doi.org/10.1159/000328223"
-    },
-    {
-      "label": "Kareklas, Nettle & Smulders 2013, Biol Lett: wet objects",
-      "url": "https://doi.org/10.1098/rsbl.2012.0999"
-    },
-    {
-      "label": "Haseleu et al. 2014, PLOS ONE: no grip difference",
-      "url": "https://doi.org/10.1371/journal.pone.0084949"
-    },
-    {
-      "label": "UK Home Office: Fingermark Visualisation Source Book",
-      "url": "https://www.gov.uk/government/publications/fingermark-visualisation-source-book"
+      "label": "Smithsonian — spider silk",
+      "url": "https://www.si.edu/spotlight/buginfo/silk"
     }
   ],
-  "screenFree": [
-    "quiz-cards"
-  ],
-  "quiz": {
-    "title": "Four fingerprint clues",
-    "intro": "Patterns, ridges, koalas and wrinkles.",
-    "questions": [
-      {
-        "id": "rare",
-        "prompt": "Which pattern is rarest?",
-        "choices": [
-          "Loop",
-          "Whorl",
-          "Arch"
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer sees bright dew. The web shines on a bush. Cool air left the beads. Look, do not touch.",
+            "prompt": "What makes the web easy to see?"
+          },
+          {
+            "id": "reach",
+            "passage": "An orb web has a hub. Radii are straight spokes. A spiral winds around. Many spokes stay dry.",
+            "prompt": "Which part is often dry?"
+          },
+          {
+            "id": "change",
+            "passage": "Some silk holds glue beads. Other silk looks woolly. Woolly silk can snag. Both kinds can catch.",
+            "prompt": "Can silk catch without glue?"
+          },
+          {
+            "id": "notice",
+            "passage": "A spider feels a tug. Silk carries a tiny shake. Legs rest on dry radii. A breeze feels different.",
+            "prompt": "How does the spider notice?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer steps back from the silk. They sketch the web in a notebook. Hands stay away. Looking is enough for now.",
+            "prompt": "Why not touch?"
+          },
+          {
+            "id": "keep",
+            "passage": "Dew is water from air. It catches morning light. Later beads may shrink. Keep looking with care.",
+            "prompt": "Is dew spider glue?"
+          }
         ],
-        "answerIndex": 2,
-        "answer": "Arches are the rarest. Loops are the most common."
+        "words": [
+          {
+            "word": "dew",
+            "meaning": "tiny water beads from cool air"
+          },
+          {
+            "word": "hub",
+            "meaning": "the small center of an orb web"
+          },
+          {
+            "word": "silk",
+            "meaning": "thread a spider makes"
+          }
+        ]
       },
-      {
-        "id": "form",
-        "prompt": "When is the pattern set?",
-        "choices": [
-          "Before birth",
-          "On your first birthday",
-          "When you start school"
-        ],
-        "answerIndex": 0,
-        "answer": "Prints form before birth, and the pattern is set by about 15 to 17 weeks of growing."
-      },
-      {
-        "id": "koala",
-        "prompt": "Who has prints like ours?",
-        "choices": [
-          "Kangaroo",
-          "Koala",
-          "Wombat"
-        ],
-        "answerIndex": 1,
-        "answer": "Koalas. Their cousins, kangaroos and wombats, do not have prints."
-      },
-      {
-        "id": "wrinkle",
-        "prompt": "Why do bath fingers wrinkle?",
-        "choices": [
-          "Skin soaks up soap",
-          "Your nerves",
-          "Cold air"
-        ],
-        "answerIndex": 1,
-        "answer": "Your nerves narrow the blood vessels under the skin, and the skin puckers."
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer sees 9 dew beads, then 5 more. How many now?",
+            "expression": "9 + 5",
+            "equation": "9 + 5 =",
+            "answer": 14,
+            "hint": "Count on from 9.",
+            "worked": "9 + 5 = 14. Count carefully with the story numbers."
+          },
+          {
+            "plate": "reach",
+            "prompt": "Big Wonderer counts 16 spokes, then 7 are practice marks. How many real spokes?",
+            "expression": "16 − 7",
+            "equation": "16 − 7 =",
+            "answer": 9,
+            "hint": "Take away 7 from 16.",
+            "worked": "16 − 7 = 9. Count carefully with the story numbers."
+          },
+          {
+            "plate": "change",
+            "prompt": "The little one finds 8 glue beads and 6 woolly bits. How many samples?",
+            "expression": "8 + 6",
+            "equation": "8 + 6 =",
+            "answer": 14,
+            "hint": "Add 8 and 6.",
+            "worked": "8 + 6 = 14. Count carefully with the story numbers."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A notebook shows 15 taps. Cross out 6 soft ones. How many left?",
+            "expression": "15 − 6",
+            "equation": "15 − 6 =",
+            "answer": 9,
+            "hint": "Subtract 6 from 15.",
+            "worked": "15 − 6 = 9. Count carefully with the story numbers."
+          },
+          {
+            "plate": "return",
+            "prompt": "They make 7 sketches, then 5 more. How many sketches?",
+            "expression": "7 + 5",
+            "equation": "7 + 5 =",
+            "answer": 12,
+            "hint": "Add 7 and 5.",
+            "worked": "7 + 5 = 12. Count carefully with the story numbers."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Morning shows 18 beads. Later 9 dry. How many remain?",
+            "expression": "18 − 9",
+            "equation": "18 − 9 =",
+            "answer": 9,
+            "hint": "Take 9 from 18.",
+            "worked": "18 − 9 = 9. Count carefully with the story numbers."
+          }
+        ]
       }
-    ]
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer stops by a bush. Dew beads shine on the web. Overnight it was hard to see. Cool air left the water drops. Do not touch the silk.",
+            "prompt": "Why is the web brighter at dawn?"
+          },
+          {
+            "id": "reach",
+            "passage": "An orb web has three parts. The hub sits in the center. Radii run out like spokes. The spiral winds around them. Many radii stay dry and strong.",
+            "prompt": "Which lines are often dry?"
+          },
+          {
+            "id": "change",
+            "passage": "Spiders make more than one silk. Some capture silk holds glue beads. Other capture silk is woolly and dry. Woolly silk can snag a wing. Scientists still compare both kinds.",
+            "prompt": "How can dry silk catch?"
+          },
+          {
+            "id": "notice",
+            "passage": "Big Wonderer watches the hub of the web. The spider keeps its legs on the dry radii. A tiny tug travels through the silk. Sensors help tell wind from prey on the spiral.",
+            "prompt": "What travels along the silk?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one lifts a pencil. They stand a step back. A web is a home and a trap. Sketch what you see. Keep fingers away.",
+            "prompt": "What is a safe way to look?"
+          },
+          {
+            "id": "keep",
+            "passage": "Dew is water from cool air. It is not the spider's glue. Beads catch light on the spiral. Later many beads shrink. Keep looking with care.",
+            "prompt": "What is dew made of?"
+          }
+        ],
+        "words": [
+          {
+            "word": "radii",
+            "meaning": "straight spoke lines from the hub"
+          },
+          {
+            "word": "spiral",
+            "meaning": "the winding capture line"
+          },
+          {
+            "word": "dew",
+            "meaning": "water beads from cool air"
+          },
+          {
+            "word": "tug",
+            "meaning": "a small pull on the silk"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 24 dew beads, then 18 more. How many beads?",
+            "expression": "24 + 18",
+            "equation": "24 + 18 =",
+            "answer": 42,
+            "hint": "Add ones, then tens.",
+            "worked": "24 + 18 = 42. Add or subtract the story counts step by step."
+          },
+          {
+            "plate": "reach",
+            "prompt": "Big Wonderer draws 45 lines, then erases 19. How many remain?",
+            "expression": "45 − 19",
+            "equation": "45 − 19 =",
+            "answer": 26,
+            "hint": "Regroup if you need ones.",
+            "worked": "45 − 19 = 26. Add or subtract the story counts step by step."
+          },
+          {
+            "plate": "change",
+            "prompt": "They sort 27 glue samples and 14 woolly ones. How many samples?",
+            "expression": "27 + 14",
+            "equation": "27 + 14 =",
+            "answer": 41,
+            "hint": "Add ones, then tens.",
+            "worked": "27 + 14 = 41. Add or subtract the story counts step by step."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A try has 40 soft taps. Cross out 17. How many taps left?",
+            "expression": "40 − 17",
+            "equation": "40 − 17 =",
+            "answer": 23,
+            "hint": "Trade a ten if needed.",
+            "worked": "40 − 17 = 23. Add or subtract the story counts step by step."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one makes 16 sketches and 15 photos. How many records?",
+            "expression": "16 + 15",
+            "equation": "16 + 15 =",
+            "answer": 31,
+            "hint": "Add ones, then tens.",
+            "worked": "16 + 15 = 31. Add or subtract the story counts step by step."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Morning shows 38 beads. Later 19 dry up. How many remain?",
+            "expression": "38 − 19",
+            "equation": "38 − 19 =",
+            "answer": 19,
+            "hint": "Regroup ones, then subtract.",
+            "worked": "38 − 19 = 19. Add or subtract the story counts step by step."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer paused on the garden path and pointed at a bush. The orb web that had been nearly invisible overnight now glittered because cool air had left dew beads on the silk. Those beads catch morning light, so the pattern suddenly shows. As the day warms, many drops shrink. Dew helps us look; it is not the spider's glue, and hands still stay away.",
+            "prompt": "How does dew change what you can notice on a web?"
+          },
+          {
+            "id": "reach",
+            "passage": "Many orb webs share a hub, straight radii like spokes, and a capture spiral that winds around them. On many webs the radii and hub stay dry and strong while the spiral holds tiny glue beads. Spiders often walk the dry lines and feel prey on the sticky spiral. Not every spider builds an orb, so outdoor finds can look different.",
+            "prompt": "Why might a spider prefer dry radii for walking?"
+          },
+          {
+            "id": "change",
+            "passage": "Spiders spin several silks for different jobs. Dragline silk is strong for bridges and safety lines. Capture silk may carry glue droplets, or it may be combed into a dry woolly strand with a cribellum plate. Woolly cribellate silk can snag legs and wings without sticky glue. Researchers still compare how each kind behaves in wind and rain.",
+            "prompt": "What is one difference between glue silk and cribellate silk?"
+          },
+          {
+            "id": "notice",
+            "passage": "Big Wonderer watched a spider rest near the hub with legs on the radii. Silk carries vibrations, so a tiny tug can travel to those legs. Sensors help the spider tell a breeze from a struggling insect. Because the spider knows the dry paths, it does not need every line to be sticky.",
+            "prompt": "How do vibrations help a spider hunt from the hub?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one lifted a pencil while the big one kept a clear step back from the silk. A web is both a home and a trap, and touching can undo hours of work or bring a child too close. Sketching, zooming a camera, or watching with eyes only keeps the lesson kind. Leave the lace where the spinner put it.",
+            "prompt": "What makes look-don't-touch a better plan than a quick tap?"
+          },
+          {
+            "id": "keep",
+            "passage": "Morning dew is water condensed from cool air, not a glue the spider placed for prey. The drops sit on silk and sparkle, so spiral loops that were hard to count at night become easy to see. Later the air warms and many beads shrink or fall. Soft side light can still reveal dry radii when the dew is gone.",
+            "prompt": "If the dew fades, what is another careful way to see the web?"
+          }
+        ],
+        "words": [
+          {
+            "word": "orb",
+            "meaning": "a wheel-shaped web with spokes and a spiral"
+          },
+          {
+            "word": "radii",
+            "meaning": "straight spoke lines from the hub"
+          },
+          {
+            "word": "capture spiral",
+            "meaning": "the winding line that often holds the catch silk"
+          },
+          {
+            "word": "cribellum",
+            "meaning": "a tiny plate used to comb woolly catch silk"
+          },
+          {
+            "word": "ecribellate",
+            "meaning": "using glue droplets instead of woolly cribellate silk"
+          },
+          {
+            "word": "vibration",
+            "meaning": "a tiny shake traveling along silk"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer logs 126 dew beads across pages, then adds 48 more from a second bush. How many beads logged?",
+            "expression": "126 + 48",
+            "equation": "126 + 48 =",
+            "answer": 174,
+            "hint": "Add ones, then tens, then 100s.",
+            "worked": "126 + 48 = 174. Show each place, then check the story total."
+          },
+          {
+            "plate": "reach",
+            "prompt": "Big Wonderer measures a sketch length of 305 mm and trims 79 mm of margin. How many mm of web drawing remain?",
+            "expression": "305 − 79",
+            "equation": "305 − 79 =",
+            "answer": 226,
+            "hint": "Regroup when ones or tens run short.",
+            "worked": "305 − 79 = 226. Show each place, then check the story total."
+          },
+          {
+            "plate": "change",
+            "prompt": "They compare 9 glue-droplet photos in each of 8 rows. How many photos is that?",
+            "expression": "9 × 8",
+            "equation": "9 × 8 =",
+            "answer": 72,
+            "hint": "Nine groups of eight.",
+            "worked": "9 × 8 = 72. Show each place, then check the story total."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A vibration try records 72 taps shared equally into 8 sets. How many taps per set?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Divide 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Show each place, then check the story total."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one stores 156 sketches and later adds 37 photos. How many records now?",
+            "expression": "156 + 37",
+            "equation": "156 + 37 =",
+            "answer": 193,
+            "hint": "Add ones, then tens, then 100s.",
+            "worked": "156 + 37 = 193. Show each place, then check the story total."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Morning notes list 240 beads. By noon 65 have dried. How many bead notes remain active?",
+            "expression": "240 − 65",
+            "equation": "240 − 65 =",
+            "answer": 175,
+            "hint": "Regroup tens if you need ones.",
+            "worked": "240 − 65 = 175. Show each place, then check the story total."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer halted on the path and stared at a bush that seemed to wear lace. The orb web had been almost invisible in the night, yet cool air left dew beads on the silk, and those beads caught the first light so every spiral loop suddenly stood out. Dew is water from the air, not spider glue, and it often fades as the morning warms. Looking from a step back still keeps the spinner's work whole.",
+            "prompt": "How can dew reveal a web that was hard to see overnight?"
+          },
+          {
+            "id": "reach",
+            "passage": "Field guides often describe orb webs as a hub, radii, and capture spiral working together. On many species the radii stay dry and strong enough to walk, while the spiral carries the catching surface—sometimes glue beads, sometimes another silk trick. Spiders frequently use the dry spokes as safe paths and read prey signals from the spiral. Because not every spider builds an orb, comparing shapes outside is part of the wonder.",
+            "prompt": "How do dry radii and a capture spiral split jobs on many orb webs?"
+          },
+          {
+            "id": "change",
+            "passage": "Silk is not one material with one job. Dragline silk handles bridges and safety lines, while capture silk is tuned for stopping prey. Ecribellate webs often present glue droplets along the spiral; cribellate spiders comb a dry woolly silk with a cribellum, and that fuzz can snag without sticky glue. Scientists continue to test how each design handles rain, dust, and tired prey, so claims stay careful.",
+            "prompt": "Why might a researcher refuse to call one catch silk always best?"
+          },
+          {
+            "id": "notice",
+            "passage": "Big Wonderer noticed the spider resting near the hub with legs lightly set on the radii. A struggling insect shakes the capture spiral, and that vibration can travel inward along the silk network to the waiting legs. Leg sensors help separate a harmless breeze from a meaningful tug. Knowing the dry routes home matters as much as stickiness, because the hunter must move without becoming the catch.",
+            "prompt": "How can vibration sensing let a spider hunt without watching every thread?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one wanted to prove the lace was real with one quick tap, yet the big one kept both of them a clear step back with notebook ready. A web is architecture, home, and trap at once; touching can destroy hours of spinning and can also put a curious face too close to a surprised animal. Eyes, sketches, and zoom lenses gather evidence without unpaid demolition. Kind looking is part of the science.",
+            "prompt": "Why are sketching and zoom better evidence tools than touching the silk?"
+          },
+          {
+            "id": "keep",
+            "passage": "When dew beads line a spiral, they act like tiny lenses that scatter morning light and outline geometry the night had hidden. Those beads condensed from cool air; they are not the adhesive the spider may place for prey, and mixing those ideas up confuses the mechanism. After the beads shrink, a change in side light or viewing angle can still reveal dry radii. Curiosity keeps working after the sparkle fades.",
+            "prompt": "How is dew different from the spider’s own capture methods?"
+          }
+        ],
+        "words": [
+          {
+            "word": "orb",
+            "meaning": "a roughly circular spoke-and-spiral web design"
+          },
+          {
+            "word": "radii",
+            "meaning": "the straight structural spokes from hub to edge"
+          },
+          {
+            "word": "capture spiral",
+            "meaning": "the winding line that often bears the catching silk"
+          },
+          {
+            "word": "cribellum",
+            "meaning": "a spinning plate that helps form woolly catch silk"
+          },
+          {
+            "word": "cribellate",
+            "meaning": "using combed woolly silk rather than glue droplets"
+          },
+          {
+            "word": "ecribellate",
+            "meaning": "using glue droplets on capture silk"
+          },
+          {
+            "word": "vibration",
+            "meaning": "a mechanical shake that can travel through silk"
+          },
+          {
+            "word": "dragline",
+            "meaning": "strong silk used for bridges and safety lines"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer records 1248 dew-bead tallies, then adds 376 more. How many tallies now?",
+            "expression": "1248 + 376",
+            "equation": "1248 + 376 =",
+            "answer": 1624,
+            "hint": "Add each place. Regroup when a column reaches 10.",
+            "worked": "1248 + 376 = 1624. Add ones, tens, 100s, and 1000s with regrouping."
+          },
+          {
+            "plate": "reach",
+            "prompt": "Big Wonderer has a 2060 millimeters string model and cuts away 485 millimeters. How many millimeters remain?",
+            "expression": "2060 - 485",
+            "equation": "2060 - 485 =",
+            "answer": 1575,
+            "hint": "Regroup across places as needed.",
+            "worked": "2060 - 485 = 1575. Regroup, then subtract each place."
+          },
+          {
+            "plate": "change",
+            "prompt": "They print 8 photo strips with 9 silk close-ups on each strip. How many close-ups?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Eight nines make seventy-two close-ups."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A lab notebook lists 96 vibration trials shared equally among 8 mornings. How many trials per morning?",
+            "expression": "96 ÷ 8",
+            "equation": "96 ÷ 8 =",
+            "answer": 12,
+            "hint": "Divide 96 into 8 equal groups.",
+            "worked": "96 ÷ 8 = 12. Eight equal mornings get twelve trials each."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one files 1085 sketches and later adds 249 cards. How many files in the set?",
+            "expression": "1085 + 249",
+            "equation": "1085 + 249 =",
+            "answer": 1334,
+            "hint": "Add place by place with regrouping.",
+            "worked": "1085 + 249 = 1334. Add each place and regroup when needed."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A class chart starts with 3200 bead marks. After sun hits, 1158 marks are crossed off. How many marks remain?",
+            "expression": "3200 - 1158",
+            "equation": "3200 - 1158 =",
+            "answer": 2042,
+            "hint": "Subtract place by place. Regroup when needed.",
+            "worked": "3200 - 1158 = 2042. Regroup, then subtract each place."
+          }
+        ]
+      }
+    }
   },
+  "screenFree": [
+    "lab-page"
+  ],
   "titleCard": {
     "plate": "wake",
-    "edition": "FINGERPRINTS · 2026-11-03",
-    "subtitle": "Loops. Ridges. Koalas. Wrinkles."
+    "edition": "SPIDER WEBS · 2026-11-05",
+    "subtitle": "Hub. Radii. Sticky spiral."
+  },
+  "labPage": {
+    "materials": [
+      "notebook",
+      "pencil",
+      "clipboard or stiff cardboard",
+      "optional magnifying glass",
+      "optional camera or phone zoom",
+      "soft morning light (outdoors)"
+    ]
   },
   "poem": {
-    "title": "Little Wonderer Leaves Clues",
+    "title": "Please Don't Pat the Lace",
     "lines": [
-      "Little Wonderer touched the jam jar lid,",
-      "the window, the doorknob, the drum. Yes, it did.",
-      "It patted the mirror, it poked at the cake,",
-      "it tapped every spoon just for tapping’s sake.",
+      "Little Wonderer spotted a shine in the hedge,",
+      "a wheel made of whispers along the leaf edge.",
+      "\"It's lace!\" cried the little one. \"May I tap it, just once?\"",
+      "Big Wonderer answered, \"Let's look — not a touch.\"",
       "",
-      "“Oh no!” it cried out. “There are clues everywhere!",
-      "A loop on the cupboard! A whorl on the chair!",
-      "A detective could follow my trail through the house.",
-      "I’m as easy to find as a jam-covered mouse!”",
+      "They counted the spokes that ran dry from the hub,",
+      "then the spiral that glittered with one tiny bead-dub.",
+      "\"Some silk may be sticky; some silk may be strong,\"",
+      "said the big one. \"The builder feels tugs all day long.\"",
       "",
-      "Big Wonderer nodded and wiped off a pane.",
-      "“Your swirls will grow bigger but mostly remain.",
-      "No two have been found to match, pair after pair,",
-      "so a print is a clue that says someone was there.”",
+      "A breeze made a shiver that raced down a line.",
+      "The little one whispered, \"That signal's a sign!\"",
+      "They sketched from a step back, both quiet and still,",
+      "while dew beads lit pathways along the green hill.",
       "",
-      "So the little one wore socks on both hands all day,",
-      "to tiptoe through mischief and sneak right away.",
-      "But it tripped on the rug and it fell in the dough,",
-      "and now there’s a Little-shaped print, head to toe."
+      "So if you find lace on a bush in the sun,",
+      "remember the worker whose weaving is done.",
+      "Look close with your eyes, keep your fingers in place —",
+      "and thank the small spinner. Please don't pat the lace."
     ],
     "drawing": {
-      "src": "assets/fingerprints-2026-11-03/poem.jpg",
-      "alt": "A black-ink drawing of Little Wonderer, with socks on its hands, sitting beside a Little-shaped imprint in bread dough on a kitchen table while Big Wonderer looks on."
+      "src": "assets/spider-webs/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer standing a step back from a dew-bright orb web on a bush; Little holds a notebook while both gaze at the web."
     }
   },
-  "screenFreeCards": {
-    "challenge": [
+  "quiz": {
+    "questions": [
       {
-        "title": "Say it your way",
-        "text": "Explain “bifurcation” to the table in your own words. Try not to say the word itself.",
-        "key": "bifurcation: a place where one ridge splits in two."
+        "id": "parts",
+        "prompt": "Which orb-web parts are often dry?",
+        "choices": [
+          "The hub and radii",
+          "Only the capture spiral",
+          "Every line equally",
+          "Only the dew beads"
+        ],
+        "answerIndex": 0,
+        "answer": "The hub and radii are often dry and strong; the spiral may hold glue."
       },
       {
-        "title": "Draw it",
-        "text": "Draw your own fingerprint big. Mark one place where a ridge ends or splits. Show it to the table.",
-        "key": "Look for: a big fingerprint drawing with at least one place marked where a ridge ends or splits in two."
+        "id": "silk",
+        "prompt": "How can silk catch without glue?",
+        "choices": [
+          "It must wait for dew",
+          "Woolly cribellate silk can snag",
+          "Radii melt into glue",
+          "Spiders paint the spokes sticky"
+        ],
+        "answerIndex": 1,
+        "answer": "Woolly cribellate silk can snag legs and wings without glue droplets."
+      },
+      {
+        "id": "sense",
+        "prompt": "How does a spider feel a tiny tug?",
+        "choices": [
+          "Only by watching with eyes",
+          "Silk carries vibrations to its legs",
+          "By tasting the dew",
+          "By counting spiral loops"
+        ],
+        "answerIndex": 1,
+        "answer": "Silk carries vibrations; legs on the radii can feel a tug that may mean prey."
+      },
+      {
+        "id": "dew",
+        "prompt": "What is morning dew on a web?",
+        "choices": [
+          "Spider glue for prey",
+          "Water from cool air that catches light",
+          "Paint on the silk",
+          "A kind of cribellum silk"
+        ],
+        "answerIndex": 1,
+        "answer": "Dew is water from cool air. It catches light so the web pattern shows."
       }
     ]
   }

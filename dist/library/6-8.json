@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "spider-webs",
+      "band": "6-8",
+      "topic": "spider webs",
+      "why": "Looking at silk lines and a sticky spiral helps your child describe a structure and ask how its parts work together.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "addition-regrouping",
+        "subtraction-regrouping"
+      ],
+      "date": "2026-11-05",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "fingerprints-2026-11-03",
       "band": "6-8",
       "topic": "fingerprints up close",
