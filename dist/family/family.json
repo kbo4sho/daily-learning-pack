@@ -32,18 +32,7 @@
       "label": "Little Wonderer",
       "archiveHref": "./little/archive/",
       "printHref": "./family/print/#little",
-      "today": {
-        "href": "./little/today/",
-        "topic": "how cats talk",
-        "why": "Listening to how cats talk helps your child notice sounds and body signals while practicing counting, letter sounds and tracing.",
-        "date": "2026-10-21",
-        "pdfs": [
-          {
-            "href": "./little/days/how-cats-talk/little-pack.pdf",
-            "label": "Print the pack"
-          }
-        ]
-      }
+      "today": null
     }
   ]
 }

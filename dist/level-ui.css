@@ -1,0 +1,125 @@
+/* Level variables (WD-LEVEL-VARS phase 2): header chip + grown-up dialog. */
+.level-chip {
+  font: inherit;
+  font-size: 0.85rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  padding: 0.3rem 0.75rem;
+  min-height: 44px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.level-dialog {
+  border: 0;
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  width: min(92vw, 26rem);
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 12px 40px rgb(0 0 0/0.25);
+}
+.level-dialog::backdrop {
+  background: rgb(41 59 53/0.45);
+}
+.level-dialog h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+.level-dialog p {
+  margin: 0.4rem 0 0.8rem;
+}
+.level-hold {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 56px;
+  font: inherit;
+  font-weight: 600;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.level-hold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: rgb(41 59 53/0.18);
+}
+.level-hold.holding::before {
+  transform: scaleX(1);
+  transition: transform 1.5s linear;
+}
+.level-quiz {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.level-quiz input {
+  font: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  min-height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+.level-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.6rem 0;
+}
+.level-row button,
+.level-dialog .level-actions button,
+.level-quiz button {
+  font: inherit;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.level-row button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.level-dialog label {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+.level-dialog select {
+  font: inherit;
+  min-height: 44px;
+  width: 100%;
+  margin-top: 0.3rem;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+.level-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.level-wrong {
+  color: #8a3b12;
+  min-height: 1.2em;
+}
+.level-dialog [hidden] {
+  display: none !important;
+}
