@@ -120,7 +120,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
       "curiosity-inchworms",
       "how-pianos-work",
       "diamond",
-      "curiosity-bean"
+      "curiosity-bean",
     ],
   );
   const today = await read("dist/today/index.html");
