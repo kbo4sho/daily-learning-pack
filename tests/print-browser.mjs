@@ -496,21 +496,25 @@ const shipped = allPdfs.slice().sort();
     !/id="poem"|class="daily-poem"|poem-lines/.test(day),
     "the poem renders inline on the day page",
   );
-  // One Poem link, in the shared header next to All mornings; none below.
+  // FM-SPIDER-1: one Poem link at the end of .daily-nav (not in the header).
   const header = day.match(
     /<header class="daily-header">[\s\S]*?<\/header>/,
   )[0];
   assert.equal(
-    header.includes(
-      '<a class="archive-door poem-door" href="./poem/">Poem</a>',
-    ),
+    /poem-door|poem-nav-link|href="\.\/poem\/"/.test(header),
+    false,
+    "the header has no Poem link (Poem lives in .daily-nav)",
+  );
+  const dayNav = day.match(/<nav class="daily-nav"[\s\S]*?<\/nav>/)?.[0] || "";
+  assert.equal(
+    /<a class="poem-nav-link" href="\.\/poem\/">Poem<\/a><\/nav>/.test(dayNav),
     Boolean(pack.poem),
-    "the header has a Poem link exactly when the pack has a poem",
+    "the nav has a Poem link exactly when the pack has a poem",
   );
   assert.equal(
     (day.match(/href="\.\/poem\/"/g) || []).length,
     pack.poem ? 1 : 0,
-    "the day page links its poem page once, from the header",
+    "the day page links its poem page once, from the nav",
   );
   assert.ok(
     !/daily-poem-link|Today’s poem/.test(day),
@@ -539,8 +543,10 @@ const shipped = allPdfs.slice().sort();
       "poem page Print menu",
     );
     assert.ok(
-      chrome.includes('href="./" aria-current="page">Poem</a>'),
-      "Poem is the current page",
+      chrome.includes(
+        '<a class="poem-nav-link" href="./" aria-current="page">Poem</a>',
+      ),
+      "Poem is the current page in .daily-nav",
     );
     const dayTabs = [
       ...day
