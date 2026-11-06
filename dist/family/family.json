@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "spider webs",
-        "why": "Looking at silk lines and a sticky spiral helps your child describe a structure and ask how its parts work together.",
-        "date": "2026-11-05",
+        "topic": "soap bubbles",
+        "why": "Watching bubbles form, change color and pop helps your child describe a sequence and ask questions about change.",
+        "date": "2026-11-06",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

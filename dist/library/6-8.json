@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "soap-bubbles",
+      "band": "6-8",
+      "topic": "soap bubbles",
+      "why": "Watching bubbles form, change color and pop helps your child describe a sequence and ask questions about change.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "one-step-add",
+        "one-step-subtract"
+      ],
+      "date": "2026-11-06",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "spider-webs",
       "band": "6-8",
       "topic": "spider webs",

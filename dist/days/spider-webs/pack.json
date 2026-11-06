@@ -78,8 +78,20 @@
       "original": "assets/spider-webs/01-dew.png",
       "foldSrc": "assets/spider-webs/01-dew-fold.jpg",
       "title": "A web in the dew",
-      "alt": "Big and Little Wonderer stand on a garden path at soft morning light and share one gaze toward an orb web on a bush, bright with dew beads on the spiral.",
-      "caption": "Dew makes a quiet web easy to see."
+      "alt": "Big and Little Wonderer stand on a garden path at soft morning light and share one gaze toward an orb web on a bush, bright with dew beads on the spiral, with a small spider resting at the hub.",
+      "caption": "Dew makes a quiet web easy to see.",
+      "wonderers": true,
+      "characterReview": {
+        "reference": "07-characters.png",
+        "sha256": "35a11c181d8358888ae76442b4ffa8396638ab3196ab88cef24c9344515a38d6",
+        "warmCream": true,
+        "noMouthOrBlush": true,
+        "flushEarNubs": true,
+        "ratio": true,
+        "notBears": true,
+        "reviewedBy": "Wonder Daily (FM-CHAR-REDRAW), viewed beside 07-characters.png",
+        "reviewedAt": "2026-11-05"
+      }
     },
     {
       "id": "reach",
@@ -115,7 +127,19 @@
       "foldSrc": "assets/spider-webs/05-look-fold.jpg",
       "title": "Look, don't touch",
       "alt": "Big and Little Wonderer stand a few steps back on a path, sharing one gaze toward a garden web while Little holds a small notebook and pencil. No hands near the silk.",
-      "caption": "Watch from a safe step back."
+      "caption": "Watch from a safe step back.",
+      "wonderers": true,
+      "characterReview": {
+        "reference": "07-characters.png",
+        "sha256": "31bccb102d7b6c2baf25c2fc48ed7938a2076160dd21c88e3310c9b76b760814",
+        "warmCream": true,
+        "noMouthOrBlush": true,
+        "flushEarNubs": true,
+        "ratio": true,
+        "notBears": true,
+        "reviewedBy": "Wonder Daily (FM-CHAR-REDRAW), viewed beside 07-characters.png",
+        "reviewedAt": "2026-11-05"
+      }
     },
     {
       "id": "keep",

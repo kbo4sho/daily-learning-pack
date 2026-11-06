@@ -1,26 +1,27 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "spider-webs",
-  "topic": "spider webs",
-  "why": "Looking at silk lines and a sticky spiral helps your child describe a structure and ask how its parts work together.",
-  "teaser": "Find hub, radii and a sticky spiral, then go deeper: silk types, glue vs woolly silk, and how spiders feel a tug.",
+  "slug": "soap-bubbles",
+  "topic": "soap bubbles",
+  "why": "Watching bubbles form, change color and pop helps your child describe a sequence and ask questions about change.",
+  "teaser": "Blow a ring, watch colors swirl on a thin soap film, then ask why a bubble is round — and why it pops.",
   "aliases": [
-    "orb webs",
-    "spider silk",
-    "how spider webs work"
+    "bubbles",
+    "soap film",
+    "thin film colors",
+    "surface tension"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "number-crunch",
+  "mathTemplate": "story-problems",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "addition-regrouping",
-      "subtraction-regrouping"
+      "one-step-add",
+      "one-step-subtract"
     ],
     "format": "curiosity-day"
   },
@@ -28,389 +29,398 @@
     7,
     8
   ],
-  "editionLabel": "GRADE 3 · CURIOSITY",
-  "wonderLabel": "FOUR LITTLE WONDERS",
-  "title": "Spider Webs",
-  "question": "How is a spider web built, and how do its parts work together?",
-  "idea": "Many orb webs use strong dry radii and a sticky capture spiral. Spiders feel tiny tugs through the silk. Look closely, and do not touch.",
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Soap Bubbles",
+  "title": "Soap Bubbles",
+  "question": "Why do soap bubbles show swirling colors, stay round, and then pop?",
+  "idea": "A soap bubble is a thin water-and-soap film with air inside. Light bouncing in the film makes swirling colors as the film thins. Surface tension pulls the film into a round shape. When a spot gets too thin or dry, the bubble pops.",
   "curiosity": {
-    "intro": "Start with a dew-bright web and its parts. Then go deep into silk kinds, sticky spirals, and vibration sensing.",
-    "carryForward": "Look for the parts, then ask which silk is sticky and which is not.",
+    "intro": "Start with one floating bubble. Then look closer: a thin soap film, swirling colors, a round shape, and a careful why for the pop.",
+    "carryForward": "Watch the colors change, then ask what the film is doing as it thins.",
     "questions": [
       {
-        "id": "parts",
+        "id": "film",
         "plate": "reach",
-        "question": "Which lines are sticky on an orb web?",
-        "notice": "Find the center hub, the straight lines that go out like spokes, and the spiral that winds around them.",
-        "say": "On many orb webs, the spokes (radii) and the small hub are dry and strong. The outer spiral often holds tiny glue beads. Spiders walk the dry lines and feel prey on the sticky spiral. Not every web is an orb, and not every spiral is sticky the same way.",
-        "try": "From a few steps away, sketch a web you can see. Mark the hub, three spokes, and one loop of the spiral. Do not touch the silk."
+        "question": "What is a soap bubble made of?",
+        "notice": "Find the thin shiny wall of the bubble, and the air space inside.",
+        "say": "A soap bubble is a very thin film of water mixed with soap, wrapped around a pocket of air. Soap molecules help the watery film hold together a little longer than plain water would. The wall is so thin you can see through it, yet it still encloses the air.",
+        "try": "Dip a wand and hold up a flat soap film (not a bubble yet). Look at the film edge-on if you can, then blow gently to trap air inside."
       },
       {
-        "id": "silk",
+        "id": "colors",
         "plate": "change",
-        "question": "How can silk catch without glue?",
-        "notice": "Find the two silk samples: one with shiny droplets, and one that looks soft and woolly.",
-        "say": "Some spiders make capture silk with glue droplets (ecribellate silk). Others comb out a dry, woolly silk with a special plate called a cribellum (cribellate silk). The woolly silk snags legs and wings without sticky glue. Scientists still study exactly how each kind works best.",
-        "try": "On your sketch, label one spiral loop 'maybe glue' and write one question you still have about silk."
+        "question": "Why do bubble colors swirl and shift?",
+        "notice": "Find places on the bubble where stripes of color move and change.",
+        "say": "Light reflects from the front and back of the thin soap film. Those reflections can add or cancel, so some colors look bright while others fade. As water drains or evaporates, the film gets thinner, and the color pattern shifts. Scientists call this thin-film interference.",
+        "try": "Watch one bubble without poking it. Name two colors you see, then notice whether they move toward the top or bottom as time passes."
       },
       {
-        "id": "sense",
-        "plate": "notice",
-        "question": "How does a spider feel a tiny tug?",
-        "notice": "Find the spider resting near the hub, with one or two legs on the silk.",
-        "say": "Silk carries vibrations. Many spiders keep legs on the radii so a buzz or tug can travel to them. Tiny sensors in the legs help them tell a breeze from a struggling insect. They usually do not need sticky feet on every line because they know the dry paths.",
-        "try": "Tap a table lightly with a pencil, then harder. Tell which tap felt bigger through your hand. That is only a toy model of vibration, not a real web."
+        "id": "round",
+        "plate": "return",
+        "question": "Why are free-floating bubbles round?",
+        "notice": "Compare a free bubble in the air with any stretched film still on a wand.",
+        "say": "Surface tension pulls on the soap film from every direction. For a given amount of air inside, a sphere uses the least film area, so a free bubble settles into a round shape. On a wand, the frame can stretch the film into other shapes until the air is trapped.",
+        "try": "Blow one bubble and watch it from the side. Sketch the round outline, then write one sentence about the pull of the film."
       },
       {
-        "id": "dew",
+        "id": "pop",
         "plate": "keep",
-        "question": "Why does dew make a web easy to see?",
-        "notice": "Find the morning web with water beads shining on the spiral.",
-        "say": "Cool mornings leave tiny water drops on silk. The drops catch light, so the web that was nearly invisible overnight suddenly shows its pattern. As the air warms, many drops shrink or fall. Dew helps us look; it is not glue from the spider.",
-        "try": "On a cool morning, look for a web on a fence or bush. Count how many spiral loops you can see before the dew fades. Stay back and do not touch."
+        "question": "Why does a bubble pop?",
+        "notice": "Find a dark or dull patch on a bubble just before it vanishes, if you can.",
+        "say": "A bubble pops when its film breaks. Touching it, dusty air, or a dry spot can open a hole. Even without a poke, water leaves the film as it drains and evaporates, so a place can get too thin to hold. Some recipes last longer, but every ordinary soap bubble still has a short life.",
+        "try": "Time how long two bubbles last in still air. Change only one thing (shade versus sun, or a gentle cover) and compare. Do not aim bubbles at faces or eyes."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/spider-webs/01-dew.jpg",
-      "original": "assets/spider-webs/01-dew.png",
-      "foldSrc": "assets/spider-webs/01-dew-fold.jpg",
-      "title": "A web in the dew",
-      "alt": "Big and Little Wonderer stand on a garden path at soft morning light and share one gaze toward an orb web on a bush, bright with dew beads on the spiral.",
-      "caption": "Dew makes a quiet web easy to see."
+      "src": "assets/soap-bubbles/01-blow.jpg",
+      "original": "assets/soap-bubbles/01-blow.png",
+      "foldSrc": "assets/soap-bubbles/01-blow-fold.jpg",
+      "title": "A first bubble",
+      "alt": "Big and Little Wonderer stand together on a warm garden path in soft daylight; Little holds a simple bubble wand while a single round soap bubble floats between them, and both share one gaze toward the bubble.",
+      "caption": "One quiet bubble lifts into the air."
     },
     {
       "id": "reach",
-      "src": "assets/spider-webs/02-orb.jpg",
-      "original": "assets/spider-webs/02-orb.png",
-      "foldSrc": "assets/spider-webs/02-orb-fold.jpg",
-      "title": "Hub, radii, spiral",
-      "alt": "A clear field-guide study of an orb web: a small hub in the center, straight dry radii like spokes, and a capture spiral winding around them, strung between two dry stems in a clay pot on a wooden bench.",
-      "caption": "Strong dry spokes. A spiral that may hold glue."
+      "src": "assets/soap-bubbles/02-film.jpg",
+      "original": "assets/soap-bubbles/02-film.png",
+      "foldSrc": "assets/soap-bubbles/02-film-fold.jpg",
+      "title": "A thin soap film",
+      "alt": "A clear field-guide close study of a round soap bubble and a wand with a flat soap film stretched across its ring, showing the thin shiny wall and the air inside, on pale ivory paper.",
+      "caption": "A watery soap film wraps a pocket of air."
     },
     {
       "id": "change",
-      "src": "assets/spider-webs/03-silk.jpg",
-      "original": "assets/spider-webs/03-silk.png",
-      "foldSrc": "assets/spider-webs/03-silk-fold.jpg",
-      "title": "Two kinds of catch silk",
-      "alt": "A close field-guide study of two silk strands stretched between twigs on paper: one with neat shiny glue droplets, and one soft and woolly without droplets.",
-      "caption": "Glue beads, or woolly silk that snags."
+      "src": "assets/soap-bubbles/03-colors.jpg",
+      "original": "assets/soap-bubbles/03-colors.png",
+      "foldSrc": "assets/soap-bubbles/03-colors-fold.jpg",
+      "title": "Colors that swirl",
+      "alt": "A close field-guide study of a soap bubble surface with soft swirling stripes of muted rainbow color on the thin film, no text, pale ivory background.",
+      "caption": "Light and a thinning film make colors shift."
     },
     {
       "id": "notice",
-      "src": "assets/spider-webs/04-sense.jpg",
-      "original": "assets/spider-webs/04-sense.png",
-      "foldSrc": "assets/spider-webs/04-sense-fold.jpg",
-      "title": "Feeling a tug",
-      "alt": "A calm spider rests near the hub of an orb web with legs touching the dry radii, while a small insect is caught on the outer spiral, between a wooden fence post and a leafy stem.",
-      "caption": "Vibrations travel along the silk."
+      "src": "assets/soap-bubbles/04-bands.jpg",
+      "original": "assets/soap-bubbles/04-bands.png",
+      "foldSrc": "assets/soap-bubbles/04-bands-fold.jpg",
+      "title": "Stripes to notice",
+      "alt": "A calm notebook-and-bubble study: soft color stripes on a floating soap bubble beside a small blank notebook and pencil, as if someone is recording how the colors move, pale ivory background.",
+      "caption": "Color stripes are a clue the film is changing."
     },
     {
       "id": "return",
-      "src": "assets/spider-webs/05-look.jpg",
-      "original": "assets/spider-webs/05-look.png",
-      "foldSrc": "assets/spider-webs/05-look-fold.jpg",
-      "title": "Look, don't touch",
-      "alt": "Big and Little Wonderer stand a few steps back on a path, sharing one gaze toward a garden web while Little holds a small notebook and pencil. No hands near the silk.",
-      "caption": "Watch from a safe step back."
+      "src": "assets/soap-bubbles/05-round.jpg",
+      "original": "assets/soap-bubbles/05-round.png",
+      "foldSrc": "assets/soap-bubbles/05-round-fold.jpg",
+      "title": "Why so round?",
+      "alt": "Big and Little Wonderer stand side by side on a garden path, warm cream bodies, Big slightly behind Little; both share one gaze toward a perfectly round free-floating soap bubble, while a wand with a stretched flat film rests nearby for comparison.",
+      "caption": "Surface tension pulls a free bubble into a sphere."
     },
     {
       "id": "keep",
-      "src": "assets/spider-webs/06-dewdrop.jpg",
-      "original": "assets/spider-webs/06-dewdrop.png",
-      "foldSrc": "assets/spider-webs/06-dewdrop-fold.jpg",
-      "title": "Beads of morning light",
-      "alt": "A close still life of web silk across the corner of a wooden garden gate, with clear dew beads along the threads in soft morning light, no spider in frame.",
-      "caption": "Dew catches light so we can see the pattern."
+      "src": "assets/soap-bubbles/06-pop.jpg",
+      "original": "assets/soap-bubbles/06-pop.png",
+      "foldSrc": "assets/soap-bubbles/06-pop-fold.jpg",
+      "title": "A careful pop",
+      "alt": "A field-guide moment just after a soap bubble has popped: tiny film droplets hang in soft light above a garden path, with a quiet empty space where the sphere was, pale ivory background, no text.",
+      "caption": "When the film breaks, the bubble is gone."
     }
   ],
   "reading": {
-    "title": "Spider webs, then deeper",
-    "coverPlate": "wake",
-    "coverText": "Start with a dew-bright web and its parts. Then go deep: silk kinds, sticky spirals and vibration sensing.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Look-don't-touch outdoors.",
-    "foldableTitle": "A little book of webs",
-    "foldableCoverLine": "Spider Webs",
-    "foldableNote": "Carry six web clues in a small book.",
     "beats": [
       {
         "id": "wake",
-        "plate": "wake",
-        "title": "A web in the dew",
-        "passage": "Little Wonderer stopped on the path. \"The bush is wearing lace,\" the little one whispered. Big Wonderer tipped its head. Overnight the web was almost invisible. Cool air left dew beads on the silk, and the beads caught the morning light. As the day warms, many drops shrink. Dew helps us see; it is not the spider's glue.",
-        "prompt": "Why can a web be hard to see at night, then easy at dawn?",
+        "title": "A first bubble",
+        "passage": "Little Wonderer dips a wand and blows once. A round soap bubble lifts into the soft garden light. Big Wonderer watches beside the little one. The bubble looks simple, yet its wall is busy. What keeps that thin shine from falling apart right away?",
+        "prompt": "What do you notice first about the floating bubble?",
         "foldable": {
-          "heading": "A web in the dew",
-          "body": "Cool air leaves dew on silk. The beads catch light, so a quiet web suddenly shows."
-        }
+          "heading": "A first bubble",
+          "body": "One soft blow lifts a round soap bubble into the light. Its thin wall already hides a quiet science story."
+        },
+        "plate": "wake"
       },
       {
         "id": "reach",
-        "plate": "reach",
-        "title": "Hub, radii, spiral",
-        "passage": "Many orb webs share three parts. The hub is the small center. Radii are the straight spokes. The capture spiral winds around them. On many webs the radii stay dry and strong, while the spiral holds tiny glue beads. Spiders often walk the dry lines. Not every spider builds an orb, so what you find outside may look different.",
-        "prompt": "Which parts of an orb web are often dry?",
+        "title": "A thin soap film",
+        "passage": "A soap bubble is a thin film of water mixed with soap, wrapped around air. Soap molecules help the watery film hold together longer than plain water would. You can stretch a flat film on a wand before any bubble forms. The wall looks delicate because it truly is thin.",
+        "prompt": "What two parts make up a soap bubble?",
         "foldable": {
-          "heading": "Hub, radii, spiral",
-          "body": "Hub in the center. Radii like spokes. Spiral may hold glue. Many spiders walk the dry lines."
-        }
+          "heading": "Thin soap film",
+          "body": "Water mixed with soap makes a thin shiny film. Air rests safely inside that delicate watery wall."
+        },
+        "plate": "reach"
       },
       {
         "id": "change",
-        "plate": "change",
-        "title": "Silk that catches",
-        "passage": "Spiders make more than one silk. Dragline silk is strong for bridges and safety lines. Capture silk is for catching. Some spiders coat the spiral with glue droplets. Others comb out a dry, woolly silk with a cribellum plate. That woolly silk can snag without sticky glue. Researchers still compare how each kind works in wind and rain.",
-        "prompt": "How can a web catch prey without sticky glue?",
+        "title": "Colors that swirl",
+        "passage": "Light reflects from the front and back of the soap film. Those reflections can add or cancel, so stripes of color appear. As water drains or evaporates, the film thins and the colors shift. Scientists call this thin-film interference. The swirl is a clue, not paint on the bubble.",
+        "prompt": "What makes the colors on a bubble change over time?",
         "foldable": {
-          "heading": "Silk that catches",
-          "body": "Dragline silk is strong. Capture silk may hold glue beads, or it may be woolly cribellate silk that snags without glue."
-        }
+          "heading": "Colors that swirl",
+          "body": "Light bounces inside the thinning soap film. Soft color stripes slide as the wall slowly changes."
+        },
+        "plate": "change"
       },
       {
         "id": "notice",
-        "plate": "notice",
-        "title": "Feeling a tug",
-        "passage": "Big Wonderer watched the hub. A spider rested with legs on the radii. Silk carries vibrations, so a tiny tug can travel to those legs. Sensors help tell a breeze from prey. The spider usually does not need every line to be sticky, because it knows the dry paths home.",
-        "prompt": "How can a spider notice prey without watching every second?",
+        "title": "Stripes to notice",
+        "passage": "Big Wonderer sketches the moving color stripes while the little one watches. A bright belt may slide as the film changes thickness. Recording what you see turns a pretty swirl into evidence. Later you can ask whether the top of the bubble thinned faster than the bottom.",
+        "prompt": "How can color stripes become evidence?",
         "foldable": {
-          "heading": "Feeling a tug",
-          "body": "Silk carries tiny vibrations. Legs on dry radii feel a tug that may mean prey."
-        }
+          "heading": "Stripes to notice",
+          "body": "Sketch the moving color stripes in a notebook. They hint that the soap film is getting thinner."
+        },
+        "plate": "notice"
       },
       {
         "id": "return",
-        "plate": "return",
-        "title": "Look, don't touch",
-        "passage": "Little Wonderer lifted a pencil. Big Wonderer stayed a step back. A web is a home and a trap. Touching can break hours of work and may put a spider or a child too close. Sketch from a safe distance. Use eyes, a notebook, or a camera zoom. Leave the silk where it is.",
-        "prompt": "Why should we look at webs without touching them?",
+        "title": "Why so round?",
+        "passage": "They look again at a free bubble beside a stretched film on a wand. Surface tension pulls on the soap film from every side. For the air inside, a sphere uses the least film area, so a free bubble settles into a round shape. The wand can force other shapes until the air is trapped.",
+        "prompt": "Why does a free-floating bubble look round?",
         "foldable": {
-          "heading": "Look, don't touch",
-          "body": "A web is a home and a trap. Watch from a step back. Sketch, don't touch."
-        }
+          "heading": "Why so round?",
+          "body": "Surface tension pulls the soap film evenly from every side. A free bubble settles into a round sphere."
+        },
+        "plate": "return"
       },
       {
         "id": "keep",
-        "plate": "keep",
-        "title": "Beads of light",
-        "passage": "Morning dew is water from the air, not spider glue. The drops sit on silk and sparkle, so the spiral pattern pops into view. Later the air warms and many beads shrink or fall. If you miss the dew, a soft side light may still reveal dry radii. Keep looking with care.",
-        "prompt": "What makes dew different from the spider's sticky glue?",
+        "title": "A careful pop",
+        "passage": "Every ordinary soap bubble has a short life. Touch, dust, or a dry thin spot can open a hole in the film. Even in still air, water leaves the wall as it drains and evaporates. When the film breaks, tiny droplets scatter and the sphere is gone. What might help a bubble last a little longer?",
+        "prompt": "Name one reason a soap bubble might pop.",
         "foldable": {
-          "heading": "Beads of light",
-          "body": "Dew is water from cool air. It catches light so we can see the web's pattern."
-        }
+          "heading": "A careful pop",
+          "body": "A hole in the thinning film ends the bubble at last. Tiny droplets scatter softly through the light."
+        },
+        "plate": "keep"
       }
     ],
     "words": [
       {
-        "word": "orb",
-        "meaning": "a roundish wheel-shaped web with spokes and a spiral"
+        "word": "soap film",
+        "meaning": "a thin watery wall mixed with soap"
       },
       {
-        "word": "radii",
-        "meaning": "the straight spoke lines that run from the hub outward"
+        "word": "interference",
+        "meaning": "light waves adding or canceling after reflecting"
       },
       {
-        "word": "spiral",
-        "meaning": "the winding line that circles the spokes"
+        "word": "surface tension",
+        "meaning": "the pull along a liquid's surface"
       },
       {
-        "word": "silk",
-        "meaning": "the strong thread a spider makes from its body"
+        "word": "evaporate",
+        "meaning": "when liquid water turns into vapor in the air"
       },
       {
-        "word": "cribellum",
-        "meaning": "a tiny spinning plate that helps make woolly catch silk"
-      },
-      {
-        "word": "vibration",
-        "meaning": "a tiny shake that can travel along a line of silk"
+        "word": "sphere",
+        "meaning": "a round ball shape with even sides"
       }
-    ],
-    "questions": [
-      "Why can a web be hard to see at night, then easy at dawn?",
-      "Which parts of an orb web are often dry, and which may hold glue?",
-      "How can some silk catch prey without sticky glue?",
-      "How does a spider feel a tiny tug on the web?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: one web part you noticed, one idea about sticky versus dry silk, and one safe way to look without touching.",
-      "example": "Example: I saw a hub and long radii. The spiral may hold glue beads. I will sketch from a step back."
-    }
+      "prompt": "Write or dictate three sentences: what a bubble wall is made of, why colors can swirl, and one careful way to watch a bubble without poking it toward a face.",
+      "example": "Example: The wall is a thin soap film around air. Colors shift as the film thins. I will watch from the side and keep wands away from eyes."
+    },
+    "parentNote": "Wonderers model looking, not face-blowing contests. Keep solution away from eyes; wipe spills. Hedge aloud: recipes and air conditions change how long bubbles last.",
+    "title": "Soap bubbles, then deeper",
+    "questions": [
+      "What do you notice first about a floating soap bubble?",
+      "What is the thin wall of a soap bubble made of?",
+      "Why can colors swirl and shift on a bubble?",
+      "Why are free-floating bubbles often round, and why do they pop?"
+    ],
+    "coverPlate": "wake",
+    "coverText": "Start with one floating bubble. Then look closer: thin soap film, swirling colors, a round shape, and a careful why for the pop.",
+    "foldableCoverLine": "Soap Bubbles",
+    "foldableNote": "Carry six bubble clues in a small book.",
+    "foldableTitle": "A little book of bubbles"
   },
   "math": {
-    "title": "Web numbers",
-    "intro": "Six add-and-subtract puzzles tied to dew beads, silk lines and careful looking.",
+    "title": "Bubble story numbers",
+    "eyebrow": "Math",
+    "intro": "Six one-step stories about bubbles, wands, and color stripes. Add or subtract to find each answer.",
+    "extension": "After you finish, tell which problem felt like watching a bubble pop.",
+    "plate": "notice",
+    "actionLabel": "Solve",
+    "answerKeyIntro": "Math answers (story numbers):",
+    "printNote": "Use these story numbers about soap bubbles. The picture is not a ruler.",
+    "parentNote": "Six one-step story problems tied to bubbles. Grade 2 number work; reading stays richer.",
+    "template": "story-problems",
     "tasks": [
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
+        "operands": [
+          28,
+          17
+        ],
+        "plate": "wake",
+        "label": "TASK 1",
+        "prompt": "Little Wonderer blows 28 bubbles, then 17 more float up. How many bubbles is that altogether?",
+        "equation": "28 + 17 =",
+        "hint": "Add the ones, then the tens.",
+        "answer": 45,
+        "worked": "28 + 17 = 45. Combine the bubbles from both blows."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          64,
+          29
+        ],
+        "plate": "reach",
+        "label": "TASK 2",
+        "prompt": "Big Wonderer counts 64 wand dips in the jar, then uses 29 of them. How many dips remain?",
+        "equation": "64 − 29 =",
+        "hint": "Trade 1 ten for 10 ones if you need more ones.",
+        "answer": 35,
+        "worked": "64 − 29 = 35. Subtract the dips that were used."
+      },
+      {
+        "skill": "one-step-add",
         "operands": [
           36,
-          28
+          48
         ],
-        "prompt": "Little Wonderer counts 36 dew beads on one spiral loop, then 28 more on the next. How many beads is that together?",
-        "equation": "36 + 28 =",
-        "hint": "Add 6 and 8 ones. Trade 10 ones for 1 ten.",
-        "answer": 64,
-        "worked": "6 + 8 = 14. Add 3 tens, 2 tens, and the new ten: 36 + 28 = 64.",
-        "plate": "wake",
-        "label": "TASK 1"
+        "plate": "change",
+        "label": "TASK 3",
+        "prompt": "The little one sketches 36 color stripes, then adds 48 more stripes after the film thins. How many stripe marks are in the notebook?",
+        "equation": "36 + 48 =",
+        "hint": "Add ones, then tens. Regroup if ones make a ten.",
+        "answer": 84,
+        "worked": "36 + 48 = 84. Add the stripe sketches together."
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
           81,
-          47
-        ],
-        "prompt": "Big Wonderer spots 81 silk lines in a sketch, then erases 47 that were practice marks. How many lines remain?",
-        "equation": "81 − 47 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract.",
-        "answer": 34,
-        "worked": "81 − 47 = 34. Regroup ones, then subtract tens.",
-        "plate": "reach",
-        "label": "TASK 2"
-      },
-      {
-        "skill": "addition-regrouping",
-        "operands": [
-          45,
           37
         ],
-        "prompt": "The little one counts 45 dry radii marks and 37 spiral marks in a notebook. How many marks in all?",
-        "equation": "45 + 37 =",
-        "hint": "Add the ones, then the tens. Trade if you make 10 ones.",
-        "answer": 82,
-        "worked": "5 + 7 = 12. Add 4 tens, 3 tens, and the new ten: 45 + 37 = 82.",
-        "plate": "change",
-        "label": "TASK 3"
-      },
-      {
-        "skill": "subtraction-regrouping",
-        "operands": [
-          70,
-          26
-        ],
-        "prompt": "A morning count shows 70 dew beads. Later 26 have dried. How many beads are left to see?",
-        "equation": "70 − 26 =",
-        "hint": "Trade 1 ten for 10 ones, then subtract ones and tens.",
-        "answer": 44,
-        "worked": "70 − 26 = 44. Regroup, then subtract.",
         "plate": "notice",
-        "label": "TASK 4"
+        "label": "TASK 4",
+        "prompt": "A tray holds 81 floating bubbles. Then 37 pop in the breeze. How many bubbles are still floating?",
+        "equation": "81 − 37 =",
+        "hint": "Subtract ones, then tens. Regroup if needed.",
+        "answer": 44,
+        "worked": "81 − 37 = 44. Take away the bubbles that popped."
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          58,
-          19
+          19,
+          56
         ],
-        "prompt": "Big Wonderer times 58 soft table taps, then 19 harder taps. How many taps in the vibration try?",
-        "equation": "58 + 19 =",
-        "hint": "Add 8 and 9 ones. Trade 10 ones for 1 ten.",
-        "answer": 77,
-        "worked": "8 + 9 = 17. Add 5 tens, 1 ten, and the new ten: 58 + 19 = 77.",
         "plate": "return",
-        "label": "TASK 5"
+        "label": "TASK 5",
+        "prompt": "They time 19 short-lived bubbles and 56 longer ones. How many bubbles did they time in all?",
+        "equation": "19 + 56 =",
+        "hint": "Add ones, then tens.",
+        "answer": 75,
+        "worked": "19 + 56 = 75. Combine both groups of timed bubbles."
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          93,
-          58
+          90,
+          38
         ],
-        "prompt": "The big one sketches 93 spiral loops across pages, then crosses out 58 extras. How many loops stay?",
-        "equation": "93 − 58 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract.",
-        "answer": 35,
-        "worked": "93 − 58 = 35. Regroup ones, then subtract tens.",
         "plate": "keep",
-        "label": "TASK 6"
+        "label": "TASK 6",
+        "prompt": "A bottle starts with enough mix for 90 bubbles. After play, 38 bubble turns are used. How many turns of mix are left?",
+        "equation": "90 − 38 =",
+        "hint": "Regroup a ten if the ones are not enough.",
+        "answer": 52,
+        "worked": "90 − 38 = 52. Subtract the turns already used."
       }
-    ],
-    "plate": "reach",
-    "eyebrow": "NUMBER CRUNCH",
-    "actionLabel": "Solve",
-    "extension": "Choose one problem and draw tens as sticks and ones as dots to check your regrouping.",
-    "printNote": "Use these pretend notebook numbers about spider webs. The picture is not a ruler.",
-    "parentNote": "Six two-digit add/subtract puzzles with regrouping. Numbers are pretend practice, not real dew counts.",
-    "answerKeyIntro": "Math answers (pretend notebook numbers):"
+    ]
   },
   "writing": {
-    "title": "Explain a web clue in your words",
-    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "title": "Give the morning your words.",
+    "intro": "Choose a bubble scene. Look, say an idea, then draw or write.",
     "plateIds": [
-      "reach",
+      "wake",
       "change",
       "keep"
     ],
-    "draw": "Draw an orb web. Mark the hub, one radius, and one spiral loop.",
-    "starter": "My spider-web clue",
+    "draw": "Draw a bubble wall. Label the film and the air inside. Mark where colors swirl.",
+    "starter": "My words about soap bubbles",
     "frames": [
       {
-        "plate": "reach",
-        "start": "The dry lines are often the radii because",
-        "hint": "what job do the spokes do?"
+        "plate": "wake",
+        "start": "At first,",
+        "hint": "what lifts into the air?"
       },
       {
         "plate": "change",
-        "start": "Some silk can catch without glue because",
-        "hint": "what is woolly cribellate silk like?"
+        "start": "Then the colors,",
+        "hint": "what makes them shift?"
       },
       {
         "plate": "keep",
-        "start": "Dew makes a web easier to see because",
-        "hint": "what do the beads do to light?"
+        "start": "When it pops,",
+        "hint": "what happens to the film?"
       }
     ],
     "words": [
-      "hub",
-      "radii",
-      "spiral",
-      "silk",
-      "because",
-      "maybe"
+      "soap film",
+      "interference",
+      "surface tension",
+      "evaporate",
+      "sphere",
+      "because"
     ],
-    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
-    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+    "check": "Read your words aloud. Did you connect a clue (color, shape, or pop) to an explanation?",
+    "parentNote": "Speech and dictation are welcome. Keep the focus on film, light, and careful looking."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Overnight a web can be nearly invisible; cool air leaves dew beads that catch morning light so the pattern shows."
+      "text": "A first bubble looks simple; its thin wall already holds a science story."
     },
     {
       "label": "Reading · 2",
-      "text": "On many orb webs the hub and radii are often dry and strong, while the capture spiral may hold glue beads. Spiders often walk the dry lines."
+      "text": "A soap bubble is a thin water-and-soap film wrapped around air."
     },
     {
       "label": "Reading · 3",
-      "text": "Some spiders use woolly cribellate silk that snags without glue. Silk also carries vibrations so a spider can feel a tug through its legs. Dew is water from cool air, not spider glue."
+      "text": "Colors swirl from light in the thinning film (thin-film interference), not paint."
     },
     {
-      "label": "Math",
-      "text": "64, 34, 82, 44, 77, 35"
+      "label": "Reading · 4",
+      "text": "Sketching moving color stripes turns a pretty swirl into evidence of thinning."
     },
     {
-      "label": "Writing",
-      "text": "Accept a drawing, dictation, or 1–3 sentences tied to a scene with because or maybe."
+      "label": "Reading · 5",
+      "text": "Surface tension pulls the film; a free bubble settles into a sphere."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Bubbles pop when the film breaks from touch, dust, drying, or thinning."
+    },
+    {
+      "label": "Math · all",
+      "text": "45, 35, 84, 44, 75, 52."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Film around air; thin-film colors; surface tension; film breaks."
     }
   ],
-  "parentGuidance": "Look-don't-touch: watch webs from a step back. Outdoor dew walks are best on cool mornings. If anyone is afraid of spiders, keep the lesson on pictures and sketches. Hedge aloud with your child: many orb webs work this way, but spiders build other shapes too.",
+  "parentGuidance": "Outdoor or kitchen bubble play works. Keep mix away from eyes; wipe floors. Wonderers model looking and timing, not spraying faces. Humidity and recipe change how long bubbles last.",
   "sources": [
     {
-      "label": "Britannica — spider silk",
-      "url": "https://www.britannica.com/science/spider-silk"
+      "label": "Exploratorium — soap bubbles / thin films",
+      "url": "https://www.exploratorium.edu/snacks/soap-film-painting"
     },
     {
-      "label": "Ask A Biologist — orb webs",
-      "url": "https://askabiologist.asu.edu/spider-web"
+      "label": "Britannica — surface tension",
+      "url": "https://www.britannica.com/science/surface-tension"
     },
     {
-      "label": "Smithsonian — spider silk",
-      "url": "https://www.si.edu/spotlight/buginfo/silk"
+      "label": "Science News Explores — soap films",
+      "url": "https://www.snexplores.org/"
     }
   ],
   "levels": {
@@ -419,47 +429,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer sees bright dew. The web shines on a bush. Cool air left the beads. Look, do not touch.",
-            "prompt": "What makes the web easy to see?"
+            "passage": "Little Wonderer blows one bubble. It floats in soft light. The wall looks thin. Watch it with care.",
+            "prompt": "What floats in the air?"
           },
           {
             "id": "reach",
-            "passage": "An orb web has a hub. Radii are straight spokes. A spiral winds around. Many spokes stay dry.",
-            "prompt": "Which part is often dry?"
+            "passage": "A bubble has a soap film. Air stays inside. Soap helps the film hold. The wall is very thin.",
+            "prompt": "What wraps the air?"
           },
           {
             "id": "change",
-            "passage": "Some silk holds glue beads. Other silk looks woolly. Woolly silk can snag. Both kinds can catch.",
-            "prompt": "Can silk catch without glue?"
+            "passage": "Colors swirl on the film. Light bounces inside. As it thins, colors move. This is a clue.",
+            "prompt": "What moves on the bubble?"
           },
           {
             "id": "notice",
-            "passage": "A spider feels a tug. Silk carries a tiny shake. Legs rest on dry radii. A breeze feels different.",
-            "prompt": "How does the spider notice?"
+            "passage": "Big Wonderer sketches the stripes. Color shows change. A notebook keeps the clue. Looking becomes evidence.",
+            "prompt": "How do they keep a clue?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer steps back from the silk. They sketch the web in a notebook. Hands stay away. Looking is enough for now.",
-            "prompt": "Why not touch?"
+            "passage": "A free bubble looks round. The film pulls evenly. A sphere uses less wall. The wand can stretch film.",
+            "prompt": "What shape is a free bubble?"
           },
           {
             "id": "keep",
-            "passage": "Dew is water from air. It catches morning light. Later beads may shrink. Keep looking with care.",
-            "prompt": "Is dew spider glue?"
+            "passage": "The bubble pops at last. The film gets a hole. Tiny drops scatter away. Every bubble ends sometime.",
+            "prompt": "What happens when the film breaks?"
           }
         ],
         "words": [
           {
-            "word": "dew",
-            "meaning": "tiny water beads from cool air"
+            "word": "bubble",
+            "meaning": "a round film of soapy water around air"
           },
           {
-            "word": "hub",
-            "meaning": "the small center of an orb web"
+            "word": "film",
+            "meaning": "a very thin watery wall"
           },
           {
-            "word": "silk",
-            "meaning": "thread a spider makes"
+            "word": "pop",
+            "meaning": "when the film breaks and the bubble is gone"
           }
         ]
       },
@@ -467,34 +477,34 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer sees 9 dew beads, then 5 more. How many now?",
-            "expression": "9 + 5",
-            "equation": "9 + 5 =",
-            "answer": 14,
-            "hint": "Count on from 9.",
-            "worked": "9 + 5 = 14. Count carefully with the story numbers."
+            "prompt": "Little Wonderer blows 8 bubbles, then 5 more. How many now?",
+            "expression": "8 + 5",
+            "equation": "8 + 5 =",
+            "answer": 13,
+            "hint": "Count on from 8.",
+            "worked": "8 + 5 = 13. Count carefully with the story numbers."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer counts 16 spokes, then 7 are practice marks. How many real spokes?",
-            "expression": "16 − 7",
-            "equation": "16 − 7 =",
-            "answer": 9,
-            "hint": "Take away 7 from 16.",
-            "worked": "16 − 7 = 9. Count carefully with the story numbers."
+            "prompt": "Big Wonderer has 14 wand dips and uses 6. How many dips left?",
+            "expression": "14 − 6",
+            "equation": "14 − 6 =",
+            "answer": 8,
+            "hint": "Take away 6 from 14.",
+            "worked": "14 − 6 = 8. Count carefully with the story numbers."
           },
           {
             "plate": "change",
-            "prompt": "The little one finds 8 glue beads and 6 woolly bits. How many samples?",
-            "expression": "8 + 6",
-            "equation": "8 + 6 =",
-            "answer": 14,
-            "hint": "Add 8 and 6.",
-            "worked": "8 + 6 = 14. Count carefully with the story numbers."
+            "prompt": "They see 7 pink stripes and 9 green stripes. How many stripes?",
+            "expression": "7 + 9",
+            "equation": "7 + 9 =",
+            "answer": 16,
+            "hint": "Add 7 and 9.",
+            "worked": "7 + 9 = 16. Count carefully with the story numbers."
           },
           {
             "plate": "notice",
-            "prompt": "A notebook shows 15 taps. Cross out 6 soft ones. How many left?",
+            "prompt": "A page shows 15 sketches. Cross out 6. How many left?",
             "expression": "15 − 6",
             "equation": "15 − 6 =",
             "answer": 9,
@@ -503,16 +513,16 @@
           },
           {
             "plate": "return",
-            "prompt": "They make 7 sketches, then 5 more. How many sketches?",
-            "expression": "7 + 5",
-            "equation": "7 + 5 =",
-            "answer": 12,
-            "hint": "Add 7 and 5.",
-            "worked": "7 + 5 = 12. Count carefully with the story numbers."
+            "prompt": "They time 9 short bubbles and 4 long ones. How many timed?",
+            "expression": "9 + 4",
+            "equation": "9 + 4 =",
+            "answer": 13,
+            "hint": "Add 9 and 4.",
+            "worked": "9 + 4 = 13. Count carefully with the story numbers."
           },
           {
             "plate": "keep",
-            "prompt": "Morning shows 18 beads. Later 9 dry. How many remain?",
+            "prompt": "A tray holds 18 bubbles. Then 9 pop. How many remain?",
             "expression": "18 − 9",
             "equation": "18 − 9 =",
             "answer": 9,
@@ -527,51 +537,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer stops by a bush. Dew beads shine on the web. Overnight it was hard to see. Cool air left the water drops. Do not touch the silk.",
-            "prompt": "Why is the web brighter at dawn?"
+            "passage": "Little Wonderer dips the wand once. A round bubble lifts into soft light. Big Wonderer watches from the path. The thin wall already looks busy. What keeps that shine from falling apart?",
+            "prompt": "What do they watch lift into the air?"
           },
           {
             "id": "reach",
-            "passage": "An orb web has three parts. The hub sits in the center. Radii run out like spokes. The spiral winds around them. Many radii stay dry and strong.",
-            "prompt": "Which lines are often dry?"
+            "passage": "A soap bubble has a thin film. The film mixes water and soap. Air fills the inside space. Soap helps the wall hold. A wand can stretch flat film.",
+            "prompt": "What two materials make the bubble wall?"
           },
           {
             "id": "change",
-            "passage": "Spiders make more than one silk. Some capture silk holds glue beads. Other capture silk is woolly and dry. Woolly silk can snag a wing. Scientists still compare both kinds.",
-            "prompt": "How can dry silk catch?"
+            "passage": "Light bounces from both film sides. Some colors look bright now. Others fade as time passes. As the film thins, stripes move. The swirl is a thickness clue.",
+            "prompt": "What do moving colors hint about the film?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer watches the hub of the web. The spider keeps its legs on the dry radii. A tiny tug travels through the silk. Sensors help tell wind from prey on the spiral.",
-            "prompt": "What travels along the silk?"
+            "passage": "Big Wonderer sketches the color stripes. The little one points as they slide. A notebook turns swirls into evidence. Later they can compare top and bottom.",
+            "prompt": "How does a sketch help the science?"
           },
           {
             "id": "return",
-            "passage": "The little one lifts a pencil. They stand a step back. A web is a home and a trap. Sketch what you see. Keep fingers away.",
-            "prompt": "What is a safe way to look?"
+            "passage": "A free bubble looks round in air. Surface tension pulls the film evenly. A sphere uses less wall inside. A wand ring can stretch other shapes.",
+            "prompt": "Why does a free bubble look round?"
           },
           {
             "id": "keep",
-            "passage": "Dew is water from cool air. It is not the spider's glue. Beads catch light on the spiral. Later many beads shrink. Keep looking with care.",
-            "prompt": "What is dew made of?"
+            "passage": "Bubbles do not last forever. Touch can open a hole. Dust can break the film. Dry thin spots can fail too. Water also leaves as vapor. Droplets scatter when it breaks.",
+            "prompt": "What is one way a bubble film can fail?"
           }
         ],
         "words": [
           {
-            "word": "radii",
-            "meaning": "straight spoke lines from the hub"
+            "word": "soap film",
+            "meaning": "a thin watery wall mixed with soap"
           },
           {
-            "word": "spiral",
-            "meaning": "the winding capture line"
+            "word": "stripes",
+            "meaning": "lines of color on the bubble"
           },
           {
-            "word": "dew",
-            "meaning": "water beads from cool air"
+            "word": "sphere",
+            "meaning": "a round ball shape"
           },
           {
-            "word": "tug",
-            "meaning": "a small pull on the silk"
+            "word": "evaporate",
+            "meaning": "when liquid water goes into the air"
           }
         ]
       },
@@ -579,7 +589,7 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 24 dew beads, then 18 more. How many beads?",
+            "prompt": "Little Wonderer blows 24 bubbles, then 18 more. How many bubbles?",
             "expression": "24 + 18",
             "equation": "24 + 18 =",
             "answer": 42,
@@ -588,7 +598,7 @@
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer draws 45 lines, then erases 19. How many remain?",
+            "prompt": "Big Wonderer has 45 wand dips and uses 19. How many remain?",
             "expression": "45 − 19",
             "equation": "45 − 19 =",
             "answer": 26,
@@ -597,7 +607,7 @@
           },
           {
             "plate": "change",
-            "prompt": "They sort 27 glue samples and 14 woolly ones. How many samples?",
+            "prompt": "They count 27 pink marks and 14 green marks. How many marks?",
             "expression": "27 + 14",
             "equation": "27 + 14 =",
             "answer": 41,
@@ -606,7 +616,7 @@
           },
           {
             "plate": "notice",
-            "prompt": "A try has 40 soft taps. Cross out 17. How many taps left?",
+            "prompt": "A tray holds 40 bubbles. Then 17 pop. How many left?",
             "expression": "40 − 17",
             "equation": "40 − 17 =",
             "answer": 23,
@@ -615,7 +625,7 @@
           },
           {
             "plate": "return",
-            "prompt": "The little one makes 16 sketches and 15 photos. How many records?",
+            "prompt": "The little one times 16 short bubbles and 15 long ones. How many timed?",
             "expression": "16 + 15",
             "equation": "16 + 15 =",
             "answer": 31,
@@ -624,7 +634,7 @@
           },
           {
             "plate": "keep",
-            "prompt": "Morning shows 38 beads. Later 19 dry up. How many remain?",
+            "prompt": "A bottle mix starts at 38 turns. They use 19. How many remain?",
             "expression": "38 − 19",
             "equation": "38 − 19 =",
             "answer": 19,
@@ -639,59 +649,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer paused on the garden path and pointed at a bush. The orb web that had been nearly invisible overnight now glittered because cool air had left dew beads on the silk. Those beads catch morning light, so the pattern suddenly shows. As the day warms, many drops shrink. Dew helps us look; it is not the spider's glue, and hands still stay away.",
-            "prompt": "How does dew change what you can notice on a web?"
+            "passage": "Little Wonderer dipped a wand and sent one quiet bubble into the garden light. Big Wonderer stood close enough to watch the thin shine without crowding it. The sphere looked playful, yet its wall was already a working material. A simple blow can open a whole set of questions about film, light, and time.",
+            "prompt": "What makes a first bubble worth studying, not only chasing?"
           },
           {
             "id": "reach",
-            "passage": "Many orb webs share a hub, straight radii like spokes, and a capture spiral that winds around them. On many webs the radii and hub stay dry and strong while the spiral holds tiny glue beads. Spiders often walk the dry lines and feel prey on the sticky spiral. Not every spider builds an orb, so outdoor finds can look different.",
-            "prompt": "Why might a spider prefer dry radii for walking?"
+            "passage": "A soap bubble is a thin film of water mixed with soap molecules, wrapped around air. Soap helps that watery sheet hold together longer than plain water usually can. Before any sphere forms, a wand can stretch a flat film across its ring. The wall looks delicate because it truly is only a microscopic sandwich of liquid.",
+            "prompt": "How is a bubble wall different from a solid ball?"
           },
           {
             "id": "change",
-            "passage": "Spiders spin several silks for different jobs. Dragline silk is strong for bridges and safety lines. Capture silk may carry glue droplets, or it may be combed into a dry woolly strand with a cribellum plate. Woolly cribellate silk can snag legs and wings without sticky glue. Researchers still compare how each kind behaves in wind and rain.",
-            "prompt": "What is one difference between glue silk and cribellate silk?"
+            "passage": "Light reflects from the front and back surfaces of the soap film. Those reflections can reinforce some wavelengths and cancel others, so soft rainbow stripes appear on the wall. As water drains or evaporates, thickness changes and the color pattern shifts across the sphere. Scientists name this thin-film interference; the swirl is physics in motion, not paint on the bubble.",
+            "prompt": "Why do bubble colors move even when nobody paints them?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer watched a spider rest near the hub with legs on the radii. Silk carries vibrations, so a tiny tug can travel to those legs. Sensors help the spider tell a breeze from a struggling insect. Because the spider knows the dry paths, it does not need every line to be sticky.",
-            "prompt": "How do vibrations help a spider hunt from the hub?"
+            "passage": "Big Wonderer timed how the color stripes slid while the little one pointed to bright belts. A notebook sketch turns a pretty change into evidence you can compare later. You might ask whether the top thinned faster, or whether shade slowed the shift. Careful looking is already an experiment when you record what changes.",
+            "prompt": "What turns moving colors into scientific evidence?"
           },
           {
             "id": "return",
-            "passage": "The little one lifted a pencil while the big one kept a clear step back from the silk. A web is both a home and a trap, and touching can undo hours of work or bring a child too close. Sketching, zooming a camera, or watching with eyes only keeps the lesson kind. Leave the lace where the spinner put it.",
-            "prompt": "What makes look-don't-touch a better plan than a quick tap?"
+            "passage": "They compared a free-floating sphere with a stretched film still on the wand. Surface tension pulls along the liquid surface from every direction at once. For a given pocket of air, a sphere needs the least film area, so free bubbles settle round; a rigid ring can force other shapes until the air is enclosed.",
+            "prompt": "How does surface tension help explain a bubble's round shape?"
           },
           {
             "id": "keep",
-            "passage": "Morning dew is water condensed from cool air, not a glue the spider placed for prey. The drops sit on silk and sparkle, so spiral loops that were hard to count at night become easy to see. Later the air warms and many beads shrink or fall. Soft side light can still reveal dry radii when the dew is gone.",
-            "prompt": "If the dew fades, what is another careful way to see the web?"
+            "passage": "A bubble pops when its film fails. A finger, a speck of dust, or a dry thin patch can open a hole that races around the sphere. Even in still air, draining and evaporation keep thinning the wall until some spot cannot hold. Recipes and humidity change the clock, but ordinary soap bubbles still live short lives.",
+            "prompt": "What are two different ways a soap film can reach its breaking point?"
           }
         ],
         "words": [
           {
-            "word": "orb",
-            "meaning": "a wheel-shaped web with spokes and a spiral"
+            "word": "soap film",
+            "meaning": "the thin watery wall mixed with soap"
           },
           {
-            "word": "radii",
-            "meaning": "straight spoke lines from the hub"
+            "word": "interference",
+            "meaning": "light waves adding or canceling after reflection"
           },
           {
-            "word": "capture spiral",
-            "meaning": "the winding line that often holds the catch silk"
+            "word": "surface tension",
+            "meaning": "the pull along a liquid surface"
           },
           {
-            "word": "cribellum",
-            "meaning": "a tiny plate used to comb woolly catch silk"
+            "word": "evaporation",
+            "meaning": "liquid water becoming vapor in the air"
           },
           {
-            "word": "ecribellate",
-            "meaning": "using glue droplets instead of woolly cribellate silk"
+            "word": "sphere",
+            "meaning": "the round shape that minimizes surface for a volume"
           },
           {
-            "word": "vibration",
-            "meaning": "a tiny shake traveling along silk"
+            "word": "drain",
+            "meaning": "liquid sliding so one part of a film gets thinner"
           }
         ]
       },
@@ -699,57 +709,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer logs 126 dew beads across pages, then adds 48 more from a second bush. How many beads logged?",
-            "expression": "126 + 48",
-            "equation": "126 + 48 =",
-            "answer": 174,
-            "hint": "Add ones, then tens, then 100s.",
-            "worked": "126 + 48 = 174. Show each place, then check the story total."
+            "prompt": "Little Wonderer logs 248 bubble blows, then adds 176 more after lunch. How many blows now?",
+            "expression": "248 + 176",
+            "equation": "248 + 176 =",
+            "answer": 424,
+            "hint": "Add place by place; regroup when a column reaches ten.",
+            "worked": "248 + 176 = 424. Add each place and regroup when needed."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer measures a sketch length of 305 mm and trims 79 mm of margin. How many mm of web drawing remain?",
+            "prompt": "Big Wonderer measures a 305 mm film line and trims 79 mm of margin. How many mm remain?",
             "expression": "305 − 79",
             "equation": "305 − 79 =",
             "answer": 226,
             "hint": "Regroup when ones or tens run short.",
-            "worked": "305 − 79 = 226. Show each place, then check the story total."
+            "worked": "305 − 79 = 226. Regroup, then subtract each place."
           },
           {
             "plate": "change",
-            "prompt": "They compare 9 glue-droplet photos in each of 8 rows. How many photos is that?",
-            "expression": "9 × 8",
-            "equation": "9 × 8 =",
+            "prompt": "They print 8 photo strips with 9 color-stripe close-ups on each strip. How many close-ups?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
             "answer": 72,
-            "hint": "Nine groups of eight.",
-            "worked": "9 × 8 = 72. Show each place, then check the story total."
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Eight nines make seventy-two close-ups."
           },
           {
             "plate": "notice",
-            "prompt": "A vibration try records 72 taps shared equally into 8 sets. How many taps per set?",
+            "prompt": "A notebook lists 72 timing trials shared equally among 8 mornings. How many trials per morning?",
             "expression": "72 ÷ 8",
             "equation": "72 ÷ 8 =",
             "answer": 9,
             "hint": "Divide 72 into 8 equal groups.",
-            "worked": "72 ÷ 8 = 9. Show each place, then check the story total."
+            "worked": "72 ÷ 8 = 9. Eight equal mornings get nine trials each."
           },
           {
             "plate": "return",
-            "prompt": "The little one stores 156 sketches and later adds 37 photos. How many records now?",
+            "prompt": "The little one files 156 sphere sketches and later adds 37 wand-film cards. How many files?",
             "expression": "156 + 37",
             "equation": "156 + 37 =",
             "answer": 193,
-            "hint": "Add ones, then tens, then 100s.",
-            "worked": "156 + 37 = 193. Show each place, then check the story total."
+            "hint": "Add each place; regroup when a column reaches 10.",
+            "worked": "156 + 37 = 193. Add each place and regroup when needed."
           },
           {
             "plate": "keep",
-            "prompt": "Morning notes list 240 beads. By noon 65 have dried. How many bead notes remain active?",
+            "prompt": "A class chart starts with 240 bubble marks. After a breeze, 65 marks are crossed off as popped. How many remain?",
             "expression": "240 − 65",
             "equation": "240 − 65 =",
             "answer": 175,
             "hint": "Regroup tens if you need ones.",
-            "worked": "240 − 65 = 175. Show each place, then check the story total."
+            "worked": "240 − 65 = 175. Regroup, then subtract each place."
           }
         ]
       }
@@ -759,67 +769,67 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer halted on the path and stared at a bush that seemed to wear lace. The orb web had been almost invisible in the night, yet cool air left dew beads on the silk, and those beads caught the first light so every spiral loop suddenly stood out. Dew is water from the air, not spider glue, and it often fades as the morning warms. Looking from a step back still keeps the spinner's work whole.",
-            "prompt": "How can dew reveal a web that was hard to see overnight?"
+            "passage": "Little Wonderer paused on the path, wand ready, and sent one deliberate bubble into the soft afternoon light. Big Wonderer stayed beside the little one so the sphere could be studied without a chase. What looked like pure play was already a portable laboratory: a curved film, trapped air, and a clock counting down. Wonder begins when you let the bubble teach before you try to catch it.",
+            "prompt": "How can a single floating bubble become a lab instead of only a toy?"
           },
           {
             "id": "reach",
-            "passage": "Field guides often describe orb webs as a hub, radii, and capture spiral working together. On many species the radii stay dry and strong enough to walk, while the spiral carries the catching surface—sometimes glue beads, sometimes another silk trick. Spiders frequently use the dry spokes as safe paths and read prey signals from the spiral. Because not every spider builds an orb, comparing shapes outside is part of the wonder.",
-            "prompt": "How do dry radii and a capture spiral split jobs on many orb webs?"
+            "passage": "Inside every soap bubble is ordinary air; outside is a sandwich of water held together with soap molecules that lower surface tension and stabilize the sheet. That architecture explains why a wand can first hold a flat film, then enclose air into a closed surface. Calling the wall 'just water' misses the soap's job, and calling it solid glass misses how thin and temporary the material really is.",
+            "prompt": "What jobs do water, soap, and air each do in a bubble?"
           },
           {
             "id": "change",
-            "passage": "Silk is not one material with one job. Dragline silk handles bridges and safety lines, while capture silk is tuned for stopping prey. Ecribellate webs often present glue droplets along the spiral; cribellate spiders comb a dry woolly silk with a cribellum, and that fuzz can snag without sticky glue. Scientists continue to test how each design handles rain, dust, and tired prey, so claims stay careful.",
-            "prompt": "Why might a researcher refuse to call one catch silk always best?"
+            "passage": "Thin-film interference happens because light reflecting from the near and far surfaces of the soap film travels slightly different paths through the watery wall. Depending on thickness, some wavelengths reinforce while others cancel, painting moving stripes across the sphere in soft daylight. Drainage and evaporation continuously rewrite that thickness map, so the colors migrate as minutes pass. The beauty is a readable signal of a changing material you can watch without touching.",
+            "prompt": "How does changing thickness turn light into moving color evidence?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer noticed the spider resting near the hub with legs lightly set on the radii. A struggling insect shakes the capture spiral, and that vibration can travel inward along the silk network to the waiting legs. Leg sensors help separate a harmless breeze from a meaningful tug. Knowing the dry routes home matters as much as stickiness, because the hunter must move without becoming the catch.",
-            "prompt": "How can vibration sensing let a spider hunt without watching every thread?"
+            "passage": "Big Wonderer treated the shifting stripes like data: sketch, note the time, and compare shade versus sun on the same garden path. The little one learned that a pretty swirl becomes stronger evidence when you record where bright belts travel on the film. Questions follow naturally—does the top thin first, and does still air slow the rewrite? Observation tools keep the experiment kind, clear, and repeatable for another try.",
+            "prompt": "Why does recording color-stripe motion strengthen a claim about thinning?"
           },
           {
             "id": "return",
-            "passage": "The little one wanted to prove the lace was real with one quick tap, yet the big one kept both of them a clear step back with notebook ready. A web is architecture, home, and trap at once; touching can destroy hours of spinning and can also put a curious face too close to a surprised animal. Eyes, sketches, and zoom lenses gather evidence without unpaid demolition. Kind looking is part of the science.",
-            "prompt": "Why are sketching and zoom better evidence tools than touching the silk?"
+            "passage": "Surface tension is a pull along a liquid interface; on a free bubble it acts over the whole closed film. Among shapes that hold the same volume of air, the sphere minimizes surface area, so the film settles round when nothing rigid forces another outline. A wand ring can impose a flat disk until a puff traps air and the closed surface relaxes toward that thrifty geometry.",
+            "prompt": "How do surface tension and minimum surface area explain roundness?"
           },
           {
             "id": "keep",
-            "passage": "When dew beads line a spiral, they act like tiny lenses that scatter morning light and outline geometry the night had hidden. Those beads condensed from cool air; they are not the adhesive the spider may place for prey, and mixing those ideas up confuses the mechanism. After the beads shrink, a change in side light or viewing angle can still reveal dry radii. Curiosity keeps working after the sparkle fades.",
-            "prompt": "How is dew different from the spider’s own capture methods?"
+            "passage": "Failure modes differ: a poke opens a hole; dust can puncture; evaporation and drainage create a critically thin region that cannot carry the stress. Once a tear starts, surface tension helps the hole race around the sphere until only droplets remain. Better recipes and gentler air can delay the end, yet they do not cancel the open question of how long any real film can last.",
+            "prompt": "What are two ways a soap film can fail, and what question remains?"
           }
         ],
         "words": [
           {
-            "word": "orb",
-            "meaning": "a roughly circular spoke-and-spiral web design"
+            "word": "soap film",
+            "meaning": "the thin water-and-soap wall of a bubble"
           },
           {
-            "word": "radii",
-            "meaning": "the straight structural spokes from hub to edge"
+            "word": "interference",
+            "meaning": "constructive or destructive combining of reflected light"
           },
           {
-            "word": "capture spiral",
-            "meaning": "the winding line that often bears the catching silk"
+            "word": "surface tension",
+            "meaning": "cohesive pull along a liquid surface"
           },
           {
-            "word": "cribellum",
-            "meaning": "a spinning plate that helps form woolly catch silk"
+            "word": "evaporation",
+            "meaning": "liquid water becoming vapor"
           },
           {
-            "word": "cribellate",
-            "meaning": "using combed woolly silk rather than glue droplets"
+            "word": "drainage",
+            "meaning": "liquid flowing so thickness becomes uneven"
           },
           {
-            "word": "ecribellate",
-            "meaning": "using glue droplets on capture silk"
+            "word": "sphere",
+            "meaning": "the minimal-area closed shape for a given volume"
           },
           {
-            "word": "vibration",
-            "meaning": "a mechanical shake that can travel through silk"
+            "word": "wavelength",
+            "meaning": "the color-related size of a light wave"
           },
           {
-            "word": "dragline",
-            "meaning": "strong silk used for bridges and safety lines"
+            "word": "stabilize",
+            "meaning": "help a structure hold together longer"
           }
         ]
       },
@@ -827,25 +837,25 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer records 1248 dew-bead tallies, then adds 376 more. How many tallies now?",
+            "prompt": "Little Wonderer records 1248 bubble tallies across a week then adds 376 more on a windy morning. How many tallies now?",
             "expression": "1248 + 376",
             "equation": "1248 + 376 =",
             "answer": 1624,
-            "hint": "Add each place. Regroup when a column reaches 10.",
-            "worked": "1248 + 376 = 1624. Add ones, tens, 100s, and 1000s with regrouping."
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "1248 + 376 = 1624. Add each place and regroup when needed."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer has a 2060 millimeters string model and cuts away 485 millimeters. How many millimeters remain?",
-            "expression": "2060 - 485",
-            "equation": "2060 - 485 =",
+            "prompt": "Big Wonderer has a 2060 mm string model of film edge and cuts away 485 mm of extra length. How many mm remain?",
+            "expression": "2060 − 485",
+            "equation": "2060 − 485 =",
             "answer": 1575,
             "hint": "Regroup across places as needed.",
-            "worked": "2060 - 485 = 1575. Regroup, then subtract each place."
+            "worked": "2060 − 485 = 1575. Regroup, then subtract each place."
           },
           {
             "plate": "change",
-            "prompt": "They print 8 photo strips with 9 silk close-ups on each strip. How many close-ups?",
+            "prompt": "They print 8 photo strips with 9 interference close-ups on each strip. How many close-ups?",
             "expression": "8 × 9",
             "equation": "8 × 9 =",
             "answer": 72,
@@ -854,7 +864,7 @@
           },
           {
             "plate": "notice",
-            "prompt": "A lab notebook lists 96 vibration trials shared equally among 8 mornings. How many trials per morning?",
+            "prompt": "A lab notebook lists 96 timing trials shared equally among 8 mornings. How many trials per morning?",
             "expression": "96 ÷ 8",
             "equation": "96 ÷ 8 =",
             "answer": 12,
@@ -863,7 +873,7 @@
           },
           {
             "plate": "return",
-            "prompt": "The little one files 1085 sketches and later adds 249 cards. How many files in the set?",
+            "prompt": "The little one files 1085 sphere sketches and later adds 249 observation cards. How many files in the set?",
             "expression": "1085 + 249",
             "equation": "1085 + 249 =",
             "answer": 1334,
@@ -872,113 +882,102 @@
           },
           {
             "plate": "keep",
-            "prompt": "A class chart starts with 3200 bead marks. After sun hits, 1158 marks are crossed off. How many marks remain?",
-            "expression": "3200 - 1158",
-            "equation": "3200 - 1158 =",
+            "prompt": "A class chart starts with 3200 bubble marks. After a dry wind 1158 marks are crossed off as popped. How many marks remain?",
+            "expression": "3200 − 1158",
+            "equation": "3200 − 1158 =",
             "answer": 2042,
-            "hint": "Subtract place by place. Regroup when needed.",
-            "worked": "3200 - 1158 = 2042. Regroup, then subtract each place."
+            "hint": "Subtract place by place; regroup when needed.",
+            "worked": "3200 − 1158 = 2042. Regroup, then subtract each place."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "lab-page"
+    "quiz-cards"
   ],
-  "titleCard": {
-    "plate": "wake",
-    "edition": "SPIDER WEBS · 2026-11-05",
-    "subtitle": "Hub. Radii. Sticky spiral."
-  },
-  "labPage": {
-    "materials": [
-      "notebook",
-      "pencil",
-      "clipboard or stiff cardboard",
-      "optional magnifying glass",
-      "optional camera or phone zoom",
-      "soft morning light (outdoors)"
-    ]
-  },
-  "poem": {
-    "title": "Please Don't Pat the Lace",
-    "lines": [
-      "Little Wonderer spotted a shine in the hedge,",
-      "a wheel made of whispers along the leaf edge.",
-      "\"It's lace!\" cried the little one. \"May I tap it, just once?\"",
-      "Big Wonderer answered, \"Let's look — not a touch.\"",
-      "",
-      "They counted the spokes that ran dry from the hub,",
-      "then the spiral that glittered with one tiny bead-dub.",
-      "\"Some silk may be sticky; some silk may be strong,\"",
-      "said the big one. \"The builder feels tugs all day long.\"",
-      "",
-      "A breeze made a shiver that raced down a line.",
-      "The little one whispered, \"That signal's a sign!\"",
-      "They sketched from a step back, both quiet and still,",
-      "while dew beads lit pathways along the green hill.",
-      "",
-      "So if you find lace on a bush in the sun,",
-      "remember the worker whose weaving is done.",
-      "Look close with your eyes, keep your fingers in place —",
-      "and thank the small spinner. Please don't pat the lace."
-    ],
-    "drawing": {
-      "src": "assets/spider-webs/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer standing a step back from a dew-bright orb web on a bush; Little holds a notebook while both gaze at the web."
-    }
-  },
   "quiz": {
+    "title": "Four looks at a bubble",
+    "intro": "Follow the film from shine to pop.",
     "questions": [
       {
-        "id": "parts",
-        "prompt": "Which orb-web parts are often dry?",
+        "id": "film",
+        "prompt": "What's a bubble made of?",
         "choices": [
-          "The hub and radii",
-          "Only the capture spiral",
-          "Every line equally",
-          "Only the dew beads"
+          "Soap film around air",
+          "A solid glass ball",
+          "Dry soap powder only"
         ],
         "answerIndex": 0,
-        "answer": "The hub and radii are often dry and strong; the spiral may hold glue."
+        "answer": "A soap bubble is a thin watery soap film wrapped around a pocket of air."
       },
       {
-        "id": "silk",
-        "prompt": "How can silk catch without glue?",
+        "id": "colors",
+        "prompt": "Why can colors swirl?",
         "choices": [
-          "It must wait for dew",
-          "Woolly cribellate silk can snag",
-          "Radii melt into glue",
-          "Spiders paint the spokes sticky"
+          "Someone painted it",
+          "Light in the thin film",
+          "Air inside is colored"
         ],
         "answerIndex": 1,
-        "answer": "Woolly cribellate silk can snag legs and wings without glue droplets."
+        "answer": "Light reflecting in the thin film can make shifting color stripes as thickness changes."
       },
       {
-        "id": "sense",
-        "prompt": "How does a spider feel a tiny tug?",
+        "id": "round",
+        "prompt": "Why are free bubbles round?",
         "choices": [
-          "Only by watching with eyes",
-          "Silk carries vibrations to its legs",
-          "By tasting the dew",
-          "By counting spiral loops"
+          "Film pulls into a sphere",
+          "Wands force a cube",
+          "They copy the sun"
         ],
-        "answerIndex": 1,
-        "answer": "Silk carries vibrations; legs on the radii can feel a tug that may mean prey."
+        "answerIndex": 0,
+        "answer": "Surface tension pulls evenly, and a sphere uses the least film for the air inside."
       },
       {
-        "id": "dew",
-        "prompt": "What is morning dew on a web?",
+        "id": "pop",
+        "prompt": "What makes a bubble pop?",
         "choices": [
-          "Spider glue for prey",
-          "Water from cool air that catches light",
-          "Paint on the silk",
-          "A kind of cribellum silk"
+          "The film gets a hole",
+          "Colors run out of paint",
+          "Round shapes can't fly"
         ],
-        "answerIndex": 1,
-        "answer": "Dew is water from cool air. It catches light so the web pattern shows."
+        "answerIndex": 0,
+        "answer": "When the film breaks from thinning, drying, dust, or a touch, the bubble pops."
       }
     ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "Soap Bubbles",
+    "line": "Thin film, swirling colors, a round pop.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "Please Don't Poke the Shine",
+    "lines": [
+      "Little Wonderer blew a soft silver ring,",
+      "and a round bit of daylight rose up on a string",
+      "of invisible air. \"It's a jewel!\" said the small one.",
+      "Big Wonderer smiled. \"It's a film — watch it run.\"",
+      "",
+      "Colors slid over it, quiet as oil on a spoon,",
+      "greens into pinks in the thin afternoon.",
+      "\"Is it painted?\" the little one asked with a grin.",
+      "\"No paint,\" said the big one. \"Light bouncing within.\"",
+      "",
+      "They sketched every stripe as the shimmer grew wide,",
+      "then asked why a free bubble wears a round side.",
+      "\"The film pulls in evenly, soft as a sigh —",
+      "a sphere is the thrifty shape under the sky.\"",
+      "",
+      "A hush, then a glitter of droplets like rain.",
+      "The shine had let go. Only air would remain.",
+      "So if you find rainbows that float for a while,",
+      "look kindly, keep poking for never — just smile."
+    ],
+    "drawing": {
+      "src": "assets/soap-bubbles/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer watching a round soap bubble; Little holds a wand while both gaze at the floating shine."
+    }
   }
 }
