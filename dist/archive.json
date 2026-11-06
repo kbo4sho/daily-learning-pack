@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T23:32:44.547Z",
-  "latest": "spider-webs",
+  "generatedAt": "2026-11-06T05:27:51.498Z",
+  "latest": "soap-bubbles",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "soap-bubbles",
+      "date": "2026-11-06",
+      "topic": "soap bubbles",
+      "title": "Soap Bubbles",
+      "teaser": "Blow a ring, watch colors swirl on a thin soap film, then ask why a bubble is round — and why it pops.",
+      "href": "./days/soap-bubbles/",
+      "latest": true
+    },
     {
       "slug": "spider-webs",
       "date": "2026-11-05",
@@ -11,7 +20,7 @@
       "title": "Spider Webs",
       "teaser": "Find hub, radii and a sticky spiral, then go deeper: silk types, glue vs woolly silk, and how spiders feel a tug.",
       "href": "./days/spider-webs/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "fingerprints-2026-11-03",
