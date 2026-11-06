@@ -902,44 +902,44 @@
     "questions": [
       {
         "id": "film",
-        "prompt": "What is a soap bubble mostly made of?",
+        "prompt": "What's a bubble made of?",
         "choices": [
-          "A thin soap-and-water film around air",
-          "A solid glass ball filled with paint",
-          "A cloud of dry soap powder only"
+          "Soap film around air",
+          "A solid glass ball",
+          "Dry soap powder only"
         ],
         "answerIndex": 0,
         "answer": "A soap bubble is a thin watery soap film wrapped around a pocket of air."
       },
       {
         "id": "colors",
-        "prompt": "Why can colors swirl on a bubble?",
+        "prompt": "Why can colors swirl?",
         "choices": [
-          "Someone painted the outside with markers",
-          "Light reflects in the thinning soap film",
-          "The air inside is different colors"
+          "Someone painted it",
+          "Light in the thin film",
+          "Air inside is colored"
         ],
         "answerIndex": 1,
         "answer": "Light reflecting in the thin film can make shifting color stripes as thickness changes."
       },
       {
         "id": "round",
-        "prompt": "Why are free-floating bubbles often round?",
+        "prompt": "Why are free bubbles round?",
         "choices": [
-          "Surface tension pulls the film into a sphere",
-          "Wands force every bubble into a cube",
-          "Bubbles copy the shape of the sun"
+          "Film pulls into a sphere",
+          "Wands force a cube",
+          "They copy the sun"
         ],
         "answerIndex": 0,
         "answer": "Surface tension pulls evenly, and a sphere uses the least film for the air inside."
       },
       {
         "id": "pop",
-        "prompt": "What is one honest reason a bubble pops?",
+        "prompt": "What makes a bubble pop?",
         "choices": [
-          "The film gets a hole when it thins, dries, or is touched",
-          "The colors run out of paint",
-          "Round shapes are not allowed in air"
+          "The film gets a hole",
+          "Colors run out of paint",
+          "Round shapes can't fly"
         ],
         "answerIndex": 0,
         "answer": "When the film breaks from thinning, drying, dust, or a touch, the bubble pops."
