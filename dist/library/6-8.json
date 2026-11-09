@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-a-hand-works",
+      "band": "6-8",
+      "topic": "how a hand works",
+      "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "skip-next",
+        "skip-missing"
+      ],
+      "date": "2026-11-09",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "soap-bubbles",
       "band": "6-8",
       "topic": "soap bubbles",

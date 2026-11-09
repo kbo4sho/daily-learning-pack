@@ -1,0 +1,1016 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-a-hand-works",
+  "topic": "how a hand works",
+  "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
+  "teaser": "Pull one string on a mechanical hand toy, watch a finger curl, then find the bones, tendons and joints doing the same job in your own hand.",
+  "aliases": [
+    "hands",
+    "tendons",
+    "finger joints",
+    "hand bones",
+    "mechanical hand"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "pattern-detective",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "skip-next",
+      "skip-missing"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "How a Hand Works",
+  "title": "How a Hand Works",
+  "question": "How do bones, tendons and joints work together to curl and open a hand?",
+  "idea": "A hand has 27 bones linked at joints. Muscles, mostly up in the forearm, pull long tendons that work like strings, curling fingers at hinge-like joints. Muscles can only pull, so other tendons on the back of the hand pull the fingers straight again.",
+  "curiosity": {
+    "intro": "Start with a toy hand on strings. Then look inside your own: bones, tendons that pull like strings, and joints that bend.",
+    "carryForward": "Pull one string, then ask which part of your own hand does that job.",
+    "questions": [
+      {
+        "id": "bones",
+        "plate": "reach",
+        "question": "What keeps a finger stiff?",
+        "notice": "Find the short stiff pieces in each toy finger, and count them.",
+        "say": "Bones. Each finger has three small bones in a row, and the thumb has two. Counting the wrist and palm, one hand has 27 bones. Bones hold the shape, but they cannot move by themselves.",
+        "try": "Gently press along one of your fingers and count the hard parts between the bends. Count the stiff pieces on one toy finger too. Do the two numbers match?"
+      },
+      {
+        "id": "strings",
+        "plate": "change",
+        "question": "What pulls a finger closed?",
+        "notice": "Find the thin string that runs along the palm side of a curled toy finger.",
+        "say": "In the toy, a string. In your hand, a tendon: a tough cord that joins a muscle to a bone. Muscles in your forearm pull long tendons that reach into each finger, and tough loops along the finger hold them close, like the toy's guides.",
+        "try": "Draw around your hand on paper to make an outline. Pull one toy string slowly and watch which finger curls. Draw a line from that string to the same finger on your outline. Do the same for every string, one at a time."
+      },
+      {
+        "id": "compare",
+        "plate": "return",
+        "question": "Does your hand work like the toy?",
+        "notice": "Watch where the toy finger bends, then watch your own finger bend.",
+        "say": "Both follow one plan: a pull, a string, and joints that bend. Your finger bends at three joints, mostly one way, like a door hinge. The muscles that curl your fingers sit mostly in your forearm, so you can feel them move there.",
+        "try": "Curl your pointer finger slowly and count the places it bends. Curl the toy's pointer finger and compare. Rest your other hand on your forearm and wiggle your fingers. What do you feel move?"
+      },
+      {
+        "id": "open",
+        "plate": "keep",
+        "question": "What opens the hand again?",
+        "notice": "Look at the back of the toy hand for elastic, a spring, or a second string.",
+        "say": "A muscle can only pull, never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring instead. Some tendons on the back of your hand are linked, which is why one finger can be hard to lift alone.",
+        "try": "Let go of a toy string and watch whether the finger springs back. Look for what pulls it open. Then lay your hand flat, fold your middle finger under, and gently try to lift your ring finger."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-a-hand-works/01-toy.jpg",
+      "original": "assets/how-a-hand-works/01-toy.png",
+      "foldSrc": "assets/how-a-hand-works/01-toy-fold.jpg",
+      "title": "A hand on strings",
+      "alt": "Big and Little Wonderer sit together at a warm wooden table in soft daylight, both gazing at a plain mechanical hand toy standing upright, its jointed fingers open and five thin strings hanging from the wrist.",
+      "caption": "One toy hand, five strings, and a question."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-a-hand-works/02-bones.jpg",
+      "original": "assets/how-a-hand-works/02-bones.png",
+      "foldSrc": "assets/how-a-hand-works/02-bones-fold.jpg",
+      "title": "Bones in a row",
+      "alt": "A field-guide study of a plain mechanical hand toy lying open on pale ivory paper; each finger is a row of short stiff segments like small bones, and the thumb has fewer segments.",
+      "caption": "Stiff pieces in a row, like the bones in a finger."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-a-hand-works/03-strings.jpg",
+      "original": "assets/how-a-hand-works/03-strings.png",
+      "foldSrc": "assets/how-a-hand-works/03-strings-fold.jpg",
+      "title": "A string pulls",
+      "alt": "A close field-guide study of the mechanical hand toy with one finger curled toward the palm, its thin string pulled tight through small guide loops along the palm side down to the wrist.",
+      "caption": "Pull a string, and one finger curls."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-a-hand-works/04-joints.jpg",
+      "original": "assets/how-a-hand-works/04-joints.png",
+      "foldSrc": "assets/how-a-hand-works/04-joints-fold.jpg",
+      "title": "Where fingers bend",
+      "alt": "A field-guide study of one toy finger bent at its three bend points beside a small blank notebook and a pencil, in soft light on pale ivory paper.",
+      "caption": "Three bend points, like the joints in a finger."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-a-hand-works/05-trace.jpg",
+      "original": "assets/how-a-hand-works/05-trace.png",
+      "foldSrc": "assets/how-a-hand-works/05-trace-fold.jpg",
+      "title": "String to finger",
+      "alt": "Big and Little Wonderer at the warm table; Little holds the end of one string while one toy finger curls, Big sits just behind, and both share one gaze at the curling finger beside a blank notebook.",
+      "caption": "Trace each string to the finger it curls."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-a-hand-works/06-open.jpg",
+      "original": "assets/how-a-hand-works/06-open.png",
+      "foldSrc": "assets/how-a-hand-works/06-open-fold.jpg",
+      "title": "Opening again",
+      "alt": "A field-guide study of the back of the mechanical hand toy with its fingers straightening and a thin elastic cord running along the back of each finger, on pale ivory paper.",
+      "caption": "Something has to pull the finger open again."
+    }
+  ],
+  "reading": {
+    "title": "A toy hand, then a real one",
+    "coverPlate": "wake",
+    "coverText": "Start with a mechanical hand toy on strings. Then look inside a real hand: bones, tendons that pull, and joints that bend.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Gentle pulls only.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A hand on strings",
+        "passage": "Little Wonderer sets a mechanical hand toy on the table. Its fingers stand open, and five thin strings hang from the wrist. Big Wonderer leans in beside the little one. Your own hand can curl and open without any strings you can see. What is hiding inside it that works like the toy?",
+        "prompt": "What does the toy have that a real hand seems to be missing?",
+        "foldable": {
+          "heading": "A hand on strings",
+          "body": "A mechanical hand toy stands open with five strings at the wrist. What inside a real hand works like it?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Bones in a row",
+        "passage": "Each toy finger is a row of short, stiff pieces. A real finger is built the same way, with three small bones in a line. The thumb has two. Counting the wrist and palm, one hand holds 27 bones. Bones are hard, so they keep a finger's shape, but they cannot move on their own.",
+        "prompt": "How many bones are in one finger, and how many in the thumb?",
+        "foldable": {
+          "heading": "Bones in a row",
+          "body": "Each finger has three small bones in a line, and the thumb has two. One whole hand holds 27 bones."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "A string pulls",
+        "passage": "Pull one string, and one toy finger curls toward the palm. The string runs through small loops that keep it close to the finger. Your hand has strings too, called tendons. Muscles up in your forearm pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, just like the toy's loops.",
+        "prompt": "What does a tendon do when a forearm muscle pulls it?",
+        "foldable": {
+          "heading": "A string pulls",
+          "body": "Forearm muscles pull long tendons, like strings. Tendons pull finger bones, and loops keep them close, like the toy's loops."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Where fingers bend",
+        "passage": "The toy finger bends in three places, and so does yours. Those bend points are joints, where two bones meet. Most finger joints work like a hinge on a door, folding mostly one way. The thumb's base joint is different. It lets the thumb swing across the palm to touch each fingertip.",
+        "prompt": "Why do most finger joints fold only one way?",
+        "foldable": {
+          "heading": "Where fingers bend",
+          "body": "Joints are where bones meet. Finger joints fold like door hinges. The thumb's base joint lets it swing across the palm."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "String to finger",
+        "passage": "They pull each string, one at a time, and draw a line from string to finger. The little one curls a real finger slowly and feels the forearm with the other hand. Something moves under the skin near the wrist. The toy and the hand follow the same plan: a pull, a string, and a joint that bends.",
+        "prompt": "Why can you feel your forearm move when your fingers curl?",
+        "foldable": {
+          "heading": "String to finger",
+          "body": "Pull each toy string and match it to a finger. Then curl a real finger and feel the forearm move."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Opening again",
+        "passage": "Let go of a toy string, and something must open the finger again. A muscle can only pull, never push. So your hand has a second set of tendons along the back of each finger, pulling it straight. Toys may use an elastic cord or a second string. Why might one of your fingers be hard to lift by itself?",
+        "prompt": "What pulls a finger straight again?",
+        "foldable": {
+          "heading": "Opening again",
+          "body": "Muscles only pull, never push. Tendons on the back of the hand pull fingers straight again. Toys may use elastic."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "bone",
+        "meaning": "a hard, stiff part inside the body that holds its shape"
+      },
+      {
+        "word": "tendon",
+        "meaning": "a tough cord that joins a muscle to a bone"
+      },
+      {
+        "word": "muscle",
+        "meaning": "a body part that pulls to make bones move"
+      },
+      {
+        "word": "joint",
+        "meaning": "a place where two bones meet and can move"
+      },
+      {
+        "word": "forearm",
+        "meaning": "the part of the arm between the elbow and the wrist"
+      }
+    ],
+    "questions": [
+      "What keeps each finger stiff?",
+      "What pulls a finger closed, in a toy and in a real hand?",
+      "Where does a finger bend, and how does the thumb move differently?",
+      "What opens a hand again, since muscles can only pull?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what keeps a finger stiff, what pulls it closed, and where it bends.",
+      "example": "Example: Bones keep my finger stiff. A tendon pulls it closed. It bends at three joints."
+    },
+    "foldableTitle": "A little book of hands",
+    "foldableCoverLine": "How a Hand Works",
+    "foldableNote": "Carry six hand clues in a small book."
+  },
+  "math": {
+    "title": "Count by hands",
+    "plate": "notice",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "eyebrow": "SIX HAND PATTERNS",
+    "actionLabel": "Find the step, then fill the gap",
+    "tasks": [
+      {
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Little Wonderer counts fingers by fives, one hand at a time. What number comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Count forward by 5 each time.",
+        "answer": 20,
+        "worked": "15 + 5 = 20. Each hand adds 5 fingers.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          4,
+          6,
+          8,
+          10
+        ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Each thumb has 2 bones. Big Wonderer counts thumb bones by twos. What comes next?",
+        "equation": "4, 6, 8, ___",
+        "hint": "Count forward by 2 each time.",
+        "answer": 10,
+        "worked": "8 + 2 = 10. Each thumb adds 2 bones.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          30,
+          40,
+          50,
+          60
+        ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Two hands have 10 fingertips. They count fingertips by tens. What comes next?",
+        "equation": "30, 40, 50, ___",
+        "hint": "Count forward by 10 each time.",
+        "answer": 60,
+        "worked": "50 + 10 = 60. Each pair of hands adds 10 fingertips.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
+        ],
+        "step": 2,
+        "blankIndex": 2,
+        "prompt": "The little one counts string pulls in twos. What number is missing?",
+        "equation": "12, 14, ___, 18",
+        "hint": "Add 2 to the number before the blank.",
+        "answer": 16,
+        "worked": "14 + 2 = 16. Each step adds 2 pulls.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
+          35,
+          40
+        ],
+        "step": 5,
+        "blankIndex": 1,
+        "prompt": "They trace 5 strings on each hand outline. What number is missing?",
+        "equation": "25, ___, 35, 40",
+        "hint": "Add 5 to the number before the blank.",
+        "answer": 30,
+        "worked": "25 + 5 = 30. Each outline adds 5 lines.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          50,
+          60,
+          70,
+          80
+        ],
+        "step": 10,
+        "blankIndex": 2,
+        "prompt": "A jar holds elastic cords in bundles of 10. What number is missing?",
+        "equation": "50, 60, ___, 80",
+        "hint": "Add 10 to the number before the blank.",
+        "answer": 70,
+        "worked": "60 + 10 = 70. Each bundle adds 10 cords.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six skip-counting patterns with steps of 2, 5, and 10. Story numbers are for counting practice.",
+    "answerKeyIntro": "Find the repeated step, then check the blank against its neighbors. Welcome a spoken explanation."
+  },
+  "writing": {
+    "title": "Explain a hand clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "keep"
+    ],
+    "draw": "Draw a hand outline. Mark the bones in one finger, one tendon, and the joints where it bends.",
+    "starter": "My hand clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "A finger stays stiff because",
+        "hint": "what is inside it?"
+      },
+      {
+        "plate": "change",
+        "start": "A finger curls when",
+        "hint": "what pulls on it?"
+      },
+      {
+        "plate": "keep",
+        "start": "A finger opens again because",
+        "hint": "what can a muscle not do?"
+      }
+    ],
+    "words": [
+      "bone",
+      "tendon",
+      "joint",
+      "muscle",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The toy shows its strings; a real hand hides them inside."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Three bones per finger, two in the thumb, 27 in one hand."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "A forearm muscle pulls a tendon; the tendon curls the finger."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "Finger joints fold mostly one way; the thumb base swings across."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "Finger-curling muscles sit in the forearm, so it moves too."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Back tendons pull fingers straight; toys may use elastic."
+    },
+    {
+      "label": "Math · all",
+      "text": "20, 10, 60, 16, 30, 70."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Bones keep fingers stiff; tendons pull; joints bend; back tendons open."
+    }
+  ],
+  "parentGuidance": "Gentle pulls only: no yanking strings or bending fingers backward. Toys differ; a paper-and-straw hand works too.",
+  "sources": [
+    {
+      "label": "Britannica Kids — hand",
+      "url": "https://kids.britannica.com/kids/article/hand/432984"
+    },
+    {
+      "label": "KidsHealth — your bones",
+      "url": "https://kidshealth.org/en/kids/bones.html"
+    },
+    {
+      "label": "KidsHealth — your muscles",
+      "url": "https://kidshealth.org/en/kids/muscles.html"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer sets down a toy hand. It has five strings. The fingers stand open. Big Wonderer leans close. What makes a real hand curl?",
+            "prompt": "What does the toy hand have?"
+          },
+          {
+            "id": "reach",
+            "passage": "Each toy finger has stiff parts. Your finger has three bones. The thumb has two. Bones keep a finger firm.",
+            "prompt": "How many bones are in a finger?"
+          },
+          {
+            "id": "change",
+            "passage": "Pull one string. A finger curls in. Your hand has strings too. They are called tendons. Muscles pull the tendons.",
+            "prompt": "What pulls a finger closed?"
+          },
+          {
+            "id": "notice",
+            "passage": "The finger bends in three spots. Each spot is a joint. Joints fold like a door. The thumb swings across.",
+            "prompt": "Where does a finger bend?"
+          },
+          {
+            "id": "return",
+            "passage": "They pull each string in turn. Which finger curls? The little one curls a finger too. The arm moves near the wrist.",
+            "prompt": "What moves near the wrist?"
+          },
+          {
+            "id": "keep",
+            "passage": "Let go of the string. What opens the finger? Muscles can only pull. Back tendons pull fingers straight.",
+            "prompt": "What opens the finger?"
+          }
+        ],
+        "words": [
+          {
+            "word": "bone",
+            "meaning": "a hard part that keeps a finger firm"
+          },
+          {
+            "word": "tendon",
+            "meaning": "a body string that pulls a bone"
+          },
+          {
+            "word": "joint",
+            "meaning": "where a finger bends"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "The toy has 5 strings. One hand has 5 fingers. How many in all?",
+            "expression": "5 + 5",
+            "equation": "5 + 5 =",
+            "answer": 10,
+            "hint": "Count on from 5.",
+            "worked": "5 + 5 = 10. Add the strings and fingers."
+          },
+          {
+            "plate": "reach",
+            "prompt": "One hand has 14 finger bones. The thumb has 2 of them. How many are in the other fingers?",
+            "expression": "14 − 2",
+            "equation": "14 − 2 =",
+            "answer": 12,
+            "hint": "Take 2 away from 14.",
+            "worked": "14 − 2 = 12. Take away the thumb bones."
+          },
+          {
+            "plate": "change",
+            "prompt": "Big Wonderer pulls 3 strings, then 4 more. How many pulls?",
+            "expression": "3 + 4",
+            "equation": "3 + 4 =",
+            "answer": 7,
+            "hint": "Count on from 3.",
+            "worked": "3 + 4 = 7. Add both sets of pulls."
+          },
+          {
+            "plate": "notice",
+            "prompt": "One finger bends in 3 places. Another bends in 3 places. How many bends?",
+            "expression": "3 + 3",
+            "equation": "3 + 3 =",
+            "answer": 6,
+            "hint": "Add 3 and 3.",
+            "worked": "3 + 3 = 6. Add the bend points."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one traces 9 lines, then 8 more. How many lines?",
+            "expression": "9 + 8",
+            "equation": "9 + 8 =",
+            "answer": 17,
+            "hint": "Make a ten: 9 + 1 + 7.",
+            "worked": "9 + 8 = 17. Add both sets of lines."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A box holds 20 elastic cords. They use 5 on the toy. How many are left?",
+            "expression": "20 − 5",
+            "equation": "20 − 5 =",
+            "answer": 15,
+            "hint": "Take 5 away from 20.",
+            "worked": "20 − 5 = 15. Take away the cords used."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer sets a mechanical hand toy on the table. Five thin strings hang from its wrist. The fingers stand open and still. Big Wonderer leans in beside the little one. A real hand curls with no strings showing. What is inside?",
+            "prompt": "What hangs from the toy's wrist?"
+          },
+          {
+            "id": "reach",
+            "passage": "Each toy finger is a row of stiff pieces. A real finger has three small bones in a line. The thumb has only two. One whole hand has 27 bones. Bones keep the shape but cannot move alone.",
+            "prompt": "How many bones does one hand hold?"
+          },
+          {
+            "id": "change",
+            "passage": "Pull one string, and a toy finger curls. Small loops keep the string close. Your hand has strings too, called tendons. Forearm muscles pull the tendons. The tendons pull the finger bones.",
+            "prompt": "What do forearm muscles pull?"
+          },
+          {
+            "id": "notice",
+            "passage": "The toy finger bends in three places. Yours does too. Each bend point is a joint. Finger joints fold like a door hinge. The thumb's base joint lets it swing across.",
+            "prompt": "What is a joint?"
+          },
+          {
+            "id": "return",
+            "passage": "They pull each string, one at a time. Each string curls its own finger. The little one curls a real finger slowly. A hand on the forearm feels something move. Toy and hand share one plan.",
+            "prompt": "What plan do the toy and hand share?"
+          },
+          {
+            "id": "keep",
+            "passage": "Let go, and something must open the finger. A muscle can only pull, never push. Tendons on the back pull fingers straight. Toys may use elastic instead. Why is one finger hard to lift alone?",
+            "prompt": "What can a muscle never do?"
+          }
+        ],
+        "words": [
+          {
+            "word": "tendon",
+            "meaning": "a tough cord that joins a muscle to a bone"
+          },
+          {
+            "word": "joint",
+            "meaning": "a place where two bones meet"
+          },
+          {
+            "word": "forearm",
+            "meaning": "the arm between the elbow and the wrist"
+          },
+          {
+            "word": "hinge",
+            "meaning": "a part that lets something fold one way"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that one hand has 27 bones, and 14 of them are finger bones. How many are not?",
+            "expression": "27 − 14",
+            "equation": "27 − 14 =",
+            "answer": 13,
+            "hint": "Subtract the ones, then the tens.",
+            "worked": "27 − 14 = 13. Take away the finger bones."
+          },
+          {
+            "plate": "reach",
+            "prompt": "One hand has 14 finger bones and 5 palm bones. How many is that?",
+            "expression": "14 + 5",
+            "equation": "14 + 5 =",
+            "answer": 19,
+            "hint": "Add the ones.",
+            "worked": "14 + 5 = 19. Add finger and palm bones."
+          },
+          {
+            "plate": "change",
+            "prompt": "Big Wonderer pulls a string 18 times, then 16 more. How many pulls?",
+            "expression": "18 + 16",
+            "equation": "18 + 16 =",
+            "answer": 34,
+            "hint": "Add ones, then tens.",
+            "worked": "18 + 16 = 34. Add both sets of pulls."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They count 12 finger joints, then 2 thumb joints. How many joints?",
+            "expression": "12 + 2",
+            "equation": "12 + 2 =",
+            "answer": 14,
+            "hint": "Add the ones.",
+            "worked": "12 + 2 = 14. Add finger and thumb joints."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one traces 25 lines, then 21 more. How many lines?",
+            "expression": "25 + 21",
+            "equation": "25 + 21 =",
+            "answer": 46,
+            "hint": "Add ones, then tens.",
+            "worked": "25 + 21 = 46. Add both sets of lines."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A bag has 40 elastic cords. They use 15 on the toy. How many are left?",
+            "expression": "40 − 15",
+            "equation": "40 − 15 =",
+            "answer": 25,
+            "hint": "Trade a ten for ones if needed.",
+            "worked": "40 − 15 = 25. Take away the cords used."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide. Five thin strings hung from the wrist like reins. Big Wonderer leaned in beside the little one to look. A real hand curls and opens all day, yet no strings show on the outside. Something inside must be doing the same job, so the toy becomes a model worth studying.",
+            "prompt": "Why is the toy a useful model of a real hand?"
+          },
+          {
+            "id": "reach",
+            "passage": "Each toy finger is a short row of stiff pieces joined end to end. A real finger is built the same way, with three small bones called phalanges lined up in a row. The thumb has only two. Add the palm bones and the eight small wrist bones, and one hand holds 27 bones. Bones keep a finger's shape, but they cannot move on their own.",
+            "prompt": "Where are the 27 bones of a hand found?"
+          },
+          {
+            "id": "change",
+            "passage": "When one string is pulled, one toy finger curls toward the palm. The string slides through small loops that keep it close to the finger. Your hand works the same way with tough cords called tendons. Muscles up in the forearm tighten and pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, much like the toy's guides.",
+            "prompt": "How do forearm muscles curl a finger they do not touch?"
+          },
+          {
+            "id": "notice",
+            "passage": "The toy finger bends in three places, and a real finger does too. Each bend point is a joint, the place where two bones meet. Most finger joints are hinge joints, folding mostly one way like a door. The base of the thumb is different, a saddle-shaped joint. It lets the thumb swing across the palm to touch each fingertip, which helps us grip.",
+            "prompt": "How is the thumb's base joint different from a finger joint?"
+          },
+          {
+            "id": "return",
+            "passage": "They pulled each string, one at a time, and drew a line from every string to the finger it curled. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something shifted under the skin, close to the wrist. The toy and the hand follow one plan: a pull, a cord, and a joint that bends.",
+            "prompt": "What did the little one feel, and what does it show?"
+          },
+          {
+            "id": "keep",
+            "passage": "When a toy string is released, something has to open the finger again. A muscle can only pull; it can never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring for that job. Some back tendons are linked together, which may explain why one finger is hard to lift alone.",
+            "prompt": "Why does a hand need tendons on both sides of each finger?"
+          }
+        ],
+        "words": [
+          {
+            "word": "phalanges",
+            "meaning": "the small bones inside the fingers and thumb"
+          },
+          {
+            "word": "tendon",
+            "meaning": "a tough cord that joins a muscle to a bone"
+          },
+          {
+            "word": "forearm",
+            "meaning": "the part of the arm between the elbow and the wrist"
+          },
+          {
+            "word": "joint",
+            "meaning": "a place where two bones meet and move"
+          },
+          {
+            "word": "hinge joint",
+            "meaning": "a joint that folds mostly one way, like a door"
+          },
+          {
+            "word": "saddle joint",
+            "meaning": "the thumb's base joint, which lets it swing across the palm"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 3 joints on each of 7 toy fingers. How many joints?",
+            "expression": "7 × 3",
+            "equation": "7 × 3 =",
+            "answer": 21,
+            "hint": "Seven groups of three.",
+            "worked": "7 × 3 = 21. Seven fingers with three joints each."
+          },
+          {
+            "plate": "reach",
+            "prompt": "Each hand has 5 fingers. How many fingers are on 9 hands?",
+            "expression": "9 × 5",
+            "equation": "9 × 5 =",
+            "answer": 45,
+            "hint": "Nine groups of five.",
+            "worked": "9 × 5 = 45. Nine hands with five fingers each."
+          },
+          {
+            "plate": "change",
+            "prompt": "Big Wonderer pulls a string 126 times in the morning and 87 times after lunch. How many pulls?",
+            "expression": "126 + 87",
+            "equation": "126 + 87 =",
+            "answer": 213,
+            "hint": "Add each place and regroup when needed.",
+            "worked": "126 + 87 = 213. Add the morning and afternoon pulls."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They sort 40 toy strings into equal sets of 5, one set for each toy hand. How many toy hands?",
+            "expression": "40 ÷ 5",
+            "equation": "40 ÷ 5 =",
+            "answer": 8,
+            "hint": "Share 40 into groups of 5.",
+            "worked": "40 ÷ 5 = 8. Each toy hand gets 5 strings."
+          },
+          {
+            "plate": "return",
+            "prompt": "They trace 245 string lines in a week and erase 68 practice lines. How many lines stay?",
+            "expression": "245 − 68",
+            "equation": "245 − 68 =",
+            "answer": 177,
+            "hint": "Subtract ones, then tens, then the next place; regroup when needed.",
+            "worked": "245 − 68 = 177. Take away the practice lines."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A bag holds 300 elastic cords. They use 45 on toy hands. How many remain?",
+            "expression": "300 − 45",
+            "equation": "300 − 45 =",
+            "answer": 255,
+            "hint": "Regroup across the zeros.",
+            "worked": "300 − 45 = 255. Take away the cords used."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide and five thin strings trailing from the wrist. Beside the little one, Big Wonderer leaned in, curious about what the toy was trying to copy. A real hand curls, grips, and opens hundreds of times a day, yet no strings show on the outside. The toy is a model, a simpler machine that copies one idea from the real thing. Studying the model can point to what hides under the skin.",
+            "prompt": "What idea might the toy be copying from a real hand?"
+          },
+          {
+            "id": "reach",
+            "passage": "Each toy finger is a short row of stiff segments, and a real finger follows the same design with three bones called phalanges. The thumb has only two phalanges, which is one reason it moves so differently. Counting the five palm bones and the eight small wrist bones, one hand holds 27 bones in all. Bones are rigid, so they keep a finger's shape and give muscles something firm to pull against. On their own, though, bones cannot move at all.",
+            "prompt": "Why do muscles need rigid bones to pull against?"
+          },
+          {
+            "id": "change",
+            "passage": "When one string is pulled, a single toy finger curls toward the palm, guided by small loops along the way. A real hand uses the same trick with tendons, tough cords that connect muscles to bones. Most of the muscles that bend the fingers sit up in the forearm, and their long tendons cross the wrist into each finger. Fibrous loops called pulleys hold the tendons close to the bones, much like the toy's loops. Without them, a tendon would pull away from the finger like a bowstring.",
+            "prompt": "What would happen to a tendon without its pulleys?"
+          },
+          {
+            "id": "notice",
+            "passage": "Both the toy finger and a real finger bend in three places, and each bend point is a joint where two bones meet. Most finger joints are hinge joints, which fold mostly in one direction, much like a door. The knuckle joints can also tilt side to side, so fingers can spread apart. The base of the thumb is a saddle joint, shaped a bit like a rider's saddle. That shape lets the thumb swing across the palm and touch each fingertip, which makes careful gripping possible.",
+            "prompt": "How does the shape of a joint decide how it can move?"
+          },
+          {
+            "id": "return",
+            "passage": "They pulled each string in turn and drew a line from every string to the finger it curled, building a map of the model. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something slid under the skin near the wrist, a sign of muscles working far from the fingertip. The toy and the hand follow one plan: a pull, a cord, and a joint that bends. The model is simpler, but the idea is the same.",
+            "prompt": "What evidence shows the finger muscles are far from the fingertip?"
+          },
+          {
+            "id": "keep",
+            "passage": "When a toy string is released, something must open the finger again, because a muscle can only pull and never push. A real hand solves this with a second set of tendons along the back of each finger, pulled by other forearm muscles. Many toys use an elastic cord or a spring for the same job. Some back-of-hand tendons are linked by small bridges, which may explain why the ring finger is hard to lift alone. That leaves a question worth testing on your own hand.",
+            "prompt": "Why does a hand need muscles and tendons working in pairs?"
+          }
+        ],
+        "words": [
+          {
+            "word": "phalanges",
+            "meaning": "the small bones inside the fingers and thumb"
+          },
+          {
+            "word": "tendon",
+            "meaning": "a tough cord that connects a muscle to a bone"
+          },
+          {
+            "word": "pulley",
+            "meaning": "a tough loop that holds a tendon close to a finger bone"
+          },
+          {
+            "word": "forearm",
+            "meaning": "the part of the arm between the elbow and the wrist"
+          },
+          {
+            "word": "hinge joint",
+            "meaning": "a joint that folds mostly in one direction"
+          },
+          {
+            "word": "saddle joint",
+            "meaning": "the thumb's base joint, shaped like a saddle"
+          },
+          {
+            "word": "model",
+            "meaning": "a simpler copy that shows how something works"
+          },
+          {
+            "word": "rigid",
+            "meaning": "stiff and hard to bend"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer tallies 1250 string pulls on Monday and 1875 on Tuesday. How many pulls?",
+            "expression": "1250 + 1875",
+            "equation": "1250 + 1875 =",
+            "answer": 3125,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "1250 + 1875 = 3125. Add both days of pulls."
+          },
+          {
+            "plate": "reach",
+            "prompt": "One hand has 27 bones. How many bones are in 8 hands?",
+            "expression": "27 × 8",
+            "equation": "27 × 8 =",
+            "answer": 216,
+            "hint": "Think 8 × 20 and 8 × 7.",
+            "worked": "27 × 8 = 216. Eight hands with 27 bones each."
+          },
+          {
+            "plate": "change",
+            "prompt": "Big Wonderer winds 2400 mm of string and cuts off 785 mm for the toy. How many mm remain?",
+            "expression": "2400 − 785",
+            "equation": "2400 − 785 =",
+            "answer": 1615,
+            "hint": "Regroup across the zeros.",
+            "worked": "2400 − 785 = 1615. Take away the string that was cut."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A chart lists 1120 finger joints shared equally by 8 classes. How many joints per class?",
+            "expression": "1120 ÷ 8",
+            "equation": "1120 ÷ 8 =",
+            "answer": 140,
+            "hint": "Split 1120 into 800 and 320, then divide each part by 8.",
+            "worked": "1120 ÷ 8 = 140. Each class gets the same number of joints."
+          },
+          {
+            "plate": "return",
+            "prompt": "They draw 9 string lines on each of 135 hand outlines. How many lines?",
+            "expression": "135 × 9",
+            "equation": "135 × 9 =",
+            "answer": 1215,
+            "hint": "Think 100 × 9, 30 × 9 and 5 × 9.",
+            "worked": "135 × 9 = 1215. Each of the outlines gets 9 lines."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A crate holds 5000 elastic cords. Toy makers use 2365 of them. How many are left?",
+            "expression": "5000 − 2365",
+            "equation": "5000 − 2365 =",
+            "answer": 2635,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 2365 = 2635. Take away the cords used."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "lab-page"
+  ],
+  "labPage": {
+    "materials": [
+      "a mechanical hand toy",
+      "paper",
+      "pencil",
+      "crayon or colored pencil (optional)",
+      "your own two hands"
+    ]
+  },
+  "quiz": {
+    "title": "Four looks at a hand",
+    "intro": "Follow the pull from string to finger.",
+    "questions": [
+      {
+        "id": "bones",
+        "prompt": "What keeps a finger stiff?",
+        "choices": [
+          "Bones in a row",
+          "Air inside",
+          "Only skin"
+        ],
+        "answerIndex": 0,
+        "answer": "Small bones in a row keep each finger firm."
+      },
+      {
+        "id": "tendons",
+        "prompt": "What pulls a finger closed?",
+        "choices": [
+          "A fingernail",
+          "A tendon",
+          "A painted line"
+        ],
+        "answerIndex": 1,
+        "answer": "A forearm muscle pulls a tendon, and the tendon pulls the finger bones."
+      },
+      {
+        "id": "joints",
+        "prompt": "Where does a finger bend?",
+        "choices": [
+          "At its joints",
+          "In the nail",
+          "Anywhere at all"
+        ],
+        "answerIndex": 0,
+        "answer": "A finger bends at joints, where two bones meet."
+      },
+      {
+        "id": "open",
+        "prompt": "What opens a hand again?",
+        "choices": [
+          "Muscles pushing",
+          "Back tendons pulling",
+          "Nothing at all"
+        ],
+        "answerIndex": 1,
+        "answer": "Muscles only pull, so tendons on the back of the hand pull fingers straight."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How a Hand Works",
+    "line": "Bones, tendons, and joints that bend.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "Who Pulls My Strings?",
+    "lines": [
+      "Little Wonderer pulled on a string, only one,",
+      "and a toy finger curled like a cat in the sun.",
+      "“Who’s pulling MY fingers?” the little one cried.",
+      "“I don’t see a string, and I’ve looked on each side!”",
+      "",
+      "Big Wonderer laughed. “You have strings, it is true.",
+      "They’re tendons, tucked under your skin, out of view.",
+      "Your muscles sit up in your arm past your wrist,",
+      "and they tug, and they tug, till your fingers make fists.”",
+      "",
+      "Inside every finger are three bones in a row",
+      "(the thumb has just two, as the toy seemed to know),",
+      "with joints in between them that fold like a door —",
+      "just one way, not backward. (Please don’t try for more.)",
+      "",
+      "But muscles can’t push, so to open back wide,",
+      "there are strings on the back, on the knuckle-y side.",
+      "So the little one waved at the toy on the shelf:",
+      "“We both work on strings — but I pull them myself!”"
+    ],
+    "drawing": {
+      "src": "assets/how-a-hand-works/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer at a table, watching one finger of a mechanical hand toy curl while Little holds a string."
+    }
+  }
+}
