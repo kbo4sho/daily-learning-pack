@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "soap-bubbles",
-  "topic": "soap bubbles",
-  "why": "Watching bubbles form, change color and pop helps your child describe a sequence and ask questions about change.",
-  "teaser": "Blow a ring, watch colors swirl on a thin soap film, then ask why a bubble is round — and why it pops.",
+  "slug": "how-a-hand-works",
+  "topic": "how a hand works",
+  "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
+  "teaser": "Pull one string on a mechanical hand toy, watch a finger curl, then find the bones, tendons and joints doing the same job in your own hand.",
   "aliases": [
-    "bubbles",
-    "soap film",
-    "thin film colors",
-    "surface tension"
+    "hands",
+    "tendons",
+    "finger joints",
+    "hand bones",
+    "mechanical hand"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "story-problems",
+  "mathTemplate": "pattern-detective",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "one-step-add",
-      "one-step-subtract"
+      "skip-next",
+      "skip-missing"
     ],
     "format": "curiosity-day"
   },
@@ -30,397 +31,420 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Soap Bubbles",
-  "title": "Soap Bubbles",
-  "question": "Why do soap bubbles show swirling colors, stay round, and then pop?",
-  "idea": "A soap bubble is a thin water-and-soap film with air inside. Light bouncing in the film makes swirling colors as the film thins. Surface tension pulls the film into a round shape. When a spot gets too thin or dry, the bubble pops.",
+  "wonderLabel": "How a Hand Works",
+  "title": "How a Hand Works",
+  "question": "How do bones, tendons and joints work together to curl and open a hand?",
+  "idea": "A hand has 27 bones linked at joints. Muscles, mostly up in the forearm, pull long tendons that work like strings, curling fingers at hinge-like joints. Muscles can only pull, so other tendons on the back of the hand pull the fingers straight again.",
   "curiosity": {
-    "intro": "Start with one floating bubble. Then look closer: a thin soap film, swirling colors, a round shape, and a careful why for the pop.",
-    "carryForward": "Watch the colors change, then ask what the film is doing as it thins.",
+    "intro": "Start with a toy hand on strings. Then look inside your own: bones, tendons that pull like strings, and joints that bend.",
+    "carryForward": "Pull one string, then ask which part of your own hand does that job.",
     "questions": [
       {
-        "id": "film",
+        "id": "bones",
         "plate": "reach",
-        "question": "What is a soap bubble made of?",
-        "notice": "Find the thin shiny wall of the bubble, and the air space inside.",
-        "say": "A soap bubble is a very thin film of water mixed with soap, wrapped around a pocket of air. Soap molecules help the watery film hold together a little longer than plain water would. The wall is so thin you can see through it, yet it still encloses the air.",
-        "try": "Dip a wand and hold up a flat soap film (not a bubble yet). Look at the film edge-on if you can, then blow gently to trap air inside."
+        "question": "What keeps a finger stiff?",
+        "notice": "Find the short stiff pieces in each toy finger, and count them.",
+        "say": "Bones. Each finger has three small bones in a row, and the thumb has two. Counting the wrist and palm, one hand has 27 bones. Bones hold the shape, but they cannot move by themselves.",
+        "try": "Gently press along one of your fingers and count the hard parts between the bends. Count the stiff pieces on one toy finger too. Do the two numbers match?"
       },
       {
-        "id": "colors",
+        "id": "strings",
         "plate": "change",
-        "question": "Why do bubble colors swirl and shift?",
-        "notice": "Find places on the bubble where stripes of color move and change.",
-        "say": "Light reflects from the front and back of the thin soap film. Those reflections can add or cancel, so some colors look bright while others fade. As water drains or evaporates, the film gets thinner, and the color pattern shifts. Scientists call this thin-film interference.",
-        "try": "Watch one bubble without poking it. Name two colors you see, then notice whether they move toward the top or bottom as time passes."
+        "question": "What pulls a finger closed?",
+        "notice": "Find the thin string that runs along the palm side of a curled toy finger.",
+        "say": "In the toy, a string. In your hand, a tendon: a tough cord that joins a muscle to a bone. Muscles in your forearm pull long tendons that reach into each finger, and tough loops along the finger hold them close, like the toy's guides.",
+        "try": "Draw around your hand on paper to make an outline. Pull one toy string slowly and watch which finger curls. Draw a line from that string to the same finger on your outline. Do the same for every string, one at a time."
       },
       {
-        "id": "round",
+        "id": "compare",
         "plate": "return",
-        "question": "Why are free-floating bubbles round?",
-        "notice": "Compare a free bubble in the air with any stretched film still on a wand.",
-        "say": "Surface tension pulls on the soap film from every direction. For a given amount of air inside, a sphere uses the least film area, so a free bubble settles into a round shape. On a wand, the frame can stretch the film into other shapes until the air is trapped.",
-        "try": "Blow one bubble and watch it from the side. Sketch the round outline, then write one sentence about the pull of the film."
+        "question": "Does your hand work like the toy?",
+        "notice": "Watch where the toy finger bends, then watch your own finger bend.",
+        "say": "Both follow one plan: a pull, a string, and joints that bend. Your finger bends at three joints, mostly one way, like a door hinge. The muscles that curl your fingers sit mostly in your forearm, so you can feel them move there.",
+        "try": "Curl your pointer finger slowly and count the places it bends. Curl the toy's pointer finger and compare. Rest your other hand on your forearm and wiggle your fingers. What do you feel move?"
       },
       {
-        "id": "pop",
+        "id": "open",
         "plate": "keep",
-        "question": "Why does a bubble pop?",
-        "notice": "Find a dark or dull patch on a bubble just before it vanishes, if you can.",
-        "say": "A bubble pops when its film breaks. Touching it, dusty air, or a dry spot can open a hole. Even without a poke, water leaves the film as it drains and evaporates, so a place can get too thin to hold. Some recipes last longer, but every ordinary soap bubble still has a short life.",
-        "try": "Time how long two bubbles last in still air. Change only one thing (shade versus sun, or a gentle cover) and compare. Do not aim bubbles at faces or eyes."
+        "question": "What opens the hand again?",
+        "notice": "Look at the back of the toy hand for elastic, a spring, or a second string.",
+        "say": "A muscle can only pull, never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring instead. Some tendons on the back of your hand are linked, which is why one finger can be hard to lift alone.",
+        "try": "Let go of a toy string and watch whether the finger springs back. Look for what pulls it open. Then lay your hand flat, fold your middle finger under, and gently try to lift your ring finger."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/soap-bubbles/01-blow.jpg",
-      "original": "assets/soap-bubbles/01-blow.png",
-      "foldSrc": "assets/soap-bubbles/01-blow-fold.jpg",
-      "title": "A first bubble",
-      "alt": "Big and Little Wonderer stand together on a warm garden path in soft daylight; Little holds a simple bubble wand while a single round soap bubble floats between them, and both share one gaze toward the bubble.",
-      "caption": "One quiet bubble lifts into the air."
+      "src": "assets/how-a-hand-works/01-toy.jpg",
+      "original": "assets/how-a-hand-works/01-toy.png",
+      "foldSrc": "assets/how-a-hand-works/01-toy-fold.jpg",
+      "title": "A hand on strings",
+      "alt": "Big and Little Wonderer sit together at a warm wooden table in soft daylight, both gazing at a plain mechanical hand toy standing upright, its jointed fingers open and five thin strings hanging from the wrist.",
+      "caption": "One toy hand, five strings, and a question."
     },
     {
       "id": "reach",
-      "src": "assets/soap-bubbles/02-film.jpg",
-      "original": "assets/soap-bubbles/02-film.png",
-      "foldSrc": "assets/soap-bubbles/02-film-fold.jpg",
-      "title": "A thin soap film",
-      "alt": "A clear field-guide close study of a round soap bubble and a wand with a flat soap film stretched across its ring, showing the thin shiny wall and the air inside, on pale ivory paper.",
-      "caption": "A watery soap film wraps a pocket of air."
+      "src": "assets/how-a-hand-works/02-bones.jpg",
+      "original": "assets/how-a-hand-works/02-bones.png",
+      "foldSrc": "assets/how-a-hand-works/02-bones-fold.jpg",
+      "title": "Bones in a row",
+      "alt": "A field-guide study of a plain mechanical hand toy lying open on pale ivory paper; each finger is a row of short stiff segments like small bones, and the thumb has fewer segments.",
+      "caption": "Stiff pieces in a row, like the bones in a finger."
     },
     {
       "id": "change",
-      "src": "assets/soap-bubbles/03-colors.jpg",
-      "original": "assets/soap-bubbles/03-colors.png",
-      "foldSrc": "assets/soap-bubbles/03-colors-fold.jpg",
-      "title": "Colors that swirl",
-      "alt": "A close field-guide study of a soap bubble surface with soft swirling stripes of muted rainbow color on the thin film, no text, pale ivory background.",
-      "caption": "Light and a thinning film make colors shift."
+      "src": "assets/how-a-hand-works/03-strings.jpg",
+      "original": "assets/how-a-hand-works/03-strings.png",
+      "foldSrc": "assets/how-a-hand-works/03-strings-fold.jpg",
+      "title": "A string pulls",
+      "alt": "A close field-guide study of the mechanical hand toy with one finger curled toward the palm, its thin string pulled tight through small guide loops along the palm side down to the wrist.",
+      "caption": "Pull a string, and one finger curls."
     },
     {
       "id": "notice",
-      "src": "assets/soap-bubbles/04-bands.jpg",
-      "original": "assets/soap-bubbles/04-bands.png",
-      "foldSrc": "assets/soap-bubbles/04-bands-fold.jpg",
-      "title": "Stripes to notice",
-      "alt": "A calm notebook-and-bubble study: soft color stripes on a floating soap bubble beside a small blank notebook and pencil, as if someone is recording how the colors move, pale ivory background.",
-      "caption": "Color stripes are a clue the film is changing."
+      "src": "assets/how-a-hand-works/04-joints.jpg",
+      "original": "assets/how-a-hand-works/04-joints.png",
+      "foldSrc": "assets/how-a-hand-works/04-joints-fold.jpg",
+      "title": "Where fingers bend",
+      "alt": "A field-guide study of one toy finger bent at its three bend points beside a small blank notebook and a pencil, in soft light on pale ivory paper.",
+      "caption": "Three bend points, like the joints in a finger."
     },
     {
       "id": "return",
-      "src": "assets/soap-bubbles/05-round.jpg",
-      "original": "assets/soap-bubbles/05-round.png",
-      "foldSrc": "assets/soap-bubbles/05-round-fold.jpg",
-      "title": "Why so round?",
-      "alt": "Big and Little Wonderer stand side by side on a garden path, warm cream bodies, Big slightly behind Little; both share one gaze toward a perfectly round free-floating soap bubble, while a wand with a stretched flat film rests nearby for comparison.",
-      "caption": "Surface tension pulls a free bubble into a sphere."
+      "src": "assets/how-a-hand-works/05-trace.jpg",
+      "original": "assets/how-a-hand-works/05-trace.png",
+      "foldSrc": "assets/how-a-hand-works/05-trace-fold.jpg",
+      "title": "String to finger",
+      "alt": "Big and Little Wonderer at the warm table; Little holds the end of one string while one toy finger curls, Big sits just behind, and both share one gaze at the curling finger beside a blank notebook.",
+      "caption": "Trace each string to the finger it curls."
     },
     {
       "id": "keep",
-      "src": "assets/soap-bubbles/06-pop.jpg",
-      "original": "assets/soap-bubbles/06-pop.png",
-      "foldSrc": "assets/soap-bubbles/06-pop-fold.jpg",
-      "title": "A careful pop",
-      "alt": "A field-guide moment just after a soap bubble has popped: tiny film droplets hang in soft light above a garden path, with a quiet empty space where the sphere was, pale ivory background, no text.",
-      "caption": "When the film breaks, the bubble is gone."
+      "src": "assets/how-a-hand-works/06-open.jpg",
+      "original": "assets/how-a-hand-works/06-open.png",
+      "foldSrc": "assets/how-a-hand-works/06-open-fold.jpg",
+      "title": "Opening again",
+      "alt": "A field-guide study of the back of the mechanical hand toy with its fingers straightening and a thin elastic cord running along the back of each finger, on pale ivory paper.",
+      "caption": "Something has to pull the finger open again."
     }
   ],
   "reading": {
+    "title": "A toy hand, then a real one",
+    "coverPlate": "wake",
+    "coverText": "Start with a mechanical hand toy on strings. Then look inside a real hand: bones, tendons that pull, and joints that bend.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Gentle pulls only.",
     "beats": [
       {
         "id": "wake",
-        "title": "A first bubble",
-        "passage": "Little Wonderer dips a wand and blows once. A round soap bubble lifts into the soft garden light. Big Wonderer watches beside the little one. The bubble looks simple, yet its wall is busy. What keeps that thin shine from falling apart right away?",
-        "prompt": "What do you notice first about the floating bubble?",
+        "plate": "wake",
+        "title": "A hand on strings",
+        "passage": "Little Wonderer sets a mechanical hand toy on the table. Its fingers stand open, and five thin strings hang from the wrist. Big Wonderer leans in beside the little one. Your own hand can curl and open without any strings you can see. What is hiding inside it that works like the toy?",
+        "prompt": "What does the toy have that a real hand seems to be missing?",
         "foldable": {
-          "heading": "A first bubble",
-          "body": "One soft blow lifts a round soap bubble into the light. Its thin wall already hides a quiet science story."
-        },
-        "plate": "wake"
+          "heading": "A hand on strings",
+          "body": "A mechanical hand toy stands open with five strings at the wrist. What inside a real hand works like it?"
+        }
       },
       {
         "id": "reach",
-        "title": "A thin soap film",
-        "passage": "A soap bubble is a thin film of water mixed with soap, wrapped around air. Soap molecules help the watery film hold together longer than plain water would. You can stretch a flat film on a wand before any bubble forms. The wall looks delicate because it truly is thin.",
-        "prompt": "What two parts make up a soap bubble?",
+        "plate": "reach",
+        "title": "Bones in a row",
+        "passage": "Each toy finger is a row of short, stiff pieces. A real finger is built the same way, with three small bones in a line. The thumb has two. Counting the wrist and palm, one hand holds 27 bones. Bones are hard, so they keep a finger's shape, but they cannot move on their own.",
+        "prompt": "How many bones are in one finger, and how many in the thumb?",
         "foldable": {
-          "heading": "Thin soap film",
-          "body": "Water mixed with soap makes a thin shiny film. Air rests safely inside that delicate watery wall."
-        },
-        "plate": "reach"
+          "heading": "Bones in a row",
+          "body": "Each finger has three small bones in a line, and the thumb has two. One whole hand holds 27 bones."
+        }
       },
       {
         "id": "change",
-        "title": "Colors that swirl",
-        "passage": "Light reflects from the front and back of the soap film. Those reflections can add or cancel, so stripes of color appear. As water drains or evaporates, the film thins and the colors shift. Scientists call this thin-film interference. The swirl is a clue, not paint on the bubble.",
-        "prompt": "What makes the colors on a bubble change over time?",
+        "plate": "change",
+        "title": "A string pulls",
+        "passage": "Pull one string, and one toy finger curls toward the palm. The string runs through small loops that keep it close to the finger. Your hand has strings too, called tendons. Muscles up in your forearm pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, just like the toy's loops.",
+        "prompt": "What does a tendon do when a forearm muscle pulls it?",
         "foldable": {
-          "heading": "Colors that swirl",
-          "body": "Light bounces inside the thinning soap film. Soft color stripes slide as the wall slowly changes."
-        },
-        "plate": "change"
+          "heading": "A string pulls",
+          "body": "Forearm muscles pull long tendons, like strings. Tendons pull finger bones, and loops keep them close, like the toy's loops."
+        }
       },
       {
         "id": "notice",
-        "title": "Stripes to notice",
-        "passage": "Big Wonderer sketches the moving color stripes while the little one watches. A bright belt may slide as the film changes thickness. Recording what you see turns a pretty swirl into evidence. Later you can ask whether the top of the bubble thinned faster than the bottom.",
-        "prompt": "How can color stripes become evidence?",
+        "plate": "notice",
+        "title": "Where fingers bend",
+        "passage": "The toy finger bends in three places, and so does yours. Those bend points are joints, where two bones meet. Most finger joints work like a hinge on a door, folding mostly one way. The thumb's base joint is different. It lets the thumb swing across the palm to touch each fingertip.",
+        "prompt": "Why do most finger joints fold only one way?",
         "foldable": {
-          "heading": "Stripes to notice",
-          "body": "Sketch the moving color stripes in a notebook. They hint that the soap film is getting thinner."
-        },
-        "plate": "notice"
+          "heading": "Where fingers bend",
+          "body": "Joints are where bones meet. Finger joints fold like door hinges. The thumb's base joint lets it swing across the palm."
+        }
       },
       {
         "id": "return",
-        "title": "Why so round?",
-        "passage": "They look again at a free bubble beside a stretched film on a wand. Surface tension pulls on the soap film from every side. For the air inside, a sphere uses the least film area, so a free bubble settles into a round shape. The wand can force other shapes until the air is trapped.",
-        "prompt": "Why does a free-floating bubble look round?",
+        "plate": "return",
+        "title": "String to finger",
+        "passage": "They pull each string, one at a time, and draw a line from string to finger. The little one curls a real finger slowly and feels the forearm with the other hand. Something moves under the skin near the wrist. The toy and the hand follow the same plan: a pull, a string, and a joint that bends.",
+        "prompt": "Why can you feel your forearm move when your fingers curl?",
         "foldable": {
-          "heading": "Why so round?",
-          "body": "Surface tension pulls the soap film evenly from every side. A free bubble settles into a round sphere."
-        },
-        "plate": "return"
+          "heading": "String to finger",
+          "body": "Pull each toy string and match it to a finger. Then curl a real finger and feel the forearm move."
+        }
       },
       {
         "id": "keep",
-        "title": "A careful pop",
-        "passage": "Every ordinary soap bubble has a short life. Touch, dust, or a dry thin spot can open a hole in the film. Even in still air, water leaves the wall as it drains and evaporates. When the film breaks, tiny droplets scatter and the sphere is gone. What might help a bubble last a little longer?",
-        "prompt": "Name one reason a soap bubble might pop.",
+        "plate": "keep",
+        "title": "Opening again",
+        "passage": "Let go of a toy string, and something must open the finger again. A muscle can only pull, never push. So your hand has a second set of tendons along the back of each finger, pulling it straight. Toys may use an elastic cord or a second string. Why might one of your fingers be hard to lift by itself?",
+        "prompt": "What pulls a finger straight again?",
         "foldable": {
-          "heading": "A careful pop",
-          "body": "A hole in the thinning film ends the bubble at last. Tiny droplets scatter softly through the light."
-        },
-        "plate": "keep"
+          "heading": "Opening again",
+          "body": "Muscles only pull, never push. Tendons on the back of the hand pull fingers straight again. Toys may use elastic."
+        }
       }
     ],
     "words": [
       {
-        "word": "soap film",
-        "meaning": "a thin watery wall mixed with soap"
+        "word": "bone",
+        "meaning": "a hard, stiff part inside the body that holds its shape"
       },
       {
-        "word": "interference",
-        "meaning": "light waves adding or canceling after reflecting"
+        "word": "tendon",
+        "meaning": "a tough cord that joins a muscle to a bone"
       },
       {
-        "word": "surface tension",
-        "meaning": "the pull along a liquid's surface"
+        "word": "muscle",
+        "meaning": "a body part that pulls to make bones move"
       },
       {
-        "word": "evaporate",
-        "meaning": "when liquid water turns into vapor in the air"
+        "word": "joint",
+        "meaning": "a place where two bones meet and can move"
       },
       {
-        "word": "sphere",
-        "meaning": "a round ball shape with even sides"
+        "word": "forearm",
+        "meaning": "the part of the arm between the elbow and the wrist"
       }
+    ],
+    "questions": [
+      "What keeps each finger stiff?",
+      "What pulls a finger closed, in a toy and in a real hand?",
+      "Where does a finger bend, and how does the thumb move differently?",
+      "What opens a hand again, since muscles can only pull?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what a bubble wall is made of, why colors can swirl, and one careful way to watch a bubble without poking it toward a face.",
-      "example": "Example: The wall is a thin soap film around air. Colors shift as the film thins. I will watch from the side and keep wands away from eyes."
+      "prompt": "Write or dictate three sentences: what keeps a finger stiff, what pulls it closed, and where it bends.",
+      "example": "Example: Bones keep my finger stiff. A tendon pulls it closed. It bends at three joints."
     },
-    "parentNote": "Wonderers model looking, not face-blowing contests. Keep solution away from eyes; wipe spills. Hedge aloud: recipes and air conditions change how long bubbles last.",
-    "title": "Soap bubbles, then deeper",
-    "questions": [
-      "What do you notice first about a floating soap bubble?",
-      "What is the thin wall of a soap bubble made of?",
-      "Why can colors swirl and shift on a bubble?",
-      "Why are free-floating bubbles often round, and why do they pop?"
-    ],
-    "coverPlate": "wake",
-    "coverText": "Start with one floating bubble. Then look closer: thin soap film, swirling colors, a round shape, and a careful why for the pop.",
-    "foldableCoverLine": "Soap Bubbles",
-    "foldableNote": "Carry six bubble clues in a small book.",
-    "foldableTitle": "A little book of bubbles"
+    "foldableTitle": "A little book of hands",
+    "foldableCoverLine": "How a Hand Works",
+    "foldableNote": "Carry six hand clues in a small book."
   },
   "math": {
-    "title": "Bubble story numbers",
-    "eyebrow": "Math",
-    "intro": "Six one-step stories about bubbles, wands, and color stripes. Add or subtract to find each answer.",
-    "extension": "After you finish, tell which problem felt like watching a bubble pop.",
+    "title": "Count by hands",
     "plate": "notice",
-    "actionLabel": "Solve",
-    "answerKeyIntro": "Math answers (story numbers):",
-    "printNote": "Use these story numbers about soap bubbles. The picture is not a ruler.",
-    "parentNote": "Six one-step story problems tied to bubbles. Grade 2 number work; reading stays richer.",
-    "template": "story-problems",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "eyebrow": "SIX HAND PATTERNS",
+    "actionLabel": "Find the step, then fill the gap",
     "tasks": [
       {
-        "skill": "one-step-add",
-        "operands": [
-          28,
-          17
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
         ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Little Wonderer counts fingers by fives, one hand at a time. What number comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Count forward by 5 each time.",
+        "answer": 20,
+        "worked": "15 + 5 = 20. Each hand adds 5 fingers.",
         "plate": "wake",
-        "label": "TASK 1",
-        "prompt": "Little Wonderer blows 28 bubbles, then 17 more float up. How many bubbles is that altogether?",
-        "equation": "28 + 17 =",
-        "hint": "Add the ones, then the tens.",
-        "answer": 45,
-        "worked": "28 + 17 = 45. Combine the bubbles from both blows."
+        "label": "TASK 1"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          64,
-          29
+        "skill": "skip-next",
+        "sequence": [
+          4,
+          6,
+          8,
+          10
         ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "Each thumb has 2 bones. Big Wonderer counts thumb bones by twos. What comes next?",
+        "equation": "4, 6, 8, ___",
+        "hint": "Count forward by 2 each time.",
+        "answer": 10,
+        "worked": "8 + 2 = 10. Each thumb adds 2 bones.",
         "plate": "reach",
-        "label": "TASK 2",
-        "prompt": "Big Wonderer counts 64 wand dips in the jar, then uses 29 of them. How many dips remain?",
-        "equation": "64 − 29 =",
-        "hint": "Trade 1 ten for 10 ones if you need more ones.",
-        "answer": 35,
-        "worked": "64 − 29 = 35. Subtract the dips that were used."
+        "label": "TASK 2"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          36,
-          48
+        "skill": "skip-next",
+        "sequence": [
+          30,
+          40,
+          50,
+          60
         ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "Two hands have 10 fingertips. They count fingertips by tens. What comes next?",
+        "equation": "30, 40, 50, ___",
+        "hint": "Count forward by 10 each time.",
+        "answer": 60,
+        "worked": "50 + 10 = 60. Each pair of hands adds 10 fingertips.",
         "plate": "change",
-        "label": "TASK 3",
-        "prompt": "The little one sketches 36 color stripes, then adds 48 more stripes after the film thins. How many stripe marks are in the notebook?",
-        "equation": "36 + 48 =",
-        "hint": "Add ones, then tens. Regroup if ones make a ten.",
-        "answer": 84,
-        "worked": "36 + 48 = 84. Add the stripe sketches together."
+        "label": "TASK 3"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          81,
-          37
+        "skill": "skip-missing",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
         ],
+        "step": 2,
+        "blankIndex": 2,
+        "prompt": "The little one counts string pulls in twos. What number is missing?",
+        "equation": "12, 14, ___, 18",
+        "hint": "Add 2 to the number before the blank.",
+        "answer": 16,
+        "worked": "14 + 2 = 16. Each step adds 2 pulls.",
         "plate": "notice",
-        "label": "TASK 4",
-        "prompt": "A tray holds 81 floating bubbles. Then 37 pop in the breeze. How many bubbles are still floating?",
-        "equation": "81 − 37 =",
-        "hint": "Subtract ones, then tens. Regroup if needed.",
-        "answer": 44,
-        "worked": "81 − 37 = 44. Take away the bubbles that popped."
+        "label": "TASK 4"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          19,
-          56
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
+          35,
+          40
         ],
+        "step": 5,
+        "blankIndex": 1,
+        "prompt": "They trace 5 strings on each hand outline. What number is missing?",
+        "equation": "25, ___, 35, 40",
+        "hint": "Add 5 to the number before the blank.",
+        "answer": 30,
+        "worked": "25 + 5 = 30. Each outline adds 5 lines.",
         "plate": "return",
-        "label": "TASK 5",
-        "prompt": "They time 19 short-lived bubbles and 56 longer ones. How many bubbles did they time in all?",
-        "equation": "19 + 56 =",
-        "hint": "Add ones, then tens.",
-        "answer": 75,
-        "worked": "19 + 56 = 75. Combine both groups of timed bubbles."
+        "label": "TASK 5"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          90,
-          38
+        "skill": "skip-missing",
+        "sequence": [
+          50,
+          60,
+          70,
+          80
         ],
+        "step": 10,
+        "blankIndex": 2,
+        "prompt": "A jar holds elastic cords in bundles of 10. What number is missing?",
+        "equation": "50, 60, ___, 80",
+        "hint": "Add 10 to the number before the blank.",
+        "answer": 70,
+        "worked": "60 + 10 = 70. Each bundle adds 10 cords.",
         "plate": "keep",
-        "label": "TASK 6",
-        "prompt": "A bottle starts with enough mix for 90 bubbles. After play, 38 bubble turns are used. How many turns of mix are left?",
-        "equation": "90 − 38 =",
-        "hint": "Regroup a ten if the ones are not enough.",
-        "answer": 52,
-        "worked": "90 − 38 = 52. Subtract the turns already used."
+        "label": "TASK 6"
       }
-    ]
+    ],
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six skip-counting patterns with steps of 2, 5, and 10. Story numbers are for counting practice.",
+    "answerKeyIntro": "Find the repeated step, then check the blank against its neighbors. Welcome a spoken explanation."
   },
   "writing": {
-    "title": "Give the morning your words.",
-    "intro": "Choose a bubble scene. Look, say an idea, then draw or write.",
+    "title": "Explain a hand clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
-      "wake",
+      "reach",
       "change",
       "keep"
     ],
-    "draw": "Draw a bubble wall. Label the film and the air inside. Mark where colors swirl.",
-    "starter": "My words about soap bubbles",
+    "draw": "Draw a hand outline. Mark the bones in one finger, one tendon, and the joints where it bends.",
+    "starter": "My hand clue",
     "frames": [
       {
-        "plate": "wake",
-        "start": "At first,",
-        "hint": "what lifts into the air?"
+        "plate": "reach",
+        "start": "A finger stays stiff because",
+        "hint": "what is inside it?"
       },
       {
         "plate": "change",
-        "start": "Then the colors,",
-        "hint": "what makes them shift?"
+        "start": "A finger curls when",
+        "hint": "what pulls on it?"
       },
       {
         "plate": "keep",
-        "start": "When it pops,",
-        "hint": "what happens to the film?"
+        "start": "A finger opens again because",
+        "hint": "what can a muscle not do?"
       }
     ],
     "words": [
-      "soap film",
-      "interference",
-      "surface tension",
-      "evaporate",
-      "sphere",
-      "because"
+      "bone",
+      "tendon",
+      "joint",
+      "muscle",
+      "because",
+      "maybe"
     ],
-    "check": "Read your words aloud. Did you connect a clue (color, shape, or pop) to an explanation?",
-    "parentNote": "Speech and dictation are welcome. Keep the focus on film, light, and careful looking."
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
   },
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "A first bubble looks simple; its thin wall already holds a science story."
+      "text": "The toy shows its strings; a real hand hides them inside."
     },
     {
       "label": "Reading · 2",
-      "text": "A soap bubble is a thin water-and-soap film wrapped around air."
+      "text": "Three bones per finger, two in the thumb, 27 in one hand."
     },
     {
       "label": "Reading · 3",
-      "text": "Colors swirl from light in the thinning film (thin-film interference), not paint."
+      "text": "A forearm muscle pulls a tendon; the tendon curls the finger."
     },
     {
       "label": "Reading · 4",
-      "text": "Sketching moving color stripes turns a pretty swirl into evidence of thinning."
+      "text": "Finger joints fold mostly one way; the thumb base swings across."
     },
     {
       "label": "Reading · 5",
-      "text": "Surface tension pulls the film; a free bubble settles into a sphere."
+      "text": "Finger-curling muscles sit in the forearm, so it moves too."
     },
     {
       "label": "Reading · 6",
-      "text": "Bubbles pop when the film breaks from touch, dust, drying, or thinning."
+      "text": "Back tendons pull fingers straight; toys may use elastic."
     },
     {
       "label": "Math · all",
-      "text": "45, 35, 84, 44, 75, 52."
+      "text": "20, 10, 60, 16, 30, 70."
     },
     {
       "label": "Screen-free",
-      "text": "Film around air; thin-film colors; surface tension; film breaks."
+      "text": "Bones keep fingers stiff; tendons pull; joints bend; back tendons open."
     }
   ],
-  "parentGuidance": "Outdoor or kitchen bubble play works. Keep mix away from eyes; wipe floors. Wonderers model looking and timing, not spraying faces. Humidity and recipe change how long bubbles last.",
+  "parentGuidance": "Gentle pulls only: no yanking strings or bending fingers backward. Toys differ; a paper-and-straw hand works too.",
   "sources": [
     {
-      "label": "Exploratorium — soap bubbles / thin films",
-      "url": "https://www.exploratorium.edu/snacks/soap-film-painting"
+      "label": "Britannica Kids — hand",
+      "url": "https://kids.britannica.com/kids/article/hand/432984"
     },
     {
-      "label": "Britannica — surface tension",
-      "url": "https://www.britannica.com/science/surface-tension"
+      "label": "KidsHealth — your bones",
+      "url": "https://kidshealth.org/en/kids/bones.html"
     },
     {
-      "label": "Science News Explores — soap films",
-      "url": "https://www.snexplores.org/"
+      "label": "KidsHealth — your muscles",
+      "url": "https://kidshealth.org/en/kids/muscles.html"
     }
   ],
   "levels": {
@@ -429,47 +453,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer blows one bubble. It floats in soft light. The wall looks thin. Watch it with care.",
-            "prompt": "What floats in the air?"
+            "passage": "Little Wonderer sets down a toy hand. It has five strings. The fingers stand open. Big Wonderer leans close. What makes a real hand curl?",
+            "prompt": "What does the toy hand have?"
           },
           {
             "id": "reach",
-            "passage": "A bubble has a soap film. Air stays inside. Soap helps the film hold. The wall is very thin.",
-            "prompt": "What wraps the air?"
+            "passage": "Each toy finger has stiff parts. Your finger has three bones. The thumb has two. Bones keep a finger firm.",
+            "prompt": "How many bones are in a finger?"
           },
           {
             "id": "change",
-            "passage": "Colors swirl on the film. Light bounces inside. As it thins, colors move. This is a clue.",
-            "prompt": "What moves on the bubble?"
+            "passage": "Pull one string. A finger curls in. Your hand has strings too. They are called tendons. Muscles pull the tendons.",
+            "prompt": "What pulls a finger closed?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer sketches the stripes. Color shows change. A notebook keeps the clue. Looking becomes evidence.",
-            "prompt": "How do they keep a clue?"
+            "passage": "The finger bends in three spots. Each spot is a joint. Joints fold like a door. The thumb swings across.",
+            "prompt": "Where does a finger bend?"
           },
           {
             "id": "return",
-            "passage": "A free bubble looks round. The film pulls evenly. A sphere uses less wall. The wand can stretch film.",
-            "prompt": "What shape is a free bubble?"
+            "passage": "They pull each string in turn. Which finger curls? The little one curls a finger too. The arm moves near the wrist.",
+            "prompt": "What moves near the wrist?"
           },
           {
             "id": "keep",
-            "passage": "The bubble pops at last. The film gets a hole. Tiny drops scatter away. Every bubble ends sometime.",
-            "prompt": "What happens when the film breaks?"
+            "passage": "Let go of the string. What opens the finger? Muscles can only pull. Back tendons pull fingers straight.",
+            "prompt": "What opens the finger?"
           }
         ],
         "words": [
           {
-            "word": "bubble",
-            "meaning": "a round film of soapy water around air"
+            "word": "bone",
+            "meaning": "a hard part that keeps a finger firm"
           },
           {
-            "word": "film",
-            "meaning": "a very thin watery wall"
+            "word": "tendon",
+            "meaning": "a body string that pulls a bone"
           },
           {
-            "word": "pop",
-            "meaning": "when the film breaks and the bubble is gone"
+            "word": "joint",
+            "meaning": "where a finger bends"
           }
         ]
       },
@@ -477,57 +501,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer blows 8 bubbles, then 5 more. How many now?",
-            "expression": "8 + 5",
-            "equation": "8 + 5 =",
-            "answer": 13,
-            "hint": "Count on from 8.",
-            "worked": "8 + 5 = 13. Count carefully with the story numbers."
+            "prompt": "The toy has 5 strings. One hand has 5 fingers. How many in all?",
+            "expression": "5 + 5",
+            "equation": "5 + 5 =",
+            "answer": 10,
+            "hint": "Count on from 5.",
+            "worked": "5 + 5 = 10. Add the strings and fingers."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer has 14 wand dips and uses 6. How many dips left?",
-            "expression": "14 − 6",
-            "equation": "14 − 6 =",
-            "answer": 8,
-            "hint": "Take away 6 from 14.",
-            "worked": "14 − 6 = 8. Count carefully with the story numbers."
+            "prompt": "One hand has 14 finger bones. The thumb has 2 of them. How many are in the other fingers?",
+            "expression": "14 − 2",
+            "equation": "14 − 2 =",
+            "answer": 12,
+            "hint": "Take 2 away from 14.",
+            "worked": "14 − 2 = 12. Take away the thumb bones."
           },
           {
             "plate": "change",
-            "prompt": "They see 7 pink stripes and 9 green stripes. How many stripes?",
-            "expression": "7 + 9",
-            "equation": "7 + 9 =",
-            "answer": 16,
-            "hint": "Add 7 and 9.",
-            "worked": "7 + 9 = 16. Count carefully with the story numbers."
+            "prompt": "Big Wonderer pulls 3 strings, then 4 more. How many pulls?",
+            "expression": "3 + 4",
+            "equation": "3 + 4 =",
+            "answer": 7,
+            "hint": "Count on from 3.",
+            "worked": "3 + 4 = 7. Add both sets of pulls."
           },
           {
             "plate": "notice",
-            "prompt": "A page shows 15 sketches. Cross out 6. How many left?",
-            "expression": "15 − 6",
-            "equation": "15 − 6 =",
-            "answer": 9,
-            "hint": "Subtract 6 from 15.",
-            "worked": "15 − 6 = 9. Count carefully with the story numbers."
+            "prompt": "One finger bends in 3 places. Another bends in 3 places. How many bends?",
+            "expression": "3 + 3",
+            "equation": "3 + 3 =",
+            "answer": 6,
+            "hint": "Add 3 and 3.",
+            "worked": "3 + 3 = 6. Add the bend points."
           },
           {
             "plate": "return",
-            "prompt": "They time 9 short bubbles and 4 long ones. How many timed?",
-            "expression": "9 + 4",
-            "equation": "9 + 4 =",
-            "answer": 13,
-            "hint": "Add 9 and 4.",
-            "worked": "9 + 4 = 13. Count carefully with the story numbers."
+            "prompt": "The little one traces 9 lines, then 8 more. How many lines?",
+            "expression": "9 + 8",
+            "equation": "9 + 8 =",
+            "answer": 17,
+            "hint": "Make a ten: 9 + 1 + 7.",
+            "worked": "9 + 8 = 17. Add both sets of lines."
           },
           {
             "plate": "keep",
-            "prompt": "A tray holds 18 bubbles. Then 9 pop. How many remain?",
-            "expression": "18 − 9",
-            "equation": "18 − 9 =",
-            "answer": 9,
-            "hint": "Take 9 from 18.",
-            "worked": "18 − 9 = 9. Count carefully with the story numbers."
+            "prompt": "A box holds 20 elastic cords. They use 5 on the toy. How many are left?",
+            "expression": "20 − 5",
+            "equation": "20 − 5 =",
+            "answer": 15,
+            "hint": "Take 5 away from 20.",
+            "worked": "20 − 5 = 15. Take away the cords used."
           }
         ]
       }
@@ -537,51 +561,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer dips the wand once. A round bubble lifts into soft light. Big Wonderer watches from the path. The thin wall already looks busy. What keeps that shine from falling apart?",
-            "prompt": "What do they watch lift into the air?"
+            "passage": "Little Wonderer sets a mechanical hand toy on the table. Five thin strings hang from its wrist. The fingers stand open and still. Big Wonderer leans in beside the little one. A real hand curls with no strings showing. What is inside?",
+            "prompt": "What hangs from the toy's wrist?"
           },
           {
             "id": "reach",
-            "passage": "A soap bubble has a thin film. The film mixes water and soap. Air fills the inside space. Soap helps the wall hold. A wand can stretch flat film.",
-            "prompt": "What two materials make the bubble wall?"
+            "passage": "Each toy finger is a row of stiff pieces. A real finger has three small bones in a line. The thumb has only two. One whole hand has 27 bones. Bones keep the shape but cannot move alone.",
+            "prompt": "How many bones does one hand hold?"
           },
           {
             "id": "change",
-            "passage": "Light bounces from both film sides. Some colors look bright now. Others fade as time passes. As the film thins, stripes move. The swirl is a thickness clue.",
-            "prompt": "What do moving colors hint about the film?"
+            "passage": "Pull one string, and a toy finger curls. Small loops keep the string close. Your hand has strings too, called tendons. Forearm muscles pull the tendons. The tendons pull the finger bones.",
+            "prompt": "What do forearm muscles pull?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer sketches the color stripes. The little one points as they slide. A notebook turns swirls into evidence. Later they can compare top and bottom.",
-            "prompt": "How does a sketch help the science?"
+            "passage": "The toy finger bends in three places. Yours does too. Each bend point is a joint. Finger joints fold like a door hinge. The thumb's base joint lets it swing across.",
+            "prompt": "What is a joint?"
           },
           {
             "id": "return",
-            "passage": "A free bubble looks round in air. Surface tension pulls the film evenly. A sphere uses less wall inside. A wand ring can stretch other shapes.",
-            "prompt": "Why does a free bubble look round?"
+            "passage": "They pull each string, one at a time. Each string curls its own finger. The little one curls a real finger slowly. A hand on the forearm feels something move. Toy and hand share one plan.",
+            "prompt": "What plan do the toy and hand share?"
           },
           {
             "id": "keep",
-            "passage": "Bubbles do not last forever. Touch can open a hole. Dust can break the film. Dry thin spots can fail too. Water also leaves as vapor. Droplets scatter when it breaks.",
-            "prompt": "What is one way a bubble film can fail?"
+            "passage": "Let go, and something must open the finger. A muscle can only pull, never push. Tendons on the back pull fingers straight. Toys may use elastic instead. Why is one finger hard to lift alone?",
+            "prompt": "What can a muscle never do?"
           }
         ],
         "words": [
           {
-            "word": "soap film",
-            "meaning": "a thin watery wall mixed with soap"
+            "word": "tendon",
+            "meaning": "a tough cord that joins a muscle to a bone"
           },
           {
-            "word": "stripes",
-            "meaning": "lines of color on the bubble"
+            "word": "joint",
+            "meaning": "a place where two bones meet"
           },
           {
-            "word": "sphere",
-            "meaning": "a round ball shape"
+            "word": "forearm",
+            "meaning": "the arm between the elbow and the wrist"
           },
           {
-            "word": "evaporate",
-            "meaning": "when liquid water goes into the air"
+            "word": "hinge",
+            "meaning": "a part that lets something fold one way"
           }
         ]
       },
@@ -589,57 +613,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer blows 24 bubbles, then 18 more. How many bubbles?",
-            "expression": "24 + 18",
-            "equation": "24 + 18 =",
-            "answer": 42,
-            "hint": "Add ones, then tens.",
-            "worked": "24 + 18 = 42. Add or subtract the story counts step by step."
+            "prompt": "Little Wonderer learns that one hand has 27 bones, and 14 of them are finger bones. How many are not?",
+            "expression": "27 − 14",
+            "equation": "27 − 14 =",
+            "answer": 13,
+            "hint": "Subtract the ones, then the tens.",
+            "worked": "27 − 14 = 13. Take away the finger bones."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer has 45 wand dips and uses 19. How many remain?",
-            "expression": "45 − 19",
-            "equation": "45 − 19 =",
-            "answer": 26,
-            "hint": "Regroup if you need ones.",
-            "worked": "45 − 19 = 26. Add or subtract the story counts step by step."
+            "prompt": "One hand has 14 finger bones and 5 palm bones. How many is that?",
+            "expression": "14 + 5",
+            "equation": "14 + 5 =",
+            "answer": 19,
+            "hint": "Add the ones.",
+            "worked": "14 + 5 = 19. Add finger and palm bones."
           },
           {
             "plate": "change",
-            "prompt": "They count 27 pink marks and 14 green marks. How many marks?",
-            "expression": "27 + 14",
-            "equation": "27 + 14 =",
-            "answer": 41,
+            "prompt": "Big Wonderer pulls a string 18 times, then 16 more. How many pulls?",
+            "expression": "18 + 16",
+            "equation": "18 + 16 =",
+            "answer": 34,
             "hint": "Add ones, then tens.",
-            "worked": "27 + 14 = 41. Add or subtract the story counts step by step."
+            "worked": "18 + 16 = 34. Add both sets of pulls."
           },
           {
             "plate": "notice",
-            "prompt": "A tray holds 40 bubbles. Then 17 pop. How many left?",
-            "expression": "40 − 17",
-            "equation": "40 − 17 =",
-            "answer": 23,
-            "hint": "Trade a ten if needed.",
-            "worked": "40 − 17 = 23. Add or subtract the story counts step by step."
+            "prompt": "They count 12 finger joints, then 2 thumb joints. How many joints?",
+            "expression": "12 + 2",
+            "equation": "12 + 2 =",
+            "answer": 14,
+            "hint": "Add the ones.",
+            "worked": "12 + 2 = 14. Add finger and thumb joints."
           },
           {
             "plate": "return",
-            "prompt": "The little one times 16 short bubbles and 15 long ones. How many timed?",
-            "expression": "16 + 15",
-            "equation": "16 + 15 =",
-            "answer": 31,
+            "prompt": "The little one traces 25 lines, then 21 more. How many lines?",
+            "expression": "25 + 21",
+            "equation": "25 + 21 =",
+            "answer": 46,
             "hint": "Add ones, then tens.",
-            "worked": "16 + 15 = 31. Add or subtract the story counts step by step."
+            "worked": "25 + 21 = 46. Add both sets of lines."
           },
           {
             "plate": "keep",
-            "prompt": "A bottle mix starts at 38 turns. They use 19. How many remain?",
-            "expression": "38 − 19",
-            "equation": "38 − 19 =",
-            "answer": 19,
-            "hint": "Regroup ones, then subtract.",
-            "worked": "38 − 19 = 19. Add or subtract the story counts step by step."
+            "prompt": "A bag has 40 elastic cords. They use 15 on the toy. How many are left?",
+            "expression": "40 − 15",
+            "equation": "40 − 15 =",
+            "answer": 25,
+            "hint": "Trade a ten for ones if needed.",
+            "worked": "40 − 15 = 25. Take away the cords used."
           }
         ]
       }
@@ -649,59 +673,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer dipped a wand and sent one quiet bubble into the garden light. Big Wonderer stood close enough to watch the thin shine without crowding it. The sphere looked playful, yet its wall was already a working material. A simple blow can open a whole set of questions about film, light, and time.",
-            "prompt": "What makes a first bubble worth studying, not only chasing?"
+            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide. Five thin strings hung from the wrist like reins. Big Wonderer leaned in beside the little one to look. A real hand curls and opens all day, yet no strings show on the outside. Something inside must be doing the same job, so the toy becomes a model worth studying.",
+            "prompt": "Why is the toy a useful model of a real hand?"
           },
           {
             "id": "reach",
-            "passage": "A soap bubble is a thin film of water mixed with soap molecules, wrapped around air. Soap helps that watery sheet hold together longer than plain water usually can. Before any sphere forms, a wand can stretch a flat film across its ring. The wall looks delicate because it truly is only a microscopic sandwich of liquid.",
-            "prompt": "How is a bubble wall different from a solid ball?"
+            "passage": "Each toy finger is a short row of stiff pieces joined end to end. A real finger is built the same way, with three small bones called phalanges lined up in a row. The thumb has only two. Add the palm bones and the eight small wrist bones, and one hand holds 27 bones. Bones keep a finger's shape, but they cannot move on their own.",
+            "prompt": "Where are the 27 bones of a hand found?"
           },
           {
             "id": "change",
-            "passage": "Light reflects from the front and back surfaces of the soap film. Those reflections can reinforce some wavelengths and cancel others, so soft rainbow stripes appear on the wall. As water drains or evaporates, thickness changes and the color pattern shifts across the sphere. Scientists name this thin-film interference; the swirl is physics in motion, not paint on the bubble.",
-            "prompt": "Why do bubble colors move even when nobody paints them?"
+            "passage": "When one string is pulled, one toy finger curls toward the palm. The string slides through small loops that keep it close to the finger. Your hand works the same way with tough cords called tendons. Muscles up in the forearm tighten and pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, much like the toy's guides.",
+            "prompt": "How do forearm muscles curl a finger they do not touch?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer timed how the color stripes slid while the little one pointed to bright belts. A notebook sketch turns a pretty change into evidence you can compare later. You might ask whether the top thinned faster, or whether shade slowed the shift. Careful looking is already an experiment when you record what changes.",
-            "prompt": "What turns moving colors into scientific evidence?"
+            "passage": "The toy finger bends in three places, and a real finger does too. Each bend point is a joint, the place where two bones meet. Most finger joints are hinge joints, folding mostly one way like a door. The base of the thumb is different, a saddle-shaped joint. It lets the thumb swing across the palm to touch each fingertip, which helps us grip.",
+            "prompt": "How is the thumb's base joint different from a finger joint?"
           },
           {
             "id": "return",
-            "passage": "They compared a free-floating sphere with a stretched film still on the wand. Surface tension pulls along the liquid surface from every direction at once. For a given pocket of air, a sphere needs the least film area, so free bubbles settle round; a rigid ring can force other shapes until the air is enclosed.",
-            "prompt": "How does surface tension help explain a bubble's round shape?"
+            "passage": "They pulled each string, one at a time, and drew a line from every string to the finger it curled. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something shifted under the skin, close to the wrist. The toy and the hand follow one plan: a pull, a cord, and a joint that bends.",
+            "prompt": "What did the little one feel, and what does it show?"
           },
           {
             "id": "keep",
-            "passage": "A bubble pops when its film fails. A finger, a speck of dust, or a dry thin patch can open a hole that races around the sphere. Even in still air, draining and evaporation keep thinning the wall until some spot cannot hold. Recipes and humidity change the clock, but ordinary soap bubbles still live short lives.",
-            "prompt": "What are two different ways a soap film can reach its breaking point?"
+            "passage": "When a toy string is released, something has to open the finger again. A muscle can only pull; it can never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring for that job. Some back tendons are linked together, which may explain why one finger is hard to lift alone.",
+            "prompt": "Why does a hand need tendons on both sides of each finger?"
           }
         ],
         "words": [
           {
-            "word": "soap film",
-            "meaning": "the thin watery wall mixed with soap"
+            "word": "phalanges",
+            "meaning": "the small bones inside the fingers and thumb"
           },
           {
-            "word": "interference",
-            "meaning": "light waves adding or canceling after reflection"
+            "word": "tendon",
+            "meaning": "a tough cord that joins a muscle to a bone"
           },
           {
-            "word": "surface tension",
-            "meaning": "the pull along a liquid surface"
+            "word": "forearm",
+            "meaning": "the part of the arm between the elbow and the wrist"
           },
           {
-            "word": "evaporation",
-            "meaning": "liquid water becoming vapor in the air"
+            "word": "joint",
+            "meaning": "a place where two bones meet and move"
           },
           {
-            "word": "sphere",
-            "meaning": "the round shape that minimizes surface for a volume"
+            "word": "hinge joint",
+            "meaning": "a joint that folds mostly one way, like a door"
           },
           {
-            "word": "drain",
-            "meaning": "liquid sliding so one part of a film gets thinner"
+            "word": "saddle joint",
+            "meaning": "the thumb's base joint, which lets it swing across the palm"
           }
         ]
       },
@@ -709,57 +733,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer logs 248 bubble blows, then adds 176 more after lunch. How many blows now?",
-            "expression": "248 + 176",
-            "equation": "248 + 176 =",
-            "answer": 424,
-            "hint": "Add place by place; regroup when a column reaches ten.",
-            "worked": "248 + 176 = 424. Add each place and regroup when needed."
+            "prompt": "Little Wonderer counts 3 joints on each of 7 toy fingers. How many joints?",
+            "expression": "7 × 3",
+            "equation": "7 × 3 =",
+            "answer": 21,
+            "hint": "Seven groups of three.",
+            "worked": "7 × 3 = 21. Seven fingers with three joints each."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer measures a 305 mm film line and trims 79 mm of margin. How many mm remain?",
-            "expression": "305 − 79",
-            "equation": "305 − 79 =",
-            "answer": 226,
-            "hint": "Regroup when ones or tens run short.",
-            "worked": "305 − 79 = 226. Regroup, then subtract each place."
+            "prompt": "Each hand has 5 fingers. How many fingers are on 9 hands?",
+            "expression": "9 × 5",
+            "equation": "9 × 5 =",
+            "answer": 45,
+            "hint": "Nine groups of five.",
+            "worked": "9 × 5 = 45. Nine hands with five fingers each."
           },
           {
             "plate": "change",
-            "prompt": "They print 8 photo strips with 9 color-stripe close-ups on each strip. How many close-ups?",
-            "expression": "8 × 9",
-            "equation": "8 × 9 =",
-            "answer": 72,
-            "hint": "Eight groups of nine.",
-            "worked": "8 × 9 = 72. Eight nines make seventy-two close-ups."
+            "prompt": "Big Wonderer pulls a string 126 times in the morning and 87 times after lunch. How many pulls?",
+            "expression": "126 + 87",
+            "equation": "126 + 87 =",
+            "answer": 213,
+            "hint": "Add each place and regroup when needed.",
+            "worked": "126 + 87 = 213. Add the morning and afternoon pulls."
           },
           {
             "plate": "notice",
-            "prompt": "A notebook lists 72 timing trials shared equally among 8 mornings. How many trials per morning?",
-            "expression": "72 ÷ 8",
-            "equation": "72 ÷ 8 =",
-            "answer": 9,
-            "hint": "Divide 72 into 8 equal groups.",
-            "worked": "72 ÷ 8 = 9. Eight equal mornings get nine trials each."
+            "prompt": "They sort 40 toy strings into equal sets of 5, one set for each toy hand. How many toy hands?",
+            "expression": "40 ÷ 5",
+            "equation": "40 ÷ 5 =",
+            "answer": 8,
+            "hint": "Share 40 into groups of 5.",
+            "worked": "40 ÷ 5 = 8. Each toy hand gets 5 strings."
           },
           {
             "plate": "return",
-            "prompt": "The little one files 156 sphere sketches and later adds 37 wand-film cards. How many files?",
-            "expression": "156 + 37",
-            "equation": "156 + 37 =",
-            "answer": 193,
-            "hint": "Add each place; regroup when a column reaches 10.",
-            "worked": "156 + 37 = 193. Add each place and regroup when needed."
+            "prompt": "They trace 245 string lines in a week and erase 68 practice lines. How many lines stay?",
+            "expression": "245 − 68",
+            "equation": "245 − 68 =",
+            "answer": 177,
+            "hint": "Subtract ones, then tens, then the next place; regroup when needed.",
+            "worked": "245 − 68 = 177. Take away the practice lines."
           },
           {
             "plate": "keep",
-            "prompt": "A class chart starts with 240 bubble marks. After a breeze, 65 marks are crossed off as popped. How many remain?",
-            "expression": "240 − 65",
-            "equation": "240 − 65 =",
-            "answer": 175,
-            "hint": "Regroup tens if you need ones.",
-            "worked": "240 − 65 = 175. Regroup, then subtract each place."
+            "prompt": "A bag holds 300 elastic cords. They use 45 on toy hands. How many remain?",
+            "expression": "300 − 45",
+            "equation": "300 − 45 =",
+            "answer": 255,
+            "hint": "Regroup across the zeros.",
+            "worked": "300 − 45 = 255. Take away the cords used."
           }
         ]
       }
@@ -769,67 +793,67 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer paused on the path, wand ready, and sent one deliberate bubble into the soft afternoon light. Big Wonderer stayed beside the little one so the sphere could be studied without a chase. What looked like pure play was already a portable laboratory: a curved film, trapped air, and a clock counting down. Wonder begins when you let the bubble teach before you try to catch it.",
-            "prompt": "How can a single floating bubble become a lab instead of only a toy?"
+            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide and five thin strings trailing from the wrist. Beside the little one, Big Wonderer leaned in, curious about what the toy was trying to copy. A real hand curls, grips, and opens hundreds of times a day, yet no strings show on the outside. The toy is a model, a simpler machine that copies one idea from the real thing. Studying the model can point to what hides under the skin.",
+            "prompt": "What idea might the toy be copying from a real hand?"
           },
           {
             "id": "reach",
-            "passage": "Inside every soap bubble is ordinary air; outside is a sandwich of water held together with soap molecules that lower surface tension and stabilize the sheet. That architecture explains why a wand can first hold a flat film, then enclose air into a closed surface. Calling the wall 'just water' misses the soap's job, and calling it solid glass misses how thin and temporary the material really is.",
-            "prompt": "What jobs do water, soap, and air each do in a bubble?"
+            "passage": "Each toy finger is a short row of stiff segments, and a real finger follows the same design with three bones called phalanges. The thumb has only two phalanges, which is one reason it moves so differently. Counting the five palm bones and the eight small wrist bones, one hand holds 27 bones in all. Bones are rigid, so they keep a finger's shape and give muscles something firm to pull against. On their own, though, bones cannot move at all.",
+            "prompt": "Why do muscles need rigid bones to pull against?"
           },
           {
             "id": "change",
-            "passage": "Thin-film interference happens because light reflecting from the near and far surfaces of the soap film travels slightly different paths through the watery wall. Depending on thickness, some wavelengths reinforce while others cancel, painting moving stripes across the sphere in soft daylight. Drainage and evaporation continuously rewrite that thickness map, so the colors migrate as minutes pass. The beauty is a readable signal of a changing material you can watch without touching.",
-            "prompt": "How does changing thickness turn light into moving color evidence?"
+            "passage": "When one string is pulled, a single toy finger curls toward the palm, guided by small loops along the way. A real hand uses the same trick with tendons, tough cords that connect muscles to bones. Most of the muscles that bend the fingers sit up in the forearm, and their long tendons cross the wrist into each finger. Fibrous loops called pulleys hold the tendons close to the bones, much like the toy's loops. Without them, a tendon would pull away from the finger like a bowstring.",
+            "prompt": "What would happen to a tendon without its pulleys?"
           },
           {
             "id": "notice",
-            "passage": "Big Wonderer treated the shifting stripes like data: sketch, note the time, and compare shade versus sun on the same garden path. The little one learned that a pretty swirl becomes stronger evidence when you record where bright belts travel on the film. Questions follow naturally—does the top thin first, and does still air slow the rewrite? Observation tools keep the experiment kind, clear, and repeatable for another try.",
-            "prompt": "Why does recording color-stripe motion strengthen a claim about thinning?"
+            "passage": "Both the toy finger and a real finger bend in three places, and each bend point is a joint where two bones meet. Most finger joints are hinge joints, which fold mostly in one direction, much like a door. The knuckle joints can also tilt side to side, so fingers can spread apart. The base of the thumb is a saddle joint, shaped a bit like a rider's saddle. That shape lets the thumb swing across the palm and touch each fingertip, which makes careful gripping possible.",
+            "prompt": "How does the shape of a joint decide how it can move?"
           },
           {
             "id": "return",
-            "passage": "Surface tension is a pull along a liquid interface; on a free bubble it acts over the whole closed film. Among shapes that hold the same volume of air, the sphere minimizes surface area, so the film settles round when nothing rigid forces another outline. A wand ring can impose a flat disk until a puff traps air and the closed surface relaxes toward that thrifty geometry.",
-            "prompt": "How do surface tension and minimum surface area explain roundness?"
+            "passage": "They pulled each string in turn and drew a line from every string to the finger it curled, building a map of the model. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something slid under the skin near the wrist, a sign of muscles working far from the fingertip. The toy and the hand follow one plan: a pull, a cord, and a joint that bends. The model is simpler, but the idea is the same.",
+            "prompt": "What evidence shows the finger muscles are far from the fingertip?"
           },
           {
             "id": "keep",
-            "passage": "Failure modes differ: a poke opens a hole; dust can puncture; evaporation and drainage create a critically thin region that cannot carry the stress. Once a tear starts, surface tension helps the hole race around the sphere until only droplets remain. Better recipes and gentler air can delay the end, yet they do not cancel the open question of how long any real film can last.",
-            "prompt": "What are two ways a soap film can fail, and what question remains?"
+            "passage": "When a toy string is released, something must open the finger again, because a muscle can only pull and never push. A real hand solves this with a second set of tendons along the back of each finger, pulled by other forearm muscles. Many toys use an elastic cord or a spring for the same job. Some back-of-hand tendons are linked by small bridges, which may explain why the ring finger is hard to lift alone. That leaves a question worth testing on your own hand.",
+            "prompt": "Why does a hand need muscles and tendons working in pairs?"
           }
         ],
         "words": [
           {
-            "word": "soap film",
-            "meaning": "the thin water-and-soap wall of a bubble"
+            "word": "phalanges",
+            "meaning": "the small bones inside the fingers and thumb"
           },
           {
-            "word": "interference",
-            "meaning": "constructive or destructive combining of reflected light"
+            "word": "tendon",
+            "meaning": "a tough cord that connects a muscle to a bone"
           },
           {
-            "word": "surface tension",
-            "meaning": "cohesive pull along a liquid surface"
+            "word": "pulley",
+            "meaning": "a tough loop that holds a tendon close to a finger bone"
           },
           {
-            "word": "evaporation",
-            "meaning": "liquid water becoming vapor"
+            "word": "forearm",
+            "meaning": "the part of the arm between the elbow and the wrist"
           },
           {
-            "word": "drainage",
-            "meaning": "liquid flowing so thickness becomes uneven"
+            "word": "hinge joint",
+            "meaning": "a joint that folds mostly in one direction"
           },
           {
-            "word": "sphere",
-            "meaning": "the minimal-area closed shape for a given volume"
+            "word": "saddle joint",
+            "meaning": "the thumb's base joint, shaped like a saddle"
           },
           {
-            "word": "wavelength",
-            "meaning": "the color-related size of a light wave"
+            "word": "model",
+            "meaning": "a simpler copy that shows how something works"
           },
           {
-            "word": "stabilize",
-            "meaning": "help a structure hold together longer"
+            "word": "rigid",
+            "meaning": "stiff and hard to bend"
           }
         ]
       },
@@ -837,147 +861,156 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer records 1248 bubble tallies across a week then adds 376 more on a windy morning. How many tallies now?",
-            "expression": "1248 + 376",
-            "equation": "1248 + 376 =",
-            "answer": 1624,
+            "prompt": "Little Wonderer tallies 1250 string pulls on Monday and 1875 on Tuesday. How many pulls?",
+            "expression": "1250 + 1875",
+            "equation": "1250 + 1875 =",
+            "answer": 3125,
             "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "1248 + 376 = 1624. Add each place and regroup when needed."
+            "worked": "1250 + 1875 = 3125. Add both days of pulls."
           },
           {
             "plate": "reach",
-            "prompt": "Big Wonderer has a 2060 mm string model of film edge and cuts away 485 mm of extra length. How many mm remain?",
-            "expression": "2060 − 485",
-            "equation": "2060 − 485 =",
-            "answer": 1575,
-            "hint": "Regroup across places as needed.",
-            "worked": "2060 − 485 = 1575. Regroup, then subtract each place."
+            "prompt": "One hand has 27 bones. How many bones are in 8 hands?",
+            "expression": "27 × 8",
+            "equation": "27 × 8 =",
+            "answer": 216,
+            "hint": "Think 8 × 20 and 8 × 7.",
+            "worked": "27 × 8 = 216. Eight hands with 27 bones each."
           },
           {
             "plate": "change",
-            "prompt": "They print 8 photo strips with 9 interference close-ups on each strip. How many close-ups?",
-            "expression": "8 × 9",
-            "equation": "8 × 9 =",
-            "answer": 72,
-            "hint": "Eight groups of nine.",
-            "worked": "8 × 9 = 72. Eight nines make seventy-two close-ups."
+            "prompt": "Big Wonderer winds 2400 mm of string and cuts off 785 mm for the toy. How many mm remain?",
+            "expression": "2400 − 785",
+            "equation": "2400 − 785 =",
+            "answer": 1615,
+            "hint": "Regroup across the zeros.",
+            "worked": "2400 − 785 = 1615. Take away the string that was cut."
           },
           {
             "plate": "notice",
-            "prompt": "A lab notebook lists 96 timing trials shared equally among 8 mornings. How many trials per morning?",
-            "expression": "96 ÷ 8",
-            "equation": "96 ÷ 8 =",
-            "answer": 12,
-            "hint": "Divide 96 into 8 equal groups.",
-            "worked": "96 ÷ 8 = 12. Eight equal mornings get twelve trials each."
+            "prompt": "A chart lists 1120 finger joints shared equally by 8 classes. How many joints per class?",
+            "expression": "1120 ÷ 8",
+            "equation": "1120 ÷ 8 =",
+            "answer": 140,
+            "hint": "Split 1120 into 800 and 320, then divide each part by 8.",
+            "worked": "1120 ÷ 8 = 140. Each class gets the same number of joints."
           },
           {
             "plate": "return",
-            "prompt": "The little one files 1085 sphere sketches and later adds 249 observation cards. How many files in the set?",
-            "expression": "1085 + 249",
-            "equation": "1085 + 249 =",
-            "answer": 1334,
-            "hint": "Add place by place with regrouping.",
-            "worked": "1085 + 249 = 1334. Add each place and regroup when needed."
+            "prompt": "They draw 9 string lines on each of 135 hand outlines. How many lines?",
+            "expression": "135 × 9",
+            "equation": "135 × 9 =",
+            "answer": 1215,
+            "hint": "Think 100 × 9, 30 × 9 and 5 × 9.",
+            "worked": "135 × 9 = 1215. Each of the outlines gets 9 lines."
           },
           {
             "plate": "keep",
-            "prompt": "A class chart starts with 3200 bubble marks. After a dry wind 1158 marks are crossed off as popped. How many marks remain?",
-            "expression": "3200 − 1158",
-            "equation": "3200 − 1158 =",
-            "answer": 2042,
-            "hint": "Subtract place by place; regroup when needed.",
-            "worked": "3200 − 1158 = 2042. Regroup, then subtract each place."
+            "prompt": "A crate holds 5000 elastic cords. Toy makers use 2365 of them. How many are left?",
+            "expression": "5000 − 2365",
+            "equation": "5000 − 2365 =",
+            "answer": 2635,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 2365 = 2635. Take away the cords used."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "quiz-cards"
+    "lab-page"
   ],
+  "labPage": {
+    "materials": [
+      "a mechanical hand toy",
+      "paper",
+      "pencil",
+      "crayon or colored pencil (optional)",
+      "your own two hands"
+    ]
+  },
   "quiz": {
-    "title": "Four looks at a bubble",
-    "intro": "Follow the film from shine to pop.",
+    "title": "Four looks at a hand",
+    "intro": "Follow the pull from string to finger.",
     "questions": [
       {
-        "id": "film",
-        "prompt": "What's a bubble made of?",
+        "id": "bones",
+        "prompt": "What keeps a finger stiff?",
         "choices": [
-          "Soap film around air",
-          "A solid glass ball",
-          "Dry soap powder only"
+          "Bones in a row",
+          "Air inside",
+          "Only skin"
         ],
         "answerIndex": 0,
-        "answer": "A soap bubble is a thin watery soap film wrapped around a pocket of air."
+        "answer": "Small bones in a row keep each finger firm."
       },
       {
-        "id": "colors",
-        "prompt": "Why can colors swirl?",
+        "id": "tendons",
+        "prompt": "What pulls a finger closed?",
         "choices": [
-          "Someone painted it",
-          "Light in the thin film",
-          "Air inside is colored"
+          "A fingernail",
+          "A tendon",
+          "A painted line"
         ],
         "answerIndex": 1,
-        "answer": "Light reflecting in the thin film can make shifting color stripes as thickness changes."
+        "answer": "A forearm muscle pulls a tendon, and the tendon pulls the finger bones."
       },
       {
-        "id": "round",
-        "prompt": "Why are free bubbles round?",
+        "id": "joints",
+        "prompt": "Where does a finger bend?",
         "choices": [
-          "Film pulls into a sphere",
-          "Wands force a cube",
-          "They copy the sun"
+          "At its joints",
+          "In the nail",
+          "Anywhere at all"
         ],
         "answerIndex": 0,
-        "answer": "Surface tension pulls evenly, and a sphere uses the least film for the air inside."
+        "answer": "A finger bends at joints, where two bones meet."
       },
       {
-        "id": "pop",
-        "prompt": "What makes a bubble pop?",
+        "id": "open",
+        "prompt": "What opens a hand again?",
         "choices": [
-          "The film gets a hole",
-          "Colors run out of paint",
-          "Round shapes can't fly"
+          "Muscles pushing",
+          "Back tendons pulling",
+          "Nothing at all"
         ],
-        "answerIndex": 0,
-        "answer": "When the film breaks from thinning, drying, dust, or a touch, the bubble pops."
+        "answerIndex": 1,
+        "answer": "Muscles only pull, so tendons on the back of the hand pull fingers straight."
       }
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "Soap Bubbles",
-    "line": "Thin film, swirling colors, a round pop.",
+    "title": "How a Hand Works",
+    "line": "Bones, tendons, and joints that bend.",
     "plate": "wake"
   },
   "poem": {
-    "title": "Please Don't Poke the Shine",
+    "title": "Who Pulls My Strings?",
     "lines": [
-      "Little Wonderer blew a soft silver ring,",
-      "and a round bit of daylight rose up on a string",
-      "of invisible air. \"It's a jewel!\" said the small one.",
-      "Big Wonderer smiled. \"It's a film — watch it run.\"",
+      "Little Wonderer pulled on a string, only one,",
+      "and a toy finger curled like a cat in the sun.",
+      "“Who’s pulling MY fingers?” the little one cried.",
+      "“I don’t see a string, and I’ve looked on each side!”",
       "",
-      "Colors slid over it, quiet as oil on a spoon,",
-      "greens into pinks in the thin afternoon.",
-      "\"Is it painted?\" the little one asked with a grin.",
-      "\"No paint,\" said the big one. \"Light bouncing within.\"",
+      "Big Wonderer laughed. “You have strings, it is true.",
+      "They’re tendons, tucked under your skin, out of view.",
+      "Your muscles sit up in your arm past your wrist,",
+      "and they tug, and they tug, till your fingers make fists.”",
       "",
-      "They sketched every stripe as the shimmer grew wide,",
-      "then asked why a free bubble wears a round side.",
-      "\"The film pulls in evenly, soft as a sigh —",
-      "a sphere is the thrifty shape under the sky.\"",
+      "Inside every finger are three bones in a row",
+      "(the thumb has just two, as the toy seemed to know),",
+      "with joints in between them that fold like a door —",
+      "just one way, not backward. (Please don’t try for more.)",
       "",
-      "A hush, then a glitter of droplets like rain.",
-      "The shine had let go. Only air would remain.",
-      "So if you find rainbows that float for a while,",
-      "look kindly, keep poking for never — just smile."
+      "But muscles can’t push, so to open back wide,",
+      "there are strings on the back, on the knuckle-y side.",
+      "So the little one waved at the toy on the shelf:",
+      "“We both work on strings — but I pull them myself!”"
     ],
     "drawing": {
-      "src": "assets/soap-bubbles/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer watching a round soap bubble; Little holds a wand while both gaze at the floating shine."
+      "src": "assets/how-a-hand-works/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer at a table, watching one finger of a mechanical hand toy curl while Little holds a string."
     }
   }
 }

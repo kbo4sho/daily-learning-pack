@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "soap bubbles",
-        "why": "Watching bubbles form, change color and pop helps your child describe a sequence and ask questions about change.",
-        "date": "2026-11-06",
+        "topic": "how a hand works",
+        "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
+        "date": "2026-11-09",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/quiz-cards.pdf",
-            "label": "Quiz cards"
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
           },
           {
-            "href": "./today/pdf/quiz-cards-key.pdf",
-            "label": "Grown-ups: quiz cards answer key"
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T05:27:51.498Z",
-  "latest": "soap-bubbles",
+  "generatedAt": "2026-11-09T05:11:28.781Z",
+  "latest": "how-a-hand-works",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-a-hand-works",
+      "date": "2026-11-09",
+      "topic": "how a hand works",
+      "title": "How a Hand Works",
+      "teaser": "Pull one string on a mechanical hand toy, watch a finger curl, then find the bones, tendons and joints doing the same job in your own hand.",
+      "href": "./days/how-a-hand-works/",
+      "latest": true
+    },
     {
       "slug": "soap-bubbles",
       "date": "2026-11-06",
@@ -11,7 +20,7 @@
       "title": "Soap Bubbles",
       "teaser": "Blow a ring, watch colors swirl on a thin soap film, then ask why a bubble is round — and why it pops.",
       "href": "./days/soap-bubbles/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "spider-webs",
