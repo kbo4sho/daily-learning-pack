@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how a hand works",
-        "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
-        "date": "2026-11-09",
+        "topic": "transistors",
+        "why": "Comparing a transistor with a sink tap and a row of on-off cards helps your child explain how a tiny signal can control a much bigger flow.",
+        "date": "2026-11-10",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

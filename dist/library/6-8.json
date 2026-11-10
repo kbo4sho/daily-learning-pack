@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "transistors",
+      "band": "6-8",
+      "topic": "transistors",
+      "why": "Comparing a transistor with a sink tap and a row of on-off cards helps your child explain how a tiny signal can control a much bigger flow.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "equal-groups",
+        "array"
+      ],
+      "date": "2026-11-10",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-a-hand-works",
       "band": "6-8",
       "topic": "how a hand works",
