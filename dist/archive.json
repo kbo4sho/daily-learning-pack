@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T05:11:28.781Z",
-  "latest": "how-a-hand-works",
+  "generatedAt": "2026-11-10T04:45:34.119Z",
+  "latest": "transistors",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "transistors",
+      "date": "2026-11-10",
+      "topic": "transistors",
+      "title": "Transistors",
+      "teaser": "Meet a tiny three-legged switch, see how a small signal opens a big flow, then flip paper cards to count in ones and zeros.",
+      "href": "./days/transistors/",
+      "latest": true
+    },
     {
       "slug": "how-a-hand-works",
       "date": "2026-11-09",
@@ -11,7 +20,7 @@
       "title": "How a Hand Works",
       "teaser": "Pull one string on a mechanical hand toy, watch a finger curl, then find the bones, tendons and joints doing the same job in your own hand.",
       "href": "./days/how-a-hand-works/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "soap-bubbles",

@@ -1,28 +1,27 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-a-hand-works",
-  "topic": "how a hand works",
-  "why": "Matching each string on a mechanical hand toy to the finger it curls helps your child explain how bones, tendons and joints work together.",
-  "teaser": "Pull one string on a mechanical hand toy, watch a finger curl, then find the bones, tendons and joints doing the same job in your own hand.",
+  "slug": "transistors",
+  "topic": "transistors",
+  "why": "Comparing a transistor with a sink tap and a row of on-off cards helps your child explain how a tiny signal can control a much bigger flow.",
+  "teaser": "Meet a tiny three-legged switch, see how a small signal opens a big flow, then flip paper cards to count in ones and zeros.",
   "aliases": [
-    "hands",
-    "tendons",
-    "finger joints",
-    "hand bones",
-    "mechanical hand"
+    "transistor",
+    "semiconductors",
+    "silicon chips",
+    "electronic switches"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "pattern-detective",
+  "mathTemplate": "groups-and-arrays",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "skip-next",
-      "skip-missing"
+      "equal-groups",
+      "array"
     ],
     "format": "curiosity-day"
   },
@@ -31,367 +30,331 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "How a Hand Works",
-  "title": "How a Hand Works",
-  "question": "How do bones, tendons and joints work together to curl and open a hand?",
-  "idea": "A hand has 27 bones linked at joints. Muscles, mostly up in the forearm, pull long tendons that work like strings, curling fingers at hinge-like joints. Muscles can only pull, so other tendons on the back of the hand pull the fingers straight again.",
+  "wonderLabel": "Transistors",
+  "title": "Transistors",
+  "question": "How can something smaller than a fingernail control electricity?",
+  "idea": "A transistor is a switch with no moving parts. A tiny signal on its middle leg opens or closes a path for a bigger flow of electricity. Made from silicon with a sprinkle of other atoms, billions of them flip on and off as ones and zeros inside every computer.",
   "curiosity": {
-    "intro": "Start with a toy hand on strings. Then look inside your own: bones, tendons that pull like strings, and joints that bend.",
-    "carryForward": "Pull one string, then ask which part of your own hand does that job.",
+    "intro": "Start with a tiny black bead on three legs. Then follow it back to hot glass tubes, a sink tap, a pinch of sand, and a row of on-off cards.",
+    "carryForward": "Turn a tap a little, then ask what small push might be steering a bigger flow.",
     "questions": [
       {
-        "id": "bones",
+        "id": "tubes",
         "plate": "reach",
-        "question": "What keeps a finger stiff?",
-        "notice": "Find the short stiff pieces in each toy finger, and count them.",
-        "say": "Bones. Each finger has three small bones in a row, and the thumb has two. Counting the wrist and palm, one hand has 27 bones. Bones hold the shape, but they cannot move by themselves.",
-        "try": "Gently press along one of your fingers and count the hard parts between the bends. Count the stiff pieces on one toy finger too. Do the two numbers match?"
+        "question": "What came before transistors?",
+        "notice": "Compare the tall glass tube with the tiny black bead beside it.",
+        "say": "Glass vacuum tubes. A tube was about as tall as a hand. It glowed, got hot and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a room. In 1947, three scientists built the first transistor from gold foil pressed onto a small crystal.",
+        "try": "Hold up your hand: an old tube was about that tall. Now look at your smallest fingernail. A transistor you can hold is smaller still. Find one thing in the room the size of each."
       },
       {
-        "id": "strings",
+        "id": "tap",
         "plate": "change",
-        "question": "What pulls a finger closed?",
-        "notice": "Find the thin string that runs along the palm side of a curled toy finger.",
-        "say": "In the toy, a string. In your hand, a tendon: a tough cord that joins a muscle to a bone. Muscles in your forearm pull long tendons that reach into each finger, and tough loops along the finger hold them close, like the toy's guides.",
-        "try": "Draw around your hand on paper to make an outline. Pull one toy string slowly and watch which finger curls. Draw a line from that string to the same finger on your outline. Do the same for every string, one at a time."
+        "question": "How can a tiny push control a big flow?",
+        "notice": "Look at how little the tap handle has turned, and how big the stream is.",
+        "say": "A transistor has three legs. Electricity flows in one leg and out another, and the middle leg works like a tap handle. A tiny signal there opens the path for a much bigger flow. The name joins two words: transfer and resistor.",
+        "try": "At a sink, turn the tap handle just a little. Watch how a small turn lets a big stream through. Then turn it back and watch the stream stop."
       },
       {
-        "id": "compare",
+        "id": "bits",
         "plate": "return",
-        "question": "Does your hand work like the toy?",
-        "notice": "Watch where the toy finger bends, then watch your own finger bend.",
-        "say": "Both follow one plan: a pull, a string, and joints that bend. Your finger bends at three joints, mostly one way, like a door hinge. The muscles that curl your fingers sit mostly in your forearm, so you can feel them move there.",
-        "try": "Curl your pointer finger slowly and count the places it bends. Curl the toy's pointer finger and compare. Rest your other hand on your forearm and wiggle your fingers. What do you feel move?"
+        "question": "How can on-off switches count?",
+        "notice": "Count the light cards and the dark cards in the row.",
+        "say": "A transistor switch is on or off, and a computer treats on as one and off as zero. Each extra switch doubles the patterns. Eight switches can make 256 patterns, enough for every letter on a keyboard.",
+        "try": "Lay two paper scraps in a row: light side up is on, dark side up is off. How many different rows can you make? Add a third scrap and count again. Did the number double?"
       },
       {
-        "id": "open",
+        "id": "chip",
         "plate": "keep",
-        "question": "What opens the hand again?",
-        "notice": "Look at the back of the toy hand for elastic, a spring, or a second string.",
-        "say": "A muscle can only pull, never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring instead. Some tendons on the back of your hand are linked, which is why one finger can be hard to lift alone.",
-        "try": "Let go of a toy string and watch whether the finger springs back. Look for what pulls it open. Then lay your hand flat, fold your middle finger under, and gently try to lift your ring finger."
+        "question": "How do billions fit on one chip?",
+        "notice": "Look through the lens at the tiny pattern on the chip.",
+        "say": "They are printed, not built one by one. Light shines through a stencil onto a silicon wafer, layer after layer. In many tiny transistors, the middle part never touches the path. It sits behind a thin wall and steers the flow with an unseen electric push.",
+        "try": "Cut a simple shape out of paper to make a stencil. Lay it on another sheet and rub a crayon across it. Print it three times. Chip makers print with light in a similar way."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-a-hand-works/01-toy.jpg",
-      "original": "assets/how-a-hand-works/01-toy.png",
-      "foldSrc": "assets/how-a-hand-works/01-toy-fold.jpg",
-      "title": "A hand on strings",
-      "alt": "Big and Little Wonderer sit together at a warm wooden table in soft daylight, both gazing at a plain mechanical hand toy standing upright, its jointed fingers open and five thin strings hanging from the wrist.",
-      "caption": "One toy hand, five strings, and a question."
+      "src": "assets/transistors/01-bead.jpg",
+      "original": "assets/transistors/01-bead.png",
+      "foldSrc": "assets/transistors/01-bead-fold.jpg",
+      "title": "A bead with three legs",
+      "alt": "Big and Little Wonderer at a warm wooden table, the little one kneeling and the big one leaning in, both gazing at one tiny black transistor with three thin silver legs beside a magnifying glass.",
+      "caption": "A tiny bead on three legs, and a big question."
     },
     {
       "id": "reach",
-      "src": "assets/how-a-hand-works/02-bones.jpg",
-      "original": "assets/how-a-hand-works/02-bones.png",
-      "foldSrc": "assets/how-a-hand-works/02-bones-fold.jpg",
-      "title": "Bones in a row",
-      "alt": "A field-guide study of a plain mechanical hand toy lying open on pale ivory paper; each finger is a row of short stiff segments like small bones, and the thumb has fewer segments.",
-      "caption": "Stiff pieces in a row, like the bones in a finger."
+      "src": "assets/transistors/02-tube.jpg",
+      "original": "assets/transistors/02-tube.png",
+      "foldSrc": "assets/transistors/02-tube-fold.jpg",
+      "title": "Before transistors",
+      "alt": "A field-guide study on pale ivory paper of a hand-tall glass vacuum tube with a faint warm glow inside, beside a far smaller black transistor with three thin legs.",
+      "caption": "A hot glass tube, and the tiny part that replaced it."
     },
     {
       "id": "change",
-      "src": "assets/how-a-hand-works/03-strings.jpg",
-      "original": "assets/how-a-hand-works/03-strings.png",
-      "foldSrc": "assets/how-a-hand-works/03-strings-fold.jpg",
-      "title": "A string pulls",
-      "alt": "A close field-guide study of the mechanical hand toy with one finger curled toward the palm, its thin string pulled tight through small guide loops along the palm side down to the wrist.",
-      "caption": "Pull a string, and one finger curls."
+      "src": "assets/transistors/03-tap.jpg",
+      "original": "assets/transistors/03-tap.png",
+      "foldSrc": "assets/transistors/03-tap-fold.jpg",
+      "title": "A little turn",
+      "alt": "A field-guide study of a small brass tap on a pipe, its handle turned only slightly, pouring a full clear stream of water into a plain basin.",
+      "caption": "A small turn lets a big flow through."
     },
     {
       "id": "notice",
-      "src": "assets/how-a-hand-works/04-joints.jpg",
-      "original": "assets/how-a-hand-works/04-joints.png",
-      "foldSrc": "assets/how-a-hand-works/04-joints-fold.jpg",
-      "title": "Where fingers bend",
-      "alt": "A field-guide study of one toy finger bent at its three bend points beside a small blank notebook and a pencil, in soft light on pale ivory paper.",
-      "caption": "Three bend points, like the joints in a finger."
+      "src": "assets/transistors/04-silicon.jpg",
+      "original": "assets/transistors/04-silicon.png",
+      "foldSrc": "assets/transistors/04-silicon-fold.jpg",
+      "title": "Made from sand",
+      "alt": "A field-guide study on pale ivory paper of a small pile of sand, a rough grey chunk of silicon crystal, and a thin round silicon wafer with a faint grid, beside a blank notebook and pencil.",
+      "caption": "Sand, then silicon, then a thin wafer."
     },
     {
       "id": "return",
-      "src": "assets/how-a-hand-works/05-trace.jpg",
-      "original": "assets/how-a-hand-works/05-trace.png",
-      "foldSrc": "assets/how-a-hand-works/05-trace-fold.jpg",
-      "title": "String to finger",
-      "alt": "Big and Little Wonderer at the warm table; Little holds the end of one string while one toy finger curls, Big sits just behind, and both share one gaze at the curling finger beside a blank notebook.",
-      "caption": "Trace each string to the finger it curls."
+      "src": "assets/transistors/05-cards.jpg",
+      "original": "assets/transistors/05-cards.png",
+      "foldSrc": "assets/transistors/05-cards-fold.jpg",
+      "title": "On and off",
+      "alt": "Big and Little Wonderer at the warm table, the little one standing and pointing along a row of eight blank paper cards, some light side up and some dark side up, while the big one sits steadily behind.",
+      "caption": "Light side on, dark side off: a row of switches."
     },
     {
       "id": "keep",
-      "src": "assets/how-a-hand-works/06-open.jpg",
-      "original": "assets/how-a-hand-works/06-open.png",
-      "foldSrc": "assets/how-a-hand-works/06-open-fold.jpg",
-      "title": "Opening again",
-      "alt": "A field-guide study of the back of the mechanical hand toy with its fingers straightening and a thin elastic cord running along the back of each finger, on pale ivory paper.",
-      "caption": "Something has to pull the finger open again."
+      "src": "assets/transistors/06-chip.jpg",
+      "original": "assets/transistors/06-chip.png",
+      "foldSrc": "assets/transistors/06-chip-fold.jpg",
+      "title": "Billions on a chip",
+      "alt": "A field-guide study of a small grey silicon chip on pale ivory paper, with a magnifying glass above it showing a dense, orderly pattern of tiny rectangles and fine lines.",
+      "caption": "Too small to see: billions of tiny switches."
     }
   ],
   "reading": {
-    "title": "A toy hand, then a real one",
+    "title": "A tiny switch with no moving parts",
     "coverPlate": "wake",
-    "coverText": "Start with a mechanical hand toy on strings. Then look inside a real hand: bones, tendons that pull, and joints that bend.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Gentle pulls only.",
+    "coverText": "Start with a tiny black bead on three legs. Then find out what it replaced, how it steers a flow, and why billions fit on one chip.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Look, don't open: no taking apart devices or batteries.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A hand on strings",
-        "passage": "Little Wonderer sets a mechanical hand toy on the table. Its fingers stand open, and five thin strings hang from the wrist. Big Wonderer leans in beside the little one. Your own hand can curl and open without any strings you can see. What is hiding inside it that works like the toy?",
-        "prompt": "What does the toy have that a real hand seems to be missing?",
+        "title": "A bead with three legs",
+        "passage": "Little Wonderer finds a black bead with three thin legs. It looks like a bug, but it is a transistor. Big Wonderer leans in beside the little one. This one is big enough to see, but most are far too small. Billions of them work inside the machines around us. What could something so small be doing?",
+        "prompt": "What does the black bead look like, and what is it?",
         "foldable": {
-          "heading": "A hand on strings",
-          "body": "A mechanical hand toy stands open with five strings at the wrist. What inside a real hand works like it?"
+          "heading": "A bead with three legs",
+          "body": "A black bead with three thin legs is a transistor. Billions of them work unseen inside the machines around us."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Bones in a row",
-        "passage": "Each toy finger is a row of short, stiff pieces. A real finger is built the same way, with three small bones in a line. The thumb has two. Counting the wrist and palm, one hand holds 27 bones. Bones are hard, so they keep a finger's shape, but they cannot move on their own.",
-        "prompt": "How many bones are in one finger, and how many in the thumb?",
+        "title": "Before transistors",
+        "passage": "Long ago, machines used glass vacuum tubes instead. A tube was about as tall as a hand. It glowed, got hot and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists built the first transistor from gold foil and a small crystal.",
+        "prompt": "Why was a transistor better than a glass tube?",
         "foldable": {
-          "heading": "Bones in a row",
-          "body": "Each finger has three small bones in a line, and the thumb has two. One whole hand holds 27 bones."
+          "heading": "Before transistors",
+          "body": "Old machines used hot glass tubes that burned out. In 1947, scientists built the first transistor from gold foil and crystal."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A string pulls",
-        "passage": "Pull one string, and one toy finger curls toward the palm. The string runs through small loops that keep it close to the finger. Your hand has strings too, called tendons. Muscles up in your forearm pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, just like the toy's loops.",
-        "prompt": "What does a tendon do when a forearm muscle pulls it?",
+        "title": "A little turn",
+        "passage": "Think of the tap on a sink. A small turn of the handle lets a big stream of water through. A transistor works a bit like that. Electricity flows in one leg and out another. A tiny signal on the middle leg opens or closes the path. That is how a small push can control a much bigger flow.",
+        "prompt": "What does the middle leg of a transistor do?",
         "foldable": {
-          "heading": "A string pulls",
-          "body": "Forearm muscles pull long tendons, like strings. Tendons pull finger bones, and loops keep them close, like the toy's loops."
+          "heading": "A little turn",
+          "body": "Like a tap, a tiny signal on the middle leg opens a path, so a small push controls a much bigger flow."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Where fingers bend",
-        "passage": "The toy finger bends in three places, and so does yours. Those bend points are joints, where two bones meet. Most finger joints work like a hinge on a door, folding mostly one way. The thumb's base joint is different. It lets the thumb swing across the palm to touch each fingertip.",
-        "prompt": "Why do most finger joints fold only one way?",
+        "title": "Made from sand",
+        "passage": "Most transistors are made of silicon, and silicon is found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms, a little like a pinch of salt in soup. That sprinkle lets the silicon carry electricity only when it is told to. A material like this is called a semiconductor.",
+        "prompt": "Why do makers add a sprinkle of other atoms to silicon?",
         "foldable": {
-          "heading": "Where fingers bend",
-          "body": "Joints are where bones meet. Finger joints fold like door hinges. The thumb's base joint lets it swing across the palm."
+          "heading": "Made from sand",
+          "body": "Silicon is found in sand. A tiny sprinkle of other atoms lets it carry electricity only when told. It is a semiconductor."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "String to finger",
-        "passage": "They pull each string, one at a time, and draw a line from string to finger. The little one curls a real finger slowly and feels the forearm with the other hand. Something moves under the skin near the wrist. The toy and the hand follow the same plan: a pull, a string, and a joint that bends.",
-        "prompt": "Why can you feel your forearm move when your fingers curl?",
+        "title": "On and off",
+        "passage": "Little Wonderer points along a row of eight paper cards. Light side up means on, and dark side up means off. A transistor switch is either on or off, like a one or a zero. The little one flips a card and makes a new pattern. Eight switches can make 256 different patterns, enough for every letter on a keyboard.",
+        "prompt": "How can a row of on-off switches stand for a letter?",
         "foldable": {
-          "heading": "String to finger",
-          "body": "Pull each toy string and match it to a finger. Then curl a real finger and feel the forearm move."
+          "heading": "On and off",
+          "body": "A switch is on or off, like a one or a zero. Eight switches can make 256 different patterns."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Opening again",
-        "passage": "Let go of a toy string, and something must open the finger again. A muscle can only pull, never push. So your hand has a second set of tendons along the back of each finger, pulling it straight. Toys may use an elastic cord or a second string. Why might one of your fingers be hard to lift by itself?",
-        "prompt": "What pulls a finger straight again?",
+        "title": "Billions on a chip",
+        "passage": "A chip smaller than a fingernail holds billions of transistors. Light shines through a stencil to print them onto a silicon wafer, layer after layer. In many tiny transistors, the middle part never touches the path. It sits behind a thin wall and steers the flow with an unseen push. How can something unseen change where electricity goes?",
+        "prompt": "How are billions of transistors made so small?",
         "foldable": {
-          "heading": "Opening again",
-          "body": "Muscles only pull, never push. Tendons on the back of the hand pull fingers straight again. Toys may use elastic."
+          "heading": "Billions on a chip",
+          "body": "A chip can hold billions of transistors, printed with light through stencils. Some steer electricity with an unseen push."
         }
       }
     ],
     "words": [
       {
-        "word": "bone",
-        "meaning": "a hard, stiff part inside the body that holds its shape"
+        "word": "transistor",
+        "meaning": "a tiny switch that controls a flow of electricity"
       },
       {
-        "word": "tendon",
-        "meaning": "a tough cord that joins a muscle to a bone"
+        "word": "vacuum tube",
+        "meaning": "an old glass part used before transistors"
       },
       {
-        "word": "muscle",
-        "meaning": "a body part that pulls to make bones move"
+        "word": "signal",
+        "meaning": "a small push that tells something what to do"
       },
       {
-        "word": "joint",
-        "meaning": "a place where two bones meet and can move"
+        "word": "silicon",
+        "meaning": "a material found in sand, used to make transistors"
       },
       {
-        "word": "forearm",
-        "meaning": "the part of the arm between the elbow and the wrist"
+        "word": "semiconductor",
+        "meaning": "a material that carries electricity only some of the time"
       }
     ],
     "questions": [
-      "What keeps each finger stiff?",
-      "What pulls a finger closed, in a toy and in a real hand?",
-      "Where does a finger bend, and how does the thumb move differently?",
-      "What opens a hand again, since muscles can only pull?"
+      "What came before transistors?",
+      "How is a transistor like the tap on a sink?",
+      "What do makers add to silicon, and why?",
+      "How can a row of on-off switches make many patterns?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what keeps a finger stiff, what pulls it closed, and where it bends.",
-      "example": "Example: Bones keep my finger stiff. A tendon pulls it closed. It bends at three joints."
+      "prompt": "Write or dictate three sentences: what a transistor is made of, what its middle leg does, and what on and off mean.",
+      "example": "Example: A transistor is made of silicon. Its middle leg opens the path. On and off make ones and zeros."
     },
-    "foldableTitle": "A little book of hands",
-    "foldableCoverLine": "How a Hand Works",
-    "foldableNote": "Carry six hand clues in a small book."
+    "foldableTitle": "A little book of switches",
+    "foldableCoverLine": "Transistors",
+    "foldableNote": "Carry six switch clues in a small book."
   },
   "math": {
-    "title": "Count by hands",
-    "plate": "notice",
-    "intro": "Look for the step between numbers. Fill each missing number.",
-    "eyebrow": "SIX HAND PATTERNS",
-    "actionLabel": "Find the step, then fill the gap",
+    "title": "Count tiny switches in groups",
+    "plate": "return",
+    "intro": "Each group or row has the same number. Add the equal groups or rows to find the total.",
+    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
+    "actionLabel": "Add each equal group or row",
     "tasks": [
       {
-        "skill": "skip-next",
-        "sequence": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "step": 5,
-        "blankIndex": 3,
-        "prompt": "Little Wonderer counts fingers by fives, one hand at a time. What number comes next?",
-        "equation": "5, 10, 15, ___",
-        "hint": "Count forward by 5 each time.",
-        "answer": 20,
-        "worked": "15 + 5 = 20. Each hand adds 5 fingers.",
+        "skill": "equal-groups",
+        "rows": 3,
+        "columns": 3,
+        "prompt": "Little Wonderer finds 3 transistors, and each one has 3 legs. How many legs are there altogether?",
+        "equation": "3 + 3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3 + 3.",
+        "answer": 9,
+        "worked": "3 + 3 + 3 = 9. Three transistors with 3 legs each make 9 legs.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          4,
-          6,
-          8,
-          10
-        ],
-        "step": 2,
-        "blankIndex": 3,
-        "prompt": "Each thumb has 2 bones. Big Wonderer counts thumb bones by twos. What comes next?",
-        "equation": "4, 6, 8, ___",
-        "hint": "Count forward by 2 each time.",
-        "answer": 10,
-        "worked": "8 + 2 = 10. Each thumb adds 2 bones.",
+        "skill": "array",
+        "rows": 4,
+        "columns": 5,
+        "prompt": "An old machine holds 4 rows of glass tubes, with 5 tubes in each row. How many tubes are there?",
+        "equation": "5 + 5 + 5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5 + 5 + 5.",
+        "answer": 20,
+        "worked": "5 + 5 + 5 + 5 = 20. Four rows of 5 make 20 tubes.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          30,
-          40,
-          50,
-          60
-        ],
-        "step": 10,
-        "blankIndex": 3,
-        "prompt": "Two hands have 10 fingertips. They count fingertips by tens. What comes next?",
-        "equation": "30, 40, 50, ___",
-        "hint": "Count forward by 10 each time.",
-        "answer": 60,
-        "worked": "50 + 10 = 60. Each pair of hands adds 10 fingertips.",
+        "skill": "equal-groups",
+        "rows": 2,
+        "columns": 4,
+        "prompt": "Each time Big Wonderer turns the tap, 4 cups fill up. The big one turns it 2 times. How many cups fill?",
+        "equation": "4 + 4 =",
+        "hint": "Add one group at a time: 4 + 4.",
+        "answer": 8,
+        "worked": "4 + 4 = 8. Two turns of 4 cups make 8 cups.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          12,
-          14,
-          16,
-          18
-        ],
-        "step": 2,
-        "blankIndex": 2,
-        "prompt": "The little one counts string pulls in twos. What number is missing?",
-        "equation": "12, 14, ___, 18",
-        "hint": "Add 2 to the number before the blank.",
-        "answer": 16,
-        "worked": "14 + 2 = 16. Each step adds 2 pulls.",
+        "skill": "array",
+        "rows": 3,
+        "columns": 4,
+        "prompt": "A wafer drawing shows 3 rows of tiny chips, with 4 chips in each row. How many chips are there?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Add one row at a time: 4 + 4 + 4.",
+        "answer": 12,
+        "worked": "4 + 4 + 4 = 12. Three rows of 4 make 12 chips.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          25,
-          30,
-          35,
-          40
-        ],
-        "step": 5,
-        "blankIndex": 1,
-        "prompt": "They trace 5 strings on each hand outline. What number is missing?",
-        "equation": "25, ___, 35, 40",
-        "hint": "Add 5 to the number before the blank.",
-        "answer": 30,
-        "worked": "25 + 5 = 30. Each outline adds 5 lines.",
+        "skill": "array",
+        "rows": 4,
+        "columns": 4,
+        "prompt": "The little one lays out 4 rows of switch cards, with 4 cards in each row. How many cards are there?",
+        "equation": "4 + 4 + 4 + 4 =",
+        "hint": "Add one row at a time: 4 + 4 + 4 + 4.",
+        "answer": 16,
+        "worked": "4 + 4 + 4 + 4 = 16. Four rows of 4 make 16 cards.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          50,
-          60,
-          70,
-          80
-        ],
-        "step": 10,
-        "blankIndex": 2,
-        "prompt": "A jar holds elastic cords in bundles of 10. What number is missing?",
-        "equation": "50, 60, ___, 80",
-        "hint": "Add 10 to the number before the blank.",
-        "answer": 70,
-        "worked": "60 + 10 = 70. Each bundle adds 10 cords.",
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 3,
+        "prompt": "They make 5 paper stencils, and each stencil prints 3 shapes. How many shapes are printed?",
+        "equation": "3 + 3 + 3 + 3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3 + 3 + 3 + 3.",
+        "answer": 15,
+        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five stencils of 3 shapes make 15 shapes.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Six skip-counting patterns with steps of 2, 5, and 10. Story numbers are for counting practice.",
-    "answerKeyIntro": "Find the repeated step, then check the blank against its neighbors. Welcome a spoken explanation."
+    "parentNote": "Six equal-group and array tasks use repeated addition. Rows and columns are each 2 to 5. Welcome drawings, spoken reasoning, or arranging small objects.",
+    "answerKeyIntro": "Add the same number once for each group or row. Welcome a drawing or a spoken explanation."
   },
   "writing": {
-    "title": "Explain a hand clue in your words",
+    "title": "Explain a switch clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
-      "keep"
+      "return"
     ],
-    "draw": "Draw a hand outline. Mark the bones in one finger, one tendon, and the joints where it bends.",
-    "starter": "My hand clue",
+    "draw": "Draw a transistor with its three legs. Mark the middle leg and draw the path it opens.",
+    "starter": "My switch clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "A finger stays stiff because",
-        "hint": "what is inside it?"
+        "start": "Transistors replaced glass tubes because",
+        "hint": "what went wrong with tubes?"
       },
       {
         "plate": "change",
-        "start": "A finger curls when",
-        "hint": "what pulls on it?"
+        "start": "A transistor is like a tap because",
+        "hint": "what does a small turn do?"
       },
       {
-        "plate": "keep",
-        "start": "A finger opens again because",
-        "hint": "what can a muscle not do?"
+        "plate": "return",
+        "start": "On and off can make patterns because",
+        "hint": "what do one and zero mean?"
       }
     ],
     "words": [
-      "bone",
-      "tendon",
-      "joint",
-      "muscle",
+      "transistor",
+      "signal",
+      "silicon",
+      "switch",
       "because",
       "maybe"
     ],
@@ -401,50 +364,50 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The toy shows its strings; a real hand hides them inside."
+      "text": "A black bead with three legs: a tiny transistor."
     },
     {
       "label": "Reading · 2",
-      "text": "Three bones per finger, two in the thumb, 27 in one hand."
+      "text": "Tubes got hot and burned out; transistors are small and cool."
     },
     {
       "label": "Reading · 3",
-      "text": "A forearm muscle pulls a tendon; the tendon curls the finger."
+      "text": "A small signal on the middle leg opens a path for a bigger flow."
     },
     {
       "label": "Reading · 4",
-      "text": "Finger joints fold mostly one way; the thumb base swings across."
+      "text": "Other atoms let silicon carry electricity only when told."
     },
     {
       "label": "Reading · 5",
-      "text": "Finger-curling muscles sit in the forearm, so it moves too."
+      "text": "On is one, off is zero; eight switches make 256 patterns."
     },
     {
       "label": "Reading · 6",
-      "text": "Back tendons pull fingers straight; toys may use elastic."
+      "text": "Light prints them through stencils, layer after layer."
     },
     {
       "label": "Math · all",
-      "text": "20, 10, 60, 16, 30, 70."
+      "text": "9, 20, 8, 12, 16, 15."
     },
     {
       "label": "Screen-free",
-      "text": "Bones keep fingers stiff; tendons pull; joints bend; back tendons open."
+      "text": "Tubes came first; the middle leg opens the path; silicon is in sand; on and off are one and zero."
     }
   ],
-  "parentGuidance": "Gentle pulls only: no yanking strings or bending fingers backward. Toys differ; a paper-and-straw hand works too.",
+  "parentGuidance": "Look, don't open: never take apart phones, chargers or batteries. The tap step needs a grown-up at the sink. Loose transistors are small; keep them from mouths.",
   "sources": [
     {
-      "label": "Britannica Kids — hand",
-      "url": "https://kids.britannica.com/kids/article/hand/432984"
+      "label": "Britannica — transistor",
+      "url": "https://www.britannica.com/technology/transistor"
     },
     {
-      "label": "KidsHealth — your bones",
-      "url": "https://kidshealth.org/en/kids/bones.html"
+      "label": "Computer History Museum — invention of the point-contact transistor",
+      "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/"
     },
     {
-      "label": "KidsHealth — your muscles",
-      "url": "https://kidshealth.org/en/kids/muscles.html"
+      "label": "Nobel Prize — Physics 1956",
+      "url": "https://www.nobelprize.org/prizes/physics/1956/summary/"
     }
   ],
   "levels": {
@@ -453,47 +416,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer sets down a toy hand. It has five strings. The fingers stand open. Big Wonderer leans close. What makes a real hand curl?",
-            "prompt": "What does the toy hand have?"
+            "passage": "Little Wonderer finds a black bead. It has three thin legs. It is a transistor. Big Wonderer leans in close. What does it do?",
+            "prompt": "What does the bead have?"
           },
           {
             "id": "reach",
-            "passage": "Each toy finger has stiff parts. Your finger has three bones. The thumb has two. Bones keep a finger firm.",
-            "prompt": "How many bones are in a finger?"
+            "passage": "Old machines used glass tubes. The tubes got very hot. They burned out a lot. Then people made the transistor. It was small and cool.",
+            "prompt": "What got very hot?"
           },
           {
             "id": "change",
-            "passage": "Pull one string. A finger curls in. Your hand has strings too. They are called tendons. Muscles pull the tendons.",
-            "prompt": "What pulls a finger closed?"
+            "passage": "Think of a sink tap. A small turn lets water flow. A transistor works like a tap. A tiny push opens the path.",
+            "prompt": "What opens the path?"
           },
           {
             "id": "notice",
-            "passage": "The finger bends in three spots. Each spot is a joint. Joints fold like a door. The thumb swings across.",
-            "prompt": "Where does a finger bend?"
+            "passage": "Transistors are made from silicon. Silicon is found in sand. Makers add a tiny sprinkle. Then it carries electricity when told.",
+            "prompt": "Where is silicon found?"
           },
           {
             "id": "return",
-            "passage": "They pull each string in turn. Which finger curls? The little one curls a finger too. The arm moves near the wrist.",
-            "prompt": "What moves near the wrist?"
+            "passage": "Little Wonderer lays out paper cards. Light side means on. Dark side means off. A transistor is on or off. Flip the cards!",
+            "prompt": "What does the dark side mean?"
           },
           {
             "id": "keep",
-            "passage": "Let go of the string. What opens the finger? Muscles can only pull. Back tendons pull fingers straight.",
-            "prompt": "What opens the finger?"
+            "passage": "A chip is very small. It holds billions of transistors. Light prints them like a stencil. You cannot see them at all.",
+            "prompt": "What prints the transistors?"
           }
         ],
         "words": [
           {
-            "word": "bone",
-            "meaning": "a hard part that keeps a finger firm"
+            "word": "transistor",
+            "meaning": "a tiny switch with three legs"
           },
           {
-            "word": "tendon",
-            "meaning": "a body string that pulls a bone"
+            "word": "tube",
+            "meaning": "an old glass part that got hot"
           },
           {
-            "word": "joint",
-            "meaning": "where a finger bends"
+            "word": "silicon",
+            "meaning": "a material found in sand"
           }
         ]
       },
@@ -501,57 +464,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "The toy has 5 strings. One hand has 5 fingers. How many in all?",
-            "expression": "5 + 5",
-            "equation": "5 + 5 =",
-            "answer": 10,
-            "hint": "Count on from 5.",
-            "worked": "5 + 5 = 10. Add the strings and fingers."
-          },
-          {
-            "plate": "reach",
-            "prompt": "One hand has 14 finger bones. The thumb has 2 of them. How many are in the other fingers?",
-            "expression": "14 − 2",
-            "equation": "14 − 2 =",
-            "answer": 12,
-            "hint": "Take 2 away from 14.",
-            "worked": "14 − 2 = 12. Take away the thumb bones."
-          },
-          {
-            "plate": "change",
-            "prompt": "Big Wonderer pulls 3 strings, then 4 more. How many pulls?",
-            "expression": "3 + 4",
-            "equation": "3 + 4 =",
-            "answer": 7,
-            "hint": "Count on from 3.",
-            "worked": "3 + 4 = 7. Add both sets of pulls."
-          },
-          {
-            "plate": "notice",
-            "prompt": "One finger bends in 3 places. Another bends in 3 places. How many bends?",
+            "prompt": "One transistor has 3 legs. Another has 3 legs. How many legs?",
             "expression": "3 + 3",
             "equation": "3 + 3 =",
             "answer": 6,
             "hint": "Add 3 and 3.",
-            "worked": "3 + 3 = 6. Add the bend points."
+            "worked": "3 + 3 = 6. Add the legs."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A machine has 12 glass tubes. Four burn out. How many still work?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Take 4 away from 12.",
+            "worked": "12 − 4 = 8. Take away the tubes that burned out."
+          },
+          {
+            "plate": "change",
+            "prompt": "Big Wonderer fills 7 cups at the tap, then 6 more. How many cups?",
+            "expression": "7 + 6",
+            "equation": "7 + 6 =",
+            "answer": 13,
+            "hint": "Make a ten: 7 + 3 + 3.",
+            "worked": "7 + 6 = 13. Add both sets of cups."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They pour 9 spoons of sand, then 5 more. How many spoons?",
+            "expression": "9 + 5",
+            "equation": "9 + 5 =",
+            "answer": 14,
+            "hint": "Make a ten: 9 + 1 + 4.",
+            "worked": "9 + 5 = 14. Add both sets of spoons."
           },
           {
             "plate": "return",
-            "prompt": "The little one traces 9 lines, then 8 more. How many lines?",
-            "expression": "9 + 8",
-            "equation": "9 + 8 =",
-            "answer": 17,
-            "hint": "Make a ten: 9 + 1 + 7.",
-            "worked": "9 + 8 = 17. Add both sets of lines."
+            "prompt": "The little one has 16 cards. Eight are on. How many are off?",
+            "expression": "16 − 8",
+            "equation": "16 − 8 =",
+            "answer": 8,
+            "hint": "Take 8 away from 16.",
+            "worked": "16 − 8 = 8. Take away the cards that are on."
           },
           {
             "plate": "keep",
-            "prompt": "A box holds 20 elastic cords. They use 5 on the toy. How many are left?",
+            "prompt": "A tray holds 20 chips. Five are used. How many are left?",
             "expression": "20 − 5",
             "equation": "20 − 5 =",
             "answer": 15,
             "hint": "Take 5 away from 20.",
-            "worked": "20 − 5 = 15. Take away the cords used."
+            "worked": "20 − 5 = 15. Take away the chips used."
           }
         ]
       }
@@ -561,51 +524,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer sets a mechanical hand toy on the table. Five thin strings hang from its wrist. The fingers stand open and still. Big Wonderer leans in beside the little one. A real hand curls with no strings showing. What is inside?",
-            "prompt": "What hangs from the toy's wrist?"
+            "passage": "Little Wonderer finds a small black bead on the table. It has three thin silver legs. It looks like a bug, but it is a transistor. Big Wonderer leans in close. Billions like it hide inside our machines.",
+            "prompt": "What does the transistor look like?"
           },
           {
             "id": "reach",
-            "passage": "Each toy finger is a row of stiff pieces. A real finger has three small bones in a line. The thumb has only two. One whole hand has 27 bones. Bones keep the shape but cannot move alone.",
-            "prompt": "How many bones does one hand hold?"
+            "passage": "Long ago, machines used glass vacuum tubes. Each tube was as tall as a hand. Tubes glowed, got hot and burned out. One early computer filled a whole room. In 1947, scientists built the first transistor.",
+            "prompt": "What happened to the old tubes?"
           },
           {
             "id": "change",
-            "passage": "Pull one string, and a toy finger curls. Small loops keep the string close. Your hand has strings too, called tendons. Forearm muscles pull the tendons. The tendons pull the finger bones.",
-            "prompt": "What do forearm muscles pull?"
+            "passage": "Think of the tap on a sink. A small turn lets a big stream through. A transistor works a bit like that. A tiny signal on its middle leg opens the path. Then a bigger flow can rush through.",
+            "prompt": "What does the middle leg do?"
           },
           {
             "id": "notice",
-            "passage": "The toy finger bends in three places. Yours does too. Each bend point is a joint. Finger joints fold like a door hinge. The thumb's base joint lets it swing across.",
-            "prompt": "What is a joint?"
+            "passage": "Most transistors are made of silicon. Silicon is found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms. Then it carries electricity only when told. It is called a semiconductor.",
+            "prompt": "What do makers add to silicon?"
           },
           {
             "id": "return",
-            "passage": "They pull each string, one at a time. Each string curls its own finger. The little one curls a real finger slowly. A hand on the forearm feels something move. Toy and hand share one plan.",
-            "prompt": "What plan do the toy and hand share?"
+            "passage": "Little Wonderer points along a row of paper cards. Light side up means on. Dark side up means off. A transistor switch is on or off, too. On is like one, and off is like zero. Eight cards can make 256 different patterns.",
+            "prompt": "What are on and off like?"
           },
           {
             "id": "keep",
-            "passage": "Let go, and something must open the finger. A muscle can only pull, never push. Tendons on the back pull fingers straight. Toys may use elastic instead. Why is one finger hard to lift alone?",
-            "prompt": "What can a muscle never do?"
+            "passage": "A tiny chip can hold billions of transistors. They are too small to build one by one. Light shines through a stencil to print them. Some never touch the path they control. They steer electricity with an unseen push.",
+            "prompt": "How are the transistors printed?"
           }
         ],
         "words": [
           {
-            "word": "tendon",
-            "meaning": "a tough cord that joins a muscle to a bone"
+            "word": "transistor",
+            "meaning": "a tiny switch that controls electricity"
           },
           {
-            "word": "joint",
-            "meaning": "a place where two bones meet"
+            "word": "vacuum tube",
+            "meaning": "an old glass part used before transistors"
           },
           {
-            "word": "forearm",
-            "meaning": "the arm between the elbow and the wrist"
+            "word": "signal",
+            "meaning": "a small push that tells something what to do"
           },
           {
-            "word": "hinge",
-            "meaning": "a part that lets something fold one way"
+            "word": "semiconductor",
+            "meaning": "a material that carries electricity only some of the time"
           }
         ]
       },
@@ -613,57 +576,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that one hand has 27 bones, and 14 of them are finger bones. How many are not?",
-            "expression": "27 − 14",
-            "equation": "27 − 14 =",
-            "answer": 13,
-            "hint": "Subtract the ones, then the tens.",
-            "worked": "27 − 14 = 13. Take away the finger bones."
+            "prompt": "Little Wonderer counts 24 transistors, then finds 13 more. How many now?",
+            "expression": "24 + 13",
+            "equation": "24 + 13 =",
+            "answer": 37,
+            "hint": "Add ones, then tens.",
+            "worked": "24 + 13 = 37. Add both sets of transistors."
           },
           {
             "plate": "reach",
-            "prompt": "One hand has 14 finger bones and 5 palm bones. How many is that?",
-            "expression": "14 + 5",
-            "equation": "14 + 5 =",
-            "answer": 19,
-            "hint": "Add the ones.",
-            "worked": "14 + 5 = 19. Add finger and palm bones."
+            "prompt": "An old machine has 45 glass tubes. Eighteen burn out. How many still glow?",
+            "expression": "45 − 18",
+            "equation": "45 − 18 =",
+            "answer": 27,
+            "hint": "Trade a ten for ones if needed.",
+            "worked": "45 − 18 = 27. Take away the tubes that burned out."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer pulls a string 18 times, then 16 more. How many pulls?",
-            "expression": "18 + 16",
-            "equation": "18 + 16 =",
-            "answer": 34,
-            "hint": "Add ones, then tens.",
-            "worked": "18 + 16 = 34. Add both sets of pulls."
+            "prompt": "Big Wonderer fills 16 cups at the tap, then 19 more. How many cups?",
+            "expression": "16 + 19",
+            "equation": "16 + 19 =",
+            "answer": 35,
+            "hint": "Add ones, then tens; regroup when needed.",
+            "worked": "16 + 19 = 35. Add both sets of cups."
           },
           {
             "plate": "notice",
-            "prompt": "They count 12 finger joints, then 2 thumb joints. How many joints?",
-            "expression": "12 + 2",
-            "equation": "12 + 2 =",
-            "answer": 14,
-            "hint": "Add the ones.",
-            "worked": "12 + 2 = 14. Add finger and thumb joints."
+            "prompt": "A jar holds 50 spoons of sand. They use 22 spoons. How many are left?",
+            "expression": "50 − 22",
+            "equation": "50 − 22 =",
+            "answer": 28,
+            "hint": "Trade a ten for ones.",
+            "worked": "50 − 22 = 28. Take away the spoons used."
           },
           {
             "plate": "return",
-            "prompt": "The little one traces 25 lines, then 21 more. How many lines?",
-            "expression": "25 + 21",
-            "equation": "25 + 21 =",
-            "answer": 46,
-            "hint": "Add ones, then tens.",
-            "worked": "25 + 21 = 46. Add both sets of lines."
+            "prompt": "The little one flips 17 cards on and 14 cards off. How many cards?",
+            "expression": "17 + 14",
+            "equation": "17 + 14 =",
+            "answer": 31,
+            "hint": "Add ones, then tens; regroup when needed.",
+            "worked": "17 + 14 = 31. Add the on and off cards."
           },
           {
             "plate": "keep",
-            "prompt": "A bag has 40 elastic cords. They use 15 on the toy. How many are left?",
-            "expression": "40 − 15",
-            "equation": "40 − 15 =",
-            "answer": 25,
-            "hint": "Trade a ten for ones if needed.",
-            "worked": "40 − 15 = 25. Take away the cords used."
+            "prompt": "They print 26 patterns, then 21 more. How many patterns?",
+            "expression": "26 + 21",
+            "equation": "26 + 21 =",
+            "answer": 47,
+            "hint": "Add ones, then tens.",
+            "worked": "26 + 21 = 47. Add both sets of patterns."
           }
         ]
       }
@@ -673,59 +636,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide. Five thin strings hung from the wrist like reins. Big Wonderer leaned in beside the little one to look. A real hand curls and opens all day, yet no strings show on the outside. Something inside must be doing the same job, so the toy becomes a model worth studying.",
-            "prompt": "Why is the toy a useful model of a real hand?"
+            "passage": "Little Wonderer found a black bead about the size of a lentil, standing on three thin silver legs. It looked like a tiny bug, but it was a transistor. Big Wonderer leaned in beside the little one with a magnifying glass. This one was large enough to see, yet most transistors are far too small. Billions of them switch on and off inside the machines around us.",
+            "prompt": "Why might most people never notice a transistor?"
           },
           {
             "id": "reach",
-            "passage": "Each toy finger is a short row of stiff pieces joined end to end. A real finger is built the same way, with three small bones called phalanges lined up in a row. The thumb has only two. Add the palm bones and the eight small wrist bones, and one hand holds 27 bones. Bones keep a finger's shape, but they cannot move on their own.",
-            "prompt": "Where are the 27 bones of a hand found?"
+            "passage": "Before transistors, machines used glass vacuum tubes to control electricity. A tube was about as tall as a hand, and it glowed, grew hot, and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists built the first transistor from a sliver of gold foil pressed onto a small crystal. It was cooler, smaller, and longer lasting.",
+            "prompt": "What problems did vacuum tubes cause?"
           },
           {
             "id": "change",
-            "passage": "When one string is pulled, one toy finger curls toward the palm. The string slides through small loops that keep it close to the finger. Your hand works the same way with tough cords called tendons. Muscles up in the forearm tighten and pull those tendons, and the tendons pull the finger bones. Tough loops along each finger hold the tendons close, much like the toy's guides.",
-            "prompt": "How do forearm muscles curl a finger they do not touch?"
+            "passage": "A transistor works a little like the tap on a sink. A small turn of the handle lets a big stream of water rush through. In a transistor, electricity flows in one leg and out another. A tiny signal on the middle leg opens or closes that path. Because a small push controls a bigger flow, transistors can also make weak signals stronger, which is called amplifying.",
+            "prompt": "How can a small signal control a bigger flow?"
           },
           {
             "id": "notice",
-            "passage": "The toy finger bends in three places, and a real finger does too. Each bend point is a joint, the place where two bones meet. Most finger joints are hinge joints, folding mostly one way like a door. The base of the thumb is different, a saddle-shaped joint. It lets the thumb swing across the palm to touch each fingertip, which helps us grip.",
-            "prompt": "How is the thumb's base joint different from a finger joint?"
+            "passage": "Most transistors are made of silicon, an element found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms, a step called doping, a little like adding a pinch of salt to soup. The sprinkle lets silicon carry electricity only when it is told to. A material that sometimes conducts and sometimes does not is called a semiconductor.",
+            "prompt": "Why is doped silicon called a semiconductor?"
           },
           {
             "id": "return",
-            "passage": "They pulled each string, one at a time, and drew a line from every string to the finger it curled. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something shifted under the skin, close to the wrist. The toy and the hand follow one plan: a pull, a cord, and a joint that bends.",
-            "prompt": "What did the little one feel, and what does it show?"
+            "passage": "Little Wonderer pointed along a row of eight paper cards, some light side up and some dark side up. Light meant on, and dark meant off, just like a transistor switch. Computers use on as one and off as zero. Each extra card doubles the number of patterns, so eight cards can make 256 different patterns. That is enough for every letter on a keyboard.",
+            "prompt": "Why does each extra card double the patterns?"
           },
           {
             "id": "keep",
-            "passage": "When a toy string is released, something has to open the finger again. A muscle can only pull; it can never push. So a second set of tendons runs along the back of each finger and pulls it straight. Many toys use an elastic cord or a spring for that job. Some back tendons are linked together, which may explain why one finger is hard to lift alone.",
-            "prompt": "Why does a hand need tendons on both sides of each finger?"
+            "passage": "A phone chip smaller than a fingernail can hold billions of transistors. They are far too small to build one at a time. Instead, light shines through a stencil, called a mask, to print their patterns onto a silicon wafer, layer after layer. In many modern transistors, the control part never touches the path. It sits behind a thin wall and steers the flow with an unseen electric push.",
+            "prompt": "How can a transistor steer a flow it never touches?"
           }
         ],
         "words": [
           {
-            "word": "phalanges",
-            "meaning": "the small bones inside the fingers and thumb"
+            "word": "vacuum tube",
+            "meaning": "a glass part that controlled electricity before transistors"
           },
           {
-            "word": "tendon",
-            "meaning": "a tough cord that joins a muscle to a bone"
+            "word": "signal",
+            "meaning": "a small push or message that tells something what to do"
           },
           {
-            "word": "forearm",
-            "meaning": "the part of the arm between the elbow and the wrist"
+            "word": "amplify",
+            "meaning": "to make a weak signal stronger"
           },
           {
-            "word": "joint",
-            "meaning": "a place where two bones meet and move"
+            "word": "doping",
+            "meaning": "adding a tiny sprinkle of other atoms to silicon"
           },
           {
-            "word": "hinge joint",
-            "meaning": "a joint that folds mostly one way, like a door"
+            "word": "semiconductor",
+            "meaning": "a material that conducts electricity only some of the time"
           },
           {
-            "word": "saddle joint",
-            "meaning": "the thumb's base joint, which lets it swing across the palm"
+            "word": "mask",
+            "meaning": "a stencil that light shines through to print a chip"
           }
         ]
       },
@@ -733,57 +696,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 3 joints on each of 7 toy fingers. How many joints?",
-            "expression": "7 × 3",
-            "equation": "7 × 3 =",
-            "answer": 21,
-            "hint": "Seven groups of three.",
-            "worked": "7 × 3 = 21. Seven fingers with three joints each."
+            "prompt": "Little Wonderer counts 9 transistors, and each has 3 legs. How many legs?",
+            "expression": "9 × 3",
+            "equation": "9 × 3 =",
+            "answer": 27,
+            "hint": "Nine groups of three.",
+            "worked": "9 × 3 = 27. Nine transistors with three legs each."
           },
           {
             "plate": "reach",
-            "prompt": "Each hand has 5 fingers. How many fingers are on 9 hands?",
-            "expression": "9 × 5",
-            "equation": "9 × 5 =",
-            "answer": 45,
-            "hint": "Nine groups of five.",
-            "worked": "9 × 5 = 45. Nine hands with five fingers each."
+            "prompt": "A test rack holds 8 rows of glass tubes with 7 tubes in each row. How many tubes?",
+            "expression": "8 × 7",
+            "equation": "8 × 7 =",
+            "answer": 56,
+            "hint": "Eight groups of seven.",
+            "worked": "8 × 7 = 56. Eight rows of seven tubes."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer pulls a string 126 times in the morning and 87 times after lunch. How many pulls?",
-            "expression": "126 + 87",
-            "equation": "126 + 87 =",
-            "answer": 213,
+            "prompt": "Big Wonderer fills 136 cups at the tap in the morning and 248 in the afternoon. How many cups?",
+            "expression": "136 + 248",
+            "equation": "136 + 248 =",
+            "answer": 384,
             "hint": "Add each place and regroup when needed.",
-            "worked": "126 + 87 = 213. Add the morning and afternoon pulls."
+            "worked": "136 + 248 = 384. Add the morning and afternoon cups."
           },
           {
             "plate": "notice",
-            "prompt": "They sort 40 toy strings into equal sets of 5, one set for each toy hand. How many toy hands?",
-            "expression": "40 ÷ 5",
-            "equation": "40 ÷ 5 =",
-            "answer": 8,
-            "hint": "Share 40 into groups of 5.",
-            "worked": "40 ÷ 5 = 8. Each toy hand gets 5 strings."
+            "prompt": "A wafer drawing shows 72 chips shared equally into 8 rows. How many chips are in each row?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Share 72 into 8 equal rows.",
+            "worked": "72 ÷ 8 = 9. Each row gets the same number of chips."
           },
           {
             "plate": "return",
-            "prompt": "They trace 245 string lines in a week and erase 68 practice lines. How many lines stay?",
-            "expression": "245 − 68",
-            "equation": "245 − 68 =",
-            "answer": 177,
-            "hint": "Subtract ones, then tens, then the next place; regroup when needed.",
-            "worked": "245 − 68 = 177. Take away the practice lines."
+            "prompt": "They flip switch cards 512 times, then 275 times more. How many flips?",
+            "expression": "512 + 275",
+            "equation": "512 + 275 =",
+            "answer": 787,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "512 + 275 = 787. Add both sets of flips."
           },
           {
             "plate": "keep",
-            "prompt": "A bag holds 300 elastic cords. They use 45 on toy hands. How many remain?",
-            "expression": "300 − 45",
-            "equation": "300 − 45 =",
-            "answer": 255,
-            "hint": "Regroup across the zeros.",
-            "worked": "300 − 45 = 255. Take away the cords used."
+            "prompt": "A stencil prints 640 patterns, and 185 are tests that get wiped. How many stay?",
+            "expression": "640 − 185",
+            "equation": "640 − 185 =",
+            "answer": 455,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "640 − 185 = 455. Take away the test patterns."
           }
         ]
       }
@@ -793,67 +756,67 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer set a mechanical hand toy upright on the table, its jointed fingers spread wide and five thin strings trailing from the wrist. Beside the little one, Big Wonderer leaned in, curious about what the toy was trying to copy. A real hand curls, grips, and opens hundreds of times a day, yet no strings show on the outside. The toy is a model, a simpler machine that copies one idea from the real thing. Studying the model can point to what hides under the skin.",
-            "prompt": "What idea might the toy be copying from a real hand?"
+            "passage": "Little Wonderer found a black bead about the size of a lentil, balanced on three thin silver legs, and wondered whether it was some kind of beetle. Leaning in with a magnifying glass, Big Wonderer explained that it was a transistor, one of the most common things people have ever made. This one is large enough to hold, yet most transistors are far too small to see. Billions of them switch on and off inside the machines around us, and almost nobody notices.",
+            "prompt": "Why can something so common go unnoticed?"
           },
           {
             "id": "reach",
-            "passage": "Each toy finger is a short row of stiff segments, and a real finger follows the same design with three bones called phalanges. The thumb has only two phalanges, which is one reason it moves so differently. Counting the five palm bones and the eight small wrist bones, one hand holds 27 bones in all. Bones are rigid, so they keep a finger's shape and give muscles something firm to pull against. On their own, though, bones cannot move at all.",
-            "prompt": "Why do muscles need rigid bones to pull against?"
+            "passage": "Before transistors, machines controlled electricity with glass vacuum tubes, which were about as tall as a hand. Tubes glowed, grew hot, used a lot of power, and burned out like old light bulbs, so engineers spent hours replacing them. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists at a telephone laboratory built the first transistor from a sliver of gold foil pressed onto a small block of crystal. It was smaller, cooler, and much longer lasting.",
+            "prompt": "How did the transistor change what machines could be?"
           },
           {
             "id": "change",
-            "passage": "When one string is pulled, a single toy finger curls toward the palm, guided by small loops along the way. A real hand uses the same trick with tendons, tough cords that connect muscles to bones. Most of the muscles that bend the fingers sit up in the forearm, and their long tendons cross the wrist into each finger. Fibrous loops called pulleys hold the tendons close to the bones, much like the toy's loops. Without them, a tendon would pull away from the finger like a bowstring.",
-            "prompt": "What would happen to a tendon without its pulleys?"
+            "passage": "A transistor works a little like the tap on a sink, where a small turn of the handle lets a big stream of water rush through. Electricity flows in through one leg and out through another, and the middle leg acts like the handle. A tiny signal there opens or closes the path for a much bigger flow. That lets a transistor work as a switch, or as an amplifier that makes a weak signal stronger. The name joins two older words, transfer and resistor.",
+            "prompt": "What are the two jobs a transistor can do?"
           },
           {
             "id": "notice",
-            "passage": "Both the toy finger and a real finger bend in three places, and each bend point is a joint where two bones meet. Most finger joints are hinge joints, which fold mostly in one direction, much like a door. The knuckle joints can also tilt side to side, so fingers can spread apart. The base of the thumb is a saddle joint, shaped a bit like a rider's saddle. That shape lets the thumb swing across the palm and touch each fingertip, which makes careful gripping possible.",
-            "prompt": "How does the shape of a joint decide how it can move?"
+            "passage": "Most transistors are made of silicon, an element found in ordinary sand and rock. Pure silicon barely lets electricity through, so makers add a tiny sprinkle of other atoms, a step called doping, rather like a pinch of salt in a pot of soup. Some sprinkles leave extra electrons free to move, and others leave tiny gaps where electrons can hop. Layering the two kinds side by side creates a border that electricity can cross only when it is told to. That is why silicon is called a semiconductor.",
+            "prompt": "How does doping change what silicon can do?"
           },
           {
             "id": "return",
-            "passage": "They pulled each string in turn and drew a line from every string to the finger it curled, building a map of the model. Then the little one curled a real pointer finger slowly while resting the other hand on the forearm. Something slid under the skin near the wrist, a sign of muscles working far from the fingertip. The toy and the hand follow one plan: a pull, a cord, and a joint that bends. The model is simpler, but the idea is the same.",
-            "prompt": "What evidence shows the finger muscles are far from the fingertip?"
+            "passage": "Little Wonderer pointed along a row of eight paper cards, each turned light side up for on or dark side up for off, just like a row of transistor switches. Computers treat on as one and off as zero, and each one-or-zero is called a bit. With one card there are two patterns, with two cards there are four, and every extra card doubles the count. Eight cards can make 256 different patterns, enough for every letter, number and mark on a keyboard.",
+            "prompt": "How many patterns could nine cards make, and why?"
           },
           {
             "id": "keep",
-            "passage": "When a toy string is released, something must open the finger again, because a muscle can only pull and never push. A real hand solves this with a second set of tendons along the back of each finger, pulled by other forearm muscles. Many toys use an elastic cord or a spring for the same job. Some back-of-hand tendons are linked by small bridges, which may explain why the ring finger is hard to lift alone. That leaves a question worth testing on your own hand.",
-            "prompt": "Why does a hand need muscles and tendons working in pairs?"
+            "passage": "A phone chip smaller than a fingernail can hold billions of transistors, so they cannot be built one at a time. Instead, light shines through a stencil called a mask to print their patterns onto a thin silicon wafer, layer after layer, a little like printing a picture many times over. In many modern transistors, the control part, called the gate, never touches the path at all. It sits behind a wall of glass-like material and steers the flow with an unseen electric push. Nothing moves, yet the path opens and closes.",
+            "prompt": "How can a gate control a path it never touches?"
           }
         ],
         "words": [
           {
-            "word": "phalanges",
-            "meaning": "the small bones inside the fingers and thumb"
+            "word": "vacuum tube",
+            "meaning": "a glass part that controlled electricity before transistors"
           },
           {
-            "word": "tendon",
-            "meaning": "a tough cord that connects a muscle to a bone"
+            "word": "amplifier",
+            "meaning": "something that makes a weak signal stronger"
           },
           {
-            "word": "pulley",
-            "meaning": "a tough loop that holds a tendon close to a finger bone"
+            "word": "doping",
+            "meaning": "adding a tiny sprinkle of other atoms to silicon"
           },
           {
-            "word": "forearm",
-            "meaning": "the part of the arm between the elbow and the wrist"
+            "word": "electron",
+            "meaning": "a tiny particle whose movement makes electricity"
           },
           {
-            "word": "hinge joint",
-            "meaning": "a joint that folds mostly in one direction"
+            "word": "semiconductor",
+            "meaning": "a material that conducts electricity only under certain conditions"
           },
           {
-            "word": "saddle joint",
-            "meaning": "the thumb's base joint, shaped like a saddle"
+            "word": "bit",
+            "meaning": "a single one or zero"
           },
           {
-            "word": "model",
-            "meaning": "a simpler copy that shows how something works"
+            "word": "mask",
+            "meaning": "a stencil that light shines through to print a chip"
           },
           {
-            "word": "rigid",
-            "meaning": "stiff and hard to bend"
+            "word": "gate",
+            "meaning": "the control part of a transistor that opens or closes the path"
           }
         ]
       },
@@ -861,156 +824,147 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer tallies 1250 string pulls on Monday and 1875 on Tuesday. How many pulls?",
-            "expression": "1250 + 1875",
-            "equation": "1250 + 1875 =",
-            "answer": 3125,
+            "prompt": "Little Wonderer learns that a toy robot uses 2450 transistors in one part and 3875 in another. How many in all?",
+            "expression": "2450 + 3875",
+            "equation": "2450 + 3875 =",
+            "answer": 6325,
             "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "1250 + 1875 = 3125. Add both days of pulls."
+            "worked": "2450 + 3875 = 6325. Add both parts."
           },
           {
             "plate": "reach",
-            "prompt": "One hand has 27 bones. How many bones are in 8 hands?",
-            "expression": "27 × 8",
-            "equation": "27 × 8 =",
-            "answer": 216,
-            "hint": "Think 8 × 20 and 8 × 7.",
-            "worked": "27 × 8 = 216. Eight hands with 27 bones each."
+            "prompt": "A factory packs 1250 glass tubes into each of 6 crates. How many tubes?",
+            "expression": "1250 × 6",
+            "equation": "1250 × 6 =",
+            "answer": 7500,
+            "hint": "Think 6 × 1000 and 6 × 250.",
+            "worked": "1250 × 6 = 7500. Six crates of 1250 tubes."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer winds 2400 mm of string and cuts off 785 mm for the toy. How many mm remain?",
-            "expression": "2400 − 785",
-            "equation": "2400 − 785 =",
-            "answer": 1615,
+            "prompt": "Big Wonderer fills a tank with 4800 cups of water and drains 1375 cups. How many cups remain?",
+            "expression": "4800 − 1375",
+            "equation": "4800 − 1375 =",
+            "answer": 3425,
             "hint": "Regroup across the zeros.",
-            "worked": "2400 − 785 = 1615. Take away the string that was cut."
+            "worked": "4800 − 1375 = 3425. Take away the cups drained."
           },
           {
             "plate": "notice",
-            "prompt": "A chart lists 1120 finger joints shared equally by 8 classes. How many joints per class?",
-            "expression": "1120 ÷ 8",
-            "equation": "1120 ÷ 8 =",
-            "answer": 140,
-            "hint": "Split 1120 into 800 and 320, then divide each part by 8.",
-            "worked": "1120 ÷ 8 = 140. Each class gets the same number of joints."
+            "prompt": "A wafer holds 2016 chips, shared equally among 8 trays. How many chips per tray?",
+            "expression": "2016 ÷ 8",
+            "equation": "2016 ÷ 8 =",
+            "answer": 252,
+            "hint": "Split 2016 into 1600 and 416, then divide each part by 8.",
+            "worked": "2016 ÷ 8 = 252. Each tray gets the same number of chips."
           },
           {
             "plate": "return",
-            "prompt": "They draw 9 string lines on each of 135 hand outlines. How many lines?",
-            "expression": "135 × 9",
-            "equation": "135 × 9 =",
-            "answer": 1215,
-            "hint": "Think 100 × 9, 30 × 9 and 5 × 9.",
-            "worked": "135 × 9 = 1215. Each of the outlines gets 9 lines."
+            "prompt": "One row of eight switch cards can make 256 patterns. How many patterns do 9 such rows make in total?",
+            "expression": "256 × 9",
+            "equation": "256 × 9 =",
+            "answer": 2304,
+            "hint": "Think 9 × 200, 9 × 50 and 9 × 6.",
+            "worked": "256 × 9 = 2304. Nine rows of 256 patterns."
           },
           {
             "plate": "keep",
-            "prompt": "A crate holds 5000 elastic cords. Toy makers use 2365 of them. How many are left?",
-            "expression": "5000 − 2365",
-            "equation": "5000 − 2365 =",
-            "answer": 2635,
+            "prompt": "A stencil prints 7000 patterns, and 2645 are test patterns that get wiped. How many stay?",
+            "expression": "7000 − 2645",
+            "equation": "7000 − 2645 =",
+            "answer": 4355,
             "hint": "Regroup across the zeros.",
-            "worked": "5000 − 2365 = 2635. Take away the cords used."
+            "worked": "7000 − 2645 = 4355. Take away the test patterns."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "lab-page"
+    "quiz-cards"
   ],
-  "labPage": {
-    "materials": [
-      "a mechanical hand toy",
-      "paper",
-      "pencil",
-      "crayon or colored pencil (optional)",
-      "your own two hands"
-    ]
-  },
   "quiz": {
-    "title": "Four looks at a hand",
-    "intro": "Follow the pull from string to finger.",
+    "title": "Four looks at a switch",
+    "intro": "Follow the flow from tube to chip.",
     "questions": [
       {
-        "id": "bones",
-        "prompt": "What keeps a finger stiff?",
+        "id": "tubes",
+        "prompt": "What came before transistors?",
         "choices": [
-          "Bones in a row",
-          "Air inside",
-          "Only skin"
+          "Hot glass tubes",
+          "Paper switches",
+          "Tiny magnets"
         ],
         "answerIndex": 0,
-        "answer": "Small bones in a row keep each finger firm."
+        "answer": "Machines used glass vacuum tubes that glowed, got hot and burned out."
       },
       {
-        "id": "tendons",
-        "prompt": "What pulls a finger closed?",
+        "id": "tap",
+        "prompt": "What does the middle leg do?",
         "choices": [
-          "A fingernail",
-          "A tendon",
-          "A painted line"
+          "Holds it up",
+          "Opens the path",
+          "Makes it glow"
         ],
         "answerIndex": 1,
-        "answer": "A forearm muscle pulls a tendon, and the tendon pulls the finger bones."
+        "answer": "A tiny signal on the middle leg opens or closes the path for a bigger flow."
       },
       {
-        "id": "joints",
-        "prompt": "Where does a finger bend?",
+        "id": "silicon",
+        "prompt": "Where is silicon found?",
         "choices": [
-          "At its joints",
-          "In the nail",
-          "Anywhere at all"
+          "In sand",
+          "In milk",
+          "In clouds"
         ],
         "answerIndex": 0,
-        "answer": "A finger bends at joints, where two bones meet."
+        "answer": "Silicon is found in sand. A sprinkle of other atoms makes it a semiconductor."
       },
       {
-        "id": "open",
-        "prompt": "What opens a hand again?",
+        "id": "bits",
+        "prompt": "What do on and off mean?",
         "choices": [
-          "Muscles pushing",
-          "Back tendons pulling",
-          "Nothing at all"
+          "Big and small",
+          "One and zero",
+          "Hot and cold"
         ],
         "answerIndex": 1,
-        "answer": "Muscles only pull, so tendons on the back of the hand pull fingers straight."
+        "answer": "A computer treats on as one and off as zero."
       }
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "How a Hand Works",
-    "line": "Bones, tendons, and joints that bend.",
+    "title": "Transistors",
+    "line": "Tiny gates that steer electricity.",
     "plate": "wake"
   },
   "poem": {
-    "title": "Who Pulls My Strings?",
+    "title": "A Gate With No Hinges",
     "lines": [
-      "Little Wonderer pulled on a string, only one,",
-      "and a toy finger curled like a cat in the sun.",
-      "“Who’s pulling MY fingers?” the little one cried.",
-      "“I don’t see a string, and I’ve looked on each side!”",
+      "Little Wonderer found a small bug on the floor,",
+      "with three skinny legs, and no head, and no more.",
+      "“It’s no bug,” said the big one. “It just looks that way.",
+      "It’s a transistor, flipping on, off, all the day.”",
       "",
-      "Big Wonderer laughed. “You have strings, it is true.",
-      "They’re tendons, tucked under your skin, out of view.",
-      "Your muscles sit up in your arm past your wrist,",
-      "and they tug, and they tug, till your fingers make fists.”",
+      "It hasn’t a lever. It won’t make a click.",
+      "It’s quiet as pudding, and quick, oh, so quick!",
+      "One teeny-small nudge on the leg in the middle",
+      "lets a big river through. (It’s a bit of a riddle.)",
       "",
-      "Inside every finger are three bones in a row",
-      "(the thumb has just two, as the toy seemed to know),",
-      "with joints in between them that fold like a door —",
-      "just one way, not backward. (Please don’t try for more.)",
+      "Big Wonderer said, “In one phone, I am told,",
+      "there are billions of these, far more than you’d hold.",
+      "They don’t count to ten, and they don’t count by twos.",
+      "They count ‘on’ and ‘off’ — that’s the only way they choose.”",
       "",
-      "But muscles can’t push, so to open back wide,",
-      "there are strings on the back, on the knuckle-y side.",
-      "So the little one waved at the toy on the shelf:",
-      "“We both work on strings — but I pull them myself!”"
+      "So the little one whispered and gave it a pat:",
+      "“You’re a gate with no hinges. Imagine that!”",
+      "Then flipped every lamp in the house on and off,",
+      "saying “one,” saying “zero,” till the big one said, “Off!”"
     ],
     "drawing": {
-      "src": "assets/how-a-hand-works/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer at a table, watching one finger of a mechanical hand toy curl while Little holds a string."
+      "src": "assets/transistors/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer on the floor, the little one sitting forward and the big one crouching, both gazing at one tiny three-legged transistor beneath a hanging lamp."
     }
   }
 }
