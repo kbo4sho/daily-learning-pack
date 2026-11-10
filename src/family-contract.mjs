@@ -70,14 +70,18 @@ export function validateFamily(manifest) {
       const extras = SCREEN_FREE_PDF_LABELS;
       for (const [at, pdf] of today.pdfs.entries()) {
         const extra = /^\.\/today\/pdf\/([a-z-]+)\.pdf$/.exec(pdf?.href ?? "");
+        const explainer =
+          pdf?.href === "./today/pdf/explainer-onepager.pdf" &&
+          pdf.label === "Print explainer";
         const allowed =
           door.id === "big"
             ? at === 0
               ? pdf?.href === "./today/pdf/kid-worksheets.pdf" &&
                 pdf.label === "Print the pack"
-              : Boolean(extra) &&
-                Object.hasOwn(extras, extra[1]) &&
-                pdf.label === extras[extra[1]]
+              : explainer ||
+                (Boolean(extra) &&
+                  Object.hasOwn(extras, extra[1]) &&
+                  pdf.label === extras[extra[1]])
             : at === 0 &&
               /^\.\/little\/days\/[a-z0-9]+(?:-[a-z0-9]+)*\/little-pack\.pdf$/.test(
                 pdf?.href,

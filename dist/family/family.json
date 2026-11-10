@@ -17,6 +17,10 @@
             "label": "Print the pack"
           },
           {
+            "href": "./today/pdf/explainer-onepager.pdf",
+            "label": "Print explainer"
+          },
+          {
             "href": "./today/pdf/quiz-cards.pdf",
             "label": "Quiz cards"
           },
