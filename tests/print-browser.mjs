@@ -5,10 +5,11 @@
 //      and on an outside click; every PDF it links to is fetched from the local
 //      site and must equal today's file byte for byte; a real click on
 //      "Print today" requests the sheet.
-//   2. Every linked PDF, read with poppler: Letter on every page, a title, no
+//   2. Every linked PDF, read with poppler: Letter pages (A4 for the explainer A4 sheet), a title, no
 //      blank page, text or a picture on every page, header text with "Age N"
 //      matching the pack, no private name or process note, and the "Print
-//      today" sheet equals Math + Foldable + Writing page for page.
+//      today" sheet equals Math + Foldable + Writing, then the poem
+//      and Letter explainer when those ship, page for page.
 //   3. Browser Print of /today/ itself (page.pdf, the real print path) stays a
 //      short sheet that points at the Print menu, with every image loaded.
 //   4. The hidden /welcome/ page prints on two Letter sheets with its art.
@@ -58,6 +59,7 @@ const MAX_PAGES = 40;
 // A picture-only sheet (the foldable) fills at least this much of a Letter page.
 const PAGE_PICTURE_SQIN = 0.4 * 8.5 * 11;
 const LETTER = [612, 792];
+const A4 = [595, 842];
 // name -> label the parent reads in the Print menu.
 const MENU = {
   "kid-worksheets": /^Print today/,
@@ -69,6 +71,9 @@ const MENU = {
 };
 // CORE and BUNDLE are fixed below once pack.json is read: a pack with a
 // poem adds a "Poem" menu entry and ends Print today with the poem sheet.
+// When the explainer one-pagers ship, they join the Print menu, and the
+// Letter explainer is appended after the poem on Print today. A4 stays a
+// menu-only sheet.
 let CORE = Object.keys(MENU);
 // What "Print today" holds, in order.
 let BUNDLE = ["math", "foldable", "writing"];
@@ -321,6 +326,8 @@ async function checkPdf(
     imageOnly = new Set(),
     textColors = true,
     sheetTitles = true,
+    pageSize = LETTER,
+    pageSizeLabel = "US Letter",
   } = {},
 ) {
   const bytes = await readFile(path);
@@ -333,7 +340,11 @@ async function checkPdf(
   const meta = info(path);
   assert.equal(meta.sizes.length, meta.pages, `${name}: a page has no size`);
   meta.sizes.forEach((size, at) =>
-    assert.deepEqual(size, LETTER, `${name}: page ${at + 1} is not US Letter`),
+    assert.deepEqual(
+      size,
+      pageSize,
+      `${name}: page ${at + 1} is not ${pageSizeLabel}`,
+    ),
   );
   assert.ok(meta.title.trim().length > 3, `${name}: no document title`);
   const { files, ink } = await render(path, name);
@@ -479,9 +490,16 @@ assert.equal(
 );
 if (pack.poem) {
   MENU.poem = /^Poem$/;
-  CORE = Object.keys(MENU);
   BUNDLE = [...BUNDLE, "poem"];
 }
+if (allPdfs.includes("explainer-onepager")) {
+  MENU["explainer-onepager"] = /^Print explainer(?! · A4)/;
+  BUNDLE = [...BUNDLE, "explainer-onepager"];
+}
+if (allPdfs.includes("explainer-onepager-a4")) {
+  MENU["explainer-onepager-a4"] = /^Print explainer · A4/;
+}
+CORE = Object.keys(MENU);
 const shipped = allPdfs.slice().sort();
 // The poem has its own page (today/poem/), the day page links to it, and no
 // poem renders inline on the day page.
@@ -1030,7 +1048,7 @@ try {
   );
 
   await step(
-    "every printable PDF on /today/ is a clean Letter sheet",
+    "every printable PDF on /today/ is a clean print sheet",
     async () => {
       // The page links every PDF, the poem sheet included.
       assert.deepEqual(
@@ -1061,6 +1079,9 @@ try {
           title: pack.title,
           sheetTitles: !foldable,
           exempt: new Set((checked.foldable?.pageTexts ?? []).map(squash)),
+          ...(name === "explainer-onepager-a4"
+            ? { pageSize: A4, pageSizeLabel: "A4" }
+            : {}),
         });
         summary.pdfs[name] = {
           pages: checked[name].pages,
@@ -1226,7 +1247,7 @@ try {
         );
         for (const m of mats) has("lab-page", m, `lab material "${m}"`);
       }
-      // Print today is Math, then Foldable, then Writing, page for page.
+      // Print today is Math, Foldable, Writing, then poem and Letter explainer when those ship, page for page.
       const parts = BUNDLE.flatMap((b) => checked[b].files);
       const bundle = checked["kid-worksheets"].files;
       assert.equal(
