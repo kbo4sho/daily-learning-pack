@@ -32,9 +32,13 @@ const here = fileURLToPath(new URL(".", import.meta.url));
 const root = resolve(here, "..");
 const HASH_FILE = join(here, "private-name-hashes.json");
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
-const TESSERACT_ARGS = ["stdin", "stdout", "--psm", "3", "-l", "eng"];
+const TESSERACT_TEXT_ARGS = ["stdin", "stdout", "--psm", "3", "-l", "eng"];
+const TESSERACT_TSV_ARGS = [...TESSERACT_TEXT_ARGS, "tsv"];
+const OCR_ALGORITHM_VERSION = "orientation-reconciliation-v1";
+export const OCR_CONFIDENCE_THRESHOLD = 90;
 const TESSERACT_CONFIG = JSON.stringify({
-  args: TESSERACT_ARGS,
+  textArgs: TESSERACT_TEXT_ARGS,
+  tsvArgs: TESSERACT_TSV_ARGS,
   env: { OMP_THREAD_LIMIT: "1" },
 });
 
@@ -250,6 +254,7 @@ export function passCache(
     keyInputs.scriptSourceSha256 ??
     createHash("sha256").update(readFileSync(SCRIPT_PATH)).digest("hex");
   const extractionStack = {
+    algorithmVersion: keyInputs.algorithmVersion ?? OCR_ALGORITHM_VERSION,
     tesseractVersionConfig:
       keyInputs.tesseractVersionConfig ?? tesseractVersionConfig(),
     sharpVersion: keyInputs.sharpVersion ?? sharp.versions.sharp,
@@ -320,18 +325,254 @@ const run = (bin, args, input) =>
     child.stdin.end(input || undefined);
   });
 
+function parseTsv(tsv, angle) {
+  if (typeof tsv !== "string") return null;
+  const rows = tsv.replace(/\r/g, "").split("\n");
+  const header = rows.shift()?.split("\t") || [];
+  if (
+    header.length < 12 ||
+    header[0] !== "level" ||
+    header[6] !== "left" ||
+    header[10] !== "conf" ||
+    header[11] !== "text"
+  )
+    return null;
+
+  let width;
+  let height;
+  const words = [];
+  for (const row of rows) {
+    if (!row) continue;
+    const columns = row.split("\t");
+    if (columns.length < 12) return null;
+    const [
+      levelRaw,
+      page,
+      block,
+      paragraph,
+      line,
+      ,
+      leftRaw,
+      topRaw,
+      widthRaw,
+      heightRaw,
+      confidenceRaw,
+      ...textColumns
+    ] = columns;
+    const level = Number(levelRaw);
+    const left = Number(leftRaw);
+    const top = Number(topRaw);
+    const rowWidth = Number(widthRaw);
+    const rowHeight = Number(heightRaw);
+    if (
+      !Number.isInteger(level) ||
+      ![left, top, rowWidth, rowHeight].every(Number.isFinite)
+    )
+      return null;
+    if (level === 1) {
+      if (rowWidth <= 0 || rowHeight <= 0) return null;
+      width = rowWidth;
+      height = rowHeight;
+    }
+    if (level !== 5) continue;
+    const text = textColumns.join("\t");
+    const tokens = normalize(text);
+    if (!tokens.length) continue;
+    const confidence = Number(confidenceRaw);
+    if (
+      !Number.isFinite(confidence) ||
+      left < 0 ||
+      top < 0 ||
+      rowWidth <= 0 ||
+      rowHeight <= 0
+    )
+      return null;
+    words.push({
+      text,
+      tokens,
+      confidence,
+      left,
+      top,
+      width: rowWidth,
+      height: rowHeight,
+      line: `${page}:${block}:${paragraph}:${line}`,
+    });
+  }
+  if (!width || !height) return null;
+  return { angle, width, height, words };
+}
+
+function tokenSequence(read) {
+  return read.words.flatMap((word, wordIndex) =>
+    word.tokens.map((token) => ({ token, wordIndex, line: word.line })),
+  );
+}
+
+function matchingRuns(tokens, matcher, withinLine = false) {
+  const runs = [];
+  for (let i = 0; i < tokens.length; i++)
+    for (let n = 1; n <= matcher.max && i + n <= tokens.length; n++)
+      if (matcher.has(tokens.slice(i, i + n).map(({ token }) => token))) {
+        const run = tokens.slice(i, i + n);
+        if (!withinLine || run.every(({ line }) => line === run[0].line))
+          runs.push(run);
+      }
+  return runs;
+}
+
+function canonicalPoint(read, x, y) {
+  const horizontal = x / read.width;
+  const vertical = y / read.height;
+  switch ((read.angle + 360) % 360) {
+    case 0:
+      return { x: horizontal, y: vertical };
+    case 90:
+      return { x: vertical, y: 1 - horizontal };
+    case 180:
+      return { x: 1 - horizontal, y: 1 - vertical };
+    case 270:
+      return { x: 1 - vertical, y: horizontal };
+    default:
+      return null;
+  }
+}
+
+function canonicalBox(read, word) {
+  const points = [
+    canonicalPoint(read, word.left, word.top),
+    canonicalPoint(read, word.left + word.width, word.top),
+    canonicalPoint(read, word.left, word.top + word.height),
+    canonicalPoint(read, word.left + word.width, word.top + word.height),
+  ];
+  if (points.some((point) => !point)) return null;
+  return {
+    left: Math.min(...points.map(({ x }) => x)),
+    right: Math.max(...points.map(({ x }) => x)),
+    top: Math.min(...points.map(({ y }) => y)),
+    bottom: Math.max(...points.map(({ y }) => y)),
+  };
+}
+
+function explainsWord(hitRead, hitWord, otherRead, otherWord) {
+  if (
+    otherWord.confidence < OCR_CONFIDENCE_THRESHOLD ||
+    otherWord.confidence <= hitWord.confidence
+  )
+    return false;
+  const center = canonicalPoint(
+    hitRead,
+    hitWord.left + hitWord.width / 2,
+    hitWord.top + hitWord.height / 2,
+  );
+  const box = canonicalBox(otherRead, otherWord);
+  return (
+    center &&
+    box &&
+    center.x >= box.left &&
+    center.x <= box.right &&
+    center.y >= box.top &&
+    center.y <= box.bottom
+  );
+}
+
+// A real name in an upside-down panel is confident in its correct orientation,
+// while the same region is low-confidence gibberish when the page is upright.
+// Therefore only a lower-confidence name read whose mapped box center falls
+// inside a >=90-confidence, non-name word box in another orientation is
+// explained away. Missing TSV evidence or a partially explained run stays a hit.
+export function imageOcrHasName(rotations, matcher) {
+  const parsed = rotations.map((rotation) =>
+    rotation ? parseTsv(rotation.tsv, rotation.angle) : null,
+  );
+  const sequences = parsed.map((read) => (read ? tokenSequence(read) : []));
+  const plainHits = rotations.map(
+    (rotation) => rotation?.text && textHasName(rotation.text, matcher),
+  );
+  const tsvLineRuns = sequences.map((tokens) =>
+    matchingRuns(tokens, matcher, true),
+  );
+  const hitIndexes = rotations
+    .map((_, index) => index)
+    .filter((index) => plainHits[index] || tsvLineRuns[index].length);
+  if (!hitIndexes.length) return false;
+
+  const nameWords = sequences.map(
+    (tokens) =>
+      new Set(
+        matchingRuns(tokens, matcher).flatMap((run) =>
+          run.map(({ wordIndex }) => wordIndex),
+        ),
+      ),
+  );
+
+  for (const hitIndex of hitIndexes) {
+    const hit = rotations[hitIndex];
+    const hitRead = parsed[hitIndex];
+    if (!hitRead?.words.length) return true;
+    const hitTokens = sequences[hitIndex];
+    // Plain text remains the primary detector. TSV may suppress only when it
+    // contains the exact same token stream and can locate every matching run.
+    if (
+      plainHits[hitIndex] &&
+      normalize(hit.text).join(" ") !==
+        hitTokens.map(({ token }) => token).join(" ")
+    )
+      return true;
+    const runs = plainHits[hitIndex]
+      ? matchingRuns(hitTokens, matcher)
+      : tsvLineRuns[hitIndex];
+    if (!runs.length) return true;
+
+    for (const run of runs) {
+      const hitWordIndexes = [
+        ...new Set(run.map(({ wordIndex }) => wordIndex)),
+      ];
+      for (const hitWordIndex of hitWordIndexes) {
+        const hitWord = hitRead.words[hitWordIndex];
+        let explained = false;
+        for (let otherIndex = 0; otherIndex < parsed.length; otherIndex++) {
+          if (otherIndex === hitIndex || !parsed[otherIndex]) continue;
+          const otherRead = parsed[otherIndex];
+          for (
+            let wordIndex = 0;
+            wordIndex < otherRead.words.length;
+            wordIndex++
+          ) {
+            if (nameWords[otherIndex].has(wordIndex)) continue;
+            if (
+              explainsWord(
+                hitRead,
+                hitWord,
+                otherRead,
+                otherRead.words[wordIndex],
+              )
+            ) {
+              explained = true;
+              break;
+            }
+          }
+          if (explained) break;
+        }
+        if (!explained) return true;
+      }
+    }
+  }
+  return false;
+}
+
 // Tesseract does not reliably auto-rotate, and fold-up sheets mix upright
 // and upside-down panels, so read every image at all four orientations.
 // Animated PNGs: every frame is read, not just the default one.
 async function ocrImage(bytes) {
-  const texts = [];
+  const pagesOcr = [];
   let pages;
   try {
     pages = (await sharp(bytes).metadata()).pages || 1;
   } catch {
     return [null];
   }
-  for (let page = 0; page < pages; page++)
+  for (let page = 0; page < pages; page++) {
+    const rotations = [];
     for (const angle of [0, 90, 180, 270]) {
       let png;
       try {
@@ -339,9 +580,14 @@ async function ocrImage(bytes) {
       } catch {
         return [null];
       }
-      texts.push(await run("tesseract", TESSERACT_ARGS, png));
+      const text = await run("tesseract", TESSERACT_TEXT_ARGS, png);
+      const tsv = await run("tesseract", TESSERACT_TSV_ARGS, png);
+      if (text === null || tsv === null) return [null];
+      rotations.push({ angle, text, tsv });
     }
-  return texts;
+    pagesOcr.push({ kind: "image-ocr", rotations });
+  }
+  return pagesOcr;
 }
 
 async function textOf(file, bytes) {
@@ -434,7 +680,14 @@ export async function scan(
         unreadable++;
         output.error(`${label}: unreadable`);
       }
-      if (parts.some((p) => p && textHasName(p, matcher))) {
+      const hasName = parts.some((part) =>
+        typeof part === "string"
+          ? textHasName(part, matcher)
+          : part?.kind === "image-ocr"
+            ? imageOcrHasName(part.rotations, matcher)
+            : false,
+      );
+      if (hasName) {
         hits++;
         output.error(`${label}: private name hit`);
       } else if (h && !parts.some((p) => p === null)) cache.add(h);
