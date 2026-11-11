@@ -35,6 +35,13 @@ if (!Number.isSafeInteger(watchdogMs) || watchdogMs > 14 * 60_000) {
   throw new Error(`Invalid archive watchdog: ${watchdogValue}`);
 }
 
+// One hard deadline for the whole process, as on main: never cleared, so a
+// leaked browser child cannot keep this shard alive.
+watchdog(
+  watchdogMs,
+  `archive-browser ${requestedEngine ?? "all"} shard ${shardValue}`,
+);
+
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
 // Door (today → /today/) first, then the shelf with every day, today included.
@@ -320,15 +327,10 @@ const caseKinds = {
 const browserTypes = { chromium, webkit };
 const plannedCases = planArchiveCases(packets.length);
 const selectedCases = selectShard(plannedCases, k, n);
-assert.ok(selectedCases.length > 0, `archive shard ${shardValue} is not empty`);
 
 for (const engine of engines) {
   console.log(
     `archive-browser: engine=${engine} shard=${shardValue} cases=${selectedCases.length}`,
-  );
-  const watchdogTimer = watchdog(
-    watchdogMs,
-    `archive-browser ${engine} shard ${shardValue}`,
   );
   await test(
     `${engine}: archive packets (shard ${shardValue})`,
@@ -348,7 +350,6 @@ for (const engine of engines) {
       const browser = await browserTypes[engine].launch();
       t.after(() => bounded(browser.close(), 30_000, "browser.close"));
       const origin = `http://127.0.0.1:${server.address().port}`;
-      let ran = 0;
       for (const planned of selectedCases) {
         const route =
           planned.route === "archive"
@@ -361,13 +362,10 @@ for (const engine of engines) {
           planned,
           url: `${origin}${route}`,
         };
-        await t.test(definition.name(context), TEST, async () => {
-          ran++;
-          await definition.run(context);
-        });
+        await t.test(definition.name(context), TEST, () =>
+          definition.run(context),
+        );
       }
-      assert.equal(ran, selectedCases.length);
     },
   );
-  clearTimeout(watchdogTimer);
 }

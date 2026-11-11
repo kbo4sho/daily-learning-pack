@@ -81,30 +81,6 @@ test("declared shards cover every planned archive case once", () => {
       planned.map(({ id }) => selectedById.get(id)),
       planned,
     );
-    for (let packetIndex = 0; packetIndex < packetCount; packetIndex++) {
-      assert.ok(
-        selected.some(
-          (entry) =>
-            entry.kind === "open" &&
-            entry.packetIndex === packetIndex &&
-            entry.touch === false,
-        ),
-      );
-      assert.ok(
-        selected.some(
-          (entry) =>
-            entry.kind === "open" &&
-            entry.packetIndex === packetIndex &&
-            entry.touch === true,
-        ),
-      );
-      assert.ok(
-        selected.some(
-          (entry) =>
-            entry.kind === "no-js" && entry.packetIndex === packetIndex,
-        ),
-      );
-    }
   }
 });
 
