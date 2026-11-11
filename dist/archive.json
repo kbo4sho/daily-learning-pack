@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T04:45:34.119Z",
-  "latest": "transistors",
+  "generatedAt": "2026-11-11T05:02:15.008Z",
+  "latest": "how-velcro-works",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-velcro-works",
+      "date": "2026-11-11",
+      "topic": "How Velcro works",
+      "title": "How Velcro Works",
+      "teaser": "Hear a strap rip, meet the burr that started it, then test why a sideways pull holds but a peel lets go.",
+      "href": "./days/how-velcro-works/",
+      "latest": true
+    },
     {
       "slug": "transistors",
       "date": "2026-11-10",
@@ -11,7 +20,7 @@
       "title": "Transistors",
       "teaser": "Meet a tiny three-legged switch, see how a small signal opens a big flow, then flip paper cards to count in ones and zeros.",
       "href": "./days/transistors/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-a-hand-works",

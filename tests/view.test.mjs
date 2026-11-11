@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "transistors");
-  assert.equal(latest.date, "2026-11-10");
+  assert.equal(latest.slug, "how-velcro-works");
+  assert.equal(latest.date, "2026-11-11");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-velcro-works",
       "transistors",
       "how-a-hand-works",
       "soap-bubbles",
@@ -155,24 +156,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [9, 20, 8, 12, 16, 15],
+    [84, 63, 55, 30, 70, 50],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "groups-and-arrays");
+  assert.equal(todayPack.mathTemplate, "compare-and-round");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
-    todayPack.math.tasks.map(({ skill, rows, columns }) => [
-      skill,
-      rows,
-      columns,
-    ]),
+    todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["equal-groups", 3, 3],
-      ["array", 4, 5],
-      ["equal-groups", 2, 4],
-      ["array", 3, 4],
-      ["array", 4, 4],
-      ["equal-groups", 5, 3],
+      ["compare", 48, 84],
+      ["compare", 63, 36],
+      ["compare", 55, 55],
+      ["round-ten", 27],
+      ["round-ten", 74],
+      ["round-ten", 45],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

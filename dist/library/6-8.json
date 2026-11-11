@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "how-velcro-works",
+      "band": "6-8",
+      "topic": "How Velcro works",
+      "why": "Comparing a burr, a sideways pull and a peel helps your child explain how many tiny hooks and loops share one strong grip.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "compare",
+        "round-ten"
+      ],
+      "date": "2026-11-11",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "transistors",
       "band": "6-8",
       "topic": "transistors",
