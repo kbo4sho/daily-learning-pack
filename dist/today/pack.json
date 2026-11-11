@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "transistors",
-  "topic": "transistors",
-  "why": "Comparing a transistor with a sink tap and a row of on-off cards helps your child explain how a tiny signal can control a much bigger flow.",
-  "teaser": "Meet a tiny three-legged switch, see how a small signal opens a big flow, then flip paper cards to count in ones and zeros.",
+  "slug": "how-velcro-works",
+  "topic": "How Velcro works",
+  "why": "Comparing a burr, a sideways pull and a peel helps your child explain how many tiny hooks and loops share one strong grip.",
+  "teaser": "Hear a strap rip, meet the burr that started it, then test why a sideways pull holds but a peel lets go.",
   "aliases": [
-    "transistor",
-    "semiconductors",
-    "silicon chips",
-    "electronic switches"
+    "velcro",
+    "hook and loop",
+    "hook-and-loop fastener",
+    "burrs",
+    "shoe straps"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "groups-and-arrays",
+  "mathTemplate": "compare-and-round",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "equal-groups",
-      "array"
+      "compare",
+      "round-ten"
     ],
     "format": "curiosity-day"
   },
@@ -30,331 +31,343 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Transistors",
-  "title": "Transistors",
-  "question": "How can something smaller than a fingernail control electricity?",
-  "idea": "A transistor is a switch with no moving parts. A tiny signal on its middle leg opens or closes a path for a bigger flow of electricity. Made from silicon with a sprinkle of other atoms, billions of them flip on and off as ones and zeros inside every computer.",
+  "wonderLabel": "How Velcro Works",
+  "title": "How Velcro Works",
+  "question": "How can two soft strips of cloth hold on so tightly, then rip open?",
+  "idea": "Hook and loop copies a burr. Stiff nylon hooks on one strip catch soft loops on the other. One hook is weak, but hundreds share a sideways pull. A peel opens just a few hooks at a time, so it lets go easily.",
   "curiosity": {
-    "intro": "Start with a tiny black bead on three legs. Then follow it back to hot glass tubes, a sink tap, a pinch of sand, and a row of on-off cards.",
-    "carryForward": "Turn a tap a little, then ask what small push might be steering a bigger flow.",
+    "intro": "Start with a shoe strap that rips. Then follow it back to a burr on a walk, look at hooks and loops up close, and test a pull against a peel.",
+    "carryForward": "Next time a strap rips open, listen: how many tiny hooks just let go?",
     "questions": [
       {
-        "id": "tubes",
+        "id": "burr",
         "plate": "reach",
-        "question": "What came before transistors?",
-        "notice": "Compare the tall glass tube with the tiny black bead beside it.",
-        "say": "Glass vacuum tubes. A tube was about as tall as a hand. It glowed, got hot and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a room. In 1947, three scientists built the first transistor from gold foil pressed onto a small crystal.",
-        "try": "Hold up your hand: an old tube was about that tall. Now look at your smallest fingernail. A transistor you can hold is smaller still. Find one thing in the room the size of each."
+        "question": "Where did the idea come from?",
+        "notice": "Find the tiny hooks at the tips of the burr's spines.",
+        "say": "A burr. In 1941, a Swiss engineer came home from a walk with burdock burrs stuck to his socks and his dog's fur. Under a microscope, each spine ended in a tiny hook. Burrs cling on purpose: animals carry their seeds to new places.",
+        "try": "After a walk outdoors, look closely at your socks. Did any seeds hitch a ride? Look at one with a magnifying glass for hooks."
       },
       {
-        "id": "tap",
+        "id": "hooks",
         "plate": "change",
-        "question": "How can a tiny push control a big flow?",
-        "notice": "Look at how little the tap handle has turned, and how big the stream is.",
-        "say": "A transistor has three legs. Electricity flows in one leg and out another, and the middle leg works like a tap handle. A tiny signal there opens the path for a much bigger flow. The name joins two words: transfer and resistor.",
-        "try": "At a sink, turn the tap handle just a little. Watch how a small turn lets a big stream through. Then turn it back and watch the stream stop."
+        "question": "How do you make a tiny hook?",
+        "notice": "Compare the stiff hooks on top with the soft loops below.",
+        "say": "You start with a loop. The first hooks were cotton and wore out. Nylon worked better: it was woven into loops, heated so the loops kept their shape, then a cutter snipped one side of each loop to leave a hook.",
+        "try": "Bend a pipe cleaner into a small loop. Open one side a little so it becomes a hook. Can your hook catch a loop of yarn?"
       },
       {
-        "id": "bits",
-        "plate": "return",
-        "question": "How can on-off switches count?",
-        "notice": "Count the light cards and the dark cards in the row.",
-        "say": "A transistor switch is on or off, and a computer treats on as one and off as zero. Each extra switch doubles the patterns. Eight switches can make 256 patterns, enough for every letter on a keyboard.",
-        "try": "Lay two paper scraps in a row: light side up is on, dark side up is off. How many different rows can you make? Add a third scrap and count again. Did the number double?"
+        "id": "peel",
+        "plate": "notice",
+        "question": "Why does a peel open so easily?",
+        "notice": "Look at how thin the line is where the strip is letting go.",
+        "say": "A sideways pull, called shear, makes every hook hold at once. A peel opens only one thin line of hooks at a time. The rrrip is hooks springing free, one row after another.",
+        "try": "Press two strips together. Slide them apart sideways, then peel one corner. Which one takes less push? Listen to each."
       },
       {
-        "id": "chip",
+        "id": "lint",
         "plate": "keep",
-        "question": "How do billions fit on one chip?",
-        "notice": "Look through the lens at the tiny pattern on the chip.",
-        "say": "They are printed, not built one by one. Light shines through a stencil onto a silicon wafer, layer after layer. In many tiny transistors, the middle part never touches the path. It sits behind a thin wall and steers the flow with an unseen electric push.",
-        "try": "Cut a simple shape out of paper to make a stencil. Lay it on another sheet and rub a crayon across it. Print it three times. Chip makers print with light in a similar way."
+        "question": "Why do old strips lose their grip?",
+        "notice": "Find the fuzz in the hooks and the clean part next to it.",
+        "say": "Lint and fluff pack into the hooks, so they cannot reach the loops. A fine comb can lift the fuzz out, and the grip comes back.",
+        "try": "Find a fuzzy strip on an old shoe or bag. Comb it gently with an old comb or toothbrush, then test the grip again."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/transistors/01-bead.jpg",
-      "original": "assets/transistors/01-bead.png",
-      "foldSrc": "assets/transistors/01-bead-fold.jpg",
-      "title": "A bead with three legs",
-      "alt": "Big and Little Wonderer at a warm wooden table, the little one kneeling and the big one leaning in, both gazing at one tiny black transistor with three thin silver legs beside a magnifying glass.",
-      "caption": "A tiny bead on three legs, and a big question."
+      "src": "assets/how-velcro-works/01-strap.jpg",
+      "original": "assets/how-velcro-works/01-strap.png",
+      "foldSrc": "assets/how-velcro-works/01-strap-fold.jpg",
+      "title": "A strap that rips",
+      "alt": "Big and Little Wonderer at a warm wooden table, the little one leaning sideways and the big one leaning in, looking at a small canvas shoe with its hook-and-loop strap half open.",
+      "caption": "Rrrip! A strap opens, and a question begins."
     },
     {
       "id": "reach",
-      "src": "assets/transistors/02-tube.jpg",
-      "original": "assets/transistors/02-tube.png",
-      "foldSrc": "assets/transistors/02-tube-fold.jpg",
-      "title": "Before transistors",
-      "alt": "A field-guide study on pale ivory paper of a hand-tall glass vacuum tube with a faint warm glow inside, beside a far smaller black transistor with three thin legs.",
-      "caption": "A hot glass tube, and the tiny part that replaced it."
+      "src": "assets/how-velcro-works/02-burr.jpg",
+      "original": "assets/how-velcro-works/02-burr.png",
+      "foldSrc": "assets/how-velcro-works/02-burr-fold.jpg",
+      "title": "A burr on a walk",
+      "alt": "A field-guide study on pale ivory paper of a dry burdock burr on a stem with a tuft of wool caught on it, a magnifying lens showing spines that end in tiny hooks, and below, a grey hook strip beside a cream loop strip.",
+      "caption": "A burr's spines end in tiny hooks."
     },
     {
       "id": "change",
-      "src": "assets/transistors/03-tap.jpg",
-      "original": "assets/transistors/03-tap.png",
-      "foldSrc": "assets/transistors/03-tap-fold.jpg",
-      "title": "A little turn",
-      "alt": "A field-guide study of a small brass tap on a pipe, its handle turned only slightly, pouring a full clear stream of water into a plain basin.",
-      "caption": "A small turn lets a big flow through."
+      "src": "assets/how-velcro-works/03-hooks.jpg",
+      "original": "assets/how-velcro-works/03-hooks.png",
+      "foldSrc": "assets/how-velcro-works/03-hooks-fold.jpg",
+      "title": "Hooks meet loops",
+      "alt": "A magnified field-guide study of stiff grey hooks rising from woven backing above a soft tangle of cream thread loops, with a few hooks caught in loops.",
+      "caption": "Stiff hooks above, soft loops below."
     },
     {
       "id": "notice",
-      "src": "assets/transistors/04-silicon.jpg",
-      "original": "assets/transistors/04-silicon.png",
-      "foldSrc": "assets/transistors/04-silicon-fold.jpg",
-      "title": "Made from sand",
-      "alt": "A field-guide study on pale ivory paper of a small pile of sand, a rough grey chunk of silicon crystal, and a thin round silicon wafer with a faint grid, beside a blank notebook and pencil.",
-      "caption": "Sand, then silicon, then a thin wafer."
+      "src": "assets/how-velcro-works/04-peel.jpg",
+      "original": "assets/how-velcro-works/04-peel.png",
+      "foldSrc": "assets/how-velcro-works/04-peel-fold.jpg",
+      "title": "Pull or peel?",
+      "alt": "A field-guide study of two pale hook-and-loop strips pressed together, one end peeled back at a sharp angle so only a thin line lets go.",
+      "caption": "A peel opens just one thin line at a time."
     },
     {
       "id": "return",
-      "src": "assets/transistors/05-cards.jpg",
-      "original": "assets/transistors/05-cards.png",
-      "foldSrc": "assets/transistors/05-cards-fold.jpg",
-      "title": "On and off",
-      "alt": "Big and Little Wonderer at the warm table, the little one standing and pointing along a row of eight blank paper cards, some light side up and some dark side up, while the big one sits steadily behind.",
-      "caption": "Light side on, dark side off: a row of switches."
+      "src": "assets/how-velcro-works/05-test.jpg",
+      "original": "assets/how-velcro-works/05-test.png",
+      "foldSrc": "assets/how-velcro-works/05-test-fold.jpg",
+      "title": "A bag that hangs",
+      "alt": "Big and Little Wonderer at the warm table beside a small upright board with a hook-and-loop strip holding a hanging cloth bag, the little one reaching up toward the strip's corner and the big one kneeling and pointing at the bag.",
+      "caption": "Straight down, it holds. Peel the corner, it opens."
     },
     {
       "id": "keep",
-      "src": "assets/transistors/06-chip.jpg",
-      "original": "assets/transistors/06-chip.png",
-      "foldSrc": "assets/transistors/06-chip-fold.jpg",
-      "title": "Billions on a chip",
-      "alt": "A field-guide study of a small grey silicon chip on pale ivory paper, with a magnifying glass above it showing a dense, orderly pattern of tiny rectangles and fine lines.",
-      "caption": "Too small to see: billions of tiny switches."
+      "src": "assets/how-velcro-works/06-lint.jpg",
+      "original": "assets/how-velcro-works/06-lint.png",
+      "foldSrc": "assets/how-velcro-works/06-lint-fold.jpg",
+      "title": "When grip fades",
+      "alt": "A field-guide study of a used grey hook-and-loop strip clogged with lint, a small comb resting across it, a little heap of lifted lint and a clean section of hooks.",
+      "caption": "Lint clogs the hooks; a comb lifts it out."
     }
   ],
   "reading": {
-    "title": "A tiny switch with no moving parts",
+    "title": "A thousand tiny hooks",
     "coverPlate": "wake",
-    "coverText": "Start with a tiny black bead on three legs. Then find out what it replaced, how it steers a flow, and why billions fit on one chip.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Look, don't open: no taking apart devices or batteries.",
+    "coverText": "Start with a strap that rips. Then find the burr that gave the idea, and test why a peel opens what a pull cannot.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Burrs are for looking, not for faces or mouths.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A bead with three legs",
-        "passage": "Little Wonderer finds a black bead with three thin legs. It looks like a bug, but it is a transistor. Big Wonderer leans in beside the little one. This one is big enough to see, but most are far too small. Billions of them work inside the machines around us. What could something so small be doing?",
-        "prompt": "What does the black bead look like, and what is it?",
+        "title": "A strap that rips",
+        "passage": "Little Wonderer pulls open a shoe strap. Rrrip! The little one presses it shut, and it holds tight again. Big Wonderer leans in. The strap has two sides, one rough and one soft. People call it Velcro, but that is a company name. Its plain name is hook and loop. What is hiding in that sound?",
+        "prompt": "What is the plain name for this kind of strap?",
         "foldable": {
-          "heading": "A bead with three legs",
-          "body": "A black bead with three thin legs is a transistor. Billions of them work unseen inside the machines around us."
+          "heading": "A strap that rips",
+          "body": "A shoe strap rips open, then presses shut and holds. Its plain name is hook and loop: one rough side, one soft."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Before transistors",
-        "passage": "Long ago, machines used glass vacuum tubes instead. A tube was about as tall as a hand. It glowed, got hot and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists built the first transistor from gold foil and a small crystal.",
-        "prompt": "Why was a transistor better than a glass tube?",
+        "title": "A burr on a walk",
+        "passage": "In 1941, a Swiss engineer went for a walk with his dog. Afterward, burdock burrs clung to his socks and the dog's fur. He looked at a burr under a microscope. Each spine ended in a tiny hook. The hooks caught on loops of thread and fur. Could cloth copy that trick?",
+        "prompt": "What did the engineer see under the microscope?",
         "foldable": {
-          "heading": "Before transistors",
-          "body": "Old machines used hot glass tubes that burned out. In 1947, scientists built the first transistor from gold foil and crystal."
+          "heading": "A burr on a walk",
+          "body": "In 1941, burrs stuck to an engineer's socks and his dog. Under a microscope, each spine ended in a tiny hook."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A little turn",
-        "passage": "Think of the tap on a sink. A small turn of the handle lets a big stream of water through. A transistor works a bit like that. Electricity flows in one leg and out another. A tiny signal on the middle leg opens or closes the path. That is how a small push can control a much bigger flow.",
-        "prompt": "What does the middle leg of a transistor do?",
+        "title": "Hooks meet loops",
+        "passage": "Look very closely at the two sides. The rough side holds rows of stiff little hooks, like tiny bent canes. The soft side is a fuzzy tangle of thread loops. Press them together, and hundreds of hooks catch hundreds of loops. One hook is weak, but many together are strong. The name Velcro mixes French words for velvet and hook.",
+        "prompt": "Why is one hook weak but many hooks strong?",
         "foldable": {
-          "heading": "A little turn",
-          "body": "Like a tap, a tiny signal on the middle leg opens a path, so a small push controls a much bigger flow."
+          "heading": "Hooks meet loops",
+          "body": "Stiff hooks on one side catch soft loops on the other. One hook is weak, but hundreds together hold strong."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Made from sand",
-        "passage": "Most transistors are made of silicon, and silicon is found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms, a little like a pinch of salt in soup. That sprinkle lets the silicon carry electricity only when it is told to. A material like this is called a semiconductor.",
-        "prompt": "Why do makers add a sprinkle of other atoms to silicon?",
+        "title": "Pull or peel?",
+        "passage": "Try pulling the two sides apart sideways, like sliding. It is very hard, because every hook pulls at the same time. Now peel back one corner. It opens easily, because only one thin line of hooks lets go at a time. The rrrip is hooks springing free, row after row. A sideways pull is called shear.",
+        "prompt": "Why is a peel easier than a sideways pull?",
         "foldable": {
-          "heading": "Made from sand",
-          "body": "Silicon is found in sand. A tiny sprinkle of other atoms lets it carry electricity only when told. It is a semiconductor."
+          "heading": "Pull or peel?",
+          "body": "A sideways pull is hard, because every hook pulls at once. A peel is easy: only one thin line lets go."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "On and off",
-        "passage": "Little Wonderer points along a row of eight paper cards. Light side up means on, and dark side up means off. A transistor switch is either on or off, like a one or a zero. The little one flips a card and makes a new pattern. Eight switches can make 256 different patterns, enough for every letter on a keyboard.",
-        "prompt": "How can a row of on-off switches stand for a letter?",
+        "title": "A bag that hangs",
+        "passage": "A strip on a little board holds a small cloth bag. Big Wonderer points at it. The bag pulls straight down along the strip, so all the hooks share the load, and nothing slips. Then Little Wonderer reaches up and peels one corner. Rrrip! A few hooks at a time let go, and the bag slides off.",
+        "prompt": "Why does the bag hang without slipping?",
         "foldable": {
-          "heading": "On and off",
-          "body": "A switch is on or off, like a one or a zero. Eight switches can make 256 different patterns."
+          "heading": "A bag that hangs",
+          "body": "A hanging bag pulls along the strip, so every hook shares the weight. Peel one corner, and the bag slides off."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Billions on a chip",
-        "passage": "A chip smaller than a fingernail holds billions of transistors. Light shines through a stencil to print them onto a silicon wafer, layer after layer. In many tiny transistors, the middle part never touches the path. It sits behind a thin wall and steers the flow with an unseen push. How can something unseen change where electricity goes?",
-        "prompt": "How are billions of transistors made so small?",
+        "title": "When grip fades",
+        "passage": "Making the hooks took years of trying. The inventor wove nylon loops, heated them to set their shape, then snipped one side of each loop to leave a hook. After many uses, lint fills the hooks, so they cannot reach the loops. A fine comb can lift the fuzz out. Why would a cleaner strip grip better?",
+        "prompt": "Why does an old strip full of lint grip less?",
         "foldable": {
-          "heading": "Billions on a chip",
-          "body": "A chip can hold billions of transistors, printed with light through stencils. Some steer electricity with an unseen push."
+          "heading": "When grip fades",
+          "body": "Nylon loops were heated, then snipped into hooks. Lint clogs old hooks, but a fine comb can lift it out."
         }
       }
     ],
     "words": [
       {
-        "word": "transistor",
-        "meaning": "a tiny switch that controls a flow of electricity"
+        "word": "hook and loop",
+        "meaning": "a strap with tiny hooks on one side and soft loops on the other"
       },
       {
-        "word": "vacuum tube",
-        "meaning": "an old glass part used before transistors"
+        "word": "burr",
+        "meaning": "a prickly seed case that sticks to fur and socks"
       },
       {
-        "word": "signal",
-        "meaning": "a small push that tells something what to do"
+        "word": "microscope",
+        "meaning": "a tool that makes tiny things look big"
       },
       {
-        "word": "silicon",
-        "meaning": "a material found in sand, used to make transistors"
+        "word": "shear",
+        "meaning": "a sideways, sliding pull"
       },
       {
-        "word": "semiconductor",
-        "meaning": "a material that carries electricity only some of the time"
+        "word": "lint",
+        "meaning": "bits of fluff from cloth"
       }
     ],
     "questions": [
-      "What came before transistors?",
-      "How is a transistor like the tap on a sink?",
-      "What do makers add to silicon, and why?",
-      "How can a row of on-off switches make many patterns?"
+      "What did the engineer see on the burr?",
+      "What is on the rough side, and what is on the soft side?",
+      "Why is a sideways pull harder than a peel?",
+      "Why does a strip full of lint grip less?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what a transistor is made of, what its middle leg does, and what on and off mean.",
-      "example": "Example: A transistor is made of silicon. Its middle leg opens the path. On and off make ones and zeros."
+      "prompt": "Write or dictate three sentences: where the idea came from, what the hooks catch, and why a peel opens easily.",
+      "example": "Example: The idea came from a burr. The hooks catch soft loops. A peel opens a few hooks at a time."
     },
-    "foldableTitle": "A little book of switches",
-    "foldableCoverLine": "Transistors",
-    "foldableNote": "Carry six switch clues in a small book."
+    "foldableTitle": "A little book of hooks",
+    "foldableCoverLine": "How Velcro Works",
+    "foldableNote": "Carry six hook clues in a small book."
   },
   "math": {
-    "title": "Count tiny switches in groups",
-    "plate": "return",
-    "intro": "Each group or row has the same number. Add the equal groups or rows to find the total.",
-    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
-    "actionLabel": "Add each equal group or row",
+    "title": "Hook and loop counts",
+    "plate": "change",
+    "intro": "Compare and round pretend counts of hooks, loops, burrs and peels.",
+    "eyebrow": "SIX HOOK AND LOOP COUNTS",
+    "actionLabel": "Compare, then round",
     "tasks": [
       {
-        "skill": "equal-groups",
-        "rows": 3,
-        "columns": 3,
-        "prompt": "Little Wonderer finds 3 transistors, and each one has 3 legs. How many legs are there altogether?",
-        "equation": "3 + 3 + 3 =",
-        "hint": "Add one group at a time: 3 + 3 + 3.",
-        "answer": 9,
-        "worked": "3 + 3 + 3 = 9. Three transistors with 3 legs each make 9 legs.",
-        "plate": "wake",
+        "skill": "compare",
+        "operands": [
+          48,
+          84
+        ],
+        "symbol": "<",
+        "prompt": "The engineer counts 48 hooks on one burr and 84 hooks on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "48 ○ 84",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 84,
+        "worked": "48 < 84. Compare the tens first, so the greater count is 84.",
+        "plate": "reach",
         "label": "TASK 1"
       },
       {
-        "skill": "array",
-        "rows": 4,
-        "columns": 5,
-        "prompt": "An old machine holds 4 rows of glass tubes, with 5 tubes in each row. How many tubes are there?",
-        "equation": "5 + 5 + 5 + 5 =",
-        "hint": "Add one row at a time: 5 + 5 + 5 + 5.",
-        "answer": 20,
-        "worked": "5 + 5 + 5 + 5 = 20. Four rows of 5 make 20 tubes.",
-        "plate": "reach",
+        "skill": "compare",
+        "operands": [
+          63,
+          36
+        ],
+        "symbol": ">",
+        "prompt": "Little Wonderer counts 63 hooks in one tiny square and 36 loops in another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "63 ○ 36",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 63,
+        "worked": "63 > 36. Compare the tens first, so the greater count is 63.",
+        "plate": "change",
         "label": "TASK 2"
       },
       {
-        "skill": "equal-groups",
-        "rows": 2,
-        "columns": 4,
-        "prompt": "Each time Big Wonderer turns the tap, 4 cups fill up. The big one turns it 2 times. How many cups fill?",
-        "equation": "4 + 4 =",
-        "hint": "Add one group at a time: 4 + 4.",
-        "answer": 8,
-        "worked": "4 + 4 = 8. Two turns of 4 cups make 8 cups.",
+        "skill": "compare",
+        "operands": [
+          55,
+          55
+        ],
+        "symbol": "=",
+        "prompt": "The big one counts 55 loops on one patch and 55 loops on a second patch. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "55 ○ 55",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 55,
+        "worked": "55 = 55. Both counts match, so the shared count is 55.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "array",
-        "rows": 3,
-        "columns": 4,
-        "prompt": "A wafer drawing shows 3 rows of tiny chips, with 4 chips in each row. How many chips are there?",
-        "equation": "4 + 4 + 4 =",
-        "hint": "Add one row at a time: 4 + 4 + 4.",
-        "answer": 12,
-        "worked": "4 + 4 + 4 = 12. Three rows of 4 make 12 chips.",
-        "plate": "notice",
+        "skill": "round-ten",
+        "operands": [
+          27
+        ],
+        "prompt": "Big Wonderer peels the shoe strap open 27 times. What is 27 rounded to the nearest ten?",
+        "equation": "27 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 30,
+        "worked": "27 has 7 ones, so round up to 30.",
+        "plate": "wake",
         "label": "TASK 4"
       },
       {
-        "skill": "array",
-        "rows": 4,
-        "columns": 4,
-        "prompt": "The little one lays out 4 rows of switch cards, with 4 cards in each row. How many cards are there?",
-        "equation": "4 + 4 + 4 + 4 =",
-        "hint": "Add one row at a time: 4 + 4 + 4 + 4.",
-        "answer": 16,
-        "worked": "4 + 4 + 4 + 4 = 16. Four rows of 4 make 16 cards.",
+        "skill": "round-ten",
+        "operands": [
+          74
+        ],
+        "prompt": "The bag hangs on the strip for 74 seconds before the little one peels it. What is 74 rounded to the nearest ten?",
+        "equation": "74 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 70,
+        "worked": "74 has 4 ones, so round down to 70.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "equal-groups",
-        "rows": 5,
-        "columns": 3,
-        "prompt": "They make 5 paper stencils, and each stencil prints 3 shapes. How many shapes are printed?",
-        "equation": "3 + 3 + 3 + 3 + 3 =",
-        "hint": "Add one group at a time: 3 + 3 + 3 + 3 + 3.",
-        "answer": 15,
-        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five stencils of 3 shapes make 15 shapes.",
+        "skill": "round-ten",
+        "operands": [
+          45
+        ],
+        "prompt": "A comb lifts 45 bits of lint out of an old strip. What is 45 rounded to the nearest ten?",
+        "equation": "45 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 50,
+        "worked": "45 has 5 ones, so round up to 50.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
+    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Six equal-group and array tasks use repeated addition. Rows and columns are each 2 to 5. Welcome drawings, spoken reasoning, or arranging small objects.",
-    "answerKeyIntro": "Add the same number once for each group or row. Welcome a drawing or a spoken explanation."
+    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real hook counts.",
+    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
   },
   "writing": {
-    "title": "Explain a switch clue in your words",
+    "title": "Explain a hook clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
-      "return"
+      "notice"
     ],
-    "draw": "Draw a transistor with its three legs. Mark the middle leg and draw the path it opens.",
-    "starter": "My switch clue",
+    "draw": "Draw one hook and one loop. Show the hook catching the loop.",
+    "starter": "My hook clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "Transistors replaced glass tubes because",
-        "hint": "what went wrong with tubes?"
+        "start": "The idea came from a burr because",
+        "hint": "what was on its spines?"
       },
       {
         "plate": "change",
-        "start": "A transistor is like a tap because",
-        "hint": "what does a small turn do?"
+        "start": "The strips hold together because",
+        "hint": "what do the hooks catch?"
       },
       {
-        "plate": "return",
-        "start": "On and off can make patterns because",
-        "hint": "what do one and zero mean?"
+        "plate": "notice",
+        "start": "A peel opens easily because",
+        "hint": "how many hooks let go at once?"
       }
     ],
     "words": [
-      "transistor",
-      "signal",
-      "silicon",
-      "switch",
+      "hook",
+      "loop",
+      "burr",
+      "peel",
       "because",
       "maybe"
     ],
@@ -364,50 +377,50 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "A black bead with three legs: a tiny transistor."
+      "text": "Hook and loop; Velcro is a company name."
     },
     {
       "label": "Reading · 2",
-      "text": "Tubes got hot and burned out; transistors are small and cool."
+      "text": "Each burr spine ended in a tiny hook that caught loops."
     },
     {
       "label": "Reading · 3",
-      "text": "A small signal on the middle leg opens a path for a bigger flow."
+      "text": "Hooks catch loops; hundreds of hooks share the pull."
     },
     {
       "label": "Reading · 4",
-      "text": "Other atoms let silicon carry electricity only when told."
+      "text": "A peel opens one thin line of hooks at a time."
     },
     {
       "label": "Reading · 5",
-      "text": "On is one, off is zero; eight switches make 256 patterns."
+      "text": "The bag pulls along the strip, so every hook shares the load."
     },
     {
       "label": "Reading · 6",
-      "text": "Light prints them through stencils, layer after layer."
+      "text": "Lint fills the hooks, so they cannot reach the loops."
     },
     {
       "label": "Math · all",
-      "text": "9, 20, 8, 12, 16, 15."
+      "text": "84, 63, 55, 30, 70, 50."
     },
     {
       "label": "Screen-free",
-      "text": "Tubes came first; the middle leg opens the path; silicon is in sand; on and off are one and zero."
+      "text": "A burr gave the idea; hooks catch loops; a peel opens easily; lint clogs hooks."
     }
   ],
-  "parentGuidance": "Look, don't open: never take apart phones, chargers or batteries. The tap step needs a grown-up at the sink. Loose transistors are small; keep them from mouths.",
+  "parentGuidance": "Burrs are for looking, not for faces or mouths; wash hands after handling plants. Pipe cleaner ends can poke: bend them over. Comb strips gently.",
   "sources": [
     {
-      "label": "Britannica — transistor",
-      "url": "https://www.britannica.com/technology/transistor"
+      "label": "WIPO — the Velcro IP story",
+      "url": "https://www.wipo.int/en/web/ip-advantage/w/stories/the-velcro-ip-story"
     },
     {
-      "label": "Computer History Museum — invention of the point-contact transistor",
-      "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/"
+      "label": "SWI swissinfo.ch — How a Swiss invention hooked the world",
+      "url": "https://www.swissinfo.ch/eng/archive-science/how-a-swiss-invention-hooked-the-world/5653568"
     },
     {
-      "label": "Nobel Prize — Physics 1956",
-      "url": "https://www.nobelprize.org/prizes/physics/1956/summary/"
+      "label": "Yale Scientific — How does Velcro work?",
+      "url": "https://www.yalescientific.org/2010/02/everyday-qa-how-does-velcro-work/"
     }
   ],
   "levels": {
@@ -416,47 +429,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a black bead. It has three thin legs. It is a transistor. Big Wonderer leans in close. What does it do?",
-            "prompt": "What does the bead have?"
+            "passage": "Little Wonderer pulls a shoe strap. Rrrip! It opens with a loud sound. Press it shut again. It holds tight. What is inside?",
+            "prompt": "What sound does the strap make?"
           },
           {
             "id": "reach",
-            "passage": "Old machines used glass tubes. The tubes got very hot. They burned out a lot. Then people made the transistor. It was small and cool.",
-            "prompt": "What got very hot?"
+            "passage": "A man walked with his dog. Burrs stuck to his socks. He looked very close. Each burr had tiny hooks.",
+            "prompt": "What did each burr have?"
           },
           {
             "id": "change",
-            "passage": "Think of a sink tap. A small turn lets water flow. A transistor works like a tap. A tiny push opens the path.",
-            "prompt": "What opens the path?"
+            "passage": "One side has tiny hooks. The other side has soft loops. The hooks catch the loops. Many hooks hold strong.",
+            "prompt": "What do the hooks catch?"
           },
           {
             "id": "notice",
-            "passage": "Transistors are made from silicon. Silicon is found in sand. Makers add a tiny sprinkle. Then it carries electricity when told.",
-            "prompt": "Where is silicon found?"
+            "passage": "Pull the sides sideways. It is very hard! Now peel one corner. It opens with a rrrip.",
+            "prompt": "Which way opens easily?"
           },
           {
             "id": "return",
-            "passage": "Little Wonderer lays out paper cards. Light side means on. Dark side means off. A transistor is on or off. Flip the cards!",
-            "prompt": "What does the dark side mean?"
+            "passage": "A strip holds a small bag. Big Wonderer points at it. The bag does not slip. Peel the corner. The bag falls!",
+            "prompt": "What makes the bag fall?"
           },
           {
             "id": "keep",
-            "passage": "A chip is very small. It holds billions of transistors. Light prints them like a stencil. You cannot see them at all.",
-            "prompt": "What prints the transistors?"
+            "passage": "Old strips get full of lint. Lint fills the hooks. A comb lifts it out. Then it holds again.",
+            "prompt": "What fills the hooks?"
           }
         ],
         "words": [
           {
-            "word": "transistor",
-            "meaning": "a tiny switch with three legs"
+            "word": "hook",
+            "meaning": "a tiny bent part that catches"
           },
           {
-            "word": "tube",
-            "meaning": "an old glass part that got hot"
+            "word": "loop",
+            "meaning": "a small soft ring of thread"
           },
           {
-            "word": "silicon",
-            "meaning": "a material found in sand"
+            "word": "burr",
+            "meaning": "a sticky seed case"
           }
         ]
       },
@@ -464,57 +477,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "One transistor has 3 legs. Another has 3 legs. How many legs?",
-            "expression": "3 + 3",
-            "equation": "3 + 3 =",
-            "answer": 6,
-            "hint": "Add 3 and 3.",
-            "worked": "3 + 3 = 6. Add the legs."
+            "prompt": "Little Wonderer pulls the strap open 6 times, then 7 more. How many times?",
+            "expression": "6 + 7",
+            "equation": "6 + 7 =",
+            "answer": 13,
+            "hint": "Make a ten: 6 + 4 + 3.",
+            "worked": "6 + 7 = 13. Add both sets of openings."
           },
           {
             "plate": "reach",
-            "prompt": "A machine has 12 glass tubes. Four burn out. How many still work?",
-            "expression": "12 − 4",
-            "equation": "12 − 4 =",
-            "answer": 8,
-            "hint": "Take 4 away from 12.",
-            "worked": "12 − 4 = 8. Take away the tubes that burned out."
+            "prompt": "The dog has 15 burrs. The man pulls off 9. How many are left?",
+            "expression": "15 − 9",
+            "equation": "15 − 9 =",
+            "answer": 6,
+            "hint": "Take 9 away from 15.",
+            "worked": "15 − 9 = 6. Take away the burrs pulled off."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer fills 7 cups at the tap, then 6 more. How many cups?",
-            "expression": "7 + 6",
-            "equation": "7 + 6 =",
-            "answer": 13,
-            "hint": "Make a ten: 7 + 3 + 3.",
-            "worked": "7 + 6 = 13. Add both sets of cups."
+            "prompt": "A patch has 8 hooks and 9 loops. How many in all?",
+            "expression": "8 + 9",
+            "equation": "8 + 9 =",
+            "answer": 17,
+            "hint": "Make a ten: 9 + 1 + 7.",
+            "worked": "8 + 9 = 17. Add the hooks and loops."
           },
           {
             "plate": "notice",
-            "prompt": "They pour 9 spoons of sand, then 5 more. How many spoons?",
-            "expression": "9 + 5",
-            "equation": "9 + 5 =",
-            "answer": 14,
-            "hint": "Make a ten: 9 + 1 + 4.",
-            "worked": "9 + 5 = 14. Add both sets of spoons."
+            "prompt": "They peel 11 corners, then 5 more. How many peels?",
+            "expression": "11 + 5",
+            "equation": "11 + 5 =",
+            "answer": 16,
+            "hint": "Count on 5 from 11.",
+            "worked": "11 + 5 = 16. Add both sets of peels."
           },
           {
             "plate": "return",
-            "prompt": "The little one has 16 cards. Eight are on. How many are off?",
-            "expression": "16 − 8",
-            "equation": "16 − 8 =",
+            "prompt": "A bag holds 14 blocks. Six fall out. How many stay?",
+            "expression": "14 − 6",
+            "equation": "14 − 6 =",
             "answer": 8,
-            "hint": "Take 8 away from 16.",
-            "worked": "16 − 8 = 8. Take away the cards that are on."
+            "hint": "Take 6 away from 14.",
+            "worked": "14 − 6 = 8. Take away the blocks that fell."
           },
           {
             "plate": "keep",
-            "prompt": "A tray holds 20 chips. Five are used. How many are left?",
-            "expression": "20 − 5",
-            "equation": "20 − 5 =",
-            "answer": 15,
-            "hint": "Take 5 away from 20.",
-            "worked": "20 − 5 = 15. Take away the chips used."
+            "prompt": "The comb lifts 20 bits of lint. Eight fly away. How many are left?",
+            "expression": "20 − 8",
+            "equation": "20 − 8 =",
+            "answer": 12,
+            "hint": "Take 8 away from 20.",
+            "worked": "20 − 8 = 12. Take away the lint that flew."
           }
         ]
       }
@@ -524,51 +537,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a small black bead on the table. It has three thin silver legs. It looks like a bug, but it is a transistor. Big Wonderer leans in close. Billions like it hide inside our machines.",
-            "prompt": "What does the transistor look like?"
+            "passage": "Little Wonderer pulls open a shoe strap. Rrrip! The little one presses it shut again. It holds tight. Big Wonderer leans in close. One side feels rough, and one feels soft. People call it hook and loop.",
+            "prompt": "How do the two sides feel?"
           },
           {
             "id": "reach",
-            "passage": "Long ago, machines used glass vacuum tubes. Each tube was as tall as a hand. Tubes glowed, got hot and burned out. One early computer filled a whole room. In 1947, scientists built the first transistor.",
-            "prompt": "What happened to the old tubes?"
+            "passage": "In 1941, an engineer walked with his dog. Burrs from a burdock plant stuck everywhere. They clung to his socks and the dog's fur. He looked at a burr under a microscope. Each spine ended in a tiny hook.",
+            "prompt": "What did the microscope show?"
           },
           {
             "id": "change",
-            "passage": "Think of the tap on a sink. A small turn lets a big stream through. A transistor works a bit like that. A tiny signal on its middle leg opens the path. Then a bigger flow can rush through.",
-            "prompt": "What does the middle leg do?"
+            "passage": "The rough side has rows of stiff little hooks. The soft side is a tangle of loops. Press them together, and hooks catch loops. One hook is weak. Hundreds of hooks together are strong.",
+            "prompt": "Why do many hooks hold strongly?"
           },
           {
             "id": "notice",
-            "passage": "Most transistors are made of silicon. Silicon is found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms. Then it carries electricity only when told. It is called a semiconductor.",
-            "prompt": "What do makers add to silicon?"
+            "passage": "Pull the two sides apart sideways. It is very hard! Every hook pulls at the same time. Now peel back one corner. Only a few hooks let go at once. The rrrip is hooks springing free.",
+            "prompt": "What makes the rrrip sound?"
           },
           {
             "id": "return",
-            "passage": "Little Wonderer points along a row of paper cards. Light side up means on. Dark side up means off. A transistor switch is on or off, too. On is like one, and off is like zero. Eight cards can make 256 different patterns.",
-            "prompt": "What are on and off like?"
+            "passage": "A strip on a board holds a small bag. Big Wonderer points at the hanging bag. All the hooks share its weight. Then Little Wonderer peels one corner. Rrrip! The bag slides right off.",
+            "prompt": "Why does the bag slide off?"
           },
           {
             "id": "keep",
-            "passage": "A tiny chip can hold billions of transistors. They are too small to build one by one. Light shines through a stencil to print them. Some never touch the path they control. They steer electricity with an unseen push.",
-            "prompt": "How are the transistors printed?"
+            "passage": "Making the hooks took years of work. Old strips fill up with fluff and lint. Then the hooks cannot reach the loops. A fine comb lifts the lint out. Why does the strip grip better then?",
+            "prompt": "What does the comb do?"
           }
         ],
         "words": [
           {
-            "word": "transistor",
-            "meaning": "a tiny switch that controls electricity"
+            "word": "hook",
+            "meaning": "a tiny bent part that catches a loop"
           },
           {
-            "word": "vacuum tube",
-            "meaning": "an old glass part used before transistors"
+            "word": "loop",
+            "meaning": "a small soft ring of thread"
           },
           {
-            "word": "signal",
-            "meaning": "a small push that tells something what to do"
+            "word": "burr",
+            "meaning": "a prickly seed case that sticks to fur"
           },
           {
-            "word": "semiconductor",
-            "meaning": "a material that carries electricity only some of the time"
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look big"
           }
         ]
       },
@@ -576,57 +589,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 24 transistors, then finds 13 more. How many now?",
-            "expression": "24 + 13",
-            "equation": "24 + 13 =",
-            "answer": 37,
-            "hint": "Add ones, then tens.",
-            "worked": "24 + 13 = 37. Add both sets of transistors."
+            "prompt": "Little Wonderer pulls the strap open and shut 23 times, then 18 more. How many times?",
+            "expression": "23 + 18",
+            "equation": "23 + 18 =",
+            "answer": 41,
+            "hint": "Add ones, then tens; regroup when needed.",
+            "worked": "23 + 18 = 41. Add both sets of openings."
           },
           {
             "plate": "reach",
-            "prompt": "An old machine has 45 glass tubes. Eighteen burn out. How many still glow?",
-            "expression": "45 − 18",
-            "equation": "45 − 18 =",
-            "answer": 27,
-            "hint": "Trade a ten for ones if needed.",
-            "worked": "45 − 18 = 27. Take away the tubes that burned out."
+            "prompt": "The dog has 42 burrs in its fur. The man pulls out 27. How many are left?",
+            "expression": "42 − 27",
+            "equation": "42 − 27 =",
+            "answer": 15,
+            "hint": "Trade a ten for ones.",
+            "worked": "42 − 27 = 15. Take away the burrs pulled out."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer fills 16 cups at the tap, then 19 more. How many cups?",
-            "expression": "16 + 19",
-            "equation": "16 + 19 =",
-            "answer": 35,
+            "prompt": "One patch has 36 hooks. Another patch has 14. How many hooks?",
+            "expression": "36 + 14",
+            "equation": "36 + 14 =",
+            "answer": 50,
             "hint": "Add ones, then tens; regroup when needed.",
-            "worked": "16 + 19 = 35. Add both sets of cups."
+            "worked": "36 + 14 = 50. Add both patches."
           },
           {
             "plate": "notice",
-            "prompt": "A jar holds 50 spoons of sand. They use 22 spoons. How many are left?",
-            "expression": "50 − 22",
-            "equation": "50 − 22 =",
-            "answer": 28,
-            "hint": "Trade a ten for ones.",
-            "worked": "50 − 22 = 28. Take away the spoons used."
+            "prompt": "They peel the strip 31 times, then 17 more. How many peels?",
+            "expression": "31 + 17",
+            "equation": "31 + 17 =",
+            "answer": 48,
+            "hint": "Add ones, then tens.",
+            "worked": "31 + 17 = 48. Add both sets of peels."
           },
           {
             "plate": "return",
-            "prompt": "The little one flips 17 cards on and 14 cards off. How many cards?",
-            "expression": "17 + 14",
-            "equation": "17 + 14 =",
-            "answer": 31,
-            "hint": "Add ones, then tens; regroup when needed.",
-            "worked": "17 + 14 = 31. Add the on and off cards."
+            "prompt": "The bag holds 45 beads. Big Wonderer takes out 19. How many stay?",
+            "expression": "45 − 19",
+            "equation": "45 − 19 =",
+            "answer": 26,
+            "hint": "Trade a ten for ones.",
+            "worked": "45 − 19 = 26. Take away the beads taken out."
           },
           {
             "plate": "keep",
-            "prompt": "They print 26 patterns, then 21 more. How many patterns?",
-            "expression": "26 + 21",
-            "equation": "26 + 21 =",
-            "answer": 47,
-            "hint": "Add ones, then tens.",
-            "worked": "26 + 21 = 47. Add both sets of patterns."
+            "prompt": "The comb lifts 50 bits of lint. Then 28 blow away. How many are left?",
+            "expression": "50 − 28",
+            "equation": "50 − 28 =",
+            "answer": 22,
+            "hint": "Trade a ten for ones.",
+            "worked": "50 − 28 = 22. Take away the lint that blew away."
           }
         ]
       }
@@ -636,59 +649,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a black bead about the size of a lentil, standing on three thin silver legs. It looked like a tiny bug, but it was a transistor. Big Wonderer leaned in beside the little one with a magnifying glass. This one was large enough to see, yet most transistors are far too small. Billions of them switch on and off inside the machines around us.",
-            "prompt": "Why might most people never notice a transistor?"
+            "passage": "Little Wonderer pulled open the strap on a small canvas shoe, and it gave a loud, scratchy rrrip. When the little one pressed it shut, it held tight again. Big Wonderer leaned in to look more closely. One side felt rough, and the other side felt soft. Many people call it Velcro, but that is a company name, and its plain name is hook and loop.",
+            "prompt": "Why might hook and loop be a better name than Velcro?"
           },
           {
             "id": "reach",
-            "passage": "Before transistors, machines used glass vacuum tubes to control electricity. A tube was about as tall as a hand, and it glowed, grew hot, and burned out like an old light bulb. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists built the first transistor from a sliver of gold foil pressed onto a small crystal. It was cooler, smaller, and longer lasting.",
-            "prompt": "What problems did vacuum tubes cause?"
+            "passage": "In 1941, a Swiss engineer came home from a walk with his dog and found burdock burrs clinging to his socks and the dog's fur. Burrs cling like this on purpose, so that animals carry their seeds to new places. Under a microscope, he saw that each spine of the burr ended in a tiny hook. Those hooks snagged loops of thread and fur, and he wondered if cloth could copy the trick.",
+            "prompt": "Why does a burr want to cling to fur?"
           },
           {
             "id": "change",
-            "passage": "A transistor works a little like the tap on a sink. A small turn of the handle lets a big stream of water rush through. In a transistor, electricity flows in one leg and out another. A tiny signal on the middle leg opens or closes that path. Because a small push controls a bigger flow, transistors can also make weak signals stronger, which is called amplifying.",
-            "prompt": "How can a small signal control a bigger flow?"
+            "passage": "Up close, the rough side holds rows of stiff nylon hooks, each bent like a tiny cane. The soft side is a fuzzy tangle of thread loops. When the sides are pressed together, hundreds of hooks catch hundreds of loops at once. A single hook is weak and slips free easily, but hundreds sharing the work make a strong grip. The name Velcro joins the French words for velvet and hook.",
+            "prompt": "How do hundreds of weak hooks make a strong grip?"
           },
           {
             "id": "notice",
-            "passage": "Most transistors are made of silicon, an element found in ordinary sand. Pure silicon barely lets electricity through. Makers add a tiny sprinkle of other atoms, a step called doping, a little like adding a pinch of salt to soup. The sprinkle lets silicon carry electricity only when it is told to. A material that sometimes conducts and sometimes does not is called a semiconductor.",
-            "prompt": "Why is doped silicon called a semiconductor?"
+            "passage": "Pulling the two sides apart sideways, like sliding one over the other, is surprisingly hard because every hook resists at the same time. Engineers call this kind of sliding pull shear. Peeling back a corner is easy, because only a thin line of hooks has to let go at once. The rrrip you hear is the sound of hooks springing free from loops, one row after another.",
+            "prompt": "What is shear, and why does it hold so well?"
           },
           {
             "id": "return",
-            "passage": "Little Wonderer pointed along a row of eight paper cards, some light side up and some dark side up. Light meant on, and dark meant off, just like a transistor switch. Computers use on as one and off as zero. Each extra card doubles the number of patterns, so eight cards can make 256 different patterns. That is enough for every letter on a keyboard.",
-            "prompt": "Why does each extra card double the patterns?"
+            "passage": "A strip stuck to a small board held a cloth bag that hung straight down without slipping. Big Wonderer pointed out that the bag pulled along the strip, so all the hooks shared its weight. Then Little Wonderer reached up and peeled one corner instead. With a rrrip, a few hooks at a time let go, and the bag slid off. The same strip held or opened depending on the pull.",
+            "prompt": "How did the same strip both hold and open?"
           },
           {
             "id": "keep",
-            "passage": "A phone chip smaller than a fingernail can hold billions of transistors. They are far too small to build one at a time. Instead, light shines through a stencil, called a mask, to print their patterns onto a silicon wafer, layer after layer. In many modern transistors, the control part never touches the path. It sits behind a thin wall and steers the flow with an unseen electric push.",
-            "prompt": "How can a transistor steer a flow it never touches?"
+            "passage": "Making the hooks was the hardest part of the invention. Cotton hooks were too soft and wore out, so the inventor switched to nylon. Nylon was woven into loops and heated so the loops kept their shape, and then one side of each loop was snipped to leave a hook. After many uses, lint fills the hooks and they cannot reach the loops. Why might combing out the lint bring the grip back?",
+            "prompt": "Why did nylon work better than cotton?"
           }
         ],
         "words": [
           {
-            "word": "vacuum tube",
-            "meaning": "a glass part that controlled electricity before transistors"
+            "word": "hook and loop",
+            "meaning": "a fastener with tiny hooks on one strip and soft loops on the other"
           },
           {
-            "word": "signal",
-            "meaning": "a small push or message that tells something what to do"
+            "word": "burr",
+            "meaning": "a prickly seed case that clings to fur so animals carry its seeds"
           },
           {
-            "word": "amplify",
-            "meaning": "to make a weak signal stronger"
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look much bigger"
           },
           {
-            "word": "doping",
-            "meaning": "adding a tiny sprinkle of other atoms to silicon"
+            "word": "shear",
+            "meaning": "a sideways, sliding pull"
           },
           {
-            "word": "semiconductor",
-            "meaning": "a material that conducts electricity only some of the time"
+            "word": "nylon",
+            "meaning": "a strong thread that keeps its shape after heating"
           },
           {
-            "word": "mask",
-            "meaning": "a stencil that light shines through to print a chip"
+            "word": "lint",
+            "meaning": "bits of fluff and thread that come off cloth"
           }
         ]
       },
@@ -696,57 +709,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 9 transistors, and each has 3 legs. How many legs?",
-            "expression": "9 × 3",
-            "equation": "9 × 3 =",
-            "answer": 27,
-            "hint": "Nine groups of three.",
-            "worked": "9 × 3 = 27. Nine transistors with three legs each."
+            "prompt": "Little Wonderer pulls the strap open 8 times a day for 9 days. How many openings?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Eight openings on each of nine days."
           },
           {
             "plate": "reach",
-            "prompt": "A test rack holds 8 rows of glass tubes with 7 tubes in each row. How many tubes?",
-            "expression": "8 × 7",
-            "equation": "8 × 7 =",
-            "answer": 56,
-            "hint": "Eight groups of seven.",
-            "worked": "8 × 7 = 56. Eight rows of seven tubes."
+            "prompt": "A dog comes home with 136 burrs in its fur, and 89 are brushed out. How many are left?",
+            "expression": "136 − 89",
+            "equation": "136 − 89 =",
+            "answer": 47,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "136 − 89 = 47. Take away the burrs brushed out."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer fills 136 cups at the tap in the morning and 248 in the afternoon. How many cups?",
-            "expression": "136 + 248",
-            "equation": "136 + 248 =",
-            "answer": 384,
-            "hint": "Add each place and regroup when needed.",
-            "worked": "136 + 248 = 384. Add the morning and afternoon cups."
+            "prompt": "A patch has 7 rows of hooks with 8 hooks in each row. How many hooks?",
+            "expression": "7 × 8",
+            "equation": "7 × 8 =",
+            "answer": 56,
+            "hint": "Seven groups of eight.",
+            "worked": "7 × 8 = 56. Seven rows of eight hooks."
           },
           {
             "plate": "notice",
-            "prompt": "A wafer drawing shows 72 chips shared equally into 8 rows. How many chips are in each row?",
-            "expression": "72 ÷ 8",
-            "equation": "72 ÷ 8 =",
-            "answer": 9,
-            "hint": "Share 72 into 8 equal rows.",
-            "worked": "72 ÷ 8 = 9. Each row gets the same number of chips."
+            "prompt": "They peel a strip 245 times one week and 318 times the next. How many peels?",
+            "expression": "245 + 318",
+            "equation": "245 + 318 =",
+            "answer": 563,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "245 + 318 = 563. Add both weeks of peels."
           },
           {
             "plate": "return",
-            "prompt": "They flip switch cards 512 times, then 275 times more. How many flips?",
-            "expression": "512 + 275",
-            "equation": "512 + 275 =",
-            "answer": 787,
-            "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "512 + 275 = 787. Add both sets of flips."
+            "prompt": "Big Wonderer shares 72 beads equally into 8 small bags. How many beads go in each bag?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Share 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Each bag gets the same number of beads."
           },
           {
             "plate": "keep",
-            "prompt": "A stencil prints 640 patterns, and 185 are tests that get wiped. How many stay?",
-            "expression": "640 − 185",
-            "equation": "640 − 185 =",
-            "answer": 455,
+            "prompt": "A comb lifts 420 bits of lint from old strips, and 175 blow away. How many are left?",
+            "expression": "420 − 175",
+            "equation": "420 − 175 =",
+            "answer": 245,
             "hint": "Subtract each place; regroup when needed.",
-            "worked": "640 − 185 = 455. Take away the test patterns."
+            "worked": "420 − 175 = 245. Take away the lint that blew away."
           }
         ]
       }
@@ -756,67 +769,67 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a black bead about the size of a lentil, balanced on three thin silver legs, and wondered whether it was some kind of beetle. Leaning in with a magnifying glass, Big Wonderer explained that it was a transistor, one of the most common things people have ever made. This one is large enough to hold, yet most transistors are far too small to see. Billions of them switch on and off inside the machines around us, and almost nobody notices.",
-            "prompt": "Why can something so common go unnoticed?"
+            "passage": "Little Wonderer pulled open the strap on a small canvas shoe, and it gave a loud, scratchy rrrip that seemed far too big for such a quiet strip of cloth. When the little one pressed it shut again, it held just as tightly as before. Leaning in, Big Wonderer pointed out that one side felt rough and the other side felt soft. Most people call it Velcro. That is really a company name, and the plain name for it is hook and loop.",
+            "prompt": "Why do people often use a company name for an everyday thing?"
           },
           {
             "id": "reach",
-            "passage": "Before transistors, machines controlled electricity with glass vacuum tubes, which were about as tall as a hand. Tubes glowed, grew hot, used a lot of power, and burned out like old light bulbs, so engineers spent hours replacing them. One early computer needed about 18,000 tubes and filled a whole room. In 1947, three scientists at a telephone laboratory built the first transistor from a sliver of gold foil pressed onto a small block of crystal. It was smaller, cooler, and much longer lasting.",
-            "prompt": "How did the transistor change what machines could be?"
+            "passage": "In 1941, a Swiss engineer came home from a walk in the hills with his dog and found burdock burrs clinging stubbornly to his wool socks and to the dog's fur. Burrs cling like this on purpose, so that passing animals carry their seeds to new places. Curious, he looked at a burr under a microscope and saw that every spine ended in a tiny curved hook. Those hooks snagged on loops of thread and tangles of fur, and he wondered whether two strips of cloth could copy the trick.",
+            "prompt": "How did a plant's way of spreading seeds become an invention?"
           },
           {
             "id": "change",
-            "passage": "A transistor works a little like the tap on a sink, where a small turn of the handle lets a big stream of water rush through. Electricity flows in through one leg and out through another, and the middle leg acts like the handle. A tiny signal there opens or closes the path for a much bigger flow. That lets a transistor work as a switch, or as an amplifier that makes a weak signal stronger. The name joins two older words, transfer and resistor.",
-            "prompt": "What are the two jobs a transistor can do?"
+            "passage": "Seen up close, the rough side holds neat rows of stiff nylon hooks, each bent like a tiny walking cane, while the soft side is a fuzzy tangle of thread loops. When the two sides are pressed together, hundreds of hooks catch hundreds of loops at the same moment. A single hook is weak and slips free easily, but when hundreds share the work, the grip becomes surprisingly strong. The name Velcro joins the first sounds of two French words, velours for velvet and crochet for hook.",
+            "prompt": "Why does sharing the work make the grip strong?"
           },
           {
             "id": "notice",
-            "passage": "Most transistors are made of silicon, an element found in ordinary sand and rock. Pure silicon barely lets electricity through, so makers add a tiny sprinkle of other atoms, a step called doping, rather like a pinch of salt in a pot of soup. Some sprinkles leave extra electrons free to move, and others leave tiny gaps where electrons can hop. Layering the two kinds side by side creates a border that electricity can cross only when it is told to. That is why silicon is called a semiconductor.",
-            "prompt": "How does doping change what silicon can do?"
+            "passage": "Pulling the two sides apart sideways, as if sliding one strip along the other, is surprisingly hard, because every hook resists at the same time. Engineers call that kind of sliding force shear, and hook-and-loop strips are strongest against it. Peeling back a corner is easy, because only a thin line of hooks has to let go at any moment while the rest wait their turn. The rrrip you hear is the sound of hooks springing free from their loops, one row after another.",
+            "prompt": "Why is a strip strong against shear but weak against a peel?"
           },
           {
             "id": "return",
-            "passage": "Little Wonderer pointed along a row of eight paper cards, each turned light side up for on or dark side up for off, just like a row of transistor switches. Computers treat on as one and off as zero, and each one-or-zero is called a bit. With one card there are two patterns, with two cards there are four, and every extra card doubles the count. Eight cards can make 256 different patterns, enough for every letter, number and mark on a keyboard.",
-            "prompt": "How many patterns could nine cards make, and why?"
+            "passage": "A strip stuck to a small board held a cloth bag that hung straight down without slipping at all. Big Wonderer explained that the bag pulled along the strip, so every hook shared its weight in shear. Then Little Wonderer reached up and peeled one corner instead. With a rrrip, the hooks let go a few at a time until the bag slid off into waiting mittens. The same strip held firmly or opened easily depending only on the direction of the pull.",
+            "prompt": "How does the direction of a pull change what the strip does?"
           },
           {
             "id": "keep",
-            "passage": "A phone chip smaller than a fingernail can hold billions of transistors, so they cannot be built one at a time. Instead, light shines through a stencil called a mask to print their patterns onto a thin silicon wafer, layer after layer, a little like printing a picture many times over. In many modern transistors, the control part, called the gate, never touches the path at all. It sits behind a wall of glass-like material and steers the flow with an unseen electric push. Nothing moves, yet the path opens and closes.",
-            "prompt": "How can a gate control a path it never touches?"
+            "passage": "Making the hooks turned out to be the hardest part of the invention. It took years of trying. Early cotton hooks were too soft and wore out, so the inventor switched to nylon, which keeps its shape after heating. Nylon thread was woven into loops and heat-set, and then a cutter like a barber's clippers snipped one side of each loop to leave a hook. After many uses, lint and fluff pack into the hooks so they cannot reach the loops. Why might combing out the lint bring the grip back?",
+            "prompt": "How were the loops turned into hooks?"
           }
         ],
         "words": [
           {
-            "word": "vacuum tube",
-            "meaning": "a glass part that controlled electricity before transistors"
+            "word": "hook and loop",
+            "meaning": "a fastener with tiny hooks on one strip and soft loops on the other"
           },
           {
-            "word": "amplifier",
-            "meaning": "something that makes a weak signal stronger"
+            "word": "burr",
+            "meaning": "a prickly seed case that clings to fur so animals carry its seeds"
           },
           {
-            "word": "doping",
-            "meaning": "adding a tiny sprinkle of other atoms to silicon"
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look much bigger"
           },
           {
-            "word": "electron",
-            "meaning": "a tiny particle whose movement makes electricity"
+            "word": "shear",
+            "meaning": "a sideways, sliding force along a surface"
           },
           {
-            "word": "semiconductor",
-            "meaning": "a material that conducts electricity only under certain conditions"
+            "word": "peel",
+            "meaning": "a pull that lifts one edge so it opens a little at a time"
           },
           {
-            "word": "bit",
-            "meaning": "a single one or zero"
+            "word": "nylon",
+            "meaning": "a strong human-made thread that keeps its shape after heating"
           },
           {
-            "word": "mask",
-            "meaning": "a stencil that light shines through to print a chip"
+            "word": "heat-set",
+            "meaning": "warmed so a shape stays fixed after cooling"
           },
           {
-            "word": "gate",
-            "meaning": "the control part of a transistor that opens or closes the path"
+            "word": "lint",
+            "meaning": "bits of fluff and thread that come off cloth"
           }
         ]
       },
@@ -824,147 +837,158 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that a toy robot uses 2450 transistors in one part and 3875 in another. How many in all?",
-            "expression": "2450 + 3875",
-            "equation": "2450 + 3875 =",
-            "answer": 6325,
+            "prompt": "Little Wonderer learns that a factory makes 3650 metres of strap in the morning and 2875 metres in the afternoon. How many metres in all?",
+            "expression": "3650 + 2875",
+            "equation": "3650 + 2875 =",
+            "answer": 6525,
             "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "2450 + 3875 = 6325. Add both parts."
+            "worked": "3650 + 2875 = 6525. Add the morning and afternoon metres."
           },
           {
             "plate": "reach",
-            "prompt": "A factory packs 1250 glass tubes into each of 6 crates. How many tubes?",
-            "expression": "1250 × 6",
-            "equation": "1250 × 6 =",
-            "answer": 7500,
-            "hint": "Think 6 × 1000 and 6 × 250.",
-            "worked": "1250 × 6 = 7500. Six crates of 1250 tubes."
+            "prompt": "A dog walks through a field with 9000 burrs, and 2468 of them hitch a ride. How many stay behind?",
+            "expression": "9000 − 2468",
+            "equation": "9000 − 2468 =",
+            "answer": 6532,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 2468 = 6532. Take away the burrs that hitched a ride."
           },
           {
             "plate": "change",
-            "prompt": "Big Wonderer fills a tank with 4800 cups of water and drains 1375 cups. How many cups remain?",
-            "expression": "4800 − 1375",
-            "equation": "4800 − 1375 =",
-            "answer": 3425,
-            "hint": "Regroup across the zeros.",
-            "worked": "4800 − 1375 = 3425. Take away the cups drained."
+            "prompt": "A big patch holds 1200 hooks in each of 8 rows. How many hooks?",
+            "expression": "1200 × 8",
+            "equation": "1200 × 8 =",
+            "answer": 9600,
+            "hint": "Think 8 × 1000 and 8 × 200.",
+            "worked": "1200 × 8 = 9600. Eight rows of 1200 hooks."
           },
           {
             "plate": "notice",
-            "prompt": "A wafer holds 2016 chips, shared equally among 8 trays. How many chips per tray?",
-            "expression": "2016 ÷ 8",
-            "equation": "2016 ÷ 8 =",
-            "answer": 252,
-            "hint": "Split 2016 into 1600 and 416, then divide each part by 8.",
-            "worked": "2016 ÷ 8 = 252. Each tray gets the same number of chips."
+            "prompt": "A tester peels a strip 4725 times, then 1890 times more. How many peels?",
+            "expression": "4725 + 1890",
+            "equation": "4725 + 1890 =",
+            "answer": 6615,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "4725 + 1890 = 6615. Add both sets of peels."
           },
           {
             "plate": "return",
-            "prompt": "One row of eight switch cards can make 256 patterns. How many patterns do 9 such rows make in total?",
-            "expression": "256 × 9",
-            "equation": "256 × 9 =",
-            "answer": 2304,
-            "hint": "Think 9 × 200, 9 × 50 and 9 × 6.",
-            "worked": "256 × 9 = 2304. Nine rows of 256 patterns."
+            "prompt": "Big Wonderer shares 5040 beads equally into 9 bags. How many beads go in each bag?",
+            "expression": "5040 ÷ 9",
+            "equation": "5040 ÷ 9 =",
+            "answer": 560,
+            "hint": "Split 5040 into 4500 and 540, then divide each part by 9.",
+            "worked": "5040 ÷ 9 = 560. Each bag gets the same number of beads."
           },
           {
             "plate": "keep",
-            "prompt": "A stencil prints 7000 patterns, and 2645 are test patterns that get wiped. How many stay?",
-            "expression": "7000 − 2645",
-            "equation": "7000 − 2645 =",
-            "answer": 4355,
+            "prompt": "A comb lifts 7200 bits of lint, and 3456 blow away. How many are left?",
+            "expression": "7200 − 3456",
+            "equation": "7200 − 3456 =",
+            "answer": 3744,
             "hint": "Regroup across the zeros.",
-            "worked": "7000 − 2645 = 4355. Take away the test patterns."
+            "worked": "7200 − 3456 = 3744. Take away the lint that blew away."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "quiz-cards"
+    "lab-page"
   ],
-  "quiz": {
-    "title": "Four looks at a switch",
-    "intro": "Follow the flow from tube to chip.",
-    "questions": [
-      {
-        "id": "tubes",
-        "prompt": "What came before transistors?",
-        "choices": [
-          "Hot glass tubes",
-          "Paper switches",
-          "Tiny magnets"
-        ],
-        "answerIndex": 0,
-        "answer": "Machines used glass vacuum tubes that glowed, got hot and burned out."
-      },
-      {
-        "id": "tap",
-        "prompt": "What does the middle leg do?",
-        "choices": [
-          "Holds it up",
-          "Opens the path",
-          "Makes it glow"
-        ],
-        "answerIndex": 1,
-        "answer": "A tiny signal on the middle leg opens or closes the path for a bigger flow."
-      },
-      {
-        "id": "silicon",
-        "prompt": "Where is silicon found?",
-        "choices": [
-          "In sand",
-          "In milk",
-          "In clouds"
-        ],
-        "answerIndex": 0,
-        "answer": "Silicon is found in sand. A sprinkle of other atoms makes it a semiconductor."
-      },
-      {
-        "id": "bits",
-        "prompt": "What do on and off mean?",
-        "choices": [
-          "Big and small",
-          "One and zero",
-          "Hot and cold"
-        ],
-        "answerIndex": 1,
-        "answer": "A computer treats on as one and off as zero."
-      }
+  "labPage": {
+    "materials": [
+      "two strips of hook-and-loop tape",
+      "a magnifying glass",
+      "a small cloth bag or sock",
+      "a few small toys to put in the bag",
+      "a pipe cleaner and a scrap of yarn",
+      "an old comb or toothbrush",
+      "paper and pencil"
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "Transistors",
-    "line": "Tiny gates that steer electricity.",
+    "title": "How Velcro Works",
+    "line": "A burr's trick: hooks that catch loops.",
     "plate": "wake"
   },
   "poem": {
-    "title": "A Gate With No Hinges",
+    "title": "A Thousand Tiny Hands",
     "lines": [
-      "Little Wonderer found a small bug on the floor,",
-      "with three skinny legs, and no head, and no more.",
-      "“It’s no bug,” said the big one. “It just looks that way.",
-      "It’s a transistor, flipping on, off, all the day.”",
+      "Little Wonderer opened a strap on a shoe,",
+      "and it went RRRIP! like a grumpy kazoo.",
+      "“Who’s hiding in there?” asked the small one, aghast.",
+      "“A thousand tiny hands,” said the big one, “holding fast.”",
       "",
-      "It hasn’t a lever. It won’t make a click.",
-      "It’s quiet as pudding, and quick, oh, so quick!",
-      "One teeny-small nudge on the leg in the middle",
-      "lets a big river through. (It’s a bit of a riddle.)",
+      "One side is all hooks, like a crowd of bent canes,",
+      "or umbrellas turned upside down, left out in the rains.",
+      "The other side’s loops, like a soft curly mat,",
+      "and the hooks grab the loops, and that’s simply that.",
       "",
-      "Big Wonderer said, “In one phone, I am told,",
-      "there are billions of these, far more than you’d hold.",
-      "They don’t count to ten, and they don’t count by twos.",
-      "They count ‘on’ and ‘off’ — that’s the only way they choose.”",
+      "Big Wonderer said, “Slide them sideways — they’ll hold,",
+      "every hook pulling hard, all together and bold.",
+      "But peel from a corner, a few at a time,",
+      "and they let go as easy as saying this rhyme.”",
       "",
-      "So the little one whispered and gave it a pat:",
-      "“You’re a gate with no hinges. Imagine that!”",
-      "Then flipped every lamp in the house on and off,",
-      "saying “one,” saying “zero,” till the big one said, “Off!”"
+      "Who dreamed it up first? Not a wizard or king,",
+      "but a burr on a dog, such a scratchy small thing.",
+      "So the little one bowed to a burr on its stem:",
+      "“Thank you for holding on. We learned it from them.”"
     ],
     "drawing": {
-      "src": "assets/transistors/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer on the floor, the little one sitting forward and the big one crouching, both gazing at one tiny three-legged transistor beneath a hanging lamp."
+      "src": "assets/how-velcro-works/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer among tall weedy stems, the little one walking and holding out a small burr on its stem while the big one sits steadily nearby."
     }
+  },
+  "quiz": {
+    "title": "Four looks at a strap",
+    "intro": "Follow the grip from burr to strap.",
+    "questions": [
+      {
+        "id": "burr",
+        "prompt": "Where did the idea come from?",
+        "choices": [
+          "A burr",
+          "A magnet",
+          "A spider web"
+        ],
+        "answerIndex": 0,
+        "answer": "Burdock burrs have spines that end in tiny hooks."
+      },
+      {
+        "id": "hooks",
+        "prompt": "What do the hooks catch?",
+        "choices": [
+          "Glue",
+          "Soft loops",
+          "Air"
+        ],
+        "answerIndex": 1,
+        "answer": "Stiff hooks on one strip catch soft loops on the other."
+      },
+      {
+        "id": "peel",
+        "prompt": "Which way opens easily?",
+        "choices": [
+          "Sliding sideways",
+          "Pressing harder",
+          "Peeling a corner"
+        ],
+        "answerIndex": 2,
+        "answer": "A peel lets go of one thin line of hooks at a time."
+      },
+      {
+        "id": "lint",
+        "prompt": "Why do old strips grip less?",
+        "choices": [
+          "Lint fills the hooks",
+          "The loops get wet",
+          "The color fades"
+        ],
+        "answerIndex": 0,
+        "answer": "Lint and fluff clog the hooks, so they cannot reach the loops."
+      }
+    ]
   }
 }

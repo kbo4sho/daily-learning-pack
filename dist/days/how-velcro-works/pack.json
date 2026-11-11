@@ -1,0 +1,994 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-velcro-works",
+  "topic": "How Velcro works",
+  "why": "Comparing a burr, a sideways pull and a peel helps your child explain how many tiny hooks and loops share one strong grip.",
+  "teaser": "Hear a strap rip, meet the burr that started it, then test why a sideways pull holds but a peel lets go.",
+  "aliases": [
+    "velcro",
+    "hook and loop",
+    "hook-and-loop fastener",
+    "burrs",
+    "shoe straps"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "compare-and-round",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "compare",
+      "round-ten"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "How Velcro Works",
+  "title": "How Velcro Works",
+  "question": "How can two soft strips of cloth hold on so tightly, then rip open?",
+  "idea": "Hook and loop copies a burr. Stiff nylon hooks on one strip catch soft loops on the other. One hook is weak, but hundreds share a sideways pull. A peel opens just a few hooks at a time, so it lets go easily.",
+  "curiosity": {
+    "intro": "Start with a shoe strap that rips. Then follow it back to a burr on a walk, look at hooks and loops up close, and test a pull against a peel.",
+    "carryForward": "Next time a strap rips open, listen: how many tiny hooks just let go?",
+    "questions": [
+      {
+        "id": "burr",
+        "plate": "reach",
+        "question": "Where did the idea come from?",
+        "notice": "Find the tiny hooks at the tips of the burr's spines.",
+        "say": "A burr. In 1941, a Swiss engineer came home from a walk with burdock burrs stuck to his socks and his dog's fur. Under a microscope, each spine ended in a tiny hook. Burrs cling on purpose: animals carry their seeds to new places.",
+        "try": "After a walk outdoors, look closely at your socks. Did any seeds hitch a ride? Look at one with a magnifying glass for hooks."
+      },
+      {
+        "id": "hooks",
+        "plate": "change",
+        "question": "How do you make a tiny hook?",
+        "notice": "Compare the stiff hooks on top with the soft loops below.",
+        "say": "You start with a loop. The first hooks were cotton and wore out. Nylon worked better: it was woven into loops, heated so the loops kept their shape, then a cutter snipped one side of each loop to leave a hook.",
+        "try": "Bend a pipe cleaner into a small loop. Open one side a little so it becomes a hook. Can your hook catch a loop of yarn?"
+      },
+      {
+        "id": "peel",
+        "plate": "notice",
+        "question": "Why does a peel open so easily?",
+        "notice": "Look at how thin the line is where the strip is letting go.",
+        "say": "A sideways pull, called shear, makes every hook hold at once. A peel opens only one thin line of hooks at a time. The rrrip is hooks springing free, one row after another.",
+        "try": "Press two strips together. Slide them apart sideways, then peel one corner. Which one takes less push? Listen to each."
+      },
+      {
+        "id": "lint",
+        "plate": "keep",
+        "question": "Why do old strips lose their grip?",
+        "notice": "Find the fuzz in the hooks and the clean part next to it.",
+        "say": "Lint and fluff pack into the hooks, so they cannot reach the loops. A fine comb can lift the fuzz out, and the grip comes back.",
+        "try": "Find a fuzzy strip on an old shoe or bag. Comb it gently with an old comb or toothbrush, then test the grip again."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-velcro-works/01-strap.jpg",
+      "original": "assets/how-velcro-works/01-strap.png",
+      "foldSrc": "assets/how-velcro-works/01-strap-fold.jpg",
+      "title": "A strap that rips",
+      "alt": "Big and Little Wonderer at a warm wooden table, the little one leaning sideways and the big one leaning in, looking at a small canvas shoe with its hook-and-loop strap half open.",
+      "caption": "Rrrip! A strap opens, and a question begins."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-velcro-works/02-burr.jpg",
+      "original": "assets/how-velcro-works/02-burr.png",
+      "foldSrc": "assets/how-velcro-works/02-burr-fold.jpg",
+      "title": "A burr on a walk",
+      "alt": "A field-guide study on pale ivory paper of a dry burdock burr on a stem with a tuft of wool caught on it, a magnifying lens showing spines that end in tiny hooks, and below, a grey hook strip beside a cream loop strip.",
+      "caption": "A burr's spines end in tiny hooks."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-velcro-works/03-hooks.jpg",
+      "original": "assets/how-velcro-works/03-hooks.png",
+      "foldSrc": "assets/how-velcro-works/03-hooks-fold.jpg",
+      "title": "Hooks meet loops",
+      "alt": "A magnified field-guide study of stiff grey hooks rising from woven backing above a soft tangle of cream thread loops, with a few hooks caught in loops.",
+      "caption": "Stiff hooks above, soft loops below."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-velcro-works/04-peel.jpg",
+      "original": "assets/how-velcro-works/04-peel.png",
+      "foldSrc": "assets/how-velcro-works/04-peel-fold.jpg",
+      "title": "Pull or peel?",
+      "alt": "A field-guide study of two pale hook-and-loop strips pressed together, one end peeled back at a sharp angle so only a thin line lets go.",
+      "caption": "A peel opens just one thin line at a time."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-velcro-works/05-test.jpg",
+      "original": "assets/how-velcro-works/05-test.png",
+      "foldSrc": "assets/how-velcro-works/05-test-fold.jpg",
+      "title": "A bag that hangs",
+      "alt": "Big and Little Wonderer at the warm table beside a small upright board with a hook-and-loop strip holding a hanging cloth bag, the little one reaching up toward the strip's corner and the big one kneeling and pointing at the bag.",
+      "caption": "Straight down, it holds. Peel the corner, it opens."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-velcro-works/06-lint.jpg",
+      "original": "assets/how-velcro-works/06-lint.png",
+      "foldSrc": "assets/how-velcro-works/06-lint-fold.jpg",
+      "title": "When grip fades",
+      "alt": "A field-guide study of a used grey hook-and-loop strip clogged with lint, a small comb resting across it, a little heap of lifted lint and a clean section of hooks.",
+      "caption": "Lint clogs the hooks; a comb lifts it out."
+    }
+  ],
+  "reading": {
+    "title": "A thousand tiny hooks",
+    "coverPlate": "wake",
+    "coverText": "Start with a strap that rips. Then find the burr that gave the idea, and test why a peel opens what a pull cannot.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Burrs are for looking, not for faces or mouths.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A strap that rips",
+        "passage": "Little Wonderer pulls open a shoe strap. Rrrip! The little one presses it shut, and it holds tight again. Big Wonderer leans in. The strap has two sides, one rough and one soft. People call it Velcro, but that is a company name. Its plain name is hook and loop. What is hiding in that sound?",
+        "prompt": "What is the plain name for this kind of strap?",
+        "foldable": {
+          "heading": "A strap that rips",
+          "body": "A shoe strap rips open, then presses shut and holds. Its plain name is hook and loop: one rough side, one soft."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "A burr on a walk",
+        "passage": "In 1941, a Swiss engineer went for a walk with his dog. Afterward, burdock burrs clung to his socks and the dog's fur. He looked at a burr under a microscope. Each spine ended in a tiny hook. The hooks caught on loops of thread and fur. Could cloth copy that trick?",
+        "prompt": "What did the engineer see under the microscope?",
+        "foldable": {
+          "heading": "A burr on a walk",
+          "body": "In 1941, burrs stuck to an engineer's socks and his dog. Under a microscope, each spine ended in a tiny hook."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Hooks meet loops",
+        "passage": "Look very closely at the two sides. The rough side holds rows of stiff little hooks, like tiny bent canes. The soft side is a fuzzy tangle of thread loops. Press them together, and hundreds of hooks catch hundreds of loops. One hook is weak, but many together are strong. The name Velcro mixes French words for velvet and hook.",
+        "prompt": "Why is one hook weak but many hooks strong?",
+        "foldable": {
+          "heading": "Hooks meet loops",
+          "body": "Stiff hooks on one side catch soft loops on the other. One hook is weak, but hundreds together hold strong."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Pull or peel?",
+        "passage": "Try pulling the two sides apart sideways, like sliding. It is very hard, because every hook pulls at the same time. Now peel back one corner. It opens easily, because only one thin line of hooks lets go at a time. The rrrip is hooks springing free, row after row. A sideways pull is called shear.",
+        "prompt": "Why is a peel easier than a sideways pull?",
+        "foldable": {
+          "heading": "Pull or peel?",
+          "body": "A sideways pull is hard, because every hook pulls at once. A peel is easy: only one thin line lets go."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A bag that hangs",
+        "passage": "A strip on a little board holds a small cloth bag. Big Wonderer points at it. The bag pulls straight down along the strip, so all the hooks share the load, and nothing slips. Then Little Wonderer reaches up and peels one corner. Rrrip! A few hooks at a time let go, and the bag slides off.",
+        "prompt": "Why does the bag hang without slipping?",
+        "foldable": {
+          "heading": "A bag that hangs",
+          "body": "A hanging bag pulls along the strip, so every hook shares the weight. Peel one corner, and the bag slides off."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "When grip fades",
+        "passage": "Making the hooks took years of trying. The inventor wove nylon loops, heated them to set their shape, then snipped one side of each loop to leave a hook. After many uses, lint fills the hooks, so they cannot reach the loops. A fine comb can lift the fuzz out. Why would a cleaner strip grip better?",
+        "prompt": "Why does an old strip full of lint grip less?",
+        "foldable": {
+          "heading": "When grip fades",
+          "body": "Nylon loops were heated, then snipped into hooks. Lint clogs old hooks, but a fine comb can lift it out."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "hook and loop",
+        "meaning": "a strap with tiny hooks on one side and soft loops on the other"
+      },
+      {
+        "word": "burr",
+        "meaning": "a prickly seed case that sticks to fur and socks"
+      },
+      {
+        "word": "microscope",
+        "meaning": "a tool that makes tiny things look big"
+      },
+      {
+        "word": "shear",
+        "meaning": "a sideways, sliding pull"
+      },
+      {
+        "word": "lint",
+        "meaning": "bits of fluff from cloth"
+      }
+    ],
+    "questions": [
+      "What did the engineer see on the burr?",
+      "What is on the rough side, and what is on the soft side?",
+      "Why is a sideways pull harder than a peel?",
+      "Why does a strip full of lint grip less?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: where the idea came from, what the hooks catch, and why a peel opens easily.",
+      "example": "Example: The idea came from a burr. The hooks catch soft loops. A peel opens a few hooks at a time."
+    },
+    "foldableTitle": "A little book of hooks",
+    "foldableCoverLine": "How Velcro Works",
+    "foldableNote": "Carry six hook clues in a small book."
+  },
+  "math": {
+    "title": "Hook and loop counts",
+    "plate": "change",
+    "intro": "Compare and round pretend counts of hooks, loops, burrs and peels.",
+    "eyebrow": "SIX HOOK AND LOOP COUNTS",
+    "actionLabel": "Compare, then round",
+    "tasks": [
+      {
+        "skill": "compare",
+        "operands": [
+          48,
+          84
+        ],
+        "symbol": "<",
+        "prompt": "The engineer counts 48 hooks on one burr and 84 hooks on another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "48 ○ 84",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 84,
+        "worked": "48 < 84. Compare the tens first, so the greater count is 84.",
+        "plate": "reach",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "compare",
+        "operands": [
+          63,
+          36
+        ],
+        "symbol": ">",
+        "prompt": "Little Wonderer counts 63 hooks in one tiny square and 36 loops in another. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "63 ○ 36",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 63,
+        "worked": "63 > 36. Compare the tens first, so the greater count is 63.",
+        "plate": "change",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "compare",
+        "operands": [
+          55,
+          55
+        ],
+        "symbol": "=",
+        "prompt": "The big one counts 55 loops on one patch and 55 loops on a second patch. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "55 ○ 55",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 55,
+        "worked": "55 = 55. Both counts match, so the shared count is 55.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          27
+        ],
+        "prompt": "Big Wonderer peels the shoe strap open 27 times. What is 27 rounded to the nearest ten?",
+        "equation": "27 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 30,
+        "worked": "27 has 7 ones, so round up to 30.",
+        "plate": "wake",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          74
+        ],
+        "prompt": "The bag hangs on the strip for 74 seconds before the little one peels it. What is 74 rounded to the nearest ten?",
+        "equation": "74 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 70,
+        "worked": "74 has 4 ones, so round down to 70.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          45
+        ],
+        "prompt": "A comb lifts 45 bits of lint out of an old strip. What is 45 rounded to the nearest ten?",
+        "equation": "45 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 50,
+        "worked": "45 has 5 ones, so round up to 50.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real hook counts.",
+    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
+  },
+  "writing": {
+    "title": "Explain a hook clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw one hook and one loop. Show the hook catching the loop.",
+    "starter": "My hook clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The idea came from a burr because",
+        "hint": "what was on its spines?"
+      },
+      {
+        "plate": "change",
+        "start": "The strips hold together because",
+        "hint": "what do the hooks catch?"
+      },
+      {
+        "plate": "notice",
+        "start": "A peel opens easily because",
+        "hint": "how many hooks let go at once?"
+      }
+    ],
+    "words": [
+      "hook",
+      "loop",
+      "burr",
+      "peel",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Hook and loop; Velcro is a company name."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Each burr spine ended in a tiny hook that caught loops."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "Hooks catch loops; hundreds of hooks share the pull."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "A peel opens one thin line of hooks at a time."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "The bag pulls along the strip, so every hook shares the load."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Lint fills the hooks, so they cannot reach the loops."
+    },
+    {
+      "label": "Math · all",
+      "text": "84, 63, 55, 30, 70, 50."
+    },
+    {
+      "label": "Screen-free",
+      "text": "A burr gave the idea; hooks catch loops; a peel opens easily; lint clogs hooks."
+    }
+  ],
+  "parentGuidance": "Burrs are for looking, not for faces or mouths; wash hands after handling plants. Pipe cleaner ends can poke: bend them over. Comb strips gently.",
+  "sources": [
+    {
+      "label": "WIPO — the Velcro IP story",
+      "url": "https://www.wipo.int/en/web/ip-advantage/w/stories/the-velcro-ip-story"
+    },
+    {
+      "label": "SWI swissinfo.ch — How a Swiss invention hooked the world",
+      "url": "https://www.swissinfo.ch/eng/archive-science/how-a-swiss-invention-hooked-the-world/5653568"
+    },
+    {
+      "label": "Yale Scientific — How does Velcro work?",
+      "url": "https://www.yalescientific.org/2010/02/everyday-qa-how-does-velcro-work/"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer pulls a shoe strap. Rrrip! It opens with a loud sound. Press it shut again. It holds tight. What is inside?",
+            "prompt": "What sound does the strap make?"
+          },
+          {
+            "id": "reach",
+            "passage": "A man walked with his dog. Burrs stuck to his socks. He looked very close. Each burr had tiny hooks.",
+            "prompt": "What did each burr have?"
+          },
+          {
+            "id": "change",
+            "passage": "One side has tiny hooks. The other side has soft loops. The hooks catch the loops. Many hooks hold strong.",
+            "prompt": "What do the hooks catch?"
+          },
+          {
+            "id": "notice",
+            "passage": "Pull the sides sideways. It is very hard! Now peel one corner. It opens with a rrrip.",
+            "prompt": "Which way opens easily?"
+          },
+          {
+            "id": "return",
+            "passage": "A strip holds a small bag. Big Wonderer points at it. The bag does not slip. Peel the corner. The bag falls!",
+            "prompt": "What makes the bag fall?"
+          },
+          {
+            "id": "keep",
+            "passage": "Old strips get full of lint. Lint fills the hooks. A comb lifts it out. Then it holds again.",
+            "prompt": "What fills the hooks?"
+          }
+        ],
+        "words": [
+          {
+            "word": "hook",
+            "meaning": "a tiny bent part that catches"
+          },
+          {
+            "word": "loop",
+            "meaning": "a small soft ring of thread"
+          },
+          {
+            "word": "burr",
+            "meaning": "a sticky seed case"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer pulls the strap open 6 times, then 7 more. How many times?",
+            "expression": "6 + 7",
+            "equation": "6 + 7 =",
+            "answer": 13,
+            "hint": "Make a ten: 6 + 4 + 3.",
+            "worked": "6 + 7 = 13. Add both sets of openings."
+          },
+          {
+            "plate": "reach",
+            "prompt": "The dog has 15 burrs. The man pulls off 9. How many are left?",
+            "expression": "15 − 9",
+            "equation": "15 − 9 =",
+            "answer": 6,
+            "hint": "Take 9 away from 15.",
+            "worked": "15 − 9 = 6. Take away the burrs pulled off."
+          },
+          {
+            "plate": "change",
+            "prompt": "A patch has 8 hooks and 9 loops. How many in all?",
+            "expression": "8 + 9",
+            "equation": "8 + 9 =",
+            "answer": 17,
+            "hint": "Make a ten: 9 + 1 + 7.",
+            "worked": "8 + 9 = 17. Add the hooks and loops."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They peel 11 corners, then 5 more. How many peels?",
+            "expression": "11 + 5",
+            "equation": "11 + 5 =",
+            "answer": 16,
+            "hint": "Count on 5 from 11.",
+            "worked": "11 + 5 = 16. Add both sets of peels."
+          },
+          {
+            "plate": "return",
+            "prompt": "A bag holds 14 blocks. Six fall out. How many stay?",
+            "expression": "14 − 6",
+            "equation": "14 − 6 =",
+            "answer": 8,
+            "hint": "Take 6 away from 14.",
+            "worked": "14 − 6 = 8. Take away the blocks that fell."
+          },
+          {
+            "plate": "keep",
+            "prompt": "The comb lifts 20 bits of lint. Eight fly away. How many are left?",
+            "expression": "20 − 8",
+            "equation": "20 − 8 =",
+            "answer": 12,
+            "hint": "Take 8 away from 20.",
+            "worked": "20 − 8 = 12. Take away the lint that flew."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer pulls open a shoe strap. Rrrip! The little one presses it shut again. It holds tight. Big Wonderer leans in close. One side feels rough, and one feels soft. People call it hook and loop.",
+            "prompt": "How do the two sides feel?"
+          },
+          {
+            "id": "reach",
+            "passage": "In 1941, an engineer walked with his dog. Burrs from a burdock plant stuck everywhere. They clung to his socks and the dog's fur. He looked at a burr under a microscope. Each spine ended in a tiny hook.",
+            "prompt": "What did the microscope show?"
+          },
+          {
+            "id": "change",
+            "passage": "The rough side has rows of stiff little hooks. The soft side is a tangle of loops. Press them together, and hooks catch loops. One hook is weak. Hundreds of hooks together are strong.",
+            "prompt": "Why do many hooks hold strongly?"
+          },
+          {
+            "id": "notice",
+            "passage": "Pull the two sides apart sideways. It is very hard! Every hook pulls at the same time. Now peel back one corner. Only a few hooks let go at once. The rrrip is hooks springing free.",
+            "prompt": "What makes the rrrip sound?"
+          },
+          {
+            "id": "return",
+            "passage": "A strip on a board holds a small bag. Big Wonderer points at the hanging bag. All the hooks share its weight. Then Little Wonderer peels one corner. Rrrip! The bag slides right off.",
+            "prompt": "Why does the bag slide off?"
+          },
+          {
+            "id": "keep",
+            "passage": "Making the hooks took years of work. Old strips fill up with fluff and lint. Then the hooks cannot reach the loops. A fine comb lifts the lint out. Why does the strip grip better then?",
+            "prompt": "What does the comb do?"
+          }
+        ],
+        "words": [
+          {
+            "word": "hook",
+            "meaning": "a tiny bent part that catches a loop"
+          },
+          {
+            "word": "loop",
+            "meaning": "a small soft ring of thread"
+          },
+          {
+            "word": "burr",
+            "meaning": "a prickly seed case that sticks to fur"
+          },
+          {
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look big"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer pulls the strap open and shut 23 times, then 18 more. How many times?",
+            "expression": "23 + 18",
+            "equation": "23 + 18 =",
+            "answer": 41,
+            "hint": "Add ones, then tens; regroup when needed.",
+            "worked": "23 + 18 = 41. Add both sets of openings."
+          },
+          {
+            "plate": "reach",
+            "prompt": "The dog has 42 burrs in its fur. The man pulls out 27. How many are left?",
+            "expression": "42 − 27",
+            "equation": "42 − 27 =",
+            "answer": 15,
+            "hint": "Trade a ten for ones.",
+            "worked": "42 − 27 = 15. Take away the burrs pulled out."
+          },
+          {
+            "plate": "change",
+            "prompt": "One patch has 36 hooks. Another patch has 14. How many hooks?",
+            "expression": "36 + 14",
+            "equation": "36 + 14 =",
+            "answer": 50,
+            "hint": "Add ones, then tens; regroup when needed.",
+            "worked": "36 + 14 = 50. Add both patches."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They peel the strip 31 times, then 17 more. How many peels?",
+            "expression": "31 + 17",
+            "equation": "31 + 17 =",
+            "answer": 48,
+            "hint": "Add ones, then tens.",
+            "worked": "31 + 17 = 48. Add both sets of peels."
+          },
+          {
+            "plate": "return",
+            "prompt": "The bag holds 45 beads. Big Wonderer takes out 19. How many stay?",
+            "expression": "45 − 19",
+            "equation": "45 − 19 =",
+            "answer": 26,
+            "hint": "Trade a ten for ones.",
+            "worked": "45 − 19 = 26. Take away the beads taken out."
+          },
+          {
+            "plate": "keep",
+            "prompt": "The comb lifts 50 bits of lint. Then 28 blow away. How many are left?",
+            "expression": "50 − 28",
+            "equation": "50 − 28 =",
+            "answer": 22,
+            "hint": "Trade a ten for ones.",
+            "worked": "50 − 28 = 22. Take away the lint that blew away."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer pulled open the strap on a small canvas shoe, and it gave a loud, scratchy rrrip. When the little one pressed it shut, it held tight again. Big Wonderer leaned in to look more closely. One side felt rough, and the other side felt soft. Many people call it Velcro, but that is a company name, and its plain name is hook and loop.",
+            "prompt": "Why might hook and loop be a better name than Velcro?"
+          },
+          {
+            "id": "reach",
+            "passage": "In 1941, a Swiss engineer came home from a walk with his dog and found burdock burrs clinging to his socks and the dog's fur. Burrs cling like this on purpose, so that animals carry their seeds to new places. Under a microscope, he saw that each spine of the burr ended in a tiny hook. Those hooks snagged loops of thread and fur, and he wondered if cloth could copy the trick.",
+            "prompt": "Why does a burr want to cling to fur?"
+          },
+          {
+            "id": "change",
+            "passage": "Up close, the rough side holds rows of stiff nylon hooks, each bent like a tiny cane. The soft side is a fuzzy tangle of thread loops. When the sides are pressed together, hundreds of hooks catch hundreds of loops at once. A single hook is weak and slips free easily, but hundreds sharing the work make a strong grip. The name Velcro joins the French words for velvet and hook.",
+            "prompt": "How do hundreds of weak hooks make a strong grip?"
+          },
+          {
+            "id": "notice",
+            "passage": "Pulling the two sides apart sideways, like sliding one over the other, is surprisingly hard because every hook resists at the same time. Engineers call this kind of sliding pull shear. Peeling back a corner is easy, because only a thin line of hooks has to let go at once. The rrrip you hear is the sound of hooks springing free from loops, one row after another.",
+            "prompt": "What is shear, and why does it hold so well?"
+          },
+          {
+            "id": "return",
+            "passage": "A strip stuck to a small board held a cloth bag that hung straight down without slipping. Big Wonderer pointed out that the bag pulled along the strip, so all the hooks shared its weight. Then Little Wonderer reached up and peeled one corner instead. With a rrrip, a few hooks at a time let go, and the bag slid off. The same strip held or opened depending on the pull.",
+            "prompt": "How did the same strip both hold and open?"
+          },
+          {
+            "id": "keep",
+            "passage": "Making the hooks was the hardest part of the invention. Cotton hooks were too soft and wore out, so the inventor switched to nylon. Nylon was woven into loops and heated so the loops kept their shape, and then one side of each loop was snipped to leave a hook. After many uses, lint fills the hooks and they cannot reach the loops. Why might combing out the lint bring the grip back?",
+            "prompt": "Why did nylon work better than cotton?"
+          }
+        ],
+        "words": [
+          {
+            "word": "hook and loop",
+            "meaning": "a fastener with tiny hooks on one strip and soft loops on the other"
+          },
+          {
+            "word": "burr",
+            "meaning": "a prickly seed case that clings to fur so animals carry its seeds"
+          },
+          {
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look much bigger"
+          },
+          {
+            "word": "shear",
+            "meaning": "a sideways, sliding pull"
+          },
+          {
+            "word": "nylon",
+            "meaning": "a strong thread that keeps its shape after heating"
+          },
+          {
+            "word": "lint",
+            "meaning": "bits of fluff and thread that come off cloth"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer pulls the strap open 8 times a day for 9 days. How many openings?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Eight openings on each of nine days."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A dog comes home with 136 burrs in its fur, and 89 are brushed out. How many are left?",
+            "expression": "136 − 89",
+            "equation": "136 − 89 =",
+            "answer": 47,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "136 − 89 = 47. Take away the burrs brushed out."
+          },
+          {
+            "plate": "change",
+            "prompt": "A patch has 7 rows of hooks with 8 hooks in each row. How many hooks?",
+            "expression": "7 × 8",
+            "equation": "7 × 8 =",
+            "answer": 56,
+            "hint": "Seven groups of eight.",
+            "worked": "7 × 8 = 56. Seven rows of eight hooks."
+          },
+          {
+            "plate": "notice",
+            "prompt": "They peel a strip 245 times one week and 318 times the next. How many peels?",
+            "expression": "245 + 318",
+            "equation": "245 + 318 =",
+            "answer": 563,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "245 + 318 = 563. Add both weeks of peels."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer shares 72 beads equally into 8 small bags. How many beads go in each bag?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Share 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Each bag gets the same number of beads."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A comb lifts 420 bits of lint from old strips, and 175 blow away. How many are left?",
+            "expression": "420 − 175",
+            "equation": "420 − 175 =",
+            "answer": 245,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "420 − 175 = 245. Take away the lint that blew away."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer pulled open the strap on a small canvas shoe, and it gave a loud, scratchy rrrip that seemed far too big for such a quiet strip of cloth. When the little one pressed it shut again, it held just as tightly as before. Leaning in, Big Wonderer pointed out that one side felt rough and the other side felt soft. Most people call it Velcro. That is really a company name, and the plain name for it is hook and loop.",
+            "prompt": "Why do people often use a company name for an everyday thing?"
+          },
+          {
+            "id": "reach",
+            "passage": "In 1941, a Swiss engineer came home from a walk in the hills with his dog and found burdock burrs clinging stubbornly to his wool socks and to the dog's fur. Burrs cling like this on purpose, so that passing animals carry their seeds to new places. Curious, he looked at a burr under a microscope and saw that every spine ended in a tiny curved hook. Those hooks snagged on loops of thread and tangles of fur, and he wondered whether two strips of cloth could copy the trick.",
+            "prompt": "How did a plant's way of spreading seeds become an invention?"
+          },
+          {
+            "id": "change",
+            "passage": "Seen up close, the rough side holds neat rows of stiff nylon hooks, each bent like a tiny walking cane, while the soft side is a fuzzy tangle of thread loops. When the two sides are pressed together, hundreds of hooks catch hundreds of loops at the same moment. A single hook is weak and slips free easily, but when hundreds share the work, the grip becomes surprisingly strong. The name Velcro joins the first sounds of two French words, velours for velvet and crochet for hook.",
+            "prompt": "Why does sharing the work make the grip strong?"
+          },
+          {
+            "id": "notice",
+            "passage": "Pulling the two sides apart sideways, as if sliding one strip along the other, is surprisingly hard, because every hook resists at the same time. Engineers call that kind of sliding force shear, and hook-and-loop strips are strongest against it. Peeling back a corner is easy, because only a thin line of hooks has to let go at any moment while the rest wait their turn. The rrrip you hear is the sound of hooks springing free from their loops, one row after another.",
+            "prompt": "Why is a strip strong against shear but weak against a peel?"
+          },
+          {
+            "id": "return",
+            "passage": "A strip stuck to a small board held a cloth bag that hung straight down without slipping at all. Big Wonderer explained that the bag pulled along the strip, so every hook shared its weight in shear. Then Little Wonderer reached up and peeled one corner instead. With a rrrip, the hooks let go a few at a time until the bag slid off into waiting mittens. The same strip held firmly or opened easily depending only on the direction of the pull.",
+            "prompt": "How does the direction of a pull change what the strip does?"
+          },
+          {
+            "id": "keep",
+            "passage": "Making the hooks turned out to be the hardest part of the invention. It took years of trying. Early cotton hooks were too soft and wore out, so the inventor switched to nylon, which keeps its shape after heating. Nylon thread was woven into loops and heat-set, and then a cutter like a barber's clippers snipped one side of each loop to leave a hook. After many uses, lint and fluff pack into the hooks so they cannot reach the loops. Why might combing out the lint bring the grip back?",
+            "prompt": "How were the loops turned into hooks?"
+          }
+        ],
+        "words": [
+          {
+            "word": "hook and loop",
+            "meaning": "a fastener with tiny hooks on one strip and soft loops on the other"
+          },
+          {
+            "word": "burr",
+            "meaning": "a prickly seed case that clings to fur so animals carry its seeds"
+          },
+          {
+            "word": "microscope",
+            "meaning": "a tool that makes tiny things look much bigger"
+          },
+          {
+            "word": "shear",
+            "meaning": "a sideways, sliding force along a surface"
+          },
+          {
+            "word": "peel",
+            "meaning": "a pull that lifts one edge so it opens a little at a time"
+          },
+          {
+            "word": "nylon",
+            "meaning": "a strong human-made thread that keeps its shape after heating"
+          },
+          {
+            "word": "heat-set",
+            "meaning": "warmed so a shape stays fixed after cooling"
+          },
+          {
+            "word": "lint",
+            "meaning": "bits of fluff and thread that come off cloth"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that a factory makes 3650 metres of strap in the morning and 2875 metres in the afternoon. How many metres in all?",
+            "expression": "3650 + 2875",
+            "equation": "3650 + 2875 =",
+            "answer": 6525,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "3650 + 2875 = 6525. Add the morning and afternoon metres."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A dog walks through a field with 9000 burrs, and 2468 of them hitch a ride. How many stay behind?",
+            "expression": "9000 − 2468",
+            "equation": "9000 − 2468 =",
+            "answer": 6532,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 2468 = 6532. Take away the burrs that hitched a ride."
+          },
+          {
+            "plate": "change",
+            "prompt": "A big patch holds 1200 hooks in each of 8 rows. How many hooks?",
+            "expression": "1200 × 8",
+            "equation": "1200 × 8 =",
+            "answer": 9600,
+            "hint": "Think 8 × 1000 and 8 × 200.",
+            "worked": "1200 × 8 = 9600. Eight rows of 1200 hooks."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A tester peels a strip 4725 times, then 1890 times more. How many peels?",
+            "expression": "4725 + 1890",
+            "equation": "4725 + 1890 =",
+            "answer": 6615,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "4725 + 1890 = 6615. Add both sets of peels."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer shares 5040 beads equally into 9 bags. How many beads go in each bag?",
+            "expression": "5040 ÷ 9",
+            "equation": "5040 ÷ 9 =",
+            "answer": 560,
+            "hint": "Split 5040 into 4500 and 540, then divide each part by 9.",
+            "worked": "5040 ÷ 9 = 560. Each bag gets the same number of beads."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A comb lifts 7200 bits of lint, and 3456 blow away. How many are left?",
+            "expression": "7200 − 3456",
+            "equation": "7200 − 3456 =",
+            "answer": 3744,
+            "hint": "Regroup across the zeros.",
+            "worked": "7200 − 3456 = 3744. Take away the lint that blew away."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "lab-page"
+  ],
+  "labPage": {
+    "materials": [
+      "two strips of hook-and-loop tape",
+      "a magnifying glass",
+      "a small cloth bag or sock",
+      "a few small toys to put in the bag",
+      "a pipe cleaner and a scrap of yarn",
+      "an old comb or toothbrush",
+      "paper and pencil"
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How Velcro Works",
+    "line": "A burr's trick: hooks that catch loops.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "A Thousand Tiny Hands",
+    "lines": [
+      "Little Wonderer opened a strap on a shoe,",
+      "and it went RRRIP! like a grumpy kazoo.",
+      "“Who’s hiding in there?” asked the small one, aghast.",
+      "“A thousand tiny hands,” said the big one, “holding fast.”",
+      "",
+      "One side is all hooks, like a crowd of bent canes,",
+      "or umbrellas turned upside down, left out in the rains.",
+      "The other side’s loops, like a soft curly mat,",
+      "and the hooks grab the loops, and that’s simply that.",
+      "",
+      "Big Wonderer said, “Slide them sideways — they’ll hold,",
+      "every hook pulling hard, all together and bold.",
+      "But peel from a corner, a few at a time,",
+      "and they let go as easy as saying this rhyme.”",
+      "",
+      "Who dreamed it up first? Not a wizard or king,",
+      "but a burr on a dog, such a scratchy small thing.",
+      "So the little one bowed to a burr on its stem:",
+      "“Thank you for holding on. We learned it from them.”"
+    ],
+    "drawing": {
+      "src": "assets/how-velcro-works/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer among tall weedy stems, the little one walking and holding out a small burr on its stem while the big one sits steadily nearby."
+    }
+  },
+  "quiz": {
+    "title": "Four looks at a strap",
+    "intro": "Follow the grip from burr to strap.",
+    "questions": [
+      {
+        "id": "burr",
+        "prompt": "Where did the idea come from?",
+        "choices": [
+          "A burr",
+          "A magnet",
+          "A spider web"
+        ],
+        "answerIndex": 0,
+        "answer": "Burdock burrs have spines that end in tiny hooks."
+      },
+      {
+        "id": "hooks",
+        "prompt": "What do the hooks catch?",
+        "choices": [
+          "Glue",
+          "Soft loops",
+          "Air"
+        ],
+        "answerIndex": 1,
+        "answer": "Stiff hooks on one strip catch soft loops on the other."
+      },
+      {
+        "id": "peel",
+        "prompt": "Which way opens easily?",
+        "choices": [
+          "Sliding sideways",
+          "Pressing harder",
+          "Peeling a corner"
+        ],
+        "answerIndex": 2,
+        "answer": "A peel lets go of one thin line of hooks at a time."
+      },
+      {
+        "id": "lint",
+        "prompt": "Why do old strips grip less?",
+        "choices": [
+          "Lint fills the hooks",
+          "The loops get wet",
+          "The color fades"
+        ],
+        "answerIndex": 0,
+        "answer": "Lint and fluff clog the hooks, so they cannot reach the loops."
+      }
+    ]
+  }
+}
