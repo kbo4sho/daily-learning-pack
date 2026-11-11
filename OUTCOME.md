@@ -8,4 +8,4 @@ Link names are `Open <title without trailing period>, <Weekday D Month YYYY>`. P
 
 `src/archive-render.mjs`, `src/archive.css`, and `src/archive.js` own the landing chrome; `scripts/render-archive.mjs` applies it to both archive URLs. Day and today artifacts remain unchanged. The noindex setting and family dogfood footer remain.
 
-Checks: `npm run format:check`, `npm run archive`, `npm test`, and `npm run test:browser`. The Chromium and WebKit suite covers one-click/tap navigation, keyboard and focus, reduced motion, JavaScript disabled, and 320/390/820/1440px layouts. Run `npx playwright install chromium webkit` first.
+Checks: `npm run format:check`, `npm run archive`, `npm test`, and `npm run test:browser`. The full OCR privacy sweep (`npm run privacy:ocr`, or `npm run archive:ocr` for both) runs weekly on Brick, not on every build. The Chromium and WebKit suite covers one-click/tap navigation, keyboard and focus, reduced motion, JavaScript disabled, and 320/390/820/1440px layouts. Run `npx playwright install chromium webkit` first.
