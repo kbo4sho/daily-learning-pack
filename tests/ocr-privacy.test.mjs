@@ -18,6 +18,7 @@ import {
   imageOcrHasName,
   loadMatcher,
   OCR_CONFIDENCE_THRESHOLD,
+  ocrImage,
   passCache,
   scan,
   textHasName,
@@ -279,6 +280,145 @@ test("orientation reconciliation keeps a hit when TSV boxes are missing", () => 
   assert.equal(imageOcrHasName(rotations, matcher), true);
 });
 
+test("TSV-only names do not create hits", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("Zorbin", 95)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), false);
+});
+
+test("plain OCR without a hit does not request TSV", async () => {
+  const { default: sharp } = await import("sharp");
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const calls = [];
+  const runner = async (_bin, args) => {
+    calls.push(args.at(-1) === "tsv" ? "tsv" : "text");
+    return "ordinary";
+  };
+
+  const parts = await ocrImage(bytes, matcher, runner);
+  assert.deepEqual(calls, ["text", "text", "text", "text"]);
+  assert.equal(
+    parts.some((part) =>
+      part?.kind === "image-ocr"
+        ? imageOcrHasName(part.rotations, matcher)
+        : false,
+    ),
+    false,
+  );
+});
+
+test("plain OCR hits request TSV for reconciliation", async () => {
+  const { default: sharp } = await import("sharp");
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const calls = [];
+  let textIndex = 0;
+  let tsvIndex = 0;
+  const angles = [0, 90, 180, 270];
+  const runner = async (_bin, args) => {
+    if (args.at(-1) !== "tsv") {
+      calls.push("text");
+      return textIndex++ === 0 ? "Zorbin" : "ordinary";
+    }
+    calls.push("tsv");
+    const angle = angles[tsvIndex++];
+    const hit = angle === 0;
+    return syntheticTsv(angle, [word(hit ? "Zorbin" : "ordinary", 95)]);
+  };
+
+  const parts = await ocrImage(bytes, matcher, runner);
+  assert.deepEqual(calls, [
+    "text",
+    "text",
+    "text",
+    "text",
+    "tsv",
+    "tsv",
+    "tsv",
+    "tsv",
+  ]);
+  assert.equal(
+    parts.some((part) =>
+      part?.kind === "image-ocr"
+        ? imageOcrHasName(part.rotations, matcher)
+        : false,
+    ),
+    true,
+  );
+});
+
+async function scanWithTesseractFailure(t, firstText) {
+  const { default: sharp } = await import("sharp");
+  const dir = temporaryDirectory(t, "ocr-stop-after-failure-");
+  const fixtures = join(dir, "fixtures");
+  mkdirSync(fixtures);
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  writeFileSync(join(fixtures, "page.png"), bytes);
+
+  let calls = 0;
+  const runner = async () => (++calls === 1 ? firstText : null);
+  const errors = [];
+  const env = { WD_OCR_CACHE: "0", WD_PRIVATE_NAMES: "Zorbin" };
+  const extractText = (_file, input, matcher) =>
+    ocrImage(input, matcher, runner);
+  const result = await scan(
+    [fixtures],
+    scanOptions(env, extractText, {
+      output: { error: (message) => errors.push(message), log() {} },
+    }),
+  );
+  return { calls, errors, result };
+}
+
+test("first Tesseract failure stops further calls and reports unreadable", async (t) => {
+  const { calls, errors, result } = await scanWithTesseractFailure(
+    t,
+    "ordinary",
+  );
+  assert.equal(result, 1);
+  assert.equal(calls, 2);
+  assert.ok(errors.some((message) => /unreadable$/.test(message)));
+  assert.ok(!errors.some((message) => /private name hit$/.test(message)));
+});
+
+test("a hit collected before the first Tesseract failure is still reported", async (t) => {
+  const { calls, errors, result } = await scanWithTesseractFailure(t, "Zorbin");
+  assert.equal(result, 1);
+  assert.equal(calls, 2);
+  assert.ok(errors.some((message) => /unreadable$/.test(message)));
+  assert.ok(errors.some((message) => /private name hit$/.test(message)));
+});
+
 test("pass cache protects its filename and private files", (t) => {
   const dir = temporaryDirectory(t, "ocr-cache-");
   const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "zz-alpha" };
@@ -321,15 +461,23 @@ test("pass cache protects its filename and private files", (t) => {
   ]);
 });
 
-test("pass cache key includes every extraction stack version", (t) => {
+test("pass cache key includes the script hash and every extraction stack version", (t) => {
   const dir = temporaryDirectory(t, "ocr-stack-cache-");
   const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "Zed" };
   const baseline = passCache(env, none, testKeyInputs);
   baseline.add("img:abc123");
   baseline.save();
 
+  assert.equal(
+    passCache(env, none, {
+      ...testKeyInputs,
+      algorithmVersion: "ignored algorithm label",
+    }).has("img:abc123"),
+    true,
+  );
+
   for (const [input, value] of [
-    ["algorithmVersion", "changed OCR algorithm"],
+    ["scriptSourceSha256", "b".repeat(64)],
     ["tesseractVersionConfig", "changed tesseract version"],
     ["sharpVersion", "changed sharp version"],
     ["sharpVersions", { sharp: "changed", vips: "changed" }],

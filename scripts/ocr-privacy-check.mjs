@@ -34,7 +34,6 @@ const HASH_FILE = join(here, "private-name-hashes.json");
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const TESSERACT_TEXT_ARGS = ["stdin", "stdout", "--psm", "3", "-l", "eng"];
 const TESSERACT_TSV_ARGS = [...TESSERACT_TEXT_ARGS, "tsv"];
-const OCR_ALGORITHM_VERSION = "orientation-reconciliation-v2";
 export const OCR_CONFIDENCE_THRESHOLD = 90;
 // A merged or long word box can contain a short name box without describing
 // the same region. Requiring at least half of their combined area to overlap
@@ -261,7 +260,6 @@ export function passCache(
     keyInputs.scriptSourceSha256 ??
     createHash("sha256").update(readFileSync(SCRIPT_PATH)).digest("hex");
   const extractionStack = {
-    algorithmVersion: keyInputs.algorithmVersion ?? OCR_ALGORITHM_VERSION,
     tesseractVersionConfig:
       keyInputs.tesseractVersionConfig ?? tesseractVersionConfig(),
     sharpVersion: keyInputs.sharpVersion ?? sharp.versions.sharp,
@@ -354,10 +352,10 @@ function parseTsv(tsv, angle) {
     if (columns.length < 12) return null;
     const [
       levelRaw,
-      page,
-      block,
-      paragraph,
-      line,
+      ,
+      ,
+      ,
+      ,
       ,
       leftRaw,
       topRaw,
@@ -402,7 +400,6 @@ function parseTsv(tsv, angle) {
       top,
       width: rowWidth,
       height: rowHeight,
-      line: `${page}:${block}:${paragraph}:${line}`,
     });
   }
   if (!width || !height) return null;
@@ -411,14 +408,12 @@ function parseTsv(tsv, angle) {
 
 function tokenSequence(read) {
   return read.words.flatMap((word, wordIndex) =>
-    word.tokens.map((token) => ({ token, wordIndex, line: word.line })),
+    word.tokens.map((token) => ({ token, wordIndex })),
   );
 }
 
-function matchingRuns(tokens, matcher, withinLine = false) {
-  return [...matchingTokenRuns(tokens, matcher, ({ token }) => token)].filter(
-    (run) => !withinLine || run.every(({ line }) => line === run[0].line),
-  );
+function matchingRuns(tokens, matcher) {
+  return [...matchingTokenRuns(tokens, matcher, ({ token }) => token)];
 }
 
 function canonicalPoint(read, x, y) {
@@ -500,12 +495,9 @@ export function imageOcrHasName(rotations, matcher) {
   const plainHits = rotations.map(
     (rotation) => rotation?.text && textHasName(rotation.text, matcher),
   );
-  const tsvLineRuns = sequences.map((tokens) =>
-    matchingRuns(tokens, matcher, true),
-  );
   const hitIndexes = rotations
     .map((_, index) => index)
-    .filter((index) => plainHits[index] || tsvLineRuns[index].length);
+    .filter((index) => plainHits[index]);
   if (!hitIndexes.length) return false;
 
   const nameWords = sequences.map(
@@ -530,9 +522,7 @@ export function imageOcrHasName(rotations, matcher) {
         hitTokens.map(({ token }) => token).join(" ")
     )
       return true;
-    const runs = plainHits[hitIndex]
-      ? matchingRuns(hitTokens, matcher)
-      : tsvLineRuns[hitIndex];
+    const runs = matchingRuns(hitTokens, matcher);
     if (!runs.length) return true;
 
     for (const run of runs) {
@@ -575,7 +565,12 @@ export function imageOcrHasName(rotations, matcher) {
 // Tesseract does not reliably auto-rotate, and fold-up sheets mix upright
 // and upside-down panels, so read every image at all four orientations.
 // Animated PNGs: every frame is read, not just the default one.
-async function ocrImage(bytes) {
+export async function ocrImage(
+  bytes,
+  matcher,
+  tesseractRunner = run,
+  tesseractState = { stopped: false },
+) {
   const pagesOcr = [];
   let pages;
   try {
@@ -584,7 +579,12 @@ async function ocrImage(bytes) {
     return [null];
   }
   for (let page = 0; page < pages; page++) {
+    if (tesseractState.stopped) {
+      pagesOcr.push(null);
+      continue;
+    }
     const rotations = [];
+    const renderedRotations = [];
     let unreadable = false;
     for (const angle of [0, 90, 180, 270]) {
       let png;
@@ -593,12 +593,35 @@ async function ocrImage(bytes) {
       } catch {
         return [null];
       }
-      const text = await run("tesseract", TESSERACT_TEXT_ARGS, png);
-      const tsv = await run("tesseract", TESSERACT_TSV_ARGS, png);
-      // Preserve whichever evidence was readable, but add a null part below so
-      // this file cannot pass or enter the cache after either extraction fails.
-      if (text === null || tsv === null) unreadable = true;
-      rotations.push({ angle, text, tsv });
+      const text = await tesseractRunner("tesseract", TESSERACT_TEXT_ARGS, png);
+      rotations.push({ angle, text, tsv: null });
+      renderedRotations.push(png);
+      if (text === null) {
+        unreadable = true;
+        tesseractState.stopped = true;
+        break;
+      }
+    }
+    // TSV never detects names. It is requested only when a plain-text read on
+    // this page already hit, and only supplies fail-closed reconciliation
+    // evidence for those hits.
+    if (
+      !tesseractState.stopped &&
+      rotations.some(({ text }) => textHasName(text, matcher))
+    ) {
+      for (let index = 0; index < rotations.length; index++) {
+        const tsv = await tesseractRunner(
+          "tesseract",
+          TESSERACT_TSV_ARGS,
+          renderedRotations[index],
+        );
+        rotations[index].tsv = tsv;
+        if (tsv === null) {
+          unreadable = true;
+          tesseractState.stopped = true;
+          break;
+        }
+      }
     }
     pagesOcr.push({ kind: "image-ocr", rotations });
     if (unreadable) pagesOcr.push(null);
@@ -606,8 +629,8 @@ async function ocrImage(bytes) {
   return pagesOcr;
 }
 
-async function textOf(file, bytes) {
-  if (!/\.pdf$/i.test(file)) return ocrImage(bytes);
+async function textOf(file, bytes, matcher) {
+  if (!/\.pdf$/i.test(file)) return ocrImage(bytes, matcher);
   const dir = mkdtempSync(join(tmpdir(), "ocr-gate-"));
   chmodSync(dir, 0o700);
   try {
@@ -626,8 +649,16 @@ async function textOf(file, bytes) {
     const pages = readdirSync(dir).sort();
     const renderedPages = pages.filter((page) => page !== "source.pdf");
     if (!renderedPages.length) parts.push(null);
+    const tesseractState = { stopped: false };
     for (const page of renderedPages)
-      parts.push(...(await ocrImage(readFileSync(join(dir, page)))));
+      parts.push(
+        ...(await ocrImage(
+          readFileSync(join(dir, page)),
+          matcher,
+          run,
+          tesseractState,
+        )),
+      );
     return parts;
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -691,7 +722,7 @@ export async function scan(
         cached++;
         continue;
       }
-      const parts = await extractText(file, bytes);
+      const parts = await extractText(file, bytes, matcher);
       if (parts.some((p) => p === null)) {
         unreadable++;
         output.error(`${label}: unreadable`);
