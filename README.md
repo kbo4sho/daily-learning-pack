@@ -26,7 +26,9 @@ Authoring, overnight, archive build, Playwright PDF generation, and pack source 
 3. A human merges. **No auto-merge.**
 4. GitHub Pages on `main` runs `npm run archive` (public chrome only) and deploys `dist/`. It does **not** run `npm run site`.
 
-**OCR privacy gate.** `npm run archive` ends with `npm run privacy:ocr`, which OCRs every image (PNG, JPEG, WebP, GIF, AVIF) and PDF under `docs/` and `dist/` (all four orientations, every PDF page) and fails on a private-name hit. It prints only the file path. Names come from `WD_PRIVATE_NAMES` plus the salted hash list in `scripts/private-name-hashes.json`; with neither it fails closed. On CI it installs `tesseract-ocr` and `poppler-utils`; locally, install them yourself.
+**Privacy gates.** `npm run archive` renders the archive chrome and runs the text-layer privacy scan (`scripts/privacy-check.mjs`: page text, PDF text and metadata, image metadata) on every build. The check workflow also runs `node scripts/privacy-check.mjs dist` as its own step.
+
+**OCR privacy sweep (weekly).** `npm run privacy:ocr` OCRs every image (PNG, JPEG, WebP, GIF, AVIF) and PDF under `docs/` and `dist/` (all four orientations, every PDF page) and fails on a private-name hit. It prints only the file path. Names come from `WD_PRIVATE_NAMES` plus the salted hash list in `scripts/private-name-hashes.json`; with neither it fails closed. The full sweep takes 20–30 minutes on CI, so it is not part of `npm run archive`, the check workflow, or the nightly. It runs weekly on Brick against `main` and writes a dated report. To run the full check by hand, use `npm run archive && npm run privacy:ocr`. The OCR unit tests, including one real-Tesseract sentinel test, stay in `npm test`. On CI the check workflow installs `tesseract-ocr` and `poppler-utils`; locally, install them yourself.
 
 Captain must store a fine-grained PAT named `PUBLIC_VIEW_PUSH_TOKEN` on the **private** repo (Contents + Pull requests on this public repo only). This view repo does not hold that secret. First-time private checkout: [`docs/private-generators.md`](docs/private-generators.md).
 

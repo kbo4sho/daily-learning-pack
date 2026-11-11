@@ -19,7 +19,10 @@ jobs:
       # Install scan tools in this step so npm run archive does not have to
       # apt-get update inside a 10-minute Node spawnSync budget. When the
       # binaries are already on PATH, the in-script provisioners skip apt.
-      # Fail closed: never skip the later privacy/OCR scans.
+      # Poppler and ExifTool feed the text-layer privacy scan and print tests.
+      # Tesseract stays for the real-OCR sentinel unit test in npm test. The
+      # full OCR sweep of docs/ and dist/ (npm run privacy:ocr) runs weekly on
+      # Brick, not here. Fail closed: never skip the privacy scans.
       - name: Install Poppler, ExifTool, and Tesseract
         run: |
           set -euo pipefail

@@ -11,7 +11,7 @@
     "build": "node scripts/moved.mjs",
     "generate": "node scripts/moved.mjs",
     "site": "node scripts/moved.mjs",
-    "archive": "node scripts/render-archive.mjs && npm run privacy:ocr",
+    "archive": "node scripts/render-archive.mjs",
     "overnight": "node scripts/moved.mjs",
     "author": "node scripts/moved.mjs",
     "editorial": "node scripts/moved.mjs",
