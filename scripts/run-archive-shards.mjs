@@ -12,10 +12,6 @@ for (const { engine, shard, watchdogMs } of shardsFromWorkflow(workflow)) {
       ARCHIVE_WATCHDOG_MS: watchdogMs,
     },
     stdio: "inherit",
-    // Backstop for the in-process watchdog: a shard that outlives its own
-    // budget plus a minute is killed and fails the run.
-    timeout: Number(watchdogMs) + 60_000,
-    killSignal: "SIGKILL",
   });
   if (result.error || result.status !== 0) {
     console.error(
