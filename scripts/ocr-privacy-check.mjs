@@ -34,8 +34,12 @@ const HASH_FILE = join(here, "private-name-hashes.json");
 const SCRIPT_PATH = fileURLToPath(import.meta.url);
 const TESSERACT_TEXT_ARGS = ["stdin", "stdout", "--psm", "3", "-l", "eng"];
 const TESSERACT_TSV_ARGS = [...TESSERACT_TEXT_ARGS, "tsv"];
-const OCR_ALGORITHM_VERSION = "orientation-reconciliation-v1";
+const OCR_ALGORITHM_VERSION = "orientation-reconciliation-v2";
 export const OCR_CONFIDENCE_THRESHOLD = 90;
+// A merged or long word box can contain a short name box without describing
+// the same region. Requiring at least half of their combined area to overlap
+// keeps similarly sized alternate-orientation reads while rejecting that case.
+export const OCR_MIN_REGION_IOU = 0.5;
 const TESSERACT_CONFIG = JSON.stringify({
   textArgs: TESSERACT_TEXT_ARGS,
   tsvArgs: TESSERACT_TSV_ARGS,
@@ -109,13 +113,16 @@ export function loadMatcher(env = process.env, hashFile = HASH_FILE) {
   };
 }
 
-// Case-insensitive, word-boundary match: compare whole token runs only.
-export function textHasName(text, matcher) {
-  const tokens = normalize(text);
+function* matchingTokenRuns(tokens, matcher, tokenValue = (token) => token) {
   for (let i = 0; i < tokens.length; i++)
     for (let n = 1; n <= matcher.max && i + n <= tokens.length; n++)
-      if (matcher.has(tokens.slice(i, i + n))) return true;
-  return false;
+      if (matcher.has(tokens.slice(i, i + n).map(tokenValue)))
+        yield tokens.slice(i, i + n);
+}
+
+// Case-insensitive, word-boundary match: compare whole token runs only.
+export function textHasName(text, matcher) {
+  return !matchingTokenRuns(normalize(text), matcher).next().done;
 }
 
 // Symlinks are refused outright: a link could point outside the scanned
@@ -409,15 +416,9 @@ function tokenSequence(read) {
 }
 
 function matchingRuns(tokens, matcher, withinLine = false) {
-  const runs = [];
-  for (let i = 0; i < tokens.length; i++)
-    for (let n = 1; n <= matcher.max && i + n <= tokens.length; n++)
-      if (matcher.has(tokens.slice(i, i + n).map(({ token }) => token))) {
-        const run = tokens.slice(i, i + n);
-        if (!withinLine || run.every(({ line }) => line === run[0].line))
-          runs.push(run);
-      }
-  return runs;
+  return [...matchingTokenRuns(tokens, matcher, ({ token }) => token)].filter(
+    (run) => !withinLine || run.every(({ line }) => line === run[0].line),
+  );
 }
 
 function canonicalPoint(read, x, y) {
@@ -453,33 +454,44 @@ function canonicalBox(read, word) {
   };
 }
 
+function intersectionOverUnion(first, second) {
+  const width = Math.max(
+    0,
+    Math.min(first.right, second.right) - Math.max(first.left, second.left),
+  );
+  const height = Math.max(
+    0,
+    Math.min(first.bottom, second.bottom) - Math.max(first.top, second.top),
+  );
+  const intersection = width * height;
+  const firstArea = (first.right - first.left) * (first.bottom - first.top);
+  const secondArea =
+    (second.right - second.left) * (second.bottom - second.top);
+  const union = firstArea + secondArea - intersection;
+  return union > 0 ? intersection / union : 0;
+}
+
 function explainsWord(hitRead, hitWord, otherRead, otherWord) {
   if (
     otherWord.confidence < OCR_CONFIDENCE_THRESHOLD ||
     otherWord.confidence <= hitWord.confidence
   )
     return false;
-  const center = canonicalPoint(
-    hitRead,
-    hitWord.left + hitWord.width / 2,
-    hitWord.top + hitWord.height / 2,
-  );
-  const box = canonicalBox(otherRead, otherWord);
+  const hitBox = canonicalBox(hitRead, hitWord);
+  const otherBox = canonicalBox(otherRead, otherWord);
   return (
-    center &&
-    box &&
-    center.x >= box.left &&
-    center.x <= box.right &&
-    center.y >= box.top &&
-    center.y <= box.bottom
+    hitBox &&
+    otherBox &&
+    intersectionOverUnion(hitBox, otherBox) >= OCR_MIN_REGION_IOU
   );
 }
 
 // A real name in an upside-down panel is confident in its correct orientation,
 // while the same region is low-confidence gibberish when the page is upright.
-// Therefore only a lower-confidence name read whose mapped box center falls
-// inside a >=90-confidence, non-name word box in another orientation is
-// explained away. Missing TSV evidence or a partially explained run stays a hit.
+// Therefore only a lower-confidence name read whose mapped box overlaps at
+// least half its combined area with a >=90-confidence, non-name word box in
+// another orientation is explained away. Missing TSV evidence or a partially
+// explained run stays a hit.
 export function imageOcrHasName(rotations, matcher) {
   const parsed = rotations.map((rotation) =>
     rotation ? parseTsv(rotation.tsv, rotation.angle) : null,
@@ -573,6 +585,7 @@ async function ocrImage(bytes) {
   }
   for (let page = 0; page < pages; page++) {
     const rotations = [];
+    let unreadable = false;
     for (const angle of [0, 90, 180, 270]) {
       let png;
       try {
@@ -582,10 +595,13 @@ async function ocrImage(bytes) {
       }
       const text = await run("tesseract", TESSERACT_TEXT_ARGS, png);
       const tsv = await run("tesseract", TESSERACT_TSV_ARGS, png);
-      if (text === null || tsv === null) return [null];
+      // Preserve whichever evidence was readable, but add a null part below so
+      // this file cannot pass or enter the cache after either extraction fails.
+      if (text === null || tsv === null) unreadable = true;
       rotations.push({ angle, text, tsv });
     }
     pagesOcr.push({ kind: "image-ocr", rotations });
+    if (unreadable) pagesOcr.push(null);
   }
   return pagesOcr;
 }

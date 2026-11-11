@@ -25,7 +25,7 @@ import {
 
 const none = join(tmpdir(), "no-such-hash-file.json");
 const testKeyInputs = {
-  algorithmVersion: "orientation-reconciliation-test-v1",
+  algorithmVersion: "orientation-reconciliation-test-v2",
   scriptSourceSha256: "a".repeat(64),
   tesseractVersionConfig: "tesseract test version\ntest config",
   sharpVersion: "sharp test version",
@@ -114,6 +114,7 @@ function syntheticRotations(reads) {
 
 const firstRegion = { left: 140, top: 220, width: 150, height: 50 };
 const secondRegion = { left: 310, top: 220, width: 140, height: 50 };
+const compactRegion = { left: 200, top: 260, width: 26, height: 12 };
 const word = (text, confidence, box = firstRegion) => ({
   text,
   confidence,
@@ -188,6 +189,29 @@ test("orientation reconciliation suppresses only a fully explained low-confidenc
   const rotations = syntheticRotations({
     0: { text: "ordinary", words: [word("ordinary", 95)] },
     180: { text: "Zorbin", words: [word("Zorbin", 21)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), false);
+});
+
+test("orientation reconciliation keeps a short hit inside a wide confident box", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const wideRegion = { left: 133, top: 260, width: 160, height: 12 };
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("ordinary", 95, wideRegion)] },
+    180: { text: "Zorbin", words: [word("Zorbin", 21, compactRegion)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation suppresses same-size overlapping mapped boxes", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const overlappingRegion = { left: 201, top: 260, width: 26, height: 12 };
+  const rotations = syntheticRotations({
+    0: {
+      text: "ordinary",
+      words: [word("ordinary", 95, overlappingRegion)],
+    },
+    180: { text: "Zorbin", words: [word("Zorbin", 21, compactRegion)] },
   });
   assert.equal(imageOcrHasName(rotations, matcher), false);
 });
