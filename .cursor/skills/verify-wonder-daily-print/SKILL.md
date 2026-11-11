@@ -29,7 +29,7 @@ and tears it down. It needs `pdfinfo`, `pdftotext`, `pdftoppm`, `pdfimages`, `pd
 first and stops with a clear message. CI already needs `pdfinfo` for
 `tests/family.test.mjs`.
 Ready means the last line reads `print-browser: all checks passed`.
-CI runs it inside the existing `check` job via `npm run test:browser`.
+CI runs it inside the existing `check` job via `npm run test:browser:other`, alongside the per-engine archive shard steps; `npm run test:browser` runs the same locally.
 
 ## Doctor
 

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import {
   ENGINES,
@@ -107,4 +108,17 @@ test("browser scripts keep non-archive coverage separate", () => {
     previous = position;
   }
   assert.doesNotMatch(other, /archive-browser/);
+});
+
+test("archive-browser fails fast without ARCHIVE_ENGINE", () => {
+  const env = { ...process.env };
+  delete env.ARCHIVE_ENGINE;
+  const result = spawnSync(process.execPath, ["tests/archive-browser.mjs"], {
+    env,
+    encoding: "utf8",
+    timeout: 60_000,
+  });
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /ARCHIVE_ENGINE is required/);
+  assert.match(result.stderr, /npm run test:archive:all/);
 });

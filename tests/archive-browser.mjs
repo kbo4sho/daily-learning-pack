@@ -18,11 +18,18 @@ import {
   selectShard,
 } from "./archive-shards.mjs";
 
+// One engine per process. For every shard of both engines locally, use
+// `npm run test:archive:all`.
 const requestedEngine = process.env.ARCHIVE_ENGINE;
-if (requestedEngine !== undefined && !ENGINES.includes(requestedEngine)) {
+if (requestedEngine === undefined) {
+  throw new Error(
+    "ARCHIVE_ENGINE is required (chromium or webkit). To run every archive shard, use `npm run test:archive:all`.",
+  );
+}
+if (!ENGINES.includes(requestedEngine)) {
   throw new Error(`Invalid archive engine: ${requestedEngine}`);
 }
-const engines = requestedEngine === undefined ? ENGINES : [requestedEngine];
+const engines = [requestedEngine];
 const shardValue = process.env.ARCHIVE_SHARD ?? "1/1";
 const { k, n } = parseShard(shardValue);
 const watchdogValue = process.env.ARCHIVE_WATCHDOG_MS;
@@ -37,10 +44,7 @@ if (!Number.isSafeInteger(watchdogMs) || watchdogMs > 14 * 60_000) {
 
 // One hard deadline for the whole process, as on main: never cleared, so a
 // leaked browser child cannot keep this shard alive.
-watchdog(
-  watchdogMs,
-  `archive-browser ${requestedEngine ?? "all"} shard ${shardValue}`,
-);
+watchdog(watchdogMs, `archive-browser ${requestedEngine} shard ${shardValue}`);
 
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
