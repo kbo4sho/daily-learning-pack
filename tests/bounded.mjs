@@ -18,7 +18,7 @@ export function bounded(promise, ms, label) {
 
 /** Hard process deadline: a leaked browser cannot keep the job alive. */
 export function watchdog(ms, label) {
-  setTimeout(() => {
+  return setTimeout(() => {
     console.error(`${label}: exceeded ${ms}ms, exiting with failure.`);
     process.exit(1);
   }, ms).unref();
