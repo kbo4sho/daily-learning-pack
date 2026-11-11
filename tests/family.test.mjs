@@ -34,8 +34,16 @@ test("family schema and metadata describe the exact current defaults", async () 
     assert.ok(!("printHref" in door.today));
     // The pack PDF first; the big door may add standalone screen-free sheets.
     assert.ok(
-      index ? door.today.pdfs.length <= 1 : door.today.pdfs.length <= 5,
+      index ? door.today.pdfs.length <= 1 : door.today.pdfs.length <= 6,
     );
+    if (!index)
+      assert.ok(
+        door.today.pdfs.some(
+          (pdf) =>
+            pdf.href === "./today/pdf/explainer-onepager.pdf" &&
+            pdf.label === "Print explainer",
+        ),
+      );
     for (const [at, pdf] of door.today.pdfs.entries()) {
       assert.ok((await stat(resolve(root, pdf.href))).size > 0);
       if (at > 0) {
