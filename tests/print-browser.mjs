@@ -184,11 +184,28 @@ const run = (cmd, args) =>
   });
 const squash = (text) => text.replace(/\s+/g, "").toUpperCase();
 /**
+ * pdftotext -layout keeps columns side by side, so a wrapped line in one
+ * card or column has the next column's words sitting in the same row.
+ * Reading each column top-to-bottom puts that wrapped sentence back together.
+ */
+const deinterleaveColumns = (text) => {
+  const rows = text
+    .split("\n")
+    .map((line) => (line.trim() ? line.trim().split(/\s{2,}/) : []));
+  const n = rows.reduce((m, r) => Math.max(m, r.length), 0);
+  if (n < 2) return text;
+  const cols = Array.from({ length: n }, () => []);
+  for (const r of rows) r.forEach((cell, i) => cols[i].push(cell));
+  return cols.map((c) => c.join(" ")).join("\n");
+};
+/**
  * Is `needle` printed in `hay`? Long needles ignore all spacing (PDF line
  * breaks and letter-spacing move it). Short ones ("I", "No", "Try") must be
- * whole words, so they cannot hide inside other words.
+ * whole words, so they cannot hide inside other words. When a multi-column
+ * sheet wraps a line, -layout inserts the next column's words in between,
+ * so a long needle is also sought in the column-deinterleaved text.
  */
-const contains = (hay, needle) => {
+const printedIn = (hay, needle) => {
   const n = needle.trim();
   if (squash(n).length >= 16) return squash(hay).includes(squash(n));
   const body = [...n.replace(/\s+/g, "")]
@@ -198,6 +215,8 @@ const contains = (hay, needle) => {
     hay,
   );
 };
+const contains = (hay, needle) =>
+  printedIn(hay, needle) || printedIn(deinterleaveColumns(hay), needle);
 for (const [hay, needle, want] of [
   ["I think so.", "I", true],
   ["Nothing here", "No", false],
@@ -207,6 +226,19 @@ for (const [hay, needle, want] of [
   ["Trying hard", "Try", false],
   ["x 12 y", "2", false],
   ["3 + 4 = 7", "3+4=7", true],
+  // Multi-column wrap: quiz card 1's question is split across lines, and
+  // card 2's question sits on the same row in pdftotext -layout output.
+  [
+    "What happens where a bump                      What is on a hologram's film?\nmeets a dip?                                    A    Fine light and dark stripes",
+    "What happens where a bump meets a dip?",
+    true,
+  ],
+  // The first line alone is not the whole question.
+  [
+    "What happens where a bump                      What is on a hologram's film?",
+    "What happens where a bump meets a dip?",
+    false,
+  ],
 ])
   assert.equal(contains(hay, needle), want, `contains(${hay}, ${needle})`);
 /**
