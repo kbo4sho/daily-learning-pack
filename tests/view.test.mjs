@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-velcro-works");
-  assert.equal(latest.date, "2026-11-11");
+  assert.equal(latest.slug, "how-holograms-work");
+  assert.equal(latest.date, "2026-11-12");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-holograms-work",
       "how-velcro-works",
       "transistors",
       "how-a-hand-works",
@@ -156,20 +157,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [84, 63, 55, 30, 70, 50],
+    [25, 63, 26, 43, 45, 83],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "compare-and-round");
+  assert.equal(todayPack.mathTemplate, "number-crunch");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["compare", 48, 84],
-      ["compare", 63, 36],
-      ["compare", 55, 55],
-      ["round-ten", 27],
-      ["round-ten", 74],
-      ["round-ten", 45],
+      ["subtraction-regrouping", 62, 37],
+      ["addition-regrouping", 27, 36],
+      ["subtraction-regrouping", 54, 28],
+      ["subtraction-regrouping", 90, 47],
+      ["addition-regrouping", 19, 26],
+      ["addition-regrouping", 45, 38],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

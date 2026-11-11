@@ -8,21 +8,21 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "How Velcro works",
-        "why": "Comparing a burr, a sideways pull and a peel helps your child explain how many tiny hooks and loops share one strong grip.",
-        "date": "2026-11-11",
+        "topic": "How holograms work",
+        "why": "Comparing two ripple rings crossing in a pan with a shiny card helps your child explain how a hologram records light waves, not a picture.",
+        "date": "2026-11-12",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
             "label": "Print the pack"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

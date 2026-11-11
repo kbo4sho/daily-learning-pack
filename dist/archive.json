@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T05:02:15.008Z",
-  "latest": "how-velcro-works",
+  "generatedAt": "2026-11-11T16:06:06.764Z",
+  "latest": "how-holograms-work",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-holograms-work",
+      "date": "2026-11-12",
+      "topic": "How holograms work",
+      "title": "How Holograms Work",
+      "teaser": "Tilt a card with a bird inside, cross two ripples in a pan, then find out why half a hologram still shows the whole thing.",
+      "href": "./days/how-holograms-work/",
+      "latest": true
+    },
     {
       "slug": "how-velcro-works",
       "date": "2026-11-11",
@@ -11,7 +20,7 @@
       "title": "How Velcro Works",
       "teaser": "Hear a strap rip, meet the burr that started it, then test why a sideways pull holds but a peel lets go.",
       "href": "./days/how-velcro-works/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "transistors",
