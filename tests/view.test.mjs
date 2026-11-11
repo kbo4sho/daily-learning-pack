@@ -220,7 +220,7 @@ test("archive.json lists approved mornings structurally", async () => {
   }
 });
 
-test("every archived morning retains its five working print downloads", async () => {
+test("every archived morning retains its working print downloads", async () => {
   const json = JSON.parse(await read("dist/archive.json"));
   for (const day of json.days) {
     const html = await read(`dist/days/${day.slug}/index.html`);
@@ -230,6 +230,8 @@ test("every archived morning retains its five working print downloads", async ()
       "writing",
       "kid-worksheets",
       "parent-answer-key",
+      "explainer-onepager",
+      "explainer-onepager-a4",
     ]) {
       const rel = `dist/days/${day.slug}/pdf/${name}.pdf`;
       const bytes = await readFile(new URL(`../${rel}`, import.meta.url));
