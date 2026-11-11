@@ -16,6 +16,54 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run format:check
+      # Install scan tools in this step so npm run archive does not have to
+      # apt-get update inside a 10-minute Node spawnSync budget. When the
+      # binaries are already on PATH, the in-script provisioners skip apt.
+      # Fail closed: never skip the later privacy/OCR scans.
+      - name: Install Poppler, ExifTool, and Tesseract
+        run: |
+          set -euo pipefail
+          sudo_apt() {
+            timeout 300 sudo DEBIAN_FRONTEND=noninteractive apt-get \
+              -o Acquire::Retries=5 \
+              -o DPkg::Lock::Timeout=60 \
+              "$@"
+          }
+          have_tools() {
+            command -v pdftotext >/dev/null \
+              && command -v pdfinfo >/dev/null \
+              && command -v pdftoppm >/dev/null \
+              && command -v exiftool >/dev/null \
+              && command -v tesseract >/dev/null
+          }
+          if have_tools; then
+            echo "preinstall: tools already on PATH"
+          else
+            if sudo_apt install -y -qq poppler-utils libimage-exiftool-perl tesseract-ocr && have_tools; then
+              echo "preinstall: installed from cached apt lists"
+            else
+              for attempt in 1 2 3 4 5; do
+                echo "preinstall: apt update + install attempt ${attempt}"
+                if sudo_apt update -qq \
+                  && sudo_apt install -y -qq poppler-utils libimage-exiftool-perl tesseract-ocr \
+                  && have_tools; then
+                  echo "preinstall: installed on attempt ${attempt}"
+                  break
+                fi
+                if [ "${attempt}" -eq 5 ]; then
+                  echo "preinstall failed after ${attempt} attempts; failing closed" >&2
+                  exit 1
+                fi
+                sleep $((attempt * 15))
+              done
+            fi
+          fi
+          echo "preinstall: binaries on PATH"
+          command -v pdftotext
+          command -v pdfinfo
+          command -v pdftoppm
+          command -v exiftool
+          command -v tesseract
       - run: npm run archive
       - run: npm test
       # Pack-level guard: relay/process notes, model names and internal fields fail.
