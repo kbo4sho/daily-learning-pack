@@ -1,3 +1,4 @@
+import { spawnSync } from "node:child_process";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import {
@@ -14,7 +15,10 @@ import { basename, join } from "node:path";
 import test from "node:test";
 import {
   hashName,
+  imageOcrHasName,
   loadMatcher,
+  OCR_CONFIDENCE_THRESHOLD,
+  ocrImage,
   passCache,
   scan,
   textHasName,
@@ -22,6 +26,7 @@ import {
 
 const none = join(tmpdir(), "no-such-hash-file.json");
 const testKeyInputs = {
+  algorithmVersion: "orientation-reconciliation-test-v2",
   scriptSourceSha256: "a".repeat(64),
   tesseractVersionConfig: "tesseract test version\ntest config",
   sharpVersion: "sharp test version",
@@ -48,6 +53,74 @@ function scanOptions(env, extractText, extra = {}) {
     ...extra,
   };
 }
+
+const TSV_HEADER =
+  "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext";
+const BASE_IMAGE = { width: 1000, height: 600 };
+
+function rotatedBox(angle, { left, top, width, height }) {
+  const right = left + width;
+  const bottom = top + height;
+  if (angle === 0) return { left, top, width, height };
+  if (angle === 90)
+    return {
+      left: BASE_IMAGE.height - bottom,
+      top: left,
+      width: height,
+      height: width,
+    };
+  if (angle === 180)
+    return {
+      left: BASE_IMAGE.width - right,
+      top: BASE_IMAGE.height - bottom,
+      width,
+      height,
+    };
+  return {
+    left: top,
+    top: BASE_IMAGE.width - right,
+    width: height,
+    height: width,
+  };
+}
+
+function syntheticTsv(angle, words = []) {
+  const dimensions =
+    angle % 180 === 0
+      ? BASE_IMAGE
+      : { width: BASE_IMAGE.height, height: BASE_IMAGE.width };
+  const rows = [
+    TSV_HEADER,
+    `1\t1\t0\t0\t0\t0\t0\t0\t${dimensions.width}\t${dimensions.height}\t-1\t`,
+  ];
+  for (const [index, word] of words.entries()) {
+    const box = rotatedBox(angle, word.box);
+    rows.push(
+      `5\t1\t1\t1\t1\t${index + 1}\t${box.left}\t${box.top}\t${box.width}\t${box.height}\t${word.confidence}\t${word.text}`,
+    );
+  }
+  return rows.join("\n");
+}
+
+function syntheticRotations(reads) {
+  return [0, 90, 180, 270].map((angle) => {
+    const read = reads[angle] || { text: "", words: [] };
+    return {
+      angle,
+      text: read.text,
+      tsv: syntheticTsv(angle, read.words),
+    };
+  });
+}
+
+const firstRegion = { left: 140, top: 220, width: 150, height: 50 };
+const secondRegion = { left: 310, top: 220, width: 140, height: 50 };
+const compactRegion = { left: 200, top: 260, width: 26, height: 12 };
+const word = (text, confidence, box = firstRegion) => ({
+  text,
+  confidence,
+  box,
+});
 
 test("ocr gate: env names match case-insensitively on word boundaries", () => {
   const m = loadMatcher({ WD_PRIVATE_NAMES: "Zed, Ann Lee" }, none);
@@ -112,6 +185,240 @@ test("worker cap is about half the cores, between 1 and 8", async () => {
   assert.equal(workerCount(64), 8);
 });
 
+test("orientation reconciliation suppresses only a fully explained low-confidence misread", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("ordinary", 95)] },
+    180: { text: "Zorbin", words: [word("Zorbin", 21)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), false);
+});
+
+test("orientation reconciliation keeps a short hit inside a wide confident box", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const wideRegion = { left: 133, top: 260, width: 160, height: 12 };
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("ordinary", 95, wideRegion)] },
+    180: { text: "Zorbin", words: [word("Zorbin", 21, compactRegion)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation suppresses same-size overlapping mapped boxes", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const overlappingRegion = { left: 201, top: 260, width: 26, height: 12 };
+  const rotations = syntheticRotations({
+    0: {
+      text: "ordinary",
+      words: [word("ordinary", 95, overlappingRegion)],
+    },
+    180: { text: "Zorbin", words: [word("Zorbin", 21, compactRegion)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), false);
+});
+
+test("orientation reconciliation keeps a hit below the explanation threshold", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: {
+      text: "ordinary",
+      words: [word("ordinary", OCR_CONFIDENCE_THRESHOLD - 1)],
+    },
+    180: { text: "Zorbin", words: [word("Zorbin", 21)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation keeps a confident upright real name", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "Zorbin", words: [word("Zorbin", 95)] },
+    180: { text: "blur", words: [word("blur", 22)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation keeps a real name in an upside-down panel", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "blur", words: [word("blur", 22)] },
+    180: { text: "Zorbin", words: [word("Zorbin", 95)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation cannot use another name as an explanation", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "Zorbin", words: [word("Zorbin", 96)] },
+    180: { text: "Zorbin", words: [word("Zorbin", 21)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation keeps a partially explained multi-word name", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin Quill" }, none);
+  const rotations = syntheticRotations({
+    0: {
+      text: "ordinary blur",
+      words: [word("ordinary", 95), word("blur", 40, secondRegion)],
+    },
+    180: {
+      text: "Zorbin Quill",
+      words: [word("Zorbin", 21), word("Quill", 20, secondRegion)],
+    },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("orientation reconciliation keeps a hit when TSV boxes are missing", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("ordinary", 95)] },
+    180: { text: "Zorbin", words: [] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), true);
+});
+
+test("TSV-only names do not create hits", () => {
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const rotations = syntheticRotations({
+    0: { text: "ordinary", words: [word("Zorbin", 95)] },
+  });
+  assert.equal(imageOcrHasName(rotations, matcher), false);
+});
+
+test("plain OCR without a hit does not request TSV", async () => {
+  const { default: sharp } = await import("sharp");
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const calls = [];
+  const runner = async (_bin, args) => {
+    calls.push(args.at(-1) === "tsv" ? "tsv" : "text");
+    return "ordinary";
+  };
+
+  const parts = await ocrImage(bytes, matcher, runner);
+  assert.deepEqual(calls, ["text", "text", "text", "text"]);
+  assert.equal(
+    parts.some((part) =>
+      part?.kind === "image-ocr"
+        ? imageOcrHasName(part.rotations, matcher)
+        : false,
+    ),
+    false,
+  );
+});
+
+test("plain OCR hits request TSV for reconciliation", async () => {
+  const { default: sharp } = await import("sharp");
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  const matcher = loadMatcher({ WD_PRIVATE_NAMES: "Zorbin" }, none);
+  const calls = [];
+  let textIndex = 0;
+  let tsvIndex = 0;
+  const angles = [0, 90, 180, 270];
+  const runner = async (_bin, args) => {
+    if (args.at(-1) !== "tsv") {
+      calls.push("text");
+      return textIndex++ === 0 ? "Zorbin" : "ordinary";
+    }
+    calls.push("tsv");
+    const angle = angles[tsvIndex++];
+    const hit = angle === 0;
+    return syntheticTsv(angle, [word(hit ? "Zorbin" : "ordinary", 95)]);
+  };
+
+  const parts = await ocrImage(bytes, matcher, runner);
+  assert.deepEqual(calls, [
+    "text",
+    "text",
+    "text",
+    "text",
+    "tsv",
+    "tsv",
+    "tsv",
+    "tsv",
+  ]);
+  assert.equal(
+    parts.some((part) =>
+      part?.kind === "image-ocr"
+        ? imageOcrHasName(part.rotations, matcher)
+        : false,
+    ),
+    true,
+  );
+});
+
+async function scanWithTesseractFailure(t, firstText) {
+  const { default: sharp } = await import("sharp");
+  const dir = temporaryDirectory(t, "ocr-stop-after-failure-");
+  const fixtures = join(dir, "fixtures");
+  mkdirSync(fixtures);
+  const bytes = await sharp({
+    create: {
+      width: 80,
+      height: 60,
+      channels: 3,
+      background: "white",
+    },
+  })
+    .png()
+    .toBuffer();
+  writeFileSync(join(fixtures, "page.png"), bytes);
+
+  let calls = 0;
+  const runner = async () => (++calls === 1 ? firstText : null);
+  const errors = [];
+  const env = { WD_OCR_CACHE: "0", WD_PRIVATE_NAMES: "Zorbin" };
+  const extractText = (_file, input, matcher) =>
+    ocrImage(input, matcher, runner);
+  const result = await scan(
+    [fixtures],
+    scanOptions(env, extractText, {
+      output: { error: (message) => errors.push(message), log() {} },
+    }),
+  );
+  return { calls, errors, result };
+}
+
+test("first Tesseract failure stops further calls and reports unreadable", async (t) => {
+  const { calls, errors, result } = await scanWithTesseractFailure(
+    t,
+    "ordinary",
+  );
+  assert.equal(result, 1);
+  assert.equal(calls, 2);
+  assert.ok(errors.some((message) => /unreadable$/.test(message)));
+  assert.ok(!errors.some((message) => /private name hit$/.test(message)));
+});
+
+test("a hit collected before the first Tesseract failure is still reported", async (t) => {
+  const { calls, errors, result } = await scanWithTesseractFailure(t, "Zorbin");
+  assert.equal(result, 1);
+  assert.equal(calls, 2);
+  assert.ok(errors.some((message) => /unreadable$/.test(message)));
+  assert.ok(errors.some((message) => /private name hit$/.test(message)));
+});
+
 test("pass cache protects its filename and private files", (t) => {
   const dir = temporaryDirectory(t, "ocr-cache-");
   const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "zz-alpha" };
@@ -154,14 +461,23 @@ test("pass cache protects its filename and private files", (t) => {
   ]);
 });
 
-test("pass cache key includes every extraction stack version", (t) => {
+test("pass cache key includes the script hash and every extraction stack version", (t) => {
   const dir = temporaryDirectory(t, "ocr-stack-cache-");
   const env = { WD_OCR_CACHE_DIR: dir, WD_PRIVATE_NAMES: "Zed" };
   const baseline = passCache(env, none, testKeyInputs);
   baseline.add("img:abc123");
   baseline.save();
 
+  assert.equal(
+    passCache(env, none, {
+      ...testKeyInputs,
+      algorithmVersion: "ignored algorithm label",
+    }).has("img:abc123"),
+    true,
+  );
+
   for (const [input, value] of [
+    ["scriptSourceSha256", "b".repeat(64)],
     ["tesseractVersionConfig", "changed tesseract version"],
     ["sharpVersion", "changed sharp version"],
     ["sharpVersions", { sharp: "changed", vips: "changed" }],
@@ -331,4 +647,49 @@ test("scan invalidates passes when any cache key input changes", async (t) => {
     0,
   );
   assert.equal(calls, 5);
+});
+test("ocr gate: real OCR catches upright and upside-down sentinel names in PNG", async (t) => {
+  const { default: sharp } = await import("sharp");
+  const dir = temporaryDirectory(t, "ocr-orientation-e2e-");
+  const sentinel = "ZORBIN";
+  const bodyLines = Array.from(
+    { length: 18 },
+    (_, index) =>
+      `<text x="72" y="${80 + index * 70}" font-size="25" font-family="Helvetica, Arial, sans-serif">Careful observations help explain patterns in everyday materials and motion.</text>`,
+  ).join("");
+
+  // 0 and 180 only: Ubuntu's tesseract misses a 90-degree sentinel inside upright
+  // body text with the old and new gate alike (known gap, tracked separately).
+  for (const angle of [0, 180]) {
+    const sentinelLines = [690, 840, 990]
+      .map(
+        (y) =>
+          `<text x="637.5" y="${y}" text-anchor="middle" font-size="160" font-weight="700" font-family="Helvetica, Arial, sans-serif">${sentinel}</text>`,
+      )
+      .join("");
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1275" height="1650"><rect width="100%" height="100%" fill="white"/>${bodyLines}<rect x="150" y="540" width="975" height="570" rx="24" fill="white"/><g transform="rotate(${angle} 637.5 825)">${sentinelLines}</g></svg>`;
+    const png = await sharp(Buffer.from(svg)).png().toBuffer();
+    const pngDir = join(dir, `png-${angle}`);
+    mkdirSync(pngDir);
+    writeFileSync(join(pngDir, "page.png"), png);
+
+    // The public pack has no pdf-lib; the generator test covers image-only PDFs.
+    for (const fixtureDir of [pngDir]) {
+      const result = spawnSync(
+        process.execPath,
+        ["scripts/ocr-privacy-check.mjs", fixtureDir],
+        {
+          encoding: "utf8",
+          env: {
+            ...process.env,
+            WD_OCR_CACHE: "0",
+            WD_PRIVATE_NAMES: sentinel,
+          },
+        },
+      );
+      assert.equal(result.status, 1, `${basename(fixtureDir)} was not caught`);
+      assert.match(result.stderr, /private name hit/);
+      assert.doesNotMatch(result.stderr + result.stdout, /zorbin|quill/i);
+    }
+  }
 });
