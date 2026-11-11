@@ -189,9 +189,9 @@ const squash = (text) => text.replace(/\s+/g, "").toUpperCase();
  * Reading each column top-to-bottom puts that wrapped sentence back together.
  */
 const deinterleaveColumns = (text) => {
-  const rows = text.split("\n").map((line) =>
-    line.trim() ? line.trim().split(/\s{2,}/) : [],
-  );
+  const rows = text
+    .split("\n")
+    .map((line) => (line.trim() ? line.trim().split(/\s{2,}/) : []));
   const n = rows.reduce((m, r) => Math.max(m, r.length), 0);
   if (n < 2) return text;
   const cols = Array.from({ length: n }, () => []);
