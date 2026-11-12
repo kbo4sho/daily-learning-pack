@@ -10,9 +10,8 @@
 // fails if one is tracked.
 //
 //   node scripts/fetch-videos.mjs [siteDir=dist]
-// Env: GITHUB_TOKEN (contents:read), GITHUB_REPOSITORY, WD_VIDEO_RELEASE_TAG
-// (default "videos"), WD_VIDEO_RETENTION_DAYS (30), WD_VIDEO_MAX_BYTES
-// (5000000). Only bytes this script fetched and verified are ever embedded,
+// Env: GITHUB_TOKEN (contents:read) only. The repo, release tag, 30-day window
+// and 5 MB cap are fixed constants (tests pass overrides as arguments). Only bytes this script fetched and verified are ever embedded,
 // always from the site's own videos/ folder.
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
@@ -29,6 +28,10 @@ import { join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 export const MANIFEST_NAME = "videos-manifest.json";
+export const REPO = "kbo4sho/daily-learning-pack";
+export const TAG = "videos";
+export const RETENTION_DAYS = 30;
+export const MAX_BYTES = 5_000_000;
 const MAIN_ANCHOR = /<main\b[^>]*\bid="daily-content"[^>]*>/;
 
 const sha256 = (buf) => createHash("sha256").update(buf).digest("hex");
@@ -102,11 +105,11 @@ async function readSlug(file) {
  */
 export async function fetchVideos({
   siteDir = "dist",
-  repo = process.env.GITHUB_REPOSITORY || "kbo4sho/daily-learning-pack",
-  tag = process.env.WD_VIDEO_RELEASE_TAG || "videos",
+  repo = REPO,
+  tag = TAG,
   token = process.env.GITHUB_TOKEN || "",
-  retentionDays = Number(process.env.WD_VIDEO_RETENTION_DAYS || 30),
-  maxBytes = Number(process.env.WD_VIDEO_MAX_BYTES || 5_000_000),
+  retentionDays = RETENTION_DAYS,
+  maxBytes = MAX_BYTES,
   now = new Date(),
   fetchImpl = globalThis.fetch,
   log = console.log,

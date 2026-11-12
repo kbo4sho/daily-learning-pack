@@ -308,18 +308,36 @@ test("pages.yml has the fail-closed video step, or its patch applies cleanly", a
   assert.equal(check.status, 0, String(check.stderr));
 });
 
-test("embeds point only at files this deploy fetched and verified", async () => {
+test("embeds point only at files this deploy fetched and verified; env knobs are ignored", async () => {
   const site = await siteFixture();
-  const saved = process.env.WD_VIDEO_BASE_URL;
-  process.env.WD_VIDEO_BASE_URL = "https://elsewhere.example/";
+  const knobs = {
+    WD_VIDEO_BASE_URL: "https://elsewhere.example/",
+    GITHUB_REPOSITORY: "someone/else",
+    WD_VIDEO_RELEASE_TAG: "other",
+    WD_VIDEO_RETENTION_DAYS: "0",
+    WD_VIDEO_MAX_BYTES: "1",
+  };
+  const saved = Object.fromEntries(
+    Object.keys(knobs).map((k) => [k, process.env[k]]),
+  );
+  Object.assign(process.env, knobs);
+  const urls = [];
   try {
     const entries = [entry("2026-11-11", "how-velcro-works")];
+    const inner = mockFetch({ files: storeFiles(entries) });
     await fetchVideos({
       siteDir: site,
       now: NOW,
-      fetchImpl: mockFetch({ files: storeFiles(entries) }),
+      fetchImpl: (url, init) => {
+        urls.push(String(url));
+        return inner(url, init);
+      },
       log: quiet,
     });
+    assert.equal(
+      urls[0],
+      "https://api.github.com/repos/kbo4sho/daily-learning-pack/releases/tags/videos",
+    );
     const day = await readFile(
       join(site, "days/how-velcro-works/index.html"),
       "utf8",
@@ -337,8 +355,10 @@ test("embeds point only at files this deploy fetched and verified", async () => 
       "mp4 how-velcro-works",
     );
   } finally {
-    if (saved === undefined) delete process.env.WD_VIDEO_BASE_URL;
-    else process.env.WD_VIDEO_BASE_URL = saved;
+    for (const [k, v] of Object.entries(saved)) {
+      if (v === undefined) delete process.env[k];
+      else process.env[k] = v;
+    }
     await rm(site, { recursive: true, force: true });
   }
 });

@@ -1,8 +1,8 @@
 diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
-index 20a958e..945b75b 100644
+index 20a958e..bbfd477 100644
 --- a/.github/workflows/pages.yml
 +++ b/.github/workflows/pages.yml
-@@ -29,6 +29,20 @@ jobs:
+@@ -29,6 +29,19 @@ jobs:
            test -f dist/.nojekyll
            test -f src/archive.css
            test -f src/archive-render.mjs
@@ -18,8 +18,7 @@ index 20a958e..945b75b 100644
 +        timeout-minutes: 5
 +        env:
 +          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-+          WD_VIDEO_RELEASE_TAG: videos
-+        run: node scripts/fetch-videos.mjs dist
+++        run: node scripts/fetch-videos.mjs dist
        - uses: actions/configure-pages@v5
        - uses: actions/upload-pages-artifact@v3
          with:
