@@ -12,8 +12,8 @@
 //   node scripts/fetch-videos.mjs [siteDir=dist]
 // Env: GITHUB_TOKEN (contents:read), GITHUB_REPOSITORY, WD_VIDEO_RELEASE_TAG
 // (default "videos"), WD_VIDEO_RETENTION_DAYS (30), WD_VIDEO_MAX_BYTES
-// (5000000), WD_VIDEO_BASE_URL (optional: serve from another origin instead of
-// copying into the site; the files are still verified first).
+// (5000000). Only bytes this script fetched and verified are ever embedded,
+// always from the site's own videos/ folder.
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import {
@@ -107,7 +107,6 @@ export async function fetchVideos({
   token = process.env.GITHUB_TOKEN || "",
   retentionDays = Number(process.env.WD_VIDEO_RETENTION_DAYS || 30),
   maxBytes = Number(process.env.WD_VIDEO_MAX_BYTES || 5_000_000),
-  baseUrl = process.env.WD_VIDEO_BASE_URL || "",
   now = new Date(),
   fetchImpl = globalThis.fetch,
   log = console.log,
@@ -193,33 +192,30 @@ export async function fetchVideos({
       const edits = [];
       for (const page of pages) {
         const html = await readFile(page.file, "utf8");
-        const prefix = baseUrl || page.prefix;
-        const next = withEmbed(html, v, prefix);
+        const next = withEmbed(html, v, page.prefix);
         if (next && next !== html) edits.push({ file: page.file, html, next });
       }
       if (!edits.length) {
         summary.dropped.push(v.mp4);
         continue;
       }
-      if (!baseUrl) {
-        await mkdir(videosDir, { recursive: true });
-        await rename(join(work, v.mp4), join(videosDir, v.mp4)).catch(
-          async () => {
-            await writeFile(
-              join(videosDir, v.mp4),
-              await readFile(join(work, v.mp4)),
-            );
-          },
-        );
-        await rename(join(work, v.poster), join(videosDir, v.poster)).catch(
-          async () => {
-            await writeFile(
-              join(videosDir, v.poster),
-              await readFile(join(work, v.poster)),
-            );
-          },
-        );
-      }
+      await mkdir(videosDir, { recursive: true });
+      await rename(join(work, v.mp4), join(videosDir, v.mp4)).catch(
+        async () => {
+          await writeFile(
+            join(videosDir, v.mp4),
+            await readFile(join(work, v.mp4)),
+          );
+        },
+      );
+      await rename(join(work, v.poster), join(videosDir, v.poster)).catch(
+        async () => {
+          await writeFile(
+            join(videosDir, v.poster),
+            await readFile(join(work, v.poster)),
+          );
+        },
+      );
       for (const e of edits) {
         if (!backups.has(e.file)) backups.set(e.file, e.html);
         await writeFile(`${e.file}.wd-part`, e.next);

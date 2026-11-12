@@ -307,3 +307,38 @@ test("pages.yml has the fail-closed video step, or its patch applies cleanly", a
   ]);
   assert.equal(check.status, 0, String(check.stderr));
 });
+
+test("embeds point only at files this deploy fetched and verified", async () => {
+  const site = await siteFixture();
+  const saved = process.env.WD_VIDEO_BASE_URL;
+  process.env.WD_VIDEO_BASE_URL = "https://elsewhere.example/";
+  try {
+    const entries = [entry("2026-11-11", "how-velcro-works")];
+    await fetchVideos({
+      siteDir: site,
+      now: NOW,
+      fetchImpl: mockFetch({ files: storeFiles(entries) }),
+      log: quiet,
+    });
+    const day = await readFile(
+      join(site, "days/how-velcro-works/index.html"),
+      "utf8",
+    );
+    assert.doesNotMatch(day, /elsewhere\.example/);
+    assert.match(
+      day,
+      /src="\.\.\/\.\.\/videos\/2026-11-11-how-velcro-works\.mp4"/,
+    );
+    assert.equal(
+      await readFile(
+        join(site, "videos/2026-11-11-how-velcro-works.mp4"),
+        "utf8",
+      ),
+      "mp4 how-velcro-works",
+    );
+  } finally {
+    if (saved === undefined) delete process.env.WD_VIDEO_BASE_URL;
+    else process.env.WD_VIDEO_BASE_URL = saved;
+    await rm(site, { recursive: true, force: true });
+  }
+});
