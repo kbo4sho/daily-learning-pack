@@ -1,18 +1,18 @@
 @font-face {
   font-family: Newsreader;
-  src: url("./fonts/newsreader-latin-400-normal.woff2") format("woff2");
+  src: url("../../shared/fonts/newsreader-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
-  src: url("./fonts/inter-latin-400-normal.woff2") format("woff2");
+  src: url("../../shared/fonts/inter-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
-  src: url("./fonts/inter-latin-600-normal.woff2") format("woff2");
+  src: url("../../shared/fonts/inter-latin-600-normal.woff2") format("woff2");
   font-weight: 600 800;
   font-display: swap;
 }
