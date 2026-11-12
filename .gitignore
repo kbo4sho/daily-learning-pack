@@ -5,3 +5,10 @@ tmp/
 
 .vercel/
 .playwright-cli/
+
+# Nightly videos never enter git; the Pages deploy fetches them (FM-WD-NIGHTLY-VIDEO-001).
+*.mp4
+*.webm
+*.mov
+videos/
+dist/videos/

@@ -1,0 +1,25 @@
+diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
+index 20a958e..945b75b 100644
+--- a/.github/workflows/pages.yml
++++ b/.github/workflows/pages.yml
+@@ -29,6 +29,20 @@ jobs:
+           test -f dist/.nojekyll
+           test -f src/archive.css
+           test -f src/archive-render.mjs
++      # Optional nightly videos (FM-WD-NIGHTLY-VIDEO-001). Off unless the repo
++      # variable WD_NIGHTLY_VIDEO is exactly 'true'. Fetches the last 30 days of
++      # videos from the "videos" release (never from git), verifies sha256 against
++      # the published manifest, and embeds only verified files. Fail closed: the
++      # script restores the committed pages on any error and exits 0, and
++      # continue-on-error keeps the deploy going even if node itself fails.
++      - name: Fetch recent nightly videos (fail-closed)
++        if: vars.WD_NIGHTLY_VIDEO == 'true'
++        continue-on-error: true
++        timeout-minutes: 5
++        env:
++          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++          WD_VIDEO_RELEASE_TAG: videos
++        run: node scripts/fetch-videos.mjs dist
+       - uses: actions/configure-pages@v5
+       - uses: actions/upload-pages-artifact@v3
+         with:
