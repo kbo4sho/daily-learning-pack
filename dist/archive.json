@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T16:06:06.764Z",
-  "latest": "how-holograms-work",
+  "generatedAt": "2026-11-13T05:18:56.115Z",
+  "latest": "cornstarch-goo",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "cornstarch-goo",
+      "date": "2026-11-13",
+      "topic": "cornstarch goo",
+      "title": "Cornstarch Goo",
+      "teaser": "Press a bowl of goo slowly and it melts, smack it and it holds, then find out why wet sand goes pale around your foot.",
+      "href": "./days/cornstarch-goo/",
+      "latest": true
+    },
     {
       "slug": "how-holograms-work",
       "date": "2026-11-12",
@@ -11,7 +20,7 @@
       "title": "How Holograms Work",
       "teaser": "Tilt a card with a bird inside, cross two ripples in a pan, then find out why half a hologram still shows the whole thing.",
       "href": "./days/how-holograms-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-velcro-works",
