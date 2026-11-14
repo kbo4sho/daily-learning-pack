@@ -73,4 +73,46 @@ jobs:
       - name: Privacy guard (public output)
         run: node scripts/privacy-check.mjs dist
       - run: npx playwright install --with-deps chromium webkit
-      - run: npm run test:browser
+      - name: Browser tests (print, little, family, anatomy, welcome)
+        timeout-minutes: 14
+        run: npm run test:browser:other
+      - name: Archive browser (chromium 1/1)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 7
+        env:
+          ARCHIVE_ENGINE: chromium
+          ARCHIVE_SHARD: 1/1
+          ARCHIVE_WATCHDOG_MS: 360000
+        run: npm run test:archive
+      - name: Archive browser (webkit 1/4)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 9
+        env:
+          ARCHIVE_ENGINE: webkit
+          ARCHIVE_SHARD: 1/4
+          ARCHIVE_WATCHDOG_MS: 480000
+        run: npm run test:archive
+      - name: Archive browser (webkit 2/4)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 9
+        env:
+          ARCHIVE_ENGINE: webkit
+          ARCHIVE_SHARD: 2/4
+          ARCHIVE_WATCHDOG_MS: 480000
+        run: npm run test:archive
+      - name: Archive browser (webkit 3/4)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 9
+        env:
+          ARCHIVE_ENGINE: webkit
+          ARCHIVE_SHARD: 3/4
+          ARCHIVE_WATCHDOG_MS: 480000
+        run: npm run test:archive
+      - name: Archive browser (webkit 4/4)
+        if: ${{ !cancelled() }}
+        timeout-minutes: 9
+        env:
+          ARCHIVE_ENGINE: webkit
+          ARCHIVE_SHARD: 4/4
+          ARCHIVE_WATCHDOG_MS: 480000
+        run: npm run test:archive

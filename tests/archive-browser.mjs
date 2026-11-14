@@ -11,8 +11,40 @@ import {
   watchdog,
   withContext,
 } from "./bounded.mjs";
+import {
+  ENGINES,
+  parseShard,
+  planArchiveCases,
+  selectShard,
+} from "./archive-shards.mjs";
 
-watchdog(14 * 60_000, "archive-browser");
+// One engine per process. For every shard of both engines locally, use
+// `npm run test:archive:all`.
+const requestedEngine = process.env.ARCHIVE_ENGINE;
+if (requestedEngine === undefined) {
+  throw new Error(
+    "ARCHIVE_ENGINE is required (chromium or webkit). To run every archive shard, use `npm run test:archive:all`.",
+  );
+}
+if (!ENGINES.includes(requestedEngine)) {
+  throw new Error(`Invalid archive engine: ${requestedEngine}`);
+}
+const engines = [requestedEngine];
+const shardValue = process.env.ARCHIVE_SHARD ?? "1/1";
+const { k, n } = parseShard(shardValue);
+const watchdogValue = process.env.ARCHIVE_WATCHDOG_MS;
+if (watchdogValue !== undefined && !/^[1-9]\d*$/.test(watchdogValue)) {
+  throw new Error(`Invalid archive watchdog: ${watchdogValue}`);
+}
+const watchdogMs =
+  watchdogValue === undefined ? 14 * 60_000 : Number(watchdogValue);
+if (!Number.isSafeInteger(watchdogMs) || watchdogMs > 14 * 60_000) {
+  throw new Error(`Invalid archive watchdog: ${watchdogValue}`);
+}
+
+// One hard deadline for the whole process, as on main: never cleared, so a
+// leaked browser child cannot keep this shard alive.
+watchdog(watchdogMs, `archive-browser ${requestedEngine} shard ${shardValue}`);
 
 const root = resolve("dist");
 const archive = JSON.parse(await readFile(`${root}/archive.json`, "utf8"));
@@ -84,9 +116,228 @@ async function tabToPacket(page, index) {
   return link;
 }
 
-for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
+const caseKinds = {
+  open: {
+    name: ({ planned, packet }) =>
+      `${planned.route}: one ${planned.touch ? "tap on phone" : "click on desktop"} opens ${packet.slug}`,
+    run: ({ browser, planned, packet, url }) => {
+      const options = {
+        viewport: { width: planned.touch ? 390 : 1440, height: 900 },
+        hasTouch: planned.touch,
+        isMobile: planned.touch,
+      };
+      return withPage(browser, options, async (page) => {
+        await ready(page, url);
+        assert.equal(
+          await page.locator("a.seed-packet-link").count(),
+          packets.length,
+        );
+        const link = page.getByRole("link", {
+          name: packet.name,
+          exact: true,
+        });
+        assert.equal(await link.count(), 1);
+        await opensPack(page, packet, () =>
+          planned.touch ? link.tap() : link.click(),
+        );
+      });
+    },
+  },
+  tab: {
+    name: ({ planned }) =>
+      `${planned.route}: Tab then ${planned.key} opens ${planned.packetIndex ? "shelf" : "door"} packet`,
+    run: ({ browser, planned, url }) => {
+      const wide = { viewport: { width: 1440, height: 1000 } };
+      return withPage(browser, wide, async (page) => {
+        await ready(page, url);
+        const link = await tabToPacket(page, planned.packetIndex);
+        const focus = await link.evaluate((el) => {
+          const style = getComputedStyle(el);
+          return {
+            visible: el.matches(":focus-visible"),
+            width: parseFloat(style.outlineWidth),
+            style: style.outlineStyle,
+            offset: parseFloat(style.outlineOffset),
+            clip: style.clipPath,
+            overflow: style.overflow,
+          };
+        });
+        assert.equal(focus.visible, true);
+        assert.ok(focus.width >= 2);
+        assert.ok(!["none", "hidden"].includes(focus.style));
+        assert.ok(focus.offset >= 2);
+        assert.equal(focus.clip, "none");
+        assert.notEqual(focus.overflow, "hidden");
+        await opensPack(page, packets[planned.packetIndex], () =>
+          page.keyboard.press(planned.key),
+        );
+      });
+    },
+  },
+  layout: {
+    name: ({ planned }) => `${planned.route}: ${planned.width}px layout`,
+    run: ({ browser, planned, url }) =>
+      withPage(
+        browser,
+        { viewport: { width: planned.width, height: 1000 } },
+        async (page) => {
+          await ready(page, url);
+          const layout = await page.evaluate(() => {
+            const rect = (el) => {
+              const r = el.getBoundingClientRect();
+              return {
+                left: r.left,
+                right: r.right,
+                top: r.top,
+                bottom: r.bottom,
+                width: r.width,
+              };
+            };
+            const links = [...document.querySelectorAll("a.seed-packet-link")];
+            return {
+              viewport: innerWidth,
+              scroll: document.documentElement.scrollWidth,
+              columns: getComputedStyle(
+                document.querySelector(".packet-shelf"),
+              ).gridTemplateColumns.split(" ").length,
+              packets: links.map((link) => ({
+                box: rect(link),
+                clip: getComputedStyle(link.querySelector(".packet-face"))
+                  .clipPath,
+                text: [
+                  ...link.querySelectorAll(
+                    ".packet-cultivar, .packet-small-print, .packet-note, .packet-house",
+                  ),
+                ].map((el) => {
+                  const range = document.createRange();
+                  range.selectNodeContents(el);
+                  return {
+                    name: el.className,
+                    box: rect(el),
+                    scroll: el.scrollWidth,
+                    client: el.clientWidth,
+                    lines: [...range.getClientRects()].map((r) => ({
+                      left: r.left,
+                      right: r.right,
+                      top: r.top,
+                      bottom: r.bottom,
+                    })),
+                  };
+                }),
+              })),
+            };
+          });
+          assert.ok(
+            layout.scroll <= layout.viewport,
+            "no horizontal page overflow",
+          );
+          assert.ok(
+            planned.width < 640
+              ? layout.columns === 1
+              : planned.width < 1000
+                ? [2, 3].includes(layout.columns)
+                : [3, 4].includes(layout.columns),
+          );
+          for (const packet of layout.packets) {
+            assert.ok(
+              packet.box.left >= 0 && packet.box.right <= planned.width,
+              "packet within viewport",
+            );
+            assert.ok(packet.box.width <= 352, "packet width is capped");
+            assert.match(
+              packet.clip,
+              /^polygon\(/,
+              "crimp silhouette supported",
+            );
+            for (const text of packet.text) {
+              assert.ok(
+                text.scroll <= text.client + 1,
+                `${text.name} does not overflow`,
+              );
+              for (const r of [text.box, ...text.lines]) {
+                assert.ok(
+                  r.left >= packet.box.left && r.right <= packet.box.right + 1,
+                  `${text.name} fits packet horizontally`,
+                );
+                assert.ok(
+                  r.top >= packet.box.top && r.bottom <= packet.box.bottom + 1,
+                  `${text.name} fits packet vertically`,
+                );
+                assert.ok(
+                  r.left >= 0 && r.right <= planned.width + 1,
+                  `${text.name} fits viewport horizontally`,
+                );
+              }
+            }
+          }
+          // Scroll each packet into view and confirm its text can be seen in full.
+          for (const link of await page.locator("a.seed-packet-link").all()) {
+            await link.evaluate((el) => el.scrollIntoView({ block: "center" }));
+            assert.equal(
+              await link.evaluate((el) =>
+                [
+                  ...el.querySelectorAll(
+                    ".packet-cultivar, .packet-small-print",
+                  ),
+                ].every((text) => {
+                  const r = text.getBoundingClientRect();
+                  return r.top >= 0 && r.bottom <= innerHeight;
+                }),
+              ),
+              true,
+            );
+          }
+        },
+      ),
+  },
+  "reduced-motion": {
+    name: ({ planned }) =>
+      `${planned.route}: reduced motion stays still on hover`,
+    run: async ({ browser, url }) => {
+      await withPage(browser, { reducedMotion: "reduce" }, async (p) => {
+        await ready(p, url);
+        for (const link of await p.locator("a.seed-packet-link").all()) {
+          await link.hover();
+          const styles = await link.evaluate((el) =>
+            [el, ...el.querySelectorAll("*")].map((node) => {
+              const s = getComputedStyle(node);
+              return {
+                transition: s.transitionDuration,
+                transform: s.transform,
+              };
+            }),
+          );
+          for (const style of styles) {
+            assert.equal(style.transition, "0s");
+            assert.equal(style.transform, "none");
+          }
+        }
+      });
+    },
+  },
+  "no-js": {
+    name: ({ planned, packet }) =>
+      `${planned.route}: no JavaScript, one click opens ${packet.slug}`,
+    run: ({ browser, packet, url }) =>
+      withPage(browser, { javaScriptEnabled: false }, async (plain) => {
+        await plain.goto(url, { timeout: STEP_TIMEOUT });
+        await opensPack(plain, packet, () =>
+          plain.getByRole("link", { name: packet.name, exact: true }).click(),
+        );
+      }),
+  },
+};
+
+const browserTypes = { chromium, webkit };
+const plannedCases = planArchiveCases(packets.length);
+const selectedCases = selectShard(plannedCases, k, n);
+
+for (const engine of engines) {
+  console.log(
+    `archive-browser: engine=${engine} shard=${shardValue} cases=${selectedCases.length}`,
+  );
   await test(
-    `${engine}: archive packets`,
+    `${engine}: archive packets (shard ${shardValue})`,
     { timeout: 20 * 60_000 },
     async (t) => {
       const server = await serve(root, 0);
@@ -100,245 +351,24 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
           "server.close",
         ),
       );
-      const browser = await browserType.launch();
+      const browser = await browserTypes[engine].launch();
       t.after(() => bounded(browser.close(), 30_000, "browser.close"));
       const origin = `http://127.0.0.1:${server.address().port}`;
-      for (const route of [
-        "/daily-learning-pack/",
-        "/daily-learning-pack/archive/",
-      ]) {
-        const url = `${origin}${route}`;
-        const routeName = route.endsWith("archive/") ? "archive" : "root";
-        for (const touch of [false, true]) {
-          const options = {
-            viewport: { width: touch ? 390 : 1440, height: 900 },
-            hasTouch: touch,
-            isMobile: touch,
-          };
-          for (const packet of packets) {
-            await t.test(
-              `${routeName}: one ${touch ? "tap on phone" : "click on desktop"} opens ${packet.slug}`,
-              TEST,
-              () =>
-                withPage(browser, options, async (page) => {
-                  await ready(page, url);
-                  assert.equal(
-                    await page.locator("a.seed-packet-link").count(),
-                    packets.length,
-                  );
-                  const link = page.getByRole("link", {
-                    name: packet.name,
-                    exact: true,
-                  });
-                  assert.equal(await link.count(), 1);
-                  await opensPack(page, packet, () =>
-                    touch ? link.tap() : link.click(),
-                  );
-                }),
-            );
-          }
-        }
-
-        const wide = { viewport: { width: 1440, height: 1000 } };
-        for (const index of [0, 1]) {
-          for (const key of ["Enter", "Space"]) {
-            await t.test(
-              `${routeName}: Tab then ${key} opens ${index ? "shelf" : "door"} packet`,
-              TEST,
-              () =>
-                withPage(browser, wide, async (page) => {
-                  await ready(page, url);
-                  const link = await tabToPacket(page, index);
-                  const focus = await link.evaluate((el) => {
-                    const style = getComputedStyle(el);
-                    return {
-                      visible: el.matches(":focus-visible"),
-                      width: parseFloat(style.outlineWidth),
-                      style: style.outlineStyle,
-                      offset: parseFloat(style.outlineOffset),
-                      clip: style.clipPath,
-                      overflow: style.overflow,
-                    };
-                  });
-                  assert.equal(focus.visible, true);
-                  assert.ok(focus.width >= 2);
-                  assert.ok(!["none", "hidden"].includes(focus.style));
-                  assert.ok(focus.offset >= 2);
-                  assert.equal(focus.clip, "none");
-                  assert.notEqual(focus.overflow, "hidden");
-                  await opensPack(page, packets[index], () =>
-                    page.keyboard.press(key),
-                  );
-                }),
-            );
-          }
-        }
-        for (const width of [320, 390, 820, 1440]) {
-          await t.test(`${routeName}: ${width}px layout`, TEST, () =>
-            withPage(
-              browser,
-              { viewport: { width, height: 1000 } },
-              async (page) => {
-                await ready(page, url);
-                const layout = await page.evaluate(() => {
-                  const rect = (el) => {
-                    const r = el.getBoundingClientRect();
-                    return {
-                      left: r.left,
-                      right: r.right,
-                      top: r.top,
-                      bottom: r.bottom,
-                      width: r.width,
-                    };
-                  };
-                  const links = [
-                    ...document.querySelectorAll("a.seed-packet-link"),
-                  ];
-                  return {
-                    viewport: innerWidth,
-                    scroll: document.documentElement.scrollWidth,
-                    columns: getComputedStyle(
-                      document.querySelector(".packet-shelf"),
-                    ).gridTemplateColumns.split(" ").length,
-                    packets: links.map((link) => ({
-                      box: rect(link),
-                      clip: getComputedStyle(link.querySelector(".packet-face"))
-                        .clipPath,
-                      text: [
-                        ...link.querySelectorAll(
-                          ".packet-cultivar, .packet-small-print, .packet-note, .packet-house",
-                        ),
-                      ].map((el) => {
-                        const range = document.createRange();
-                        range.selectNodeContents(el);
-                        return {
-                          name: el.className,
-                          box: rect(el),
-                          scroll: el.scrollWidth,
-                          client: el.clientWidth,
-                          lines: [...range.getClientRects()].map((r) => ({
-                            left: r.left,
-                            right: r.right,
-                            top: r.top,
-                            bottom: r.bottom,
-                          })),
-                        };
-                      }),
-                    })),
-                  };
-                });
-                assert.ok(
-                  layout.scroll <= layout.viewport,
-                  "no horizontal page overflow",
-                );
-                assert.ok(
-                  width < 640
-                    ? layout.columns === 1
-                    : width < 1000
-                      ? [2, 3].includes(layout.columns)
-                      : [3, 4].includes(layout.columns),
-                );
-                for (const packet of layout.packets) {
-                  assert.ok(
-                    packet.box.left >= 0 && packet.box.right <= width,
-                    "packet within viewport",
-                  );
-                  assert.ok(packet.box.width <= 352, "packet width is capped");
-                  assert.match(
-                    packet.clip,
-                    /^polygon\(/,
-                    "crimp silhouette supported",
-                  );
-                  for (const text of packet.text) {
-                    assert.ok(
-                      text.scroll <= text.client + 1,
-                      `${text.name} does not overflow`,
-                    );
-                    for (const r of [text.box, ...text.lines]) {
-                      assert.ok(
-                        r.left >= packet.box.left &&
-                          r.right <= packet.box.right + 1,
-                        `${text.name} fits packet horizontally`,
-                      );
-                      assert.ok(
-                        r.top >= packet.box.top &&
-                          r.bottom <= packet.box.bottom + 1,
-                        `${text.name} fits packet vertically`,
-                      );
-                      assert.ok(
-                        r.left >= 0 && r.right <= width + 1,
-                        `${text.name} fits viewport horizontally`,
-                      );
-                    }
-                  }
-                }
-                // Scroll each packet into view and confirm its text can be seen in full.
-                for (const link of await page
-                  .locator("a.seed-packet-link")
-                  .all()) {
-                  await link.evaluate((el) =>
-                    el.scrollIntoView({ block: "center" }),
-                  );
-                  assert.equal(
-                    await link.evaluate((el) =>
-                      [
-                        ...el.querySelectorAll(
-                          ".packet-cultivar, .packet-small-print",
-                        ),
-                      ].every((text) => {
-                        const r = text.getBoundingClientRect();
-                        return r.top >= 0 && r.bottom <= innerHeight;
-                      }),
-                    ),
-                    true,
-                  );
-                }
-              },
-            ),
-          );
-        }
-
-        await t.test(
-          `${routeName}: reduced motion stays still on hover`,
-          TEST,
-          async () => {
-            await withPage(browser, { reducedMotion: "reduce" }, async (p) => {
-              await ready(p, url);
-              for (const link of await p.locator("a.seed-packet-link").all()) {
-                await link.hover();
-                const styles = await link.evaluate((el) =>
-                  [el, ...el.querySelectorAll("*")].map((node) => {
-                    const s = getComputedStyle(node);
-                    return {
-                      transition: s.transitionDuration,
-                      transform: s.transform,
-                    };
-                  }),
-                );
-                for (const style of styles) {
-                  assert.equal(style.transition, "0s");
-                  assert.equal(style.transform, "none");
-                }
-              }
-            });
-          },
+      for (const planned of selectedCases) {
+        const route =
+          planned.route === "archive"
+            ? "/daily-learning-pack/archive/"
+            : "/daily-learning-pack/";
+        const definition = caseKinds[planned.kind];
+        const context = {
+          browser,
+          packet: packets[planned.packetIndex],
+          planned,
+          url: `${origin}${route}`,
+        };
+        await t.test(definition.name(context), TEST, () =>
+          definition.run(context),
         );
-
-        for (const packet of packets) {
-          await t.test(
-            `${routeName}: no JavaScript, one click opens ${packet.slug}`,
-            TEST,
-            () =>
-              withPage(browser, { javaScriptEnabled: false }, async (plain) => {
-                await plain.goto(url, { timeout: STEP_TIMEOUT });
-                await opensPack(plain, packet, () =>
-                  plain
-                    .getByRole("link", { name: packet.name, exact: true })
-                    .click(),
-                );
-              }),
-          );
-        }
       }
     },
   );
