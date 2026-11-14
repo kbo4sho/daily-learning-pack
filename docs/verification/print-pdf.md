@@ -5,8 +5,9 @@ clean US Letter PDF. This is the critical path of the public pack, so it is
 checked on every pull request and every push to `main`.
 
 - Check: `tests/print-browser.mjs` (`npm run verify:print`; also the first step
-  of `npm run test:browser`, which the `check` job in
-  `.github/workflows/check.yml` runs).
+  of `npm run test:browser:other`). The `check` job in
+  `.github/workflows/check.yml` runs `test:browser:other` plus the per-engine
+  archive shard steps; `npm run test:browser` runs the same locally.
 - Agent skill and feature map: `.cursor/skills/verify-wonder-daily-print/`.
 - Evidence a run leaves behind: `output/print-verify/` (sample PDFs, one PNG
   per printed page, menu screenshots, `summary.json`). Not committed: it is
