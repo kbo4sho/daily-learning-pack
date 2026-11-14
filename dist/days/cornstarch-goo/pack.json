@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "cornstarch-goo",
+  "topic": "cornstarch goo",
+  "why": "Comparing a hard press with a gentle touch helps your child use observations to explain how a material behaves.",
+  "teaser": "Press a bowl of goo slowly and it melts, smack it and it holds, then find out why wet sand goes pale around your foot.",
+  "aliases": [
+    "cornstarch goo",
+    "oobleck",
+    "cornstarch and water",
+    "non-Newtonian fluid",
+    "shear thickening",
+    "goo"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "addition-regrouping",
+      "subtraction-regrouping"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Cornstarch Goo",
+  "title": "Cornstarch Goo",
+  "question": "How can one bowl of goo swallow a slow mitten but stop a fast tap?",
+  "idea": "Cornstarch goo is a crowd of tiny grains in water. A slow push gives the water time to slip aside, so the grains slide and the goo flows. A fast push jams the grains together before the water can move, so for a moment the goo acts like a solid.",
+  "curiosity": {
+    "intro": "Start with one bowl that is soft and hard. Then race two spoons, peek at the grains, squeeze a ball, and step onto wet sand.",
+    "carryForward": "Next time you walk on wet sand, look down: does a pale ring appear around your step?",
+    "questions": [
+      {
+        "id": "spoons",
+        "plate": "reach",
+        "question": "Why does a fast smack stop at the top?",
+        "notice": "Compare the deep, sunk spoon with the dull dent in the other bowl.",
+        "say": "Most liquids, like water, stay just as runny however fast you push. Isaac Newton described that rule, so this goo is called non-Newtonian. A slow push lets it flow. A fast smack makes it act like a solid for a moment.",
+        "try": "Mix about 2 scoops of cornstarch with 1 scoop of water. Rest a spoon on top, then tap the goo fast with another. Which one sinks?"
+      },
+      {
+        "id": "grains",
+        "plate": "change",
+        "question": "What happens to the grains when you push fast?",
+        "notice": "Find the grains floating apart and the grains crowded into chains.",
+        "say": "Each cornstarch grain is so tiny that about five fit across one hair. Water sits between them like a slippery layer. A slow push lets the water slip aside. A fast push shoves the grains together before the water can move, so they lock up. Scientists call this jamming.",
+        "try": "Drag a spoon slowly through the goo, then quickly. Feel how much harder your arm has to work."
+      },
+      {
+        "id": "ball",
+        "plate": "notice",
+        "question": "Why does squeezed goo look dry?",
+        "notice": "Look at the dull, cracked skin of the ball and the shiny puddle beside it.",
+        "say": "Jammed grains need a little more room, so they poke up through the water at the surface. The skin turns dull and cracks. Stop squeezing, and the water covers them again, so the goo shines and melts.",
+        "try": "Roll a lump of goo between your palms, then stop and open your hands. Watch it melt and drip."
+      },
+      {
+        "id": "sand",
+        "plate": "keep",
+        "question": "Why does wet sand go pale around a foot?",
+        "notice": "Find the pale ring around the press mark in the wet sand.",
+        "say": "A step pushes the sand grains a little apart. Water sinks into the new gaps, so the top looks dry for a moment. Osborne Reynolds explained this in 1885 and named it dilatancy. Cornstarch goo does a quick version of the same trick.",
+        "try": "Next time you are at a beach, step on firm wet sand. Watch the pale ring appear, then lift your foot."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/cornstarch-goo/01-bowl.jpg",
+      "original": "assets/cornstarch-goo/01-bowl.png",
+      "foldSrc": "assets/cornstarch-goo/01-bowl-fold.jpg",
+      "title": "Soft, then hard",
+      "alt": "Big and Little Wonderer at a warm wooden table, the little one kneeling close to a pale bowl of white cornstarch goo and the big one leaning in to watch, with a wooden spoon on the rim.",
+      "caption": "A slow press sinks in. A fast tap stops."
+    },
+    {
+      "id": "reach",
+      "src": "assets/cornstarch-goo/02-spoons.jpg",
+      "original": "assets/cornstarch-goo/02-spoons.png",
+      "foldSrc": "assets/cornstarch-goo/02-spoons-fold.jpg",
+      "title": "Slow sinks, fast stops",
+      "alt": "A field-guide study of two bowls of white goo: in one a wooden spoon has sunk deep, and in the other a spoon rests on top of a firm, dull dent.",
+      "caption": "Slow sinks deep; a fast smack holds."
+    },
+    {
+      "id": "change",
+      "src": "assets/cornstarch-goo/03-grains.jpg",
+      "original": "assets/cornstarch-goo/03-grains.png",
+      "foldSrc": "assets/cornstarch-goo/03-grains-fold.jpg",
+      "title": "Grains in a crowd",
+      "alt": "A field-guide study of a dab of goo on a glass slide with two magnified circles: tiny grains floating apart in water, and the same grains crowded into chains.",
+      "caption": "Slow pushes let grains slide. Fast pushes jam them."
+    },
+    {
+      "id": "notice",
+      "src": "assets/cornstarch-goo/04-ball.jpg",
+      "original": "assets/cornstarch-goo/04-ball.png",
+      "foldSrc": "assets/cornstarch-goo/04-ball-fold.jpg",
+      "title": "Dry, then shiny",
+      "alt": "A small ball of goo with a dull, cracked skin on a pale plate, beside the same goo melting into a shiny puddle that drips off the edge, with a wooden spoon nearby.",
+      "caption": "Squeezed goo looks dry, then melts."
+    },
+    {
+      "id": "return",
+      "src": "assets/cornstarch-goo/05-drip.jpg",
+      "original": "assets/cornstarch-goo/05-drip.png",
+      "foldSrc": "assets/cornstarch-goo/05-drip-fold.jpg",
+      "title": "A slow ribbon",
+      "alt": "Big and Little Wonderer at the warm table, the big one sitting steadily and holding up a wooden spoon as a slow ribbon of goo drips into the bowl, the little one reaching up toward it.",
+      "caption": "One crowd of grains: the push decides."
+    },
+    {
+      "id": "keep",
+      "src": "assets/cornstarch-goo/06-sand.jpg",
+      "original": "assets/cornstarch-goo/06-sand.png",
+      "foldSrc": "assets/cornstarch-goo/06-sand-fold.jpg",
+      "title": "Pale sand by the sea",
+      "alt": "Firm wet sand at the edge of calm water, with a small press mark surrounded by a ring of pale, dry-looking sand, beside a bowl of goo, a wooden spoon and a glass of water.",
+      "caption": "A step makes wet sand look dry for a moment."
+    }
+  ],
+  "reading": {
+    "title": "One goo, two ways",
+    "coverPlate": "wake",
+    "coverText": "Start with a bowl that is soft and hard. Then race two spoons, and find out what tiny grains do when you push fast.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Goo is for touching, not tasting.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Soft, then hard",
+        "passage": "Little Wonderer stirs white powder into a bowl of water. The goo looks runny, like milk. A slow mitten sinks right in. Then the little one taps it fast. Tap! Now it feels as hard as a table. Big Wonderer leans in to look. How can one bowl be soft and hard?",
+        "prompt": "What happens when the little one taps the goo fast?",
+        "foldable": {
+          "heading": "Soft, then hard",
+          "body": "One bowl of goo. A slow mitten sinks right in, but a fast tap feels as hard as a table."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Slow sinks, fast stops",
+        "passage": "Try two spoons. Rest one spoon on the goo and wait. It sinks slowly to the bottom. Now smack the goo with the other spoon. It stops at the top and leaves a dull dent! Most liquids act the same, fast or slow. Water does, and so does honey. This goo breaks that rule, so it is called non-Newtonian.",
+        "prompt": "How is the goo different from water?",
+        "foldable": {
+          "heading": "Slow sinks, fast stops",
+          "body": "A resting spoon sinks slowly. A smacked spoon stops on top. Water never acts like that."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Grains in a crowd",
+        "passage": "Cornstarch is made of tiny grains. About five could sit across one hair. In the goo, thin water sits between them. Push slowly, and the water slips aside. The grains slide past like skaters. Push fast, and the water cannot move in time. The grains crash together and lock into chains. That is called jamming.",
+        "prompt": "Why do the grains jam when you push fast?",
+        "foldable": {
+          "heading": "Grains in a crowd",
+          "body": "Tiny grains float in water. Slow pushes let them slide. Fast pushes jam them into chains."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Dry, then shiny",
+        "passage": "Here is a clue. Squeeze a ball of goo, and its skin turns dull and cracked. It looks almost dry! Jammed grains need a little more room, so they poke up through the water. Stop squeezing, and the grains settle back. The water covers them again, and the ball melts into a shiny puddle.",
+        "prompt": "Why does the squeezed ball look dry?",
+        "foldable": {
+          "heading": "Dry, then shiny",
+          "body": "Squeeze a goo ball, and it looks dry and cracked. Stop, and it melts into a shiny puddle."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A slow ribbon",
+        "passage": "Back at the table, Big Wonderer lifts a spoonful. A slow ribbon drips back into the bowl. Little Wonderer reaches up to it. Now the guess changes. The goo is not two things. It is one crowd of grains in water. Gentle pushes let them slide. Quick pushes jam them, and then the jam melts away.",
+        "prompt": "How does the guess about the goo change?",
+        "foldable": {
+          "heading": "A slow ribbon",
+          "body": "The goo is one crowd of grains. Gentle pushes let them slide; quick pushes jam them."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Pale sand by the sea",
+        "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot. Your step pushes the grains apart, so water sinks into the new gaps. Osborne Reynolds explained it in 1885. People have even run across a pool of goo. If they stop, they sink. How long can a jam last?",
+        "prompt": "Why does wet sand turn pale around a foot?",
+        "foldable": {
+          "heading": "Pale sand by the sea",
+          "body": "A step pushes wet sand grains apart, so water sinks in and the top looks dry. How long can a jam last?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "non-Newtonian",
+        "meaning": "a liquid whose thickness changes when you push it harder or faster"
+      },
+      {
+        "word": "grain",
+        "meaning": "a very small, hard bit of something, like cornstarch or sand"
+      },
+      {
+        "word": "jamming",
+        "meaning": "when crowded grains lock together and stop sliding"
+      },
+      {
+        "word": "liquid",
+        "meaning": "something that flows and takes the shape of its bowl"
+      },
+      {
+        "word": "solid",
+        "meaning": "something that keeps its own shape"
+      }
+    ],
+    "questions": [
+      "What happens when you tap the goo fast?",
+      "Why does a resting spoon sink but a smacked spoon stop?",
+      "Why does a squeezed ball of goo look dry?",
+      "Why does wet sand turn pale around a foot?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what a slow push does, what a fast push does, and what the tiny grains are doing.",
+      "example": "Example: A slow push sinks in. A fast push feels hard. The grains jam when the water cannot move out of the way."
+    },
+    "foldableTitle": "A little book of goo",
+    "foldableCoverLine": "Cornstarch Goo",
+    "foldableNote": "Carry six goo clues in a small book."
+  },
+  "math": {
+    "title": "Goo counts",
+    "plate": "reach",
+    "intro": "Add and subtract pretend counts of spoonfuls, grains, cracks and footprints.",
+    "eyebrow": "SIX GOO COUNTS",
+    "actionLabel": "Add or subtract",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          46,
+          27
+        ],
+        "prompt": "Little Wonderer pours 46 spoonfuls of powder, then 27 more. How many spoonfuls in all?",
+        "equation": "46 + 27 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 73,
+        "worked": "46 + 27 = 73. 6 + 7 makes 13, so trade 10 ones for a ten.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          52,
+          18
+        ],
+        "prompt": "A resting spoon sinks 52 millimetres, but a smacked spoon sinks only 18. How much deeper is the resting spoon?",
+        "equation": "52 − 18 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 34,
+        "worked": "52 − 18 = 34. Trade a ten for ones, then take away the smacked spoon.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          38,
+          45
+        ],
+        "prompt": "A drawing shows 38 sliding grains and 45 jammed grains. How many grains in all?",
+        "equation": "38 + 45 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 83,
+        "worked": "38 + 45 = 83. 8 + 5 makes 13, so trade 10 ones for a ten.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          63,
+          28
+        ],
+        "prompt": "A squeezed ball shows 63 tiny cracks, and 28 melt away first. How many cracks are left?",
+        "equation": "63 − 28 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 35,
+        "worked": "63 − 28 = 35. Trade a ten for ones, then take away the melted cracks.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          19,
+          24
+        ],
+        "prompt": "Big Wonderer counts 19 slow drips, and the little one counts 24. How many drips in all?",
+        "equation": "19 + 24 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 43,
+        "worked": "19 + 24 = 43. 9 + 4 makes 13, so trade 10 ones for a ten.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          72,
+          36
+        ],
+        "prompt": "A beach shows 72 footprints, and waves wash away 36. How many footprints are left?",
+        "equation": "72 − 36 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 36,
+        "worked": "72 − 36 = 36. Trade a ten for ones, then take away the washed-away prints.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Three additions and three subtractions, each with regrouping. The numbers are for practice, not real goo measurements.",
+    "answerKeyIntro": "Add or subtract the ones first; trade a ten when the ones need it."
+  },
+  "writing": {
+    "title": "Explain a goo clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw two bowls of goo: one with a spoon sunk deep, one with a spoon resting on a dent.",
+    "starter": "My goo clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The smacked spoon stops on top because",
+        "hint": "what does a fast push do?"
+      },
+      {
+        "plate": "change",
+        "start": "The grains jam when I push fast because",
+        "hint": "where can the water go?"
+      },
+      {
+        "plate": "notice",
+        "start": "The squeezed ball looks dry because",
+        "hint": "where do the grains poke out?"
+      }
+    ],
+    "words": [
+      "slow",
+      "fast",
+      "grain",
+      "push",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "It feels hard, like a table."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Water flows the same fast or slow; the goo turns hard."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "The water cannot move in time, so the grains lock."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "Jammed grains poke up through the water."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "One crowd of grains; the push decides."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Grains spread apart, and water sinks into the gaps."
+    },
+    {
+      "label": "Math · all",
+      "text": "73, 34, 83, 35, 43, 36."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Hard for a moment; tiny grains in water; grains poke up; it goes pale."
+    }
+  ],
+  "parentGuidance": "Cornstarch goo is for touching, not tasting. Cover the table and wipe spills while wet. Never pour goo down a sink, because it can clog the drain; let it dry and put it in the trash.",
+  "sources": [
+    {
+      "label": "Brown and Jaeger — Shear thickening in concentrated suspensions (review, arXiv)",
+      "url": "https://arxiv.org/abs/1307.0269"
+    },
+    {
+      "label": "Scientific American — Make water disappear with the wet-sand effect",
+      "url": "https://www.scientificamerican.com/article/make-water-disappear-with-the-wet-sand-effect/"
+    },
+    {
+      "label": "University of Manchester — Osborne Reynolds and dilatancy",
+      "url": "https://personalpages.manchester.ac.uk/staff/jdjackson/Osborne%20Reynolds/oreynb.htm"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer mixes powder and water. The goo looks like milk. A slow push sinks in. A fast tap feels hard! How?",
+            "prompt": "What does a fast tap feel like?"
+          },
+          {
+            "id": "reach",
+            "passage": "Lay a spoon on the goo. It sinks slowly. Smack the goo fast. The spoon stops on top! Water does not do that.",
+            "prompt": "What does the smacked spoon do?"
+          },
+          {
+            "id": "change",
+            "passage": "Goo has tiny grains in water. Push slowly. The grains slide. Push fast. The grains bump and lock. That is a jam.",
+            "prompt": "What do the grains do when you push fast?"
+          },
+          {
+            "id": "notice",
+            "passage": "Squeeze a goo ball. It looks dry and cracked. Stop squeezing. It melts into a shiny puddle.",
+            "prompt": "What does the ball do when you stop?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer lifts a spoon. Goo drips slowly back down. The little one reaches up. Soft or hard? It depends on the push!",
+            "prompt": "What does the goo do on the spoon?"
+          },
+          {
+            "id": "keep",
+            "passage": "Step on wet sand. It turns pale around your foot. The grains move apart. Water sinks in. Wow!",
+            "prompt": "What color does the sand turn?"
+          }
+        ],
+        "words": [
+          {
+            "word": "goo",
+            "meaning": "a thick, sticky mix"
+          },
+          {
+            "word": "grain",
+            "meaning": "a very tiny bit"
+          },
+          {
+            "word": "jam",
+            "meaning": "when bits lock and stop moving"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer pours 9 spoons of powder, then 6 more. How many spoons?",
+            "expression": "9 + 6",
+            "equation": "9 + 6 =",
+            "answer": 15,
+            "hint": "Make a ten: 9 + 1 + 5.",
+            "worked": "9 + 6 = 15. Add both sets of spoons."
+          },
+          {
+            "plate": "reach",
+            "prompt": "There are 14 spoons, and 6 sink. How many do not sink?",
+            "expression": "14 − 6",
+            "equation": "14 − 6 =",
+            "answer": 8,
+            "hint": "Take 6 away from 14.",
+            "worked": "14 − 6 = 8. Take away the spoons that sink."
+          },
+          {
+            "plate": "change",
+            "prompt": "There are 8 sliding grains and 9 jammed grains. How many grains?",
+            "expression": "8 + 9",
+            "equation": "8 + 9 =",
+            "answer": 17,
+            "hint": "Make a ten: 9 + 1 + 7.",
+            "worked": "8 + 9 = 17. Add the sliding and jammed grains."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The ball has 16 cracks, and 9 melt away. How many are left?",
+            "expression": "16 − 9",
+            "equation": "16 − 9 =",
+            "answer": 7,
+            "hint": "Take 9 away from 16.",
+            "worked": "16 − 9 = 7. Take away the melted cracks."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one sees 7 drips, then 7 more. How many drips?",
+            "expression": "7 + 7",
+            "equation": "7 + 7 =",
+            "answer": 14,
+            "hint": "Add seven and seven, like a double.",
+            "worked": "7 + 7 = 14. Add both sets of drips."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 20 footprints, and 8 wash away. How many are left?",
+            "expression": "20 − 8",
+            "equation": "20 − 8 =",
+            "answer": 12,
+            "hint": "Count back 8 from 20.",
+            "worked": "20 − 8 = 12. Take away the washed-away footprints."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer stirs white powder into a bowl of water. The goo looks runny, like milk. A slow mitten sinks right in. A fast tap feels hard as a table. How can one goo do both?",
+            "prompt": "What happens with a fast tap?"
+          },
+          {
+            "id": "reach",
+            "passage": "Rest one spoon on the goo and wait. It sinks slowly to the bottom. Now smack the goo with another spoon. It stops on top and leaves a dent. Water never acts like that.",
+            "prompt": "Which spoon sinks?"
+          },
+          {
+            "id": "change",
+            "passage": "Cornstarch is made of grains too tiny to see. Thin water sits between the grains. Push slowly, and the grains slide past. Push fast, and they crash and lock together. Scientists call that jamming.",
+            "prompt": "What is jamming?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a strange clue. Squeeze a ball of goo, and it looks dry. Its skin turns dull and cracked. Stop squeezing, and it melts. The goo turns shiny and drips away.",
+            "prompt": "What happens when you stop squeezing?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer lifts a spoon, and goo drips back down. The little one reaches for the slow ribbon. Now the guess changes. The goo is one crowd of grains. Quick pushes jam them, and gentle pushes let them slide.",
+            "prompt": "What decides if the goo is soft or hard?"
+          },
+          {
+            "id": "keep",
+            "passage": "Wet sand at the beach does a similar trick. Step on it, and it turns pale. Your step pushes the grains apart. Water sinks into the new gaps. How long can a jam last?",
+            "prompt": "Why does the sand turn pale?"
+          }
+        ],
+        "words": [
+          {
+            "word": "cornstarch",
+            "meaning": "a soft white powder made from corn"
+          },
+          {
+            "word": "grain",
+            "meaning": "a very tiny, hard bit"
+          },
+          {
+            "word": "jamming",
+            "meaning": "when crowded bits lock and stop sliding"
+          },
+          {
+            "word": "liquid",
+            "meaning": "something that flows, like water"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer pours 24 spoons of powder, then 17 more. How many spoons?",
+            "expression": "24 + 17",
+            "equation": "24 + 17 =",
+            "answer": 41,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "24 + 17 = 41. Add both sets of spoons."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A resting spoon sinks 46 millimetres, but a smacked one sinks 19. How much deeper is the resting spoon?",
+            "expression": "46 − 19",
+            "equation": "46 − 19 =",
+            "answer": 27,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "46 − 19 = 27. Take away the smacked spoon."
+          },
+          {
+            "plate": "change",
+            "prompt": "A drawing shows 28 sliding grains and 15 jammed grains. How many grains?",
+            "expression": "28 + 15",
+            "equation": "28 + 15 =",
+            "answer": 43,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "28 + 15 = 43. Add the sliding and jammed grains."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The ball has 35 cracks, and 18 melt away. How many are left?",
+            "expression": "35 − 18",
+            "equation": "35 − 18 =",
+            "answer": 17,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "35 − 18 = 17. Take away the melted cracks."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one counts 16 drips, then 22 more. How many drips?",
+            "expression": "16 + 22",
+            "equation": "16 + 22 =",
+            "answer": 38,
+            "hint": "Add the tens, then the ones.",
+            "worked": "16 + 22 = 38. Add both sets of drips."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 50 footprints, and 26 wash away. How many are left?",
+            "expression": "50 − 26",
+            "equation": "50 − 26 =",
+            "answer": 24,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "50 − 26 = 24. Take away the washed-away footprints."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer stirred white cornstarch powder into a bowl of water until it looked like thick milk. A slow mitten pressed into it and sank right in, as if into warm pudding. Then the little one tapped the surface fast, and it felt as hard as a tabletop. Big Wonderer leaned in to watch. How could the same bowl of goo be soft one moment and hard the next?",
+            "prompt": "Why is it strange that the goo feels hard?"
+          },
+          {
+            "id": "reach",
+            "passage": "Rest one spoon on the goo, and it slowly sinks to the bottom of the bowl. Smack the goo with a second spoon, and the spoon stops at the top, leaving a dull dent. Most liquids, like water and honey, stay just as runny no matter how fast you push them. Isaac Newton described that rule, so a goo that breaks it is called non-Newtonian.",
+            "prompt": "What rule does the goo break?"
+          },
+          {
+            "id": "change",
+            "passage": "Cornstarch is made of grains so tiny that about five could sit side by side across one hair. In the goo, a thin layer of water sits between the grains like a slippery cushion. Push slowly, and the water has time to slip aside, so the grains slide past each other. Push fast, and the grains are shoved together before the water can move, so they rub and lock into chains. Scientists call this jamming.",
+            "prompt": "Why does the speed of the push matter?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. Squeeze a ball of goo, and its skin turns dull and cracked, almost as if it were drying out. Jammed grains need a little more room, so they poke up through the water at the surface. When the squeezing stops, the grains settle back, the water covers them again, and the ball slumps into a shiny puddle.",
+            "prompt": "What makes the skin of the ball look dull?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, Big Wonderer lifted a spoonful, and a slow ribbon of goo dripped back into the bowl. The little one reached up toward the ribbon. Now the guess changed. The goo is not two different things at all. It is one crowd of grains in water, and the push decides what it does. Gentle pushes let the grains slide, but quick pushes jam them for a moment.",
+            "prompt": "What decides what the goo does?"
+          },
+          {
+            "id": "keep",
+            "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot for a moment. Your step pushes the grains apart, so water sinks down into the new gaps. A scientist named Osborne Reynolds explained this in 1885 and called it dilatancy. People have even run across a pool of goo, but anyone who stops starts to sink. How long can a jam last?",
+            "prompt": "Why do runners sink if they stop?"
+          }
+        ],
+        "words": [
+          {
+            "word": "non-Newtonian",
+            "meaning": "a liquid whose thickness changes when you push it harder or faster"
+          },
+          {
+            "word": "grain",
+            "meaning": "a very small, hard bit of something"
+          },
+          {
+            "word": "cushion",
+            "meaning": "a soft layer that keeps two things from rubbing"
+          },
+          {
+            "word": "jamming",
+            "meaning": "when crowded grains lock together and stop sliding"
+          },
+          {
+            "word": "surface",
+            "meaning": "the top or outside layer of something"
+          },
+          {
+            "word": "dilatancy",
+            "meaning": "when packed grains spread apart and take up more room as they are pushed"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer stirs 8 spoons of powder into each of 7 bowls. How many spoons?",
+            "expression": "8 × 7",
+            "equation": "8 × 7 =",
+            "answer": 56,
+            "hint": "Eight groups of seven.",
+            "worked": "8 × 7 = 56. Eight spoons in each of seven bowls."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A resting spoon sinks 245 millimetres into a deep tub of goo, but a smacked spoon sinks only 68. How much deeper is the resting spoon?",
+            "expression": "245 − 68",
+            "equation": "245 − 68 =",
+            "answer": 177,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "245 − 68 = 177. Take away the smacked spoon."
+          },
+          {
+            "plate": "change",
+            "prompt": "A drawing shows 9 chains with 6 jammed grains in each. How many grains?",
+            "expression": "9 × 6",
+            "equation": "9 × 6 =",
+            "answer": 54,
+            "hint": "Nine groups of six.",
+            "worked": "9 × 6 = 54. Nine chains of six grains."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A class makes 375 goo balls in fall and 286 in spring. How many goo balls?",
+            "expression": "375 + 286",
+            "equation": "375 + 286 =",
+            "answer": 661,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "375 + 286 = 661. Add the fall and spring balls."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer shares 72 spoonfuls of goo equally among 8 cups. How many spoonfuls go in each cup?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Share 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Each cup gets the same number of spoonfuls."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A beach has 520 footprints, and waves wash away 275. How many are left?",
+            "expression": "520 − 275",
+            "equation": "520 − 275 =",
+            "answer": 245,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "520 − 275 = 245. Take away the washed-away footprints."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer stirred white cornstarch powder into a bowl of water, about two scoops of powder for every scoop of water, until it looked like thick milk. A slow mitten pressed gently into the goo and sank right in, as if into warm pudding. Then the little one tapped the surface quickly, and it felt as hard as a wooden tabletop. Leaning in close, Big Wonderer watched the dent fade away. How could the same bowl of goo be soft one moment and hard the next?",
+            "prompt": "What two ways does the goo behave?"
+          },
+          {
+            "id": "reach",
+            "passage": "Rest one spoon on the goo, and it slowly sinks all the way to the bottom of the bowl. Smack the goo with a second spoon, and that spoon stops at the top, leaving a firm, dull dent with tiny cracks around it. Most liquids, such as water and honey, stay just as runny no matter how fast you push them. Isaac Newton described that rule long ago, so a goo that breaks it is called non-Newtonian. This kind, which gets thicker when pushed hard, is called shear thickening.",
+            "prompt": "What does shear thickening mean?"
+          },
+          {
+            "id": "change",
+            "passage": "Cornstarch is made of grains so tiny that about five could sit side by side across a single hair. In the goo, a thin layer of water sits between the grains like a slippery cushion. Push slowly, and the water has time to slip aside, so the grains glide past each other like skaters. Push fast, and the grains are shoved together before the water can escape, so they rub, grip and lock into chains that carry the push down to the bottom of the bowl. Scientists call this jamming.",
+            "prompt": "How do the chains of grains stop a fast push?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. Squeeze a ball of goo, and its skin turns dull and cracked, almost as if it were drying out. Jammed grains need a little more room, so they spread apart and poke up through the water at the surface, scattering the light. When the squeezing stops, the grains settle back, the water covers them again, and within a moment the ball slumps into a shiny puddle that drips off the saucer.",
+            "prompt": "Why does the ball turn shiny again?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, Big Wonderer lifted a spoonful, and a slow, glossy ribbon of goo dripped back into the bowl. The little one reached up toward the ribbon, wondering how something so runny had felt so hard. Now the guess changed. The goo is not two different things at all, but one crowd of grains in water, and the push decides what it does. Gentle pushes let the grains slide, while quick pushes jam them into a solid patch that grows ahead of the push, like snow piling up in front of a shovel.",
+            "prompt": "How is a jam like snow in front of a shovel?"
+          },
+          {
+            "id": "keep",
+            "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot for a moment. Your step pushes the grains apart, so water sinks down into the new gaps and the top looks dry. A scientist named Osborne Reynolds explained this in 1885 and called it dilatancy. People have even run across a whole pool of cornstarch goo, but anyone who stands still slowly sinks, because each jam melts in less than a second. How long could a jam be made to last?",
+            "prompt": "Why does a runner who stands still sink?"
+          }
+        ],
+        "words": [
+          {
+            "word": "non-Newtonian",
+            "meaning": "a liquid whose thickness changes with how hard or fast it is pushed"
+          },
+          {
+            "word": "shear thickening",
+            "meaning": "getting thicker when pushed or stirred quickly"
+          },
+          {
+            "word": "grain",
+            "meaning": "a very small, hard bit of something"
+          },
+          {
+            "word": "cushion",
+            "meaning": "a soft layer that keeps two things from rubbing"
+          },
+          {
+            "word": "jamming",
+            "meaning": "when crowded grains lock together and stop sliding"
+          },
+          {
+            "word": "surface",
+            "meaning": "the top or outside layer of something"
+          },
+          {
+            "word": "dilatancy",
+            "meaning": "when packed grains spread apart and take up more room as they are pushed"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that a factory packs 3480 boxes of cornstarch in the morning and 2765 in the afternoon. How many boxes in all?",
+            "expression": "3480 + 2765",
+            "equation": "3480 + 2765 =",
+            "answer": 6245,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "3480 + 2765 = 6245. Add the morning and afternoon boxes."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A test tub holds 8000 millilitres of goo, and 3175 millilitres are scooped out. How many millilitres are left?",
+            "expression": "8000 − 3175",
+            "equation": "8000 − 3175 =",
+            "answer": 4825,
+            "hint": "Regroup across the zeros.",
+            "worked": "8000 − 3175 = 4825. Take away the goo scooped out."
+          },
+          {
+            "plate": "change",
+            "prompt": "A model shows 1250 grains in each of 7 chains. How many grains?",
+            "expression": "1250 × 7",
+            "equation": "1250 × 7 =",
+            "answer": 8750,
+            "hint": "Think 7 × 1000 and 7 × 250.",
+            "worked": "1250 × 7 = 8750. Seven chains of 1250 grains."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A science fair makes 4725 goo balls on one day and 1890 the next. How many goo balls in all?",
+            "expression": "4725 + 1890",
+            "equation": "4725 + 1890 =",
+            "answer": 6615,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "4725 + 1890 = 6615. Add both days of goo balls."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer shares 4536 spoonfuls of goo equally among 8 tubs. How many spoonfuls go in each tub?",
+            "expression": "4536 ÷ 8",
+            "equation": "4536 ÷ 8 =",
+            "answer": 567,
+            "hint": "Split 4536 into 4000, 480 and 56, then divide each part by 8.",
+            "worked": "4536 ÷ 8 = 567. Each tub gets the same number of spoonfuls."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A goo pool holds 7200 cups of goo, and runners splash out 3456 cups. How many cups are left?",
+            "expression": "7200 − 3456",
+            "equation": "7200 − 3456 =",
+            "answer": 3744,
+            "hint": "Regroup across the zeros.",
+            "worked": "7200 − 3456 = 3744. Take away the cups splashed out."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "quiz-cards"
+  ],
+  "quiz": {
+    "title": "Four looks at goo",
+    "intro": "Follow the grains from a slow press to a fast tap.",
+    "questions": [
+      {
+        "id": "tap",
+        "prompt": "What happens if you tap the goo fast?",
+        "choices": [
+          "It splashes like water",
+          "It feels hard for a moment",
+          "It turns blue"
+        ],
+        "answerIndex": 1,
+        "answer": "A fast tap jams the grains, so the goo feels hard for a moment."
+      },
+      {
+        "id": "grains",
+        "prompt": "What is cornstarch goo made of?",
+        "choices": [
+          "Tiny grains in water",
+          "Melted plastic",
+          "Glue and sugar"
+        ],
+        "answerIndex": 0,
+        "answer": "It is tiny cornstarch grains with thin water between them."
+      },
+      {
+        "id": "ball",
+        "prompt": "Why does squeezed goo look dry?",
+        "choices": [
+          "The water freezes",
+          "It dries out for good",
+          "Grains poke through water"
+        ],
+        "answerIndex": 2,
+        "answer": "Jammed grains need more room, so they poke up through the water."
+      },
+      {
+        "id": "sand",
+        "prompt": "What does wet sand do when you step on it?",
+        "choices": [
+          "It goes pale by your foot",
+          "It turns into goo",
+          "It gets darker and wetter"
+        ],
+        "answerIndex": 0,
+        "answer": "The grains spread apart and water sinks in, so the top looks dry."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "Cornstarch Goo",
+    "line": "Soft when you are slow, hard when you are fast.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Spoon They Forgot",
+    "lines": [
+      "Little Wonderer mixed up a bowl full of goo,",
+      "two scoops of white powder, one splash of water too.",
+      "Push slow, and your mitten sinks down with a sigh.",
+      "Push fast, and it’s hard as a rock. My, oh my!",
+      "",
+      "“It’s grains,” said the big one, “too tiny to see,",
+      "all slipping on water as slick as can be.",
+      "Go gently, they glide past each other with ease.",
+      "Go quickly, they jam like a crowd in a squeeze.”",
+      "",
+      "So the little one rolled it, round, round, in a ball,",
+      "and it looked dry and cracked, like no goo at all.",
+      "But the moment it stopped, the ball came undone",
+      "and dribbled away in a puddle of fun.",
+      "",
+      "“So is it a liquid, or is it a rock?”",
+      "Big Wonderer shrugged. “It depends on the knock.”",
+      "They argued till supper, both sure they were right,",
+      "while the spoon they forgot sank slowly from sight."
+    ],
+    "drawing": {
+      "src": "assets/cornstarch-goo/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer, the little one walking carefully with a round ball of goo dripping in both hands while the big one kneels nearby pointing at a shallow bowl."
+    }
+  }
+}

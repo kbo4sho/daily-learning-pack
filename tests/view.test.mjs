@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-holograms-work");
-  assert.equal(latest.date, "2026-11-12");
+  assert.equal(latest.slug, "cornstarch-goo");
+  assert.equal(latest.date, "2026-11-13");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "cornstarch-goo",
       "how-holograms-work",
       "how-velcro-works",
       "transistors",
@@ -157,7 +158,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [25, 63, 26, 43, 45, 83],
+    [73, 34, 83, 35, 43, 36],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
   assert.equal(todayPack.mathTemplate, "number-crunch");
@@ -165,12 +166,12 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["subtraction-regrouping", 62, 37],
-      ["addition-regrouping", 27, 36],
-      ["subtraction-regrouping", 54, 28],
-      ["subtraction-regrouping", 90, 47],
-      ["addition-regrouping", 19, 26],
-      ["addition-regrouping", 45, 38],
+      ["addition-regrouping", 46, 27],
+      ["subtraction-regrouping", 52, 18],
+      ["addition-regrouping", 38, 45],
+      ["subtraction-regrouping", 63, 28],
+      ["addition-regrouping", 19, 24],
+      ["subtraction-regrouping", 72, 36],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);
