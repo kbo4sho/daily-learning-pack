@@ -1,29 +1,30 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "cornstarch-goo",
-  "topic": "cornstarch goo",
-  "why": "Comparing a hard press with a gentle touch helps your child use observations to explain how a material behaves.",
-  "teaser": "Press a bowl of goo slowly and it melts, smack it and it holds, then find out why wet sand goes pale around your foot.",
+  "slug": "how-solar-panels-turn-sunlight-into-electricity",
+  "topic": "how solar panels turn sunlight into electricity",
+  "why": "Following light from a garden lamp to a rooftop helps your child explain a hidden cause with pictures and words.",
+  "teaser": "Shade a garden light and it glows, then follow tiny packets of light as they knock electrons down a one-way slide.",
   "aliases": [
-    "cornstarch goo",
-    "oobleck",
-    "cornstarch and water",
-    "non-Newtonian fluid",
-    "shear thickening",
-    "goo"
+    "solar panels",
+    "solar cells",
+    "photovoltaics",
+    "solar power",
+    "sunlight to electricity",
+    "solar garden light",
+    "silicon"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "number-crunch",
+  "mathTemplate": "story-problems",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "addition-regrouping",
-      "subtraction-regrouping"
+      "one-step-add",
+      "one-step-subtract"
     ],
     "format": "curiosity-day"
   },
@@ -32,343 +33,344 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Cornstarch Goo",
-  "title": "Cornstarch Goo",
-  "question": "How can one bowl of goo swallow a slow mitten but stop a fast tap?",
-  "idea": "Cornstarch goo is a crowd of tiny grains in water. A slow push gives the water time to slip aside, so the grains slide and the goo flows. A fast push jams the grains together before the water can move, so for a moment the goo acts like a solid.",
+  "wonderLabel": "Solar Panels",
+  "title": "How Solar Panels Turn Sunlight into Electricity",
+  "question": "How can a dark square of glass turn sunlight into electricity?",
+  "idea": "A solar cell is a thin slice of silicon made in two layers. Where the layers meet, a built-in push acts like a one-way slide. Light knocks electrons loose, and the push sends them round a wire. One cell gives only a small push, so panels join many cells in a row.",
   "curiosity": {
-    "intro": "Start with one bowl that is soft and hard. Then race two spoons, peek at the grains, squeeze a ball, and step onto wet sand.",
-    "carryForward": "Next time you walk on wet sand, look down: does a pale ring appear around your step?",
+    "intro": "Start with a garden light that glows when you shade it. Then follow sand to a cell, peek inside, count the cells in a panel, and visit a snowy roof.",
+    "carryForward": "Next time you pass a solar panel, look for its rows of cells and thin silver lines.",
     "questions": [
       {
-        "id": "spoons",
-        "plate": "reach",
-        "question": "Why does a fast smack stop at the top?",
-        "notice": "Compare the deep, sunk spoon with the dull dent in the other bowl.",
-        "say": "Most liquids, like water, stay just as runny however fast you push. Isaac Newton described that rule, so this goo is called non-Newtonian. A slow push lets it flow. A fast smack makes it act like a solid for a moment.",
-        "try": "Mix about 2 scoops of cornstarch with 1 scoop of water. Rest a spoon on top, then tap the goo fast with another. Which one sinks?"
-      },
-      {
-        "id": "grains",
-        "plate": "change",
-        "question": "What happens to the grains when you push fast?",
-        "notice": "Find the grains floating apart and the grains crowded into chains.",
-        "say": "Each cornstarch grain is so tiny that about five fit across one hair. Water sits between them like a slippery layer. A slow push lets the water slip aside. A fast push shoves the grains together before the water can move, so they lock up. Scientists call this jamming.",
-        "try": "Drag a spoon slowly through the goo, then quickly. Feel how much harder your arm has to work."
-      },
-      {
-        "id": "ball",
-        "plate": "notice",
-        "question": "Why does squeezed goo look dry?",
-        "notice": "Look at the dull, cracked skin of the ball and the shiny puddle beside it.",
-        "say": "Jammed grains need a little more room, so they poke up through the water at the surface. The skin turns dull and cracks. Stop squeezing, and the water covers them again, so the goo shines and melts.",
-        "try": "Roll a lump of goo between your palms, then stop and open your hands. Watch it melt and drip."
-      },
-      {
         "id": "sand",
+        "plate": "reach",
+        "question": "Why is a solar cell dark blue?",
+        "notice": "Follow the row from sand to a grey lump, a shiny slice and a dark blue cell.",
+        "say": "A solar cell is made of silicon, which is made from sand. Bare silicon is shiny, and it bounces away about a third of the light that hits it. Makers add a coat thinner than a soap bubble. The coat makes the cell look dark blue and helps it keep more light.",
+        "try": "Look at a shiny spoon and a dark mug in sunlight. Which one throws more glare into your eyes? Shiny things keep less light."
+      },
+      {
+        "id": "layers",
+        "plate": "change",
+        "question": "How does light make electricity?",
+        "notice": "Find the two thin layers and the tiny beads near the line where they meet.",
+        "say": "Light travels in tiny packets called photons. A photon with enough energy can knock an electron loose inside the silicon. Where the two layers meet, a built-in push acts like a one-way slide. It sends loose electrons out through a wire, round the loop and back in the other side. That flow is electricity.",
+        "try": "Stand in a circle with your family and hold hands. Pass a gentle squeeze all the way round. Electrons move round a loop of wire in a similar way."
+      },
+      {
+        "id": "panel",
+        "plate": "notice",
+        "question": "Why does a panel need so many cells?",
+        "notice": "Count the cells in one row and find the thin silver lines on each cell.",
+        "say": "One silicon cell gives a push of only about half a volt. A small battery gives about three times that. So makers join cells end to end, and the small pushes add up. Many panels hold 36 cells or more. The thin silver lines are wires that gather the electrons.",
+        "try": "Stack three books. Each one is a small step, but together they make a tall one. Cells add their pushes the same way."
+      },
+      {
+        "id": "roof",
         "plate": "keep",
-        "question": "Why does wet sand go pale around a foot?",
-        "notice": "Find the pale ring around the press mark in the wet sand.",
-        "say": "A step pushes the sand grains a little apart. Water sinks into the new gaps, so the top looks dry for a moment. Osborne Reynolds explained this in 1885 and named it dilatancy. Cornstarch goo does a quick version of the same trick.",
-        "try": "Next time you are at a beach, step on firm wet sand. Watch the pale ring appear, then lift your foot."
+        "question": "Why do panels like cold, bright days?",
+        "notice": "Find the snow on the roof and the clear, dark panels in the low light.",
+        "say": "Heat makes everything inside the silicon jiggle more, and that weakens the push of each cell. In the same sunshine, a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel turns into heat, not electricity.",
+        "try": "Lay a dark cloth and a white cloth in the sun for ten minutes. Which one feels warmer? Dark panels warm up in the sun, too."
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/cornstarch-goo/01-bowl.jpg",
-      "original": "assets/cornstarch-goo/01-bowl.png",
-      "foldSrc": "assets/cornstarch-goo/01-bowl-fold.jpg",
-      "title": "Soft, then hard",
-      "alt": "Big and Little Wonderer at a warm wooden table, the little one kneeling close to a pale bowl of white cornstarch goo and the big one leaning in to watch, with a wooden spoon on the rim.",
-      "caption": "A slow press sinks in. A fast tap stops."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light-fold.jpg",
+      "title": "A light that waits",
+      "alt": "Big and Little Wonderer on a pale garden path, the little one kneeling beside a solar garden light and holding a mitten over the small dark panel on its cap while the big one leans in to watch the lamp glow.",
+      "caption": "Shade the small dark square, and the lamp glows."
     },
     {
       "id": "reach",
-      "src": "assets/cornstarch-goo/02-spoons.jpg",
-      "original": "assets/cornstarch-goo/02-spoons.png",
-      "foldSrc": "assets/cornstarch-goo/02-spoons-fold.jpg",
-      "title": "Slow sinks, fast stops",
-      "alt": "A field-guide study of two bowls of white goo: in one a wooden spoon has sunk deep, and in the other a spoon rests on top of a firm, dull dent.",
-      "caption": "Slow sinks deep; a fast smack holds."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand-fold.jpg",
+      "title": "From sand to cell",
+      "alt": "A field-guide study on a garden stone of four things in a row: a small heap of sand, a rough grey lump of silicon, a thin shiny round slice, and a dark blue square solar cell with fine silver lines.",
+      "caption": "Sand becomes silicon, then a thin slice, then a dark blue cell."
     },
     {
       "id": "change",
-      "src": "assets/cornstarch-goo/03-grains.jpg",
-      "original": "assets/cornstarch-goo/03-grains.png",
-      "foldSrc": "assets/cornstarch-goo/03-grains-fold.jpg",
-      "title": "Grains in a crowd",
-      "alt": "A field-guide study of a dab of goo on a glass slide with two magnified circles: tiny grains floating apart in water, and the same grains crowded into chains.",
-      "caption": "Slow pushes let grains slide. Fast pushes jam them."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers-fold.jpg",
+      "title": "A one-way slide",
+      "alt": "A field-guide study of a dark blue solar cell in soft light, with a large magnified circle showing two thin stacked layers and tiny pale beads lifting near the line where they meet.",
+      "caption": "Light knocks electrons loose. A one-way push sends them round."
     },
     {
       "id": "notice",
-      "src": "assets/cornstarch-goo/04-ball.jpg",
-      "original": "assets/cornstarch-goo/04-ball.png",
-      "foldSrc": "assets/cornstarch-goo/04-ball-fold.jpg",
-      "title": "Dry, then shiny",
-      "alt": "A small ball of goo with a dull, cracked skin on a pale plate, beside the same goo melting into a shiny puddle that drips off the edge, with a wooden spoon nearby.",
-      "caption": "Squeezed goo looks dry, then melts."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel-fold.jpg",
+      "title": "Cells in a row",
+      "alt": "A solar panel made of many dark blue square cells with thin silver lines, joined in long rows, resting on a garden stone beside three loose cells and one small plain battery, with a garden light nearby.",
+      "caption": "Each cell gives a small push. Joined in rows, the pushes add up."
     },
     {
       "id": "return",
-      "src": "assets/cornstarch-goo/05-drip.jpg",
-      "original": "assets/cornstarch-goo/05-drip.png",
-      "foldSrc": "assets/cornstarch-goo/05-drip-fold.jpg",
-      "title": "A slow ribbon",
-      "alt": "Big and Little Wonderer at the warm table, the big one sitting steadily and holding up a wooden spoon as a slow ribbon of goo drips into the bowl, the little one reaching up toward it.",
-      "caption": "One crowd of grains: the push decides."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade-fold.jpg",
+      "title": "Shade means night",
+      "alt": "Big and Little Wonderer back on the garden path, the big one sitting and holding a large leaf over the solar garden light so its panel is shaded, the little one standing and pointing at the glowing lamp.",
+      "caption": "No light, no push, so the garden light thinks it is night."
     },
     {
       "id": "keep",
-      "src": "assets/cornstarch-goo/06-sand.jpg",
-      "original": "assets/cornstarch-goo/06-sand.png",
-      "foldSrc": "assets/cornstarch-goo/06-sand-fold.jpg",
-      "title": "Pale sand by the sea",
-      "alt": "Firm wet sand at the edge of calm water, with a small press mark surrounded by a ring of pale, dry-looking sand, beside a bowl of goo, a wooden spoon and a glass of water.",
-      "caption": "A step makes wet sand look dry for a moment."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof-fold.jpg",
+      "title": "Cold and bright",
+      "alt": "A small house roof on a cold, clear winter morning, with snow on the roof and ground and a block of dark solar panels clear of snow in the low light, and a small garden light standing by the snowy path.",
+      "caption": "Cold, bright days help a panel push harder."
     }
   ],
   "reading": {
-    "title": "One goo, two ways",
+    "title": "The dark square on the garden light",
     "coverPlate": "wake",
-    "coverText": "Start with a bowl that is soft and hard. Then race two spoons, and find out what tiny grains do when you push fast.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Goo is for touching, not tasting.",
+    "coverText": "Start with a garden light that glows in the shade. Then follow sunlight into a thin slice of silicon and out along a wire.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Never look straight at the sun.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "Soft, then hard",
-        "passage": "Little Wonderer stirs white powder into a bowl of water. The goo looks runny, like milk. A slow mitten sinks right in. Then the little one taps it fast. Tap! Now it feels as hard as a table. Big Wonderer leans in to look. How can one bowl be soft and hard?",
-        "prompt": "What happens when the little one taps the goo fast?",
+        "title": "A light that waits",
+        "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square with thin silver lines. The little one holds a mitten over the square. Click! The tiny lamp glows, as if night came early. Big Wonderer leans in to look. How can a small square tell day from night?",
+        "prompt": "What happens when the little one covers the square?",
         "foldable": {
-          "heading": "Soft, then hard",
-          "body": "One bowl of goo. A slow mitten sinks right in, but a fast tap feels as hard as a table."
+          "heading": "A light that waits",
+          "body": "A garden light has a small dark square on its cap. Cover it with a mitten, and the tiny lamp glows."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Slow sinks, fast stops",
-        "passage": "Try two spoons. Rest one spoon on the goo and wait. It sinks slowly to the bottom. Now smack the goo with the other spoon. It stops at the top and leaves a dull dent! Most liquids act the same, fast or slow. Water does, and so does honey. This goo breaks that rule, so it is called non-Newtonian.",
-        "prompt": "How is the goo different from water?",
+        "title": "From sand to cell",
+        "passage": "That dark square is a solar cell, and it starts as sand. Sand holds silicon, a shiny grey stuff. Workers melt it, grow a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces sunlight away. A thin coat turns it dark blue, so more light soaks in.",
+        "prompt": "Why does the cell get a thin blue coat?",
         "foldable": {
-          "heading": "Slow sinks, fast stops",
-          "body": "A resting spoon sinks slowly. A smacked spoon stops on top. Water never acts like that."
+          "heading": "From sand to cell",
+          "body": "A solar cell starts as sand. Silicon is melted, sliced thin and given a blue coat so it keeps more light."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Grains in a crowd",
-        "passage": "Cornstarch is made of tiny grains. About five could sit across one hair. In the goo, thin water sits between them. Push slowly, and the water slips aside. The grains slide past like skaters. Push fast, and the water cannot move in time. The grains crash together and lock into chains. That is called jamming.",
-        "prompt": "Why do the grains jam when you push fast?",
+        "title": "A one-way slide",
+        "passage": "Sunlight comes in tiny packets called photons. Inside the cell, two thin layers are pressed together. Where they meet, there is a push that works like a one-way slide. A photon knocks a tiny electron loose. The slide sends it out one side, along a wire and through the lamp. Then it comes back in the other side. That flow is electricity.",
+        "prompt": "What does a photon do inside the cell?",
         "foldable": {
-          "heading": "Grains in a crowd",
-          "body": "Tiny grains float in water. Slow pushes let them slide. Fast pushes jam them into chains."
+          "heading": "A one-way slide",
+          "body": "Light comes in tiny packets called photons. Each can knock an electron loose. A one-way slide sends it round a wire."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Dry, then shiny",
-        "passage": "Here is a clue. Squeeze a ball of goo, and its skin turns dull and cracked. It looks almost dry! Jammed grains need a little more room, so they poke up through the water. Stop squeezing, and the grains settle back. The water covers them again, and the ball melts into a shiny puddle.",
-        "prompt": "Why does the squeezed ball look dry?",
+        "title": "Cells in a row",
+        "passage": "Here is a clue. A big panel is made of many small cells in rows. One cell gives only a small push, about half a volt. A small battery gives about three times as much. So the cells are joined end to end, and their pushes add up. Thin silver lines on each cell gather the electrons.",
+        "prompt": "Why are so many cells joined in a row?",
         "foldable": {
-          "heading": "Dry, then shiny",
-          "body": "Squeeze a goo ball, and it looks dry and cracked. Stop, and it melts into a shiny puddle."
+          "heading": "Cells in a row",
+          "body": "One cell gives only a small push. A panel joins many cells in rows, so all their small pushes add up."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A slow ribbon",
-        "passage": "Back at the table, Big Wonderer lifts a spoonful. A slow ribbon drips back into the bowl. Little Wonderer reaches up to it. Now the guess changes. The goo is not two things. It is one crowd of grains in water. Gentle pushes let them slide. Quick pushes jam them, and then the jam melts away.",
-        "prompt": "How does the guess about the goo change?",
+        "title": "Shade means night",
+        "passage": "Back on the path, Big Wonderer holds a leaf over the garden light. The little one points as the lamp glows again. Now the guess changes. The square does not keep sunlight like a sponge. It pushes electrons only while light lands on it. All day, that push fills a little battery inside. When shade stops the push, the light thinks it is night.",
+        "prompt": "Why does the lamp glow in the shade?",
         "foldable": {
-          "heading": "A slow ribbon",
-          "body": "The goo is one crowd of grains. Gentle pushes let them slide; quick pushes jam them."
+          "heading": "Shade means night",
+          "body": "The square pushes only while light lands on it. When shade stops the push, the garden light thinks it is night."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Pale sand by the sea",
-        "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot. Your step pushes the grains apart, so water sinks into the new gaps. Osborne Reynolds explained it in 1885. People have even run across a pool of goo. If they stop, they sink. How long can a jam last?",
-        "prompt": "Why does wet sand turn pale around a foot?",
+        "title": "Cold and bright",
+        "passage": "Here is a surprise. Solar panels like cold, bright days. Heat makes the inside of each cell jiggle, so its push gets weaker. In the same sunshine, a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
+        "prompt": "Why does heat weaken a solar panel?",
         "foldable": {
-          "heading": "Pale sand by the sea",
-          "body": "A step pushes wet sand grains apart, so water sinks in and the top looks dry. How long can a jam last?"
+          "heading": "Cold and bright",
+          "body": "Heat weakens the push of each cell. In the same sunshine, a cold panel makes more power. How could it stay cool?"
         }
       }
     ],
     "words": [
       {
-        "word": "non-Newtonian",
-        "meaning": "a liquid whose thickness changes when you push it harder or faster"
+        "word": "solar cell",
+        "meaning": "a thin slice that turns light into electricity"
       },
       {
-        "word": "grain",
-        "meaning": "a very small, hard bit of something, like cornstarch or sand"
+        "word": "silicon",
+        "meaning": "a shiny grey stuff made from sand"
       },
       {
-        "word": "jamming",
-        "meaning": "when crowded grains lock together and stop sliding"
+        "word": "photon",
+        "meaning": "a tiny packet of light"
       },
       {
-        "word": "liquid",
-        "meaning": "something that flows and takes the shape of its bowl"
+        "word": "electron",
+        "meaning": "a tiny bit of matter that carries electricity"
       },
       {
-        "word": "solid",
-        "meaning": "something that keeps its own shape"
+        "word": "volt",
+        "meaning": "a measure of how hard electricity is pushed"
       }
     ],
     "questions": [
-      "What happens when you tap the goo fast?",
-      "Why does a resting spoon sink but a smacked spoon stop?",
-      "Why does a squeezed ball of goo look dry?",
-      "Why does wet sand turn pale around a foot?"
+      "What happens when you cover the square on a garden light?",
+      "Why is a solar cell dark blue?",
+      "Why does a panel join many cells in a row?",
+      "Why does heat weaken a solar panel?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what a slow push does, what a fast push does, and what the tiny grains are doing.",
-      "example": "Example: A slow push sinks in. A fast push feels hard. The grains jam when the water cannot move out of the way."
+      "prompt": "Write or dictate three sentences: what light does inside a solar cell, why cells are joined in rows, and why shade turns on a garden light.",
+      "example": "Example: Light knocks electrons loose. The small pushes add up in a row. In the shade, the push stops, so the light thinks it is night."
     },
-    "foldableTitle": "A little book of goo",
-    "foldableCoverLine": "Cornstarch Goo",
-    "foldableNote": "Carry six goo clues in a small book."
+    "foldableTitle": "A little book of sunlight",
+    "foldableCoverLine": "Solar Panels",
+    "foldableNote": "Carry six sunlight clues in a small book."
   },
   "math": {
-    "title": "Goo counts",
-    "plate": "reach",
-    "intro": "Add and subtract pretend counts of spoonfuls, grains, cracks and footprints.",
-    "eyebrow": "SIX GOO COUNTS",
-    "actionLabel": "Add or subtract",
+    "title": "Sunlight story numbers",
+    "eyebrow": "Math",
+    "intro": "Six one-step stories about garden lights, cells, panels and sunny roofs. Add or subtract to find each answer.",
+    "plate": "notice",
+    "actionLabel": "Solve",
+    "template": "story-problems",
     "tasks": [
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          46,
-          27
-        ],
-        "prompt": "Little Wonderer pours 46 spoonfuls of powder, then 27 more. How many spoonfuls in all?",
-        "equation": "46 + 27 =",
-        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 73,
-        "worked": "46 + 27 = 73. 6 + 7 makes 13, so trade 10 ones for a ten.",
-        "plate": "wake",
-        "label": "TASK 1"
-      },
-      {
-        "skill": "subtraction-regrouping",
-        "operands": [
-          52,
+          27,
           18
         ],
-        "prompt": "A resting spoon sinks 52 millimetres, but a smacked spoon sinks only 18. How much deeper is the resting spoon?",
-        "equation": "52 − 18 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
-        "answer": 34,
-        "worked": "52 − 18 = 34. Trade a ten for ones, then take away the smacked spoon.",
-        "plate": "reach",
-        "label": "TASK 2"
-      },
-      {
-        "skill": "addition-regrouping",
-        "operands": [
-          38,
-          45
-        ],
-        "prompt": "A drawing shows 38 sliding grains and 45 jammed grains. How many grains in all?",
-        "equation": "38 + 45 =",
+        "plate": "wake",
+        "label": "TASK 1",
+        "prompt": "Little Wonderer counts 27 garden lights on one path and 18 on another. How many garden lights is that altogether?",
+        "equation": "27 + 18 =",
         "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 83,
-        "worked": "38 + 45 = 83. 8 + 5 makes 13, so trade 10 ones for a ten.",
-        "plate": "change",
-        "label": "TASK 3"
+        "answer": 45,
+        "worked": "27 + 18 = 45. Combine the lights on both paths."
       },
       {
-        "skill": "subtraction-regrouping",
+        "skill": "one-step-subtract",
         "operands": [
-          63,
-          28
+          64,
+          29
         ],
-        "prompt": "A squeezed ball shows 63 tiny cracks, and 28 melt away first. How many cracks are left?",
-        "equation": "63 − 28 =",
+        "plate": "reach",
+        "label": "TASK 2",
+        "prompt": "A box holds 64 thin silicon slices, and 29 of them are made into cells. How many slices are still plain?",
+        "equation": "64 − 29 =",
         "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
         "answer": 35,
-        "worked": "63 − 28 = 35. Trade a ten for ones, then take away the melted cracks.",
-        "plate": "notice",
-        "label": "TASK 4"
+        "worked": "64 − 29 = 35. Take away the slices that became cells."
       },
       {
-        "skill": "addition-regrouping",
+        "skill": "one-step-add",
         "operands": [
-          19,
+          36,
+          47
+        ],
+        "plate": "change",
+        "label": "TASK 3",
+        "prompt": "In a pretend count, 36 photons knock electrons loose, and then 47 more do. How many electrons are knocked loose in all?",
+        "equation": "36 + 47 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 83,
+        "worked": "36 + 47 = 83. Combine both groups of loose electrons."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          60,
           24
         ],
-        "prompt": "Big Wonderer counts 19 slow drips, and the little one counts 24. How many drips in all?",
-        "equation": "19 + 24 =",
-        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 43,
-        "worked": "19 + 24 = 43. 9 + 4 makes 13, so trade 10 ones for a ten.",
-        "plate": "return",
-        "label": "TASK 5"
-      },
-      {
-        "skill": "subtraction-regrouping",
-        "operands": [
-          72,
-          36
-        ],
-        "prompt": "A beach shows 72 footprints, and waves wash away 36. How many footprints are left?",
-        "equation": "72 − 36 =",
+        "plate": "notice",
+        "label": "TASK 4",
+        "prompt": "A panel has 60 cells, and a tree shades 24 of them. How many cells are still in the sun?",
+        "equation": "60 − 24 =",
         "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
         "answer": 36,
-        "worked": "72 − 36 = 36. Trade a ten for ones, then take away the washed-away prints.",
+        "worked": "60 − 24 = 36. Take away the shaded cells."
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          45,
+          37
+        ],
+        "plate": "return",
+        "label": "TASK 5",
+        "prompt": "Big Wonderer counts 45 minutes of sun on the garden light in the morning and 37 in the afternoon. How many minutes is that altogether?",
+        "equation": "45 + 37 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 82,
+        "worked": "45 + 37 = 82. Combine the morning and afternoon minutes."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          72,
+          35
+        ],
         "plate": "keep",
-        "label": "TASK 6"
+        "label": "TASK 6",
+        "prompt": "A snowy town has 72 roof panels, and snow still covers 35 of them. How many panels are clear?",
+        "equation": "72 − 35 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 37,
+        "worked": "72 − 35 = 37. Take away the panels under snow."
       }
     ],
-    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
-    "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Three additions and three subtractions, each with regrouping. The numbers are for practice, not real goo measurements.",
-    "answerKeyIntro": "Add or subtract the ones first; trade a ten when the ones need it."
+    "extension": "After you finish, tell which problem felt most like a sunny roof, and why.",
+    "printNote": "Use these story numbers about solar panels. The picture is not a ruler.",
+    "parentNote": "Six one-step story problems tied to solar panels. The numbers are for practice, not real measurements.",
+    "answerKeyIntro": "Math answers (story numbers):"
   },
   "writing": {
-    "title": "Explain a goo clue in your words",
+    "title": "Explain a sunlight clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw two bowls of goo: one with a spoon sunk deep, one with a spoon resting on a dent.",
-    "starter": "My goo clue",
+    "draw": "Draw a solar cell with two thin layers, and show a tiny electron going round a loop of wire.",
+    "starter": "My sunlight clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "The smacked spoon stops on top because",
-        "hint": "what does a fast push do?"
+        "start": "A solar cell is dark blue because",
+        "hint": "what does the thin coat do?"
       },
       {
         "plate": "change",
-        "start": "The grains jam when I push fast because",
-        "hint": "where can the water go?"
+        "start": "Light makes electricity when",
+        "hint": "what does a photon knock loose?"
       },
       {
         "plate": "notice",
-        "start": "The squeezed ball looks dry because",
-        "hint": "where do the grains poke out?"
+        "start": "A panel needs many cells because",
+        "hint": "how big is one push?"
       }
     ],
     "words": [
-      "slow",
-      "fast",
-      "grain",
+      "light",
+      "cell",
       "push",
+      "electron",
       "because",
       "maybe"
     ],
@@ -378,50 +380,62 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "It feels hard, like a table."
+      "text": "The tiny lamp glows, as if night came early."
     },
     {
       "label": "Reading · 2",
-      "text": "Water flows the same fast or slow; the goo turns hard."
+      "text": "Bare silicon bounces light away; the blue coat keeps more in."
     },
     {
       "label": "Reading · 3",
-      "text": "The water cannot move in time, so the grains lock."
+      "text": "It knocks an electron loose, and the one-way push sends it round."
     },
     {
       "label": "Reading · 4",
-      "text": "Jammed grains poke up through the water."
+      "text": "One cell gives about half a volt; joined in a row, pushes add up."
     },
     {
       "label": "Reading · 5",
-      "text": "One crowd of grains; the push decides."
+      "text": "Shade stops the push, so the light thinks it is night."
     },
     {
       "label": "Reading · 6",
-      "text": "Grains spread apart, and water sinks into the gaps."
+      "text": "Heat makes the inside jiggle, so each push gets weaker."
     },
     {
       "label": "Math · all",
-      "text": "73, 34, 83, 35, 43, 36."
+      "text": "45, 35, 83, 36, 82, 37."
     },
     {
       "label": "Screen-free",
-      "text": "Hard for a moment; tiny grains in water; grains poke up; it goes pale."
+      "text": "Its lamp turns on; an electron; so their pushes add up; on a cold, bright day."
     }
   ],
-  "parentGuidance": "Cornstarch goo is for touching, not tasting. Cover the table and wipe spills while wet. Never pour goo down a sink, because it can clog the drain; let it dry and put it in the trash.",
+  "parentGuidance": "Never look straight at the sun. Use only a small garden light or solar calculator; never open a panel, touch wires, or climb toward a roof panel.",
   "sources": [
     {
-      "label": "Brown and Jaeger — Shear thickening in concentrated suspensions (review, arXiv)",
-      "url": "https://arxiv.org/abs/1307.0269"
+      "label": "U.S. Energy Information Administration — Photovoltaics and electricity",
+      "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php"
     },
     {
-      "label": "Scientific American — Make water disappear with the wet-sand effect",
-      "url": "https://www.scientificamerican.com/article/make-water-disappear-with-the-wet-sand-effect/"
+      "label": "PVEducation — Module circuit design (about 0.5 V per silicon cell; cells joined in series)",
+      "url": "https://www.pveducation.org/pvcdrom/modules-and-arrays/module-circuit-design"
     },
     {
-      "label": "University of Manchester — Osborne Reynolds and dilatancy",
-      "url": "https://personalpages.manchester.ac.uk/staff/jdjackson/Osborne%20Reynolds/oreynb.htm"
+      "label": "PVEducation — Anti-reflection coatings (bare silicon reflects over 30%)",
+      "url": "https://www.pveducation.org/pvcdrom/design-of-silicon-cells/anti-reflection-coatings"
+    },
+    {
+      "label": "PVEducation — Effect of temperature on solar cells",
+      "url": "https://www.pveducation.org/pvcdrom/solar-cell-operation/effect-of-temperature"
+    },
+    {
+      "label": "Analog Devices StudentZone — Hacking an LED solar garden light (the panel doubles as the dark sensor)",
+      "url": "https://ez.analog.com/adiacademy/university-program/a/studentzone-articles/SA1116/hacking-an-led-solar-garden-light"
+    },
+    {
+      "label": "APS News — April 25, 1954: Bell Labs demonstrates the first practical silicon solar cell",
+      "url": "https://www.aps.org/apsnews/2009/04/bell-labs-silicon-solar-cell"
     }
   ],
   "levels": {
@@ -430,47 +444,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer mixes powder and water. The goo looks like milk. A slow push sinks in. A fast tap feels hard! How?",
-            "prompt": "What does a fast tap feel like?"
+            "passage": "Little Wonderer finds a garden light. It has a small dark square. The little one covers the square. The lamp glows!",
+            "prompt": "What happens to the lamp?"
           },
           {
             "id": "reach",
-            "passage": "Lay a spoon on the goo. It sinks slowly. Smack the goo fast. The spoon stops on top! Water does not do that.",
-            "prompt": "What does the smacked spoon do?"
+            "passage": "The dark square is a solar cell. It starts as sand. A blue coat helps it keep light.",
+            "prompt": "What does the cell start as?"
           },
           {
             "id": "change",
-            "passage": "Goo has tiny grains in water. Push slowly. The grains slide. Push fast. The grains bump and lock. That is a jam.",
-            "prompt": "What do the grains do when you push fast?"
+            "passage": "Light comes in tiny bits. They knock electrons loose. A one-way slide sends them round.",
+            "prompt": "What does light knock loose?"
           },
           {
             "id": "notice",
-            "passage": "Squeeze a goo ball. It looks dry and cracked. Stop squeezing. It melts into a shiny puddle.",
-            "prompt": "What does the ball do when you stop?"
+            "passage": "One cell gives a small push. Many cells sit in a row. Their pushes add up.",
+            "prompt": "Why are cells in a row?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer lifts a spoon. Goo drips slowly back down. The little one reaches up. Soft or hard? It depends on the push!",
-            "prompt": "What does the goo do on the spoon?"
+            "passage": "Big Wonderer holds a leaf up. The square is in shade. The push stops. The lamp glows!",
+            "prompt": "Why does the lamp glow?"
           },
           {
             "id": "keep",
-            "passage": "Step on wet sand. It turns pale around your foot. The grains move apart. Water sinks in. Wow!",
-            "prompt": "What color does the sand turn?"
+            "passage": "Panels like cold, sunny days. Heat makes the push weak. How can panels stay cool?",
+            "prompt": "Do panels like heat?"
           }
         ],
         "words": [
           {
-            "word": "goo",
-            "meaning": "a thick, sticky mix"
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into power"
           },
           {
-            "word": "grain",
-            "meaning": "a very tiny bit"
+            "word": "push",
+            "meaning": "what makes electricity move"
           },
           {
-            "word": "jam",
-            "meaning": "when bits lock and stop moving"
+            "word": "shade",
+            "meaning": "a spot the light cannot reach"
           }
         ]
       },
@@ -478,57 +492,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer pours 9 spoons of powder, then 6 more. How many spoons?",
+            "prompt": "Little Wonderer sees 9 garden lights, then 6 more. How many lights?",
             "expression": "9 + 6",
             "equation": "9 + 6 =",
             "answer": 15,
             "hint": "Make a ten: 9 + 1 + 5.",
-            "worked": "9 + 6 = 15. Add both sets of spoons."
+            "worked": "9 + 6 = 15. Add both sets of lights."
           },
           {
             "plate": "reach",
-            "prompt": "There are 14 spoons, and 6 sink. How many do not sink?",
-            "expression": "14 − 6",
-            "equation": "14 − 6 =",
-            "answer": 8,
-            "hint": "Take 6 away from 14.",
-            "worked": "14 − 6 = 8. Take away the spoons that sink."
+            "prompt": "There are 14 thin slices, and 5 become cells. How many are left?",
+            "expression": "14 − 5",
+            "equation": "14 − 5 =",
+            "answer": 9,
+            "hint": "Take 5 away from 14.",
+            "worked": "14 − 5 = 9. Take away the slices that became cells."
           },
           {
             "plate": "change",
-            "prompt": "There are 8 sliding grains and 9 jammed grains. How many grains?",
-            "expression": "8 + 9",
-            "equation": "8 + 9 =",
-            "answer": 17,
-            "hint": "Make a ten: 9 + 1 + 7.",
-            "worked": "8 + 9 = 17. Add the sliding and jammed grains."
+            "prompt": "In a pretend count, 8 photons hit, then 7 more. How many photons?",
+            "expression": "8 + 7",
+            "equation": "8 + 7 =",
+            "answer": 15,
+            "hint": "Make a ten: 8 + 2 + 5.",
+            "worked": "8 + 7 = 15. Add both sets of photons."
           },
           {
             "plate": "notice",
-            "prompt": "The ball has 16 cracks, and 9 melt away. How many are left?",
+            "prompt": "A panel has 12 cells, and 4 are in shade. How many are in the sun?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Take 4 away from 12.",
+            "worked": "12 − 4 = 8. Take away the shaded cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one counts 7 leaves, then 6 more. How many leaves?",
+            "expression": "7 + 6",
+            "equation": "7 + 6 =",
+            "answer": 13,
+            "hint": "Double 6, then add 1.",
+            "worked": "7 + 6 = 13. Add both sets of leaves."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A roof has 16 panels. Snow covers 9. How many are clear?",
             "expression": "16 − 9",
             "equation": "16 − 9 =",
             "answer": 7,
             "hint": "Take 9 away from 16.",
-            "worked": "16 − 9 = 7. Take away the melted cracks."
-          },
-          {
-            "plate": "return",
-            "prompt": "The big one sees 7 drips, then 7 more. How many drips?",
-            "expression": "7 + 7",
-            "equation": "7 + 7 =",
-            "answer": 14,
-            "hint": "Add seven and seven, like a double.",
-            "worked": "7 + 7 = 14. Add both sets of drips."
-          },
-          {
-            "plate": "keep",
-            "prompt": "There are 20 footprints, and 8 wash away. How many are left?",
-            "expression": "20 − 8",
-            "equation": "20 − 8 =",
-            "answer": 12,
-            "hint": "Count back 8 from 20.",
-            "worked": "20 − 8 = 12. Take away the washed-away footprints."
+            "worked": "16 − 9 = 7. Take away the snowy panels."
           }
         ]
       }
@@ -538,51 +552,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer stirs white powder into a bowl of water. The goo looks runny, like milk. A slow mitten sinks right in. A fast tap feels hard as a table. How can one goo do both?",
-            "prompt": "What happens with a fast tap?"
+            "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square. The little one covers it with a mitten. Click! The tiny lamp glows. How does it know?",
+            "prompt": "What happens when the square is covered?"
           },
           {
             "id": "reach",
-            "passage": "Rest one spoon on the goo and wait. It sinks slowly to the bottom. Now smack the goo with another spoon. It stops on top and leaves a dent. Water never acts like that.",
-            "prompt": "Which spoon sinks?"
+            "passage": "That dark square is a solar cell. It starts as sand. Sand holds silicon, a shiny grey stuff. Workers slice it very thin. A blue coat helps it keep more light.",
+            "prompt": "What is a solar cell made from?"
           },
           {
             "id": "change",
-            "passage": "Cornstarch is made of grains too tiny to see. Thin water sits between the grains. Push slowly, and the grains slide past. Push fast, and they crash and lock together. Scientists call that jamming.",
-            "prompt": "What is jamming?"
+            "passage": "Sunlight comes in tiny packets called photons. A photon knocks an electron loose. Inside the cell is a one-way slide. It sends the electron round a wire. That flow is electricity.",
+            "prompt": "What sends the electron round?"
           },
           {
             "id": "notice",
-            "passage": "Here is a strange clue. Squeeze a ball of goo, and it looks dry. Its skin turns dull and cracked. Stop squeezing, and it melts. The goo turns shiny and drips away.",
-            "prompt": "What happens when you stop squeezing?"
+            "passage": "Here is a clue. A big panel has many cells in rows. One cell gives only a small push. So the cells are joined end to end. Their small pushes add up.",
+            "prompt": "Why are the cells joined?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer lifts a spoon, and goo drips back down. The little one reaches for the slow ribbon. Now the guess changes. The goo is one crowd of grains. Quick pushes jam them, and gentle pushes let them slide.",
-            "prompt": "What decides if the goo is soft or hard?"
+            "passage": "Big Wonderer holds a leaf over the light. The little one points at the glowing lamp. Now the guess changes. The square keeps no sunlight. In shade, its push stops.",
+            "prompt": "What happens in the shade?"
           },
           {
             "id": "keep",
-            "passage": "Wet sand at the beach does a similar trick. Step on it, and it turns pale. Your step pushes the grains apart. Water sinks into the new gaps. How long can a jam last?",
-            "prompt": "Why does the sand turn pale?"
+            "passage": "Here is a surprise. Panels like cold, bright days. Heat makes the push of each cell weaker. A snowy roof can work very well. How could a panel stay cool?",
+            "prompt": "Why do panels like the cold?"
           }
         ],
         "words": [
           {
-            "word": "cornstarch",
-            "meaning": "a soft white powder made from corn"
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
           },
           {
-            "word": "grain",
-            "meaning": "a very tiny, hard bit"
+            "word": "silicon",
+            "meaning": "a shiny grey stuff made from sand"
           },
           {
-            "word": "jamming",
-            "meaning": "when crowded bits lock and stop sliding"
+            "word": "photon",
+            "meaning": "a tiny packet of light"
           },
           {
-            "word": "liquid",
-            "meaning": "something that flows, like water"
+            "word": "electron",
+            "meaning": "a tiny bit that carries electricity"
           }
         ]
       },
@@ -590,57 +604,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer pours 24 spoons of powder, then 17 more. How many spoons?",
+            "prompt": "Little Wonderer counts 24 garden lights, then 17 more. How many lights?",
             "expression": "24 + 17",
             "equation": "24 + 17 =",
             "answer": 41,
             "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "24 + 17 = 41. Add both sets of spoons."
+            "worked": "24 + 17 = 41. Add both sets of lights."
           },
           {
             "plate": "reach",
-            "prompt": "A resting spoon sinks 46 millimetres, but a smacked one sinks 19. How much deeper is the resting spoon?",
-            "expression": "46 − 19",
-            "equation": "46 − 19 =",
-            "answer": 27,
+            "prompt": "A box holds 43 thin slices, and 18 become cells. How many slices are left?",
+            "expression": "43 − 18",
+            "equation": "43 − 18 =",
+            "answer": 25,
             "hint": "Trade a ten for ones, then subtract.",
-            "worked": "46 − 19 = 27. Take away the smacked spoon."
+            "worked": "43 − 18 = 25. Take away the slices that became cells."
           },
           {
             "plate": "change",
-            "prompt": "A drawing shows 28 sliding grains and 15 jammed grains. How many grains?",
+            "prompt": "In a pretend count, 19 photons hit, then 26 more. How many photons?",
+            "expression": "19 + 26",
+            "equation": "19 + 26 =",
+            "answer": 45,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "19 + 26 = 45. Add both sets of photons."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A panel has 36 cells, and 12 are in shade. How many are in the sun?",
+            "expression": "36 − 12",
+            "equation": "36 − 12 =",
+            "answer": 24,
+            "hint": "Subtract the tens, then the ones.",
+            "worked": "36 − 12 = 24. Take away the shaded cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one counts 28 sunny minutes, then 15 more. How many minutes?",
             "expression": "28 + 15",
             "equation": "28 + 15 =",
             "answer": 43,
             "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "28 + 15 = 43. Add the sliding and jammed grains."
-          },
-          {
-            "plate": "notice",
-            "prompt": "The ball has 35 cracks, and 18 melt away. How many are left?",
-            "expression": "35 − 18",
-            "equation": "35 − 18 =",
-            "answer": 17,
-            "hint": "Trade a ten for ones, then subtract.",
-            "worked": "35 − 18 = 17. Take away the melted cracks."
-          },
-          {
-            "plate": "return",
-            "prompt": "The big one counts 16 drips, then 22 more. How many drips?",
-            "expression": "16 + 22",
-            "equation": "16 + 22 =",
-            "answer": 38,
-            "hint": "Add the tens, then the ones.",
-            "worked": "16 + 22 = 38. Add both sets of drips."
+            "worked": "28 + 15 = 43. Add both sets of minutes."
           },
           {
             "plate": "keep",
-            "prompt": "There are 50 footprints, and 26 wash away. How many are left?",
-            "expression": "50 − 26",
-            "equation": "50 − 26 =",
-            "answer": 24,
+            "prompt": "A town has 50 roof panels, and snow covers 23. How many are clear?",
+            "expression": "50 − 23",
+            "equation": "50 − 23 =",
+            "answer": 27,
             "hint": "Trade a ten for ones, then subtract.",
-            "worked": "50 − 26 = 24. Take away the washed-away footprints."
+            "worked": "50 − 23 = 27. Take away the snowy panels."
           }
         ]
       }
@@ -650,59 +664,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer stirred white cornstarch powder into a bowl of water until it looked like thick milk. A slow mitten pressed into it and sank right in, as if into warm pudding. Then the little one tapped the surface fast, and it felt as hard as a tabletop. Big Wonderer leaned in to watch. How could the same bowl of goo be soft one moment and hard the next?",
-            "prompt": "Why is it strange that the goo feels hard?"
+            "passage": "Little Wonderer found a garden light standing beside the path, with a small dark square on its cap crossed by thin silver lines. The little one held a mitten over the square, and with a soft click the tiny lamp began to glow. Big Wonderer leaned in to watch. How could a small square of glass tell day from night?",
+            "prompt": "What made the lamp switch on?"
           },
           {
             "id": "reach",
-            "passage": "Rest one spoon on the goo, and it slowly sinks to the bottom of the bowl. Smack the goo with a second spoon, and the spoon stops at the top, leaving a dull dent. Most liquids, like water and honey, stay just as runny no matter how fast you push them. Isaac Newton described that rule, so a goo that breaks it is called non-Newtonian.",
-            "prompt": "What rule does the goo break?"
+            "passage": "That dark square is a solar cell, and it begins as ordinary sand. Sand holds silicon, a shiny grey material. Workers melt it, grow it into a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light. A coat thinner than a soap bubble turns it dark blue and helps it keep more light.",
+            "prompt": "Why do makers give the cell a coat?"
           },
           {
             "id": "change",
-            "passage": "Cornstarch is made of grains so tiny that about five could sit side by side across one hair. In the goo, a thin layer of water sits between the grains like a slippery cushion. Push slowly, and the water has time to slip aside, so the grains slide past each other. Push fast, and the grains are shoved together before the water can move, so they rub and lock into chains. Scientists call this jamming.",
-            "prompt": "Why does the speed of the push matter?"
+            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet there is a built-in push that works like a one-way slide. When a photon knocks an electron loose, the slide sends it out one side of the cell. It travels along a wire, through the lamp, and back in the other side. That flow is electricity.",
+            "prompt": "Where does the loose electron go?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. Squeeze a ball of goo, and its skin turns dull and cracked, almost as if it were drying out. Jammed grains need a little more room, so they poke up through the water at the surface. When the squeezing stops, the grains settle back, the water covers them again, and the ball slumps into a shiny puddle.",
-            "prompt": "What makes the skin of the ball look dull?"
+            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up. Thin silver lines on each cell gather the electrons.",
+            "prompt": "How do many small pushes become a big one?"
           },
           {
             "id": "return",
-            "passage": "Back at the table, Big Wonderer lifted a spoonful, and a slow ribbon of goo dripped back into the bowl. The little one reached up toward the ribbon. Now the guess changed. The goo is not two different things at all. It is one crowd of grains in water, and the push decides what it does. Gentle pushes let the grains slide, but quick pushes jam them for a moment.",
-            "prompt": "What decides what the goo does?"
+            "passage": "Back on the path, Big Wonderer held a leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, like a sponge. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and when shade stops the push, the light decides it is night.",
+            "prompt": "How does the garden light know it is night?"
           },
           {
             "id": "keep",
-            "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot for a moment. Your step pushes the grains apart, so water sinks down into the new gaps. A scientist named Osborne Reynolds explained this in 1885 and called it dilatancy. People have even run across a pool of goo, but anyone who stops starts to sink. How long can a jam last?",
-            "prompt": "Why do runners sink if they stop?"
+            "passage": "Here is a surprise. Solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
+            "prompt": "Why does a hot panel make less power?"
           }
         ],
         "words": [
           {
-            "word": "non-Newtonian",
-            "meaning": "a liquid whose thickness changes when you push it harder or faster"
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
           },
           {
-            "word": "grain",
-            "meaning": "a very small, hard bit of something"
+            "word": "silicon",
+            "meaning": "a shiny grey material made from sand"
           },
           {
-            "word": "cushion",
-            "meaning": "a soft layer that keeps two things from rubbing"
+            "word": "crystal",
+            "meaning": "a solid whose tiny parts line up in a neat pattern"
           },
           {
-            "word": "jamming",
-            "meaning": "when crowded grains lock together and stop sliding"
+            "word": "photon",
+            "meaning": "a tiny packet of light energy"
           },
           {
-            "word": "surface",
-            "meaning": "the top or outside layer of something"
+            "word": "electron",
+            "meaning": "a tiny bit of matter that carries electricity"
           },
           {
-            "word": "dilatancy",
-            "meaning": "when packed grains spread apart and take up more room as they are pushed"
+            "word": "volt",
+            "meaning": "a measure of how hard electricity is pushed"
           }
         ]
       },
@@ -710,57 +724,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer stirs 8 spoons of powder into each of 7 bowls. How many spoons?",
+            "prompt": "A shop packs garden lights in boxes of 8, and Little Wonderer counts 7 boxes. How many lights?",
             "expression": "8 × 7",
             "equation": "8 × 7 =",
             "answer": 56,
             "hint": "Eight groups of seven.",
-            "worked": "8 × 7 = 56. Eight spoons in each of seven bowls."
+            "worked": "8 × 7 = 56. Eight lights in each of seven boxes."
           },
           {
             "plate": "reach",
-            "prompt": "A resting spoon sinks 245 millimetres into a deep tub of goo, but a smacked spoon sinks only 68. How much deeper is the resting spoon?",
-            "expression": "245 − 68",
-            "equation": "245 − 68 =",
-            "answer": 177,
+            "prompt": "A factory slices 640 silicon wafers, and 175 crack. How many good wafers are left?",
+            "expression": "640 − 175",
+            "equation": "640 − 175 =",
+            "answer": 465,
             "hint": "Subtract each place; regroup when needed.",
-            "worked": "245 − 68 = 177. Take away the smacked spoon."
+            "worked": "640 − 175 = 465. Take away the cracked wafers."
           },
           {
             "plate": "change",
-            "prompt": "A drawing shows 9 chains with 6 jammed grains in each. How many grains?",
-            "expression": "9 × 6",
-            "equation": "9 × 6 =",
-            "answer": 54,
-            "hint": "Nine groups of six.",
-            "worked": "9 × 6 = 54. Nine chains of six grains."
+            "prompt": "In a pretend count, a cell frees 386 electrons, then 247 more. How many electrons?",
+            "expression": "386 + 247",
+            "equation": "386 + 247 =",
+            "answer": 633,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "386 + 247 = 633. Add both groups of electrons."
           },
           {
             "plate": "notice",
-            "prompt": "A class makes 375 goo balls in fall and 286 in spring. How many goo balls?",
-            "expression": "375 + 286",
-            "equation": "375 + 286 =",
-            "answer": 661,
-            "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "375 + 286 = 661. Add the fall and spring balls."
+            "prompt": "A panel has 6 rows with 10 cells in each row. How many cells?",
+            "expression": "6 × 10",
+            "equation": "6 × 10 =",
+            "answer": 60,
+            "hint": "Six groups of ten.",
+            "worked": "6 × 10 = 60. Six rows of ten cells."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer shares 72 spoonfuls of goo equally among 8 cups. How many spoonfuls go in each cup?",
-            "expression": "72 ÷ 8",
-            "equation": "72 ÷ 8 =",
+            "prompt": "Big Wonderer plants 81 garden lights equally along 9 paths. How many lights go on each path?",
+            "expression": "81 ÷ 9",
+            "equation": "81 ÷ 9 =",
             "answer": 9,
-            "hint": "Share 72 into 8 equal groups.",
-            "worked": "72 ÷ 8 = 9. Each cup gets the same number of spoonfuls."
+            "hint": "Share 81 into 9 equal groups.",
+            "worked": "81 ÷ 9 = 9. Each path gets the same number of lights."
           },
           {
             "plate": "keep",
-            "prompt": "A beach has 520 footprints, and waves wash away 275. How many are left?",
-            "expression": "520 − 275",
-            "equation": "520 − 275 =",
-            "answer": 245,
+            "prompt": "In a pretend test, a cold panel makes 412 units of power and a hot one makes 368. How many more does the cold panel make?",
+            "expression": "412 − 368",
+            "equation": "412 − 368 =",
+            "answer": 44,
             "hint": "Subtract each place; regroup when needed.",
-            "worked": "520 − 275 = 245. Take away the washed-away footprints."
+            "worked": "412 − 368 = 44. Take the hot panel from the cold one."
           }
         ]
       }
@@ -770,63 +784,63 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer stirred white cornstarch powder into a bowl of water, about two scoops of powder for every scoop of water, until it looked like thick milk. A slow mitten pressed gently into the goo and sank right in, as if into warm pudding. Then the little one tapped the surface quickly, and it felt as hard as a wooden tabletop. Leaning in close, Big Wonderer watched the dent fade away. How could the same bowl of goo be soft one moment and hard the next?",
-            "prompt": "What two ways does the goo behave?"
+            "passage": "Little Wonderer found a garden light standing beside the gravel path, with a small dark square on its cap crossed by thin silver lines. Curious, the little one held a mitten flat over the square, and with a soft click the tiny frosted lamp began to glow, as if night had arrived early. Leaning in close, Big Wonderer watched the warm glow appear. How could a small square of glass tell the difference between day and night?",
+            "prompt": "What made the lamp switch on in daylight?"
           },
           {
             "id": "reach",
-            "passage": "Rest one spoon on the goo, and it slowly sinks all the way to the bottom of the bowl. Smack the goo with a second spoon, and that spoon stops at the top, leaving a firm, dull dent with tiny cracks around it. Most liquids, such as water and honey, stay just as runny no matter how fast you push them. Isaac Newton described that rule long ago, so a goo that breaks it is called non-Newtonian. This kind, which gets thicker when pushed hard, is called shear thickening.",
-            "prompt": "What does shear thickening mean?"
+            "passage": "That dark square is a solar cell, and it begins as ordinary sand, which holds a shiny grey material called silicon. Workers melt the silicon, grow it into a big crystal, and slice it into wafers thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light that hits it. So makers add a coat thinner than a soap bubble, which turns the cell dark blue and helps it keep more light.",
+            "prompt": "Why would a shiny cell waste light?"
           },
           {
             "id": "change",
-            "passage": "Cornstarch is made of grains so tiny that about five could sit side by side across a single hair. In the goo, a thin layer of water sits between the grains like a slippery cushion. Push slowly, and the water has time to slip aside, so the grains glide past each other like skaters. Push fast, and the grains are shoved together before the water can escape, so they rub, grip and lock into chains that carry the push down to the bottom of the bowl. Scientists call this jamming.",
-            "prompt": "How do the chains of grains stop a fast push?"
+            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet a built-in push forms, working like a one-way slide. When a photon with enough energy knocks an electron loose, the slide sends it out one side of the cell, along a wire, through the lamp and back in the other side. Light with too little energy cannot free an electron. Extra energy simply warms the cell.",
+            "prompt": "What happens to light with too little energy?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. Squeeze a ball of goo, and its skin turns dull and cracked, almost as if it were drying out. Jammed grains need a little more room, so they spread apart and poke up through the water at the surface, scattering the light. When the squeezing stops, the grains settle back, the water covers them again, and within a moment the ball slumps into a shiny puddle that drips off the saucer.",
-            "prompt": "Why does the ball turn shiny again?"
+            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up, and many panels hold 36 cells or more. If one cell sits in shade, it can slow the whole row, like a kink in a garden hose.",
+            "prompt": "Why can one shaded cell slow a whole row?"
           },
           {
             "id": "return",
-            "passage": "Back at the table, Big Wonderer lifted a spoonful, and a slow, glossy ribbon of goo dripped back into the bowl. The little one reached up toward the ribbon, wondering how something so runny had felt so hard. Now the guess changed. The goo is not two different things at all, but one crowd of grains in water, and the push decides what it does. Gentle pushes let the grains slide, while quick pushes jam them into a solid patch that grows ahead of the push, like snow piling up in front of a shovel.",
-            "prompt": "How is a jam like snow in front of a shovel?"
+            "passage": "Back on the path, Big Wonderer held a broad leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, the way a sponge holds water. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and in many garden lights the same square works as the sensor, so when shade stops its push, the light decides that night has come.",
+            "prompt": "How can one square be both a power maker and a sensor?"
           },
           {
             "id": "keep",
-            "passage": "Wet sand at the beach plays a cousin of this trick. Step on firm, wet sand, and it turns pale around your foot for a moment. Your step pushes the grains apart, so water sinks down into the new gaps and the top looks dry. A scientist named Osborne Reynolds explained this in 1885 and called it dilatancy. People have even run across a whole pool of cornstarch goo, but anyone who stands still slowly sinks, because each jam melts in less than a second. How long could a jam be made to last?",
-            "prompt": "Why does a runner who stands still sink?"
+            "passage": "Here is a surprise: solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel ends up as heat, not electricity. In 1954, one of the first useful silicon panels spun a toy Ferris wheel in New Jersey. How could a panel stay cool while sitting in the sun all day?",
+            "prompt": "Where does most of the sunlight's energy go?"
           }
         ],
         "words": [
           {
-            "word": "non-Newtonian",
-            "meaning": "a liquid whose thickness changes with how hard or fast it is pushed"
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
           },
           {
-            "word": "shear thickening",
-            "meaning": "getting thicker when pushed or stirred quickly"
+            "word": "silicon",
+            "meaning": "a shiny grey material made from sand"
           },
           {
-            "word": "grain",
-            "meaning": "a very small, hard bit of something"
+            "word": "wafer",
+            "meaning": "a very thin slice of silicon"
           },
           {
-            "word": "cushion",
-            "meaning": "a soft layer that keeps two things from rubbing"
+            "word": "photon",
+            "meaning": "a tiny packet of light energy"
           },
           {
-            "word": "jamming",
-            "meaning": "when crowded grains lock together and stop sliding"
+            "word": "electron",
+            "meaning": "a tiny bit of matter that carries electricity"
           },
           {
-            "word": "surface",
-            "meaning": "the top or outside layer of something"
+            "word": "volt",
+            "meaning": "a measure of how hard electricity is pushed"
           },
           {
-            "word": "dilatancy",
-            "meaning": "when packed grains spread apart and take up more room as they are pushed"
+            "word": "sensor",
+            "meaning": "a part that notices a change, like light or heat"
           }
         ]
       },
@@ -834,147 +848,157 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that a factory packs 3480 boxes of cornstarch in the morning and 2765 in the afternoon. How many boxes in all?",
-            "expression": "3480 + 2765",
-            "equation": "3480 + 2765 =",
-            "answer": 6245,
+            "prompt": "Little Wonderer learns that a town has 2480 garden lights on the east side and 1765 on the west. How many garden lights in all?",
+            "expression": "2480 + 1765",
+            "equation": "2480 + 1765 =",
+            "answer": 4245,
             "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "3480 + 2765 = 6245. Add the morning and afternoon boxes."
+            "worked": "2480 + 1765 = 4245. Add the east and west lights."
           },
           {
             "plate": "reach",
-            "prompt": "A test tub holds 8000 millilitres of goo, and 3175 millilitres are scooped out. How many millilitres are left?",
-            "expression": "8000 − 3175",
-            "equation": "8000 − 3175 =",
-            "answer": 4825,
+            "prompt": "A factory slices 5000 silicon wafers, and 1836 are sent to be coated first. How many wafers are left to coat later?",
+            "expression": "5000 − 1836",
+            "equation": "5000 − 1836 =",
+            "answer": 3164,
             "hint": "Regroup across the zeros.",
-            "worked": "8000 − 3175 = 4825. Take away the goo scooped out."
+            "worked": "5000 − 1836 = 3164. Take away the wafers coated first."
           },
           {
             "plate": "change",
-            "prompt": "A model shows 1250 grains in each of 7 chains. How many grains?",
-            "expression": "1250 × 7",
-            "equation": "1250 × 7 =",
-            "answer": 8750,
-            "hint": "Think 7 × 1000 and 7 × 250.",
-            "worked": "1250 × 7 = 8750. Seven chains of 1250 grains."
+            "prompt": "In a pretend count, each of 8 cells frees 1125 electrons. How many electrons?",
+            "expression": "1125 × 8",
+            "equation": "1125 × 8 =",
+            "answer": 9000,
+            "hint": "Think 8 × 1000 and 8 × 125.",
+            "worked": "1125 × 8 = 9000. Eight cells of 1125 electrons."
           },
           {
             "plate": "notice",
-            "prompt": "A science fair makes 4725 goo balls on one day and 1890 the next. How many goo balls in all?",
-            "expression": "4725 + 1890",
-            "equation": "4725 + 1890 =",
-            "answer": 6615,
-            "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "4725 + 1890 = 6615. Add both days of goo balls."
+            "prompt": "A roof has 9 panels with 60 cells in each. How many cells?",
+            "expression": "60 × 9",
+            "equation": "60 × 9 =",
+            "answer": 540,
+            "hint": "Think 9 × 6 tens.",
+            "worked": "60 × 9 = 540. Nine panels of sixty cells."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer shares 4536 spoonfuls of goo equally among 8 tubs. How many spoonfuls go in each tub?",
-            "expression": "4536 ÷ 8",
-            "equation": "4536 ÷ 8 =",
-            "answer": 567,
-            "hint": "Split 4536 into 4000, 480 and 56, then divide each part by 8.",
-            "worked": "4536 ÷ 8 = 567. Each tub gets the same number of spoonfuls."
+            "prompt": "Big Wonderer learns that 2520 minutes of sunshine were shared equally over 7 days. How many minutes each day?",
+            "expression": "2520 ÷ 7",
+            "equation": "2520 ÷ 7 =",
+            "answer": 360,
+            "hint": "Split 2520 into 2100 and 420, then divide each part by 7.",
+            "worked": "2520 ÷ 7 = 360. Each day gets the same number of minutes."
           },
           {
             "plate": "keep",
-            "prompt": "A goo pool holds 7200 cups of goo, and runners splash out 3456 cups. How many cups are left?",
-            "expression": "7200 − 3456",
-            "equation": "7200 − 3456 =",
-            "answer": 3744,
-            "hint": "Regroup across the zeros.",
-            "worked": "7200 − 3456 = 3744. Take away the cups splashed out."
+            "prompt": "A solar farm has 8400 panels, and snow covers 3675. How many panels are clear?",
+            "expression": "8400 − 3675",
+            "equation": "8400 − 3675 =",
+            "answer": 4725,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "8400 − 3675 = 4725. Take away the snowy panels."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "quiz-cards"
+    "lab-page"
   ],
-  "quiz": {
-    "title": "Four looks at goo",
-    "intro": "Follow the grains from a slow press to a fast tap.",
-    "questions": [
-      {
-        "id": "tap",
-        "prompt": "What happens if you tap the goo fast?",
-        "choices": [
-          "It splashes like water",
-          "It feels hard for a moment",
-          "It turns blue"
-        ],
-        "answerIndex": 1,
-        "answer": "A fast tap jams the grains, so the goo feels hard for a moment."
-      },
-      {
-        "id": "grains",
-        "prompt": "What is cornstarch goo made of?",
-        "choices": [
-          "Tiny grains in water",
-          "Melted plastic",
-          "Glue and sugar"
-        ],
-        "answerIndex": 0,
-        "answer": "It is tiny cornstarch grains with thin water between them."
-      },
-      {
-        "id": "ball",
-        "prompt": "Why does squeezed goo look dry?",
-        "choices": [
-          "The water freezes",
-          "It dries out for good",
-          "Grains poke through water"
-        ],
-        "answerIndex": 2,
-        "answer": "Jammed grains need more room, so they poke up through the water."
-      },
-      {
-        "id": "sand",
-        "prompt": "What does wet sand do when you step on it?",
-        "choices": [
-          "It goes pale by your foot",
-          "It turns into goo",
-          "It gets darker and wetter"
-        ],
-        "answerIndex": 0,
-        "answer": "The grains spread apart and water sinks in, so the top looks dry."
-      }
+  "labPage": {
+    "materials": [
+      "a solar garden light",
+      "a dim room or a closet",
+      "a large leaf or a piece of cardboard",
+      "a solar calculator, if you have one",
+      "a dark cloth and a white cloth",
+      "paper and pencil"
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "Cornstarch Goo",
-    "line": "Soft when you are slow, hard when you are fast.",
+    "title": "How Solar Panels Work",
+    "line": "Tiny packets of light, one small push at a time.",
     "plate": "wake"
   },
   "poem": {
-    "title": "The Spoon They Forgot",
+    "title": "The Coolest Panel",
     "lines": [
-      "Little Wonderer mixed up a bowl full of goo,",
-      "two scoops of white powder, one splash of water too.",
-      "Push slow, and your mitten sinks down with a sigh.",
-      "Push fast, and it’s hard as a rock. My, oh my!",
+      "Little Wonderer found a flat square of blue",
+      "with silver-thin stripes running all the way through.",
+      "“It’s sleeping,” the little one whispered. “Don’t peep.”",
+      "“It’s working,” said Big Wonderer. “Too bright to sleep.”",
       "",
-      "“It’s grains,” said the big one, “too tiny to see,",
-      "all slipping on water as slick as can be.",
-      "Go gently, they glide past each other with ease.",
-      "Go quickly, they jam like a crowd in a squeeze.”",
+      "“The sunshine comes down in small packets of light.",
+      "Each knocks an electron loose, left and right.",
+      "A one-way slide inside sends it off down the wire,",
+      "round the lamp and back home, and it never gets tired.”",
       "",
-      "So the little one rolled it, round, round, in a ball,",
-      "and it looked dry and cracked, like no goo at all.",
-      "But the moment it stopped, the ball came undone",
-      "and dribbled away in a puddle of fun.",
+      "“A hot panel,” the big one said, “loses its push.",
+      "It works best when it’s cool.” And then, with a whoosh,",
+      "the little one hurried away down the hall",
+      "to make it the hardest-working panel of all.",
       "",
-      "“So is it a liquid, or is it a rock?”",
-      "Big Wonderer shrugged. “It depends on the knock.”",
-      "They argued till supper, both sure they were right,",
-      "while the spoon they forgot sank slowly from sight."
+      "It’s frosty in there, and it’s cool as can be,",
+      "tucked in with the ice cubes and bags of green peas.",
+      "The coldest, best panel that ever was found,",
+      "but it’s dark when that door shuts. Not one spark goes round."
     ],
     "drawing": {
-      "src": "assets/cornstarch-goo/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer, the little one walking carefully with a round ball of goo dripping in both hands while the big one kneels nearby pointing at a shallow bowl."
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer in a kitchen, the little one walking toward a closed freezer door carrying a small flat solar panel while the big one kneels and points up at a sunny window."
     }
+  },
+  "quiz": {
+    "title": "Four looks at sunlight",
+    "intro": "Follow the light from a garden lamp to a snowy roof.",
+    "questions": [
+      {
+        "id": "shade",
+        "prompt": "What happens when you shade a garden light?",
+        "choices": [
+          "Its lamp turns on",
+          "It gets hot",
+          "It turns blue"
+        ],
+        "answerIndex": 0,
+        "answer": "Shade stops the push, so the light thinks it is night and turns on."
+      },
+      {
+        "id": "photon",
+        "prompt": "What does a photon knock loose?",
+        "choices": [
+          "A grain of sand",
+          "An electron",
+          "A silver line"
+        ],
+        "answerIndex": 1,
+        "answer": "A photon can knock an electron loose inside the silicon."
+      },
+      {
+        "id": "row",
+        "prompt": "Why are cells joined in a row?",
+        "choices": [
+          "To look neat",
+          "To keep out rain",
+          "So their pushes add up"
+        ],
+        "answerIndex": 2,
+        "answer": "One cell gives only about half a volt, so joined cells add their pushes."
+      },
+      {
+        "id": "cold",
+        "prompt": "When does a panel push hardest?",
+        "choices": [
+          "On a cold, bright day",
+          "On a hot, cloudy day",
+          "At night"
+        ],
+        "answerIndex": 0,
+        "answer": "In the same sunshine, a cold panel makes more power than a hot one."
+      }
+    ]
   }
 }

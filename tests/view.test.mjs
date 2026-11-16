@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "cornstarch-goo");
-  assert.equal(latest.date, "2026-11-13");
+  assert.equal(latest.slug, "how-solar-panels-turn-sunlight-into-electricity");
+  assert.equal(latest.date, "2026-11-16");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-solar-panels-turn-sunlight-into-electricity",
       "cornstarch-goo",
       "how-holograms-work",
       "how-velcro-works",
@@ -158,20 +159,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [73, 34, 83, 35, 43, 36],
+    [45, 35, 83, 36, 82, 37],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "number-crunch");
+  assert.equal(todayPack.mathTemplate, "story-problems");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["addition-regrouping", 46, 27],
-      ["subtraction-regrouping", 52, 18],
-      ["addition-regrouping", 38, 45],
-      ["subtraction-regrouping", 63, 28],
-      ["addition-regrouping", 19, 24],
-      ["subtraction-regrouping", 72, 36],
+      ["one-step-add", 27, 18],
+      ["one-step-subtract", 64, 29],
+      ["one-step-add", 36, 47],
+      ["one-step-subtract", 60, 24],
+      ["one-step-add", 45, 37],
+      ["one-step-subtract", 72, 35],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

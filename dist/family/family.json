@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "cornstarch goo",
-        "why": "Comparing a hard press with a gentle touch helps your child use observations to explain how a material behaves.",
-        "date": "2026-11-13",
+        "topic": "how solar panels turn sunlight into electricity",
+        "why": "Following light from a garden lamp to a rooftop helps your child explain a hidden cause with pictures and words.",
+        "date": "2026-11-16",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -21,12 +21,12 @@
             "label": "Print explainer"
           },
           {
-            "href": "./today/pdf/quiz-cards.pdf",
-            "label": "Quiz cards"
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
           },
           {
-            "href": "./today/pdf/quiz-cards-key.pdf",
-            "label": "Grown-ups: quiz cards answer key"
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

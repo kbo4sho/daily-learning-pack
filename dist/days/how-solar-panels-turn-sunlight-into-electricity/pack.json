@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-solar-panels-turn-sunlight-into-electricity",
+  "topic": "how solar panels turn sunlight into electricity",
+  "why": "Following light from a garden lamp to a rooftop helps your child explain a hidden cause with pictures and words.",
+  "teaser": "Shade a garden light and it glows, then follow tiny packets of light as they knock electrons down a one-way slide.",
+  "aliases": [
+    "solar panels",
+    "solar cells",
+    "photovoltaics",
+    "solar power",
+    "sunlight to electricity",
+    "solar garden light",
+    "silicon"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "story-problems",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "one-step-add",
+      "one-step-subtract"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Solar Panels",
+  "title": "How Solar Panels Turn Sunlight into Electricity",
+  "question": "How can a dark square of glass turn sunlight into electricity?",
+  "idea": "A solar cell is a thin slice of silicon made in two layers. Where the layers meet, a built-in push acts like a one-way slide. Light knocks electrons loose, and the push sends them round a wire. One cell gives only a small push, so panels join many cells in a row.",
+  "curiosity": {
+    "intro": "Start with a garden light that glows when you shade it. Then follow sand to a cell, peek inside, count the cells in a panel, and visit a snowy roof.",
+    "carryForward": "Next time you pass a solar panel, look for its rows of cells and thin silver lines.",
+    "questions": [
+      {
+        "id": "sand",
+        "plate": "reach",
+        "question": "Why is a solar cell dark blue?",
+        "notice": "Follow the row from sand to a grey lump, a shiny slice and a dark blue cell.",
+        "say": "A solar cell is made of silicon, which is made from sand. Bare silicon is shiny, and it bounces away about a third of the light that hits it. Makers add a coat thinner than a soap bubble. The coat makes the cell look dark blue and helps it keep more light.",
+        "try": "Look at a shiny spoon and a dark mug in sunlight. Which one throws more glare into your eyes? Shiny things keep less light."
+      },
+      {
+        "id": "layers",
+        "plate": "change",
+        "question": "How does light make electricity?",
+        "notice": "Find the two thin layers and the tiny beads near the line where they meet.",
+        "say": "Light travels in tiny packets called photons. A photon with enough energy can knock an electron loose inside the silicon. Where the two layers meet, a built-in push acts like a one-way slide. It sends loose electrons out through a wire, round the loop and back in the other side. That flow is electricity.",
+        "try": "Stand in a circle with your family and hold hands. Pass a gentle squeeze all the way round. Electrons move round a loop of wire in a similar way."
+      },
+      {
+        "id": "panel",
+        "plate": "notice",
+        "question": "Why does a panel need so many cells?",
+        "notice": "Count the cells in one row and find the thin silver lines on each cell.",
+        "say": "One silicon cell gives a push of only about half a volt. A small battery gives about three times that. So makers join cells end to end, and the small pushes add up. Many panels hold 36 cells or more. The thin silver lines are wires that gather the electrons.",
+        "try": "Stack three books. Each one is a small step, but together they make a tall one. Cells add their pushes the same way."
+      },
+      {
+        "id": "roof",
+        "plate": "keep",
+        "question": "Why do panels like cold, bright days?",
+        "notice": "Find the snow on the roof and the clear, dark panels in the low light.",
+        "say": "Heat makes everything inside the silicon jiggle more, and that weakens the push of each cell. In the same sunshine, a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel turns into heat, not electricity.",
+        "try": "Lay a dark cloth and a white cloth in the sun for ten minutes. Which one feels warmer? Dark panels warm up in the sun, too."
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light-fold.jpg",
+      "title": "A light that waits",
+      "alt": "Big and Little Wonderer on a pale garden path, the little one kneeling beside a solar garden light and holding a mitten over the small dark panel on its cap while the big one leans in to watch the lamp glow.",
+      "caption": "Shade the small dark square, and the lamp glows."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand-fold.jpg",
+      "title": "From sand to cell",
+      "alt": "A field-guide study on a garden stone of four things in a row: a small heap of sand, a rough grey lump of silicon, a thin shiny round slice, and a dark blue square solar cell with fine silver lines.",
+      "caption": "Sand becomes silicon, then a thin slice, then a dark blue cell."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers-fold.jpg",
+      "title": "A one-way slide",
+      "alt": "A field-guide study of a dark blue solar cell in soft light, with a large magnified circle showing two thin stacked layers and tiny pale beads lifting near the line where they meet.",
+      "caption": "Light knocks electrons loose. A one-way push sends them round."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel-fold.jpg",
+      "title": "Cells in a row",
+      "alt": "A solar panel made of many dark blue square cells with thin silver lines, joined in long rows, resting on a garden stone beside three loose cells and one small plain battery, with a garden light nearby.",
+      "caption": "Each cell gives a small push. Joined in rows, the pushes add up."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade-fold.jpg",
+      "title": "Shade means night",
+      "alt": "Big and Little Wonderer back on the garden path, the big one sitting and holding a large leaf over the solar garden light so its panel is shaded, the little one standing and pointing at the glowing lamp.",
+      "caption": "No light, no push, so the garden light thinks it is night."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.jpg",
+      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.png",
+      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof-fold.jpg",
+      "title": "Cold and bright",
+      "alt": "A small house roof on a cold, clear winter morning, with snow on the roof and ground and a block of dark solar panels clear of snow in the low light, and a small garden light standing by the snowy path.",
+      "caption": "Cold, bright days help a panel push harder."
+    }
+  ],
+  "reading": {
+    "title": "The dark square on the garden light",
+    "coverPlate": "wake",
+    "coverText": "Start with a garden light that glows in the shade. Then follow sunlight into a thin slice of silicon and out along a wire.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Never look straight at the sun.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A light that waits",
+        "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square with thin silver lines. The little one holds a mitten over the square. Click! The tiny lamp glows, as if night came early. Big Wonderer leans in to look. How can a small square tell day from night?",
+        "prompt": "What happens when the little one covers the square?",
+        "foldable": {
+          "heading": "A light that waits",
+          "body": "A garden light has a small dark square on its cap. Cover it with a mitten, and the tiny lamp glows."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "From sand to cell",
+        "passage": "That dark square is a solar cell, and it starts as sand. Sand holds silicon, a shiny grey stuff. Workers melt it, grow a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces sunlight away. A thin coat turns it dark blue, so more light soaks in.",
+        "prompt": "Why does the cell get a thin blue coat?",
+        "foldable": {
+          "heading": "From sand to cell",
+          "body": "A solar cell starts as sand. Silicon is melted, sliced thin and given a blue coat so it keeps more light."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "A one-way slide",
+        "passage": "Sunlight comes in tiny packets called photons. Inside the cell, two thin layers are pressed together. Where they meet, there is a push that works like a one-way slide. A photon knocks a tiny electron loose. The slide sends it out one side, along a wire and through the lamp. Then it comes back in the other side. That flow is electricity.",
+        "prompt": "What does a photon do inside the cell?",
+        "foldable": {
+          "heading": "A one-way slide",
+          "body": "Light comes in tiny packets called photons. Each can knock an electron loose. A one-way slide sends it round a wire."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Cells in a row",
+        "passage": "Here is a clue. A big panel is made of many small cells in rows. One cell gives only a small push, about half a volt. A small battery gives about three times as much. So the cells are joined end to end, and their pushes add up. Thin silver lines on each cell gather the electrons.",
+        "prompt": "Why are so many cells joined in a row?",
+        "foldable": {
+          "heading": "Cells in a row",
+          "body": "One cell gives only a small push. A panel joins many cells in rows, so all their small pushes add up."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "Shade means night",
+        "passage": "Back on the path, Big Wonderer holds a leaf over the garden light. The little one points as the lamp glows again. Now the guess changes. The square does not keep sunlight like a sponge. It pushes electrons only while light lands on it. All day, that push fills a little battery inside. When shade stops the push, the light thinks it is night.",
+        "prompt": "Why does the lamp glow in the shade?",
+        "foldable": {
+          "heading": "Shade means night",
+          "body": "The square pushes only while light lands on it. When shade stops the push, the garden light thinks it is night."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Cold and bright",
+        "passage": "Here is a surprise. Solar panels like cold, bright days. Heat makes the inside of each cell jiggle, so its push gets weaker. In the same sunshine, a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
+        "prompt": "Why does heat weaken a solar panel?",
+        "foldable": {
+          "heading": "Cold and bright",
+          "body": "Heat weakens the push of each cell. In the same sunshine, a cold panel makes more power. How could it stay cool?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "solar cell",
+        "meaning": "a thin slice that turns light into electricity"
+      },
+      {
+        "word": "silicon",
+        "meaning": "a shiny grey stuff made from sand"
+      },
+      {
+        "word": "photon",
+        "meaning": "a tiny packet of light"
+      },
+      {
+        "word": "electron",
+        "meaning": "a tiny bit of matter that carries electricity"
+      },
+      {
+        "word": "volt",
+        "meaning": "a measure of how hard electricity is pushed"
+      }
+    ],
+    "questions": [
+      "What happens when you cover the square on a garden light?",
+      "Why is a solar cell dark blue?",
+      "Why does a panel join many cells in a row?",
+      "Why does heat weaken a solar panel?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what light does inside a solar cell, why cells are joined in rows, and why shade turns on a garden light.",
+      "example": "Example: Light knocks electrons loose. The small pushes add up in a row. In the shade, the push stops, so the light thinks it is night."
+    },
+    "foldableTitle": "A little book of sunlight",
+    "foldableCoverLine": "Solar Panels",
+    "foldableNote": "Carry six sunlight clues in a small book."
+  },
+  "math": {
+    "title": "Sunlight story numbers",
+    "eyebrow": "Math",
+    "intro": "Six one-step stories about garden lights, cells, panels and sunny roofs. Add or subtract to find each answer.",
+    "plate": "notice",
+    "actionLabel": "Solve",
+    "template": "story-problems",
+    "tasks": [
+      {
+        "skill": "one-step-add",
+        "operands": [
+          27,
+          18
+        ],
+        "plate": "wake",
+        "label": "TASK 1",
+        "prompt": "Little Wonderer counts 27 garden lights on one path and 18 on another. How many garden lights is that altogether?",
+        "equation": "27 + 18 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 45,
+        "worked": "27 + 18 = 45. Combine the lights on both paths."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          64,
+          29
+        ],
+        "plate": "reach",
+        "label": "TASK 2",
+        "prompt": "A box holds 64 thin silicon slices, and 29 of them are made into cells. How many slices are still plain?",
+        "equation": "64 − 29 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 35,
+        "worked": "64 − 29 = 35. Take away the slices that became cells."
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          36,
+          47
+        ],
+        "plate": "change",
+        "label": "TASK 3",
+        "prompt": "In a pretend count, 36 photons knock electrons loose, and then 47 more do. How many electrons are knocked loose in all?",
+        "equation": "36 + 47 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 83,
+        "worked": "36 + 47 = 83. Combine both groups of loose electrons."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          60,
+          24
+        ],
+        "plate": "notice",
+        "label": "TASK 4",
+        "prompt": "A panel has 60 cells, and a tree shades 24 of them. How many cells are still in the sun?",
+        "equation": "60 − 24 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 36,
+        "worked": "60 − 24 = 36. Take away the shaded cells."
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          45,
+          37
+        ],
+        "plate": "return",
+        "label": "TASK 5",
+        "prompt": "Big Wonderer counts 45 minutes of sun on the garden light in the morning and 37 in the afternoon. How many minutes is that altogether?",
+        "equation": "45 + 37 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 82,
+        "worked": "45 + 37 = 82. Combine the morning and afternoon minutes."
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          72,
+          35
+        ],
+        "plate": "keep",
+        "label": "TASK 6",
+        "prompt": "A snowy town has 72 roof panels, and snow still covers 35 of them. How many panels are clear?",
+        "equation": "72 − 35 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 37,
+        "worked": "72 − 35 = 37. Take away the panels under snow."
+      }
+    ],
+    "extension": "After you finish, tell which problem felt most like a sunny roof, and why.",
+    "printNote": "Use these story numbers about solar panels. The picture is not a ruler.",
+    "parentNote": "Six one-step story problems tied to solar panels. The numbers are for practice, not real measurements.",
+    "answerKeyIntro": "Math answers (story numbers):"
+  },
+  "writing": {
+    "title": "Explain a sunlight clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw a solar cell with two thin layers, and show a tiny electron going round a loop of wire.",
+    "starter": "My sunlight clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "A solar cell is dark blue because",
+        "hint": "what does the thin coat do?"
+      },
+      {
+        "plate": "change",
+        "start": "Light makes electricity when",
+        "hint": "what does a photon knock loose?"
+      },
+      {
+        "plate": "notice",
+        "start": "A panel needs many cells because",
+        "hint": "how big is one push?"
+      }
+    ],
+    "words": [
+      "light",
+      "cell",
+      "push",
+      "electron",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The tiny lamp glows, as if night came early."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Bare silicon bounces light away; the blue coat keeps more in."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "It knocks an electron loose, and the one-way push sends it round."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "One cell gives about half a volt; joined in a row, pushes add up."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "Shade stops the push, so the light thinks it is night."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Heat makes the inside jiggle, so each push gets weaker."
+    },
+    {
+      "label": "Math · all",
+      "text": "45, 35, 83, 36, 82, 37."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Its lamp turns on; an electron; so their pushes add up; on a cold, bright day."
+    }
+  ],
+  "parentGuidance": "Never look straight at the sun. Use only a small garden light or solar calculator; never open a panel, touch wires, or climb toward a roof panel.",
+  "sources": [
+    {
+      "label": "U.S. Energy Information Administration — Photovoltaics and electricity",
+      "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php"
+    },
+    {
+      "label": "PVEducation — Module circuit design (about 0.5 V per silicon cell; cells joined in series)",
+      "url": "https://www.pveducation.org/pvcdrom/modules-and-arrays/module-circuit-design"
+    },
+    {
+      "label": "PVEducation — Anti-reflection coatings (bare silicon reflects over 30%)",
+      "url": "https://www.pveducation.org/pvcdrom/design-of-silicon-cells/anti-reflection-coatings"
+    },
+    {
+      "label": "PVEducation — Effect of temperature on solar cells",
+      "url": "https://www.pveducation.org/pvcdrom/solar-cell-operation/effect-of-temperature"
+    },
+    {
+      "label": "Analog Devices StudentZone — Hacking an LED solar garden light (the panel doubles as the dark sensor)",
+      "url": "https://ez.analog.com/adiacademy/university-program/a/studentzone-articles/SA1116/hacking-an-led-solar-garden-light"
+    },
+    {
+      "label": "APS News — April 25, 1954: Bell Labs demonstrates the first practical silicon solar cell",
+      "url": "https://www.aps.org/apsnews/2009/04/bell-labs-silicon-solar-cell"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer finds a garden light. It has a small dark square. The little one covers the square. The lamp glows!",
+            "prompt": "What happens to the lamp?"
+          },
+          {
+            "id": "reach",
+            "passage": "The dark square is a solar cell. It starts as sand. A blue coat helps it keep light.",
+            "prompt": "What does the cell start as?"
+          },
+          {
+            "id": "change",
+            "passage": "Light comes in tiny bits. They knock electrons loose. A one-way slide sends them round.",
+            "prompt": "What does light knock loose?"
+          },
+          {
+            "id": "notice",
+            "passage": "One cell gives a small push. Many cells sit in a row. Their pushes add up.",
+            "prompt": "Why are cells in a row?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer holds a leaf up. The square is in shade. The push stops. The lamp glows!",
+            "prompt": "Why does the lamp glow?"
+          },
+          {
+            "id": "keep",
+            "passage": "Panels like cold, sunny days. Heat makes the push weak. How can panels stay cool?",
+            "prompt": "Do panels like heat?"
+          }
+        ],
+        "words": [
+          {
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into power"
+          },
+          {
+            "word": "push",
+            "meaning": "what makes electricity move"
+          },
+          {
+            "word": "shade",
+            "meaning": "a spot the light cannot reach"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer sees 9 garden lights, then 6 more. How many lights?",
+            "expression": "9 + 6",
+            "equation": "9 + 6 =",
+            "answer": 15,
+            "hint": "Make a ten: 9 + 1 + 5.",
+            "worked": "9 + 6 = 15. Add both sets of lights."
+          },
+          {
+            "plate": "reach",
+            "prompt": "There are 14 thin slices, and 5 become cells. How many are left?",
+            "expression": "14 − 5",
+            "equation": "14 − 5 =",
+            "answer": 9,
+            "hint": "Take 5 away from 14.",
+            "worked": "14 − 5 = 9. Take away the slices that became cells."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, 8 photons hit, then 7 more. How many photons?",
+            "expression": "8 + 7",
+            "equation": "8 + 7 =",
+            "answer": 15,
+            "hint": "Make a ten: 8 + 2 + 5.",
+            "worked": "8 + 7 = 15. Add both sets of photons."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A panel has 12 cells, and 4 are in shade. How many are in the sun?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Take 4 away from 12.",
+            "worked": "12 − 4 = 8. Take away the shaded cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one counts 7 leaves, then 6 more. How many leaves?",
+            "expression": "7 + 6",
+            "equation": "7 + 6 =",
+            "answer": 13,
+            "hint": "Double 6, then add 1.",
+            "worked": "7 + 6 = 13. Add both sets of leaves."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A roof has 16 panels. Snow covers 9. How many are clear?",
+            "expression": "16 − 9",
+            "equation": "16 − 9 =",
+            "answer": 7,
+            "hint": "Take 9 away from 16.",
+            "worked": "16 − 9 = 7. Take away the snowy panels."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square. The little one covers it with a mitten. Click! The tiny lamp glows. How does it know?",
+            "prompt": "What happens when the square is covered?"
+          },
+          {
+            "id": "reach",
+            "passage": "That dark square is a solar cell. It starts as sand. Sand holds silicon, a shiny grey stuff. Workers slice it very thin. A blue coat helps it keep more light.",
+            "prompt": "What is a solar cell made from?"
+          },
+          {
+            "id": "change",
+            "passage": "Sunlight comes in tiny packets called photons. A photon knocks an electron loose. Inside the cell is a one-way slide. It sends the electron round a wire. That flow is electricity.",
+            "prompt": "What sends the electron round?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue. A big panel has many cells in rows. One cell gives only a small push. So the cells are joined end to end. Their small pushes add up.",
+            "prompt": "Why are the cells joined?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer holds a leaf over the light. The little one points at the glowing lamp. Now the guess changes. The square keeps no sunlight. In shade, its push stops.",
+            "prompt": "What happens in the shade?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise. Panels like cold, bright days. Heat makes the push of each cell weaker. A snowy roof can work very well. How could a panel stay cool?",
+            "prompt": "Why do panels like the cold?"
+          }
+        ],
+        "words": [
+          {
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
+          },
+          {
+            "word": "silicon",
+            "meaning": "a shiny grey stuff made from sand"
+          },
+          {
+            "word": "photon",
+            "meaning": "a tiny packet of light"
+          },
+          {
+            "word": "electron",
+            "meaning": "a tiny bit that carries electricity"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 24 garden lights, then 17 more. How many lights?",
+            "expression": "24 + 17",
+            "equation": "24 + 17 =",
+            "answer": 41,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "24 + 17 = 41. Add both sets of lights."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A box holds 43 thin slices, and 18 become cells. How many slices are left?",
+            "expression": "43 − 18",
+            "equation": "43 − 18 =",
+            "answer": 25,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "43 − 18 = 25. Take away the slices that became cells."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, 19 photons hit, then 26 more. How many photons?",
+            "expression": "19 + 26",
+            "equation": "19 + 26 =",
+            "answer": 45,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "19 + 26 = 45. Add both sets of photons."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A panel has 36 cells, and 12 are in shade. How many are in the sun?",
+            "expression": "36 − 12",
+            "equation": "36 − 12 =",
+            "answer": 24,
+            "hint": "Subtract the tens, then the ones.",
+            "worked": "36 − 12 = 24. Take away the shaded cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one counts 28 sunny minutes, then 15 more. How many minutes?",
+            "expression": "28 + 15",
+            "equation": "28 + 15 =",
+            "answer": 43,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "28 + 15 = 43. Add both sets of minutes."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A town has 50 roof panels, and snow covers 23. How many are clear?",
+            "expression": "50 − 23",
+            "equation": "50 − 23 =",
+            "answer": 27,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "50 − 23 = 27. Take away the snowy panels."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer found a garden light standing beside the path, with a small dark square on its cap crossed by thin silver lines. The little one held a mitten over the square, and with a soft click the tiny lamp began to glow. Big Wonderer leaned in to watch. How could a small square of glass tell day from night?",
+            "prompt": "What made the lamp switch on?"
+          },
+          {
+            "id": "reach",
+            "passage": "That dark square is a solar cell, and it begins as ordinary sand. Sand holds silicon, a shiny grey material. Workers melt it, grow it into a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light. A coat thinner than a soap bubble turns it dark blue and helps it keep more light.",
+            "prompt": "Why do makers give the cell a coat?"
+          },
+          {
+            "id": "change",
+            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet there is a built-in push that works like a one-way slide. When a photon knocks an electron loose, the slide sends it out one side of the cell. It travels along a wire, through the lamp, and back in the other side. That flow is electricity.",
+            "prompt": "Where does the loose electron go?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up. Thin silver lines on each cell gather the electrons.",
+            "prompt": "How do many small pushes become a big one?"
+          },
+          {
+            "id": "return",
+            "passage": "Back on the path, Big Wonderer held a leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, like a sponge. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and when shade stops the push, the light decides it is night.",
+            "prompt": "How does the garden light know it is night?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise. Solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
+            "prompt": "Why does a hot panel make less power?"
+          }
+        ],
+        "words": [
+          {
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
+          },
+          {
+            "word": "silicon",
+            "meaning": "a shiny grey material made from sand"
+          },
+          {
+            "word": "crystal",
+            "meaning": "a solid whose tiny parts line up in a neat pattern"
+          },
+          {
+            "word": "photon",
+            "meaning": "a tiny packet of light energy"
+          },
+          {
+            "word": "electron",
+            "meaning": "a tiny bit of matter that carries electricity"
+          },
+          {
+            "word": "volt",
+            "meaning": "a measure of how hard electricity is pushed"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "A shop packs garden lights in boxes of 8, and Little Wonderer counts 7 boxes. How many lights?",
+            "expression": "8 × 7",
+            "equation": "8 × 7 =",
+            "answer": 56,
+            "hint": "Eight groups of seven.",
+            "worked": "8 × 7 = 56. Eight lights in each of seven boxes."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A factory slices 640 silicon wafers, and 175 crack. How many good wafers are left?",
+            "expression": "640 − 175",
+            "equation": "640 − 175 =",
+            "answer": 465,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "640 − 175 = 465. Take away the cracked wafers."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a cell frees 386 electrons, then 247 more. How many electrons?",
+            "expression": "386 + 247",
+            "equation": "386 + 247 =",
+            "answer": 633,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "386 + 247 = 633. Add both groups of electrons."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A panel has 6 rows with 10 cells in each row. How many cells?",
+            "expression": "6 × 10",
+            "equation": "6 × 10 =",
+            "answer": 60,
+            "hint": "Six groups of ten.",
+            "worked": "6 × 10 = 60. Six rows of ten cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer plants 81 garden lights equally along 9 paths. How many lights go on each path?",
+            "expression": "81 ÷ 9",
+            "equation": "81 ÷ 9 =",
+            "answer": 9,
+            "hint": "Share 81 into 9 equal groups.",
+            "worked": "81 ÷ 9 = 9. Each path gets the same number of lights."
+          },
+          {
+            "plate": "keep",
+            "prompt": "In a pretend test, a cold panel makes 412 units of power and a hot one makes 368. How many more does the cold panel make?",
+            "expression": "412 − 368",
+            "equation": "412 − 368 =",
+            "answer": 44,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "412 − 368 = 44. Take the hot panel from the cold one."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer found a garden light standing beside the gravel path, with a small dark square on its cap crossed by thin silver lines. Curious, the little one held a mitten flat over the square, and with a soft click the tiny frosted lamp began to glow, as if night had arrived early. Leaning in close, Big Wonderer watched the warm glow appear. How could a small square of glass tell the difference between day and night?",
+            "prompt": "What made the lamp switch on in daylight?"
+          },
+          {
+            "id": "reach",
+            "passage": "That dark square is a solar cell, and it begins as ordinary sand, which holds a shiny grey material called silicon. Workers melt the silicon, grow it into a big crystal, and slice it into wafers thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light that hits it. So makers add a coat thinner than a soap bubble, which turns the cell dark blue and helps it keep more light.",
+            "prompt": "Why would a shiny cell waste light?"
+          },
+          {
+            "id": "change",
+            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet a built-in push forms, working like a one-way slide. When a photon with enough energy knocks an electron loose, the slide sends it out one side of the cell, along a wire, through the lamp and back in the other side. Light with too little energy cannot free an electron. Extra energy simply warms the cell.",
+            "prompt": "What happens to light with too little energy?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up, and many panels hold 36 cells or more. If one cell sits in shade, it can slow the whole row, like a kink in a garden hose.",
+            "prompt": "Why can one shaded cell slow a whole row?"
+          },
+          {
+            "id": "return",
+            "passage": "Back on the path, Big Wonderer held a broad leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, the way a sponge holds water. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and in many garden lights the same square works as the sensor, so when shade stops its push, the light decides that night has come.",
+            "prompt": "How can one square be both a power maker and a sensor?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel ends up as heat, not electricity. In 1954, one of the first useful silicon panels spun a toy Ferris wheel in New Jersey. How could a panel stay cool while sitting in the sun all day?",
+            "prompt": "Where does most of the sunlight's energy go?"
+          }
+        ],
+        "words": [
+          {
+            "word": "solar cell",
+            "meaning": "a thin slice that turns light into electricity"
+          },
+          {
+            "word": "silicon",
+            "meaning": "a shiny grey material made from sand"
+          },
+          {
+            "word": "wafer",
+            "meaning": "a very thin slice of silicon"
+          },
+          {
+            "word": "photon",
+            "meaning": "a tiny packet of light energy"
+          },
+          {
+            "word": "electron",
+            "meaning": "a tiny bit of matter that carries electricity"
+          },
+          {
+            "word": "volt",
+            "meaning": "a measure of how hard electricity is pushed"
+          },
+          {
+            "word": "sensor",
+            "meaning": "a part that notices a change, like light or heat"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that a town has 2480 garden lights on the east side and 1765 on the west. How many garden lights in all?",
+            "expression": "2480 + 1765",
+            "equation": "2480 + 1765 =",
+            "answer": 4245,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "2480 + 1765 = 4245. Add the east and west lights."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A factory slices 5000 silicon wafers, and 1836 are sent to be coated first. How many wafers are left to coat later?",
+            "expression": "5000 − 1836",
+            "equation": "5000 − 1836 =",
+            "answer": 3164,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 1836 = 3164. Take away the wafers coated first."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, each of 8 cells frees 1125 electrons. How many electrons?",
+            "expression": "1125 × 8",
+            "equation": "1125 × 8 =",
+            "answer": 9000,
+            "hint": "Think 8 × 1000 and 8 × 125.",
+            "worked": "1125 × 8 = 9000. Eight cells of 1125 electrons."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A roof has 9 panels with 60 cells in each. How many cells?",
+            "expression": "60 × 9",
+            "equation": "60 × 9 =",
+            "answer": 540,
+            "hint": "Think 9 × 6 tens.",
+            "worked": "60 × 9 = 540. Nine panels of sixty cells."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer learns that 2520 minutes of sunshine were shared equally over 7 days. How many minutes each day?",
+            "expression": "2520 ÷ 7",
+            "equation": "2520 ÷ 7 =",
+            "answer": 360,
+            "hint": "Split 2520 into 2100 and 420, then divide each part by 7.",
+            "worked": "2520 ÷ 7 = 360. Each day gets the same number of minutes."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A solar farm has 8400 panels, and snow covers 3675. How many panels are clear?",
+            "expression": "8400 − 3675",
+            "equation": "8400 − 3675 =",
+            "answer": 4725,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "8400 − 3675 = 4725. Take away the snowy panels."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "lab-page"
+  ],
+  "labPage": {
+    "materials": [
+      "a solar garden light",
+      "a dim room or a closet",
+      "a large leaf or a piece of cardboard",
+      "a solar calculator, if you have one",
+      "a dark cloth and a white cloth",
+      "paper and pencil"
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How Solar Panels Work",
+    "line": "Tiny packets of light, one small push at a time.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Coolest Panel",
+    "lines": [
+      "Little Wonderer found a flat square of blue",
+      "with silver-thin stripes running all the way through.",
+      "“It’s sleeping,” the little one whispered. “Don’t peep.”",
+      "“It’s working,” said Big Wonderer. “Too bright to sleep.”",
+      "",
+      "“The sunshine comes down in small packets of light.",
+      "Each knocks an electron loose, left and right.",
+      "A one-way slide inside sends it off down the wire,",
+      "round the lamp and back home, and it never gets tired.”",
+      "",
+      "“A hot panel,” the big one said, “loses its push.",
+      "It works best when it’s cool.” And then, with a whoosh,",
+      "the little one hurried away down the hall",
+      "to make it the hardest-working panel of all.",
+      "",
+      "It’s frosty in there, and it’s cool as can be,",
+      "tucked in with the ice cubes and bags of green peas.",
+      "The coldest, best panel that ever was found,",
+      "but it’s dark when that door shuts. Not one spark goes round."
+    ],
+    "drawing": {
+      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/poem.jpg",
+      "alt": "A loose black-ink drawing of Big and Little Wonderer in a kitchen, the little one walking toward a closed freezer door carrying a small flat solar panel while the big one kneels and points up at a sunny window."
+    }
+  },
+  "quiz": {
+    "title": "Four looks at sunlight",
+    "intro": "Follow the light from a garden lamp to a snowy roof.",
+    "questions": [
+      {
+        "id": "shade",
+        "prompt": "What happens when you shade a garden light?",
+        "choices": [
+          "Its lamp turns on",
+          "It gets hot",
+          "It turns blue"
+        ],
+        "answerIndex": 0,
+        "answer": "Shade stops the push, so the light thinks it is night and turns on."
+      },
+      {
+        "id": "photon",
+        "prompt": "What does a photon knock loose?",
+        "choices": [
+          "A grain of sand",
+          "An electron",
+          "A silver line"
+        ],
+        "answerIndex": 1,
+        "answer": "A photon can knock an electron loose inside the silicon."
+      },
+      {
+        "id": "row",
+        "prompt": "Why are cells joined in a row?",
+        "choices": [
+          "To look neat",
+          "To keep out rain",
+          "So their pushes add up"
+        ],
+        "answerIndex": 2,
+        "answer": "One cell gives only about half a volt, so joined cells add their pushes."
+      },
+      {
+        "id": "cold",
+        "prompt": "When does a panel push hardest?",
+        "choices": [
+          "On a cold, bright day",
+          "On a hot, cloudy day",
+          "At night"
+        ],
+        "answerIndex": 0,
+        "answer": "In the same sunshine, a cold panel makes more power than a hot one."
+      }
+    ]
+  }
+}
