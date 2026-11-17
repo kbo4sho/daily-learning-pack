@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "how-solar-panels-turn-sunlight-into-electricity");
-  assert.equal(latest.date, "2026-11-16");
+  assert.equal(latest.slug, "how-do-combination-locks-work");
+  assert.equal(latest.date, "2026-11-17");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "how-do-combination-locks-work",
       "how-solar-panels-turn-sunlight-into-electricity",
       "cornstarch-goo",
       "how-holograms-work",
@@ -159,20 +160,24 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [45, 35, 83, 36, 82, 37],
+    [20, 10, 18, 35, 70, 68],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "story-problems");
+  assert.equal(todayPack.mathTemplate, "pattern-detective");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
-    todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
+    todayPack.math.tasks.map(({ skill, step, blankIndex }) => [
+      skill,
+      step,
+      blankIndex,
+    ]),
     [
-      ["one-step-add", 27, 18],
-      ["one-step-subtract", 64, 29],
-      ["one-step-add", 36, 47],
-      ["one-step-subtract", 60, 24],
-      ["one-step-add", 45, 37],
-      ["one-step-subtract", 72, 35],
+      ["skip-next", 5, 3],
+      ["skip-missing", 10, 1],
+      ["skip-next", 2, 3],
+      ["skip-missing", 5, 2],
+      ["skip-next", 10, 3],
+      ["skip-missing", 2, 2],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

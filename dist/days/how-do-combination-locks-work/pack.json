@@ -1,0 +1,1014 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "how-do-combination-locks-work",
+  "topic": "how do combination locks work",
+  "why": "Tracing a dial's turns to a hidden stack of wheels helps your child explain a step-by-step cause with pictures and words.",
+  "teaser": "Spin a padlock dial and follow a hidden train of wheels, pegs and notches until a thin fence drops in.",
+  "aliases": [
+    "combination locks",
+    "combination lock",
+    "padlock",
+    "dial lock",
+    "safe lock",
+    "wheel pack",
+    "lock wheels"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "pattern-detective",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "skip-next",
+      "skip-missing"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Combination Locks",
+  "title": "How Combo Locks Work",
+  "question": "How can a turning dial remember three secret numbers?",
+  "idea": "A combination lock hides a stack of loose wheels, each with one notch called a gate. Pegs let the dial pick the wheels up one by one, and each turn back leaves a set wheel behind. When all the gates line up, a thin bar called a fence drops in and the lock opens.",
+  "curiosity": {
+    "intro": "Start with a padlock on the kitchen table. Then peek at the wheels inside, pick them up one by one, watch the fence drop and visit an old safe.",
+    "carryForward": "Next time you see a dial lock, count its turns and picture the wheels lining up.",
+    "questions": [
+      {
+        "id": "parts",
+        "plate": "reach",
+        "question": "What is hiding behind the dial?",
+        "notice": "Follow the row from the dial to the drive cam, three wheels and a thin bar.",
+        "say": "Behind the dial sits a drive cam, a disc fixed to the dial with one short peg. Next come three flat wheels on one rod. Each wheel has a notch called a gate. The thin bar is the fence. The wheels are loose, so they turn only when something pushes them.",
+        "try": "Cut three paper circles and snip a small notch in each. Stack them on a pencil. Can you turn them so all three notches line up?"
+      },
+      {
+        "id": "stack",
+        "plate": "change",
+        "question": "Why do you spin the dial three times first?",
+        "notice": "Find the tab on each wheel and the spot where one tab touches the next.",
+        "say": "The cam's peg travels almost a full turn before it bumps the first wheel. That wheel then needs nearly a turn to catch the second, and the second to catch the third. Three spins make sure every wheel is moving. Then the wheel farthest from the dial is set first.",
+        "try": "Tie three toy cars together with loose string. Pull the front one slowly. Watch each car start to move only when its string goes tight."
+      },
+      {
+        "id": "gates",
+        "plate": "notice",
+        "question": "What has to happen for the lock to open?",
+        "notice": "Compare the stack with gates in a line to the stack with gates pointing every way.",
+        "say": "The fence rests on the smooth edges of the wheels. It can drop only when all three gates sit in one straight line beneath it. If even one gate points the wrong way, the fence stays up and the lock stays shut.",
+        "try": "Set out three cups with their handles pointing different ways. Turn them until every handle points the same way, like gates in a row."
+      },
+      {
+        "id": "safe",
+        "plate": "keep",
+        "question": "Can a number that is close still open a lock?",
+        "notice": "Find the big dial on the safe door and the fine marks around its edge.",
+        "say": "Each gate is a little wider than the fence, so being one mark off can still work. Testers check that good safe locks open only within about one mark of each number. Some very strong locks use plastic wheels that are hard to see in X-ray pictures. They also keep the fence lifted off the wheels, so nobody can feel it.",
+        "try": "Hide a toy under one of ten cups in a row. Let a helper guess. Does it help if you say “close” when they are one cup away?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/how-do-combination-locks-work/01-dial.jpg",
+      "original": "assets/how-do-combination-locks-work/01-dial.png",
+      "foldSrc": "assets/how-do-combination-locks-work/01-dial-fold.jpg",
+      "title": "Three secret numbers",
+      "alt": "Big and Little Wonderer at a wooden kitchen table, the little one turning the dial of a plain steel padlock and listening closely while the big one leans in to watch.",
+      "caption": "Turn the dial slowly, and soft clicks sound inside."
+    },
+    {
+      "id": "reach",
+      "src": "assets/how-do-combination-locks-work/02-parts.jpg",
+      "original": "assets/how-do-combination-locks-work/02-parts.png",
+      "foldSrc": "assets/how-do-combination-locks-work/02-parts-fold.jpg",
+      "title": "Wheels in a stack",
+      "alt": "A field-guide study of a padlock and its inside parts in a row: the padlock with its marked dial, a small steel disc with one peg, three flat brass wheels with one notch and one tab each, and a thin steel bar.",
+      "caption": "Behind the dial: a drive cam, three notched wheels and a thin fence."
+    },
+    {
+      "id": "change",
+      "src": "assets/how-do-combination-locks-work/03-stack.jpg",
+      "original": "assets/how-do-combination-locks-work/03-stack.png",
+      "foldSrc": "assets/how-do-combination-locks-work/03-stack-fold.jpg",
+      "title": "Picking up the wheels",
+      "alt": "A field-guide study of three flat brass wheels stacked on one thin rod behind a small disc, with a tab on one wheel touching a tab on the next and the notches pointing different ways.",
+      "caption": "Each wheel's tab catches the next, like train cars hooking on."
+    },
+    {
+      "id": "notice",
+      "src": "assets/how-do-combination-locks-work/04-gates.jpg",
+      "original": "assets/how-do-combination-locks-work/04-gates.png",
+      "foldSrc": "assets/how-do-combination-locks-work/04-gates-fold.jpg",
+      "title": "Back and forth",
+      "alt": "Two small stacks of three brass wheels on short rods: in one the notches line up in a column with a thin bar resting down in them, and in the other the notches point different ways and the bar lies across the top.",
+      "caption": "Gates in a row let the fence drop. One stray gate keeps it up."
+    },
+    {
+      "id": "return",
+      "src": "assets/how-do-combination-locks-work/05-open.jpg",
+      "original": "assets/how-do-combination-locks-work/05-open.png",
+      "foldSrc": "assets/how-do-combination-locks-work/05-open-fold.jpg",
+      "title": "The fence drops in",
+      "alt": "Big and Little Wonderer back at the kitchen table, the big one sitting and holding the padlock with its curved shackle popped open, the little one standing and pointing at it, three notched brass wheels lying on the table.",
+      "caption": "Three gates line up, the fence drops in, and the shackle pops."
+    },
+    {
+      "id": "keep",
+      "src": "assets/how-do-combination-locks-work/06-safe.jpg",
+      "original": "assets/how-do-combination-locks-work/06-safe.png",
+      "foldSrc": "assets/how-do-combination-locks-work/06-safe-fold.jpg",
+      "title": "Close enough",
+      "alt": "A small, heavy old safe with a dark green door, a big round silver dial with fine marks and a round handle, standing on a wooden floor in soft window light.",
+      "caption": "Gates are a bit wide, so a close number can still work."
+    }
+  ],
+  "reading": {
+    "title": "The lock on the kitchen table",
+    "coverPlate": "wake",
+    "coverText": "Start with a padlock that clicks as it turns. Then follow the dial into a hidden stack of wheels.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Three secret numbers",
+        "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers, from 0 to 39. The little one turns it slowly and hears soft clicks inside. Big Wonderer leans in to listen too. Only three numbers in the right order will open it. How can a turning dial remember them?",
+        "prompt": "What does the little one hear inside the lock?",
+        "foldable": {
+          "heading": "Three secret numbers",
+          "body": "A padlock dial has forty numbers. Only three, in the right order, open it. Soft clicks hide inside."
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Wheels in a stack",
+        "passage": "Behind the dial hides a stack of three flat wheels on one thin rod. Each wheel has one small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial starts to move. In front of them is a drive cam, a disc fixed to the dial. It has one short peg.",
+        "prompt": "What is the small notch on each wheel called?",
+        "foldable": {
+          "heading": "Wheels in a stack",
+          "body": "Behind the dial sit three loose wheels on one rod. Each has a small notch called a gate."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Picking up the wheels",
+        "passage": "Turn the dial, and the cam's peg swings round. After almost a full turn, it bumps a tab on the nearest wheel and drags it along. That wheel's own peg catches the next wheel, and that one catches the last. So you spin three times first, like an engine hooking three train cars.",
+        "prompt": "Why do you spin the dial three times first?",
+        "foldable": {
+          "heading": "Picking up the wheels",
+          "body": "Each wheel's peg catches the next one. Three spins pick up all three wheels, like an engine hooking train cars."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Back and forth",
+        "passage": "Here is a clue. Stop on the first number, and the farthest wheel is set. Now turn the other way. The pegs let go, so that wheel stays put. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Stop on the second number. Then turn back to the third.",
+        "prompt": "Why do you pass the first number once?",
+        "foldable": {
+          "heading": "Back and forth",
+          "body": "Each turn the other way leaves a set wheel behind. Pass the first number once to pick up the middle wheel."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "The fence drops in",
+        "passage": "Back at the table, Big Wonderer pulls on the lock. Pop! The shackle swings open, and the little one points. Now the guess changes. The lock never remembered any numbers. The wheels just stayed where they were left. When all three gates line up, a thin bar called a fence drops in and frees the shackle.",
+        "prompt": "What drops into the lined-up gates?",
+        "foldable": {
+          "heading": "The fence drops in",
+          "body": "The lock keeps no numbers. When all three gates line up, a thin bar called a fence drops in."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Close enough",
+        "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number one off can often still open a lock! Safe makers test locks so they open only very close to each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence away. How could a lock give away no clues?",
+        "prompt": "Why can a number that is one off still work?",
+        "foldable": {
+          "heading": "Close enough",
+          "body": "Gates are a bit wider than the fence, so one number off can still work. How could a lock hide its clues?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "combination",
+        "meaning": "a set of numbers used in one exact order"
+      },
+      {
+        "word": "gate",
+        "meaning": "a small notch in the edge of a lock wheel"
+      },
+      {
+        "word": "drive cam",
+        "meaning": "a disc with a peg that turns with the dial"
+      },
+      {
+        "word": "fence",
+        "meaning": "a thin bar that drops into the lined-up gates"
+      },
+      {
+        "word": "shackle",
+        "meaning": "the curved bar of a padlock that pops open"
+      }
+    ],
+    "questions": [
+      "What hides behind the dial of a combination lock?",
+      "Why do you spin the dial three times first?",
+      "Why does each turn the other way set one more wheel?",
+      "Why can a number that is one off still open a lock?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what hides behind the dial, why you spin three times first, and what drops in when the gates line up.",
+      "example": "Example: Three wheels with notches hide behind the dial. Three spins pick up all the wheels. When the gates line up, the fence drops in."
+    },
+    "foldableTitle": "A little book of locks",
+    "foldableCoverLine": "Combo Locks",
+    "foldableNote": "Carry six lock clues in a small book."
+  },
+  "math": {
+    "title": "Find the lock patterns",
+    "eyebrow": "SIX LOCK PATTERNS",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "plate": "change",
+    "actionLabel": "Find the step, then fill the gap",
+    "tasks": [
+      {
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Little Wonderer sees a longer mark at every fifth number on the dial. What number comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Count on by 5 from the number just before the blank.",
+        "answer": 20,
+        "worked": "15 + 5 = 20. Each step adds 5.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          0,
+          10,
+          20,
+          30
+        ],
+        "step": 10,
+        "blankIndex": 1,
+        "prompt": "The big numbers on the dial go up by tens. What number is missing?",
+        "equation": "0, ___, 20, 30",
+        "hint": "Count on by 10 from the number just before the blank.",
+        "answer": 10,
+        "worked": "0 + 10 = 10. Each step adds 10.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          12,
+          14,
+          16,
+          18
+        ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "In a pretend count, the little one counts dial clicks two at a time. What number comes next?",
+        "equation": "12, 14, 16, ___",
+        "hint": "Count on by 2 from the number just before the blank.",
+        "answer": 18,
+        "worked": "16 + 2 = 18. Each step adds 2.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
+          35,
+          40,
+          45
+        ],
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "A school hallway has lockers in rows of 5. Counting by fives, what number is missing?",
+        "equation": "25, 30, ___, 40, 45",
+        "hint": "Count on by 5 from the number just before the blank.",
+        "answer": 35,
+        "worked": "30 + 5 = 35. Each step adds 5.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          40,
+          50,
+          60,
+          70
+        ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "A shop packs padlocks in boxes of 10. Big Wonderer counts the boxes by tens. What number comes next?",
+        "equation": "40, 50, 60, ___",
+        "hint": "Count on by 10 from the number just before the blank.",
+        "answer": 70,
+        "worked": "60 + 10 = 70. Each step adds 10.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          64,
+          66,
+          68,
+          70
+        ],
+        "step": 2,
+        "blankIndex": 2,
+        "prompt": "A safe maker tests 2 locks each hour. What number is missing from the count?",
+        "equation": "64, 66, ___, 70",
+        "hint": "Count on by 2 from the number just before the blank.",
+        "answer": 68,
+        "worked": "66 + 2 = 68. Each step adds 2.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six skip-counting sequences use steps of 2, 5, and 10 within 100. The numbers are for counting practice, not real lock combinations.",
+    "answerKeyIntro": "Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
+  },
+  "writing": {
+    "title": "Explain a lock clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw three wheels on a rod, each with one notch, and show the notches lined up under a thin bar.",
+    "starter": "My lock clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "Behind the dial there are",
+        "hint": "what does each wheel have in its edge?"
+      },
+      {
+        "plate": "change",
+        "start": "You spin the dial three times because",
+        "hint": "what do the pegs pick up?"
+      },
+      {
+        "plate": "notice",
+        "start": "The lock opens when",
+        "hint": "where do the gates have to be?"
+      }
+    ],
+    "words": [
+      "dial",
+      "wheel",
+      "gate",
+      "fence",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Soft clicks inside the lock as the dial turns."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "A gate: the small notch in the edge of each wheel."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "To pick up all three wheels, one after another."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "The cam needs a full turn to pick up the middle wheel."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "The fence drops into the lined-up gates."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Each gate is a little wider than the fence."
+    },
+    {
+      "label": "Math · all",
+      "text": "20, 10, 18, 35, 70, 68."
+    },
+    {
+      "label": "Screen-free",
+      "text": "A small notch; to pick up all wheels; the fence; often still open it."
+    }
+  ],
+  "parentGuidance": "Practice only on a lock you own and know the combination of. Do not take apart spring-loaded locks; paper wheels on a pencil show the same idea safely.",
+  "sources": [
+    {
+      "label": "HowStuffWorks — How combination locks work (drive cam, wheel pack, picking up the wheels)",
+      "url": "https://home.howstuffworks.com/home-improvement/home-diy/combination-lock.htm"
+    },
+    {
+      "label": "Locksmith Ledger — Anatomy of a safe lock: three-wheel combination locks (flies, drive pins, why each turn sets one wheel)",
+      "url": "https://www.locksmithledger.com/safes/article/10228880/anatomy-of-a-safe-lock-three-wheel-combination-locks-old-and-new"
+    },
+    {
+      "label": "Master Lock — Combination lock tutorial (three turns right, one full turn left past the first number, then right)",
+      "url": "https://content.masterlock.com/masterlock/resources/documents/pdf/Master_Lock_Combination_Tutorial.pdf"
+    },
+    {
+      "label": "NIST NBSIR 81-2233 — High security locking devices (UL 768 dialing tolerances; fence kept off the wheels; nylon wheels against X-rays)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nbsir81-2233.pdf"
+    },
+    {
+      "label": "Wikipedia — Rotary combination lock (wheel pack, fly, gates and fence)",
+      "url": "https://en.wikipedia.org/wiki/Rotary_combination_lock"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer finds a lock. It has a round dial. The little one turns it. Click, click! How does it open?",
+            "prompt": "What does the lock have?"
+          },
+          {
+            "id": "reach",
+            "passage": "Inside are three flat wheels. Each wheel has a notch. The notch is called a gate.",
+            "prompt": "What is a gate?"
+          },
+          {
+            "id": "change",
+            "passage": "The dial has a peg. The peg pushes one wheel. That wheel pushes the next. Spin three times first!",
+            "prompt": "Why spin three times?"
+          },
+          {
+            "id": "notice",
+            "passage": "Stop on the first number. Turn back the other way. Each turn sets one more wheel.",
+            "prompt": "What does each turn set?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer pulls the lock. Pop! It opens. The three gates lined up. A thin bar dropped in.",
+            "prompt": "What dropped in?"
+          },
+          {
+            "id": "keep",
+            "passage": "Close numbers can work too. The gates are a bit wide. How can a lock hide clues?",
+            "prompt": "Can close numbers work?"
+          }
+        ],
+        "words": [
+          {
+            "word": "dial",
+            "meaning": "the round knob you turn"
+          },
+          {
+            "word": "wheel",
+            "meaning": "a flat circle that turns inside the lock"
+          },
+          {
+            "word": "gate",
+            "meaning": "a small notch in a wheel"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 9 clicks of the dial, then 6 more. How many clicks?",
+            "expression": "9 + 6",
+            "equation": "9 + 6 =",
+            "answer": 15,
+            "hint": "Make a ten: 9 + 1 + 5.",
+            "worked": "9 + 6 = 15. Add both sets of clicks."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A box has 14 lock wheels, and 5 go in a lock. How many are left?",
+            "expression": "14 − 5",
+            "equation": "14 − 5 =",
+            "answer": 9,
+            "hint": "Take 5 away from 14.",
+            "worked": "14 − 5 = 9. Take away the wheels used."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, the dial spins 8 times, then 7 more. How many spins?",
+            "expression": "8 + 7",
+            "equation": "8 + 7 =",
+            "answer": 15,
+            "hint": "Make a ten: 8 + 2 + 5.",
+            "worked": "8 + 7 = 15. Add both sets of spins."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A wall has 12 lockers, and 4 are open. How many are shut?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Take 4 away from 12.",
+            "worked": "12 − 4 = 8. Take away the open lockers."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one opens 7 locks, then 6 more. How many locks?",
+            "expression": "7 + 6",
+            "equation": "7 + 6 =",
+            "answer": 13,
+            "hint": "Double 6, then add 1.",
+            "worked": "7 + 6 = 13. Add both sets of locks."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A shop has 16 safes, and 9 are sold. How many are left?",
+            "expression": "16 − 9",
+            "equation": "16 − 9 =",
+            "answer": 7,
+            "hint": "Take 9 away from 16.",
+            "worked": "16 − 9 = 7. Take away the sold safes."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers. The little one turns it slowly. Click, click! Only three numbers will open it. How can a dial remember them?",
+            "prompt": "How many numbers open the lock?"
+          },
+          {
+            "id": "reach",
+            "passage": "Behind the dial sit three flat wheels on one rod. Each wheel has a small notch called a gate. The wheels are loose. They turn only when something pushes them.",
+            "prompt": "What is on each wheel?"
+          },
+          {
+            "id": "change",
+            "passage": "The dial turns a disc with a short peg. The peg bumps the nearest wheel and drags it. That wheel catches the next, then the last. So you spin three times first.",
+            "prompt": "Why do you spin three times first?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue. Stop on the first number to set the far wheel. Then turn the other way. That wheel stays put. Each new turn sets one more wheel.",
+            "prompt": "What happens to the far wheel?"
+          },
+          {
+            "id": "return",
+            "passage": "Big Wonderer pulls on the lock, and it pops open. Now the guess changes. The lock keeps no numbers. All three gates lined up. A thin bar called a fence dropped in.",
+            "prompt": "What dropped into the gates?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise. A number one off can still work. Each gate is a bit wider than the fence. How could a lock hide its clues?",
+            "prompt": "Why can a close number work?"
+          }
+        ],
+        "words": [
+          {
+            "word": "padlock",
+            "meaning": "a lock with a curved bar that pops open"
+          },
+          {
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
+          },
+          {
+            "word": "peg",
+            "meaning": "a short bump that pushes something"
+          },
+          {
+            "word": "fence",
+            "meaning": "a thin bar that drops into the gates"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 24 clicks of the dial, then 17 more. How many clicks?",
+            "expression": "24 + 17",
+            "equation": "24 + 17 =",
+            "answer": 41,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "24 + 17 = 41. Add both sets of clicks."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A box holds 43 lock wheels, and 18 get a gate cut. How many still need a gate?",
+            "expression": "43 − 18",
+            "equation": "43 − 18 =",
+            "answer": 25,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "43 − 18 = 25. Take away the wheels with gates."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, the dial clicks 19 times, then 26 more. How many clicks?",
+            "expression": "19 + 26",
+            "equation": "19 + 26 =",
+            "answer": 45,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "19 + 26 = 45. Add both sets of clicks."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A hallway has 36 lockers, and 12 are open. How many are shut?",
+            "expression": "36 − 12",
+            "equation": "36 − 12 =",
+            "answer": 24,
+            "hint": "Subtract the tens, then the ones.",
+            "worked": "36 − 12 = 24. Take away the open lockers."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one opens 28 locks, then 15 more. How many locks?",
+            "expression": "28 + 15",
+            "equation": "28 + 15 =",
+            "answer": 43,
+            "hint": "Add the ones first; trade 10 ones for a ten.",
+            "worked": "28 + 15 = 43. Add both sets of locks."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A safe shop has 50 safes, and 23 are sold. How many are left?",
+            "expression": "50 − 23",
+            "equation": "50 − 23 =",
+            "answer": 27,
+            "hint": "Trade a ten for ones, then subtract.",
+            "worked": "50 − 23 = 27. Take away the sold safes."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers from 0 to 39. The little one turned the dial slowly and heard soft clicks somewhere inside. Big Wonderer leaned in to listen too. Only three numbers, dialed in the right order, would open it. How could a turning dial remember three secret numbers?",
+            "prompt": "What did the little one hear?"
+          },
+          {
+            "id": "reach",
+            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial first starts to move. In front of them is the drive cam. It is a disc fixed to the dial, with one short peg sticking out.",
+            "prompt": "Why do the wheels not turn at first?"
+          },
+          {
+            "id": "change",
+            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel and drags that wheel along. The wheel has its own peg, which catches the second wheel, and that one catches the third. This is why you spin the dial three times first. It picks up all three wheels, like an engine hooking train cars.",
+            "prompt": "How does one wheel move the next?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way. The pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Then you stop on the second number and turn back to the third.",
+            "prompt": "Why must you pass the first number once?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, Big Wonderer pulled on the lock, and pop, the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed where they were left. A thin bar called a fence rests on their edges. When all three gates line up beneath it, the fence drops in and frees the shackle.",
+            "prompt": "Where does the lock keep the combination?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence up and away. How would you build a lock that gives away no clues?",
+            "prompt": "Why do safe locks hold the fence away from the wheels?"
+          }
+        ],
+        "words": [
+          {
+            "word": "combination",
+            "meaning": "a set of numbers used in one exact order"
+          },
+          {
+            "word": "padlock",
+            "meaning": "a lock with a curved bar that pops open"
+          },
+          {
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
+          },
+          {
+            "word": "drive cam",
+            "meaning": "a disc with a peg that turns with the dial"
+          },
+          {
+            "word": "fence",
+            "meaning": "a thin bar that drops into the lined-up gates"
+          },
+          {
+            "word": "shackle",
+            "meaning": "the curved bar of a padlock that pops open"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that each padlock hides 3 wheels. How many wheels are in 8 padlocks?",
+            "expression": "3 × 8",
+            "equation": "3 × 8 =",
+            "answer": 24,
+            "hint": "Three groups of eight.",
+            "worked": "3 × 8 = 24. Eight padlocks with three wheels each."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A factory packs lock wheels in boxes of 8 and fills 9 boxes. How many wheels?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Nine boxes of eight wheels."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a dial clicks 365 times on Monday and 248 times on Tuesday. How many clicks?",
+            "expression": "365 + 248",
+            "equation": "365 + 248 =",
+            "answer": 613,
+            "hint": "Add each place; regroup when a column reaches ten.",
+            "worked": "365 + 248 = 613. Add both days of clicks."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A school has 640 lockers, and 275 are in use. How many are empty?",
+            "expression": "640 − 275",
+            "equation": "640 − 275 =",
+            "answer": 365,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "640 − 275 = 365. Take away the lockers in use."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer shares 72 padlocks equally among 8 classes. How many padlocks does each class get?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Share 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Each class gets the same number."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A safe maker tests 512 locks, and 489 pass. How many did not pass?",
+            "expression": "512 − 489",
+            "equation": "512 − 489 =",
+            "answer": 23,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "512 − 489 = 23. Take the passing locks from the total."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers running from 0 to 39. Curious, the little one turned the dial slowly and heard soft clicks somewhere deep inside. Big Wonderer leaned in close to listen. With forty numbers, there are 64,000 possible sets of three on paper, yet only one opens it. How could a turning dial remember three secret numbers?",
+            "prompt": "How many sets of three are possible on paper?"
+          },
+          {
+            "id": "reach",
+            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod, a set that lock makers call the wheel pack. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose on the rod, so they do not turn when the dial first starts to move. In front of them is the drive cam, a disc fixed to the dial with one short peg sticking out of its face.",
+            "prompt": "What do lock makers call the stack of wheels?"
+          },
+          {
+            "id": "change",
+            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel, called a fly, and drags that wheel along. That wheel has its own peg on its far side, which catches the second wheel's fly, and the second wheel catches the third. This is why you spin three times first, picking up all three wheels like an engine hooking train cars. Strangely, the wheel farthest from the dial is the one that sets the first number.",
+            "prompt": "Which wheel sets the first number?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way: the pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to catch the middle wheel again. Then you stop on the second number and turn back to the third, which moves only the nearest wheel. Many large safes use four wheels and even more turns.",
+            "prompt": "Why would a four-wheel safe need more turns?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, Big Wonderer pulled on the lock, and with a pop the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed wherever they were left, like bookmarks. A thin bar called a fence rests on their smooth edges. When all three gates line up beneath it, the fence drops into the slot they make, and the shackle is free to pull out.",
+            "prompt": "How are the wheels like bookmarks?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their best locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So strong safe locks hold the fence up and away, and some use plastic wheels that hide in X-ray pictures. How would you build a lock that gives away no clues?",
+            "prompt": "What two tricks help a safe lock hide its clues?"
+          }
+        ],
+        "words": [
+          {
+            "word": "combination",
+            "meaning": "a set of numbers used in one exact order"
+          },
+          {
+            "word": "wheel pack",
+            "meaning": "the stack of notched wheels inside a dial lock"
+          },
+          {
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
+          },
+          {
+            "word": "drive cam",
+            "meaning": "a disc with a peg that turns with the dial"
+          },
+          {
+            "word": "fly",
+            "meaning": "a small tab on a wheel that a peg catches"
+          },
+          {
+            "word": "fence",
+            "meaning": "a thin bar that drops into the lined-up gates"
+          },
+          {
+            "word": "shackle",
+            "meaning": "the curved bar of a padlock that pops open"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that 3 full spins of a dial pass 40 marks each time. How many marks pass?",
+            "expression": "40 × 3",
+            "equation": "40 × 3 =",
+            "answer": 120,
+            "hint": "Think 3 × 4 = 12, then 3 × 40 = 120.",
+            "worked": "40 × 3 = 120. Three spins of forty marks."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A factory makes 4500 lock wheels, and 1875 get a gate cut first. How many still need a gate?",
+            "expression": "4500 − 1875",
+            "equation": "4500 − 1875 =",
+            "answer": 2625,
+            "hint": "Regroup across the zeros.",
+            "worked": "4500 − 1875 = 2625. Take away the wheels cut first."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a dial clicks 1250 times a day for 6 days. How many clicks?",
+            "expression": "1250 × 6",
+            "equation": "1250 × 6 =",
+            "answer": 7500,
+            "hint": "Think 6 × 1000 and 6 × 250.",
+            "worked": "1250 × 6 = 7500. Six days of 1250 clicks."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A school has 3 floors with 245 lockers on each. How many lockers?",
+            "expression": "245 × 3",
+            "equation": "245 × 3 =",
+            "answer": 735,
+            "hint": "Think 3 × 200, 3 × 40 and 3 × 5.",
+            "worked": "245 × 3 = 735. Three floors of 245 lockers."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer learns that 2400 padlocks are shared equally among 8 schools. How many does each school get?",
+            "expression": "2400 ÷ 8",
+            "equation": "2400 ÷ 8 =",
+            "answer": 300,
+            "hint": "Think 24 ÷ 8 = 3, then 2400 ÷ 8 = 300.",
+            "worked": "2400 ÷ 8 = 300. Each school gets the same number."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A safe maker tests 9000 locks, and 8764 open only on the right numbers. How many need fixing?",
+            "expression": "9000 − 8764",
+            "equation": "9000 − 8764 =",
+            "answer": 236,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 8764 = 236. Take the good locks from the total."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "quiz-cards"
+  ],
+  "quiz": {
+    "title": "Four looks inside a lock",
+    "intro": "Follow the dial from the first spin to the fence dropping in.",
+    "questions": [
+      {
+        "id": "gate",
+        "prompt": "What is a gate on a lock wheel?",
+        "choices": [
+          "A small notch",
+          "A tiny door",
+          "A number"
+        ],
+        "answerIndex": 0,
+        "answer": "A gate is the small notch cut into the edge of each wheel."
+      },
+      {
+        "id": "spin",
+        "prompt": "Why spin the dial three times first?",
+        "choices": [
+          "To warm it up",
+          "To pick up all wheels",
+          "To erase the clicks"
+        ],
+        "answerIndex": 1,
+        "answer": "Three spins let the pegs pick up all three wheels."
+      },
+      {
+        "id": "fence",
+        "prompt": "What drops into the lined-up gates?",
+        "choices": [
+          "The dial",
+          "The shackle",
+          "The fence"
+        ],
+        "answerIndex": 2,
+        "answer": "A thin bar called the fence drops into the lined-up gates."
+      },
+      {
+        "id": "close",
+        "prompt": "What can a number one off do?",
+        "choices": [
+          "Break the lock",
+          "Often still open it",
+          "Reset the wheels"
+        ],
+        "answerIndex": 1,
+        "answer": "Each gate is a bit wider than the fence, so one off can often still work."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How Combination Locks Work",
+    "line": "Three wheels, three gates, one thin fence.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Secret on the Lock",
+    "lines": [
+      "Little Wonderer spun the black dial of a lock,",
+      "three turns to the right, tick, tick, tickety-tock.",
+      "“There are wheels in there, hiding, all stacked in a row,",
+      "and each has a notch where a fence wants to go.”",
+      "",
+      "“Turn left, pass the first,” the big one said, “then",
+      "stop on the second, and back right again.",
+      "When all of the gates line up, one, two, three,",
+      "the fence will drop in, and the shackle swings free.”",
+      "",
+      "“But what if I lose them?” the little one cried.",
+      "“Three numbers are slippery. They wriggle and hide!”",
+      "So out came a pencil, and out came some tape,",
+      "and a note went right onto the lock’s steely shape.",
+      "",
+      "“Now I’ll never forget them! They’re right there in sight!”",
+      "Big Wonderer peeked through two mittens. “That’s right…",
+      "your secret is safe, for it never can go,",
+      "except that now everyone else gets to know.”"
+    ],
+    "drawing": {
+      "src": "assets/how-do-combination-locks-work/poem.jpg",
+      "alt": "A soft drawing of Big and Little Wonderer at a kitchen table, the little one walking proudly and holding up a padlock with a blank square of paper taped to its front while the big one kneels, one mitten over its eyes and the other pointing at the paper."
+    }
+  }
+}
