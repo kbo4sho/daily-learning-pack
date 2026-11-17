@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T05:23:11.992Z",
-  "latest": "how-solar-panels-turn-sunlight-into-electricity",
+  "generatedAt": "2026-11-17T05:13:44.036Z",
+  "latest": "how-do-combination-locks-work",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "how-do-combination-locks-work",
+      "date": "2026-11-17",
+      "topic": "how do combination locks work",
+      "title": "How Combo Locks Work",
+      "teaser": "Spin a padlock dial and follow a hidden train of wheels, pegs and notches until a thin fence drops in.",
+      "href": "./days/how-do-combination-locks-work/",
+      "latest": true
+    },
     {
       "slug": "how-solar-panels-turn-sunlight-into-electricity",
       "date": "2026-11-16",
@@ -11,7 +20,7 @@
       "title": "How Solar Panels Turn Sunlight into Electricity",
       "teaser": "Shade a garden light and it glows, then follow tiny packets of light as they knock electrons down a one-way slide.",
       "href": "./days/how-solar-panels-turn-sunlight-into-electricity/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "cornstarch-goo",

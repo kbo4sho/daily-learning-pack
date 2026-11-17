@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-solar-panels-turn-sunlight-into-electricity",
-  "topic": "how solar panels turn sunlight into electricity",
-  "why": "Following light from a garden lamp to a rooftop helps your child explain a hidden cause with pictures and words.",
-  "teaser": "Shade a garden light and it glows, then follow tiny packets of light as they knock electrons down a one-way slide.",
+  "slug": "how-do-combination-locks-work",
+  "topic": "how do combination locks work",
+  "why": "Tracing a dial's turns to a hidden stack of wheels helps your child explain a step-by-step cause with pictures and words.",
+  "teaser": "Spin a padlock dial and follow a hidden train of wheels, pegs and notches until a thin fence drops in.",
   "aliases": [
-    "solar panels",
-    "solar cells",
-    "photovoltaics",
-    "solar power",
-    "sunlight to electricity",
-    "solar garden light",
-    "silicon"
+    "combination locks",
+    "combination lock",
+    "padlock",
+    "dial lock",
+    "safe lock",
+    "wheel pack",
+    "lock wheels"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "story-problems",
+  "mathTemplate": "pattern-detective",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "one-step-add",
-      "one-step-subtract"
+      "skip-next",
+      "skip-missing"
     ],
     "format": "curiosity-day"
   },
@@ -33,344 +33,368 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Solar Panels",
-  "title": "How Solar Panels Turn Sunlight into Electricity",
-  "question": "How can a dark square of glass turn sunlight into electricity?",
-  "idea": "A solar cell is a thin slice of silicon made in two layers. Where the layers meet, a built-in push acts like a one-way slide. Light knocks electrons loose, and the push sends them round a wire. One cell gives only a small push, so panels join many cells in a row.",
+  "wonderLabel": "Combination Locks",
+  "title": "How Combo Locks Work",
+  "question": "How can a turning dial remember three secret numbers?",
+  "idea": "A combination lock hides a stack of loose wheels, each with one notch called a gate. Pegs let the dial pick the wheels up one by one, and each turn back leaves a set wheel behind. When all the gates line up, a thin bar called a fence drops in and the lock opens.",
   "curiosity": {
-    "intro": "Start with a garden light that glows when you shade it. Then follow sand to a cell, peek inside, count the cells in a panel, and visit a snowy roof.",
-    "carryForward": "Next time you pass a solar panel, look for its rows of cells and thin silver lines.",
+    "intro": "Start with a padlock on the kitchen table. Then peek at the wheels inside, pick them up one by one, watch the fence drop and visit an old safe.",
+    "carryForward": "Next time you see a dial lock, count its turns and picture the wheels lining up.",
     "questions": [
       {
-        "id": "sand",
+        "id": "parts",
         "plate": "reach",
-        "question": "Why is a solar cell dark blue?",
-        "notice": "Follow the row from sand to a grey lump, a shiny slice and a dark blue cell.",
-        "say": "A solar cell is made of silicon, which is made from sand. Bare silicon is shiny, and it bounces away about a third of the light that hits it. Makers add a coat thinner than a soap bubble. The coat makes the cell look dark blue and helps it keep more light.",
-        "try": "Look at a shiny spoon and a dark mug in sunlight. Which one throws more glare into your eyes? Shiny things keep less light."
+        "question": "What is hiding behind the dial?",
+        "notice": "Follow the row from the dial to the drive cam, three wheels and a thin bar.",
+        "say": "Behind the dial sits a drive cam, a disc fixed to the dial with one short peg. Next come three flat wheels on one rod. Each wheel has a notch called a gate. The thin bar is the fence. The wheels are loose, so they turn only when something pushes them.",
+        "try": "Cut three paper circles and snip a small notch in each. Stack them on a pencil. Can you turn them so all three notches line up?"
       },
       {
-        "id": "layers",
+        "id": "stack",
         "plate": "change",
-        "question": "How does light make electricity?",
-        "notice": "Find the two thin layers and the tiny beads near the line where they meet.",
-        "say": "Light travels in tiny packets called photons. A photon with enough energy can knock an electron loose inside the silicon. Where the two layers meet, a built-in push acts like a one-way slide. It sends loose electrons out through a wire, round the loop and back in the other side. That flow is electricity.",
-        "try": "Stand in a circle with your family and hold hands. Pass a gentle squeeze all the way round. Electrons move round a loop of wire in a similar way."
+        "question": "Why do you spin the dial three times first?",
+        "notice": "Find the tab on each wheel and the spot where one tab touches the next.",
+        "say": "The cam's peg travels almost a full turn before it bumps the first wheel. That wheel then needs nearly a turn to catch the second, and the second to catch the third. Three spins make sure every wheel is moving. Then the wheel farthest from the dial is set first.",
+        "try": "Tie three toy cars together with loose string. Pull the front one slowly. Watch each car start to move only when its string goes tight."
       },
       {
-        "id": "panel",
+        "id": "gates",
         "plate": "notice",
-        "question": "Why does a panel need so many cells?",
-        "notice": "Count the cells in one row and find the thin silver lines on each cell.",
-        "say": "One silicon cell gives a push of only about half a volt. A small battery gives about three times that. So makers join cells end to end, and the small pushes add up. Many panels hold 36 cells or more. The thin silver lines are wires that gather the electrons.",
-        "try": "Stack three books. Each one is a small step, but together they make a tall one. Cells add their pushes the same way."
+        "question": "What has to happen for the lock to open?",
+        "notice": "Compare the stack with gates in a line to the stack with gates pointing every way.",
+        "say": "The fence rests on the smooth edges of the wheels. It can drop only when all three gates sit in one straight line beneath it. If even one gate points the wrong way, the fence stays up and the lock stays shut.",
+        "try": "Set out three cups with their handles pointing different ways. Turn them until every handle points the same way, like gates in a row."
       },
       {
-        "id": "roof",
+        "id": "safe",
         "plate": "keep",
-        "question": "Why do panels like cold, bright days?",
-        "notice": "Find the snow on the roof and the clear, dark panels in the low light.",
-        "say": "Heat makes everything inside the silicon jiggle more, and that weakens the push of each cell. In the same sunshine, a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel turns into heat, not electricity.",
-        "try": "Lay a dark cloth and a white cloth in the sun for ten minutes. Which one feels warmer? Dark panels warm up in the sun, too."
+        "question": "Can a number that is close still open a lock?",
+        "notice": "Find the big dial on the safe door and the fine marks around its edge.",
+        "say": "Each gate is a little wider than the fence, so being one mark off can still work. Testers check that good safe locks open only within about one mark of each number. Some very strong locks use plastic wheels that are hard to see in X-ray pictures. They also keep the fence lifted off the wheels, so nobody can feel it.",
+        "try": "Hide a toy under one of ten cups in a row. Let a helper guess. Does it help if you say “close” when they are one cup away?"
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/01-light-fold.jpg",
-      "title": "A light that waits",
-      "alt": "Big and Little Wonderer on a pale garden path, the little one kneeling beside a solar garden light and holding a mitten over the small dark panel on its cap while the big one leans in to watch the lamp glow.",
-      "caption": "Shade the small dark square, and the lamp glows."
+      "src": "assets/how-do-combination-locks-work/01-dial.jpg",
+      "original": "assets/how-do-combination-locks-work/01-dial.png",
+      "foldSrc": "assets/how-do-combination-locks-work/01-dial-fold.jpg",
+      "title": "Three secret numbers",
+      "alt": "Big and Little Wonderer at a wooden kitchen table, the little one turning the dial of a plain steel padlock and listening closely while the big one leans in to watch.",
+      "caption": "Turn the dial slowly, and soft clicks sound inside."
     },
     {
       "id": "reach",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/02-sand-fold.jpg",
-      "title": "From sand to cell",
-      "alt": "A field-guide study on a garden stone of four things in a row: a small heap of sand, a rough grey lump of silicon, a thin shiny round slice, and a dark blue square solar cell with fine silver lines.",
-      "caption": "Sand becomes silicon, then a thin slice, then a dark blue cell."
+      "src": "assets/how-do-combination-locks-work/02-parts.jpg",
+      "original": "assets/how-do-combination-locks-work/02-parts.png",
+      "foldSrc": "assets/how-do-combination-locks-work/02-parts-fold.jpg",
+      "title": "Wheels in a stack",
+      "alt": "A field-guide study of a padlock and its inside parts in a row: the padlock with its marked dial, a small steel disc with one peg, three flat brass wheels with one notch and one tab each, and a thin steel bar.",
+      "caption": "Behind the dial: a drive cam, three notched wheels and a thin fence."
     },
     {
       "id": "change",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/03-layers-fold.jpg",
-      "title": "A one-way slide",
-      "alt": "A field-guide study of a dark blue solar cell in soft light, with a large magnified circle showing two thin stacked layers and tiny pale beads lifting near the line where they meet.",
-      "caption": "Light knocks electrons loose. A one-way push sends them round."
+      "src": "assets/how-do-combination-locks-work/03-stack.jpg",
+      "original": "assets/how-do-combination-locks-work/03-stack.png",
+      "foldSrc": "assets/how-do-combination-locks-work/03-stack-fold.jpg",
+      "title": "Picking up the wheels",
+      "alt": "A field-guide study of three flat brass wheels stacked on one thin rod behind a small disc, with a tab on one wheel touching a tab on the next and the notches pointing different ways.",
+      "caption": "Each wheel's tab catches the next, like train cars hooking on."
     },
     {
       "id": "notice",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/04-panel-fold.jpg",
-      "title": "Cells in a row",
-      "alt": "A solar panel made of many dark blue square cells with thin silver lines, joined in long rows, resting on a garden stone beside three loose cells and one small plain battery, with a garden light nearby.",
-      "caption": "Each cell gives a small push. Joined in rows, the pushes add up."
+      "src": "assets/how-do-combination-locks-work/04-gates.jpg",
+      "original": "assets/how-do-combination-locks-work/04-gates.png",
+      "foldSrc": "assets/how-do-combination-locks-work/04-gates-fold.jpg",
+      "title": "Back and forth",
+      "alt": "Two small stacks of three brass wheels on short rods: in one the notches line up in a column with a thin bar resting down in them, and in the other the notches point different ways and the bar lies across the top.",
+      "caption": "Gates in a row let the fence drop. One stray gate keeps it up."
     },
     {
       "id": "return",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/05-shade-fold.jpg",
-      "title": "Shade means night",
-      "alt": "Big and Little Wonderer back on the garden path, the big one sitting and holding a large leaf over the solar garden light so its panel is shaded, the little one standing and pointing at the glowing lamp.",
-      "caption": "No light, no push, so the garden light thinks it is night."
+      "src": "assets/how-do-combination-locks-work/05-open.jpg",
+      "original": "assets/how-do-combination-locks-work/05-open.png",
+      "foldSrc": "assets/how-do-combination-locks-work/05-open-fold.jpg",
+      "title": "The fence drops in",
+      "alt": "Big and Little Wonderer back at the kitchen table, the big one sitting and holding the padlock with its curved shackle popped open, the little one standing and pointing at it, three notched brass wheels lying on the table.",
+      "caption": "Three gates line up, the fence drops in, and the shackle pops."
     },
     {
       "id": "keep",
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.jpg",
-      "original": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof.png",
-      "foldSrc": "assets/how-solar-panels-turn-sunlight-into-electricity/06-roof-fold.jpg",
-      "title": "Cold and bright",
-      "alt": "A small house roof on a cold, clear winter morning, with snow on the roof and ground and a block of dark solar panels clear of snow in the low light, and a small garden light standing by the snowy path.",
-      "caption": "Cold, bright days help a panel push harder."
+      "src": "assets/how-do-combination-locks-work/06-safe.jpg",
+      "original": "assets/how-do-combination-locks-work/06-safe.png",
+      "foldSrc": "assets/how-do-combination-locks-work/06-safe-fold.jpg",
+      "title": "Close enough",
+      "alt": "A small, heavy old safe with a dark green door, a big round silver dial with fine marks and a round handle, standing on a wooden floor in soft window light.",
+      "caption": "Gates are a bit wide, so a close number can still work."
     }
   ],
   "reading": {
-    "title": "The dark square on the garden light",
+    "title": "The lock on the kitchen table",
     "coverPlate": "wake",
-    "coverText": "Start with a garden light that glows in the shade. Then follow sunlight into a thin slice of silicon and out along a wire.",
-    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation. Never look straight at the sun.",
+    "coverText": "Start with a padlock that clicks as it turns. Then follow the dial into a hidden stack of wheels.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A light that waits",
-        "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square with thin silver lines. The little one holds a mitten over the square. Click! The tiny lamp glows, as if night came early. Big Wonderer leans in to look. How can a small square tell day from night?",
-        "prompt": "What happens when the little one covers the square?",
+        "title": "Three secret numbers",
+        "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers, from 0 to 39. The little one turns it slowly and hears soft clicks inside. Big Wonderer leans in to listen too. Only three numbers in the right order will open it. How can a turning dial remember them?",
+        "prompt": "What does the little one hear inside the lock?",
         "foldable": {
-          "heading": "A light that waits",
-          "body": "A garden light has a small dark square on its cap. Cover it with a mitten, and the tiny lamp glows."
+          "heading": "Three secret numbers",
+          "body": "A padlock dial has forty numbers. Only three, in the right order, open it. Soft clicks hide inside."
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "From sand to cell",
-        "passage": "That dark square is a solar cell, and it starts as sand. Sand holds silicon, a shiny grey stuff. Workers melt it, grow a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces sunlight away. A thin coat turns it dark blue, so more light soaks in.",
-        "prompt": "Why does the cell get a thin blue coat?",
+        "title": "Wheels in a stack",
+        "passage": "Behind the dial hides a stack of three flat wheels on one thin rod. Each wheel has one small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial starts to move. In front of them is a drive cam, a disc fixed to the dial. It has one short peg.",
+        "prompt": "What is the small notch on each wheel called?",
         "foldable": {
-          "heading": "From sand to cell",
-          "body": "A solar cell starts as sand. Silicon is melted, sliced thin and given a blue coat so it keeps more light."
+          "heading": "Wheels in a stack",
+          "body": "Behind the dial sit three loose wheels on one rod. Each has a small notch called a gate."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "A one-way slide",
-        "passage": "Sunlight comes in tiny packets called photons. Inside the cell, two thin layers are pressed together. Where they meet, there is a push that works like a one-way slide. A photon knocks a tiny electron loose. The slide sends it out one side, along a wire and through the lamp. Then it comes back in the other side. That flow is electricity.",
-        "prompt": "What does a photon do inside the cell?",
+        "title": "Picking up the wheels",
+        "passage": "Turn the dial, and the cam's peg swings round. After almost a full turn, it bumps a tab on the nearest wheel and drags it along. That wheel's own peg catches the next wheel, and that one catches the last. So you spin three times first, like an engine hooking three train cars.",
+        "prompt": "Why do you spin the dial three times first?",
         "foldable": {
-          "heading": "A one-way slide",
-          "body": "Light comes in tiny packets called photons. Each can knock an electron loose. A one-way slide sends it round a wire."
+          "heading": "Picking up the wheels",
+          "body": "Each wheel's peg catches the next one. Three spins pick up all three wheels, like an engine hooking train cars."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Cells in a row",
-        "passage": "Here is a clue. A big panel is made of many small cells in rows. One cell gives only a small push, about half a volt. A small battery gives about three times as much. So the cells are joined end to end, and their pushes add up. Thin silver lines on each cell gather the electrons.",
-        "prompt": "Why are so many cells joined in a row?",
+        "title": "Back and forth",
+        "passage": "Here is a clue. Stop on the first number, and the farthest wheel is set. Now turn the other way. The pegs let go, so that wheel stays put. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Stop on the second number. Then turn back to the third.",
+        "prompt": "Why do you pass the first number once?",
         "foldable": {
-          "heading": "Cells in a row",
-          "body": "One cell gives only a small push. A panel joins many cells in rows, so all their small pushes add up."
+          "heading": "Back and forth",
+          "body": "Each turn the other way leaves a set wheel behind. Pass the first number once to pick up the middle wheel."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "Shade means night",
-        "passage": "Back on the path, Big Wonderer holds a leaf over the garden light. The little one points as the lamp glows again. Now the guess changes. The square does not keep sunlight like a sponge. It pushes electrons only while light lands on it. All day, that push fills a little battery inside. When shade stops the push, the light thinks it is night.",
-        "prompt": "Why does the lamp glow in the shade?",
+        "title": "The fence drops in",
+        "passage": "Back at the table, Big Wonderer pulls on the lock. Pop! The shackle swings open, and the little one points. Now the guess changes. The lock never remembered any numbers. The wheels just stayed where they were left. When all three gates line up, a thin bar called a fence drops in and frees the shackle.",
+        "prompt": "What drops into the lined-up gates?",
         "foldable": {
-          "heading": "Shade means night",
-          "body": "The square pushes only while light lands on it. When shade stops the push, the garden light thinks it is night."
+          "heading": "The fence drops in",
+          "body": "The lock keeps no numbers. When all three gates line up, a thin bar called a fence drops in."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Cold and bright",
-        "passage": "Here is a surprise. Solar panels like cold, bright days. Heat makes the inside of each cell jiggle, so its push gets weaker. In the same sunshine, a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
-        "prompt": "Why does heat weaken a solar panel?",
+        "title": "Close enough",
+        "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number one off can often still open a lock! Safe makers test locks so they open only very close to each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence away. How could a lock give away no clues?",
+        "prompt": "Why can a number that is one off still work?",
         "foldable": {
-          "heading": "Cold and bright",
-          "body": "Heat weakens the push of each cell. In the same sunshine, a cold panel makes more power. How could it stay cool?"
+          "heading": "Close enough",
+          "body": "Gates are a bit wider than the fence, so one number off can still work. How could a lock hide its clues?"
         }
       }
     ],
     "words": [
       {
-        "word": "solar cell",
-        "meaning": "a thin slice that turns light into electricity"
+        "word": "combination",
+        "meaning": "a set of numbers used in one exact order"
       },
       {
-        "word": "silicon",
-        "meaning": "a shiny grey stuff made from sand"
+        "word": "gate",
+        "meaning": "a small notch in the edge of a lock wheel"
       },
       {
-        "word": "photon",
-        "meaning": "a tiny packet of light"
+        "word": "drive cam",
+        "meaning": "a disc with a peg that turns with the dial"
       },
       {
-        "word": "electron",
-        "meaning": "a tiny bit of matter that carries electricity"
+        "word": "fence",
+        "meaning": "a thin bar that drops into the lined-up gates"
       },
       {
-        "word": "volt",
-        "meaning": "a measure of how hard electricity is pushed"
+        "word": "shackle",
+        "meaning": "the curved bar of a padlock that pops open"
       }
     ],
     "questions": [
-      "What happens when you cover the square on a garden light?",
-      "Why is a solar cell dark blue?",
-      "Why does a panel join many cells in a row?",
-      "Why does heat weaken a solar panel?"
+      "What hides behind the dial of a combination lock?",
+      "Why do you spin the dial three times first?",
+      "Why does each turn the other way set one more wheel?",
+      "Why can a number that is one off still open a lock?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what light does inside a solar cell, why cells are joined in rows, and why shade turns on a garden light.",
-      "example": "Example: Light knocks electrons loose. The small pushes add up in a row. In the shade, the push stops, so the light thinks it is night."
+      "prompt": "Write or dictate three sentences: what hides behind the dial, why you spin three times first, and what drops in when the gates line up.",
+      "example": "Example: Three wheels with notches hide behind the dial. Three spins pick up all the wheels. When the gates line up, the fence drops in."
     },
-    "foldableTitle": "A little book of sunlight",
-    "foldableCoverLine": "Solar Panels",
-    "foldableNote": "Carry six sunlight clues in a small book."
+    "foldableTitle": "A little book of locks",
+    "foldableCoverLine": "Combo Locks",
+    "foldableNote": "Carry six lock clues in a small book."
   },
   "math": {
-    "title": "Sunlight story numbers",
-    "eyebrow": "Math",
-    "intro": "Six one-step stories about garden lights, cells, panels and sunny roofs. Add or subtract to find each answer.",
-    "plate": "notice",
-    "actionLabel": "Solve",
-    "template": "story-problems",
+    "title": "Find the lock patterns",
+    "eyebrow": "SIX LOCK PATTERNS",
+    "intro": "Look for the step between numbers. Fill each missing number.",
+    "plate": "change",
+    "actionLabel": "Find the step, then fill the gap",
     "tasks": [
       {
-        "skill": "one-step-add",
-        "operands": [
-          27,
+        "skill": "skip-next",
+        "sequence": [
+          5,
+          10,
+          15,
+          20
+        ],
+        "step": 5,
+        "blankIndex": 3,
+        "prompt": "Little Wonderer sees a longer mark at every fifth number on the dial. What number comes next?",
+        "equation": "5, 10, 15, ___",
+        "hint": "Count on by 5 from the number just before the blank.",
+        "answer": 20,
+        "worked": "15 + 5 = 20. Each step adds 5.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "skip-missing",
+        "sequence": [
+          0,
+          10,
+          20,
+          30
+        ],
+        "step": 10,
+        "blankIndex": 1,
+        "prompt": "The big numbers on the dial go up by tens. What number is missing?",
+        "equation": "0, ___, 20, 30",
+        "hint": "Count on by 10 from the number just before the blank.",
+        "answer": 10,
+        "worked": "0 + 10 = 10. Each step adds 10.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "skip-next",
+        "sequence": [
+          12,
+          14,
+          16,
           18
         ],
-        "plate": "wake",
-        "label": "TASK 1",
-        "prompt": "Little Wonderer counts 27 garden lights on one path and 18 on another. How many garden lights is that altogether?",
-        "equation": "27 + 18 =",
-        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 45,
-        "worked": "27 + 18 = 45. Combine the lights on both paths."
-      },
-      {
-        "skill": "one-step-subtract",
-        "operands": [
-          64,
-          29
-        ],
-        "plate": "reach",
-        "label": "TASK 2",
-        "prompt": "A box holds 64 thin silicon slices, and 29 of them are made into cells. How many slices are still plain?",
-        "equation": "64 − 29 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
-        "answer": 35,
-        "worked": "64 − 29 = 35. Take away the slices that became cells."
-      },
-      {
-        "skill": "one-step-add",
-        "operands": [
-          36,
-          47
-        ],
+        "step": 2,
+        "blankIndex": 3,
+        "prompt": "In a pretend count, the little one counts dial clicks two at a time. What number comes next?",
+        "equation": "12, 14, 16, ___",
+        "hint": "Count on by 2 from the number just before the blank.",
+        "answer": 18,
+        "worked": "16 + 2 = 18. Each step adds 2.",
         "plate": "change",
-        "label": "TASK 3",
-        "prompt": "In a pretend count, 36 photons knock electrons loose, and then 47 more do. How many electrons are knocked loose in all?",
-        "equation": "36 + 47 =",
-        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 83,
-        "worked": "36 + 47 = 83. Combine both groups of loose electrons."
+        "label": "TASK 3"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          60,
-          24
+        "skill": "skip-missing",
+        "sequence": [
+          25,
+          30,
+          35,
+          40,
+          45
         ],
+        "step": 5,
+        "blankIndex": 2,
+        "prompt": "A school hallway has lockers in rows of 5. Counting by fives, what number is missing?",
+        "equation": "25, 30, ___, 40, 45",
+        "hint": "Count on by 5 from the number just before the blank.",
+        "answer": 35,
+        "worked": "30 + 5 = 35. Each step adds 5.",
         "plate": "notice",
-        "label": "TASK 4",
-        "prompt": "A panel has 60 cells, and a tree shades 24 of them. How many cells are still in the sun?",
-        "equation": "60 − 24 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
-        "answer": 36,
-        "worked": "60 − 24 = 36. Take away the shaded cells."
+        "label": "TASK 4"
       },
       {
-        "skill": "one-step-add",
-        "operands": [
-          45,
-          37
+        "skill": "skip-next",
+        "sequence": [
+          40,
+          50,
+          60,
+          70
         ],
+        "step": 10,
+        "blankIndex": 3,
+        "prompt": "A shop packs padlocks in boxes of 10. Big Wonderer counts the boxes by tens. What number comes next?",
+        "equation": "40, 50, 60, ___",
+        "hint": "Count on by 10 from the number just before the blank.",
+        "answer": 70,
+        "worked": "60 + 10 = 70. Each step adds 10.",
         "plate": "return",
-        "label": "TASK 5",
-        "prompt": "Big Wonderer counts 45 minutes of sun on the garden light in the morning and 37 in the afternoon. How many minutes is that altogether?",
-        "equation": "45 + 37 =",
-        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
-        "answer": 82,
-        "worked": "45 + 37 = 82. Combine the morning and afternoon minutes."
+        "label": "TASK 5"
       },
       {
-        "skill": "one-step-subtract",
-        "operands": [
-          72,
-          35
+        "skill": "skip-missing",
+        "sequence": [
+          64,
+          66,
+          68,
+          70
         ],
+        "step": 2,
+        "blankIndex": 2,
+        "prompt": "A safe maker tests 2 locks each hour. What number is missing from the count?",
+        "equation": "64, 66, ___, 70",
+        "hint": "Count on by 2 from the number just before the blank.",
+        "answer": 68,
+        "worked": "66 + 2 = 68. Each step adds 2.",
         "plate": "keep",
-        "label": "TASK 6",
-        "prompt": "A snowy town has 72 roof panels, and snow still covers 35 of them. How many panels are clear?",
-        "equation": "72 − 35 =",
-        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
-        "answer": 37,
-        "worked": "72 − 35 = 37. Take away the panels under snow."
+        "label": "TASK 6"
       }
     ],
-    "extension": "After you finish, tell which problem felt most like a sunny roof, and why.",
-    "printNote": "Use these story numbers about solar panels. The picture is not a ruler.",
-    "parentNote": "Six one-step story problems tied to solar panels. The numbers are for practice, not real measurements.",
-    "answerKeyIntro": "Math answers (story numbers):"
+    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six skip-counting sequences use steps of 2, 5, and 10 within 100. The numbers are for counting practice, not real lock combinations.",
+    "answerKeyIntro": "Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
   },
   "writing": {
-    "title": "Explain a sunlight clue in your words",
+    "title": "Explain a lock clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw a solar cell with two thin layers, and show a tiny electron going round a loop of wire.",
-    "starter": "My sunlight clue",
+    "draw": "Draw three wheels on a rod, each with one notch, and show the notches lined up under a thin bar.",
+    "starter": "My lock clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "A solar cell is dark blue because",
-        "hint": "what does the thin coat do?"
+        "start": "Behind the dial there are",
+        "hint": "what does each wheel have in its edge?"
       },
       {
         "plate": "change",
-        "start": "Light makes electricity when",
-        "hint": "what does a photon knock loose?"
+        "start": "You spin the dial three times because",
+        "hint": "what do the pegs pick up?"
       },
       {
         "plate": "notice",
-        "start": "A panel needs many cells because",
-        "hint": "how big is one push?"
+        "start": "The lock opens when",
+        "hint": "where do the gates have to be?"
       }
     ],
     "words": [
-      "light",
-      "cell",
-      "push",
-      "electron",
+      "dial",
+      "wheel",
+      "gate",
+      "fence",
       "because",
       "maybe"
     ],
@@ -380,62 +404,58 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "The tiny lamp glows, as if night came early."
+      "text": "Soft clicks inside the lock as the dial turns."
     },
     {
       "label": "Reading · 2",
-      "text": "Bare silicon bounces light away; the blue coat keeps more in."
+      "text": "A gate: the small notch in the edge of each wheel."
     },
     {
       "label": "Reading · 3",
-      "text": "It knocks an electron loose, and the one-way push sends it round."
+      "text": "To pick up all three wheels, one after another."
     },
     {
       "label": "Reading · 4",
-      "text": "One cell gives about half a volt; joined in a row, pushes add up."
+      "text": "The cam needs a full turn to pick up the middle wheel."
     },
     {
       "label": "Reading · 5",
-      "text": "Shade stops the push, so the light thinks it is night."
+      "text": "The fence drops into the lined-up gates."
     },
     {
       "label": "Reading · 6",
-      "text": "Heat makes the inside jiggle, so each push gets weaker."
+      "text": "Each gate is a little wider than the fence."
     },
     {
       "label": "Math · all",
-      "text": "45, 35, 83, 36, 82, 37."
+      "text": "20, 10, 18, 35, 70, 68."
     },
     {
       "label": "Screen-free",
-      "text": "Its lamp turns on; an electron; so their pushes add up; on a cold, bright day."
+      "text": "A small notch; to pick up all wheels; the fence; often still open it."
     }
   ],
-  "parentGuidance": "Never look straight at the sun. Use only a small garden light or solar calculator; never open a panel, touch wires, or climb toward a roof panel.",
+  "parentGuidance": "Practice only on a lock you own and know the combination of. Do not take apart spring-loaded locks; paper wheels on a pencil show the same idea safely.",
   "sources": [
     {
-      "label": "U.S. Energy Information Administration — Photovoltaics and electricity",
-      "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php"
+      "label": "HowStuffWorks — How combination locks work (drive cam, wheel pack, picking up the wheels)",
+      "url": "https://home.howstuffworks.com/home-improvement/home-diy/combination-lock.htm"
     },
     {
-      "label": "PVEducation — Module circuit design (about 0.5 V per silicon cell; cells joined in series)",
-      "url": "https://www.pveducation.org/pvcdrom/modules-and-arrays/module-circuit-design"
+      "label": "Locksmith Ledger — Anatomy of a safe lock: three-wheel combination locks (flies, drive pins, why each turn sets one wheel)",
+      "url": "https://www.locksmithledger.com/safes/article/10228880/anatomy-of-a-safe-lock-three-wheel-combination-locks-old-and-new"
     },
     {
-      "label": "PVEducation — Anti-reflection coatings (bare silicon reflects over 30%)",
-      "url": "https://www.pveducation.org/pvcdrom/design-of-silicon-cells/anti-reflection-coatings"
+      "label": "Master Lock — Combination lock tutorial (three turns right, one full turn left past the first number, then right)",
+      "url": "https://content.masterlock.com/masterlock/resources/documents/pdf/Master_Lock_Combination_Tutorial.pdf"
     },
     {
-      "label": "PVEducation — Effect of temperature on solar cells",
-      "url": "https://www.pveducation.org/pvcdrom/solar-cell-operation/effect-of-temperature"
+      "label": "NIST NBSIR 81-2233 — High security locking devices (UL 768 dialing tolerances; fence kept off the wheels; nylon wheels against X-rays)",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nbsir81-2233.pdf"
     },
     {
-      "label": "Analog Devices StudentZone — Hacking an LED solar garden light (the panel doubles as the dark sensor)",
-      "url": "https://ez.analog.com/adiacademy/university-program/a/studentzone-articles/SA1116/hacking-an-led-solar-garden-light"
-    },
-    {
-      "label": "APS News — April 25, 1954: Bell Labs demonstrates the first practical silicon solar cell",
-      "url": "https://www.aps.org/apsnews/2009/04/bell-labs-silicon-solar-cell"
+      "label": "Wikipedia — Rotary combination lock (wheel pack, fly, gates and fence)",
+      "url": "https://en.wikipedia.org/wiki/Rotary_combination_lock"
     }
   ],
   "levels": {
@@ -444,47 +464,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a garden light. It has a small dark square. The little one covers the square. The lamp glows!",
-            "prompt": "What happens to the lamp?"
+            "passage": "Little Wonderer finds a lock. It has a round dial. The little one turns it. Click, click! How does it open?",
+            "prompt": "What does the lock have?"
           },
           {
             "id": "reach",
-            "passage": "The dark square is a solar cell. It starts as sand. A blue coat helps it keep light.",
-            "prompt": "What does the cell start as?"
+            "passage": "Inside are three flat wheels. Each wheel has a notch. The notch is called a gate.",
+            "prompt": "What is a gate?"
           },
           {
             "id": "change",
-            "passage": "Light comes in tiny bits. They knock electrons loose. A one-way slide sends them round.",
-            "prompt": "What does light knock loose?"
+            "passage": "The dial has a peg. The peg pushes one wheel. That wheel pushes the next. Spin three times first!",
+            "prompt": "Why spin three times?"
           },
           {
             "id": "notice",
-            "passage": "One cell gives a small push. Many cells sit in a row. Their pushes add up.",
-            "prompt": "Why are cells in a row?"
+            "passage": "Stop on the first number. Turn back the other way. Each turn sets one more wheel.",
+            "prompt": "What does each turn set?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer holds a leaf up. The square is in shade. The push stops. The lamp glows!",
-            "prompt": "Why does the lamp glow?"
+            "passage": "Big Wonderer pulls the lock. Pop! It opens. The three gates lined up. A thin bar dropped in.",
+            "prompt": "What dropped in?"
           },
           {
             "id": "keep",
-            "passage": "Panels like cold, sunny days. Heat makes the push weak. How can panels stay cool?",
-            "prompt": "Do panels like heat?"
+            "passage": "Close numbers can work too. The gates are a bit wide. How can a lock hide clues?",
+            "prompt": "Can close numbers work?"
           }
         ],
         "words": [
           {
-            "word": "solar cell",
-            "meaning": "a thin slice that turns light into power"
+            "word": "dial",
+            "meaning": "the round knob you turn"
           },
           {
-            "word": "push",
-            "meaning": "what makes electricity move"
+            "word": "wheel",
+            "meaning": "a flat circle that turns inside the lock"
           },
           {
-            "word": "shade",
-            "meaning": "a spot the light cannot reach"
+            "word": "gate",
+            "meaning": "a small notch in a wheel"
           }
         ]
       },
@@ -492,57 +512,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer sees 9 garden lights, then 6 more. How many lights?",
+            "prompt": "Little Wonderer counts 9 clicks of the dial, then 6 more. How many clicks?",
             "expression": "9 + 6",
             "equation": "9 + 6 =",
             "answer": 15,
             "hint": "Make a ten: 9 + 1 + 5.",
-            "worked": "9 + 6 = 15. Add both sets of lights."
+            "worked": "9 + 6 = 15. Add both sets of clicks."
           },
           {
             "plate": "reach",
-            "prompt": "There are 14 thin slices, and 5 become cells. How many are left?",
+            "prompt": "A box has 14 lock wheels, and 5 go in a lock. How many are left?",
             "expression": "14 − 5",
             "equation": "14 − 5 =",
             "answer": 9,
             "hint": "Take 5 away from 14.",
-            "worked": "14 − 5 = 9. Take away the slices that became cells."
+            "worked": "14 − 5 = 9. Take away the wheels used."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, 8 photons hit, then 7 more. How many photons?",
+            "prompt": "In a pretend count, the dial spins 8 times, then 7 more. How many spins?",
             "expression": "8 + 7",
             "equation": "8 + 7 =",
             "answer": 15,
             "hint": "Make a ten: 8 + 2 + 5.",
-            "worked": "8 + 7 = 15. Add both sets of photons."
+            "worked": "8 + 7 = 15. Add both sets of spins."
           },
           {
             "plate": "notice",
-            "prompt": "A panel has 12 cells, and 4 are in shade. How many are in the sun?",
+            "prompt": "A wall has 12 lockers, and 4 are open. How many are shut?",
             "expression": "12 − 4",
             "equation": "12 − 4 =",
             "answer": 8,
             "hint": "Take 4 away from 12.",
-            "worked": "12 − 4 = 8. Take away the shaded cells."
+            "worked": "12 − 4 = 8. Take away the open lockers."
           },
           {
             "plate": "return",
-            "prompt": "The big one counts 7 leaves, then 6 more. How many leaves?",
+            "prompt": "The big one opens 7 locks, then 6 more. How many locks?",
             "expression": "7 + 6",
             "equation": "7 + 6 =",
             "answer": 13,
             "hint": "Double 6, then add 1.",
-            "worked": "7 + 6 = 13. Add both sets of leaves."
+            "worked": "7 + 6 = 13. Add both sets of locks."
           },
           {
             "plate": "keep",
-            "prompt": "A roof has 16 panels. Snow covers 9. How many are clear?",
+            "prompt": "A shop has 16 safes, and 9 are sold. How many are left?",
             "expression": "16 − 9",
             "equation": "16 − 9 =",
             "answer": 7,
             "hint": "Take 9 away from 16.",
-            "worked": "16 − 9 = 7. Take away the snowy panels."
+            "worked": "16 − 9 = 7. Take away the sold safes."
           }
         ]
       }
@@ -552,51 +572,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a garden light on the path. On its cap is a small dark square. The little one covers it with a mitten. Click! The tiny lamp glows. How does it know?",
-            "prompt": "What happens when the square is covered?"
+            "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers. The little one turns it slowly. Click, click! Only three numbers will open it. How can a dial remember them?",
+            "prompt": "How many numbers open the lock?"
           },
           {
             "id": "reach",
-            "passage": "That dark square is a solar cell. It starts as sand. Sand holds silicon, a shiny grey stuff. Workers slice it very thin. A blue coat helps it keep more light.",
-            "prompt": "What is a solar cell made from?"
+            "passage": "Behind the dial sit three flat wheels on one rod. Each wheel has a small notch called a gate. The wheels are loose. They turn only when something pushes them.",
+            "prompt": "What is on each wheel?"
           },
           {
             "id": "change",
-            "passage": "Sunlight comes in tiny packets called photons. A photon knocks an electron loose. Inside the cell is a one-way slide. It sends the electron round a wire. That flow is electricity.",
-            "prompt": "What sends the electron round?"
+            "passage": "The dial turns a disc with a short peg. The peg bumps the nearest wheel and drags it. That wheel catches the next, then the last. So you spin three times first.",
+            "prompt": "Why do you spin three times first?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue. A big panel has many cells in rows. One cell gives only a small push. So the cells are joined end to end. Their small pushes add up.",
-            "prompt": "Why are the cells joined?"
+            "passage": "Here is a clue. Stop on the first number to set the far wheel. Then turn the other way. That wheel stays put. Each new turn sets one more wheel.",
+            "prompt": "What happens to the far wheel?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer holds a leaf over the light. The little one points at the glowing lamp. Now the guess changes. The square keeps no sunlight. In shade, its push stops.",
-            "prompt": "What happens in the shade?"
+            "passage": "Big Wonderer pulls on the lock, and it pops open. Now the guess changes. The lock keeps no numbers. All three gates lined up. A thin bar called a fence dropped in.",
+            "prompt": "What dropped into the gates?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise. Panels like cold, bright days. Heat makes the push of each cell weaker. A snowy roof can work very well. How could a panel stay cool?",
-            "prompt": "Why do panels like the cold?"
+            "passage": "Here is a surprise. A number one off can still work. Each gate is a bit wider than the fence. How could a lock hide its clues?",
+            "prompt": "Why can a close number work?"
           }
         ],
         "words": [
           {
-            "word": "solar cell",
-            "meaning": "a thin slice that turns light into electricity"
+            "word": "padlock",
+            "meaning": "a lock with a curved bar that pops open"
           },
           {
-            "word": "silicon",
-            "meaning": "a shiny grey stuff made from sand"
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
           },
           {
-            "word": "photon",
-            "meaning": "a tiny packet of light"
+            "word": "peg",
+            "meaning": "a short bump that pushes something"
           },
           {
-            "word": "electron",
-            "meaning": "a tiny bit that carries electricity"
+            "word": "fence",
+            "meaning": "a thin bar that drops into the gates"
           }
         ]
       },
@@ -604,57 +624,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 24 garden lights, then 17 more. How many lights?",
+            "prompt": "Little Wonderer counts 24 clicks of the dial, then 17 more. How many clicks?",
             "expression": "24 + 17",
             "equation": "24 + 17 =",
             "answer": 41,
             "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "24 + 17 = 41. Add both sets of lights."
+            "worked": "24 + 17 = 41. Add both sets of clicks."
           },
           {
             "plate": "reach",
-            "prompt": "A box holds 43 thin slices, and 18 become cells. How many slices are left?",
+            "prompt": "A box holds 43 lock wheels, and 18 get a gate cut. How many still need a gate?",
             "expression": "43 − 18",
             "equation": "43 − 18 =",
             "answer": 25,
             "hint": "Trade a ten for ones, then subtract.",
-            "worked": "43 − 18 = 25. Take away the slices that became cells."
+            "worked": "43 − 18 = 25. Take away the wheels with gates."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, 19 photons hit, then 26 more. How many photons?",
+            "prompt": "In a pretend count, the dial clicks 19 times, then 26 more. How many clicks?",
             "expression": "19 + 26",
             "equation": "19 + 26 =",
             "answer": 45,
             "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "19 + 26 = 45. Add both sets of photons."
+            "worked": "19 + 26 = 45. Add both sets of clicks."
           },
           {
             "plate": "notice",
-            "prompt": "A panel has 36 cells, and 12 are in shade. How many are in the sun?",
+            "prompt": "A hallway has 36 lockers, and 12 are open. How many are shut?",
             "expression": "36 − 12",
             "equation": "36 − 12 =",
             "answer": 24,
             "hint": "Subtract the tens, then the ones.",
-            "worked": "36 − 12 = 24. Take away the shaded cells."
+            "worked": "36 − 12 = 24. Take away the open lockers."
           },
           {
             "plate": "return",
-            "prompt": "The big one counts 28 sunny minutes, then 15 more. How many minutes?",
+            "prompt": "The big one opens 28 locks, then 15 more. How many locks?",
             "expression": "28 + 15",
             "equation": "28 + 15 =",
             "answer": 43,
             "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "28 + 15 = 43. Add both sets of minutes."
+            "worked": "28 + 15 = 43. Add both sets of locks."
           },
           {
             "plate": "keep",
-            "prompt": "A town has 50 roof panels, and snow covers 23. How many are clear?",
+            "prompt": "A safe shop has 50 safes, and 23 are sold. How many are left?",
             "expression": "50 − 23",
             "equation": "50 − 23 =",
             "answer": 27,
             "hint": "Trade a ten for ones, then subtract.",
-            "worked": "50 − 23 = 27. Take away the snowy panels."
+            "worked": "50 − 23 = 27. Take away the sold safes."
           }
         ]
       }
@@ -664,59 +684,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a garden light standing beside the path, with a small dark square on its cap crossed by thin silver lines. The little one held a mitten over the square, and with a soft click the tiny lamp began to glow. Big Wonderer leaned in to watch. How could a small square of glass tell day from night?",
-            "prompt": "What made the lamp switch on?"
+            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers from 0 to 39. The little one turned the dial slowly and heard soft clicks somewhere inside. Big Wonderer leaned in to listen too. Only three numbers, dialed in the right order, would open it. How could a turning dial remember three secret numbers?",
+            "prompt": "What did the little one hear?"
           },
           {
             "id": "reach",
-            "passage": "That dark square is a solar cell, and it begins as ordinary sand. Sand holds silicon, a shiny grey material. Workers melt it, grow it into a big crystal, and slice it thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light. A coat thinner than a soap bubble turns it dark blue and helps it keep more light.",
-            "prompt": "Why do makers give the cell a coat?"
+            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial first starts to move. In front of them is the drive cam. It is a disc fixed to the dial, with one short peg sticking out.",
+            "prompt": "Why do the wheels not turn at first?"
           },
           {
             "id": "change",
-            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet there is a built-in push that works like a one-way slide. When a photon knocks an electron loose, the slide sends it out one side of the cell. It travels along a wire, through the lamp, and back in the other side. That flow is electricity.",
-            "prompt": "Where does the loose electron go?"
+            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel and drags that wheel along. The wheel has its own peg, which catches the second wheel, and that one catches the third. This is why you spin the dial three times first. It picks up all three wheels, like an engine hooking train cars.",
+            "prompt": "How does one wheel move the next?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up. Thin silver lines on each cell gather the electrons.",
-            "prompt": "How do many small pushes become a big one?"
+            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way. The pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Then you stop on the second number and turn back to the third.",
+            "prompt": "Why must you pass the first number once?"
           },
           {
             "id": "return",
-            "passage": "Back on the path, Big Wonderer held a leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, like a sponge. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and when shade stops the push, the light decides it is night.",
-            "prompt": "How does the garden light know it is night?"
+            "passage": "Back at the table, Big Wonderer pulled on the lock, and pop, the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed where they were left. A thin bar called a fence rests on their edges. When all three gates line up beneath it, the fence drops in and frees the shackle.",
+            "prompt": "Where does the lock keep the combination?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise. Solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. In 1954, one of the first useful silicon panels spun a toy Ferris wheel. How could a panel stay cool in the sun?",
-            "prompt": "Why does a hot panel make less power?"
+            "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence up and away. How would you build a lock that gives away no clues?",
+            "prompt": "Why do safe locks hold the fence away from the wheels?"
           }
         ],
         "words": [
           {
-            "word": "solar cell",
-            "meaning": "a thin slice that turns light into electricity"
+            "word": "combination",
+            "meaning": "a set of numbers used in one exact order"
           },
           {
-            "word": "silicon",
-            "meaning": "a shiny grey material made from sand"
+            "word": "padlock",
+            "meaning": "a lock with a curved bar that pops open"
           },
           {
-            "word": "crystal",
-            "meaning": "a solid whose tiny parts line up in a neat pattern"
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
           },
           {
-            "word": "photon",
-            "meaning": "a tiny packet of light energy"
+            "word": "drive cam",
+            "meaning": "a disc with a peg that turns with the dial"
           },
           {
-            "word": "electron",
-            "meaning": "a tiny bit of matter that carries electricity"
+            "word": "fence",
+            "meaning": "a thin bar that drops into the lined-up gates"
           },
           {
-            "word": "volt",
-            "meaning": "a measure of how hard electricity is pushed"
+            "word": "shackle",
+            "meaning": "the curved bar of a padlock that pops open"
           }
         ]
       },
@@ -724,57 +744,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "A shop packs garden lights in boxes of 8, and Little Wonderer counts 7 boxes. How many lights?",
-            "expression": "8 × 7",
-            "equation": "8 × 7 =",
-            "answer": 56,
-            "hint": "Eight groups of seven.",
-            "worked": "8 × 7 = 56. Eight lights in each of seven boxes."
+            "prompt": "Little Wonderer learns that each padlock hides 3 wheels. How many wheels are in 8 padlocks?",
+            "expression": "3 × 8",
+            "equation": "3 × 8 =",
+            "answer": 24,
+            "hint": "Three groups of eight.",
+            "worked": "3 × 8 = 24. Eight padlocks with three wheels each."
           },
           {
             "plate": "reach",
-            "prompt": "A factory slices 640 silicon wafers, and 175 crack. How many good wafers are left?",
-            "expression": "640 − 175",
-            "equation": "640 − 175 =",
-            "answer": 465,
-            "hint": "Subtract each place; regroup when needed.",
-            "worked": "640 − 175 = 465. Take away the cracked wafers."
+            "prompt": "A factory packs lock wheels in boxes of 8 and fills 9 boxes. How many wheels?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Eight groups of nine.",
+            "worked": "8 × 9 = 72. Nine boxes of eight wheels."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, a cell frees 386 electrons, then 247 more. How many electrons?",
-            "expression": "386 + 247",
-            "equation": "386 + 247 =",
-            "answer": 633,
+            "prompt": "In a pretend count, a dial clicks 365 times on Monday and 248 times on Tuesday. How many clicks?",
+            "expression": "365 + 248",
+            "equation": "365 + 248 =",
+            "answer": 613,
             "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "386 + 247 = 633. Add both groups of electrons."
+            "worked": "365 + 248 = 613. Add both days of clicks."
           },
           {
             "plate": "notice",
-            "prompt": "A panel has 6 rows with 10 cells in each row. How many cells?",
-            "expression": "6 × 10",
-            "equation": "6 × 10 =",
-            "answer": 60,
-            "hint": "Six groups of ten.",
-            "worked": "6 × 10 = 60. Six rows of ten cells."
+            "prompt": "A school has 640 lockers, and 275 are in use. How many are empty?",
+            "expression": "640 − 275",
+            "equation": "640 − 275 =",
+            "answer": 365,
+            "hint": "Subtract each place; regroup when needed.",
+            "worked": "640 − 275 = 365. Take away the lockers in use."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer plants 81 garden lights equally along 9 paths. How many lights go on each path?",
-            "expression": "81 ÷ 9",
-            "equation": "81 ÷ 9 =",
+            "prompt": "Big Wonderer shares 72 padlocks equally among 8 classes. How many padlocks does each class get?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
             "answer": 9,
-            "hint": "Share 81 into 9 equal groups.",
-            "worked": "81 ÷ 9 = 9. Each path gets the same number of lights."
+            "hint": "Share 72 into 8 equal groups.",
+            "worked": "72 ÷ 8 = 9. Each class gets the same number."
           },
           {
             "plate": "keep",
-            "prompt": "In a pretend test, a cold panel makes 412 units of power and a hot one makes 368. How many more does the cold panel make?",
-            "expression": "412 − 368",
-            "equation": "412 − 368 =",
-            "answer": 44,
+            "prompt": "A safe maker tests 512 locks, and 489 pass. How many did not pass?",
+            "expression": "512 − 489",
+            "equation": "512 − 489 =",
+            "answer": 23,
             "hint": "Subtract each place; regroup when needed.",
-            "worked": "412 − 368 = 44. Take the hot panel from the cold one."
+            "worked": "512 − 489 = 23. Take the passing locks from the total."
           }
         ]
       }
@@ -784,63 +804,63 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a garden light standing beside the gravel path, with a small dark square on its cap crossed by thin silver lines. Curious, the little one held a mitten flat over the square, and with a soft click the tiny frosted lamp began to glow, as if night had arrived early. Leaning in close, Big Wonderer watched the warm glow appear. How could a small square of glass tell the difference between day and night?",
-            "prompt": "What made the lamp switch on in daylight?"
+            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers running from 0 to 39. Curious, the little one turned the dial slowly and heard soft clicks somewhere deep inside. Big Wonderer leaned in close to listen. With forty numbers, there are 64,000 possible sets of three on paper, yet only one opens it. How could a turning dial remember three secret numbers?",
+            "prompt": "How many sets of three are possible on paper?"
           },
           {
             "id": "reach",
-            "passage": "That dark square is a solar cell, and it begins as ordinary sand, which holds a shiny grey material called silicon. Workers melt the silicon, grow it into a big crystal, and slice it into wafers thinner than a fingernail. Bare silicon is so shiny that it bounces away about a third of the light that hits it. So makers add a coat thinner than a soap bubble, which turns the cell dark blue and helps it keep more light.",
-            "prompt": "Why would a shiny cell waste light?"
+            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod, a set that lock makers call the wheel pack. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose on the rod, so they do not turn when the dial first starts to move. In front of them is the drive cam, a disc fixed to the dial with one short peg sticking out of its face.",
+            "prompt": "What do lock makers call the stack of wheels?"
           },
           {
             "id": "change",
-            "passage": "Sunlight arrives in tiny packets of energy called photons. Inside the cell, two thin layers of silicon are pressed together, and where they meet a built-in push forms, working like a one-way slide. When a photon with enough energy knocks an electron loose, the slide sends it out one side of the cell, along a wire, through the lamp and back in the other side. Light with too little energy cannot free an electron. Extra energy simply warms the cell.",
-            "prompt": "What happens to light with too little energy?"
+            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel, called a fly, and drags that wheel along. That wheel has its own peg on its far side, which catches the second wheel's fly, and the second wheel catches the third. This is why you spin three times first, picking up all three wheels like an engine hooking train cars. Strangely, the wheel farthest from the dial is the one that sets the first number.",
+            "prompt": "Which wheel sets the first number?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. A big panel is a grid of many small cells, joined in long rows by thin silver ribbons. One cell gives a push of only about half a volt, while a small battery gives about three times as much. Joined end to end, the small pushes add up, and many panels hold 36 cells or more. If one cell sits in shade, it can slow the whole row, like a kink in a garden hose.",
-            "prompt": "Why can one shaded cell slow a whole row?"
+            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way: the pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to catch the middle wheel again. Then you stop on the second number and turn back to the third, which moves only the nearest wheel. Many large safes use four wheels and even more turns.",
+            "prompt": "Why would a four-wheel safe need more turns?"
           },
           {
             "id": "return",
-            "passage": "Back on the path, Big Wonderer held a broad leaf over the garden light, and the little one pointed as the lamp glowed again. Now the guess changed. The square does not soak up sunlight to keep, the way a sponge holds water. It pushes electrons only while light lands on it. All day that push fills a little battery inside, and in many garden lights the same square works as the sensor, so when shade stops its push, the light decides that night has come.",
-            "prompt": "How can one square be both a power maker and a sensor?"
+            "passage": "Back at the table, Big Wonderer pulled on the lock, and with a pop the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed wherever they were left, like bookmarks. A thin bar called a fence rests on their smooth edges. When all three gates line up beneath it, the fence drops into the slot they make, and the shackle is free to pull out.",
+            "prompt": "How are the wheels like bookmarks?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise: solar panels like cold, bright days best. Heat makes everything inside each cell jiggle, and that weakens its push, so in the same sunshine a cold panel makes more power than a hot one. Most of the sunlight that lands on a panel ends up as heat, not electricity. In 1954, one of the first useful silicon panels spun a toy Ferris wheel in New Jersey. How could a panel stay cool while sitting in the sun all day?",
-            "prompt": "Where does most of the sunlight's energy go?"
+            "passage": "Here is a surprise: each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their best locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So strong safe locks hold the fence up and away, and some use plastic wheels that hide in X-ray pictures. How would you build a lock that gives away no clues?",
+            "prompt": "What two tricks help a safe lock hide its clues?"
           }
         ],
         "words": [
           {
-            "word": "solar cell",
-            "meaning": "a thin slice that turns light into electricity"
+            "word": "combination",
+            "meaning": "a set of numbers used in one exact order"
           },
           {
-            "word": "silicon",
-            "meaning": "a shiny grey material made from sand"
+            "word": "wheel pack",
+            "meaning": "the stack of notched wheels inside a dial lock"
           },
           {
-            "word": "wafer",
-            "meaning": "a very thin slice of silicon"
+            "word": "gate",
+            "meaning": "a small notch in the edge of a lock wheel"
           },
           {
-            "word": "photon",
-            "meaning": "a tiny packet of light energy"
+            "word": "drive cam",
+            "meaning": "a disc with a peg that turns with the dial"
           },
           {
-            "word": "electron",
-            "meaning": "a tiny bit of matter that carries electricity"
+            "word": "fly",
+            "meaning": "a small tab on a wheel that a peg catches"
           },
           {
-            "word": "volt",
-            "meaning": "a measure of how hard electricity is pushed"
+            "word": "fence",
+            "meaning": "a thin bar that drops into the lined-up gates"
           },
           {
-            "word": "sensor",
-            "meaning": "a part that notices a change, like light or heat"
+            "word": "shackle",
+            "meaning": "the curved bar of a padlock that pops open"
           }
         ]
       },
@@ -848,157 +868,147 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that a town has 2480 garden lights on the east side and 1765 on the west. How many garden lights in all?",
-            "expression": "2480 + 1765",
-            "equation": "2480 + 1765 =",
-            "answer": 4245,
-            "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "2480 + 1765 = 4245. Add the east and west lights."
+            "prompt": "Little Wonderer learns that 3 full spins of a dial pass 40 marks each time. How many marks pass?",
+            "expression": "40 × 3",
+            "equation": "40 × 3 =",
+            "answer": 120,
+            "hint": "Think 3 × 4 = 12, then 3 × 40 = 120.",
+            "worked": "40 × 3 = 120. Three spins of forty marks."
           },
           {
             "plate": "reach",
-            "prompt": "A factory slices 5000 silicon wafers, and 1836 are sent to be coated first. How many wafers are left to coat later?",
-            "expression": "5000 − 1836",
-            "equation": "5000 − 1836 =",
-            "answer": 3164,
+            "prompt": "A factory makes 4500 lock wheels, and 1875 get a gate cut first. How many still need a gate?",
+            "expression": "4500 − 1875",
+            "equation": "4500 − 1875 =",
+            "answer": 2625,
             "hint": "Regroup across the zeros.",
-            "worked": "5000 − 1836 = 3164. Take away the wafers coated first."
+            "worked": "4500 − 1875 = 2625. Take away the wheels cut first."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, each of 8 cells frees 1125 electrons. How many electrons?",
-            "expression": "1125 × 8",
-            "equation": "1125 × 8 =",
-            "answer": 9000,
-            "hint": "Think 8 × 1000 and 8 × 125.",
-            "worked": "1125 × 8 = 9000. Eight cells of 1125 electrons."
+            "prompt": "In a pretend count, a dial clicks 1250 times a day for 6 days. How many clicks?",
+            "expression": "1250 × 6",
+            "equation": "1250 × 6 =",
+            "answer": 7500,
+            "hint": "Think 6 × 1000 and 6 × 250.",
+            "worked": "1250 × 6 = 7500. Six days of 1250 clicks."
           },
           {
             "plate": "notice",
-            "prompt": "A roof has 9 panels with 60 cells in each. How many cells?",
-            "expression": "60 × 9",
-            "equation": "60 × 9 =",
-            "answer": 540,
-            "hint": "Think 9 × 6 tens.",
-            "worked": "60 × 9 = 540. Nine panels of sixty cells."
+            "prompt": "A school has 3 floors with 245 lockers on each. How many lockers?",
+            "expression": "245 × 3",
+            "equation": "245 × 3 =",
+            "answer": 735,
+            "hint": "Think 3 × 200, 3 × 40 and 3 × 5.",
+            "worked": "245 × 3 = 735. Three floors of 245 lockers."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer learns that 2520 minutes of sunshine were shared equally over 7 days. How many minutes each day?",
-            "expression": "2520 ÷ 7",
-            "equation": "2520 ÷ 7 =",
-            "answer": 360,
-            "hint": "Split 2520 into 2100 and 420, then divide each part by 7.",
-            "worked": "2520 ÷ 7 = 360. Each day gets the same number of minutes."
+            "prompt": "Big Wonderer learns that 2400 padlocks are shared equally among 8 schools. How many does each school get?",
+            "expression": "2400 ÷ 8",
+            "equation": "2400 ÷ 8 =",
+            "answer": 300,
+            "hint": "Think 24 ÷ 8 = 3, then 2400 ÷ 8 = 300.",
+            "worked": "2400 ÷ 8 = 300. Each school gets the same number."
           },
           {
             "plate": "keep",
-            "prompt": "A solar farm has 8400 panels, and snow covers 3675. How many panels are clear?",
-            "expression": "8400 − 3675",
-            "equation": "8400 − 3675 =",
-            "answer": 4725,
-            "hint": "Subtract each place; regroup when needed.",
-            "worked": "8400 − 3675 = 4725. Take away the snowy panels."
+            "prompt": "A safe maker tests 9000 locks, and 8764 open only on the right numbers. How many need fixing?",
+            "expression": "9000 − 8764",
+            "equation": "9000 − 8764 =",
+            "answer": 236,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 8764 = 236. Take the good locks from the total."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "lab-page"
+    "quiz-cards"
   ],
-  "labPage": {
-    "materials": [
-      "a solar garden light",
-      "a dim room or a closet",
-      "a large leaf or a piece of cardboard",
-      "a solar calculator, if you have one",
-      "a dark cloth and a white cloth",
-      "paper and pencil"
+  "quiz": {
+    "title": "Four looks inside a lock",
+    "intro": "Follow the dial from the first spin to the fence dropping in.",
+    "questions": [
+      {
+        "id": "gate",
+        "prompt": "What is a gate on a lock wheel?",
+        "choices": [
+          "A small notch",
+          "A tiny door",
+          "A number"
+        ],
+        "answerIndex": 0,
+        "answer": "A gate is the small notch cut into the edge of each wheel."
+      },
+      {
+        "id": "spin",
+        "prompt": "Why spin the dial three times first?",
+        "choices": [
+          "To warm it up",
+          "To pick up all wheels",
+          "To erase the clicks"
+        ],
+        "answerIndex": 1,
+        "answer": "Three spins let the pegs pick up all three wheels."
+      },
+      {
+        "id": "fence",
+        "prompt": "What drops into the lined-up gates?",
+        "choices": [
+          "The dial",
+          "The shackle",
+          "The fence"
+        ],
+        "answerIndex": 2,
+        "answer": "A thin bar called the fence drops into the lined-up gates."
+      },
+      {
+        "id": "close",
+        "prompt": "What can a number one off do?",
+        "choices": [
+          "Break the lock",
+          "Often still open it",
+          "Reset the wheels"
+        ],
+        "answerIndex": 1,
+        "answer": "Each gate is a bit wider than the fence, so one off can often still work."
+      }
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "How Solar Panels Work",
-    "line": "Tiny packets of light, one small push at a time.",
+    "title": "How Combination Locks Work",
+    "line": "Three wheels, three gates, one thin fence.",
     "plate": "wake"
   },
   "poem": {
-    "title": "The Coolest Panel",
+    "title": "The Secret on the Lock",
     "lines": [
-      "Little Wonderer found a flat square of blue",
-      "with silver-thin stripes running all the way through.",
-      "“It’s sleeping,” the little one whispered. “Don’t peep.”",
-      "“It’s working,” said Big Wonderer. “Too bright to sleep.”",
+      "Little Wonderer spun the black dial of a lock,",
+      "three turns to the right, tick, tick, tickety-tock.",
+      "“There are wheels in there, hiding, all stacked in a row,",
+      "and each has a notch where a fence wants to go.”",
       "",
-      "“The sunshine comes down in small packets of light.",
-      "Each knocks an electron loose, left and right.",
-      "A one-way slide inside sends it off down the wire,",
-      "round the lamp and back home, and it never gets tired.”",
+      "“Turn left, pass the first,” the big one said, “then",
+      "stop on the second, and back right again.",
+      "When all of the gates line up, one, two, three,",
+      "the fence will drop in, and the shackle swings free.”",
       "",
-      "“A hot panel,” the big one said, “loses its push.",
-      "It works best when it’s cool.” And then, with a whoosh,",
-      "the little one hurried away down the hall",
-      "to make it the hardest-working panel of all.",
+      "“But what if I lose them?” the little one cried.",
+      "“Three numbers are slippery. They wriggle and hide!”",
+      "So out came a pencil, and out came some tape,",
+      "and a note went right onto the lock’s steely shape.",
       "",
-      "It’s frosty in there, and it’s cool as can be,",
-      "tucked in with the ice cubes and bags of green peas.",
-      "The coldest, best panel that ever was found,",
-      "but it’s dark when that door shuts. Not one spark goes round."
+      "“Now I’ll never forget them! They’re right there in sight!”",
+      "Big Wonderer peeked through two mittens. “That’s right…",
+      "your secret is safe, for it never can go,",
+      "except that now everyone else gets to know.”"
     ],
     "drawing": {
-      "src": "assets/how-solar-panels-turn-sunlight-into-electricity/poem.jpg",
-      "alt": "A loose black-ink drawing of Big and Little Wonderer in a kitchen, the little one walking toward a closed freezer door carrying a small flat solar panel while the big one kneels and points up at a sunny window."
+      "src": "assets/how-do-combination-locks-work/poem.jpg",
+      "alt": "A soft drawing of Big and Little Wonderer at a kitchen table, the little one walking proudly and holding up a padlock with a blank square of paper taped to its front while the big one kneels, one mitten over its eyes and the other pointing at the paper."
     }
-  },
-  "quiz": {
-    "title": "Four looks at sunlight",
-    "intro": "Follow the light from a garden lamp to a snowy roof.",
-    "questions": [
-      {
-        "id": "shade",
-        "prompt": "What happens when you shade a garden light?",
-        "choices": [
-          "Its lamp turns on",
-          "It gets hot",
-          "It turns blue"
-        ],
-        "answerIndex": 0,
-        "answer": "Shade stops the push, so the light thinks it is night and turns on."
-      },
-      {
-        "id": "photon",
-        "prompt": "What does a photon knock loose?",
-        "choices": [
-          "A grain of sand",
-          "An electron",
-          "A silver line"
-        ],
-        "answerIndex": 1,
-        "answer": "A photon can knock an electron loose inside the silicon."
-      },
-      {
-        "id": "row",
-        "prompt": "Why are cells joined in a row?",
-        "choices": [
-          "To look neat",
-          "To keep out rain",
-          "So their pushes add up"
-        ],
-        "answerIndex": 2,
-        "answer": "One cell gives only about half a volt, so joined cells add their pushes."
-      },
-      {
-        "id": "cold",
-        "prompt": "When does a panel push hardest?",
-        "choices": [
-          "On a cold, bright day",
-          "On a hot, cloudy day",
-          "At night"
-        ],
-        "answerIndex": 0,
-        "answer": "In the same sunshine, a cold panel makes more power than a hot one."
-      }
-    ]
   }
 }
