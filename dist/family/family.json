@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "how do combination locks work",
-        "why": "Tracing a dial's turns to a hidden stack of wheels helps your child explain a step-by-step cause with pictures and words.",
-        "date": "2026-11-17",
+        "topic": "a hanger balance scale",
+        "why": "Watching which side of a hanger balance dips, and why, helps your child make comparisons and explain a prediction.",
+        "date": "2026-11-20",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -21,12 +21,12 @@
             "label": "Print explainer"
           },
           {
-            "href": "./today/pdf/quiz-cards.pdf",
-            "label": "Quiz cards"
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
           },
           {
-            "href": "./today/pdf/quiz-cards-key.pdf",
-            "label": "Grown-ups: quiz cards answer key"
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

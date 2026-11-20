@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T05:13:44.036Z",
-  "latest": "how-do-combination-locks-work",
+  "generatedAt": "2026-11-20T05:00:58.060Z",
+  "latest": "a-hanger-balance-scale",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "a-hanger-balance-scale",
+      "date": "2026-11-20",
+      "topic": "a hanger balance scale",
+      "title": "How a Hanger Balance Works",
+      "teaser": "Hang two cups on a coat hanger, then find out why one side dips, why distance matters, and why it would still work on the Moon.",
+      "href": "./days/a-hanger-balance-scale/",
+      "latest": true
+    },
     {
       "slug": "how-do-combination-locks-work",
       "date": "2026-11-17",
@@ -11,7 +20,7 @@
       "title": "How Combo Locks Work",
       "teaser": "Spin a padlock dial and follow a hidden train of wheels, pegs and notches until a thin fence drops in.",
       "href": "./days/how-do-combination-locks-work/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "how-solar-panels-turn-sunlight-into-electricity",

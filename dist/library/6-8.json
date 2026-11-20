@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "a-hanger-balance-scale",
+      "band": "6-8",
+      "topic": "a hanger balance scale",
+      "why": "Watching which side of a hanger balance dips, and why, helps your child make comparisons and explain a prediction.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "equal-groups",
+        "array"
+      ],
+      "date": "2026-11-20",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "how-do-combination-locks-work",
       "band": "6-8",
       "topic": "how do combination locks work",
