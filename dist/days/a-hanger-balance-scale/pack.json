@@ -1,0 +1,988 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "a-hanger-balance-scale",
+  "topic": "a hanger balance scale",
+  "why": "Watching which side of a hanger balance dips, and why, helps your child make comparisons and explain a prediction.",
+  "teaser": "Hang two cups on a coat hanger, then find out why one side dips, why distance matters, and why it would still work on the Moon.",
+  "aliases": [
+    "hanger balance scale",
+    "hanger balance",
+    "balance scale",
+    "coat hanger scale",
+    "pan balance",
+    "two-pan balance",
+    "lever"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "groups-and-arrays",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "equal-groups",
+      "array"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Hanger Balance",
+  "title": "How a Hanger Balance Works",
+  "question": "How can a bent wire hanger tell which side is heavier?",
+  "idea": "A hanger balance turns on its hook, the pivot. The side with the bigger turning push dips. Weight far from the hook pushes harder than weight near it, and when the two pushes match, the hanger hangs level.",
+  "curiosity": {
+    "intro": "Start with a hanger and two paper cups. Then find the pivot, zero the cups, move a cup toward the middle, weigh a strawberry and visit an old shop balance.",
+    "carryForward": "Next time you see a seesaw, look for the pivot and guess where to sit to make it level.",
+    "questions": [
+      {
+        "id": "parts",
+        "plate": "reach",
+        "question": "What turns a hanger into a scale?",
+        "notice": "Find the hanger, the two cups on their strings, the washers and the lump of clay.",
+        "say": "The hook is the pivot: the whole hanger turns around that one point. Each cup pulls down on its own side. When one side pulls harder, that side dips and the other rises. Washers make handy weights, because every washer in a box weighs about the same. Then you can count them.",
+        "try": "Hang a hanger from a broom handle across two chairs. Tie a paper cup to each bottom corner. Drop one washer in a cup. Which way does it tip?"
+      },
+      {
+        "id": "level",
+        "plate": "change",
+        "question": "Why make the empty cups level first?",
+        "notice": "Find the hook at the top, the two empty cups at the same height and the tiny lump of clay.",
+        "say": "Two empty cups never weigh exactly the same, and a hanger may be a little bent. A pinch of clay on the high side evens them out. This is called taring, or zeroing. Afterwards, only the things you add can tip the hanger. Tap it, and it rocks, then settles level again, because most of its weight hangs below the hook.",
+        "try": "Hang the two empty cups and look closely. Is one side a little low? Press a tiny bit of clay on the high side until both cups hang even."
+      },
+      {
+        "id": "slide",
+        "plate": "notice",
+        "question": "Does it matter where a cup hangs?",
+        "notice": "Compare the tall stack of washers near the middle with the short stack out at the corner.",
+        "say": "Yes! A weight far from the pivot gives a bigger turning push, called torque. A cup hung twice as far from the hook needs only half as many washers to balance. That is why a big kid can sit near the middle of a seesaw and still balance a small kid at the far end.",
+        "try": "Move one cup's string close to the middle of the bottom bar. Put 2 washers in the corner cup. How many washers does the middle cup need to make it level?"
+      },
+      {
+        "id": "shop",
+        "plate": "keep",
+        "question": "Would a balance work on the Moon?",
+        "notice": "Find the two level pans on their chains and the row of brass weights beside them.",
+        "say": "Yes. A balance compares two things, so it measures mass, the amount of stuff. The Moon pulls about one sixth as hard as Earth, but it pulls both pans less at the same time. A spring scale would show a smaller number there. Old shops used brass weights of set sizes, so everyone measured the same way.",
+        "try": "Put a strawberry in one cup. Add washers to the other cup until the hanger hangs level. How many washers weigh the same as one strawberry?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/a-hanger-balance-scale/01-hanger.jpg",
+      "original": "assets/a-hanger-balance-scale/01-hanger.png",
+      "foldSrc": "assets/a-hanger-balance-scale/01-hanger-fold.jpg",
+      "title": "Which side dips?",
+      "alt": "Big and Little Wonderer beside a kitchen table, a wire coat hanger hanging from a wooden rod across two chair backs with a paper cup on each end, the hanger tipped toward the lower left cup as the little one reaches up with a washer and the big one crouches to look.",
+      "caption": "Drop a washer in, and that side of the hanger dips."
+    },
+    {
+      "id": "reach",
+      "src": "assets/a-hanger-balance-scale/02-parts.jpg",
+      "original": "assets/a-hanger-balance-scale/02-parts.png",
+      "foldSrc": "assets/a-hanger-balance-scale/02-parts-fold.jpg",
+      "title": "Parts of a balance",
+      "alt": "A field-guide study of a homemade balance laid out in a row: a wire coat hanger, two paper cups with string handles, a small pile of steel washers and a lump of grey clay.",
+      "caption": "A hook to turn on, two cups, equal washers and a pinch of clay."
+    },
+    {
+      "id": "change",
+      "src": "assets/a-hanger-balance-scale/03-level.jpg",
+      "original": "assets/a-hanger-balance-scale/03-level.png",
+      "foldSrc": "assets/a-hanger-balance-scale/03-level-fold.jpg",
+      "title": "Zero it first",
+      "alt": "A field-guide study of a wire coat hanger hanging level by its hook from a wooden rod, two empty paper cups at the same height and a tiny lump of grey clay on the bottom bar.",
+      "caption": "A pinch of clay makes the empty cups hang level before weighing."
+    },
+    {
+      "id": "notice",
+      "src": "assets/a-hanger-balance-scale/04-slide.jpg",
+      "original": "assets/a-hanger-balance-scale/04-slide.png",
+      "foldSrc": "assets/a-hanger-balance-scale/04-slide-fold.jpg",
+      "title": "Distance matters",
+      "alt": "A field-guide study of a level wire coat hanger: a cup hung in from the left corner, nearer the middle, holds a tall stack of washers, and a cup at the far right corner holds a short stack.",
+      "caption": "Near the hook, a cup needs more washers to balance one far out."
+    },
+    {
+      "id": "return",
+      "src": "assets/a-hanger-balance-scale/05-weigh.jpg",
+      "original": "assets/a-hanger-balance-scale/05-weigh.png",
+      "foldSrc": "assets/a-hanger-balance-scale/05-weigh-fold.jpg",
+      "title": "Weighing a strawberry",
+      "alt": "Big and Little Wonderer back beside the kitchen table, the hanger now level with a strawberry in one paper cup and washers in the other, the big one reaching up with one more washer, the little one pointing, and a bowl of strawberries on the table.",
+      "caption": "When the hanger hangs level, the strawberry matches the washers."
+    },
+    {
+      "id": "keep",
+      "src": "assets/a-hanger-balance-scale/06-shop.jpg",
+      "original": "assets/a-hanger-balance-scale/06-shop.png",
+      "foldSrc": "assets/a-hanger-balance-scale/06-shop-fold.jpg",
+      "title": "Same on the Moon",
+      "alt": "An old brass two-pan balance scale on a wooden shop counter, its two round pans hanging level on fine chains, with a row of four plain brass weights of different sizes beside it.",
+      "caption": "A balance compares two sides, so it would match the same on the Moon."
+    }
+  ],
+  "reading": {
+    "title": "The hanger on the broom handle",
+    "coverPlate": "wake",
+    "coverText": "Start with a coat hanger and two paper cups. Then find out why one side dips and how to make it level.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "Which side dips?",
+        "passage": "Little Wonderer hangs a wire hanger from a broom handle across two chairs. Two paper cups dangle from its bottom corners. The little one drops one washer into the left cup, and down it dips! Big Wonderer crouches low to look. How can a bent wire tell which side is heavier?",
+        "prompt": "What happens when the washer drops into the left cup?",
+        "foldable": {
+          "heading": "Which side dips?",
+          "body": "A wire hanger holds two paper cups. One washer drops in, and that side dips. How can a wire tell which side is heavier?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Parts of a balance",
+        "passage": "A balance scale needs only a few simple parts. The hook at the top is the pivot, the one point the whole hanger turns on. The two cups hold the things you want to compare. Flat steel washers make good weights, because each one weighs about the same. A pinch of soft clay will help, too.",
+        "prompt": "What is the pivot on a hanger balance?",
+        "foldable": {
+          "heading": "Parts of a balance",
+          "body": "The hook is the pivot, the point the hanger turns on. Cups hold things, and washers are weights that match."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Zero it first",
+        "passage": "Before weighing anything, make the empty cups hang level. Two cups are never exactly the same, so one side may droop a little. Press a tiny pinch of clay onto the high side until both cups hang even. People call this taring, or zeroing the scale. Now only the things you add can tip the hanger.",
+        "prompt": "Why do you make the empty cups level first?",
+        "foldable": {
+          "heading": "Zero it first",
+          "body": "First make the empty cups level. A pinch of clay on the high side zeroes the scale, so only what you add can tip it."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Distance matters",
+        "passage": "Here is a clue. Hang the left cup near the middle, close under the hook. Now it needs many more washers to balance a cup out at the far corner! A weight far from the pivot gives a bigger turning push. Twice as far needs only half as much. This rule is called the law of the lever.",
+        "prompt": "Why does a cup near the middle need more washers?",
+        "foldable": {
+          "heading": "Distance matters",
+          "body": "A cup near the hook needs more washers. Weight far from the pivot gives a bigger push. That is the law of the lever."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "Weighing a strawberry",
+        "passage": "Back at the chairs, the little one sets a strawberry in the left cup. Big Wonderer adds washers to the other cup, one at a time, until it hangs level. Now the guess changes. A balance does more than find the heavier side. When it hangs level, the strawberry weighs the same as those washers, so a washer works like a unit.",
+        "prompt": "What does it mean when the hanger hangs level?",
+        "foldable": {
+          "heading": "Weighing a strawberry",
+          "body": "A strawberry goes in one cup and washers in the other. When it hangs level, they weigh the same. A washer is a unit."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Same on the Moon",
+        "passage": "Here is a surprise. Carry a balance to the Moon, and the strawberry still matches the same washers! The Moon pulls everything more weakly, but it pulls both cups less at the same time. A bathroom scale uses a spring, so its number would drop there. Could you build a balance fine enough to weigh a feather?",
+        "prompt": "Why would a balance work the same on the Moon?",
+        "foldable": {
+          "heading": "Same on the Moon",
+          "body": "On the Moon, a balance still matches the same washers. The Moon pulls both cups less at once. Could you weigh a feather?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "balance",
+        "meaning": "a scale that compares two sides to see which is heavier"
+      },
+      {
+        "word": "pivot",
+        "meaning": "the one point something turns on"
+      },
+      {
+        "word": "washer",
+        "meaning": "a flat metal ring with a hole in the middle"
+      },
+      {
+        "word": "zero",
+        "meaning": "to make a scale read even before you weigh"
+      },
+      {
+        "word": "lever",
+        "meaning": "a bar that turns on a pivot"
+      }
+    ],
+    "questions": [
+      "What part of a hanger balance is the pivot?",
+      "Why do you make the empty cups level first?",
+      "Why does a cup near the middle need more washers?",
+      "Why would a balance work the same on the Moon?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what the pivot is, why you zero the scale first, and what it means when the hanger hangs level.",
+      "example": "Example: The hook is the pivot. Clay on the high side makes the empty cups even. Level means both sides weigh the same."
+    },
+    "foldableTitle": "A little book of balance",
+    "foldableCoverLine": "Hanger Scale",
+    "foldableNote": "Carry six balance clues in a small book."
+  },
+  "math": {
+    "title": "Count the washers in groups",
+    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
+    "plate": "return",
+    "intro": "Each group or row has the same number. Add the equal groups or rows to find the total.",
+    "actionLabel": "Add each equal group or row",
+    "tasks": [
+      {
+        "skill": "equal-groups",
+        "rows": 2,
+        "columns": 3,
+        "prompt": "Little Wonderer drops 3 washers into each of 2 cups. How many washers are there altogether?",
+        "equation": "3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3.",
+        "answer": 6,
+        "worked": "3 + 3 = 6. Two cups of 3 washers make 6 washers.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "array",
+        "rows": 3,
+        "columns": 4,
+        "prompt": "The big one lines up washers in 3 rows, with 4 washers in each row. How many washers are there?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Add one row at a time: 4 + 4 + 4.",
+        "answer": 12,
+        "worked": "4 + 4 + 4 = 12. Three rows of 4 make 12 washers.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "equal-groups",
+        "rows": 4,
+        "columns": 2,
+        "prompt": "The little one presses 2 bits of clay onto each of 4 hangers. How many bits of clay are there?",
+        "equation": "2 + 2 + 2 + 2 =",
+        "hint": "Add one group at a time: 2 + 2 + 2 + 2.",
+        "answer": 8,
+        "worked": "2 + 2 + 2 + 2 = 8. Four hangers with 2 bits each make 8 bits of clay.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "array",
+        "rows": 2,
+        "columns": 5,
+        "prompt": "A shelf holds 2 rows of paper cups, with 5 cups in each row. How many cups are there?",
+        "equation": "5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5.",
+        "answer": 10,
+        "worked": "5 + 5 = 10. Two rows of 5 make 10 cups.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 3,
+        "prompt": "Big Wonderer finds that 1 strawberry balances 3 washers. How many washers balance 5 strawberries?",
+        "equation": "3 + 3 + 3 + 3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3 + 3 + 3 + 3.",
+        "answer": 15,
+        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five strawberries of 3 washers each make 15 washers.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "array",
+        "rows": 4,
+        "columns": 5,
+        "prompt": "An old shop keeps brass weights in 4 rows, with 5 weights in each row. How many weights are there?",
+        "equation": "5 + 5 + 5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5 + 5 + 5.",
+        "answer": 20,
+        "worked": "5 + 5 + 5 + 5 = 20. Four rows of 5 make 20 weights.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Six equal-group and array tasks use repeated addition. Rows and columns are each 2 to 5. Welcome drawings, spoken reasoning, or arranging real washers or coins.",
+    "answerKeyIntro": "Add the same number once for each group or row. Welcome a drawing or a spoken explanation."
+  },
+  "writing": {
+    "title": "Explain a balance clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw a hanger with a cup on each corner, and show which side dips and why.",
+    "starter": "My balance clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The hook is the pivot because",
+        "hint": "what does the whole hanger turn on?"
+      },
+      {
+        "plate": "change",
+        "start": "You zero the empty cups first because",
+        "hint": "what should be the only thing that tips it?"
+      },
+      {
+        "plate": "notice",
+        "start": "A cup near the middle needs more washers because",
+        "hint": "where does a weight push hardest?"
+      }
+    ],
+    "words": [
+      "pivot",
+      "level",
+      "washer",
+      "heavier",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "That cup dips down and the other cup swings up."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "The hook: the one point the whole hanger turns on."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "So only the things you add can tip the hanger."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "Weight near the hook gives a smaller turning push."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "The two sides weigh the same."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "The Moon pulls both cups less at the same time."
+    },
+    {
+      "label": "Math · all",
+      "text": "6, 12, 8, 10, 15, 20."
+    },
+    {
+      "label": "Screen-free",
+      "text": "The pivot; to zero the scale; far from the hook; match the same way."
+    }
+  ],
+  "parentGuidance": "Hang the hanger together and keep the wire ends away from faces. Use washers or coins only where little siblings cannot reach them, and do not bend or cut the wire.",
+  "sources": [
+    {
+      "label": "Wikipedia — Weighing scale (a balance compares masses, so its reading does not change with gravity; a spring scale's does)",
+      "url": "https://en.wikipedia.org/wiki/Weighing_scale"
+    },
+    {
+      "label": "Wikipedia — Lever (fulcrum; law of the lever: weight times distance on each side; Archimedes)",
+      "url": "https://en.wikipedia.org/wiki/Lever"
+    },
+    {
+      "label": "Wikipedia — Torque (a turning push grows with distance from the pivot)",
+      "url": "https://en.wikipedia.org/wiki/Torque"
+    },
+    {
+      "label": "Wikipedia — Tare weight (zeroing out the empty container)",
+      "url": "https://en.wikipedia.org/wiki/Tare_weight"
+    },
+    {
+      "label": "Wikipedia — Gravity of the Moon (about one sixth of Earth's surface gravity)",
+      "url": "https://en.wikipedia.org/wiki/Gravitation_of_the_Moon"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer hangs up a hanger. Two cups hang from it. The little one drops in a washer. Down goes that cup! Which side is heavy?",
+            "prompt": "What does the cup do?"
+          },
+          {
+            "id": "reach",
+            "passage": "The hook is the pivot. The hanger tips on it. The cups hold things. Washers are the weights. Each washer weighs the same.",
+            "prompt": "What is the pivot?"
+          },
+          {
+            "id": "change",
+            "passage": "First, make the empty cups level. Press clay on the high side. Now both cups hang even. This is called zeroing.",
+            "prompt": "Why add clay?"
+          },
+          {
+            "id": "notice",
+            "passage": "Hang a cup near the middle. Now it needs more washers! Far from the hook pushes harder. Distance matters.",
+            "prompt": "Where does a washer push harder?"
+          },
+          {
+            "id": "return",
+            "passage": "A strawberry sits in one cup. Big Wonderer adds washers one by one. The little one points. Now it hangs level! The strawberry matches the washers.",
+            "prompt": "What does level mean?"
+          },
+          {
+            "id": "keep",
+            "passage": "A balance works on the Moon too. The Moon pulls both cups less. So they still match! Could you weigh a feather?",
+            "prompt": "Does it work on the Moon?"
+          }
+        ],
+        "words": [
+          {
+            "word": "pivot",
+            "meaning": "the point a hanger turns on"
+          },
+          {
+            "word": "washer",
+            "meaning": "a flat metal ring"
+          },
+          {
+            "word": "level",
+            "meaning": "even, with no side lower"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer drops 8 washers in a cup, then 5 more. How many washers?",
+            "expression": "8 + 5",
+            "equation": "8 + 5 =",
+            "answer": 13,
+            "hint": "Make a ten: 8 + 2 + 3.",
+            "worked": "8 + 5 = 13. Add both sets of washers."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A tray has 15 washers. The big one takes 6. How many are left?",
+            "expression": "15 − 6",
+            "equation": "15 − 6 =",
+            "answer": 9,
+            "hint": "Take 6 away from 15.",
+            "worked": "15 − 6 = 9. Take away the washers used."
+          },
+          {
+            "plate": "change",
+            "prompt": "The little one has 12 bits of clay and uses 4. How many are left?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Take 4 away from 12.",
+            "worked": "12 − 4 = 8. Take away the clay used."
+          },
+          {
+            "plate": "notice",
+            "prompt": "One cup holds 7 washers. The other holds 9. How many in all?",
+            "expression": "7 + 9",
+            "equation": "7 + 9 =",
+            "answer": 16,
+            "hint": "Make a ten: 9 + 1 + 6.",
+            "worked": "7 + 9 = 16. Add both cups."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer adds 6 washers, then 5 more. How many washers?",
+            "expression": "6 + 5",
+            "equation": "6 + 5 =",
+            "answer": 11,
+            "hint": "Double 5, then add 1.",
+            "worked": "6 + 5 = 11. Add both sets of washers."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A shop has 18 brass weights and sells 6. How many are left?",
+            "expression": "18 − 6",
+            "equation": "18 − 6 =",
+            "answer": 12,
+            "hint": "Take 6 away from 18.",
+            "worked": "18 − 6 = 12. Take away the sold weights."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer hangs a wire hanger from a broom handle. Two paper cups dangle from its corners. The little one drops a washer into the left cup. Down it dips! The right cup swings up. How can a hanger tell which side is heavier?",
+            "prompt": "Which cup dips down?"
+          },
+          {
+            "id": "reach",
+            "passage": "The hook at the top is the pivot. The whole hanger tips around it. The cups hold what you compare. Flat washers make good weights. Every washer weighs about the same.",
+            "prompt": "What does the hanger tip around?"
+          },
+          {
+            "id": "change",
+            "passage": "First, make the empty cups hang level. One side may droop a little. Press a pinch of clay on the high side. Now both cups hang even. This is called zeroing the scale.",
+            "prompt": "Why press clay on the high side?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue. Hang one cup near the middle. Now it needs more washers to balance! Weight far from the pivot pushes harder. Distance matters as much as weight.",
+            "prompt": "Why does distance matter?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one sets a strawberry in one cup. Big Wonderer adds washers, one at a time. At last the hanger hangs level. The strawberry weighs the same as those washers!",
+            "prompt": "What weighs the same as the strawberry?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise. A balance works the same on the Moon! The Moon pulls both cups less at once. So they still match. Could you weigh a feather?",
+            "prompt": "Why does it still match on the Moon?"
+          }
+        ],
+        "words": [
+          {
+            "word": "pivot",
+            "meaning": "the point a hanger turns on"
+          },
+          {
+            "word": "balance",
+            "meaning": "a scale that compares two sides"
+          },
+          {
+            "word": "washer",
+            "meaning": "a flat metal ring with a hole"
+          },
+          {
+            "word": "zero",
+            "meaning": "to make a scale even before weighing"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer drops 18 washers in a cup, then 14 more. How many washers?",
+            "expression": "18 + 14",
+            "equation": "18 + 14 =",
+            "answer": 32,
+            "hint": "Add the tens, then the ones.",
+            "worked": "18 + 14 = 32. Add both sets of washers."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A bag has 45 washers. The big one uses 17. How many are left?",
+            "expression": "45 − 17",
+            "equation": "45 − 17 =",
+            "answer": 28,
+            "hint": "Take away 20, then add 3 back.",
+            "worked": "45 − 17 = 28. Take away the washers used."
+          },
+          {
+            "plate": "change",
+            "prompt": "A lump of clay makes 24 pinches. The little one uses 9. How many are left?",
+            "expression": "24 − 9",
+            "equation": "24 − 9 =",
+            "answer": 15,
+            "hint": "Take away 10, then add 1 back.",
+            "worked": "24 − 9 = 15. Take away the pinches used."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The middle cup holds 26 washers. The corner cup holds 13. How many in all?",
+            "expression": "26 + 13",
+            "equation": "26 + 13 =",
+            "answer": 39,
+            "hint": "Add the tens, then the ones.",
+            "worked": "26 + 13 = 39. Add both cups."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer weighs 19 strawberries, then 16 more. How many strawberries?",
+            "expression": "19 + 16",
+            "equation": "19 + 16 =",
+            "answer": 35,
+            "hint": "Make a twenty: 19 + 1 + 15.",
+            "worked": "19 + 16 = 35. Add both sets of strawberries."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A shop has 50 brass weights and sells 23. How many are left?",
+            "expression": "50 − 23",
+            "equation": "50 − 23 =",
+            "answer": 27,
+            "hint": "Take away 20, then 3 more.",
+            "worked": "50 − 23 = 27. Take away the sold weights."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer hangs a wire coat hanger from a broom handle laid across the backs of two chairs. Two paper cups dangle on strings from its bottom corners. When the little one drops a single washer into the left cup, that side dips and the right cup swings up high. Big Wonderer crouches low to look. How can a bent piece of wire tell which side is heavier?",
+            "prompt": "Why does the left side dip?"
+          },
+          {
+            "id": "reach",
+            "passage": "A balance scale needs only a few simple parts. The hook at the top is the pivot, the single point the whole hanger turns around. Each cup pulls down on its own side of the hook. Flat steel washers make good weights, because every washer weighs about the same. That means you can count them like units. A pinch of soft clay will help too.",
+            "prompt": "Why are washers good weights?"
+          },
+          {
+            "id": "change",
+            "passage": "Before weighing anything, make the empty cups hang level. Two cups are never exactly alike, and a hanger may be slightly bent. So one side can droop before anything goes in. Press a tiny pinch of clay onto the high side until both cups hang even. Shops call this taring, or zeroing. Give it a tap, and it rocks, then settles level again.",
+            "prompt": "What is taring a scale?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that surprises people. Hang the left cup near the middle, close under the hook. Now it needs many more washers to balance a cup out at the far corner. A weight far from the pivot gives a bigger turning push, called torque. Twice as far needs only half as much weight. This rule is called the law of the lever.",
+            "prompt": "What is torque?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the chairs, the little one sets a strawberry in the left cup. Big Wonderer adds washers to the right cup, one at a time, until the hanger hangs level. Now the guess changes. A balance does more than find the heavier side. When it hangs level, the strawberry weighs the same as those washers, so a washer works as a unit for weighing.",
+            "prompt": "How can a washer be a unit?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: take a balance to the Moon, and the strawberry still matches the same washers. The Moon pulls about one sixth as hard as Earth, but it pulls both cups less at the same time. A bathroom scale uses a spring, so its number would drop there. Could you build a balance fine enough to weigh a single feather?",
+            "prompt": "Why would a spring scale change on the Moon?"
+          }
+        ],
+        "words": [
+          {
+            "word": "balance",
+            "meaning": "a scale that compares the weight on two sides"
+          },
+          {
+            "word": "pivot",
+            "meaning": "the single point something turns around"
+          },
+          {
+            "word": "tare",
+            "meaning": "to zero a scale so the empty cups do not count"
+          },
+          {
+            "word": "torque",
+            "meaning": "a turning push that grows with distance from the pivot"
+          },
+          {
+            "word": "lever",
+            "meaning": "a bar that turns on a pivot"
+          },
+          {
+            "word": "unit",
+            "meaning": "a fixed amount used to measure, like one washer"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer drops 8 washers into each of 9 cups. How many washers?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Count 9 groups of 8.",
+            "worked": "8 × 9 = 72. Nine cups of 8 washers."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A box holds 640 washers, and 275 are used. How many are left?",
+            "expression": "640 − 275",
+            "equation": "640 − 275 =",
+            "answer": 365,
+            "hint": "Regroup, then subtract each place.",
+            "worked": "640 − 275 = 365. Take away the washers used."
+          },
+          {
+            "plate": "change",
+            "prompt": "Each hanger needs 6 pinches of clay to hang level. How many pinches for 7 hangers?",
+            "expression": "6 × 7",
+            "equation": "6 × 7 =",
+            "answer": 42,
+            "hint": "Count 7 groups of 6.",
+            "worked": "6 × 7 = 42. Seven hangers of 6 pinches."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The big one shares 63 washers equally among 9 cups. How many go in each cup?",
+            "expression": "63 ÷ 9",
+            "equation": "63 ÷ 9 =",
+            "answer": 7,
+            "hint": "Ask what times 9 makes 63.",
+            "worked": "63 ÷ 9 = 7. Each cup gets the same number."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer finds that 1 strawberry balances 8 washers. How many washers balance 6 strawberries?",
+            "expression": "8 × 6",
+            "equation": "8 × 6 =",
+            "answer": 48,
+            "hint": "Count 6 groups of 8.",
+            "worked": "8 × 6 = 48. Six strawberries of 8 washers."
+          },
+          {
+            "plate": "keep",
+            "prompt": "An old shop packs 40 brass weights into 5 equal boxes. How many go in each box?",
+            "expression": "40 ÷ 5",
+            "equation": "40 ÷ 5 =",
+            "answer": 8,
+            "hint": "Ask what times 5 makes 40.",
+            "worked": "40 ÷ 5 = 8. Each box gets the same number."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer hangs an ordinary wire coat hanger from a broom handle balanced across the backs of two kitchen chairs, and two paper cups dangle on strings from its bottom corners. The little one drops a single steel washer into the left cup. That side dips at once, and the right cup swings up high. Big Wonderer crouches low to watch the wire settle. How can a bent piece of wire, with no numbers anywhere, tell which side is heavier?",
+            "prompt": "What tells you which side is heavier?"
+          },
+          {
+            "id": "reach",
+            "passage": "A working balance scale needs surprisingly few parts. The hook at the top is the pivot, also called the fulcrum: the single point the whole hanger turns around. Each cup pulls down on its own side of that point, and whichever side pulls harder sinks. Flat steel washers make excellent weights, because every washer from the same box weighs almost exactly the same, so you can count them as units. A pinch of soft clay will matter too, as you will soon see.",
+            "prompt": "What is another name for the pivot?"
+          },
+          {
+            "id": "change",
+            "passage": "Before weighing anything, make the empty cups hang perfectly level. Two paper cups are never exactly alike, and a hanger is often slightly bent, so one side may droop before anything goes in. Pressing a tiny pinch of clay onto the high side evens it out; shopkeepers call this taring, or zeroing, the scale. Tap the hanger and it rocks, then settles level again, because most of its weight hangs below the hook, like a swing coming to rest.",
+            "prompt": "Why does the hanger settle level after a tap?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue that surprises most people. Hang the left cup near the middle, close under the hook, and it needs many more washers to balance a cup out at the far corner. A weight far from the pivot gives a bigger turning push, which scientists call torque. Twice the distance needs only half the weight, a rule Archimedes wrote down more than two thousand years ago. It is called the law of the lever, and seesaws follow it too.",
+            "prompt": "How does a seesaw follow the law of the lever?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the chairs, the little one sets a ripe strawberry in the left cup, and Big Wonderer adds washers to the right cup one at a time until the hanger hangs level. Now the guess changes. A balance does far more than find the heavier side. When it hangs level, the two turning pushes are equal, so the strawberry weighs exactly as much as that pile of washers. A washer has become a unit, and you have just measured something.",
+            "prompt": "What is equal when the hanger hangs level?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: carry this balance to the Moon, and the strawberry would still match the very same washers. The Moon pulls about one sixth as hard as Earth does, but it pulls both cups more weakly at the same moment, so the comparison never changes. A bathroom scale measures a spring's stretch instead, so its number would drop. That is why a balance measures mass, the amount of stuff. Could you build one fine enough to weigh a single feather?",
+            "prompt": "Why does a balance measure mass?"
+          }
+        ],
+        "words": [
+          {
+            "word": "fulcrum",
+            "meaning": "another name for the pivot a lever turns on"
+          },
+          {
+            "word": "pivot",
+            "meaning": "the single point something turns around"
+          },
+          {
+            "word": "tare",
+            "meaning": "to zero a scale so the empty cups do not count"
+          },
+          {
+            "word": "torque",
+            "meaning": "a turning push that grows with distance from the pivot"
+          },
+          {
+            "word": "lever",
+            "meaning": "a bar that turns on a fulcrum"
+          },
+          {
+            "word": "unit",
+            "meaning": "a fixed amount used to measure, like one washer"
+          },
+          {
+            "word": "mass",
+            "meaning": "the amount of stuff in something"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that a box of 1250 washers is shared equally among 5 cups. How many go in each cup?",
+            "expression": "1250 ÷ 5",
+            "equation": "1250 ÷ 5 =",
+            "answer": 250,
+            "hint": "Think 125 ÷ 5 = 25, then 1250 ÷ 5 = 250.",
+            "worked": "1250 ÷ 5 = 250. Each cup gets the same number."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A factory makes 3600 coat hangers, and 1475 are packed. How many are not packed yet?",
+            "expression": "3600 − 1475",
+            "equation": "3600 − 1475 =",
+            "answer": 2125,
+            "hint": "Regroup across the zeros.",
+            "worked": "3600 − 1475 = 2125. Take away the hangers packed."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a shop zeroes its scale 365 times each week for 8 weeks. How many times is that?",
+            "expression": "365 × 8",
+            "equation": "365 × 8 =",
+            "answer": 2920,
+            "hint": "Multiply each place by 8, then add.",
+            "worked": "365 × 8 = 2920. Eight weeks of 365 times."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A storeroom has 4 boxes with 1840 washers in each. How many washers are there?",
+            "expression": "1840 × 4",
+            "equation": "1840 × 4 =",
+            "answer": 7360,
+            "hint": "Think 4 × 1800 and 4 × 40.",
+            "worked": "1840 × 4 = 7360. Four boxes of 1840 washers."
+          },
+          {
+            "plate": "return",
+            "prompt": "Big Wonderer reads that a farm picks 6300 strawberries and packs them into 9 equal crates. How many go in each crate?",
+            "expression": "6300 ÷ 9",
+            "equation": "6300 ÷ 9 =",
+            "answer": 700,
+            "hint": "Think 63 ÷ 9 = 7, then 6300 ÷ 9 = 700.",
+            "worked": "6300 ÷ 9 = 700. Each crate gets the same number."
+          },
+          {
+            "plate": "keep",
+            "prompt": "An old shop had 5000 brass weights, and 1365 were lost over the years. How many were left?",
+            "expression": "5000 − 1365",
+            "equation": "5000 − 1365 =",
+            "answer": 3635,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 1365 = 3635. Take away the lost weights."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "lab-page"
+  ],
+  "labPage": {
+    "materials": [
+      "a wire coat hanger",
+      "a broom handle and two chairs",
+      "two paper cups and string",
+      "a handful of washers or coins",
+      "a pinch of modelling clay",
+      "a strawberry",
+      "paper and pencil"
+    ]
+  },
+  "quiz": {
+    "title": "Four looks at a balance",
+    "intro": "Follow the hanger from the first dip to a balance on the Moon.",
+    "questions": [
+      {
+        "id": "pivot",
+        "prompt": "What is the hook on a hanger balance?",
+        "choices": [
+          "The pivot",
+          "A weight",
+          "A cup"
+        ],
+        "answerIndex": 0,
+        "answer": "The hook is the pivot, the point the whole hanger turns on."
+      },
+      {
+        "id": "zero",
+        "prompt": "Why press clay on the high side first?",
+        "choices": [
+          "To make it sticky",
+          "To zero the scale",
+          "To hold the cups"
+        ],
+        "answerIndex": 1,
+        "answer": "The clay makes the empty cups level, so only what you add can tip it."
+      },
+      {
+        "id": "far",
+        "prompt": "Where does one washer turn the hanger most?",
+        "choices": [
+          "Near the hook",
+          "Far from the hook",
+          "Inside the clay"
+        ],
+        "answerIndex": 1,
+        "answer": "A washer far from the hook gives a bigger turning push."
+      },
+      {
+        "id": "moon",
+        "prompt": "What would a balance do on the Moon?",
+        "choices": [
+          "Float away",
+          "Match the same way",
+          "Always tip left"
+        ],
+        "answerIndex": 1,
+        "answer": "The Moon pulls both cups less at once, so the same things still balance."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How a Hanger Balance Works",
+    "line": "One hook, two cups, and which side dips.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Fair Hanger",
+    "lines": [
+      "Little Wonderer made a fine scale out of string,",
+      "a hanger, two cups, and a hook for the swing.",
+      "In one cup, a washer. In one, feathers piled.",
+      "They balanced. They balanced! The little one smiled.",
+      "",
+      "“Hold still,” said the big one. “A balance is shy.",
+      "The tiniest puff sends one cup way up high.",
+      "Don’t giggle, don’t wiggle, don’t breathe, and don’t—” Oh.",
+      "A tickle had started somewhere down below.",
+      "",
+      "“Ah… ah…” went the little one. “AH-CHOO!” And the air",
+      "was suddenly full of white feathers up there.",
+      "The feather cup flew up. The washer cup fell.",
+      "The hanger swung sideways and rang like a bell.",
+      "",
+      "Big Wonderer waited for feathers to land.",
+      "The little one sniffed with a cup in each hand.",
+      "“My scale has just measured, and scales never lie:",
+      "a sneeze is much heavier than feathers. Goodbye!”"
+    ],
+    "drawing": {
+      "src": "assets/a-hanger-balance-scale/poem.jpg",
+      "alt": "A soft drawing of a coat hanger tipped to one side, with a washer in the low cup and feathers drifting away from the high cup, the little one sitting still beneath it and the big one leaning in to watch."
+    }
+  }
+}

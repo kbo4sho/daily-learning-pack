@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "how-do-combination-locks-work",
-  "topic": "how do combination locks work",
-  "why": "Tracing a dial's turns to a hidden stack of wheels helps your child explain a step-by-step cause with pictures and words.",
-  "teaser": "Spin a padlock dial and follow a hidden train of wheels, pegs and notches until a thin fence drops in.",
+  "slug": "a-hanger-balance-scale",
+  "topic": "a hanger balance scale",
+  "why": "Watching which side of a hanger balance dips, and why, helps your child make comparisons and explain a prediction.",
+  "teaser": "Hang two cups on a coat hanger, then find out why one side dips, why distance matters, and why it would still work on the Moon.",
   "aliases": [
-    "combination locks",
-    "combination lock",
-    "padlock",
-    "dial lock",
-    "safe lock",
-    "wheel pack",
-    "lock wheels"
+    "hanger balance scale",
+    "hanger balance",
+    "balance scale",
+    "coat hanger scale",
+    "pan balance",
+    "two-pan balance",
+    "lever"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "pattern-detective",
+  "mathTemplate": "groups-and-arrays",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "skip-next",
-      "skip-missing"
+      "equal-groups",
+      "array"
     ],
     "format": "curiosity-day"
   },
@@ -33,368 +33,331 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Combination Locks",
-  "title": "How Combo Locks Work",
-  "question": "How can a turning dial remember three secret numbers?",
-  "idea": "A combination lock hides a stack of loose wheels, each with one notch called a gate. Pegs let the dial pick the wheels up one by one, and each turn back leaves a set wheel behind. When all the gates line up, a thin bar called a fence drops in and the lock opens.",
+  "wonderLabel": "Hanger Balance",
+  "title": "How a Hanger Balance Works",
+  "question": "How can a bent wire hanger tell which side is heavier?",
+  "idea": "A hanger balance turns on its hook, the pivot. The side with the bigger turning push dips. Weight far from the hook pushes harder than weight near it, and when the two pushes match, the hanger hangs level.",
   "curiosity": {
-    "intro": "Start with a padlock on the kitchen table. Then peek at the wheels inside, pick them up one by one, watch the fence drop and visit an old safe.",
-    "carryForward": "Next time you see a dial lock, count its turns and picture the wheels lining up.",
+    "intro": "Start with a hanger and two paper cups. Then find the pivot, zero the cups, move a cup toward the middle, weigh a strawberry and visit an old shop balance.",
+    "carryForward": "Next time you see a seesaw, look for the pivot and guess where to sit to make it level.",
     "questions": [
       {
         "id": "parts",
         "plate": "reach",
-        "question": "What is hiding behind the dial?",
-        "notice": "Follow the row from the dial to the drive cam, three wheels and a thin bar.",
-        "say": "Behind the dial sits a drive cam, a disc fixed to the dial with one short peg. Next come three flat wheels on one rod. Each wheel has a notch called a gate. The thin bar is the fence. The wheels are loose, so they turn only when something pushes them.",
-        "try": "Cut three paper circles and snip a small notch in each. Stack them on a pencil. Can you turn them so all three notches line up?"
+        "question": "What turns a hanger into a scale?",
+        "notice": "Find the hanger, the two cups on their strings, the washers and the lump of clay.",
+        "say": "The hook is the pivot: the whole hanger turns around that one point. Each cup pulls down on its own side. When one side pulls harder, that side dips and the other rises. Washers make handy weights, because every washer in a box weighs about the same. Then you can count them.",
+        "try": "Hang a hanger from a broom handle across two chairs. Tie a paper cup to each bottom corner. Drop one washer in a cup. Which way does it tip?"
       },
       {
-        "id": "stack",
+        "id": "level",
         "plate": "change",
-        "question": "Why do you spin the dial three times first?",
-        "notice": "Find the tab on each wheel and the spot where one tab touches the next.",
-        "say": "The cam's peg travels almost a full turn before it bumps the first wheel. That wheel then needs nearly a turn to catch the second, and the second to catch the third. Three spins make sure every wheel is moving. Then the wheel farthest from the dial is set first.",
-        "try": "Tie three toy cars together with loose string. Pull the front one slowly. Watch each car start to move only when its string goes tight."
+        "question": "Why make the empty cups level first?",
+        "notice": "Find the hook at the top, the two empty cups at the same height and the tiny lump of clay.",
+        "say": "Two empty cups never weigh exactly the same, and a hanger may be a little bent. A pinch of clay on the high side evens them out. This is called taring, or zeroing. Afterwards, only the things you add can tip the hanger. Tap it, and it rocks, then settles level again, because most of its weight hangs below the hook.",
+        "try": "Hang the two empty cups and look closely. Is one side a little low? Press a tiny bit of clay on the high side until both cups hang even."
       },
       {
-        "id": "gates",
+        "id": "slide",
         "plate": "notice",
-        "question": "What has to happen for the lock to open?",
-        "notice": "Compare the stack with gates in a line to the stack with gates pointing every way.",
-        "say": "The fence rests on the smooth edges of the wheels. It can drop only when all three gates sit in one straight line beneath it. If even one gate points the wrong way, the fence stays up and the lock stays shut.",
-        "try": "Set out three cups with their handles pointing different ways. Turn them until every handle points the same way, like gates in a row."
+        "question": "Does it matter where a cup hangs?",
+        "notice": "Compare the tall stack of washers near the middle with the short stack out at the corner.",
+        "say": "Yes! A weight far from the pivot gives a bigger turning push, called torque. A cup hung twice as far from the hook needs only half as many washers to balance. That is why a big kid can sit near the middle of a seesaw and still balance a small kid at the far end.",
+        "try": "Move one cup's string close to the middle of the bottom bar. Put 2 washers in the corner cup. How many washers does the middle cup need to make it level?"
       },
       {
-        "id": "safe",
+        "id": "shop",
         "plate": "keep",
-        "question": "Can a number that is close still open a lock?",
-        "notice": "Find the big dial on the safe door and the fine marks around its edge.",
-        "say": "Each gate is a little wider than the fence, so being one mark off can still work. Testers check that good safe locks open only within about one mark of each number. Some very strong locks use plastic wheels that are hard to see in X-ray pictures. They also keep the fence lifted off the wheels, so nobody can feel it.",
-        "try": "Hide a toy under one of ten cups in a row. Let a helper guess. Does it help if you say “close” when they are one cup away?"
+        "question": "Would a balance work on the Moon?",
+        "notice": "Find the two level pans on their chains and the row of brass weights beside them.",
+        "say": "Yes. A balance compares two things, so it measures mass, the amount of stuff. The Moon pulls about one sixth as hard as Earth, but it pulls both pans less at the same time. A spring scale would show a smaller number there. Old shops used brass weights of set sizes, so everyone measured the same way.",
+        "try": "Put a strawberry in one cup. Add washers to the other cup until the hanger hangs level. How many washers weigh the same as one strawberry?"
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/how-do-combination-locks-work/01-dial.jpg",
-      "original": "assets/how-do-combination-locks-work/01-dial.png",
-      "foldSrc": "assets/how-do-combination-locks-work/01-dial-fold.jpg",
-      "title": "Three secret numbers",
-      "alt": "Big and Little Wonderer at a wooden kitchen table, the little one turning the dial of a plain steel padlock and listening closely while the big one leans in to watch.",
-      "caption": "Turn the dial slowly, and soft clicks sound inside."
+      "src": "assets/a-hanger-balance-scale/01-hanger.jpg",
+      "original": "assets/a-hanger-balance-scale/01-hanger.png",
+      "foldSrc": "assets/a-hanger-balance-scale/01-hanger-fold.jpg",
+      "title": "Which side dips?",
+      "alt": "Big and Little Wonderer beside a kitchen table, a wire coat hanger hanging from a wooden rod across two chair backs with a paper cup on each end, the hanger tipped toward the lower left cup as the little one reaches up with a washer and the big one crouches to look.",
+      "caption": "Drop a washer in, and that side of the hanger dips."
     },
     {
       "id": "reach",
-      "src": "assets/how-do-combination-locks-work/02-parts.jpg",
-      "original": "assets/how-do-combination-locks-work/02-parts.png",
-      "foldSrc": "assets/how-do-combination-locks-work/02-parts-fold.jpg",
-      "title": "Wheels in a stack",
-      "alt": "A field-guide study of a padlock and its inside parts in a row: the padlock with its marked dial, a small steel disc with one peg, three flat brass wheels with one notch and one tab each, and a thin steel bar.",
-      "caption": "Behind the dial: a drive cam, three notched wheels and a thin fence."
+      "src": "assets/a-hanger-balance-scale/02-parts.jpg",
+      "original": "assets/a-hanger-balance-scale/02-parts.png",
+      "foldSrc": "assets/a-hanger-balance-scale/02-parts-fold.jpg",
+      "title": "Parts of a balance",
+      "alt": "A field-guide study of a homemade balance laid out in a row: a wire coat hanger, two paper cups with string handles, a small pile of steel washers and a lump of grey clay.",
+      "caption": "A hook to turn on, two cups, equal washers and a pinch of clay."
     },
     {
       "id": "change",
-      "src": "assets/how-do-combination-locks-work/03-stack.jpg",
-      "original": "assets/how-do-combination-locks-work/03-stack.png",
-      "foldSrc": "assets/how-do-combination-locks-work/03-stack-fold.jpg",
-      "title": "Picking up the wheels",
-      "alt": "A field-guide study of three flat brass wheels stacked on one thin rod behind a small disc, with a tab on one wheel touching a tab on the next and the notches pointing different ways.",
-      "caption": "Each wheel's tab catches the next, like train cars hooking on."
+      "src": "assets/a-hanger-balance-scale/03-level.jpg",
+      "original": "assets/a-hanger-balance-scale/03-level.png",
+      "foldSrc": "assets/a-hanger-balance-scale/03-level-fold.jpg",
+      "title": "Zero it first",
+      "alt": "A field-guide study of a wire coat hanger hanging level by its hook from a wooden rod, two empty paper cups at the same height and a tiny lump of grey clay on the bottom bar.",
+      "caption": "A pinch of clay makes the empty cups hang level before weighing."
     },
     {
       "id": "notice",
-      "src": "assets/how-do-combination-locks-work/04-gates.jpg",
-      "original": "assets/how-do-combination-locks-work/04-gates.png",
-      "foldSrc": "assets/how-do-combination-locks-work/04-gates-fold.jpg",
-      "title": "Back and forth",
-      "alt": "Two small stacks of three brass wheels on short rods: in one the notches line up in a column with a thin bar resting down in them, and in the other the notches point different ways and the bar lies across the top.",
-      "caption": "Gates in a row let the fence drop. One stray gate keeps it up."
+      "src": "assets/a-hanger-balance-scale/04-slide.jpg",
+      "original": "assets/a-hanger-balance-scale/04-slide.png",
+      "foldSrc": "assets/a-hanger-balance-scale/04-slide-fold.jpg",
+      "title": "Distance matters",
+      "alt": "A field-guide study of a level wire coat hanger: a cup hung in from the left corner, nearer the middle, holds a tall stack of washers, and a cup at the far right corner holds a short stack.",
+      "caption": "Near the hook, a cup needs more washers to balance one far out."
     },
     {
       "id": "return",
-      "src": "assets/how-do-combination-locks-work/05-open.jpg",
-      "original": "assets/how-do-combination-locks-work/05-open.png",
-      "foldSrc": "assets/how-do-combination-locks-work/05-open-fold.jpg",
-      "title": "The fence drops in",
-      "alt": "Big and Little Wonderer back at the kitchen table, the big one sitting and holding the padlock with its curved shackle popped open, the little one standing and pointing at it, three notched brass wheels lying on the table.",
-      "caption": "Three gates line up, the fence drops in, and the shackle pops."
+      "src": "assets/a-hanger-balance-scale/05-weigh.jpg",
+      "original": "assets/a-hanger-balance-scale/05-weigh.png",
+      "foldSrc": "assets/a-hanger-balance-scale/05-weigh-fold.jpg",
+      "title": "Weighing a strawberry",
+      "alt": "Big and Little Wonderer back beside the kitchen table, the hanger now level with a strawberry in one paper cup and washers in the other, the big one reaching up with one more washer, the little one pointing, and a bowl of strawberries on the table.",
+      "caption": "When the hanger hangs level, the strawberry matches the washers."
     },
     {
       "id": "keep",
-      "src": "assets/how-do-combination-locks-work/06-safe.jpg",
-      "original": "assets/how-do-combination-locks-work/06-safe.png",
-      "foldSrc": "assets/how-do-combination-locks-work/06-safe-fold.jpg",
-      "title": "Close enough",
-      "alt": "A small, heavy old safe with a dark green door, a big round silver dial with fine marks and a round handle, standing on a wooden floor in soft window light.",
-      "caption": "Gates are a bit wide, so a close number can still work."
+      "src": "assets/a-hanger-balance-scale/06-shop.jpg",
+      "original": "assets/a-hanger-balance-scale/06-shop.png",
+      "foldSrc": "assets/a-hanger-balance-scale/06-shop-fold.jpg",
+      "title": "Same on the Moon",
+      "alt": "An old brass two-pan balance scale on a wooden shop counter, its two round pans hanging level on fine chains, with a row of four plain brass weights of different sizes beside it.",
+      "caption": "A balance compares two sides, so it would match the same on the Moon."
     }
   ],
   "reading": {
-    "title": "The lock on the kitchen table",
+    "title": "The hanger on the broom handle",
     "coverPlate": "wake",
-    "coverText": "Start with a padlock that clicks as it turns. Then follow the dial into a hidden stack of wheels.",
+    "coverText": "Start with a coat hanger and two paper cups. Then find out why one side dips and how to make it level.",
     "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "Three secret numbers",
-        "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers, from 0 to 39. The little one turns it slowly and hears soft clicks inside. Big Wonderer leans in to listen too. Only three numbers in the right order will open it. How can a turning dial remember them?",
-        "prompt": "What does the little one hear inside the lock?",
+        "title": "Which side dips?",
+        "passage": "Little Wonderer hangs a wire hanger from a broom handle across two chairs. Two paper cups dangle from its bottom corners. The little one drops one washer into the left cup, and down it dips! Big Wonderer crouches low to look. How can a bent wire tell which side is heavier?",
+        "prompt": "What happens when the washer drops into the left cup?",
         "foldable": {
-          "heading": "Three secret numbers",
-          "body": "A padlock dial has forty numbers. Only three, in the right order, open it. Soft clicks hide inside."
+          "heading": "Which side dips?",
+          "body": "A wire hanger holds two paper cups. One washer drops in, and that side dips. How can a wire tell which side is heavier?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "Wheels in a stack",
-        "passage": "Behind the dial hides a stack of three flat wheels on one thin rod. Each wheel has one small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial starts to move. In front of them is a drive cam, a disc fixed to the dial. It has one short peg.",
-        "prompt": "What is the small notch on each wheel called?",
+        "title": "Parts of a balance",
+        "passage": "A balance scale needs only a few simple parts. The hook at the top is the pivot, the one point the whole hanger turns on. The two cups hold the things you want to compare. Flat steel washers make good weights, because each one weighs about the same. A pinch of soft clay will help, too.",
+        "prompt": "What is the pivot on a hanger balance?",
         "foldable": {
-          "heading": "Wheels in a stack",
-          "body": "Behind the dial sit three loose wheels on one rod. Each has a small notch called a gate."
+          "heading": "Parts of a balance",
+          "body": "The hook is the pivot, the point the hanger turns on. Cups hold things, and washers are weights that match."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Picking up the wheels",
-        "passage": "Turn the dial, and the cam's peg swings round. After almost a full turn, it bumps a tab on the nearest wheel and drags it along. That wheel's own peg catches the next wheel, and that one catches the last. So you spin three times first, like an engine hooking three train cars.",
-        "prompt": "Why do you spin the dial three times first?",
+        "title": "Zero it first",
+        "passage": "Before weighing anything, make the empty cups hang level. Two cups are never exactly the same, so one side may droop a little. Press a tiny pinch of clay onto the high side until both cups hang even. People call this taring, or zeroing the scale. Now only the things you add can tip the hanger.",
+        "prompt": "Why do you make the empty cups level first?",
         "foldable": {
-          "heading": "Picking up the wheels",
-          "body": "Each wheel's peg catches the next one. Three spins pick up all three wheels, like an engine hooking train cars."
+          "heading": "Zero it first",
+          "body": "First make the empty cups level. A pinch of clay on the high side zeroes the scale, so only what you add can tip it."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "Back and forth",
-        "passage": "Here is a clue. Stop on the first number, and the farthest wheel is set. Now turn the other way. The pegs let go, so that wheel stays put. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Stop on the second number. Then turn back to the third.",
-        "prompt": "Why do you pass the first number once?",
+        "title": "Distance matters",
+        "passage": "Here is a clue. Hang the left cup near the middle, close under the hook. Now it needs many more washers to balance a cup out at the far corner! A weight far from the pivot gives a bigger turning push. Twice as far needs only half as much. This rule is called the law of the lever.",
+        "prompt": "Why does a cup near the middle need more washers?",
         "foldable": {
-          "heading": "Back and forth",
-          "body": "Each turn the other way leaves a set wheel behind. Pass the first number once to pick up the middle wheel."
+          "heading": "Distance matters",
+          "body": "A cup near the hook needs more washers. Weight far from the pivot gives a bigger push. That is the law of the lever."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "The fence drops in",
-        "passage": "Back at the table, Big Wonderer pulls on the lock. Pop! The shackle swings open, and the little one points. Now the guess changes. The lock never remembered any numbers. The wheels just stayed where they were left. When all three gates line up, a thin bar called a fence drops in and frees the shackle.",
-        "prompt": "What drops into the lined-up gates?",
+        "title": "Weighing a strawberry",
+        "passage": "Back at the chairs, the little one sets a strawberry in the left cup. Big Wonderer adds washers to the other cup, one at a time, until it hangs level. Now the guess changes. A balance does more than find the heavier side. When it hangs level, the strawberry weighs the same as those washers, so a washer works like a unit.",
+        "prompt": "What does it mean when the hanger hangs level?",
         "foldable": {
-          "heading": "The fence drops in",
-          "body": "The lock keeps no numbers. When all three gates line up, a thin bar called a fence drops in."
+          "heading": "Weighing a strawberry",
+          "body": "A strawberry goes in one cup and washers in the other. When it hangs level, they weigh the same. A washer is a unit."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Close enough",
-        "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number one off can often still open a lock! Safe makers test locks so they open only very close to each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence away. How could a lock give away no clues?",
-        "prompt": "Why can a number that is one off still work?",
+        "title": "Same on the Moon",
+        "passage": "Here is a surprise. Carry a balance to the Moon, and the strawberry still matches the same washers! The Moon pulls everything more weakly, but it pulls both cups less at the same time. A bathroom scale uses a spring, so its number would drop there. Could you build a balance fine enough to weigh a feather?",
+        "prompt": "Why would a balance work the same on the Moon?",
         "foldable": {
-          "heading": "Close enough",
-          "body": "Gates are a bit wider than the fence, so one number off can still work. How could a lock hide its clues?"
+          "heading": "Same on the Moon",
+          "body": "On the Moon, a balance still matches the same washers. The Moon pulls both cups less at once. Could you weigh a feather?"
         }
       }
     ],
     "words": [
       {
-        "word": "combination",
-        "meaning": "a set of numbers used in one exact order"
+        "word": "balance",
+        "meaning": "a scale that compares two sides to see which is heavier"
       },
       {
-        "word": "gate",
-        "meaning": "a small notch in the edge of a lock wheel"
+        "word": "pivot",
+        "meaning": "the one point something turns on"
       },
       {
-        "word": "drive cam",
-        "meaning": "a disc with a peg that turns with the dial"
+        "word": "washer",
+        "meaning": "a flat metal ring with a hole in the middle"
       },
       {
-        "word": "fence",
-        "meaning": "a thin bar that drops into the lined-up gates"
+        "word": "zero",
+        "meaning": "to make a scale read even before you weigh"
       },
       {
-        "word": "shackle",
-        "meaning": "the curved bar of a padlock that pops open"
+        "word": "lever",
+        "meaning": "a bar that turns on a pivot"
       }
     ],
     "questions": [
-      "What hides behind the dial of a combination lock?",
-      "Why do you spin the dial three times first?",
-      "Why does each turn the other way set one more wheel?",
-      "Why can a number that is one off still open a lock?"
+      "What part of a hanger balance is the pivot?",
+      "Why do you make the empty cups level first?",
+      "Why does a cup near the middle need more washers?",
+      "Why would a balance work the same on the Moon?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what hides behind the dial, why you spin three times first, and what drops in when the gates line up.",
-      "example": "Example: Three wheels with notches hide behind the dial. Three spins pick up all the wheels. When the gates line up, the fence drops in."
+      "prompt": "Write or dictate three sentences: what the pivot is, why you zero the scale first, and what it means when the hanger hangs level.",
+      "example": "Example: The hook is the pivot. Clay on the high side makes the empty cups even. Level means both sides weigh the same."
     },
-    "foldableTitle": "A little book of locks",
-    "foldableCoverLine": "Combo Locks",
-    "foldableNote": "Carry six lock clues in a small book."
+    "foldableTitle": "A little book of balance",
+    "foldableCoverLine": "Hanger Scale",
+    "foldableNote": "Carry six balance clues in a small book."
   },
   "math": {
-    "title": "Find the lock patterns",
-    "eyebrow": "SIX LOCK PATTERNS",
-    "intro": "Look for the step between numbers. Fill each missing number.",
-    "plate": "change",
-    "actionLabel": "Find the step, then fill the gap",
+    "title": "Count the washers in groups",
+    "eyebrow": "SIX EQUAL-GROUP QUESTIONS",
+    "plate": "return",
+    "intro": "Each group or row has the same number. Add the equal groups or rows to find the total.",
+    "actionLabel": "Add each equal group or row",
     "tasks": [
       {
-        "skill": "skip-next",
-        "sequence": [
-          5,
-          10,
-          15,
-          20
-        ],
-        "step": 5,
-        "blankIndex": 3,
-        "prompt": "Little Wonderer sees a longer mark at every fifth number on the dial. What number comes next?",
-        "equation": "5, 10, 15, ___",
-        "hint": "Count on by 5 from the number just before the blank.",
-        "answer": 20,
-        "worked": "15 + 5 = 20. Each step adds 5.",
+        "skill": "equal-groups",
+        "rows": 2,
+        "columns": 3,
+        "prompt": "Little Wonderer drops 3 washers into each of 2 cups. How many washers are there altogether?",
+        "equation": "3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3.",
+        "answer": 6,
+        "worked": "3 + 3 = 6. Two cups of 3 washers make 6 washers.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          0,
-          10,
-          20,
-          30
-        ],
-        "step": 10,
-        "blankIndex": 1,
-        "prompt": "The big numbers on the dial go up by tens. What number is missing?",
-        "equation": "0, ___, 20, 30",
-        "hint": "Count on by 10 from the number just before the blank.",
-        "answer": 10,
-        "worked": "0 + 10 = 10. Each step adds 10.",
+        "skill": "array",
+        "rows": 3,
+        "columns": 4,
+        "prompt": "The big one lines up washers in 3 rows, with 4 washers in each row. How many washers are there?",
+        "equation": "4 + 4 + 4 =",
+        "hint": "Add one row at a time: 4 + 4 + 4.",
+        "answer": 12,
+        "worked": "4 + 4 + 4 = 12. Three rows of 4 make 12 washers.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          12,
-          14,
-          16,
-          18
-        ],
-        "step": 2,
-        "blankIndex": 3,
-        "prompt": "In a pretend count, the little one counts dial clicks two at a time. What number comes next?",
-        "equation": "12, 14, 16, ___",
-        "hint": "Count on by 2 from the number just before the blank.",
-        "answer": 18,
-        "worked": "16 + 2 = 18. Each step adds 2.",
+        "skill": "equal-groups",
+        "rows": 4,
+        "columns": 2,
+        "prompt": "The little one presses 2 bits of clay onto each of 4 hangers. How many bits of clay are there?",
+        "equation": "2 + 2 + 2 + 2 =",
+        "hint": "Add one group at a time: 2 + 2 + 2 + 2.",
+        "answer": 8,
+        "worked": "2 + 2 + 2 + 2 = 8. Four hangers with 2 bits each make 8 bits of clay.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          25,
-          30,
-          35,
-          40,
-          45
-        ],
-        "step": 5,
-        "blankIndex": 2,
-        "prompt": "A school hallway has lockers in rows of 5. Counting by fives, what number is missing?",
-        "equation": "25, 30, ___, 40, 45",
-        "hint": "Count on by 5 from the number just before the blank.",
-        "answer": 35,
-        "worked": "30 + 5 = 35. Each step adds 5.",
+        "skill": "array",
+        "rows": 2,
+        "columns": 5,
+        "prompt": "A shelf holds 2 rows of paper cups, with 5 cups in each row. How many cups are there?",
+        "equation": "5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5.",
+        "answer": 10,
+        "worked": "5 + 5 = 10. Two rows of 5 make 10 cups.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "skip-next",
-        "sequence": [
-          40,
-          50,
-          60,
-          70
-        ],
-        "step": 10,
-        "blankIndex": 3,
-        "prompt": "A shop packs padlocks in boxes of 10. Big Wonderer counts the boxes by tens. What number comes next?",
-        "equation": "40, 50, 60, ___",
-        "hint": "Count on by 10 from the number just before the blank.",
-        "answer": 70,
-        "worked": "60 + 10 = 70. Each step adds 10.",
+        "skill": "equal-groups",
+        "rows": 5,
+        "columns": 3,
+        "prompt": "Big Wonderer finds that 1 strawberry balances 3 washers. How many washers balance 5 strawberries?",
+        "equation": "3 + 3 + 3 + 3 + 3 =",
+        "hint": "Add one group at a time: 3 + 3 + 3 + 3 + 3.",
+        "answer": 15,
+        "worked": "3 + 3 + 3 + 3 + 3 = 15. Five strawberries of 3 washers each make 15 washers.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "skip-missing",
-        "sequence": [
-          64,
-          66,
-          68,
-          70
-        ],
-        "step": 2,
-        "blankIndex": 2,
-        "prompt": "A safe maker tests 2 locks each hour. What number is missing from the count?",
-        "equation": "64, 66, ___, 70",
-        "hint": "Count on by 2 from the number just before the blank.",
-        "answer": 68,
-        "worked": "66 + 2 = 68. Each step adds 2.",
+        "skill": "array",
+        "rows": 4,
+        "columns": 5,
+        "prompt": "An old shop keeps brass weights in 4 rows, with 5 weights in each row. How many weights are there?",
+        "equation": "5 + 5 + 5 + 5 =",
+        "hint": "Add one row at a time: 5 + 5 + 5 + 5.",
+        "answer": 20,
+        "worked": "5 + 5 + 5 + 5 = 20. Four rows of 5 make 20 weights.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one pattern and tell how you know the missing number fits.",
+    "extension": "Choose one task. Draw its equal groups or rows and tell how the addition matches your drawing.",
     "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Six skip-counting sequences use steps of 2, 5, and 10 within 100. The numbers are for counting practice, not real lock combinations.",
-    "answerKeyIntro": "Find the repeated step, then use the numbers on either side of the blank to check the missing term. Welcome a spoken explanation."
+    "parentNote": "Six equal-group and array tasks use repeated addition. Rows and columns are each 2 to 5. Welcome drawings, spoken reasoning, or arranging real washers or coins.",
+    "answerKeyIntro": "Add the same number once for each group or row. Welcome a drawing or a spoken explanation."
   },
   "writing": {
-    "title": "Explain a lock clue in your words",
+    "title": "Explain a balance clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw three wheels on a rod, each with one notch, and show the notches lined up under a thin bar.",
-    "starter": "My lock clue",
+    "draw": "Draw a hanger with a cup on each corner, and show which side dips and why.",
+    "starter": "My balance clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "Behind the dial there are",
-        "hint": "what does each wheel have in its edge?"
+        "start": "The hook is the pivot because",
+        "hint": "what does the whole hanger turn on?"
       },
       {
         "plate": "change",
-        "start": "You spin the dial three times because",
-        "hint": "what do the pegs pick up?"
+        "start": "You zero the empty cups first because",
+        "hint": "what should be the only thing that tips it?"
       },
       {
         "plate": "notice",
-        "start": "The lock opens when",
-        "hint": "where do the gates have to be?"
+        "start": "A cup near the middle needs more washers because",
+        "hint": "where does a weight push hardest?"
       }
     ],
     "words": [
-      "dial",
-      "wheel",
-      "gate",
-      "fence",
+      "pivot",
+      "level",
+      "washer",
+      "heavier",
       "because",
       "maybe"
     ],
@@ -404,58 +367,58 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "Soft clicks inside the lock as the dial turns."
+      "text": "That cup dips down and the other cup swings up."
     },
     {
       "label": "Reading · 2",
-      "text": "A gate: the small notch in the edge of each wheel."
+      "text": "The hook: the one point the whole hanger turns on."
     },
     {
       "label": "Reading · 3",
-      "text": "To pick up all three wheels, one after another."
+      "text": "So only the things you add can tip the hanger."
     },
     {
       "label": "Reading · 4",
-      "text": "The cam needs a full turn to pick up the middle wheel."
+      "text": "Weight near the hook gives a smaller turning push."
     },
     {
       "label": "Reading · 5",
-      "text": "The fence drops into the lined-up gates."
+      "text": "The two sides weigh the same."
     },
     {
       "label": "Reading · 6",
-      "text": "Each gate is a little wider than the fence."
+      "text": "The Moon pulls both cups less at the same time."
     },
     {
       "label": "Math · all",
-      "text": "20, 10, 18, 35, 70, 68."
+      "text": "6, 12, 8, 10, 15, 20."
     },
     {
       "label": "Screen-free",
-      "text": "A small notch; to pick up all wheels; the fence; often still open it."
+      "text": "The pivot; to zero the scale; far from the hook; match the same way."
     }
   ],
-  "parentGuidance": "Practice only on a lock you own and know the combination of. Do not take apart spring-loaded locks; paper wheels on a pencil show the same idea safely.",
+  "parentGuidance": "Hang the hanger together and keep the wire ends away from faces. Use washers or coins only where little siblings cannot reach them, and do not bend or cut the wire.",
   "sources": [
     {
-      "label": "HowStuffWorks — How combination locks work (drive cam, wheel pack, picking up the wheels)",
-      "url": "https://home.howstuffworks.com/home-improvement/home-diy/combination-lock.htm"
+      "label": "Wikipedia — Weighing scale (a balance compares masses, so its reading does not change with gravity; a spring scale's does)",
+      "url": "https://en.wikipedia.org/wiki/Weighing_scale"
     },
     {
-      "label": "Locksmith Ledger — Anatomy of a safe lock: three-wheel combination locks (flies, drive pins, why each turn sets one wheel)",
-      "url": "https://www.locksmithledger.com/safes/article/10228880/anatomy-of-a-safe-lock-three-wheel-combination-locks-old-and-new"
+      "label": "Wikipedia — Lever (fulcrum; law of the lever: weight times distance on each side; Archimedes)",
+      "url": "https://en.wikipedia.org/wiki/Lever"
     },
     {
-      "label": "Master Lock — Combination lock tutorial (three turns right, one full turn left past the first number, then right)",
-      "url": "https://content.masterlock.com/masterlock/resources/documents/pdf/Master_Lock_Combination_Tutorial.pdf"
+      "label": "Wikipedia — Torque (a turning push grows with distance from the pivot)",
+      "url": "https://en.wikipedia.org/wiki/Torque"
     },
     {
-      "label": "NIST NBSIR 81-2233 — High security locking devices (UL 768 dialing tolerances; fence kept off the wheels; nylon wheels against X-rays)",
-      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nbsir81-2233.pdf"
+      "label": "Wikipedia — Tare weight (zeroing out the empty container)",
+      "url": "https://en.wikipedia.org/wiki/Tare_weight"
     },
     {
-      "label": "Wikipedia — Rotary combination lock (wheel pack, fly, gates and fence)",
-      "url": "https://en.wikipedia.org/wiki/Rotary_combination_lock"
+      "label": "Wikipedia — Gravity of the Moon (about one sixth of Earth's surface gravity)",
+      "url": "https://en.wikipedia.org/wiki/Gravitation_of_the_Moon"
     }
   ],
   "levels": {
@@ -464,47 +427,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a lock. It has a round dial. The little one turns it. Click, click! How does it open?",
-            "prompt": "What does the lock have?"
+            "passage": "Little Wonderer hangs up a hanger. Two cups hang from it. The little one drops in a washer. Down goes that cup! Which side is heavy?",
+            "prompt": "What does the cup do?"
           },
           {
             "id": "reach",
-            "passage": "Inside are three flat wheels. Each wheel has a notch. The notch is called a gate.",
-            "prompt": "What is a gate?"
+            "passage": "The hook is the pivot. The hanger tips on it. The cups hold things. Washers are the weights. Each washer weighs the same.",
+            "prompt": "What is the pivot?"
           },
           {
             "id": "change",
-            "passage": "The dial has a peg. The peg pushes one wheel. That wheel pushes the next. Spin three times first!",
-            "prompt": "Why spin three times?"
+            "passage": "First, make the empty cups level. Press clay on the high side. Now both cups hang even. This is called zeroing.",
+            "prompt": "Why add clay?"
           },
           {
             "id": "notice",
-            "passage": "Stop on the first number. Turn back the other way. Each turn sets one more wheel.",
-            "prompt": "What does each turn set?"
+            "passage": "Hang a cup near the middle. Now it needs more washers! Far from the hook pushes harder. Distance matters.",
+            "prompt": "Where does a washer push harder?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer pulls the lock. Pop! It opens. The three gates lined up. A thin bar dropped in.",
-            "prompt": "What dropped in?"
+            "passage": "A strawberry sits in one cup. Big Wonderer adds washers one by one. The little one points. Now it hangs level! The strawberry matches the washers.",
+            "prompt": "What does level mean?"
           },
           {
             "id": "keep",
-            "passage": "Close numbers can work too. The gates are a bit wide. How can a lock hide clues?",
-            "prompt": "Can close numbers work?"
+            "passage": "A balance works on the Moon too. The Moon pulls both cups less. So they still match! Could you weigh a feather?",
+            "prompt": "Does it work on the Moon?"
           }
         ],
         "words": [
           {
-            "word": "dial",
-            "meaning": "the round knob you turn"
+            "word": "pivot",
+            "meaning": "the point a hanger turns on"
           },
           {
-            "word": "wheel",
-            "meaning": "a flat circle that turns inside the lock"
+            "word": "washer",
+            "meaning": "a flat metal ring"
           },
           {
-            "word": "gate",
-            "meaning": "a small notch in a wheel"
+            "word": "level",
+            "meaning": "even, with no side lower"
           }
         ]
       },
@@ -512,57 +475,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 9 clicks of the dial, then 6 more. How many clicks?",
-            "expression": "9 + 6",
-            "equation": "9 + 6 =",
-            "answer": 15,
-            "hint": "Make a ten: 9 + 1 + 5.",
-            "worked": "9 + 6 = 15. Add both sets of clicks."
+            "prompt": "Little Wonderer drops 8 washers in a cup, then 5 more. How many washers?",
+            "expression": "8 + 5",
+            "equation": "8 + 5 =",
+            "answer": 13,
+            "hint": "Make a ten: 8 + 2 + 3.",
+            "worked": "8 + 5 = 13. Add both sets of washers."
           },
           {
             "plate": "reach",
-            "prompt": "A box has 14 lock wheels, and 5 go in a lock. How many are left?",
-            "expression": "14 − 5",
-            "equation": "14 − 5 =",
+            "prompt": "A tray has 15 washers. The big one takes 6. How many are left?",
+            "expression": "15 − 6",
+            "equation": "15 − 6 =",
             "answer": 9,
-            "hint": "Take 5 away from 14.",
-            "worked": "14 − 5 = 9. Take away the wheels used."
+            "hint": "Take 6 away from 15.",
+            "worked": "15 − 6 = 9. Take away the washers used."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, the dial spins 8 times, then 7 more. How many spins?",
-            "expression": "8 + 7",
-            "equation": "8 + 7 =",
-            "answer": 15,
-            "hint": "Make a ten: 8 + 2 + 5.",
-            "worked": "8 + 7 = 15. Add both sets of spins."
-          },
-          {
-            "plate": "notice",
-            "prompt": "A wall has 12 lockers, and 4 are open. How many are shut?",
+            "prompt": "The little one has 12 bits of clay and uses 4. How many are left?",
             "expression": "12 − 4",
             "equation": "12 − 4 =",
             "answer": 8,
             "hint": "Take 4 away from 12.",
-            "worked": "12 − 4 = 8. Take away the open lockers."
+            "worked": "12 − 4 = 8. Take away the clay used."
+          },
+          {
+            "plate": "notice",
+            "prompt": "One cup holds 7 washers. The other holds 9. How many in all?",
+            "expression": "7 + 9",
+            "equation": "7 + 9 =",
+            "answer": 16,
+            "hint": "Make a ten: 9 + 1 + 6.",
+            "worked": "7 + 9 = 16. Add both cups."
           },
           {
             "plate": "return",
-            "prompt": "The big one opens 7 locks, then 6 more. How many locks?",
-            "expression": "7 + 6",
-            "equation": "7 + 6 =",
-            "answer": 13,
-            "hint": "Double 6, then add 1.",
-            "worked": "7 + 6 = 13. Add both sets of locks."
+            "prompt": "Big Wonderer adds 6 washers, then 5 more. How many washers?",
+            "expression": "6 + 5",
+            "equation": "6 + 5 =",
+            "answer": 11,
+            "hint": "Double 5, then add 1.",
+            "worked": "6 + 5 = 11. Add both sets of washers."
           },
           {
             "plate": "keep",
-            "prompt": "A shop has 16 safes, and 9 are sold. How many are left?",
-            "expression": "16 − 9",
-            "equation": "16 − 9 =",
-            "answer": 7,
-            "hint": "Take 9 away from 16.",
-            "worked": "16 − 9 = 7. Take away the sold safes."
+            "prompt": "A shop has 18 brass weights and sells 6. How many are left?",
+            "expression": "18 − 6",
+            "equation": "18 − 6 =",
+            "answer": 12,
+            "hint": "Take 6 away from 18.",
+            "worked": "18 − 6 = 12. Take away the sold weights."
           }
         ]
       }
@@ -572,51 +535,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer finds a padlock on the kitchen table. Its round dial has forty numbers. The little one turns it slowly. Click, click! Only three numbers will open it. How can a dial remember them?",
-            "prompt": "How many numbers open the lock?"
+            "passage": "Little Wonderer hangs a wire hanger from a broom handle. Two paper cups dangle from its corners. The little one drops a washer into the left cup. Down it dips! The right cup swings up. How can a hanger tell which side is heavier?",
+            "prompt": "Which cup dips down?"
           },
           {
             "id": "reach",
-            "passage": "Behind the dial sit three flat wheels on one rod. Each wheel has a small notch called a gate. The wheels are loose. They turn only when something pushes them.",
-            "prompt": "What is on each wheel?"
+            "passage": "The hook at the top is the pivot. The whole hanger tips around it. The cups hold what you compare. Flat washers make good weights. Every washer weighs about the same.",
+            "prompt": "What does the hanger tip around?"
           },
           {
             "id": "change",
-            "passage": "The dial turns a disc with a short peg. The peg bumps the nearest wheel and drags it. That wheel catches the next, then the last. So you spin three times first.",
-            "prompt": "Why do you spin three times first?"
+            "passage": "First, make the empty cups hang level. One side may droop a little. Press a pinch of clay on the high side. Now both cups hang even. This is called zeroing the scale.",
+            "prompt": "Why press clay on the high side?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue. Stop on the first number to set the far wheel. Then turn the other way. That wheel stays put. Each new turn sets one more wheel.",
-            "prompt": "What happens to the far wheel?"
+            "passage": "Here is a clue. Hang one cup near the middle. Now it needs more washers to balance! Weight far from the pivot pushes harder. Distance matters as much as weight.",
+            "prompt": "Why does distance matter?"
           },
           {
             "id": "return",
-            "passage": "Big Wonderer pulls on the lock, and it pops open. Now the guess changes. The lock keeps no numbers. All three gates lined up. A thin bar called a fence dropped in.",
-            "prompt": "What dropped into the gates?"
+            "passage": "The little one sets a strawberry in one cup. Big Wonderer adds washers, one at a time. At last the hanger hangs level. The strawberry weighs the same as those washers!",
+            "prompt": "What weighs the same as the strawberry?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise. A number one off can still work. Each gate is a bit wider than the fence. How could a lock hide its clues?",
-            "prompt": "Why can a close number work?"
+            "passage": "Here is a surprise. A balance works the same on the Moon! The Moon pulls both cups less at once. So they still match. Could you weigh a feather?",
+            "prompt": "Why does it still match on the Moon?"
           }
         ],
         "words": [
           {
-            "word": "padlock",
-            "meaning": "a lock with a curved bar that pops open"
+            "word": "pivot",
+            "meaning": "the point a hanger turns on"
           },
           {
-            "word": "gate",
-            "meaning": "a small notch in the edge of a lock wheel"
+            "word": "balance",
+            "meaning": "a scale that compares two sides"
           },
           {
-            "word": "peg",
-            "meaning": "a short bump that pushes something"
+            "word": "washer",
+            "meaning": "a flat metal ring with a hole"
           },
           {
-            "word": "fence",
-            "meaning": "a thin bar that drops into the gates"
+            "word": "zero",
+            "meaning": "to make a scale even before weighing"
           }
         ]
       },
@@ -624,57 +587,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 24 clicks of the dial, then 17 more. How many clicks?",
-            "expression": "24 + 17",
-            "equation": "24 + 17 =",
-            "answer": 41,
-            "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "24 + 17 = 41. Add both sets of clicks."
+            "prompt": "Little Wonderer drops 18 washers in a cup, then 14 more. How many washers?",
+            "expression": "18 + 14",
+            "equation": "18 + 14 =",
+            "answer": 32,
+            "hint": "Add the tens, then the ones.",
+            "worked": "18 + 14 = 32. Add both sets of washers."
           },
           {
             "plate": "reach",
-            "prompt": "A box holds 43 lock wheels, and 18 get a gate cut. How many still need a gate?",
-            "expression": "43 − 18",
-            "equation": "43 − 18 =",
-            "answer": 25,
-            "hint": "Trade a ten for ones, then subtract.",
-            "worked": "43 − 18 = 25. Take away the wheels with gates."
+            "prompt": "A bag has 45 washers. The big one uses 17. How many are left?",
+            "expression": "45 − 17",
+            "equation": "45 − 17 =",
+            "answer": 28,
+            "hint": "Take away 20, then add 3 back.",
+            "worked": "45 − 17 = 28. Take away the washers used."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, the dial clicks 19 times, then 26 more. How many clicks?",
-            "expression": "19 + 26",
-            "equation": "19 + 26 =",
-            "answer": 45,
-            "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "19 + 26 = 45. Add both sets of clicks."
+            "prompt": "A lump of clay makes 24 pinches. The little one uses 9. How many are left?",
+            "expression": "24 − 9",
+            "equation": "24 − 9 =",
+            "answer": 15,
+            "hint": "Take away 10, then add 1 back.",
+            "worked": "24 − 9 = 15. Take away the pinches used."
           },
           {
             "plate": "notice",
-            "prompt": "A hallway has 36 lockers, and 12 are open. How many are shut?",
-            "expression": "36 − 12",
-            "equation": "36 − 12 =",
-            "answer": 24,
-            "hint": "Subtract the tens, then the ones.",
-            "worked": "36 − 12 = 24. Take away the open lockers."
+            "prompt": "The middle cup holds 26 washers. The corner cup holds 13. How many in all?",
+            "expression": "26 + 13",
+            "equation": "26 + 13 =",
+            "answer": 39,
+            "hint": "Add the tens, then the ones.",
+            "worked": "26 + 13 = 39. Add both cups."
           },
           {
             "plate": "return",
-            "prompt": "The big one opens 28 locks, then 15 more. How many locks?",
-            "expression": "28 + 15",
-            "equation": "28 + 15 =",
-            "answer": 43,
-            "hint": "Add the ones first; trade 10 ones for a ten.",
-            "worked": "28 + 15 = 43. Add both sets of locks."
+            "prompt": "Big Wonderer weighs 19 strawberries, then 16 more. How many strawberries?",
+            "expression": "19 + 16",
+            "equation": "19 + 16 =",
+            "answer": 35,
+            "hint": "Make a twenty: 19 + 1 + 15.",
+            "worked": "19 + 16 = 35. Add both sets of strawberries."
           },
           {
             "plate": "keep",
-            "prompt": "A safe shop has 50 safes, and 23 are sold. How many are left?",
+            "prompt": "A shop has 50 brass weights and sells 23. How many are left?",
             "expression": "50 − 23",
             "equation": "50 − 23 =",
             "answer": 27,
-            "hint": "Trade a ten for ones, then subtract.",
-            "worked": "50 − 23 = 27. Take away the sold safes."
+            "hint": "Take away 20, then 3 more.",
+            "worked": "50 − 23 = 27. Take away the sold weights."
           }
         ]
       }
@@ -684,59 +647,59 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers from 0 to 39. The little one turned the dial slowly and heard soft clicks somewhere inside. Big Wonderer leaned in to listen too. Only three numbers, dialed in the right order, would open it. How could a turning dial remember three secret numbers?",
-            "prompt": "What did the little one hear?"
+            "passage": "Little Wonderer hangs a wire coat hanger from a broom handle laid across the backs of two chairs. Two paper cups dangle on strings from its bottom corners. When the little one drops a single washer into the left cup, that side dips and the right cup swings up high. Big Wonderer crouches low to look. How can a bent piece of wire tell which side is heavier?",
+            "prompt": "Why does the left side dip?"
           },
           {
             "id": "reach",
-            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose, so they do not turn when the dial first starts to move. In front of them is the drive cam. It is a disc fixed to the dial, with one short peg sticking out.",
-            "prompt": "Why do the wheels not turn at first?"
+            "passage": "A balance scale needs only a few simple parts. The hook at the top is the pivot, the single point the whole hanger turns around. Each cup pulls down on its own side of the hook. Flat steel washers make good weights, because every washer weighs about the same. That means you can count them like units. A pinch of soft clay will help too.",
+            "prompt": "Why are washers good weights?"
           },
           {
             "id": "change",
-            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel and drags that wheel along. The wheel has its own peg, which catches the second wheel, and that one catches the third. This is why you spin the dial three times first. It picks up all three wheels, like an engine hooking train cars.",
-            "prompt": "How does one wheel move the next?"
+            "passage": "Before weighing anything, make the empty cups hang level. Two cups are never exactly alike, and a hanger may be slightly bent. So one side can droop before anything goes in. Press a tiny pinch of clay onto the high side until both cups hang even. Shops call this taring, or zeroing. Give it a tap, and it rocks, then settles level again.",
+            "prompt": "What is taring a scale?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way. The pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to pick up the middle wheel. Then you stop on the second number and turn back to the third.",
-            "prompt": "Why must you pass the first number once?"
+            "passage": "Here is a clue that surprises people. Hang the left cup near the middle, close under the hook. Now it needs many more washers to balance a cup out at the far corner. A weight far from the pivot gives a bigger turning push, called torque. Twice as far needs only half as much weight. This rule is called the law of the lever.",
+            "prompt": "What is torque?"
           },
           {
             "id": "return",
-            "passage": "Back at the table, Big Wonderer pulled on the lock, and pop, the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed where they were left. A thin bar called a fence rests on their edges. When all three gates line up beneath it, the fence drops in and frees the shackle.",
-            "prompt": "Where does the lock keep the combination?"
+            "passage": "Back at the chairs, the little one sets a strawberry in the left cup. Big Wonderer adds washers to the right cup, one at a time, until the hanger hangs level. Now the guess changes. A balance does more than find the heavier side. When it hangs level, the strawberry weighs the same as those washers, so a washer works as a unit for weighing.",
+            "prompt": "How can a washer be a unit?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise. Each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So the best safe locks hold the fence up and away. How would you build a lock that gives away no clues?",
-            "prompt": "Why do safe locks hold the fence away from the wheels?"
+            "passage": "Here is a surprise: take a balance to the Moon, and the strawberry still matches the same washers. The Moon pulls about one sixth as hard as Earth, but it pulls both cups less at the same time. A bathroom scale uses a spring, so its number would drop there. Could you build a balance fine enough to weigh a single feather?",
+            "prompt": "Why would a spring scale change on the Moon?"
           }
         ],
         "words": [
           {
-            "word": "combination",
-            "meaning": "a set of numbers used in one exact order"
+            "word": "balance",
+            "meaning": "a scale that compares the weight on two sides"
           },
           {
-            "word": "padlock",
-            "meaning": "a lock with a curved bar that pops open"
+            "word": "pivot",
+            "meaning": "the single point something turns around"
           },
           {
-            "word": "gate",
-            "meaning": "a small notch in the edge of a lock wheel"
+            "word": "tare",
+            "meaning": "to zero a scale so the empty cups do not count"
           },
           {
-            "word": "drive cam",
-            "meaning": "a disc with a peg that turns with the dial"
+            "word": "torque",
+            "meaning": "a turning push that grows with distance from the pivot"
           },
           {
-            "word": "fence",
-            "meaning": "a thin bar that drops into the lined-up gates"
+            "word": "lever",
+            "meaning": "a bar that turns on a pivot"
           },
           {
-            "word": "shackle",
-            "meaning": "the curved bar of a padlock that pops open"
+            "word": "unit",
+            "meaning": "a fixed amount used to measure, like one washer"
           }
         ]
       },
@@ -744,57 +707,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that each padlock hides 3 wheels. How many wheels are in 8 padlocks?",
-            "expression": "3 × 8",
-            "equation": "3 × 8 =",
-            "answer": 24,
-            "hint": "Three groups of eight.",
-            "worked": "3 × 8 = 24. Eight padlocks with three wheels each."
-          },
-          {
-            "plate": "reach",
-            "prompt": "A factory packs lock wheels in boxes of 8 and fills 9 boxes. How many wheels?",
+            "prompt": "Little Wonderer drops 8 washers into each of 9 cups. How many washers?",
             "expression": "8 × 9",
             "equation": "8 × 9 =",
             "answer": 72,
-            "hint": "Eight groups of nine.",
-            "worked": "8 × 9 = 72. Nine boxes of eight wheels."
+            "hint": "Count 9 groups of 8.",
+            "worked": "8 × 9 = 72. Nine cups of 8 washers."
           },
           {
-            "plate": "change",
-            "prompt": "In a pretend count, a dial clicks 365 times on Monday and 248 times on Tuesday. How many clicks?",
-            "expression": "365 + 248",
-            "equation": "365 + 248 =",
-            "answer": 613,
-            "hint": "Add each place; regroup when a column reaches ten.",
-            "worked": "365 + 248 = 613. Add both days of clicks."
-          },
-          {
-            "plate": "notice",
-            "prompt": "A school has 640 lockers, and 275 are in use. How many are empty?",
+            "plate": "reach",
+            "prompt": "A box holds 640 washers, and 275 are used. How many are left?",
             "expression": "640 − 275",
             "equation": "640 − 275 =",
             "answer": 365,
-            "hint": "Subtract each place; regroup when needed.",
-            "worked": "640 − 275 = 365. Take away the lockers in use."
+            "hint": "Regroup, then subtract each place.",
+            "worked": "640 − 275 = 365. Take away the washers used."
+          },
+          {
+            "plate": "change",
+            "prompt": "Each hanger needs 6 pinches of clay to hang level. How many pinches for 7 hangers?",
+            "expression": "6 × 7",
+            "equation": "6 × 7 =",
+            "answer": 42,
+            "hint": "Count 7 groups of 6.",
+            "worked": "6 × 7 = 42. Seven hangers of 6 pinches."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The big one shares 63 washers equally among 9 cups. How many go in each cup?",
+            "expression": "63 ÷ 9",
+            "equation": "63 ÷ 9 =",
+            "answer": 7,
+            "hint": "Ask what times 9 makes 63.",
+            "worked": "63 ÷ 9 = 7. Each cup gets the same number."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer shares 72 padlocks equally among 8 classes. How many padlocks does each class get?",
-            "expression": "72 ÷ 8",
-            "equation": "72 ÷ 8 =",
-            "answer": 9,
-            "hint": "Share 72 into 8 equal groups.",
-            "worked": "72 ÷ 8 = 9. Each class gets the same number."
+            "prompt": "Big Wonderer finds that 1 strawberry balances 8 washers. How many washers balance 6 strawberries?",
+            "expression": "8 × 6",
+            "equation": "8 × 6 =",
+            "answer": 48,
+            "hint": "Count 6 groups of 8.",
+            "worked": "8 × 6 = 48. Six strawberries of 8 washers."
           },
           {
             "plate": "keep",
-            "prompt": "A safe maker tests 512 locks, and 489 pass. How many did not pass?",
-            "expression": "512 − 489",
-            "equation": "512 − 489 =",
-            "answer": 23,
-            "hint": "Subtract each place; regroup when needed.",
-            "worked": "512 − 489 = 23. Take the passing locks from the total."
+            "prompt": "An old shop packs 40 brass weights into 5 equal boxes. How many go in each box?",
+            "expression": "40 ÷ 5",
+            "equation": "40 ÷ 5 =",
+            "answer": 8,
+            "hint": "Ask what times 5 makes 40.",
+            "worked": "40 ÷ 5 = 8. Each box gets the same number."
           }
         ]
       }
@@ -804,63 +767,63 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer found a padlock lying on the kitchen table, its round black dial marked with forty numbers running from 0 to 39. Curious, the little one turned the dial slowly and heard soft clicks somewhere deep inside. Big Wonderer leaned in close to listen. With forty numbers, there are 64,000 possible sets of three on paper, yet only one opens it. How could a turning dial remember three secret numbers?",
-            "prompt": "How many sets of three are possible on paper?"
+            "passage": "Little Wonderer hangs an ordinary wire coat hanger from a broom handle balanced across the backs of two kitchen chairs, and two paper cups dangle on strings from its bottom corners. The little one drops a single steel washer into the left cup. That side dips at once, and the right cup swings up high. Big Wonderer crouches low to watch the wire settle. How can a bent piece of wire, with no numbers anywhere, tell which side is heavier?",
+            "prompt": "What tells you which side is heavier?"
           },
           {
             "id": "reach",
-            "passage": "Behind the dial hides a stack of three flat wheels threaded on one thin rod, a set that lock makers call the wheel pack. Each wheel has a single small notch in its edge, called a gate. The wheels sit loose on the rod, so they do not turn when the dial first starts to move. In front of them is the drive cam, a disc fixed to the dial with one short peg sticking out of its face.",
-            "prompt": "What do lock makers call the stack of wheels?"
+            "passage": "A working balance scale needs surprisingly few parts. The hook at the top is the pivot, also called the fulcrum: the single point the whole hanger turns around. Each cup pulls down on its own side of that point, and whichever side pulls harder sinks. Flat steel washers make excellent weights, because every washer from the same box weighs almost exactly the same, so you can count them as units. A pinch of soft clay will matter too, as you will soon see.",
+            "prompt": "What is another name for the pivot?"
           },
           {
             "id": "change",
-            "passage": "When you turn the dial, the cam's peg swings round with it. After almost one full turn, the peg bumps a small tab on the nearest wheel, called a fly, and drags that wheel along. That wheel has its own peg on its far side, which catches the second wheel's fly, and the second wheel catches the third. This is why you spin three times first, picking up all three wheels like an engine hooking train cars. Strangely, the wheel farthest from the dial is the one that sets the first number.",
-            "prompt": "Which wheel sets the first number?"
+            "passage": "Before weighing anything, make the empty cups hang perfectly level. Two paper cups are never exactly alike, and a hanger is often slightly bent, so one side may droop before anything goes in. Pressing a tiny pinch of clay onto the high side evens it out; shopkeepers call this taring, or zeroing, the scale. Tap the hanger and it rocks, then settles level again, because most of its weight hangs below the hook, like a swing coming to rest.",
+            "prompt": "Why does the hanger settle level after a tap?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue that makes the idea easier to trust. Stop on the first number, and the wheel farthest from the dial is set. Now turn the other way: the pegs let go, so that far wheel stays exactly where it is. You pass the first number once, because the cam needs a full turn to catch the middle wheel again. Then you stop on the second number and turn back to the third, which moves only the nearest wheel. Many large safes use four wheels and even more turns.",
-            "prompt": "Why would a four-wheel safe need more turns?"
+            "passage": "Here is a clue that surprises most people. Hang the left cup near the middle, close under the hook, and it needs many more washers to balance a cup out at the far corner. A weight far from the pivot gives a bigger turning push, which scientists call torque. Twice the distance needs only half the weight, a rule Archimedes wrote down more than two thousand years ago. It is called the law of the lever, and seesaws follow it too.",
+            "prompt": "How does a seesaw follow the law of the lever?"
           },
           {
             "id": "return",
-            "passage": "Back at the table, Big Wonderer pulled on the lock, and with a pop the shackle swung open while the little one pointed. Now the guess changed. The lock had never remembered any numbers at all; the wheels simply stayed wherever they were left, like bookmarks. A thin bar called a fence rests on their smooth edges. When all three gates line up beneath it, the fence drops into the slot they make, and the shackle is free to pull out.",
-            "prompt": "How are the wheels like bookmarks?"
+            "passage": "Back at the chairs, the little one sets a ripe strawberry in the left cup, and Big Wonderer adds washers to the right cup one at a time until the hanger hangs level. Now the guess changes. A balance does far more than find the heavier side. When it hangs level, the two turning pushes are equal, so the strawberry weighs exactly as much as that pile of washers. A washer has become a unit, and you have just measured something.",
+            "prompt": "What is equal when the hanger hangs level?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise: each gate is a little wider than the fence, so a number that is one off can often still open the lock. Safe makers test their best locks so they open only within about one mark of each number. Experts can feel tiny bumps as the fence brushes the wheels. So strong safe locks hold the fence up and away, and some use plastic wheels that hide in X-ray pictures. How would you build a lock that gives away no clues?",
-            "prompt": "What two tricks help a safe lock hide its clues?"
+            "passage": "Here is a surprise: carry this balance to the Moon, and the strawberry would still match the very same washers. The Moon pulls about one sixth as hard as Earth does, but it pulls both cups more weakly at the same moment, so the comparison never changes. A bathroom scale measures a spring's stretch instead, so its number would drop. That is why a balance measures mass, the amount of stuff. Could you build one fine enough to weigh a single feather?",
+            "prompt": "Why does a balance measure mass?"
           }
         ],
         "words": [
           {
-            "word": "combination",
-            "meaning": "a set of numbers used in one exact order"
+            "word": "fulcrum",
+            "meaning": "another name for the pivot a lever turns on"
           },
           {
-            "word": "wheel pack",
-            "meaning": "the stack of notched wheels inside a dial lock"
+            "word": "pivot",
+            "meaning": "the single point something turns around"
           },
           {
-            "word": "gate",
-            "meaning": "a small notch in the edge of a lock wheel"
+            "word": "tare",
+            "meaning": "to zero a scale so the empty cups do not count"
           },
           {
-            "word": "drive cam",
-            "meaning": "a disc with a peg that turns with the dial"
+            "word": "torque",
+            "meaning": "a turning push that grows with distance from the pivot"
           },
           {
-            "word": "fly",
-            "meaning": "a small tab on a wheel that a peg catches"
+            "word": "lever",
+            "meaning": "a bar that turns on a fulcrum"
           },
           {
-            "word": "fence",
-            "meaning": "a thin bar that drops into the lined-up gates"
+            "word": "unit",
+            "meaning": "a fixed amount used to measure, like one washer"
           },
           {
-            "word": "shackle",
-            "meaning": "the curved bar of a padlock that pops open"
+            "word": "mass",
+            "meaning": "the amount of stuff in something"
           }
         ]
       },
@@ -868,147 +831,158 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that 3 full spins of a dial pass 40 marks each time. How many marks pass?",
-            "expression": "40 × 3",
-            "equation": "40 × 3 =",
-            "answer": 120,
-            "hint": "Think 3 × 4 = 12, then 3 × 40 = 120.",
-            "worked": "40 × 3 = 120. Three spins of forty marks."
+            "prompt": "Little Wonderer learns that a box of 1250 washers is shared equally among 5 cups. How many go in each cup?",
+            "expression": "1250 ÷ 5",
+            "equation": "1250 ÷ 5 =",
+            "answer": 250,
+            "hint": "Think 125 ÷ 5 = 25, then 1250 ÷ 5 = 250.",
+            "worked": "1250 ÷ 5 = 250. Each cup gets the same number."
           },
           {
             "plate": "reach",
-            "prompt": "A factory makes 4500 lock wheels, and 1875 get a gate cut first. How many still need a gate?",
-            "expression": "4500 − 1875",
-            "equation": "4500 − 1875 =",
-            "answer": 2625,
+            "prompt": "A factory makes 3600 coat hangers, and 1475 are packed. How many are not packed yet?",
+            "expression": "3600 − 1475",
+            "equation": "3600 − 1475 =",
+            "answer": 2125,
             "hint": "Regroup across the zeros.",
-            "worked": "4500 − 1875 = 2625. Take away the wheels cut first."
+            "worked": "3600 − 1475 = 2125. Take away the hangers packed."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, a dial clicks 1250 times a day for 6 days. How many clicks?",
-            "expression": "1250 × 6",
-            "equation": "1250 × 6 =",
-            "answer": 7500,
-            "hint": "Think 6 × 1000 and 6 × 250.",
-            "worked": "1250 × 6 = 7500. Six days of 1250 clicks."
+            "prompt": "In a pretend count, a shop zeroes its scale 365 times each week for 8 weeks. How many times is that?",
+            "expression": "365 × 8",
+            "equation": "365 × 8 =",
+            "answer": 2920,
+            "hint": "Multiply each place by 8, then add.",
+            "worked": "365 × 8 = 2920. Eight weeks of 365 times."
           },
           {
             "plate": "notice",
-            "prompt": "A school has 3 floors with 245 lockers on each. How many lockers?",
-            "expression": "245 × 3",
-            "equation": "245 × 3 =",
-            "answer": 735,
-            "hint": "Think 3 × 200, 3 × 40 and 3 × 5.",
-            "worked": "245 × 3 = 735. Three floors of 245 lockers."
+            "prompt": "A storeroom has 4 boxes with 1840 washers in each. How many washers are there?",
+            "expression": "1840 × 4",
+            "equation": "1840 × 4 =",
+            "answer": 7360,
+            "hint": "Think 4 × 1800 and 4 × 40.",
+            "worked": "1840 × 4 = 7360. Four boxes of 1840 washers."
           },
           {
             "plate": "return",
-            "prompt": "Big Wonderer learns that 2400 padlocks are shared equally among 8 schools. How many does each school get?",
-            "expression": "2400 ÷ 8",
-            "equation": "2400 ÷ 8 =",
-            "answer": 300,
-            "hint": "Think 24 ÷ 8 = 3, then 2400 ÷ 8 = 300.",
-            "worked": "2400 ÷ 8 = 300. Each school gets the same number."
+            "prompt": "Big Wonderer reads that a farm picks 6300 strawberries and packs them into 9 equal crates. How many go in each crate?",
+            "expression": "6300 ÷ 9",
+            "equation": "6300 ÷ 9 =",
+            "answer": 700,
+            "hint": "Think 63 ÷ 9 = 7, then 6300 ÷ 9 = 700.",
+            "worked": "6300 ÷ 9 = 700. Each crate gets the same number."
           },
           {
             "plate": "keep",
-            "prompt": "A safe maker tests 9000 locks, and 8764 open only on the right numbers. How many need fixing?",
-            "expression": "9000 − 8764",
-            "equation": "9000 − 8764 =",
-            "answer": 236,
+            "prompt": "An old shop had 5000 brass weights, and 1365 were lost over the years. How many were left?",
+            "expression": "5000 − 1365",
+            "equation": "5000 − 1365 =",
+            "answer": 3635,
             "hint": "Regroup across the zeros.",
-            "worked": "9000 − 8764 = 236. Take the good locks from the total."
+            "worked": "5000 − 1365 = 3635. Take away the lost weights."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "quiz-cards"
+    "lab-page"
   ],
+  "labPage": {
+    "materials": [
+      "a wire coat hanger",
+      "a broom handle and two chairs",
+      "two paper cups and string",
+      "a handful of washers or coins",
+      "a pinch of modelling clay",
+      "a strawberry",
+      "paper and pencil"
+    ]
+  },
   "quiz": {
-    "title": "Four looks inside a lock",
-    "intro": "Follow the dial from the first spin to the fence dropping in.",
+    "title": "Four looks at a balance",
+    "intro": "Follow the hanger from the first dip to a balance on the Moon.",
     "questions": [
       {
-        "id": "gate",
-        "prompt": "What is a gate on a lock wheel?",
+        "id": "pivot",
+        "prompt": "What is the hook on a hanger balance?",
         "choices": [
-          "A small notch",
-          "A tiny door",
-          "A number"
+          "The pivot",
+          "A weight",
+          "A cup"
         ],
         "answerIndex": 0,
-        "answer": "A gate is the small notch cut into the edge of each wheel."
+        "answer": "The hook is the pivot, the point the whole hanger turns on."
       },
       {
-        "id": "spin",
-        "prompt": "Why spin the dial three times first?",
+        "id": "zero",
+        "prompt": "Why press clay on the high side first?",
         "choices": [
-          "To warm it up",
-          "To pick up all wheels",
-          "To erase the clicks"
+          "To make it sticky",
+          "To zero the scale",
+          "To hold the cups"
         ],
         "answerIndex": 1,
-        "answer": "Three spins let the pegs pick up all three wheels."
+        "answer": "The clay makes the empty cups level, so only what you add can tip it."
       },
       {
-        "id": "fence",
-        "prompt": "What drops into the lined-up gates?",
+        "id": "far",
+        "prompt": "Where does one washer turn the hanger most?",
         "choices": [
-          "The dial",
-          "The shackle",
-          "The fence"
-        ],
-        "answerIndex": 2,
-        "answer": "A thin bar called the fence drops into the lined-up gates."
-      },
-      {
-        "id": "close",
-        "prompt": "What can a number one off do?",
-        "choices": [
-          "Break the lock",
-          "Often still open it",
-          "Reset the wheels"
+          "Near the hook",
+          "Far from the hook",
+          "Inside the clay"
         ],
         "answerIndex": 1,
-        "answer": "Each gate is a bit wider than the fence, so one off can often still work."
+        "answer": "A washer far from the hook gives a bigger turning push."
+      },
+      {
+        "id": "moon",
+        "prompt": "What would a balance do on the Moon?",
+        "choices": [
+          "Float away",
+          "Match the same way",
+          "Always tip left"
+        ],
+        "answerIndex": 1,
+        "answer": "The Moon pulls both cups less at once, so the same things still balance."
       }
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "How Combination Locks Work",
-    "line": "Three wheels, three gates, one thin fence.",
+    "title": "How a Hanger Balance Works",
+    "line": "One hook, two cups, and which side dips.",
     "plate": "wake"
   },
   "poem": {
-    "title": "The Secret on the Lock",
+    "title": "The Fair Hanger",
     "lines": [
-      "Little Wonderer spun the black dial of a lock,",
-      "three turns to the right, tick, tick, tickety-tock.",
-      "“There are wheels in there, hiding, all stacked in a row,",
-      "and each has a notch where a fence wants to go.”",
+      "Little Wonderer made a fine scale out of string,",
+      "a hanger, two cups, and a hook for the swing.",
+      "In one cup, a washer. In one, feathers piled.",
+      "They balanced. They balanced! The little one smiled.",
       "",
-      "“Turn left, pass the first,” the big one said, “then",
-      "stop on the second, and back right again.",
-      "When all of the gates line up, one, two, three,",
-      "the fence will drop in, and the shackle swings free.”",
+      "“Hold still,” said the big one. “A balance is shy.",
+      "The tiniest puff sends one cup way up high.",
+      "Don’t giggle, don’t wiggle, don’t breathe, and don’t—” Oh.",
+      "A tickle had started somewhere down below.",
       "",
-      "“But what if I lose them?” the little one cried.",
-      "“Three numbers are slippery. They wriggle and hide!”",
-      "So out came a pencil, and out came some tape,",
-      "and a note went right onto the lock’s steely shape.",
+      "“Ah… ah…” went the little one. “AH-CHOO!” And the air",
+      "was suddenly full of white feathers up there.",
+      "The feather cup flew up. The washer cup fell.",
+      "The hanger swung sideways and rang like a bell.",
       "",
-      "“Now I’ll never forget them! They’re right there in sight!”",
-      "Big Wonderer peeked through two mittens. “That’s right…",
-      "your secret is safe, for it never can go,",
-      "except that now everyone else gets to know.”"
+      "Big Wonderer waited for feathers to land.",
+      "The little one sniffed with a cup in each hand.",
+      "“My scale has just measured, and scales never lie:",
+      "a sneeze is much heavier than feathers. Goodbye!”"
     ],
     "drawing": {
-      "src": "assets/how-do-combination-locks-work/poem.jpg",
-      "alt": "A soft drawing of Big and Little Wonderer at a kitchen table, the little one walking proudly and holding up a padlock with a blank square of paper taped to its front while the big one kneels, one mitten over its eyes and the other pointing at the paper."
+      "src": "assets/a-hanger-balance-scale/poem.jpg",
+      "alt": "A soft drawing of a coat hanger tipped to one side, with a washer in the low cup and feathers drifting away from the high cup, the little one sitting still beneath it and the big one leaning in to watch."
     }
   }
 }
