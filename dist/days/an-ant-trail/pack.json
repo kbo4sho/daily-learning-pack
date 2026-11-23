@@ -1,0 +1,990 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "an-ant-trail",
+  "topic": "an ant trail",
+  "why": "Breaking an ant trail and watching it mend helps your child test a prediction and explain how many small actions build one pattern.",
+  "teaser": "Follow a line of ants to a crumb, then find the invisible scent road, break it, and see why the shortest trail always wins.",
+  "aliases": [
+    "ant trail",
+    "ant line",
+    "ants",
+    "pheromone trail",
+    "scent trail",
+    "trail pheromone",
+    "ant colony",
+    "leafcutter ants"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "compare-and-round",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "compare",
+      "round-ten"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Ant Trail",
+  "title": "How an Ant Trail Works",
+  "question": "How does every ant in a line know the way to the food?",
+  "idea": "A scout ant that finds food paints the way home with a scent called a pheromone. Other ants smell it with their antennae, follow it and add more. The shortest road gets the most scent, and scent that nobody renews fades away.",
+  "curiosity": {
+    "intro": "Start with a line of ants on a patio. Then meet the scout, break the trail, race two bridges, watch a new trail grow and visit a rainforest ant highway.",
+    "carryForward": "Next time you see ants in a line, look for where the trail began and guess where it ends.",
+    "questions": [
+      {
+        "id": "scout",
+        "plate": "reach",
+        "question": "How does the first ant mark the way?",
+        "notice": "Find the crumb in the ant's jaws and the tip of its body touching the paper.",
+        "say": "The first ant to find food is a scout. On her way home, she dabs the tip of her body on the ground again and again. Each dab leaves a little scent called a pheromone. Ants smell with their two antennae, so the others can follow her invisible road straight to the food.",
+        "try": "Put one crumb near some ants outside. Watch for the first ant to find it. Does she eat it there, or carry it home?"
+      },
+      {
+        "id": "wipe",
+        "plate": "change",
+        "question": "What happens if you wipe the trail?",
+        "notice": "Find the shiny wiped stripe and the ants turning in small loops at its edge.",
+        "say": "The ants stop! Wiping removes the scent, so the road is gone right there. The ants wave their antennae and wander in loops, searching. Soon one ant finds the scent on the far side, crosses, and leaves new scent behind her. The line joins up again.",
+        "try": "Find a busy ant trail on a path. Wipe a damp cloth across one spot, then step back. How long until the ants cross again?"
+      },
+      {
+        "id": "bridges",
+        "plate": "notice",
+        "question": "Why do ants pick the shortest road?",
+        "notice": "Compare the crowded short bridge with the long bridge that has only a few ants.",
+        "say": "Nobody measures. Ants on the short bridge get back sooner, so they add scent to it more often. More scent pulls in more ants, and they add even more. The scent on the long bridge slowly fades away. Soon almost every ant uses the short road. Scientists tried this with real bridges.",
+        "try": "Put two crumbs outside, one near the ants and one far away. Which crumb gets a busy trail first?"
+      },
+      {
+        "id": "highway",
+        "plate": "keep",
+        "question": "How big can an ant trail get?",
+        "notice": "Find the bare, swept path and the leaf pieces held up like little sails.",
+        "say": "Leafcutter ants clear their trails of twigs and leaves, so they become real little roads. Thousands of ants carry leaf bits home to feed a fungus garden. Sometimes army ants get lost following a trail that loops in a circle, and march round and round. People call that an ant mill.",
+        "try": "Draw an ant trail from your door to a crumb. Then draw a shorter road. Which one would the ants pick, and why?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/an-ant-trail/01-trail.jpg",
+      "original": "assets/an-ant-trail/01-trail.png",
+      "foldSrc": "assets/an-ant-trail/01-trail-fold.jpg",
+      "title": "A line of ants",
+      "alt": "Big and Little Wonderer on a sunny sandstone patio beside a terracotta flower pot, the big one crouching and the little one kneeling with one mitten hand held out, both watching a thin single-file line of small dark ants run across the stone to a golden cookie crumb.",
+      "caption": "A thin line of ants, all on the same path to one crumb."
+    },
+    {
+      "id": "reach",
+      "src": "assets/an-ant-trail/02-scout.jpg",
+      "original": "assets/an-ant-trail/02-scout.png",
+      "foldSrc": "assets/an-ant-trail/02-scout-fold.jpg",
+      "title": "The scout's scent",
+      "alt": "A close field-guide study of one dark garden ant on a pale paving stone, seen from the side, carrying a golden crumb in its jaws, its rounded back end low near the stone and a few tiny crumbs behind it.",
+      "caption": "The scout carries a crumb home and dabs scent on the stone."
+    },
+    {
+      "id": "change",
+      "src": "assets/an-ant-trail/03-wipe.jpg",
+      "original": "assets/an-ant-trail/03-wipe.png",
+      "foldSrc": "assets/an-ant-trail/03-wipe-fold.jpg",
+      "title": "Wipe the trail",
+      "alt": "A field-guide view looking down at pale paving stones: a line of ants comes in from the left and stops at a damp, shiny wiped stripe, a few ants turning in small loops at its edge, while the line carries on past the stripe toward a golden crumb.",
+      "caption": "Wipe one stripe, and the ants stop and search in loops."
+    },
+    {
+      "id": "notice",
+      "src": "assets/an-ant-trail/04-bridges.jpg",
+      "original": "assets/an-ant-trail/04-bridges.png",
+      "foldSrc": "assets/an-ant-trail/04-bridges-fold.jpg",
+      "title": "The short road wins",
+      "alt": "A field-guide view from above of a small soil ant nest joined to a white saucer with a drop of honey by two strips of pale card: a short straight strip crowded with a line of ants, and a long looping strip with only three ants on it.",
+      "caption": "The short bridge fills with ants. The long one is nearly empty."
+    },
+    {
+      "id": "return",
+      "src": "assets/an-ant-trail/05-sugar.jpg",
+      "original": "assets/an-ant-trail/05-sugar.png",
+      "foldSrc": "assets/an-ant-trail/05-sugar-fold.jpg",
+      "title": "A brand-new trail",
+      "alt": "Big and Little Wonderer on the sunny patio beside a terracotta pot of pale flowers, the big one kneeling and pointing at the place where a new line of ants splits off from the old line, the little one sitting and watching, as the new line runs across the stone to a white sugar cube with a few ants already on it.",
+      "caption": "A brand-new trail runs straight to the sugar cube."
+    },
+    {
+      "id": "keep",
+      "src": "assets/an-ant-trail/06-leafcutters.jpg",
+      "original": "assets/an-ant-trail/06-leafcutters.png",
+      "foldSrc": "assets/an-ant-trail/06-leafcutters-fold.jpg",
+      "title": "Ant highways",
+      "alt": "A field-guide study of a rainforest floor: a long line of reddish-brown leafcutter ants walks along a bare, swept path of reddish earth among ferns and fallen leaves, each ant holding up a green leaf piece like a little sail.",
+      "caption": "Leafcutter ants sweep their trails into little roads."
+    }
+  ],
+  "reading": {
+    "title": "The road nobody painted",
+    "coverPlate": "wake",
+    "coverText": "Start with a line of ants on a patio. Then find the invisible road they follow and why the shortest one wins.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A line of ants",
+        "passage": "Little Wonderer kneels on the warm patio. A thin line of ants runs from a crack to a cookie crumb. Every ant walks the same curvy path, one behind another. Big Wonderer crouches to watch. Nobody painted a road on the stone. So how does every ant know the way?",
+        "prompt": "Where does the line of ants start and end?",
+        "foldable": {
+          "heading": "A line of ants",
+          "body": "A thin line of ants runs from a crack to a crumb. Every ant walks the same path. How do they know the way?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "The scout's scent",
+        "passage": "One ant found the crumb first. She is called a scout. On her way home, she dabbed the tip of her body on the stone again and again. Each dab left a tiny bit of scent called a pheromone. The other ants smell it with their two antennae, and they follow it.",
+        "prompt": "What does the scout leave on the stone?",
+        "foldable": {
+          "heading": "The scout's scent",
+          "body": "A scout found the crumb first. On her way home, she dabbed scent on the stone. Other ants smell it and follow."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Wipe the trail",
+        "passage": "Here is a test. Wipe a damp cloth across one spot on the trail. The ants reach the wiped stripe and stop! They wave their antennae and wander in little loops. The scent road is broken there. Soon one ant crosses and leaves fresh scent, and the line joins up again.",
+        "prompt": "What do the ants do at the wiped stripe?",
+        "foldable": {
+          "heading": "Wipe the trail",
+          "body": "Wipe one spot, and the ants stop and loop. The scent is gone there. Soon one ant crosses, and the line joins again."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "The short road wins",
+        "passage": "Here is a clue. Scientists once gave ants two bridges to some honey, one short and one long. At first, ants used both. But ants on the short bridge got back sooner, so they added scent there more often. That trail grew stronger and pulled in more ants. Meanwhile, the scent on the long bridge faded away.",
+        "prompt": "Why did the short bridge get more scent?",
+        "foldable": {
+          "heading": "The short road wins",
+          "body": "Ants on the short bridge got back sooner. They added scent more often, so that trail grew strong. The long one faded."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A brand-new trail",
+        "passage": "Later, the little one sets a sugar cube near the line. Before long, a new line of ants branches off toward it. Now the guess changes. No ant is the leader. Each ant simply follows the strongest scent and adds a little more. Many tiny dabs build one road, and old roads fade when the food runs out.",
+        "prompt": "Who is the leader of the ant trail?",
+        "foldable": {
+          "heading": "A brand-new trail",
+          "body": "A new line grows to a sugar cube. No ant leads. Each follows the strongest scent and adds a bit more."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "Ant highways",
+        "passage": "Here is a surprise. In the rainforest, leafcutter ants sweep their trails clear, so the trails become real little roads. Thousands of ants carry leaf pieces home along them. Army ants can even get stuck on a trail that loops in a circle, marching round and round. Computers now copy ants to find short routes. What trail would you design?",
+        "prompt": "What do leafcutter ants do to their trails?",
+        "foldable": {
+          "heading": "Ant highways",
+          "body": "Leafcutter ants sweep their trails into real little roads. Army ants can march in circles. What trail would you design?"
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "trail",
+        "meaning": "a path that others can follow"
+      },
+      {
+        "word": "scout",
+        "meaning": "an ant that goes out first to find food"
+      },
+      {
+        "word": "pheromone",
+        "meaning": "a scent an animal makes to send a message"
+      },
+      {
+        "word": "antennae",
+        "meaning": "the two feelers on an ant's head that smell and touch"
+      },
+      {
+        "word": "fade",
+        "meaning": "to slowly grow weaker until it is gone"
+      }
+    ],
+    "questions": [
+      "What does the scout leave on the stone?",
+      "Why do the ants stop at the wiped stripe?",
+      "Why does the short bridge end up with the most ants?",
+      "Why is no ant the leader of the trail?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: what a trail is made of, what ants smell with, and why the short road wins.",
+      "example": "Example: A trail is made of scent. Ants smell it with their antennae. Ants on the short road come back sooner and add more scent."
+    },
+    "foldableTitle": "A little book of ant trails",
+    "foldableCoverLine": "Ant Trail",
+    "foldableNote": "Carry six ant trail clues in a small book."
+  },
+  "math": {
+    "title": "Ant trail counts",
+    "eyebrow": "SIX ANT TRAIL COUNTS",
+    "plate": "notice",
+    "intro": "Compare and round pretend counts of ants, crumbs and bridge crossings.",
+    "actionLabel": "Compare, then round",
+    "tasks": [
+      {
+        "skill": "compare",
+        "operands": [
+          61,
+          16
+        ],
+        "symbol": ">",
+        "prompt": "Little Wonderer counts 61 ants on the patio trail and 16 ants near the flower pot. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "61 ○ 16",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 61,
+        "worked": "61 > 16. Compare the tens first, so the greater count is 61.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "compare",
+        "operands": [
+          29,
+          92
+        ],
+        "symbol": "<",
+        "prompt": "In a pretend count, the nest gets 29 crumbs in the morning and 92 crumbs in the afternoon. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "29 ○ 92",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 92,
+        "worked": "29 < 92. Compare the tens first, so the greater count is 92.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          67
+        ],
+        "prompt": "The big one counts 67 ants waiting at the wiped stripe. What is 67 rounded to the nearest ten?",
+        "equation": "67 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 70,
+        "worked": "67 has 7 ones, so round up to 70.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "compare",
+        "operands": [
+          58,
+          58
+        ],
+        "symbol": "=",
+        "prompt": "In a pretend count, 58 ants cross the short bridge in one minute, and 58 cross it the next minute. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
+        "equation": "58 ○ 58",
+        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
+        "answer": 58,
+        "worked": "58 = 58. Both counts match, so the shared count is 58.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          34
+        ],
+        "prompt": "The little one watches 34 ants march to the sugar cube. What is 34 rounded to the nearest ten?",
+        "equation": "34 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 30,
+        "worked": "34 has 4 ones, so round down to 30.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "round-ten",
+        "operands": [
+          85
+        ],
+        "prompt": "In a pretend count, 85 leafcutter ants carry leaves past one fern. What is 85 rounded to the nearest ten?",
+        "equation": "85 → nearest ten: ___",
+        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
+        "answer": 90,
+        "worked": "85 has 5 ones, so round up to 90.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
+    "printNote": "Show your thinking with numbers, marks, or words.",
+    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real ant counts.",
+    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
+  },
+  "writing": {
+    "title": "Explain an ant trail clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw a line of ants going to a crumb, and show where the scent road is.",
+    "starter": "My ant trail clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The other ants can follow the scout because",
+        "hint": "what does she leave on the ground?"
+      },
+      {
+        "plate": "change",
+        "start": "The ants stop at the wiped stripe because",
+        "hint": "what did the cloth take away?"
+      },
+      {
+        "plate": "notice",
+        "start": "The short bridge gets the most ants because",
+        "hint": "which ants get back sooner?"
+      }
+    ],
+    "words": [
+      "trail",
+      "scent",
+      "antennae",
+      "follow",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "It starts at a crack in the stone and ends at a cookie crumb."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "A tiny bit of scent called a pheromone."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "They stop, wave their antennae and wander in loops."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "Ants on it got back sooner, so they added scent more often."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "No ant is the leader. Each follows the strongest scent."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "They sweep them clear, so the trails become little roads."
+    },
+    {
+      "label": "Math · all",
+      "text": "61, 92, 70, 58, 30, 90."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Scent; their antennae; search in loops; it gets more scent."
+    }
+  ],
+  "parentGuidance": "Watch ants outdoors and keep hands off them, since some ants sting or bite. Skip any nest of fire ants, and wash hands after setting out crumbs or sugar.",
+  "sources": [
+    {
+      "label": "Wikipedia — Pheromone (trail pheromones: scouts mark a path to food that nest mates follow and renew; the scent evaporates)",
+      "url": "https://en.wikipedia.org/wiki/Pheromone"
+    },
+    {
+      "label": "Wikipedia — Ant (communication by pheromones detected with the antennae; foraging trails)",
+      "url": "https://en.wikipedia.org/wiki/Ant"
+    },
+    {
+      "label": "Wikipedia — Ant colony optimization algorithms (the double-bridge experiment: the shorter branch is reinforced faster and wins; pheromone evaporation)",
+      "url": "https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms"
+    },
+    {
+      "label": "Wikipedia — Ant mill (army ants following a looped trail round and round)",
+      "url": "https://en.wikipedia.org/wiki/Ant_mill"
+    },
+    {
+      "label": "Wikipedia — Leafcutter ant (trails to cut leaves that feed the colony's fungus garden)",
+      "url": "https://en.wikipedia.org/wiki/Leafcutter_ant"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer sees a line of ants. The ants walk to a crumb. They all go the same way. Big Wonderer looks too. How do they know?",
+            "prompt": "Where do the ants go?"
+          },
+          {
+            "id": "reach",
+            "passage": "One ant found the crumb first. She is a scout. She left a smell going home. The smell is called scent. Other ants follow it.",
+            "prompt": "What did the scout leave?"
+          },
+          {
+            "id": "change",
+            "passage": "The big one wipes the trail. Now the ants stop! They walk in little loops. The scent is gone there. Then one ant crosses.",
+            "prompt": "What do the ants do?"
+          },
+          {
+            "id": "notice",
+            "passage": "Ants had two bridges to honey. One bridge was short. The short bridge got more scent. So more ants used it.",
+            "prompt": "Which bridge won?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one puts out sugar. A new line of ants grows. No ant is the boss. Each ant follows the scent.",
+            "prompt": "Who is the boss?"
+          },
+          {
+            "id": "keep",
+            "passage": "Some leafcutter ants sweep their trails. The trails become little roads. Ants carry leaves home. What road would you make?",
+            "prompt": "What do the ants carry?"
+          }
+        ],
+        "words": [
+          {
+            "word": "trail",
+            "meaning": "a path others can follow"
+          },
+          {
+            "word": "scent",
+            "meaning": "a smell"
+          },
+          {
+            "word": "scout",
+            "meaning": "an ant that finds food first"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer sees 9 ants, then 6 more. How many ants?",
+            "expression": "9 + 6",
+            "equation": "9 + 6 =",
+            "answer": 15,
+            "hint": "Make a ten: 9 + 1 + 5.",
+            "worked": "9 + 6 = 15. Add both sets of ants."
+          },
+          {
+            "plate": "reach",
+            "prompt": "The scout finds 14 crumbs and eats 5. How many are left?",
+            "expression": "14 − 5",
+            "equation": "14 − 5 =",
+            "answer": 9,
+            "hint": "Take 5 away from 14.",
+            "worked": "14 − 5 = 9. Take away the crumbs eaten."
+          },
+          {
+            "plate": "change",
+            "prompt": "There are 16 ants. The big one sees 9 cross. How many have not crossed?",
+            "expression": "16 − 9",
+            "equation": "16 − 9 =",
+            "answer": 7,
+            "hint": "Take 9 away from 16.",
+            "worked": "16 − 9 = 7. Take away the ants that crossed."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The short bridge has 12 ants. The long bridge has 4. How many in all?",
+            "expression": "12 + 4",
+            "equation": "12 + 4 =",
+            "answer": 16,
+            "hint": "Count on 4 from 12.",
+            "worked": "12 + 4 = 16. Add both bridges."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one counts 7 ants on the sugar, then 4 more. How many ants?",
+            "expression": "7 + 4",
+            "equation": "7 + 4 =",
+            "answer": 11,
+            "hint": "Count on 4 from 7.",
+            "worked": "7 + 4 = 11. Add both sets of ants."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 20 leaf pieces. Ants carry 18. How many are left?",
+            "expression": "20 − 18",
+            "equation": "20 − 18 =",
+            "answer": 2,
+            "hint": "Take 18 away from 20.",
+            "worked": "20 − 18 = 2. Take away the leaves carried."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer kneels on the warm patio stones. A thin line of ants runs to a cookie crumb. Every ant walks the very same path. Big Wonderer crouches down to watch. How does each ant know the way?",
+            "prompt": "Where does the line of ants go?"
+          },
+          {
+            "id": "reach",
+            "passage": "One ant found the crumb first. She is the scout. On her way home, she dabbed the stone. Each dab left a little scent called a pheromone. The other ants smell it and follow.",
+            "prompt": "What did each dab leave?"
+          },
+          {
+            "id": "change",
+            "passage": "The big one wipes a damp cloth across the trail. The ants reach the wiped spot and stop! They wave their antennae and wander in loops. Soon one ant crosses and leaves new scent.",
+            "prompt": "Why do the ants stop?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue about two bridges to honey. One bridge was short, and one was long. Ants on the short bridge got back sooner. So they added scent there more often. The long trail faded away.",
+            "prompt": "Why did the short bridge win?"
+          },
+          {
+            "id": "return",
+            "passage": "Later, the little one sets out a sugar cube. A new line of ants branches off to it. Now the guess changes. No ant is the leader. Each one follows the strongest scent.",
+            "prompt": "Who leads the new line?"
+          },
+          {
+            "id": "keep",
+            "passage": "In the rainforest, leafcutter ants sweep their trails clean. The trails turn into real little roads. Thousands of ants carry leaves home on them. What kind of trail would you design?",
+            "prompt": "What do leafcutter ants carry?"
+          }
+        ],
+        "words": [
+          {
+            "word": "trail",
+            "meaning": "a path others can follow"
+          },
+          {
+            "word": "scout",
+            "meaning": "an ant that finds food first"
+          },
+          {
+            "word": "pheromone",
+            "meaning": "a scent that sends a message"
+          },
+          {
+            "word": "antennae",
+            "meaning": "the two feelers on an ant's head"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 27 ants on the trail, then 15 more. How many ants?",
+            "expression": "27 + 15",
+            "equation": "27 + 15 =",
+            "answer": 42,
+            "hint": "Add the tens, then the ones.",
+            "worked": "27 + 15 = 42. Add both sets of ants."
+          },
+          {
+            "plate": "reach",
+            "prompt": "The scout's nest has 40 crumbs. The ants eat 16. How many are left?",
+            "expression": "40 − 16",
+            "equation": "40 − 16 =",
+            "answer": 24,
+            "hint": "Take away 20, then add 4 back.",
+            "worked": "40 − 16 = 24. Take away the crumbs eaten."
+          },
+          {
+            "plate": "change",
+            "prompt": "There are 33 ants at the wiped spot. The big one sees 18 cross. How many have not crossed?",
+            "expression": "33 − 18",
+            "equation": "33 − 18 =",
+            "answer": 15,
+            "hint": "Take away 20, then add 2 back.",
+            "worked": "33 − 18 = 15. Take away the ants that crossed."
+          },
+          {
+            "plate": "notice",
+            "prompt": "The short bridge has 29 ants. The long bridge has 8. How many in all?",
+            "expression": "29 + 8",
+            "equation": "29 + 8 =",
+            "answer": 37,
+            "hint": "Make a thirty: 29 + 1 + 7.",
+            "worked": "29 + 8 = 37. Add both bridges."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one counts 19 ants on the sugar cube, then 24 more. How many ants?",
+            "expression": "19 + 24",
+            "equation": "19 + 24 =",
+            "answer": 43,
+            "hint": "Make a twenty: 19 + 1 + 23.",
+            "worked": "19 + 24 = 43. Add both sets of ants."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 50 leaf pieces. Leafcutter ants carry 31. How many are left?",
+            "expression": "50 − 31",
+            "equation": "50 − 31 =",
+            "answer": 19,
+            "hint": "Take away 30, then 1 more.",
+            "worked": "50 − 31 = 19. Take away the leaves carried."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer kneels on the warm patio and spots a thin line of ants running from a crack to a cookie crumb. Every ant follows the same curving path, one behind another, as if a road were painted there. Big Wonderer crouches low to watch. Nobody painted anything on the stone, though. So how does every single ant know the way?",
+            "prompt": "What makes the line of ants look like a road?"
+          },
+          {
+            "id": "reach",
+            "passage": "One ant found the crumb first, and she is called a scout. On her way back to the nest, she dabbed the tip of her body on the stone again and again. Each dab left a tiny trace of a scent chemical called a pheromone. The other ants smell that trail with their two antennae, and they follow it straight to the food.",
+            "prompt": "How do the other ants find the scout's trail?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a test that shows the road is made of scent. The big one wipes a damp cloth across one spot on the trail. When the ants reach the wiped stripe, they stop and wave their antennae, then wander in small searching loops. The road has vanished there. Soon one ant finds the scent beyond the gap, crosses, and lays fresh scent, so the line joins up again.",
+            "prompt": "What does the wiped stripe prove about the trail?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue from a famous experiment. Scientists gave a colony two bridges to some honey, one short and one long. At first, ants used both bridges equally. Ants on the short bridge returned sooner, though, so they added scent to it more often. Stronger scent attracted more ants, who added even more. Meanwhile, the unused scent on the long bridge slowly faded away.",
+            "prompt": "Why does stronger scent attract more ants?"
+          },
+          {
+            "id": "return",
+            "passage": "Later, the little one sets a sugar cube beside the line, and before long a new line of ants branches off toward it. Now the guess changes. No ant is the leader, and no ant can see the whole trail. Each ant simply follows the strongest scent and adds a little more. Thousands of tiny dabs build one road, and old roads fade once the food is gone.",
+            "prompt": "How can a trail form without a leader?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise from the rainforest. Leafcutter ants sweep their trails clear of twigs, so the trails become real little highways, busy with ants carrying leaf pieces home. Army ants can even get trapped on a trail that loops back on itself, marching in a circle called an ant mill. Today, computer programs copy ant trails to find short delivery routes. What trail would you design?",
+            "prompt": "Why would a computer copy ants?"
+          }
+        ],
+        "words": [
+          {
+            "word": "scout",
+            "meaning": "an ant that goes out first to find food"
+          },
+          {
+            "word": "pheromone",
+            "meaning": "a scent chemical an animal makes to send a message"
+          },
+          {
+            "word": "antennae",
+            "meaning": "the two feelers on an ant's head that smell and touch"
+          },
+          {
+            "word": "colony",
+            "meaning": "a big family of ants that live and work together"
+          },
+          {
+            "word": "experiment",
+            "meaning": "a careful test to find out what happens"
+          },
+          {
+            "word": "fade",
+            "meaning": "to slowly grow weaker until it is gone"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer sees 7 rows of ants with 8 ants in each row. How many ants?",
+            "expression": "7 × 8",
+            "equation": "7 × 8 =",
+            "answer": 56,
+            "hint": "Count 7 groups of 8.",
+            "worked": "7 × 8 = 56. Seven rows of 8 ants."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A nest stores 520 crumbs, and the ants eat 185. How many are left?",
+            "expression": "520 − 185",
+            "equation": "520 − 185 =",
+            "answer": 335,
+            "hint": "Regroup, then subtract each place.",
+            "worked": "520 − 185 = 335. Take away the crumbs eaten."
+          },
+          {
+            "plate": "change",
+            "prompt": "The big one shares 54 crumbs equally among 6 ants. How many does each ant get?",
+            "expression": "54 ÷ 6",
+            "equation": "54 ÷ 6 =",
+            "answer": 9,
+            "hint": "Ask what times 6 makes 54.",
+            "worked": "54 ÷ 6 = 9. Each ant gets the same number."
+          },
+          {
+            "plate": "notice",
+            "prompt": "In a pretend count, 386 ants cross the short bridge and 247 cross the long bridge. How many crossed in all?",
+            "expression": "386 + 247",
+            "equation": "386 + 247 =",
+            "answer": 633,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "386 + 247 = 633. Add both bridges."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one sees 9 ants carry 4 sugar grains each. How many grains?",
+            "expression": "9 × 4",
+            "equation": "9 × 4 =",
+            "answer": 36,
+            "hint": "Count 9 groups of 4.",
+            "worked": "9 × 4 = 36. Nine ants with 4 grains each."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Leafcutter ants carry 64 leaf pieces in 8 equal piles. How many are in each pile?",
+            "expression": "64 ÷ 8",
+            "equation": "64 ÷ 8 =",
+            "answer": 8,
+            "hint": "Ask what times 8 makes 64.",
+            "worked": "64 ÷ 8 = 8. Each pile gets the same number."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer kneels on the warm sandstone patio and notices a thin line of ants flowing from a narrow crack to a golden cookie crumb. Every ant follows exactly the same curving path, one behind another, as though someone had painted a road across the stone. Big Wonderer crouches low to look more closely. Nobody painted anything there, so how does every single ant know the way?",
+            "prompt": "Why does the line of ants look like a painted road?"
+          },
+          {
+            "id": "reach",
+            "passage": "One ant discovered the crumb first, and ants like her are called scouts. On her way back to the nest, she dabbed the tip of her body against the stone again and again. Each dab left a tiny trace of a scent chemical called a pheromone. The other ants detect that trail with their two antennae, which let them compare the smell on their left and right sides. That is how they follow it straight to the food.",
+            "prompt": "How do two antennae help an ant stay on the trail?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a test which proves the road is really made of scent. The big one wipes a damp cloth across a single spot on the trail. When the ants arrive at the wiped stripe, they halt, wave their antennae and wander in small searching loops, because their road has simply vanished there. Eventually one ant finds the scent beyond the gap, crosses, and lays fresh pheromone behind her, so the line joins up again.",
+            "prompt": "Why do the ants wander in loops at the gap?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue from a famous experiment in which scientists gave an ant colony two bridges to some honey, one short and one long. At first, the ants used both bridges about equally. However, ants on the short bridge returned sooner, so they added scent to it more often, and that stronger scent attracted still more ants. Meanwhile, the unused scent on the long bridge evaporated, so the short road won without any ant measuring it.",
+            "prompt": "How did the colony pick the short road without measuring?"
+          },
+          {
+            "id": "return",
+            "passage": "Later, the little one places a sugar cube beside the line, and before long a new line of ants branches off toward it. Now the guess changes completely. No ant is the leader, and no single ant can see the whole trail. Each one simply follows the strongest scent and adds a little more, so thousands of tiny dabs build one road. Scientists call this kind of teamwork self-organization, and abandoned roads fade once the food is gone.",
+            "prompt": "What does self-organization mean for an ant trail?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise from the rainforest, where leafcutter ants sweep their trails clear of twigs until they become real little highways, crowded with ants carrying leaf pieces home to feed a fungus garden. Army ants can even become trapped on a trail that loops back on itself, marching in a circle called an ant mill. Today, computer programs imitate ant trails to plan short delivery routes. What trail would you design?",
+            "prompt": "Why do computer programs imitate ant trails?"
+          }
+        ],
+        "words": [
+          {
+            "word": "scout",
+            "meaning": "an ant that goes out first to find food"
+          },
+          {
+            "word": "pheromone",
+            "meaning": "a scent chemical an animal makes to send a message"
+          },
+          {
+            "word": "antennae",
+            "meaning": "the two feelers on an ant's head that smell and touch"
+          },
+          {
+            "word": "colony",
+            "meaning": "a big family of ants that live and work together"
+          },
+          {
+            "word": "evaporate",
+            "meaning": "to turn into a gas and drift away"
+          },
+          {
+            "word": "self-organization",
+            "meaning": "when many simple actions build a pattern with no leader"
+          },
+          {
+            "word": "ant mill",
+            "meaning": "a circle of ants stuck following each other's trail"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer learns that a trail carries 1440 ants in 6 equal groups. How many ants are in each group?",
+            "expression": "1440 ÷ 6",
+            "equation": "1440 ÷ 6 =",
+            "answer": 240,
+            "hint": "Think 144 ÷ 6 = 24, then 1440 ÷ 6 = 240.",
+            "worked": "1440 ÷ 6 = 240. Each group gets the same number."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A nest stores 4200 crumbs, and the ants eat 1675. How many are left?",
+            "expression": "4200 − 1675",
+            "equation": "4200 − 1675 =",
+            "answer": 2525,
+            "hint": "Regroup across the zeros.",
+            "worked": "4200 − 1675 = 2525. Take away the crumbs eaten."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, the big one sees ants lay 275 dabs of scent each hour for 8 hours. How many dabs is that?",
+            "expression": "275 × 8",
+            "equation": "275 × 8 =",
+            "answer": 2200,
+            "hint": "Multiply each place by 8, then add.",
+            "worked": "275 × 8 = 2200. Eight hours of 275 dabs."
+          },
+          {
+            "plate": "notice",
+            "prompt": "In a pretend count, 3850 ants cross the short bridge and 1475 cross the long bridge. How many crossed in all?",
+            "expression": "3850 + 1475",
+            "equation": "3850 + 1475 =",
+            "answer": 5325,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "3850 + 1475 = 5325. Add both bridges."
+          },
+          {
+            "plate": "return",
+            "prompt": "A colony has 9 trails with 1050 ants on each. How many ants is that?",
+            "expression": "1050 × 9",
+            "equation": "1050 × 9 =",
+            "answer": 9450,
+            "hint": "Think 9 × 1000 and 9 × 50.",
+            "worked": "1050 × 9 = 9450. Nine trails of 1050 ants."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Leafcutter ants carry 8000 leaf pieces, and 2365 are still on the trail. How many reached the nest?",
+            "expression": "8000 − 2365",
+            "equation": "8000 − 2365 =",
+            "answer": 5635,
+            "hint": "Regroup across the zeros.",
+            "worked": "8000 − 2365 = 5635. Take away the pieces still on the trail."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "quiz-cards"
+  ],
+  "quiz": {
+    "title": "Four looks at an ant trail",
+    "intro": "Follow the trail from the first scout to a rainforest highway.",
+    "questions": [
+      {
+        "id": "scent",
+        "prompt": "What is an ant trail made of?",
+        "choices": [
+          "Scent",
+          "Tiny pebbles",
+          "Ant footprints"
+        ],
+        "answerIndex": 0,
+        "answer": "A trail is a road of scent called a pheromone."
+      },
+      {
+        "id": "smell",
+        "prompt": "What do ants smell with?",
+        "choices": [
+          "Their legs",
+          "Their antennae",
+          "Their jaws"
+        ],
+        "answerIndex": 1,
+        "answer": "Ants smell the trail with their two antennae."
+      },
+      {
+        "id": "wipe",
+        "prompt": "What do ants do at a wiped spot?",
+        "choices": [
+          "Turn around home",
+          "Fall asleep",
+          "Search in loops"
+        ],
+        "answerIndex": 2,
+        "answer": "They wander in loops until one finds the scent again and crosses."
+      },
+      {
+        "id": "short",
+        "prompt": "Why does the short road win?",
+        "choices": [
+          "It gets more scent",
+          "It is warmer",
+          "A leader picks it"
+        ],
+        "answerIndex": 0,
+        "answer": "Ants on the short road return sooner and add scent more often."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "How an Ant Trail Works",
+    "line": "One scout, one scent, and a road nobody painted.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Ant Parade",
+    "lines": [
+      "Little Wonderer found a parade on the stone:",
+      "a ring of black ants, and not one walked alone.",
+      "Each ant sniffed the trail of the ant just ahead",
+      "and went round and around where the last ant had led.",
+      "",
+      "“They’re stuck,” said the big one. “Each ant trusts its nose,",
+      "and the nose says go round, so around the ring goes.",
+      "There’s a crumb in the middle, a feast for a queen,",
+      "but they never look up. It’s the strangest I’ve seen.”",
+      "",
+      "“I’ll fix it!” the little one said with a grin,",
+      "then stepped to the end of the ring and fell in.",
+      "“Just follow me out, little ants! Here we go!”",
+      "Then off round the crumb, nice and steady and slow.",
+      "",
+      "Round went the leader past supper and night.",
+      "Big Wonderer called, “Are you leading them right?”",
+      "“I think so,” came softly, “but I’m not really sure.",
+      "I’ve been sniffing this ant for an hour or more!”"
+    ],
+    "drawing": {
+      "src": "assets/an-ant-trail/poem.jpg",
+      "alt": "A black-ink drawing of a ring of ants walking round and round a single crumb on the ground, the little one stepping along beside the ring with a crumb in one mitten and the big one leaning in to watch."
+    }
+  }
+}

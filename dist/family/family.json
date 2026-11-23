@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "a hanger balance scale",
-        "why": "Watching which side of a hanger balance dips, and why, helps your child make comparisons and explain a prediction.",
-        "date": "2026-11-20",
+        "topic": "an ant trail",
+        "why": "Breaking an ant trail and watching it mend helps your child test a prediction and explain how many small actions build one pattern.",
+        "date": "2026-11-23",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -21,12 +21,12 @@
             "label": "Print explainer"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }
