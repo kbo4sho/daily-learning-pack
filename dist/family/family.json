@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "an ant trail",
-        "why": "Breaking an ant trail and watching it mend helps your child test a prediction and explain how many small actions build one pattern.",
-        "date": "2026-11-23",
+        "topic": "morning dew up close",
+        "why": "Comparing drops on grass tips, a half-wet bench and frost helps your child use evidence to explain where morning water really comes from.",
+        "date": "2026-11-24",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -21,12 +21,12 @@
             "label": "Print explainer"
           },
           {
-            "href": "./today/pdf/quiz-cards.pdf",
-            "label": "Quiz cards"
+            "href": "./today/pdf/lab-page.pdf",
+            "label": "Table-top lab"
           },
           {
-            "href": "./today/pdf/quiz-cards-key.pdf",
-            "label": "Grown-ups: quiz cards answer key"
+            "href": "./today/pdf/lab-page-key.pdf",
+            "label": "Grown-ups: table-top lab guide"
           }
         ]
       }

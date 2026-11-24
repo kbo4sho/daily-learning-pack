@@ -1,31 +1,30 @@
 {
   "schemaVersion": 1,
   "kind": "curiosity",
-  "slug": "an-ant-trail",
-  "topic": "an ant trail",
-  "why": "Breaking an ant trail and watching it mend helps your child test a prediction and explain how many small actions build one pattern.",
-  "teaser": "Follow a line of ants to a crumb, then find the invisible scent road, break it, and see why the shortest trail always wins.",
+  "slug": "morning-dew-2026-11-24",
+  "topic": "morning dew up close",
+  "why": "Comparing drops on grass tips, a half-wet bench and frost helps your child use evidence to explain where morning water really comes from.",
+  "teaser": "Find drops on every grass tip, then meet water a plant pushes out, a bench that is only half wet, feathers of ice and a glow around your shadow.",
   "aliases": [
-    "ant trail",
-    "ant line",
-    "ants",
-    "pheromone trail",
-    "scent trail",
-    "trail pheromone",
-    "ant colony",
-    "leafcutter ants"
+    "morning dew up close",
+    "guttation",
+    "hoarfrost",
+    "dew halo",
+    "heiligenschein",
+    "fog beetle",
+    "fog-basking beetle"
   ],
   "targetAge": 8,
   "gradeLevel": 3,
-  "mathTemplate": "compare-and-round",
+  "mathTemplate": "number-crunch",
   "tags": {
     "band": "6-8",
     "skills": [
       "reading-comprehension",
       "vocabulary-in-context",
       "explain-with-words-and-pictures",
-      "compare",
-      "round-ten"
+      "addition-regrouping",
+      "subtraction-regrouping"
     ],
     "format": "curiosity-day"
   },
@@ -34,343 +33,343 @@
     8
   ],
   "editionLabel": "Wonder Daily",
-  "wonderLabel": "Ant Trail",
-  "title": "How an Ant Trail Works",
-  "question": "How does every ant in a line know the way to the food?",
-  "idea": "A scout ant that finds food paints the way home with a scent called a pheromone. Other ants smell it with their antennae, follow it and add more. The shortest road gets the most scent, and scent that nobody renews fades away.",
+  "wonderLabel": "Morning Dew",
+  "title": "The Secret Life of Morning Dew",
+  "question": "Where do the morning's drops really come from?",
+  "idea": "Dew is not rain. It grows on things that get cold under a clear night sky, when water hiding in the air turns into drops, or into frost if it is freezing. Some drops on leaf tips are not dew at all: the plant pushed them out from its roots.",
   "curiosity": {
-    "intro": "Start with a line of ants on a patio. Then meet the scout, break the trail, race two bridges, watch a new trail grow and visit a rainforest ant highway.",
-    "carryForward": "Next time you see ants in a line, look for where the trail began and guess where it ends.",
+    "intro": "Start with a drop on every grass tip. Then meet water from inside a plant, a half-wet bench, feathers of ice and a desert beetle that drinks fog.",
+    "carryForward": "Next clear, still morning, look for drops on grass tips and check which things stayed dry.",
     "questions": [
       {
-        "id": "scout",
+        "id": "guttation",
         "plate": "reach",
-        "question": "How does the first ant mark the way?",
-        "notice": "Find the crumb in the ant's jaws and the tip of its body touching the paper.",
-        "say": "The first ant to find food is a scout. On her way home, she dabs the tip of her body on the ground again and again. Each dab leaves a little scent called a pheromone. Ants smell with their two antennae, so the others can follow her invisible road straight to the food.",
-        "try": "Put one crumb near some ants outside. Watch for the first ant to find it. Does she eat it there, or carry it home?"
+        "question": "Can a plant make its own drops?",
+        "notice": "Find a drop on the tip of each little tooth around the leaf, while the middle of the leaf stays dry.",
+        "say": "Yes! At night, when the soil is damp, the roots keep pushing water up into the leaves. The extra water squeezes out of tiny holes at the leaf tips and edges. This is called guttation. Those drops look like dew, but they came from inside the plant.",
+        "try": "Water a small potted plant well in the evening. Set a clear bowl upside down over it for the night. In the morning, look at the leaf tips and edges. Are the drops all over, or lined up at the tips?"
       },
       {
-        "id": "wipe",
+        "id": "bench",
         "plate": "change",
-        "question": "What happens if you wipe the trail?",
-        "notice": "Find the shiny wiped stripe and the ants turning in small loops at its edge.",
-        "say": "The ants stop! Wiping removes the scent, so the road is gone right there. The ants wave their antennae and wander in loops, searching. Soon one ant finds the scent on the far side, crosses, and leaves new scent behind her. The line joins up again.",
-        "try": "Find a busy ant trail on a path. Wipe a damp cloth across one spot, then step back. How long until the ants cross again?"
+        "question": "Why is only half of the bench wet?",
+        "notice": "Compare the beaded, open half of the bench with the dry half under the branch.",
+        "say": "All night, things give their warmth away to the clear sky and grow cold. The open half got cold enough for water in the air to turn into drops on it. The branch sent some warmth back down, like a blanket, so that half stayed dry. Clouds and wind can stop dew too.",
+        "try": "Fill one glass with ice water and one glass with tap water. Wait five minutes. Which glass grows drops on the outside? Wipe it dry and watch the drops come back."
       },
       {
-        "id": "bridges",
+        "id": "frost",
         "plate": "notice",
-        "question": "Why do ants pick the shortest road?",
-        "notice": "Compare the crowded short bridge with the long bridge that has only a few ants.",
-        "say": "Nobody measures. Ants on the short bridge get back sooner, so they add scent to it more often. More scent pulls in more ants, and they add even more. The scent on the long bridge slowly fades away. Soon almost every ant uses the short road. Scientists tried this with real bridges.",
-        "try": "Put two crumbs outside, one near the ants and one far away. Which crumb gets a busy trail first?"
+        "question": "Where do frost feathers come from?",
+        "notice": "Find the white ice feathers growing out from the leaf edge and veins. Are there any round drops?",
+        "say": "On a freezing night, the leaf gets colder than ice. Then the water hiding in the air skips the drop step. It turns straight into ice crystals, called frost. The crystals keep growing outward, so they look like tiny white feathers.",
+        "try": "Fill a clean metal can with ice and stir in two big spoons of salt. Wait about ten minutes. Look for white frost growing on the outside of the can."
       },
       {
-        "id": "highway",
+        "id": "beetle",
         "plate": "keep",
-        "question": "How big can an ant trail get?",
-        "notice": "Find the bare, swept path and the leaf pieces held up like little sails.",
-        "say": "Leafcutter ants clear their trails of twigs and leaves, so they become real little roads. Thousands of ants carry leaf bits home to feed a fungus garden. Sometimes army ants get lost following a trail that loops in a circle, and march round and round. People call that an ant mill.",
-        "try": "Draw an ant trail from your door to a crumb. Then draw a shorter road. Which one would the ants pick, and why?"
+        "question": "How can a beetle drink fog?",
+        "notice": "Find the beetle's raised back end, its bumpy black back and the drop rolling toward its head.",
+        "say": "In a foggy desert by the sea, it almost never rains. At dawn, this beetle climbs a dune and tips its back up into the fog. Tiny fog drops stick to its bumpy back, join into bigger drops and roll down to its mouth. People copy this trick with big nets that catch fog water.",
+        "try": "Drip water onto wax paper and onto a paper towel. Tilt both pieces. Where do the drops roll like beads, and where do they soak in?"
       }
     ]
   },
   "plates": [
     {
       "id": "wake",
-      "src": "assets/an-ant-trail/01-trail.jpg",
-      "original": "assets/an-ant-trail/01-trail.png",
-      "foldSrc": "assets/an-ant-trail/01-trail-fold.jpg",
-      "title": "A line of ants",
-      "alt": "Big and Little Wonderer on a sunny sandstone patio beside a terracotta flower pot, the big one crouching and the little one kneeling with one mitten hand held out, both watching a thin single-file line of small dark ants run across the stone to a golden cookie crumb.",
-      "caption": "A thin line of ants, all on the same path to one crumb."
+      "src": "assets/morning-dew-2026-11-24/01-tips.jpg",
+      "original": "assets/morning-dew-2026-11-24/01-tips.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/01-tips-fold.jpg",
+      "title": "A drop on every tip",
+      "alt": "At dawn beside a dry stone garden path, Little Wonderer kneels at the edge of tall grass, one mitten raised near the blades, while Big Wonderer leans in behind. Many grass blades hold small round clear drops, several right at their tips.",
+      "caption": "The path is dry, yet the grass is beaded with drops. No rain fell, so where did this water come from?"
     },
     {
       "id": "reach",
-      "src": "assets/an-ant-trail/02-scout.jpg",
-      "original": "assets/an-ant-trail/02-scout.png",
-      "foldSrc": "assets/an-ant-trail/02-scout-fold.jpg",
-      "title": "The scout's scent",
-      "alt": "A close field-guide study of one dark garden ant on a pale paving stone, seen from the side, carrying a golden crumb in its jaws, its rounded back end low near the stone and a few tiny crumbs behind it.",
-      "caption": "The scout carries a crumb home and dabs scent on the stone."
+      "src": "assets/morning-dew-2026-11-24/02-guttation.jpg",
+      "original": "assets/morning-dew-2026-11-24/02-guttation.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/02-guttation-fold.jpg",
+      "title": "Drops from inside",
+      "alt": "A three-part strawberry leaf on pale paper. The leaf surface is dry, but a small round clear drop sits on the tip of every little tooth around its edge, like a necklace.",
+      "caption": "Guttation: the roots pushed this water up and out of tiny holes at the tooth tips. These drops came from inside the plant."
     },
     {
       "id": "change",
-      "src": "assets/an-ant-trail/03-wipe.jpg",
-      "original": "assets/an-ant-trail/03-wipe.png",
-      "foldSrc": "assets/an-ant-trail/03-wipe-fold.jpg",
-      "title": "Wipe the trail",
-      "alt": "A field-guide view looking down at pale paving stones: a line of ants comes in from the left and stops at a damp, shiny wiped stripe, a few ants turning in small loops at its edge, while the line carries on past the stripe toward a golden crumb.",
-      "caption": "Wipe one stripe, and the ants stop and search in loops."
+      "src": "assets/morning-dew-2026-11-24/03-bench.jpg",
+      "original": "assets/morning-dew-2026-11-24/03-bench.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/03-bench-fold.jpg",
+      "title": "Half a wet bench",
+      "alt": "A wooden garden bench on a dewy lawn at dawn. The left half of the seat and armrest, open to the sky, is covered in tiny clear beads; the right half, under a leafy tree branch, is in shade and dry, and the grass there has no drops.",
+      "caption": "The open half lost its warmth to the clear sky and grew dew. The branch sent warmth back, so the sheltered half stayed dry."
     },
     {
       "id": "notice",
-      "src": "assets/an-ant-trail/04-bridges.jpg",
-      "original": "assets/an-ant-trail/04-bridges.png",
-      "foldSrc": "assets/an-ant-trail/04-bridges-fold.jpg",
-      "title": "The short road wins",
-      "alt": "A field-guide view from above of a small soil ant nest joined to a white saucer with a drop of honey by two strips of pale card: a short straight strip crowded with a line of ants, and a long looping strip with only three ants on it.",
-      "caption": "The short bridge fills with ants. The long one is nearly empty."
+      "src": "assets/morning-dew-2026-11-24/04-frost.jpg",
+      "original": "assets/morning-dew-2026-11-24/04-frost.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/04-frost-fold.jpg",
+      "title": "Feathers of ice",
+      "alt": "A fallen green-and-brown leaf on frosty ground, its edges and veins furred with fine white feathery ice crystals, beside grass blades fringed with frost.",
+      "caption": "On a freezing night, water from the air turned straight into ice crystals. Frost grows outward like feathers; it never fell."
     },
     {
       "id": "return",
-      "src": "assets/an-ant-trail/05-sugar.jpg",
-      "original": "assets/an-ant-trail/05-sugar.png",
-      "foldSrc": "assets/an-ant-trail/05-sugar-fold.jpg",
-      "title": "A brand-new trail",
-      "alt": "Big and Little Wonderer on the sunny patio beside a terracotta pot of pale flowers, the big one kneeling and pointing at the place where a new line of ants splits off from the old line, the little one sitting and watching, as the new line runs across the stone to a white sugar cube with a few ants already on it.",
-      "caption": "A brand-new trail runs straight to the sugar cube."
+      "src": "assets/morning-dew-2026-11-24/05-halo.jpg",
+      "original": "assets/morning-dew-2026-11-24/05-halo.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/05-halo-fold.jpg",
+      "title": "A glow around a shadow",
+      "alt": "On a dewy lawn at sunrise, Little Wonderer stands and points at two long shadows stretching across the wet grass, while Big Wonderer sits close beside. A soft pale glow brightens the grass around the head of each shadow.",
+      "caption": "Dew drops bounce sunlight back toward the sun, so the wet grass glows around a shadow's head. In real life, each looker sees the glow only around its own shadow."
     },
     {
       "id": "keep",
-      "src": "assets/an-ant-trail/06-leafcutters.jpg",
-      "original": "assets/an-ant-trail/06-leafcutters.png",
-      "foldSrc": "assets/an-ant-trail/06-leafcutters-fold.jpg",
-      "title": "Ant highways",
-      "alt": "A field-guide study of a rainforest floor: a long line of reddish-brown leafcutter ants walks along a bare, swept path of reddish earth among ferns and fallen leaves, each ant holding up a green leaf piece like a little sail.",
-      "caption": "Leafcutter ants sweep their trails into little roads."
+      "src": "assets/morning-dew-2026-11-24/06-beetle.jpg",
+      "original": "assets/morning-dew-2026-11-24/06-beetle.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/06-beetle-fold.jpg",
+      "title": "A beetle drinks fog",
+      "alt": "A black bumpy-backed darkling beetle stands head-down on a pale sand dune at dawn, with fog drifting in from the sea behind it. Clear drops sit on the bumps of its back, and one larger drop has rolled near its head.",
+      "caption": "In a foggy desert, this beetle tips its back into the fog. Drops gather on the bumps and roll down to its mouth."
     }
   ],
   "reading": {
-    "title": "The road nobody painted",
+    "title": "The drops that grew",
     "coverPlate": "wake",
-    "coverText": "Start with a line of ants on a patio. Then find the invisible road they follow and why the shortest one wins.",
+    "coverText": "Start with a drop on every grass tip. Then find out which drops grew from the air, which came from the plant, and which turned to ice.",
     "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
     "beats": [
       {
         "id": "wake",
         "plate": "wake",
-        "title": "A line of ants",
-        "passage": "Little Wonderer kneels on the warm patio. A thin line of ants runs from a crack to a cookie crumb. Every ant walks the same curvy path, one behind another. Big Wonderer crouches to watch. Nobody painted a road on the stone. So how does every ant know the way?",
-        "prompt": "Where does the line of ants start and end?",
+        "title": "A drop on every tip",
+        "passage": "Little Wonderer kneels at the edge of the lawn at dawn. Almost every grass blade holds one round drop, right on its very tip. The garden path is dry, so no rain fell last night. Big Wonderer leans in close. Why would the water sit only on the tips?",
+        "prompt": "How can you tell that no rain fell?",
         "foldable": {
-          "heading": "A line of ants",
-          "body": "A thin line of ants runs from a crack to a crumb. Every ant walks the same path. How do they know the way?"
+          "heading": "A drop on every tip",
+          "body": "Almost every grass blade holds one drop on its tip. The path is dry, so no rain fell. Where did the water come from?"
         }
       },
       {
         "id": "reach",
         "plate": "reach",
-        "title": "The scout's scent",
-        "passage": "One ant found the crumb first. She is called a scout. On her way home, she dabbed the tip of her body on the stone again and again. Each dab left a tiny bit of scent called a pheromone. The other ants smell it with their two antennae, and they follow it.",
-        "prompt": "What does the scout leave on the stone?",
+        "title": "Drops from inside",
+        "passage": "Here is a surprise. Some of those drops are not dew at all. At night, a plant's roots keep pushing water up into its leaves. The extra water squeezes out of tiny holes at the leaf tips and edges. This is called guttation. A strawberry leaf can wear a drop on every tooth, like a necklace.",
+        "prompt": "Where does guttation water come from?",
         "foldable": {
-          "heading": "The scout's scent",
-          "body": "A scout found the crumb first. On her way home, she dabbed scent on the stone. Other ants smell it and follow."
+          "heading": "Drops from inside",
+          "body": "Some drops are not dew. Roots push water up, and it squeezes out at the leaf tips. That is called guttation."
         }
       },
       {
         "id": "change",
         "plate": "change",
-        "title": "Wipe the trail",
-        "passage": "Here is a test. Wipe a damp cloth across one spot on the trail. The ants reach the wiped stripe and stop! They wave their antennae and wander in little loops. The scent road is broken there. Soon one ant crosses and leaves fresh scent, and the line joins up again.",
-        "prompt": "What do the ants do at the wiped stripe?",
+        "title": "Half a wet bench",
+        "passage": "Here is a test. Look at a garden bench at dawn. The half under the open sky is beaded with dew, but the half under a tree branch is dry. All night, the open half gave its warmth away to the clear sky and grew cold. The branch sent some warmth back, like a blanket. Dew forms only on things that get cold enough.",
+        "prompt": "Why is the bench dry under the branch?",
         "foldable": {
-          "heading": "Wipe the trail",
-          "body": "Wipe one spot, and the ants stop and loop. The scent is gone there. Soon one ant crosses, and the line joins again."
+          "heading": "Half a wet bench",
+          "body": "The open half of the bench got cold under the clear sky and grew dew. The half under a branch stayed warmer and dry."
         }
       },
       {
         "id": "notice",
         "plate": "notice",
-        "title": "The short road wins",
-        "passage": "Here is a clue. Scientists once gave ants two bridges to some honey, one short and one long. At first, ants used both. But ants on the short bridge got back sooner, so they added scent there more often. That trail grew stronger and pulled in more ants. Meanwhile, the scent on the long bridge faded away.",
-        "prompt": "Why did the short bridge get more scent?",
+        "title": "Feathers of ice",
+        "passage": "Here is a clue. On a freezing night, the leaf gets colder than ice. Then the water hiding in the air does not turn into drops. It turns straight into ice crystals, called frost. The crystals grow out from the leaf edge like tiny white feathers. So frost is not frozen rain. It grew right on the leaf.",
+        "prompt": "What does the air's water turn into on a freezing night?",
         "foldable": {
-          "heading": "The short road wins",
-          "body": "Ants on the short bridge got back sooner. They added scent more often, so that trail grew strong. The long one faded."
+          "heading": "Feathers of ice",
+          "body": "On a freezing night, water in the air turns straight into ice on the leaf. Those white feathers are frost."
         }
       },
       {
         "id": "return",
         "plate": "return",
-        "title": "A brand-new trail",
-        "passage": "Later, the little one sets a sugar cube near the line. Before long, a new line of ants branches off toward it. Now the guess changes. No ant is the leader. Each ant simply follows the strongest scent and adds a little more. Many tiny dabs build one road, and old roads fade when the food runs out.",
-        "prompt": "Who is the leader of the ant trail?",
+        "title": "A glow around a shadow",
+        "passage": "Back on the lawn, the sun rises low behind the Wonderers. Little Wonderer points at its long shadow on the wet grass. A soft glow shines around the shadow's head! Each drop works like a tiny lens and bounces sunlight back toward the sun. Now the guess changes. Dew did not fall from the sky. It grew on cold grass, and some drops came from the plants.",
+        "prompt": "Did the dew fall from the sky?",
         "foldable": {
-          "heading": "A brand-new trail",
-          "body": "A new line grows to a sugar cube. No ant leads. Each follows the strongest scent and adds a bit more."
+          "heading": "A glow around a shadow",
+          "body": "A soft glow shines around each shadow's head. The drops bounce sunlight back. Dew grows on cold grass. It does not fall."
         }
       },
       {
         "id": "keep",
         "plate": "keep",
-        "title": "Ant highways",
-        "passage": "Here is a surprise. In the rainforest, leafcutter ants sweep their trails clear, so the trails become real little roads. Thousands of ants carry leaf pieces home along them. Army ants can even get stuck on a trail that loops in a circle, marching round and round. Computers now copy ants to find short routes. What trail would you design?",
-        "prompt": "What do leafcutter ants do to their trails?",
+        "title": "A beetle drinks fog",
+        "passage": "Here is a surprise from a foggy desert by the sea, where it almost never rains. At dawn, a small black beetle climbs a dune and tips its body up into the fog. Tiny drops gather on its bumpy back and roll down to its mouth. People copy this trick with big nets that catch fog water. How would you catch the morning's water?",
+        "prompt": "How does the beetle get a drink?",
         "foldable": {
-          "heading": "Ant highways",
-          "body": "Leafcutter ants sweep their trails into real little roads. Army ants can march in circles. What trail would you design?"
+          "heading": "A beetle drinks fog",
+          "body": "A desert beetle tips its back into the fog. Drops gather and roll down to its mouth. People copy it with fog nets."
         }
       }
     ],
     "words": [
       {
-        "word": "trail",
-        "meaning": "a path that others can follow"
+        "word": "dew",
+        "meaning": "water drops that grow on cold things outdoors"
       },
       {
-        "word": "scout",
-        "meaning": "an ant that goes out first to find food"
+        "word": "guttation",
+        "meaning": "water a plant pushes out of its leaf tips"
       },
       {
-        "word": "pheromone",
-        "meaning": "a scent an animal makes to send a message"
+        "word": "frost",
+        "meaning": "ice crystals that grow on very cold things"
       },
       {
-        "word": "antennae",
-        "meaning": "the two feelers on an ant's head that smell and touch"
+        "word": "lens",
+        "meaning": "a clear, curved thing that bends light"
       },
       {
-        "word": "fade",
-        "meaning": "to slowly grow weaker until it is gone"
+        "word": "fog",
+        "meaning": "a cloud that sits low near the ground"
       }
     ],
     "questions": [
-      "What does the scout leave on the stone?",
-      "Why do the ants stop at the wiped stripe?",
-      "Why does the short bridge end up with the most ants?",
-      "Why is no ant the leader of the trail?"
+      "Where does guttation water come from?",
+      "Why does the open half of the bench get dew?",
+      "How is frost different from frozen rain?",
+      "Why does the glow appear around a shadow's head?"
     ],
     "yourTurn": {
       "title": "Your turn",
-      "prompt": "Write or dictate three sentences: what a trail is made of, what ants smell with, and why the short road wins.",
-      "example": "Example: A trail is made of scent. Ants smell it with their antennae. Ants on the short road come back sooner and add more scent."
+      "prompt": "Write or dictate three sentences: where dew grows, where guttation drops come from, and what frost is.",
+      "example": "Example: Dew grows on things that get cold at night. Guttation drops come from the roots. Frost is water from the air that turned straight into ice."
     },
-    "foldableTitle": "A little book of ant trails",
-    "foldableCoverLine": "Ant Trail",
-    "foldableNote": "Carry six ant trail clues in a small book."
+    "foldableTitle": "A little book of morning dew",
+    "foldableCoverLine": "Morning Dew",
+    "foldableNote": "Carry six morning dew clues in a small book."
   },
   "math": {
-    "title": "Ant trail counts",
-    "eyebrow": "SIX ANT TRAIL COUNTS",
-    "plate": "notice",
-    "intro": "Compare and round pretend counts of ants, crumbs and bridge crossings.",
-    "actionLabel": "Compare, then round",
+    "title": "Morning dew numbers",
+    "eyebrow": "NUMBER CRUNCH",
+    "plate": "wake",
+    "intro": "Six add-and-subtract puzzles tied to grass-tip drops, a half-wet bench, frost and a fog beetle.",
+    "actionLabel": "Solve",
     "tasks": [
       {
-        "skill": "compare",
+        "skill": "addition-regrouping",
         "operands": [
-          61,
-          16
+          38,
+          47
         ],
-        "symbol": ">",
-        "prompt": "Little Wonderer counts 61 ants on the patio trail and 16 ants near the flower pot. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "61 ○ 16",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 61,
-        "worked": "61 > 16. Compare the tens first, so the greater count is 61.",
+        "prompt": "Little Wonderer counts 38 drops on grass tips by the path and 47 more by the fence. How many drops is that in all?",
+        "equation": "38 + 47 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 85,
+        "worked": "8 + 7 = 15. Trade 10 ones for 1 ten: 38 + 47 = 85.",
         "plate": "wake",
         "label": "TASK 1"
       },
       {
-        "skill": "compare",
+        "skill": "subtraction-regrouping",
         "operands": [
-          29,
-          92
+          91,
+          56
         ],
-        "symbol": "<",
-        "prompt": "In a pretend count, the nest gets 29 crumbs in the morning and 92 crumbs in the afternoon. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "29 ○ 92",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 92,
-        "worked": "29 < 92. Compare the tens first, so the greater count is 92.",
+        "prompt": "A strawberry patch wears 91 guttation drops at dawn. By breakfast, 56 have dried up. How many drops are left?",
+        "equation": "91 − 56 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 35,
+        "worked": "91 − 56 = 35. Regroup ones, then subtract tens.",
         "plate": "reach",
         "label": "TASK 2"
       },
       {
-        "skill": "round-ten",
+        "skill": "addition-regrouping",
         "operands": [
-          67
+          64,
+          18
         ],
-        "prompt": "The big one counts 67 ants waiting at the wiped stripe. What is 67 rounded to the nearest ten?",
-        "equation": "67 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 70,
-        "worked": "67 has 7 ones, so round up to 70.",
+        "prompt": "The open half of the bench has 64 dew beads, and the big one finds 18 more on the armrest. How many beads in all?",
+        "equation": "64 + 18 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 82,
+        "worked": "4 + 8 = 12. Trade 10 ones for 1 ten: 64 + 18 = 82.",
         "plate": "change",
         "label": "TASK 3"
       },
       {
-        "skill": "compare",
+        "skill": "subtraction-regrouping",
         "operands": [
-          58,
-          58
+          83,
+          47
         ],
-        "symbol": "=",
-        "prompt": "In a pretend count, 58 ants cross the short bridge in one minute, and 58 cross it the next minute. Put >, <, or = in the circle. What is the greater count (or the shared count if equal)?",
-        "equation": "58 ○ 58",
-        "hint": "Compare tens first, then ones. When both counts match, use = and give that shared count.",
-        "answer": 58,
-        "worked": "58 = 58. Both counts match, so the shared count is 58.",
+        "prompt": "A cold leaf grows 83 frost feathers. The sun melts 47 of them. How many frost feathers are left?",
+        "equation": "83 − 47 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 36,
+        "worked": "83 − 47 = 36. Regroup ones, then subtract tens.",
         "plate": "notice",
         "label": "TASK 4"
       },
       {
-        "skill": "round-ten",
+        "skill": "addition-regrouping",
         "operands": [
-          34
+          29,
+          45
         ],
-        "prompt": "The little one watches 34 ants march to the sugar cube. What is 34 rounded to the nearest ten?",
-        "equation": "34 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 30,
-        "worked": "34 has 4 ones, so round down to 30.",
+        "prompt": "The little one counts 29 shining drops near its shadow's head, then 45 more near its feet. How many drops in all?",
+        "equation": "29 + 45 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 74,
+        "worked": "9 + 5 = 14. Trade 10 ones for 1 ten: 29 + 45 = 74.",
         "plate": "return",
         "label": "TASK 5"
       },
       {
-        "skill": "round-ten",
+        "skill": "subtraction-regrouping",
         "operands": [
-          85
+          70,
+          26
         ],
-        "prompt": "In a pretend count, 85 leafcutter ants carry leaves past one fern. What is 85 rounded to the nearest ten?",
-        "equation": "85 → nearest ten: ___",
-        "hint": "Look at the ones. With 5 or more, go up to the next ten; otherwise go down.",
-        "answer": 90,
-        "worked": "85 has 5 ones, so round up to 90.",
+        "prompt": "In a pretend count, the beetle's back gathers 70 fog drops, and 26 roll off the side. How many reach its mouth?",
+        "equation": "70 − 26 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 44,
+        "worked": "70 − 26 = 44. Regroup ones, then subtract tens.",
         "plate": "keep",
         "label": "TASK 6"
       }
     ],
-    "extension": "Choose one problem and draw the tens as sticks and the ones as dots to check.",
-    "printNote": "Show your thinking with numbers, marks, or words.",
-    "parentNote": "Three two-digit comparisons and three nearest-ten roundings. The numbers are for practice, not real ant counts.",
-    "answerKeyIntro": "Compare tens first, then ones. For rounding, 5 or more ones rounds up."
+    "extension": "Choose one problem and draw tens as sticks and ones as dots to check your regrouping.",
+    "printNote": "Use these pretend notebook numbers about morning dew. The pictures are not counting data.",
+    "parentNote": "Six two-digit add/subtract puzzles with regrouping. Numbers are pretend practice, not real dew counts.",
+    "answerKeyIntro": "Math answers (pretend notebook numbers):"
   },
   "writing": {
-    "title": "Explain an ant trail clue in your words",
+    "title": "Explain a morning dew clue in your words",
     "intro": "Choose one picture. Say your idea first, then draw or write it.",
     "plateIds": [
       "reach",
       "change",
       "notice"
     ],
-    "draw": "Draw a line of ants going to a crumb, and show where the scent road is.",
-    "starter": "My ant trail clue",
+    "draw": "Draw a grass blade with a drop on its tip, and show where the water came from.",
+    "starter": "My morning dew clue",
     "frames": [
       {
         "plate": "reach",
-        "start": "The other ants can follow the scout because",
-        "hint": "what does she leave on the ground?"
+        "start": "The drops on the leaf tips came from",
+        "hint": "what do the roots do at night?"
       },
       {
         "plate": "change",
-        "start": "The ants stop at the wiped stripe because",
-        "hint": "what did the cloth take away?"
+        "start": "The bench is dry under the branch because",
+        "hint": "what did the branch send back?"
       },
       {
         "plate": "notice",
-        "start": "The short bridge gets the most ants because",
-        "hint": "which ants get back sooner?"
+        "start": "Frost looks like feathers because",
+        "hint": "what does the air's water turn into?"
       }
     ],
     "words": [
-      "trail",
-      "scent",
-      "antennae",
-      "follow",
+      "dew",
+      "frost",
+      "cold",
+      "roots",
       "because",
       "maybe"
     ],
@@ -380,58 +379,62 @@
   "answers": [
     {
       "label": "Reading · 1",
-      "text": "It starts at a crack in the stone and ends at a cookie crumb."
+      "text": "The garden path is dry."
     },
     {
       "label": "Reading · 2",
-      "text": "A tiny bit of scent called a pheromone."
+      "text": "From the roots, inside the plant."
     },
     {
       "label": "Reading · 3",
-      "text": "They stop, wave their antennae and wander in loops."
+      "text": "The branch sent warmth back, so it stayed too warm."
     },
     {
       "label": "Reading · 4",
-      "text": "Ants on it got back sooner, so they added scent more often."
+      "text": "It turns straight into ice crystals called frost."
     },
     {
       "label": "Reading · 5",
-      "text": "No ant is the leader. Each follows the strongest scent."
+      "text": "No. It grew on cold grass."
     },
     {
       "label": "Reading · 6",
-      "text": "They sweep them clear, so the trails become little roads."
+      "text": "Fog drops roll down its bumpy back to its mouth."
     },
     {
       "label": "Math · all",
-      "text": "61, 92, 70, 58, 30, 90."
+      "text": "85, 35, 82, 36, 74, 44."
     },
     {
       "label": "Screen-free",
-      "text": "Scent; their antennae; search in loops; it gets more scent."
+      "text": "From the roots; it stayed warmer; ice from the air; it catches fog."
     }
   ],
-  "parentGuidance": "Watch ants outdoors and keep hands off them, since some ants sting or bite. Skip any nest of fire ants, and wash hands after setting out crumbs or sugar.",
+  "parentGuidance": "Dawn grass can be slippery, so walk carefully. The salt-and-ice can gets very cold: touch it only briefly, or with a cloth. Wash hands after handling plants and soil.",
   "sources": [
     {
-      "label": "Wikipedia — Pheromone (trail pheromones: scouts mark a path to food that nest mates follow and renew; the scent evaporates)",
-      "url": "https://en.wikipedia.org/wiki/Pheromone"
+      "label": "Wikipedia — Dew (forms on surfaces that cool by radiating heat to a clear night sky; clouds and wind reduce dew)",
+      "url": "https://en.wikipedia.org/wiki/Dew"
     },
     {
-      "label": "Wikipedia — Ant (communication by pheromones detected with the antennae; foraging trails)",
-      "url": "https://en.wikipedia.org/wiki/Ant"
+      "label": "Wikipedia — Guttation (root pressure pushes xylem sap out of hydathodes at leaf tips and edges, often mistaken for dew)",
+      "url": "https://en.wikipedia.org/wiki/Guttation"
     },
     {
-      "label": "Wikipedia — Ant colony optimization algorithms (the double-bridge experiment: the shorter branch is reinforced faster and wins; pheromone evaporation)",
-      "url": "https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms"
+      "label": "Wikipedia — Frost (below freezing, water vapour deposits directly as ice crystals: hoar frost)",
+      "url": "https://en.wikipedia.org/wiki/Frost"
     },
     {
-      "label": "Wikipedia — Ant mill (army ants following a looped trail round and round)",
-      "url": "https://en.wikipedia.org/wiki/Ant_mill"
+      "label": "Wikipedia — Heiligenschein (dew drops act as lenses and send light back toward the sun, so a glow appears around the observer's own shadow head)",
+      "url": "https://en.wikipedia.org/wiki/Heiligenschein"
     },
     {
-      "label": "Wikipedia — Leafcutter ant (trails to cut leaves that feed the colony's fungus garden)",
-      "url": "https://en.wikipedia.org/wiki/Leafcutter_ant"
+      "label": "Wikipedia — Onymacris unguicularis (Namib fog-basking beetle that tilts into fog and drinks the drops)",
+      "url": "https://en.wikipedia.org/wiki/Onymacris_unguicularis"
+    },
+    {
+      "label": "Wikipedia — Fog collection (mesh nets that harvest fog water for communities)",
+      "url": "https://en.wikipedia.org/wiki/Fog_collection"
     }
   ],
   "levels": {
@@ -440,47 +443,47 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer sees a line of ants. The ants walk to a crumb. They all go the same way. Big Wonderer looks too. How do they know?",
-            "prompt": "Where do the ants go?"
+            "passage": "Little Wonderer looks at the grass. Each blade has one drop. The path is dry. Big Wonderer looks too. Where did the water come from?",
+            "prompt": "Is the path wet or dry?"
           },
           {
             "id": "reach",
-            "passage": "One ant found the crumb first. She is a scout. She left a smell going home. The smell is called scent. Other ants follow it.",
-            "prompt": "What did the scout leave?"
+            "passage": "Some drops are not dew. Roots push water up. Water comes out of leaf tips. This is guttation.",
+            "prompt": "Where does the water come out?"
           },
           {
             "id": "change",
-            "passage": "The big one wipes the trail. Now the ants stop! They walk in little loops. The scent is gone there. Then one ant crosses.",
-            "prompt": "What do the ants do?"
+            "passage": "Half the bench is wet. Half is under a tree. That half stays dry. The open sky makes things cold.",
+            "prompt": "Which half is dry?"
           },
           {
             "id": "notice",
-            "passage": "Ants had two bridges to honey. One bridge was short. The short bridge got more scent. So more ants used it.",
-            "prompt": "Which bridge won?"
+            "passage": "The night is very cold. Water in the air turns to ice. The ice looks like feathers. It is called frost.",
+            "prompt": "What is frost?"
           },
           {
             "id": "return",
-            "passage": "The little one puts out sugar. A new line of ants grows. No ant is the boss. Each ant follows the scent.",
-            "prompt": "Who is the boss?"
+            "passage": "The little one sees its shadow. A soft glow is around its head! Dew did not fall. It grew on cold grass.",
+            "prompt": "Did the dew fall?"
           },
           {
             "id": "keep",
-            "passage": "Some leafcutter ants sweep their trails. The trails become little roads. Ants carry leaves home. What road would you make?",
-            "prompt": "What do the ants carry?"
+            "passage": "A beetle lives in a dry desert. It tips its back into fog. Drops roll down to its mouth. How would you catch water?",
+            "prompt": "Where do the drops go?"
           }
         ],
         "words": [
           {
-            "word": "trail",
-            "meaning": "a path others can follow"
+            "word": "dew",
+            "meaning": "drops that grow on cold things"
           },
           {
-            "word": "scent",
-            "meaning": "a smell"
+            "word": "frost",
+            "meaning": "ice that grows on cold things"
           },
           {
-            "word": "scout",
-            "meaning": "an ant that finds food first"
+            "word": "fog",
+            "meaning": "a cloud near the ground"
           }
         ]
       },
@@ -488,57 +491,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer sees 9 ants, then 6 more. How many ants?",
-            "expression": "9 + 6",
-            "equation": "9 + 6 =",
+            "prompt": "Little Wonderer sees 8 drops, then 7 more. How many drops?",
+            "expression": "8 + 7",
+            "equation": "8 + 7 =",
             "answer": 15,
-            "hint": "Make a ten: 9 + 1 + 5.",
-            "worked": "9 + 6 = 15. Add both sets of ants."
+            "hint": "Make a ten: 8 + 2 + 5.",
+            "worked": "8 + 7 = 15. Add both sets of drops."
           },
           {
             "plate": "reach",
-            "prompt": "The scout finds 14 crumbs and eats 5. How many are left?",
-            "expression": "14 − 5",
-            "equation": "14 − 5 =",
-            "answer": 9,
-            "hint": "Take 5 away from 14.",
-            "worked": "14 − 5 = 9. Take away the crumbs eaten."
+            "prompt": "A leaf has 13 drops. Then 5 roll off. How many are left?",
+            "expression": "13 − 5",
+            "equation": "13 − 5 =",
+            "answer": 8,
+            "hint": "Take 5 away from 13.",
+            "worked": "13 − 5 = 8. Take away the drops that rolled off."
           },
           {
             "plate": "change",
-            "prompt": "There are 16 ants. The big one sees 9 cross. How many have not crossed?",
-            "expression": "16 − 9",
-            "equation": "16 − 9 =",
-            "answer": 7,
-            "hint": "Take 9 away from 16.",
-            "worked": "16 − 9 = 7. Take away the ants that crossed."
+            "prompt": "The bench has 9 big drops. The big one finds 4 more. How many drops?",
+            "expression": "9 + 4",
+            "equation": "9 + 4 =",
+            "answer": 13,
+            "hint": "Make a ten: 9 + 1 + 3.",
+            "worked": "9 + 4 = 13. Add both sets of drops."
           },
           {
             "plate": "notice",
-            "prompt": "The short bridge has 12 ants. The long bridge has 4. How many in all?",
-            "expression": "12 + 4",
-            "equation": "12 + 4 =",
-            "answer": 16,
-            "hint": "Count on 4 from 12.",
-            "worked": "12 + 4 = 16. Add both bridges."
+            "prompt": "A leaf has 17 ice feathers. Then 6 melt. How many are left?",
+            "expression": "17 − 6",
+            "equation": "17 − 6 =",
+            "answer": 11,
+            "hint": "Take 6 away from 17.",
+            "worked": "17 − 6 = 11. Take away the feathers that melted."
           },
           {
             "plate": "return",
-            "prompt": "The little one counts 7 ants on the sugar, then 4 more. How many ants?",
-            "expression": "7 + 4",
-            "equation": "7 + 4 =",
-            "answer": 11,
-            "hint": "Count on 4 from 7.",
-            "worked": "7 + 4 = 11. Add both sets of ants."
+            "prompt": "The little one sees 6 drops by its shadow and 6 more. How many?",
+            "expression": "6 + 6",
+            "equation": "6 + 6 =",
+            "answer": 12,
+            "hint": "Double the 6 drops: add 6 and 6.",
+            "worked": "6 + 6 = 12. Add both sets of drops."
           },
           {
             "plate": "keep",
-            "prompt": "There are 20 leaf pieces. Ants carry 18. How many are left?",
-            "expression": "20 − 18",
-            "equation": "20 − 18 =",
-            "answer": 2,
-            "hint": "Take 18 away from 20.",
-            "worked": "20 − 18 = 2. Take away the leaves carried."
+            "prompt": "The beetle has 20 drops on its back. Then 4 roll off. How many are left?",
+            "expression": "20 − 4",
+            "equation": "20 − 4 =",
+            "answer": 16,
+            "hint": "Take 4 away from 20.",
+            "worked": "20 − 4 = 16. Take away the drops that rolled off."
           }
         ]
       }
@@ -548,51 +551,51 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer kneels on the warm patio stones. A thin line of ants runs to a cookie crumb. Every ant walks the very same path. Big Wonderer crouches down to watch. How does each ant know the way?",
-            "prompt": "Where does the line of ants go?"
+            "passage": "Little Wonderer kneels by the lawn at dawn. Almost every grass blade has one drop on its tip. The path is dry, so it did not rain. Big Wonderer leans in close. Where did the water come from?",
+            "prompt": "How do we know it did not rain?"
           },
           {
             "id": "reach",
-            "passage": "One ant found the crumb first. She is the scout. On her way home, she dabbed the stone. Each dab left a little scent called a pheromone. The other ants smell it and follow.",
-            "prompt": "What did each dab leave?"
+            "passage": "Here is a surprise. Some drops are not dew at all. At night, roots push water up into the leaves. Extra water squeezes out of tiny holes at the tips. This is called guttation.",
+            "prompt": "What do the roots push up?"
           },
           {
             "id": "change",
-            "passage": "The big one wipes a damp cloth across the trail. The ants reach the wiped spot and stop! They wave their antennae and wander in loops. Soon one ant crosses and leaves new scent.",
-            "prompt": "Why do the ants stop?"
+            "passage": "Look at a bench at dawn. The open half is covered in dew. The half under a branch is dry. The open sky made that half very cold. The branch kept the other half warmer.",
+            "prompt": "Why is one half dry?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue about two bridges to honey. One bridge was short, and one was long. Ants on the short bridge got back sooner. So they added scent there more often. The long trail faded away.",
-            "prompt": "Why did the short bridge win?"
+            "passage": "On a freezing night, the leaf gets very cold. Water in the air does not make drops. It turns straight into tiny ice crystals. They grow like white feathers called frost.",
+            "prompt": "What do the ice crystals look like?"
           },
           {
             "id": "return",
-            "passage": "Later, the little one sets out a sugar cube. A new line of ants branches off to it. Now the guess changes. No ant is the leader. Each one follows the strongest scent.",
-            "prompt": "Who leads the new line?"
+            "passage": "The little one points at its shadow on the grass. A soft glow shines around the shadow's head! The drops bounce sunlight back. So dew does not fall from the sky. It grows on cold grass.",
+            "prompt": "Where does dew grow?"
           },
           {
             "id": "keep",
-            "passage": "In the rainforest, leafcutter ants sweep their trails clean. The trails turn into real little roads. Thousands of ants carry leaves home on them. What kind of trail would you design?",
-            "prompt": "What do leafcutter ants carry?"
+            "passage": "A small beetle lives in a foggy desert. It climbs a dune and tips up into the fog. Drops gather on its bumpy back. They roll down to its mouth. How would you catch the morning's water?",
+            "prompt": "How does the beetle drink?"
           }
         ],
         "words": [
           {
-            "word": "trail",
-            "meaning": "a path others can follow"
+            "word": "dew",
+            "meaning": "water drops that grow on cold things outdoors"
           },
           {
-            "word": "scout",
-            "meaning": "an ant that finds food first"
+            "word": "guttation",
+            "meaning": "water a plant pushes out of its leaf tips"
           },
           {
-            "word": "pheromone",
-            "meaning": "a scent that sends a message"
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold things"
           },
           {
-            "word": "antennae",
-            "meaning": "the two feelers on an ant's head"
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
           }
         ]
       },
@@ -600,57 +603,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer counts 27 ants on the trail, then 15 more. How many ants?",
-            "expression": "27 + 15",
-            "equation": "27 + 15 =",
-            "answer": 42,
-            "hint": "Add the tens, then the ones.",
-            "worked": "27 + 15 = 42. Add both sets of ants."
+            "prompt": "Little Wonderer counts 27 drops on grass tips, then 16 more. How many drops in all?",
+            "expression": "27 + 16",
+            "equation": "27 + 16 =",
+            "answer": 43,
+            "hint": "Add the ones, then the tens.",
+            "worked": "27 + 16 = 43. Add both sets of drops."
           },
           {
             "plate": "reach",
-            "prompt": "The scout's nest has 40 crumbs. The ants eat 16. How many are left?",
-            "expression": "40 − 16",
-            "equation": "40 − 16 =",
-            "answer": 24,
-            "hint": "Take away 20, then add 4 back.",
-            "worked": "40 − 16 = 24. Take away the crumbs eaten."
+            "prompt": "A strawberry leaf has 42 drops at dawn. By noon, 15 dry up. How many are left?",
+            "expression": "42 − 15",
+            "equation": "42 − 15 =",
+            "answer": 27,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "42 − 15 = 27. Take away the drops that dried."
           },
           {
             "plate": "change",
-            "prompt": "There are 33 ants at the wiped spot. The big one sees 18 cross. How many have not crossed?",
-            "expression": "33 − 18",
-            "equation": "33 − 18 =",
-            "answer": 15,
-            "hint": "Take away 20, then add 2 back.",
-            "worked": "33 − 18 = 15. Take away the ants that crossed."
+            "prompt": "The open side of the bench has 18 drops on one board and 19 on the next. How many in all?",
+            "expression": "18 + 19",
+            "equation": "18 + 19 =",
+            "answer": 37,
+            "hint": "Think 18 + 20, then take 1 away.",
+            "worked": "18 + 19 = 37. Add both boards."
           },
           {
             "plate": "notice",
-            "prompt": "The short bridge has 29 ants. The long bridge has 8. How many in all?",
-            "expression": "29 + 8",
-            "equation": "29 + 8 =",
-            "answer": 37,
-            "hint": "Make a thirty: 29 + 1 + 7.",
-            "worked": "29 + 8 = 37. Add both bridges."
+            "prompt": "A leaf has 50 frost feathers. The sun melts 24. How many are left?",
+            "expression": "50 − 24",
+            "equation": "50 − 24 =",
+            "answer": 26,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "50 − 24 = 26. Take away the feathers that melted."
           },
           {
             "plate": "return",
-            "prompt": "The little one counts 19 ants on the sugar cube, then 24 more. How many ants?",
-            "expression": "19 + 24",
-            "equation": "19 + 24 =",
-            "answer": 43,
-            "hint": "Make a twenty: 19 + 1 + 23.",
-            "worked": "19 + 24 = 43. Add both sets of ants."
+            "prompt": "The little one counts 33 shining drops near its shadow, then 14 more. How many?",
+            "expression": "33 + 14",
+            "equation": "33 + 14 =",
+            "answer": 47,
+            "hint": "Add the ones, then the tens.",
+            "worked": "33 + 14 = 47. Add both sets of drops."
           },
           {
             "plate": "keep",
-            "prompt": "There are 50 leaf pieces. Leafcutter ants carry 31. How many are left?",
-            "expression": "50 − 31",
-            "equation": "50 − 31 =",
-            "answer": 19,
-            "hint": "Take away 30, then 1 more.",
-            "worked": "50 − 31 = 19. Take away the leaves carried."
+            "prompt": "The beetle collects 45 fog drops and drinks 28. How many are left?",
+            "expression": "45 − 28",
+            "equation": "45 − 28 =",
+            "answer": 17,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "45 − 28 = 17. Take away the drops it drank."
           }
         ]
       }
@@ -660,59 +663,63 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer kneels on the warm patio and spots a thin line of ants running from a crack to a cookie crumb. Every ant follows the same curving path, one behind another, as if a road were painted there. Big Wonderer crouches low to watch. Nobody painted anything on the stone, though. So how does every single ant know the way?",
-            "prompt": "What makes the line of ants look like a road?"
+            "passage": "At dawn, Little Wonderer kneels at the edge of the lawn. Almost every slender grass blade holds a single round drop perched on its tip. The stone path beside the grass is completely dry, so no rain fell during the night. Big Wonderer leans in close. Why would the water gather only on the very tips?",
+            "prompt": "What clue shows that no rain fell?"
           },
           {
             "id": "reach",
-            "passage": "One ant found the crumb first, and she is called a scout. On her way back to the nest, she dabbed the tip of her body on the stone again and again. Each dab left a tiny trace of a scent chemical called a pheromone. The other ants smell that trail with their two antennae, and they follow it straight to the food.",
-            "prompt": "How do the other ants find the scout's trail?"
+            "passage": "Here is a surprise: some of those drops are not dew at all. At night, when the soil is damp, a plant's roots keep pushing water up into its leaves. The extra water squeezes out through tiny pores at the leaf tips and edges, a process called guttation. A strawberry leaf can wear one drop on every tooth, like a necklace.",
+            "prompt": "How is guttation different from dew?"
           },
           {
             "id": "change",
-            "passage": "Here is a test that shows the road is made of scent. The big one wipes a damp cloth across one spot on the trail. When the ants reach the wiped stripe, they stop and wave their antennae, then wander in small searching loops. The road has vanished there. Soon one ant finds the scent beyond the gap, crosses, and lays fresh scent, so the line joins up again.",
-            "prompt": "What does the wiped stripe prove about the trail?"
+            "passage": "Here is a test you can see at dawn: one half of a garden bench is beaded with dew, while the half under a tree branch stays dry. All night, the open half gave its warmth away to the clear sky and grew cold. The branch sent some warmth back down, like a blanket. Dew forms only on surfaces that become cold enough.",
+            "prompt": "How does the branch act like a blanket?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue from a famous experiment. Scientists gave a colony two bridges to some honey, one short and one long. At first, ants used both bridges equally. Ants on the short bridge returned sooner, though, so they added scent to it more often. Stronger scent attracted more ants, who added even more. Meanwhile, the unused scent on the long bridge slowly faded away.",
-            "prompt": "Why does stronger scent attract more ants?"
+            "passage": "Here is a clue from a freezing night, when the leaf grows colder than ice. Then the invisible water in the air skips the liquid step completely. It changes straight into ice crystals, which we call frost. The crystals grow outward from the leaf edge like tiny white feathers, so frost was never rain at all.",
+            "prompt": "Which step does the water skip when frost forms?"
           },
           {
             "id": "return",
-            "passage": "Later, the little one sets a sugar cube beside the line, and before long a new line of ants branches off toward it. Now the guess changes. No ant is the leader, and no ant can see the whole trail. Each ant simply follows the strongest scent and adds a little more. Thousands of tiny dabs build one road, and old roads fade once the food is gone.",
-            "prompt": "How can a trail form without a leader?"
+            "passage": "Back on the lawn, the sun rises low behind the Wonderers, and their long shadows stretch across the wet grass. The little one points at a soft glow around its own shadow's head. Each drop works like a tiny lens and bounces sunlight straight back toward the sun. So the guess changes: dew does not fall from the sky. It grows on cold surfaces, and some drops come from the plants themselves.",
+            "prompt": "Why does a glow appear around the shadow's head?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise from the rainforest. Leafcutter ants sweep their trails clear of twigs, so the trails become real little highways, busy with ants carrying leaf pieces home. Army ants can even get trapped on a trail that loops back on itself, marching in a circle called an ant mill. Today, computer programs copy ant trails to find short delivery routes. What trail would you design?",
-            "prompt": "Why would a computer copy ants?"
+            "passage": "Here is a surprise from a foggy desert by the sea, where it almost never rains. At dawn, a small black beetle climbs a dune and tips its body up into the drifting fog. Tiny drops gather on its bumpy back and roll down toward its mouth. People copy this trick with tall nets that catch fog water for villages. How would you catch the morning's water?",
+            "prompt": "How do people copy the beetle?"
           }
         ],
         "words": [
           {
-            "word": "scout",
-            "meaning": "an ant that goes out first to find food"
+            "word": "dew",
+            "meaning": "water drops that grow on cold surfaces outdoors"
           },
           {
-            "word": "pheromone",
-            "meaning": "a scent chemical an animal makes to send a message"
+            "word": "guttation",
+            "meaning": "water a plant pushes out through pores at its leaf tips"
           },
           {
-            "word": "antennae",
-            "meaning": "the two feelers on an ant's head that smell and touch"
+            "word": "pores",
+            "meaning": "very tiny openings"
           },
           {
-            "word": "colony",
-            "meaning": "a big family of ants that live and work together"
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold surfaces"
           },
           {
-            "word": "experiment",
-            "meaning": "a careful test to find out what happens"
+            "word": "crystal",
+            "meaning": "a solid with a neat, repeating shape"
           },
           {
-            "word": "fade",
-            "meaning": "to slowly grow weaker until it is gone"
+            "word": "lens",
+            "meaning": "a clear, curved thing that bends light"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
           }
         ]
       },
@@ -720,57 +727,57 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer sees 7 rows of ants with 8 ants in each row. How many ants?",
+            "prompt": "Little Wonderer finds 7 drops on each of 8 grass blades. How many drops is that?",
             "expression": "7 × 8",
             "equation": "7 × 8 =",
             "answer": 56,
-            "hint": "Count 7 groups of 8.",
-            "worked": "7 × 8 = 56. Seven rows of 8 ants."
+            "hint": "Think 7 × 8, or add 7 eight times.",
+            "worked": "7 × 8 = 56. Eight blades of 7 drops."
           },
           {
             "plate": "reach",
-            "prompt": "A nest stores 520 crumbs, and the ants eat 185. How many are left?",
-            "expression": "520 − 185",
-            "equation": "520 − 185 =",
-            "answer": 335,
-            "hint": "Regroup, then subtract each place.",
-            "worked": "520 − 185 = 335. Take away the crumbs eaten."
+            "prompt": "A strawberry plant has 72 drops shared equally across 8 leaves. How many drops are on each leaf?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Think which number times 8 makes 72.",
+            "worked": "72 ÷ 8 = 9. Each leaf gets the same number."
           },
           {
             "plate": "change",
-            "prompt": "The big one shares 54 crumbs equally among 6 ants. How many does each ant get?",
-            "expression": "54 ÷ 6",
-            "equation": "54 ÷ 6 =",
-            "answer": 9,
-            "hint": "Ask what times 6 makes 54.",
-            "worked": "54 ÷ 6 = 9. Each ant gets the same number."
-          },
-          {
-            "plate": "notice",
-            "prompt": "In a pretend count, 386 ants cross the short bridge and 247 cross the long bridge. How many crossed in all?",
+            "prompt": "In a pretend count, the open side of the bench holds 386 drops and the grass beside it holds 247. How many drops in all?",
             "expression": "386 + 247",
             "equation": "386 + 247 =",
             "answer": 633,
             "hint": "Add each place, starting with the ones.",
-            "worked": "386 + 247 = 633. Add both bridges."
+            "worked": "386 + 247 = 633. Add the bench and the grass."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A frosty leaf has 900 ice crystals, and the sun melts 365. How many crystals are left?",
+            "expression": "900 − 365",
+            "equation": "900 − 365 =",
+            "answer": 535,
+            "hint": "Regroup across the zeros.",
+            "worked": "900 − 365 = 535. Take away the crystals that melted."
           },
           {
             "plate": "return",
-            "prompt": "The little one sees 9 ants carry 4 sugar grains each. How many grains?",
-            "expression": "9 × 4",
-            "equation": "9 × 4 =",
-            "answer": 36,
-            "hint": "Count 9 groups of 4.",
-            "worked": "9 × 4 = 36. Nine ants with 4 grains each."
+            "prompt": "The big one sees 6 shining drops in each of 9 rows of grass. How many drops is that?",
+            "expression": "6 × 9",
+            "equation": "6 × 9 =",
+            "answer": 54,
+            "hint": "Think 6 × 10, then take away 6.",
+            "worked": "6 × 9 = 54. Nine rows of 6 drops."
           },
           {
             "plate": "keep",
-            "prompt": "Leafcutter ants carry 64 leaf pieces in 8 equal piles. How many are in each pile?",
-            "expression": "64 ÷ 8",
-            "equation": "64 ÷ 8 =",
-            "answer": 8,
-            "hint": "Ask what times 8 makes 64.",
-            "worked": "64 ÷ 8 = 8. Each pile gets the same number."
+            "prompt": "A beetle collects 60 tiny drops over 6 mornings, the same number each morning. How many drops does it collect each morning?",
+            "expression": "60 ÷ 6",
+            "equation": "60 ÷ 6 =",
+            "answer": 10,
+            "hint": "Think which number times 6 makes 60.",
+            "worked": "60 ÷ 6 = 10. Each morning gets the same number."
           }
         ]
       }
@@ -780,63 +787,67 @@
         "beats": [
           {
             "id": "wake",
-            "passage": "Little Wonderer kneels on the warm sandstone patio and notices a thin line of ants flowing from a narrow crack to a golden cookie crumb. Every ant follows exactly the same curving path, one behind another, as though someone had painted a road across the stone. Big Wonderer crouches low to look more closely. Nobody painted anything there, so how does every single ant know the way?",
-            "prompt": "Why does the line of ants look like a painted road?"
+            "passage": "At dawn, Little Wonderer kneels at the edge of the lawn and discovers that almost every slender grass blade is holding a single round drop perched right on its tip. The stone path beside the grass is completely dry, which means no rain fell during the night. Big Wonderer leans in close, puzzled too. Why would the water gather only on the very tips of the blades?",
+            "prompt": "Why does the dry path matter as evidence?"
           },
           {
             "id": "reach",
-            "passage": "One ant discovered the crumb first, and ants like her are called scouts. On her way back to the nest, she dabbed the tip of her body against the stone again and again. Each dab left a tiny trace of a scent chemical called a pheromone. The other ants detect that trail with their two antennae, which let them compare the smell on their left and right sides. That is how they follow it straight to the food.",
-            "prompt": "How do two antennae help an ant stay on the trail?"
+            "passage": "Here is a surprise: some of those drops are not dew at all, because they came from inside the plant. At night, when the soil is damp, a plant's roots keep pushing water upward into its leaves with steady pressure. The extra water squeezes out through tiny pores at the leaf tips and edges, a process scientists call guttation. A strawberry leaf can wear one drop on every tooth, like a necklace.",
+            "prompt": "What pushes guttation water out of the leaf?"
           },
           {
             "id": "change",
-            "passage": "Here is a test which proves the road is really made of scent. The big one wipes a damp cloth across a single spot on the trail. When the ants arrive at the wiped stripe, they halt, wave their antennae and wander in small searching loops, because their road has simply vanished there. Eventually one ant finds the scent beyond the gap, crosses, and lays fresh pheromone behind her, so the line joins up again.",
-            "prompt": "Why do the ants wander in loops at the gap?"
+            "passage": "Here is a test you can see on any clear morning. One half of a garden bench is beaded with dew, while the half beneath a tree branch stays perfectly dry. All night long, the open half gave its warmth away to the clear sky and grew colder than the air around it. The branch above the other half sent some warmth back down, like a blanket, and clouds do the same thing. Dew forms only on surfaces that become cold enough.",
+            "prompt": "Why might a cloudy night leave less dew?"
           },
           {
             "id": "notice",
-            "passage": "Here is a clue from a famous experiment in which scientists gave an ant colony two bridges to some honey, one short and one long. At first, the ants used both bridges about equally. However, ants on the short bridge returned sooner, so they added scent to it more often, and that stronger scent attracted still more ants. Meanwhile, the unused scent on the long bridge evaporated, so the short road won without any ant measuring it.",
-            "prompt": "How did the colony pick the short road without measuring?"
+            "passage": "Here is a clue from a freezing night, when the leaf grows colder than the temperature at which water freezes. Then the invisible water vapor in the air skips the liquid step completely and changes straight into ice crystals, which we call frost. The crystals grow outward from the leaf edge and along its veins like tiny white feathers. So frost was never rain, and it was not exactly frozen dew either.",
+            "prompt": "How is frost different from frozen dew?"
           },
           {
             "id": "return",
-            "passage": "Later, the little one places a sugar cube beside the line, and before long a new line of ants branches off toward it. Now the guess changes completely. No ant is the leader, and no single ant can see the whole trail. Each one simply follows the strongest scent and adds a little more, so thousands of tiny dabs build one road. Scientists call this kind of teamwork self-organization, and abandoned roads fade once the food is gone.",
-            "prompt": "What does self-organization mean for an ant trail?"
+            "passage": "Back on the lawn, the sun rises low behind the Wonderers, and their long shadows stretch across the sparkling wet grass. The little one points at a soft glow shining around its own shadow's head, while the big one sees a glow only around its own head. Each drop works like a tiny lens that bounces sunlight straight back toward the sun. So the guess changes: dew does not fall from the sky. It grows on cold surfaces, and some drops come from the plants themselves.",
+            "prompt": "Why does each Wonderer see a glow only around its own shadow?"
           },
           {
             "id": "keep",
-            "passage": "Here is a surprise from the rainforest, where leafcutter ants sweep their trails clear of twigs until they become real little highways, crowded with ants carrying leaf pieces home to feed a fungus garden. Army ants can even become trapped on a trail that loops back on itself, marching in a circle called an ant mill. Today, computer programs imitate ant trails to plan short delivery routes. What trail would you design?",
-            "prompt": "Why do computer programs imitate ant trails?"
+            "passage": "Here is a surprise from the Namib, a foggy desert beside the sea where rain almost never falls. At dawn, a small black beetle climbs to the top of a sand dune and tips its body up into the drifting fog. Tiny drops gather on its bumpy back, grow heavy, and roll down toward its mouth for a drink. People copy this trick with tall mesh nets that catch fog water for whole villages. How would you design a way to catch the morning's water?",
+            "prompt": "How does the beetle's pose help it drink?"
           }
         ],
         "words": [
           {
-            "word": "scout",
-            "meaning": "an ant that goes out first to find food"
+            "word": "dew",
+            "meaning": "water drops that form on cold surfaces outdoors"
           },
           {
-            "word": "pheromone",
-            "meaning": "a scent chemical an animal makes to send a message"
+            "word": "guttation",
+            "meaning": "water a plant pushes out through pores at its leaf tips"
           },
           {
-            "word": "antennae",
-            "meaning": "the two feelers on an ant's head that smell and touch"
+            "word": "pores",
+            "meaning": "very tiny openings"
           },
           {
-            "word": "colony",
-            "meaning": "a big family of ants that live and work together"
+            "word": "water vapor",
+            "meaning": "water in the form of an invisible gas"
           },
           {
-            "word": "evaporate",
-            "meaning": "to turn into a gas and drift away"
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold surfaces"
           },
           {
-            "word": "self-organization",
-            "meaning": "when many simple actions build a pattern with no leader"
+            "word": "crystal",
+            "meaning": "a solid with a neat, repeating shape"
           },
           {
-            "word": "ant mill",
-            "meaning": "a circle of ants stuck following each other's trail"
+            "word": "lens",
+            "meaning": "a clear, curved thing that bends light"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
           }
         ]
       },
@@ -844,147 +855,160 @@
         "tasks": [
           {
             "plate": "wake",
-            "prompt": "Little Wonderer learns that a trail carries 1440 ants in 6 equal groups. How many ants are in each group?",
-            "expression": "1440 ÷ 6",
-            "equation": "1440 ÷ 6 =",
-            "answer": 240,
-            "hint": "Think 144 ÷ 6 = 24, then 1440 ÷ 6 = 240.",
-            "worked": "1440 ÷ 6 = 240. Each group gets the same number."
+            "prompt": "In a pretend count, Little Wonderer finds 1250 drops in each of 6 patches of lawn. How many drops is that?",
+            "expression": "1250 × 6",
+            "equation": "1250 × 6 =",
+            "answer": 7500,
+            "hint": "Think 1000 × 6 and 250 × 6, then add.",
+            "worked": "1250 × 6 = 7500. Six patches of 1250 drops."
           },
           {
             "plate": "reach",
-            "prompt": "A nest stores 4200 crumbs, and the ants eat 1675. How many are left?",
-            "expression": "4200 − 1675",
-            "equation": "4200 − 1675 =",
-            "answer": 2525,
+            "prompt": "A field of strawberry plants makes 5000 guttation drops, and 1864 dry up by breakfast. How many are left?",
+            "expression": "5000 − 1864",
+            "equation": "5000 − 1864 =",
+            "answer": 3136,
             "hint": "Regroup across the zeros.",
-            "worked": "4200 − 1675 = 2525. Take away the crumbs eaten."
+            "worked": "5000 − 1864 = 3136. Take away the drops that dried."
           },
           {
             "plate": "change",
-            "prompt": "In a pretend count, the big one sees ants lay 275 dabs of scent each hour for 8 hours. How many dabs is that?",
-            "expression": "275 × 8",
-            "equation": "275 × 8 =",
-            "answer": 2200,
-            "hint": "Multiply each place by 8, then add.",
-            "worked": "275 × 8 = 2200. Eight hours of 275 dabs."
+            "prompt": "In a pretend count, a bench holds 2375 drops and the grass beside it holds 1948. How many drops in all?",
+            "expression": "2375 + 1948",
+            "equation": "2375 + 1948 =",
+            "answer": 4323,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "2375 + 1948 = 4323. Add the bench and the grass."
           },
           {
             "plate": "notice",
-            "prompt": "In a pretend count, 3850 ants cross the short bridge and 1475 cross the long bridge. How many crossed in all?",
-            "expression": "3850 + 1475",
-            "equation": "3850 + 1475 =",
-            "answer": 5325,
-            "hint": "Add each place, starting with the ones.",
-            "worked": "3850 + 1475 = 5325. Add both bridges."
+            "prompt": "A frosty garden has 7200 frosted leaves in 9 equal rows. How many leaves are in each row?",
+            "expression": "7200 ÷ 9",
+            "equation": "7200 ÷ 9 =",
+            "answer": 800,
+            "hint": "Think 72 ÷ 9 = 8, then 7200 ÷ 9 = 800.",
+            "worked": "7200 ÷ 9 = 800. Each row gets the same number."
           },
           {
             "plate": "return",
-            "prompt": "A colony has 9 trails with 1050 ants on each. How many ants is that?",
-            "expression": "1050 × 9",
-            "equation": "1050 × 9 =",
-            "answer": 9450,
-            "hint": "Think 9 × 1000 and 9 × 50.",
-            "worked": "1050 × 9 = 9450. Nine trails of 1050 ants."
+            "prompt": "In a pretend count, the big one sees 845 shining drops in each of 8 rows. How many drops is that?",
+            "expression": "845 × 8",
+            "equation": "845 × 8 =",
+            "answer": 6760,
+            "hint": "Multiply each place by 8, then add.",
+            "worked": "845 × 8 = 6760. Eight rows of 845 drops."
           },
           {
             "plate": "keep",
-            "prompt": "Leafcutter ants carry 8000 leaf pieces, and 2365 are still on the trail. How many reached the nest?",
-            "expression": "8000 − 2365",
-            "equation": "8000 − 2365 =",
-            "answer": 5635,
+            "prompt": "A fog net catches 9000 drops, and 3456 drip off before reaching the bucket. How many reach the bucket?",
+            "expression": "9000 − 3456",
+            "equation": "9000 − 3456 =",
+            "answer": 5544,
             "hint": "Regroup across the zeros.",
-            "worked": "8000 − 2365 = 5635. Take away the pieces still on the trail."
+            "worked": "9000 − 3456 = 5544. Take away the drops that dripped off."
           }
         ]
       }
     }
   },
   "screenFree": [
-    "quiz-cards"
+    "lab-page"
   ],
-  "quiz": {
-    "title": "Four looks at an ant trail",
-    "intro": "Follow the trail from the first scout to a rainforest highway.",
-    "questions": [
-      {
-        "id": "scent",
-        "prompt": "What is an ant trail made of?",
-        "choices": [
-          "Scent",
-          "Tiny pebbles",
-          "Ant footprints"
-        ],
-        "answerIndex": 0,
-        "answer": "A trail is a road of scent called a pheromone."
-      },
-      {
-        "id": "smell",
-        "prompt": "What do ants smell with?",
-        "choices": [
-          "Their legs",
-          "Their antennae",
-          "Their jaws"
-        ],
-        "answerIndex": 1,
-        "answer": "Ants smell the trail with their two antennae."
-      },
-      {
-        "id": "wipe",
-        "prompt": "What do ants do at a wiped spot?",
-        "choices": [
-          "Turn around home",
-          "Fall asleep",
-          "Search in loops"
-        ],
-        "answerIndex": 2,
-        "answer": "They wander in loops until one finds the scent again and crosses."
-      },
-      {
-        "id": "short",
-        "prompt": "Why does the short road win?",
-        "choices": [
-          "It gets more scent",
-          "It is warmer",
-          "A leader picks it"
-        ],
-        "answerIndex": 0,
-        "answer": "Ants on the short road return sooner and add scent more often."
-      }
+  "labPage": {
+    "materials": [
+      "a small potted plant and a clear bowl",
+      "two clear glasses",
+      "ice cubes and water",
+      "a clean metal can and a spoon",
+      "table salt",
+      "wax paper and a paper towel",
+      "a dropper or a straw",
+      "a timer or a clock",
+      "paper and pencil"
     ]
   },
   "titleCard": {
     "eyebrow": "Wonder Daily",
-    "title": "How an Ant Trail Works",
-    "line": "One scout, one scent, and a road nobody painted.",
+    "title": "The Secret Life of Morning Dew",
+    "line": "Drops on the tips, feathers of ice, and a glow around your shadow.",
     "plate": "wake"
   },
   "poem": {
-    "title": "The Ant Parade",
+    "title": "The Dew Watch",
     "lines": [
-      "Little Wonderer found a parade on the stone:",
-      "a ring of black ants, and not one walked alone.",
-      "Each ant sniffed the trail of the ant just ahead",
-      "and went round and around where the last ant had led.",
+      "Little Wonderer said, “I will catch the dew fall!”",
+      "So out went a jar and a stool by the wall.",
+      "“It drips from the stars every night,” came the cry,",
+      "“and I’ll catch every drop as it falls from the sky!”",
       "",
-      "“They’re stuck,” said the big one. “Each ant trusts its nose,",
-      "and the nose says go round, so around the ring goes.",
-      "There’s a crumb in the middle, a feast for a queen,",
-      "but they never look up. It’s the strangest I’ve seen.”",
+      "Big Wonderer smiled and left on the porch light.",
+      "The little one stared at the stars half the night.",
+      "But the sky never dripped, not a drop, not a pour,",
+      "and the little one nodded and drifted to snore.",
       "",
-      "“I’ll fix it!” the little one said with a grin,",
-      "then stepped to the end of the ring and fell in.",
-      "“Just follow me out, little ants! Here we go!”",
-      "Then off round the crumb, nice and steady and slow.",
+      "At dawn, the grass glittered. The jar was wet too,",
+      "but the drops were OUTSIDE it, a jacket of dew!",
+      "“How did they get on it, if none of them fell?”",
+      "asked the little one, peeking inside the dry shell.",
       "",
-      "Round went the leader past supper and night.",
-      "Big Wonderer called, “Are you leading them right?”",
-      "“I think so,” came softly, “but I’m not really sure.",
-      "I’ve been sniffing this ant for an hour or more!”"
+      "“It never fell down,” said the big one. “It grew,",
+      "when the air touched the cold glass and gave it some dew.”",
+      "So now every night there’s a jar by the wall,",
+      "upside down, catching dew that won’t ever fall."
     ],
     "drawing": {
-      "src": "assets/an-ant-trail/poem.jpg",
-      "alt": "A black-ink drawing of a ring of ants walking round and round a single crumb on the ground, the little one stepping along beside the ring with a crumb in one mitten and the big one leaning in to watch."
+      "src": "assets/morning-dew-2026-11-24/poem.jpg",
+      "alt": "Black-ink line drawing: beside a low garden wall and an empty stool, Little Wonderer walks forward holding up a small glass jar dotted with dew drops on the outside, while Big Wonderer leans in to look. A leafy plant and grass nearby hold drops on their tips."
     }
+  },
+  "quiz": {
+    "title": "Four looks at morning dew",
+    "intro": "Follow the morning water from a grass tip to a desert beetle.",
+    "questions": [
+      {
+        "id": "guttation",
+        "prompt": "Where do drops at leaf tips come from?",
+        "choices": [
+          "From the rain",
+          "From the roots",
+          "From the stars"
+        ],
+        "answerIndex": 1,
+        "answer": "The roots push water up and out of tiny holes at the leaf tips."
+      },
+      {
+        "id": "bench",
+        "prompt": "Why is the bench dry under the branch?",
+        "choices": [
+          "It stayed warmer",
+          "It was painted",
+          "A bird sat there"
+        ],
+        "answerIndex": 0,
+        "answer": "The branch sent warmth back, so that half never got cold enough for dew."
+      },
+      {
+        "id": "frost",
+        "prompt": "What is frost made of?",
+        "choices": [
+          "Frozen rain",
+          "Snowflakes",
+          "Ice from the air"
+        ],
+        "answerIndex": 2,
+        "answer": "On a freezing night, water in the air turns straight into ice crystals."
+      },
+      {
+        "id": "beetle",
+        "prompt": "How does the desert beetle drink?",
+        "choices": [
+          "It catches fog",
+          "It digs a well",
+          "It licks the sand"
+        ],
+        "answerIndex": 0,
+        "answer": "Fog drops gather on its bumpy back and roll down to its mouth."
+      }
+    ]
   }
 }
