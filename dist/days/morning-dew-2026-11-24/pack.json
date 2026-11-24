@@ -1,0 +1,1014 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "morning-dew-2026-11-24",
+  "topic": "morning dew up close",
+  "why": "Comparing drops on grass tips, a half-wet bench and frost helps your child use evidence to explain where morning water really comes from.",
+  "teaser": "Find drops on every grass tip, then meet water a plant pushes out, a bench that is only half wet, feathers of ice and a glow around your shadow.",
+  "aliases": [
+    "morning dew up close",
+    "guttation",
+    "hoarfrost",
+    "dew halo",
+    "heiligenschein",
+    "fog beetle",
+    "fog-basking beetle"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "number-crunch",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "addition-regrouping",
+      "subtraction-regrouping"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Morning Dew",
+  "title": "The Secret Life of Morning Dew",
+  "question": "Where do the morning's drops really come from?",
+  "idea": "Dew is not rain. It grows on things that get cold under a clear night sky, when water hiding in the air turns into drops, or into frost if it is freezing. Some drops on leaf tips are not dew at all: the plant pushed them out from its roots.",
+  "curiosity": {
+    "intro": "Start with a drop on every grass tip. Then meet water from inside a plant, a half-wet bench, feathers of ice and a desert beetle that drinks fog.",
+    "carryForward": "Next clear, still morning, look for drops on grass tips and check which things stayed dry.",
+    "questions": [
+      {
+        "id": "guttation",
+        "plate": "reach",
+        "question": "Can a plant make its own drops?",
+        "notice": "Find a drop on the tip of each little tooth around the leaf, while the middle of the leaf stays dry.",
+        "say": "Yes! At night, when the soil is damp, the roots keep pushing water up into the leaves. The extra water squeezes out of tiny holes at the leaf tips and edges. This is called guttation. Those drops look like dew, but they came from inside the plant.",
+        "try": "Water a small potted plant well in the evening. Set a clear bowl upside down over it for the night. In the morning, look at the leaf tips and edges. Are the drops all over, or lined up at the tips?"
+      },
+      {
+        "id": "bench",
+        "plate": "change",
+        "question": "Why is only half of the bench wet?",
+        "notice": "Compare the beaded, open half of the bench with the dry half under the branch.",
+        "say": "All night, things give their warmth away to the clear sky and grow cold. The open half got cold enough for water in the air to turn into drops on it. The branch sent some warmth back down, like a blanket, so that half stayed dry. Clouds and wind can stop dew too.",
+        "try": "Fill one glass with ice water and one glass with tap water. Wait five minutes. Which glass grows drops on the outside? Wipe it dry and watch the drops come back."
+      },
+      {
+        "id": "frost",
+        "plate": "notice",
+        "question": "Where do frost feathers come from?",
+        "notice": "Find the white ice feathers growing out from the leaf edge and veins. Are there any round drops?",
+        "say": "On a freezing night, the leaf gets colder than ice. Then the water hiding in the air skips the drop step. It turns straight into ice crystals, called frost. The crystals keep growing outward, so they look like tiny white feathers.",
+        "try": "Fill a clean metal can with ice and stir in two big spoons of salt. Wait about ten minutes. Look for white frost growing on the outside of the can."
+      },
+      {
+        "id": "beetle",
+        "plate": "keep",
+        "question": "How can a beetle drink fog?",
+        "notice": "Find the beetle's raised back end, its bumpy black back and the drop rolling toward its head.",
+        "say": "In a foggy desert by the sea, it almost never rains. At dawn, this beetle climbs a dune and tips its back up into the fog. Tiny fog drops stick to its bumpy back, join into bigger drops and roll down to its mouth. People copy this trick with big nets that catch fog water.",
+        "try": "Drip water onto wax paper and onto a paper towel. Tilt both pieces. Where do the drops roll like beads, and where do they soak in?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/morning-dew-2026-11-24/01-tips.jpg",
+      "original": "assets/morning-dew-2026-11-24/01-tips.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/01-tips-fold.jpg",
+      "title": "A drop on every tip",
+      "alt": "At dawn beside a dry stone garden path, Little Wonderer kneels at the edge of tall grass, one mitten raised near the blades, while Big Wonderer leans in behind. Many grass blades hold small round clear drops, several right at their tips.",
+      "caption": "The path is dry, yet the grass is beaded with drops. No rain fell, so where did this water come from?"
+    },
+    {
+      "id": "reach",
+      "src": "assets/morning-dew-2026-11-24/02-guttation.jpg",
+      "original": "assets/morning-dew-2026-11-24/02-guttation.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/02-guttation-fold.jpg",
+      "title": "Drops from inside",
+      "alt": "A three-part strawberry leaf on pale paper. The leaf surface is dry, but a small round clear drop sits on the tip of every little tooth around its edge, like a necklace.",
+      "caption": "Guttation: the roots pushed this water up and out of tiny holes at the tooth tips. These drops came from inside the plant."
+    },
+    {
+      "id": "change",
+      "src": "assets/morning-dew-2026-11-24/03-bench.jpg",
+      "original": "assets/morning-dew-2026-11-24/03-bench.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/03-bench-fold.jpg",
+      "title": "Half a wet bench",
+      "alt": "A wooden garden bench on a dewy lawn at dawn. The left half of the seat and armrest, open to the sky, is covered in tiny clear beads; the right half, under a leafy tree branch, is in shade and dry, and the grass there has no drops.",
+      "caption": "The open half lost its warmth to the clear sky and grew dew. The branch sent warmth back, so the sheltered half stayed dry."
+    },
+    {
+      "id": "notice",
+      "src": "assets/morning-dew-2026-11-24/04-frost.jpg",
+      "original": "assets/morning-dew-2026-11-24/04-frost.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/04-frost-fold.jpg",
+      "title": "Feathers of ice",
+      "alt": "A fallen green-and-brown leaf on frosty ground, its edges and veins furred with fine white feathery ice crystals, beside grass blades fringed with frost.",
+      "caption": "On a freezing night, water from the air turned straight into ice crystals. Frost grows outward like feathers; it never fell."
+    },
+    {
+      "id": "return",
+      "src": "assets/morning-dew-2026-11-24/05-halo.jpg",
+      "original": "assets/morning-dew-2026-11-24/05-halo.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/05-halo-fold.jpg",
+      "title": "A glow around a shadow",
+      "alt": "On a dewy lawn at sunrise, Little Wonderer stands and points at two long shadows stretching across the wet grass, while Big Wonderer sits close beside. A soft pale glow brightens the grass around the head of each shadow.",
+      "caption": "Dew drops bounce sunlight back toward the sun, so the wet grass glows around a shadow's head. In real life, each looker sees the glow only around its own shadow."
+    },
+    {
+      "id": "keep",
+      "src": "assets/morning-dew-2026-11-24/06-beetle.jpg",
+      "original": "assets/morning-dew-2026-11-24/06-beetle.png",
+      "foldSrc": "assets/morning-dew-2026-11-24/06-beetle-fold.jpg",
+      "title": "A beetle drinks fog",
+      "alt": "A black bumpy-backed darkling beetle stands head-down on a pale sand dune at dawn, with fog drifting in from the sea behind it. Clear drops sit on the bumps of its back, and one larger drop has rolled near its head.",
+      "caption": "In a foggy desert, this beetle tips its back into the fog. Drops gather on the bumps and roll down to its mouth."
+    }
+  ],
+  "reading": {
+    "title": "The drops that grew",
+    "coverPlate": "wake",
+    "coverText": "Start with a drop on every grass tip. Then find out which drops grew from the air, which came from the plant, and which turned to ice.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A drop on every tip",
+        "passage": "Little Wonderer kneels at the edge of the lawn at dawn. Almost every grass blade holds one round drop, right on its very tip. The garden path is dry, so no rain fell last night. Big Wonderer leans in close. Why would the water sit only on the tips?",
+        "prompt": "How can you tell that no rain fell?",
+        "foldable": {
+          "heading": "A drop on every tip",
+          "body": "Almost every grass blade holds one drop on its tip. The path is dry, so no rain fell. Where did the water come from?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Drops from inside",
+        "passage": "Here is a surprise. Some of those drops are not dew at all. At night, a plant's roots keep pushing water up into its leaves. The extra water squeezes out of tiny holes at the leaf tips and edges. This is called guttation. A strawberry leaf can wear a drop on every tooth, like a necklace.",
+        "prompt": "Where does guttation water come from?",
+        "foldable": {
+          "heading": "Drops from inside",
+          "body": "Some drops are not dew. Roots push water up, and it squeezes out at the leaf tips. That is called guttation."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "Half a wet bench",
+        "passage": "Here is a test. Look at a garden bench at dawn. The half under the open sky is beaded with dew, but the half under a tree branch is dry. All night, the open half gave its warmth away to the clear sky and grew cold. The branch sent some warmth back, like a blanket. Dew forms only on things that get cold enough.",
+        "prompt": "Why is the bench dry under the branch?",
+        "foldable": {
+          "heading": "Half a wet bench",
+          "body": "The open half of the bench got cold under the clear sky and grew dew. The half under a branch stayed warmer and dry."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Feathers of ice",
+        "passage": "Here is a clue. On a freezing night, the leaf gets colder than ice. Then the water hiding in the air does not turn into drops. It turns straight into ice crystals, called frost. The crystals grow out from the leaf edge like tiny white feathers. So frost is not frozen rain. It grew right on the leaf.",
+        "prompt": "What does the air's water turn into on a freezing night?",
+        "foldable": {
+          "heading": "Feathers of ice",
+          "body": "On a freezing night, water in the air turns straight into ice on the leaf. Those white feathers are frost."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A glow around a shadow",
+        "passage": "Back on the lawn, the sun rises low behind the Wonderers. Little Wonderer points at its long shadow on the wet grass. A soft glow shines around the shadow's head! Each drop works like a tiny lens and bounces sunlight back toward the sun. Now the guess changes. Dew did not fall from the sky. It grew on cold grass, and some drops came from the plants.",
+        "prompt": "Did the dew fall from the sky?",
+        "foldable": {
+          "heading": "A glow around a shadow",
+          "body": "A soft glow shines around each shadow's head. The drops bounce sunlight back. Dew grows on cold grass. It does not fall."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "A beetle drinks fog",
+        "passage": "Here is a surprise from a foggy desert by the sea, where it almost never rains. At dawn, a small black beetle climbs a dune and tips its body up into the fog. Tiny drops gather on its bumpy back and roll down to its mouth. People copy this trick with big nets that catch fog water. How would you catch the morning's water?",
+        "prompt": "How does the beetle get a drink?",
+        "foldable": {
+          "heading": "A beetle drinks fog",
+          "body": "A desert beetle tips its back into the fog. Drops gather and roll down to its mouth. People copy it with fog nets."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "dew",
+        "meaning": "water drops that grow on cold things outdoors"
+      },
+      {
+        "word": "guttation",
+        "meaning": "water a plant pushes out of its leaf tips"
+      },
+      {
+        "word": "frost",
+        "meaning": "ice crystals that grow on very cold things"
+      },
+      {
+        "word": "lens",
+        "meaning": "a clear, curved thing that bends light"
+      },
+      {
+        "word": "fog",
+        "meaning": "a cloud that sits low near the ground"
+      }
+    ],
+    "questions": [
+      "Where does guttation water come from?",
+      "Why does the open half of the bench get dew?",
+      "How is frost different from frozen rain?",
+      "Why does the glow appear around a shadow's head?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: where dew grows, where guttation drops come from, and what frost is.",
+      "example": "Example: Dew grows on things that get cold at night. Guttation drops come from the roots. Frost is water from the air that turned straight into ice."
+    },
+    "foldableTitle": "A little book of morning dew",
+    "foldableCoverLine": "Morning Dew",
+    "foldableNote": "Carry six morning dew clues in a small book."
+  },
+  "math": {
+    "title": "Morning dew numbers",
+    "eyebrow": "NUMBER CRUNCH",
+    "plate": "wake",
+    "intro": "Six add-and-subtract puzzles tied to grass-tip drops, a half-wet bench, frost and a fog beetle.",
+    "actionLabel": "Solve",
+    "tasks": [
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          38,
+          47
+        ],
+        "prompt": "Little Wonderer counts 38 drops on grass tips by the path and 47 more by the fence. How many drops is that in all?",
+        "equation": "38 + 47 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 85,
+        "worked": "8 + 7 = 15. Trade 10 ones for 1 ten: 38 + 47 = 85.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          91,
+          56
+        ],
+        "prompt": "A strawberry patch wears 91 guttation drops at dawn. By breakfast, 56 have dried up. How many drops are left?",
+        "equation": "91 − 56 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 35,
+        "worked": "91 − 56 = 35. Regroup ones, then subtract tens.",
+        "plate": "reach",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          64,
+          18
+        ],
+        "prompt": "The open half of the bench has 64 dew beads, and the big one finds 18 more on the armrest. How many beads in all?",
+        "equation": "64 + 18 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 82,
+        "worked": "4 + 8 = 12. Trade 10 ones for 1 ten: 64 + 18 = 82.",
+        "plate": "change",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          83,
+          47
+        ],
+        "prompt": "A cold leaf grows 83 frost feathers. The sun melts 47 of them. How many frost feathers are left?",
+        "equation": "83 − 47 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 36,
+        "worked": "83 − 47 = 36. Regroup ones, then subtract tens.",
+        "plate": "notice",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "addition-regrouping",
+        "operands": [
+          29,
+          45
+        ],
+        "prompt": "The little one counts 29 shining drops near its shadow's head, then 45 more near its feet. How many drops in all?",
+        "equation": "29 + 45 =",
+        "hint": "Add the ones first. Trade 10 ones for 1 ten.",
+        "answer": 74,
+        "worked": "9 + 5 = 14. Trade 10 ones for 1 ten: 29 + 45 = 74.",
+        "plate": "return",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "subtraction-regrouping",
+        "operands": [
+          70,
+          26
+        ],
+        "prompt": "In a pretend count, the beetle's back gathers 70 fog drops, and 26 roll off the side. How many reach its mouth?",
+        "equation": "70 − 26 =",
+        "hint": "There are not enough ones. Trade 1 ten for 10 ones, then subtract.",
+        "answer": 44,
+        "worked": "70 − 26 = 44. Regroup ones, then subtract tens.",
+        "plate": "keep",
+        "label": "TASK 6"
+      }
+    ],
+    "extension": "Choose one problem and draw tens as sticks and ones as dots to check your regrouping.",
+    "printNote": "Use these pretend notebook numbers about morning dew. The pictures are not counting data.",
+    "parentNote": "Six two-digit add/subtract puzzles with regrouping. Numbers are pretend practice, not real dew counts.",
+    "answerKeyIntro": "Math answers (pretend notebook numbers):"
+  },
+  "writing": {
+    "title": "Explain a morning dew clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw a grass blade with a drop on its tip, and show where the water came from.",
+    "starter": "My morning dew clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The drops on the leaf tips came from",
+        "hint": "what do the roots do at night?"
+      },
+      {
+        "plate": "change",
+        "start": "The bench is dry under the branch because",
+        "hint": "what did the branch send back?"
+      },
+      {
+        "plate": "notice",
+        "start": "Frost looks like feathers because",
+        "hint": "what does the air's water turn into?"
+      }
+    ],
+    "words": [
+      "dew",
+      "frost",
+      "cold",
+      "roots",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "The garden path is dry."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "From the roots, inside the plant."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "The branch sent warmth back, so it stayed too warm."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "It turns straight into ice crystals called frost."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "No. It grew on cold grass."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "Fog drops roll down its bumpy back to its mouth."
+    },
+    {
+      "label": "Math · all",
+      "text": "85, 35, 82, 36, 74, 44."
+    },
+    {
+      "label": "Screen-free",
+      "text": "From the roots; it stayed warmer; ice from the air; it catches fog."
+    }
+  ],
+  "parentGuidance": "Dawn grass can be slippery, so walk carefully. The salt-and-ice can gets very cold: touch it only briefly, or with a cloth. Wash hands after handling plants and soil.",
+  "sources": [
+    {
+      "label": "Wikipedia — Dew (forms on surfaces that cool by radiating heat to a clear night sky; clouds and wind reduce dew)",
+      "url": "https://en.wikipedia.org/wiki/Dew"
+    },
+    {
+      "label": "Wikipedia — Guttation (root pressure pushes xylem sap out of hydathodes at leaf tips and edges, often mistaken for dew)",
+      "url": "https://en.wikipedia.org/wiki/Guttation"
+    },
+    {
+      "label": "Wikipedia — Frost (below freezing, water vapour deposits directly as ice crystals: hoar frost)",
+      "url": "https://en.wikipedia.org/wiki/Frost"
+    },
+    {
+      "label": "Wikipedia — Heiligenschein (dew drops act as lenses and send light back toward the sun, so a glow appears around the observer's own shadow head)",
+      "url": "https://en.wikipedia.org/wiki/Heiligenschein"
+    },
+    {
+      "label": "Wikipedia — Onymacris unguicularis (Namib fog-basking beetle that tilts into fog and drinks the drops)",
+      "url": "https://en.wikipedia.org/wiki/Onymacris_unguicularis"
+    },
+    {
+      "label": "Wikipedia — Fog collection (mesh nets that harvest fog water for communities)",
+      "url": "https://en.wikipedia.org/wiki/Fog_collection"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer looks at the grass. Each blade has one drop. The path is dry. Big Wonderer looks too. Where did the water come from?",
+            "prompt": "Is the path wet or dry?"
+          },
+          {
+            "id": "reach",
+            "passage": "Some drops are not dew. Roots push water up. Water comes out of leaf tips. This is guttation.",
+            "prompt": "Where does the water come out?"
+          },
+          {
+            "id": "change",
+            "passage": "Half the bench is wet. Half is under a tree. That half stays dry. The open sky makes things cold.",
+            "prompt": "Which half is dry?"
+          },
+          {
+            "id": "notice",
+            "passage": "The night is very cold. Water in the air turns to ice. The ice looks like feathers. It is called frost.",
+            "prompt": "What is frost?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one sees its shadow. A soft glow is around its head! Dew did not fall. It grew on cold grass.",
+            "prompt": "Did the dew fall?"
+          },
+          {
+            "id": "keep",
+            "passage": "A beetle lives in a dry desert. It tips its back into fog. Drops roll down to its mouth. How would you catch water?",
+            "prompt": "Where do the drops go?"
+          }
+        ],
+        "words": [
+          {
+            "word": "dew",
+            "meaning": "drops that grow on cold things"
+          },
+          {
+            "word": "frost",
+            "meaning": "ice that grows on cold things"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud near the ground"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer sees 8 drops, then 7 more. How many drops?",
+            "expression": "8 + 7",
+            "equation": "8 + 7 =",
+            "answer": 15,
+            "hint": "Make a ten: 8 + 2 + 5.",
+            "worked": "8 + 7 = 15. Add both sets of drops."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A leaf has 13 drops. Then 5 roll off. How many are left?",
+            "expression": "13 − 5",
+            "equation": "13 − 5 =",
+            "answer": 8,
+            "hint": "Take 5 away from 13.",
+            "worked": "13 − 5 = 8. Take away the drops that rolled off."
+          },
+          {
+            "plate": "change",
+            "prompt": "The bench has 9 big drops. The big one finds 4 more. How many drops?",
+            "expression": "9 + 4",
+            "equation": "9 + 4 =",
+            "answer": 13,
+            "hint": "Make a ten: 9 + 1 + 3.",
+            "worked": "9 + 4 = 13. Add both sets of drops."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A leaf has 17 ice feathers. Then 6 melt. How many are left?",
+            "expression": "17 − 6",
+            "equation": "17 − 6 =",
+            "answer": 11,
+            "hint": "Take 6 away from 17.",
+            "worked": "17 − 6 = 11. Take away the feathers that melted."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one sees 6 drops by its shadow and 6 more. How many?",
+            "expression": "6 + 6",
+            "equation": "6 + 6 =",
+            "answer": 12,
+            "hint": "Double the 6 drops: add 6 and 6.",
+            "worked": "6 + 6 = 12. Add both sets of drops."
+          },
+          {
+            "plate": "keep",
+            "prompt": "The beetle has 20 drops on its back. Then 4 roll off. How many are left?",
+            "expression": "20 − 4",
+            "equation": "20 − 4 =",
+            "answer": 16,
+            "hint": "Take 4 away from 20.",
+            "worked": "20 − 4 = 16. Take away the drops that rolled off."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Little Wonderer kneels by the lawn at dawn. Almost every grass blade has one drop on its tip. The path is dry, so it did not rain. Big Wonderer leans in close. Where did the water come from?",
+            "prompt": "How do we know it did not rain?"
+          },
+          {
+            "id": "reach",
+            "passage": "Here is a surprise. Some drops are not dew at all. At night, roots push water up into the leaves. Extra water squeezes out of tiny holes at the tips. This is called guttation.",
+            "prompt": "What do the roots push up?"
+          },
+          {
+            "id": "change",
+            "passage": "Look at a bench at dawn. The open half is covered in dew. The half under a branch is dry. The open sky made that half very cold. The branch kept the other half warmer.",
+            "prompt": "Why is one half dry?"
+          },
+          {
+            "id": "notice",
+            "passage": "On a freezing night, the leaf gets very cold. Water in the air does not make drops. It turns straight into tiny ice crystals. They grow like white feathers called frost.",
+            "prompt": "What do the ice crystals look like?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one points at its shadow on the grass. A soft glow shines around the shadow's head! The drops bounce sunlight back. So dew does not fall from the sky. It grows on cold grass.",
+            "prompt": "Where does dew grow?"
+          },
+          {
+            "id": "keep",
+            "passage": "A small beetle lives in a foggy desert. It climbs a dune and tips up into the fog. Drops gather on its bumpy back. They roll down to its mouth. How would you catch the morning's water?",
+            "prompt": "How does the beetle drink?"
+          }
+        ],
+        "words": [
+          {
+            "word": "dew",
+            "meaning": "water drops that grow on cold things outdoors"
+          },
+          {
+            "word": "guttation",
+            "meaning": "water a plant pushes out of its leaf tips"
+          },
+          {
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold things"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 27 drops on grass tips, then 16 more. How many drops in all?",
+            "expression": "27 + 16",
+            "equation": "27 + 16 =",
+            "answer": 43,
+            "hint": "Add the ones, then the tens.",
+            "worked": "27 + 16 = 43. Add both sets of drops."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A strawberry leaf has 42 drops at dawn. By noon, 15 dry up. How many are left?",
+            "expression": "42 − 15",
+            "equation": "42 − 15 =",
+            "answer": 27,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "42 − 15 = 27. Take away the drops that dried."
+          },
+          {
+            "plate": "change",
+            "prompt": "The open side of the bench has 18 drops on one board and 19 on the next. How many in all?",
+            "expression": "18 + 19",
+            "equation": "18 + 19 =",
+            "answer": 37,
+            "hint": "Think 18 + 20, then take 1 away.",
+            "worked": "18 + 19 = 37. Add both boards."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A leaf has 50 frost feathers. The sun melts 24. How many are left?",
+            "expression": "50 − 24",
+            "equation": "50 − 24 =",
+            "answer": 26,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "50 − 24 = 26. Take away the feathers that melted."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one counts 33 shining drops near its shadow, then 14 more. How many?",
+            "expression": "33 + 14",
+            "equation": "33 + 14 =",
+            "answer": 47,
+            "hint": "Add the ones, then the tens.",
+            "worked": "33 + 14 = 47. Add both sets of drops."
+          },
+          {
+            "plate": "keep",
+            "prompt": "The beetle collects 45 fog drops and drinks 28. How many are left?",
+            "expression": "45 − 28",
+            "equation": "45 − 28 =",
+            "answer": 17,
+            "hint": "Trade 1 ten for 10 ones.",
+            "worked": "45 − 28 = 17. Take away the drops it drank."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "At dawn, Little Wonderer kneels at the edge of the lawn. Almost every slender grass blade holds a single round drop perched on its tip. The stone path beside the grass is completely dry, so no rain fell during the night. Big Wonderer leans in close. Why would the water gather only on the very tips?",
+            "prompt": "What clue shows that no rain fell?"
+          },
+          {
+            "id": "reach",
+            "passage": "Here is a surprise: some of those drops are not dew at all. At night, when the soil is damp, a plant's roots keep pushing water up into its leaves. The extra water squeezes out through tiny pores at the leaf tips and edges, a process called guttation. A strawberry leaf can wear one drop on every tooth, like a necklace.",
+            "prompt": "How is guttation different from dew?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a test you can see at dawn: one half of a garden bench is beaded with dew, while the half under a tree branch stays dry. All night, the open half gave its warmth away to the clear sky and grew cold. The branch sent some warmth back down, like a blanket. Dew forms only on surfaces that become cold enough.",
+            "prompt": "How does the branch act like a blanket?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue from a freezing night, when the leaf grows colder than ice. Then the invisible water in the air skips the liquid step completely. It changes straight into ice crystals, which we call frost. The crystals grow outward from the leaf edge like tiny white feathers, so frost was never rain at all.",
+            "prompt": "Which step does the water skip when frost forms?"
+          },
+          {
+            "id": "return",
+            "passage": "Back on the lawn, the sun rises low behind the Wonderers, and their long shadows stretch across the wet grass. The little one points at a soft glow around its own shadow's head. Each drop works like a tiny lens and bounces sunlight straight back toward the sun. So the guess changes: dew does not fall from the sky. It grows on cold surfaces, and some drops come from the plants themselves.",
+            "prompt": "Why does a glow appear around the shadow's head?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise from a foggy desert by the sea, where it almost never rains. At dawn, a small black beetle climbs a dune and tips its body up into the drifting fog. Tiny drops gather on its bumpy back and roll down toward its mouth. People copy this trick with tall nets that catch fog water for villages. How would you catch the morning's water?",
+            "prompt": "How do people copy the beetle?"
+          }
+        ],
+        "words": [
+          {
+            "word": "dew",
+            "meaning": "water drops that grow on cold surfaces outdoors"
+          },
+          {
+            "word": "guttation",
+            "meaning": "water a plant pushes out through pores at its leaf tips"
+          },
+          {
+            "word": "pores",
+            "meaning": "very tiny openings"
+          },
+          {
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold surfaces"
+          },
+          {
+            "word": "crystal",
+            "meaning": "a solid with a neat, repeating shape"
+          },
+          {
+            "word": "lens",
+            "meaning": "a clear, curved thing that bends light"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer finds 7 drops on each of 8 grass blades. How many drops is that?",
+            "expression": "7 × 8",
+            "equation": "7 × 8 =",
+            "answer": 56,
+            "hint": "Think 7 × 8, or add 7 eight times.",
+            "worked": "7 × 8 = 56. Eight blades of 7 drops."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A strawberry plant has 72 drops shared equally across 8 leaves. How many drops are on each leaf?",
+            "expression": "72 ÷ 8",
+            "equation": "72 ÷ 8 =",
+            "answer": 9,
+            "hint": "Think which number times 8 makes 72.",
+            "worked": "72 ÷ 8 = 9. Each leaf gets the same number."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, the open side of the bench holds 386 drops and the grass beside it holds 247. How many drops in all?",
+            "expression": "386 + 247",
+            "equation": "386 + 247 =",
+            "answer": 633,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "386 + 247 = 633. Add the bench and the grass."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A frosty leaf has 900 ice crystals, and the sun melts 365. How many crystals are left?",
+            "expression": "900 − 365",
+            "equation": "900 − 365 =",
+            "answer": 535,
+            "hint": "Regroup across the zeros.",
+            "worked": "900 − 365 = 535. Take away the crystals that melted."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one sees 6 shining drops in each of 9 rows of grass. How many drops is that?",
+            "expression": "6 × 9",
+            "equation": "6 × 9 =",
+            "answer": 54,
+            "hint": "Think 6 × 10, then take away 6.",
+            "worked": "6 × 9 = 54. Nine rows of 6 drops."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A beetle collects 60 tiny drops over 6 mornings, the same number each morning. How many drops does it collect each morning?",
+            "expression": "60 ÷ 6",
+            "equation": "60 ÷ 6 =",
+            "answer": 10,
+            "hint": "Think which number times 6 makes 60.",
+            "worked": "60 ÷ 6 = 10. Each morning gets the same number."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "At dawn, Little Wonderer kneels at the edge of the lawn and discovers that almost every slender grass blade is holding a single round drop perched right on its tip. The stone path beside the grass is completely dry, which means no rain fell during the night. Big Wonderer leans in close, puzzled too. Why would the water gather only on the very tips of the blades?",
+            "prompt": "Why does the dry path matter as evidence?"
+          },
+          {
+            "id": "reach",
+            "passage": "Here is a surprise: some of those drops are not dew at all, because they came from inside the plant. At night, when the soil is damp, a plant's roots keep pushing water upward into its leaves with steady pressure. The extra water squeezes out through tiny pores at the leaf tips and edges, a process scientists call guttation. A strawberry leaf can wear one drop on every tooth, like a necklace.",
+            "prompt": "What pushes guttation water out of the leaf?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a test you can see on any clear morning. One half of a garden bench is beaded with dew, while the half beneath a tree branch stays perfectly dry. All night long, the open half gave its warmth away to the clear sky and grew colder than the air around it. The branch above the other half sent some warmth back down, like a blanket, and clouds do the same thing. Dew forms only on surfaces that become cold enough.",
+            "prompt": "Why might a cloudy night leave less dew?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue from a freezing night, when the leaf grows colder than the temperature at which water freezes. Then the invisible water vapor in the air skips the liquid step completely and changes straight into ice crystals, which we call frost. The crystals grow outward from the leaf edge and along its veins like tiny white feathers. So frost was never rain, and it was not exactly frozen dew either.",
+            "prompt": "How is frost different from frozen dew?"
+          },
+          {
+            "id": "return",
+            "passage": "Back on the lawn, the sun rises low behind the Wonderers, and their long shadows stretch across the sparkling wet grass. The little one points at a soft glow shining around its own shadow's head, while the big one sees a glow only around its own head. Each drop works like a tiny lens that bounces sunlight straight back toward the sun. So the guess changes: dew does not fall from the sky. It grows on cold surfaces, and some drops come from the plants themselves.",
+            "prompt": "Why does each Wonderer see a glow only around its own shadow?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise from the Namib, a foggy desert beside the sea where rain almost never falls. At dawn, a small black beetle climbs to the top of a sand dune and tips its body up into the drifting fog. Tiny drops gather on its bumpy back, grow heavy, and roll down toward its mouth for a drink. People copy this trick with tall mesh nets that catch fog water for whole villages. How would you design a way to catch the morning's water?",
+            "prompt": "How does the beetle's pose help it drink?"
+          }
+        ],
+        "words": [
+          {
+            "word": "dew",
+            "meaning": "water drops that form on cold surfaces outdoors"
+          },
+          {
+            "word": "guttation",
+            "meaning": "water a plant pushes out through pores at its leaf tips"
+          },
+          {
+            "word": "pores",
+            "meaning": "very tiny openings"
+          },
+          {
+            "word": "water vapor",
+            "meaning": "water in the form of an invisible gas"
+          },
+          {
+            "word": "frost",
+            "meaning": "ice crystals that grow on very cold surfaces"
+          },
+          {
+            "word": "crystal",
+            "meaning": "a solid with a neat, repeating shape"
+          },
+          {
+            "word": "lens",
+            "meaning": "a clear, curved thing that bends light"
+          },
+          {
+            "word": "fog",
+            "meaning": "a cloud that sits low near the ground"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "In a pretend count, Little Wonderer finds 1250 drops in each of 6 patches of lawn. How many drops is that?",
+            "expression": "1250 × 6",
+            "equation": "1250 × 6 =",
+            "answer": 7500,
+            "hint": "Think 1000 × 6 and 250 × 6, then add.",
+            "worked": "1250 × 6 = 7500. Six patches of 1250 drops."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A field of strawberry plants makes 5000 guttation drops, and 1864 dry up by breakfast. How many are left?",
+            "expression": "5000 − 1864",
+            "equation": "5000 − 1864 =",
+            "answer": 3136,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 1864 = 3136. Take away the drops that dried."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a bench holds 2375 drops and the grass beside it holds 1948. How many drops in all?",
+            "expression": "2375 + 1948",
+            "equation": "2375 + 1948 =",
+            "answer": 4323,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "2375 + 1948 = 4323. Add the bench and the grass."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A frosty garden has 7200 frosted leaves in 9 equal rows. How many leaves are in each row?",
+            "expression": "7200 ÷ 9",
+            "equation": "7200 ÷ 9 =",
+            "answer": 800,
+            "hint": "Think 72 ÷ 9 = 8, then 7200 ÷ 9 = 800.",
+            "worked": "7200 ÷ 9 = 800. Each row gets the same number."
+          },
+          {
+            "plate": "return",
+            "prompt": "In a pretend count, the big one sees 845 shining drops in each of 8 rows. How many drops is that?",
+            "expression": "845 × 8",
+            "equation": "845 × 8 =",
+            "answer": 6760,
+            "hint": "Multiply each place by 8, then add.",
+            "worked": "845 × 8 = 6760. Eight rows of 845 drops."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A fog net catches 9000 drops, and 3456 drip off before reaching the bucket. How many reach the bucket?",
+            "expression": "9000 − 3456",
+            "equation": "9000 − 3456 =",
+            "answer": 5544,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 3456 = 5544. Take away the drops that dripped off."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "lab-page"
+  ],
+  "labPage": {
+    "materials": [
+      "a small potted plant and a clear bowl",
+      "two clear glasses",
+      "ice cubes and water",
+      "a clean metal can and a spoon",
+      "table salt",
+      "wax paper and a paper towel",
+      "a dropper or a straw",
+      "a timer or a clock",
+      "paper and pencil"
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "The Secret Life of Morning Dew",
+    "line": "Drops on the tips, feathers of ice, and a glow around your shadow.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "The Dew Watch",
+    "lines": [
+      "Little Wonderer said, “I will catch the dew fall!”",
+      "So out went a jar and a stool by the wall.",
+      "“It drips from the stars every night,” came the cry,",
+      "“and I’ll catch every drop as it falls from the sky!”",
+      "",
+      "Big Wonderer smiled and left on the porch light.",
+      "The little one stared at the stars half the night.",
+      "But the sky never dripped, not a drop, not a pour,",
+      "and the little one nodded and drifted to snore.",
+      "",
+      "At dawn, the grass glittered. The jar was wet too,",
+      "but the drops were OUTSIDE it, a jacket of dew!",
+      "“How did they get on it, if none of them fell?”",
+      "asked the little one, peeking inside the dry shell.",
+      "",
+      "“It never fell down,” said the big one. “It grew,",
+      "when the air touched the cold glass and gave it some dew.”",
+      "So now every night there’s a jar by the wall,",
+      "upside down, catching dew that won’t ever fall."
+    ],
+    "drawing": {
+      "src": "assets/morning-dew-2026-11-24/poem.jpg",
+      "alt": "Black-ink line drawing: beside a low garden wall and an empty stool, Little Wonderer walks forward holding up a small glass jar dotted with dew drops on the outside, while Big Wonderer leans in to look. A leafy plant and grass nearby hold drops on their tips."
+    }
+  },
+  "quiz": {
+    "title": "Four looks at morning dew",
+    "intro": "Follow the morning water from a grass tip to a desert beetle.",
+    "questions": [
+      {
+        "id": "guttation",
+        "prompt": "Where do drops at leaf tips come from?",
+        "choices": [
+          "From the rain",
+          "From the roots",
+          "From the stars"
+        ],
+        "answerIndex": 1,
+        "answer": "The roots push water up and out of tiny holes at the leaf tips."
+      },
+      {
+        "id": "bench",
+        "prompt": "Why is the bench dry under the branch?",
+        "choices": [
+          "It stayed warmer",
+          "It was painted",
+          "A bird sat there"
+        ],
+        "answerIndex": 0,
+        "answer": "The branch sent warmth back, so that half never got cold enough for dew."
+      },
+      {
+        "id": "frost",
+        "prompt": "What is frost made of?",
+        "choices": [
+          "Frozen rain",
+          "Snowflakes",
+          "Ice from the air"
+        ],
+        "answerIndex": 2,
+        "answer": "On a freezing night, water in the air turns straight into ice crystals."
+      },
+      {
+        "id": "beetle",
+        "prompt": "How does the desert beetle drink?",
+        "choices": [
+          "It catches fog",
+          "It digs a well",
+          "It licks the sand"
+        ],
+        "answerIndex": 0,
+        "answer": "Fog drops gather on its bumpy back and roll down to its mouth."
+      }
+    ]
+  }
+}

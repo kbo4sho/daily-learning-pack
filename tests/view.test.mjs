@@ -71,8 +71,8 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.doesNotMatch(landing, /quiet paper, quiet ink/i);
   const todayPack = JSON.parse(await read("dist/today/pack.json"));
   assert.equal(todayPack.slug, latest.slug);
-  assert.equal(latest.slug, "an-ant-trail");
-  assert.equal(latest.date, "2026-11-23");
+  assert.equal(latest.slug, "morning-dew-2026-11-24");
+  assert.equal(latest.date, "2026-11-24");
   const fingerprints = json.days.find((day) => day.slug === "fingerprints");
   assert.equal(fingerprints.date, "2026-10-07");
   assert.equal(fingerprints.latest, false);
@@ -90,6 +90,7 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.deepEqual(
     json.days.map((day) => day.slug),
     [
+      "morning-dew-2026-11-24",
       "an-ant-trail",
       "a-hanger-balance-scale",
       "how-do-combination-locks-work",
@@ -162,20 +163,20 @@ test("committed archive landing and the child’s /today/ are present", async ()
   assert.equal(todayPack.math.tasks.length, 6);
   assert.deepEqual(
     todayPack.math.tasks.map((t) => t.answer),
-    [61, 92, 70, 58, 30, 90],
+    [85, 35, 82, 36, 74, 44],
   );
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.answer)).size, 6);
-  assert.equal(todayPack.mathTemplate, "compare-and-round");
+  assert.equal(todayPack.mathTemplate, "number-crunch");
   assert.equal(new Set(todayPack.math.tasks.map((t) => t.skill)).size, 2);
   assert.deepEqual(
     todayPack.math.tasks.map(({ skill, operands }) => [skill, ...operands]),
     [
-      ["compare", 61, 16],
-      ["compare", 29, 92],
-      ["round-ten", 67],
-      ["compare", 58, 58],
-      ["round-ten", 34],
-      ["round-ten", 85],
+      ["addition-regrouping", 38, 47],
+      ["subtraction-regrouping", 91, 56],
+      ["addition-regrouping", 64, 18],
+      ["subtraction-regrouping", 83, 47],
+      ["addition-regrouping", 29, 45],
+      ["subtraction-regrouping", 70, 26],
     ],
   );
   assert.equal(todayPack.onRequest, undefined);

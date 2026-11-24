@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T05:10:23.208Z",
-  "latest": "an-ant-trail",
+  "generatedAt": "2026-11-24T05:56:40.298Z",
+  "latest": "morning-dew-2026-11-24",
   "todayEntry": "./today/",
   "days": [
+    {
+      "slug": "morning-dew-2026-11-24",
+      "date": "2026-11-24",
+      "topic": "morning dew up close",
+      "title": "The Secret Life of Morning Dew",
+      "teaser": "Find drops on every grass tip, then meet water a plant pushes out, a bench that is only half wet, feathers of ice and a glow around your shadow.",
+      "href": "./days/morning-dew-2026-11-24/",
+      "latest": true
+    },
     {
       "slug": "an-ant-trail",
       "date": "2026-11-23",
@@ -11,7 +20,7 @@
       "title": "How an Ant Trail Works",
       "teaser": "Follow a line of ants to a crumb, then find the invisible scent road, break it, and see why the shortest trail always wins.",
       "href": "./days/an-ant-trail/",
-      "latest": true
+      "latest": false
     },
     {
       "slug": "a-hanger-balance-scale",
