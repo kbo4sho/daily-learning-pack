@@ -1,0 +1,1284 @@
+{
+  "schemaVersion": 1,
+  "kind": "curiosity",
+  "slug": "a-paper-boat-2026-11-26",
+  "topic": "a paper boat up close",
+  "why": "Testing where a pebble sits, what soap does and how salt changes floating helps your child explain why a boat stays upright and rides high.",
+  "teaser": "Float a paper boat down the curb, then tip it with a pebble, power it with soap, read a ship's load lines and meet a ship made of concrete.",
+  "aliases": [
+    "a paper boat up close",
+    "soap boat",
+    "ballast",
+    "load lines",
+    "plimsoll line",
+    "concrete ship",
+    "surface tension boat"
+  ],
+  "targetAge": 8,
+  "gradeLevel": 3,
+  "mathTemplate": "story-problems",
+  "tags": {
+    "band": "6-8",
+    "skills": [
+      "reading-comprehension",
+      "vocabulary-in-context",
+      "explain-with-words-and-pictures",
+      "one-step-add",
+      "one-step-subtract"
+    ],
+    "format": "curiosity-day"
+  },
+  "ageRange": [
+    7,
+    8
+  ],
+  "editionLabel": "Wonder Daily",
+  "wonderLabel": "Paper Boat",
+  "title": "The Hidden Tricks of a Paper Boat",
+  "question": "What keeps a paper boat upright, and what can make it go?",
+  "idea": "Weight kept low and centered keeps a boat steady. Water has a stretchy skin, and soap behind a boat lets the skin in front pull it forward. Salty water pushes up harder, so boats ride higher in it, and a hollow shape lets even concrete float.",
+  "curiosity": {
+    "intro": "Start with a paper boat on a rain stream. Then tip it with a pebble, power it with soap, read a ship's load lines and meet a ship made of concrete.",
+    "carryForward": "Next time you float a boat, guess where its weight should go before you load it.",
+    "questions": [
+      {
+        "id": "ballast",
+        "plate": "reach",
+        "question": "Why does a pebble on the rim tip the boat?",
+        "notice": "Compare the level boat, with its pebble low in the middle, and the leaning boat, with its pebble on the rim.",
+        "say": "Weight that sits low and in the middle keeps a boat steady. Weight up high or out at the edge pulls that side down, so the boat tips. Big ships carry heavy ballast, like water or rocks, deep in their bottoms so they stay upright in waves.",
+        "try": "Fold two paper boats and float them in a sink. Put a coin low in the middle of one and on the rim of the other. Which one stays level?"
+      },
+      {
+        "id": "soap",
+        "plate": "change",
+        "question": "How can soap push a boat?",
+        "notice": "Find the tiny soap drop at the back of the boat, the rainbow film spreading behind it and the pepper flakes pushed to the edge.",
+        "say": "The top of water pulls together like a stretchy skin. That pull is called surface tension. Soap weakens the skin wherever it lands. The skin in front of the boat is still strong, so it pulls the boat forward, like a tug-of-war where one side lets go.",
+        "try": "Cut a small boat shape from card with a notch at the back. Float it in a tray of water, then touch a drop of dish soap into the notch. Change the water before you try again."
+      },
+      {
+        "id": "loadline",
+        "plate": "notice",
+        "question": "Why do ships have lines painted on their sides?",
+        "notice": "Find the circle with a bar through it and the ladder of short stripes just above the water.",
+        "say": "Those marks are load lines. Salty sea water is heavier than fresh river water, so it pushes up harder and a ship floats higher in it. Sailors load cargo only until the right line reaches the water, so the ship stays safe in salty, fresh or stormy winter seas.",
+        "try": "Next time you see a big boat, look near the water. Can you find a circle and some stripes?"
+      },
+      {
+        "id": "concrete",
+        "plate": "keep",
+        "question": "How can a ship made of concrete float?",
+        "notice": "Find the rough grey concrete hull, its rust streaks, and the line where it meets the calm harbour water.",
+        "say": "A solid block of concrete sinks. A ship shape is different: its walls wrap around a lot of air. The hollow hull pushes aside so much water that the water pushes back up hard enough to hold it. People built concrete ships long ago, and some still float as harbour walls.",
+        "try": "Roll a ball of clay and drop it in water. Then press the same clay into a little bowl shape and float it. What changed?"
+      }
+    ]
+  },
+  "plates": [
+    {
+      "id": "wake",
+      "src": "assets/a-paper-boat-2026-11-26/01-launch.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/01-launch.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/01-launch-fold.jpg",
+      "title": "A boat on the curb",
+      "alt": "On a wet sidewalk after rain, Big Wonderer crouches low and Little Wonderer kneels beside it, one mitten reaching toward a shallow stream along the curb. A small white folded paper boat floats upright on the stream among fallen yellow leaves.",
+      "caption": "A paper boat rides the rain stream and stays upright. Why doesn't it tip, and could it move with no wind?"
+    },
+    {
+      "id": "reach",
+      "src": "assets/a-paper-boat-2026-11-26/02-ballast.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/02-ballast.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/02-ballast-fold.jpg",
+      "title": "Low and steady",
+      "alt": "Two white paper boats float in a round stone basin. The left boat has a grey pebble low in its middle and sits level; the right boat has the same kind of pebble up on its rim and leans to that side.",
+      "caption": "Pebble low in the middle: the boat floats level. Pebble on the rim: the boat leans. Ships carry heavy ballast down low."
+    },
+    {
+      "id": "change",
+      "src": "assets/a-paper-boat-2026-11-26/03-soap.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/03-soap.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/03-soap-fold.jpg",
+      "title": "A soap motor",
+      "alt": "A white paper boat floats in a wide shallow tray of water sprinkled with pepper flakes. Behind the boat a tiny clear drop of soap spreads a rainbow film, and the pepper flakes have been pushed back toward the tray's rim.",
+      "caption": "Soap weakens the water's stretchy skin behind the boat. The stronger skin in front pulls, and the boat glides forward."
+    },
+    {
+      "id": "notice",
+      "src": "assets/a-paper-boat-2026-11-26/04-loadline.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/04-loadline.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/04-loadline-fold.jpg",
+      "title": "Lines on a ship",
+      "alt": "The dark, rust-streaked hull of a big ship moored in a harbour. Painted on its side just above the water is a white circle with a bar through it and a short ladder of white stripes. A paper boat floats nearby beside the dock.",
+      "caption": "Load lines, or Plimsoll marks, show how deep a loaded ship may safely sit in fresh, salty or winter water."
+    },
+    {
+      "id": "return",
+      "src": "assets/a-paper-boat-2026-11-26/05-salt.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/05-salt.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/05-salt-fold.jpg",
+      "title": "A salty test",
+      "alt": "Indoors beside a sunny window, Big Wonderer kneels and points while Little Wonderer sits forward on a cushion. On a low table sit two clear bowls of water, each with a paper boat; the boat in the right bowl rides higher, and a small dish of salt sits beside it.",
+      "caption": "Same boat, same pebble, but the salty bowl lifts it higher. Floating depends on the water, too."
+    },
+    {
+      "id": "keep",
+      "src": "assets/a-paper-boat-2026-11-26/06-concrete.jpg",
+      "original": "assets/a-paper-boat-2026-11-26/06-concrete.png",
+      "foldSrc": "assets/a-paper-boat-2026-11-26/06-concrete-fold.jpg",
+      "title": "A ship of stone",
+      "alt": "An old grey concrete ship with rust streaks and small plants growing along its rail floats moored by thick ropes beside a harbour wall at sunset, with a small lighthouse in the distance.",
+      "caption": "A ship made of concrete still floats: its hollow hull pushes aside enough water to hold it up."
+    }
+  ],
+  "reading": {
+    "title": "The boat that knew some tricks",
+    "coverPlate": "wake",
+    "coverText": "Start with a paper boat on a rain stream. Then find out what keeps it upright, what makes it go, and why salt water lifts it higher.",
+    "parentNote": "Age 8 with a stretch. Welcome spoken answers, pointing, drawing and dictation.",
+    "beats": [
+      {
+        "id": "wake",
+        "plate": "wake",
+        "title": "A boat on the curb",
+        "passage": "After the rain, a shallow stream runs along the curb. Little Wonderer sets a folded paper boat on it. The boat bobs and drifts, but it stays upright. Big Wonderer crouches on the sidewalk to watch. Why doesn't it tip over? And could a boat move with no wind and no paddle?",
+        "prompt": "What two questions do the Wonderers have?",
+        "foldable": {
+          "heading": "A boat on the curb",
+          "body": "A paper boat drifts down the rain stream and stays upright. Why doesn't it tip? Could it move with no wind?"
+        }
+      },
+      {
+        "id": "reach",
+        "plate": "reach",
+        "title": "Low and steady",
+        "passage": "Here is a test. Put a pebble low in the middle of one boat. It floats level. Put the same pebble up on the rim of another boat. That boat leans way over! Weight that sits low and centered keeps a boat steady. Real ships carry heavy ballast deep in the bottom for the same reason.",
+        "prompt": "Where should the pebble go to keep a boat steady?",
+        "foldable": {
+          "heading": "Low and steady",
+          "body": "A pebble low in the middle keeps the boat level. On the rim, it tips the boat. Ships carry heavy ballast down low."
+        }
+      },
+      {
+        "id": "change",
+        "plate": "change",
+        "title": "A soap motor",
+        "passage": "Here is a surprise. Water has a stretchy skin on top, called surface tension. Cut a notch in the back of a flat paper boat. Touch one tiny drop of soap to the notch. The soap weakens the skin behind the boat. The stronger skin in front pulls, and the boat zooms forward with no wind at all!",
+        "prompt": "What does the soap do to the water's skin?",
+        "foldable": {
+          "heading": "A soap motor",
+          "body": "Water has a stretchy skin. Soap weakens the skin behind the boat, so the skin in front pulls it forward."
+        }
+      },
+      {
+        "id": "notice",
+        "plate": "notice",
+        "title": "Lines on a ship",
+        "passage": "Here is a clue. Big ships have special marks painted on their sides, near the water. They are called load lines. Salty sea water pushes up harder than fresh river water. So a ship floats higher at sea and sinks lower in a river. The lines show how much cargo is safe in each kind of water.",
+        "prompt": "Why does a ship float higher in the sea?",
+        "foldable": {
+          "heading": "Lines on a ship",
+          "body": "Ships have load lines painted near the water. Salty sea water pushes up harder, so ships float higher at sea."
+        }
+      },
+      {
+        "id": "return",
+        "plate": "return",
+        "title": "A salty test",
+        "passage": "Back at the table, Little Wonderer fills two bowls with water. A big spoonful of salt goes into one bowl. Each bowl gets the same boat and the same pebble. The boat in the salty water rides higher! Now the guess changes. Floating depends on the water, too, not only on the boat.",
+        "prompt": "Which boat rides higher, and why?",
+        "foldable": {
+          "heading": "A salty test",
+          "body": "The same boat rides higher in salty water. Floating depends on the water, too, not only on the boat."
+        }
+      },
+      {
+        "id": "keep",
+        "plate": "keep",
+        "title": "A ship of stone",
+        "passage": "Here is a surprise. Long ago, people built real ships out of concrete, the same stuff as sidewalks. A brick of concrete sinks fast. But a concrete ship is a hollow shell full of air, so it pushes aside lots of water. Some of those old ships still float today. What strange boat would you build?",
+        "prompt": "Why can a concrete ship float?",
+        "foldable": {
+          "heading": "A ship of stone",
+          "body": "People once built ships out of concrete. A hollow shape pushes aside lots of water, so even concrete can float."
+        }
+      }
+    ],
+    "words": [
+      {
+        "word": "ballast",
+        "meaning": "heavy weight carried low in a boat to keep it steady"
+      },
+      {
+        "word": "surface tension",
+        "meaning": "the pull that makes the top of water act like a stretchy skin"
+      },
+      {
+        "word": "load lines",
+        "meaning": "marks on a ship that show how much it can safely carry"
+      },
+      {
+        "word": "cargo",
+        "meaning": "the things a ship carries"
+      },
+      {
+        "word": "hollow",
+        "meaning": "empty inside, with a space full of air"
+      }
+    ],
+    "questions": [
+      "Why does a pebble on the rim tip the boat?",
+      "How does soap make the boat zoom?",
+      "Why does a ship float higher at sea than in a river?",
+      "Why can a hollow concrete ship float?"
+    ],
+    "yourTurn": {
+      "title": "Your turn",
+      "prompt": "Write or dictate three sentences: where weight should go in a boat, what soap does to the water, and which water lifts a boat higher.",
+      "example": "Example: Weight should go low in the middle. Soap weakens the skin of the water behind the boat. Salty water lifts a boat higher."
+    },
+    "foldableTitle": "A little book of paper boats",
+    "foldableCoverLine": "Paper Boat",
+    "foldableNote": "Carry six paper boat clues in a small book."
+  },
+  "math": {
+    "title": "Paper boat problems",
+    "eyebrow": "TWELVE BOAT PROBLEMS",
+    "plate": "wake",
+    "intro": "Twelve one-step add and subtract problems about boats, pebbles, soap, ships and salt.",
+    "actionLabel": "Solve",
+    "tasks": [
+      {
+        "skill": "one-step-add",
+        "operands": [
+          24,
+          18
+        ],
+        "prompt": "Little Wonderer folds 24 paper boats in the morning and 18 more after lunch. How many boats is that?",
+        "equation": "24 + 18 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 42,
+        "worked": "24 + 18 = 42. Put the two amounts together.",
+        "plate": "wake",
+        "label": "TASK 1"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          50,
+          17
+        ],
+        "prompt": "The rain stream carries 50 leaves past the curb, and 17 get stuck on the edge. How many leaves float on?",
+        "equation": "50 − 17 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 33,
+        "worked": "50 − 17 = 33. Take the smaller amount away.",
+        "plate": "wake",
+        "label": "TASK 2"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          36,
+          27
+        ],
+        "prompt": "The big one drops 36 small pebbles into a bin, then 27 more. How many pebbles are in the bin?",
+        "equation": "36 + 27 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 63,
+        "worked": "36 + 27 = 63. Put the two amounts together.",
+        "plate": "reach",
+        "label": "TASK 3"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          81,
+          45
+        ],
+        "prompt": "A ship carries 81 heavy ballast blocks and unloads 45 at the dock. How many blocks are still aboard?",
+        "equation": "81 − 45 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 36,
+        "worked": "81 − 45 = 36. Take the smaller amount away.",
+        "plate": "reach",
+        "label": "TASK 4"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          15,
+          29
+        ],
+        "prompt": "A soap boat glides 15 steps across a pond tray, then 29 steps more. How many steps does it glide?",
+        "equation": "15 + 29 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 44,
+        "worked": "15 + 29 = 44. Put the two amounts together.",
+        "plate": "change",
+        "label": "TASK 5"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          64,
+          29
+        ],
+        "prompt": "A tray holds 64 pepper flakes, and the soap pushes 29 to the edge. How many flakes stay in the middle?",
+        "equation": "64 − 29 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 35,
+        "worked": "64 − 29 = 35. Take the smaller amount away.",
+        "plate": "change",
+        "label": "TASK 6"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          47,
+          38
+        ],
+        "prompt": "A ship loads 47 crates in the morning and 38 in the afternoon. How many crates does it load?",
+        "equation": "47 + 38 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 85,
+        "worked": "47 + 38 = 85. Put the two amounts together.",
+        "plate": "notice",
+        "label": "TASK 7"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          90,
+          56
+        ],
+        "prompt": "A harbour has 90 ships, and 56 sail out to sea. How many ships are still in the harbour?",
+        "equation": "90 − 56 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 34,
+        "worked": "90 − 56 = 34. Take the smaller amount away.",
+        "plate": "notice",
+        "label": "TASK 8"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          28,
+          19
+        ],
+        "prompt": "The little one stirs 28 spoonfuls of salt into the bowls, then 19 more. How many spoonfuls is that?",
+        "equation": "28 + 19 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 47,
+        "worked": "28 + 19 = 47. Put the two amounts together.",
+        "plate": "return",
+        "label": "TASK 9"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          73,
+          48
+        ],
+        "prompt": "In a pretend count, 73 boats float in salty water and 48 float in fresh water. How many more float in salty water?",
+        "equation": "73 − 48 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 25,
+        "worked": "73 − 48 = 25. Take the smaller amount away.",
+        "plate": "return",
+        "label": "TASK 10"
+      },
+      {
+        "skill": "one-step-add",
+        "operands": [
+          55,
+          36
+        ],
+        "prompt": "Workers pour 55 buckets of concrete for one wall of a ship and 36 for the deck. How many buckets do they pour?",
+        "equation": "55 + 36 =",
+        "hint": "Add the ones, then the tens. Trade 10 ones for 1 ten if needed.",
+        "answer": 91,
+        "worked": "55 + 36 = 91. Put the two amounts together.",
+        "plate": "keep",
+        "label": "TASK 11"
+      },
+      {
+        "skill": "one-step-subtract",
+        "operands": [
+          100,
+          62
+        ],
+        "prompt": "A concrete ship has 100 portholes, and 62 are on one side. How many are on the other side?",
+        "equation": "100 − 62 =",
+        "hint": "Trade 1 ten for 10 ones if needed, then subtract the ones and tens.",
+        "answer": 38,
+        "worked": "100 − 62 = 38. Take the smaller amount away.",
+        "plate": "keep",
+        "label": "TASK 12"
+      }
+    ],
+    "extension": "Choose one problem and draw it with sticks for tens and dots for ones to check.",
+    "printNote": "Use these pretend story numbers about paper boats. The pictures are not counting data.",
+    "parentNote": "Twelve one-step add/subtract word problems within 100. Numbers are pretend practice, not real ship data.",
+    "answerKeyIntro": "Math answers (pretend story numbers):"
+  },
+  "writing": {
+    "title": "Explain a paper boat clue in your words",
+    "intro": "Choose one picture. Say your idea first, then draw or write it.",
+    "plateIds": [
+      "reach",
+      "change",
+      "notice"
+    ],
+    "draw": "Draw a paper boat with a pebble where it would keep the boat steady.",
+    "starter": "My paper boat clue",
+    "frames": [
+      {
+        "plate": "reach",
+        "start": "The boat with the pebble on the rim tips because",
+        "hint": "which side does the weight pull down?"
+      },
+      {
+        "plate": "change",
+        "start": "The soap boat zooms forward because",
+        "hint": "what does soap do to the water's skin?"
+      },
+      {
+        "plate": "notice",
+        "start": "A ship floats higher at sea because",
+        "hint": "which water pushes up harder?"
+      }
+    ],
+    "words": [
+      "steady",
+      "soap",
+      "salty",
+      "float",
+      "because",
+      "maybe"
+    ],
+    "check": "Does your sentence tell what you noticed and use because or maybe to explain?",
+    "parentNote": "Offer dictation: let the child say a complete thought while you write it, then invite a picture or label."
+  },
+  "answers": [
+    {
+      "label": "Reading · 1",
+      "text": "Why it stays upright, and how it could move with no wind."
+    },
+    {
+      "label": "Reading · 2",
+      "text": "Low in the middle."
+    },
+    {
+      "label": "Reading · 3",
+      "text": "It weakens the skin behind the boat."
+    },
+    {
+      "label": "Reading · 4",
+      "text": "Salty water pushes up harder."
+    },
+    {
+      "label": "Reading · 5",
+      "text": "The salty one. The water matters, too."
+    },
+    {
+      "label": "Reading · 6",
+      "text": "It is hollow, so it pushes aside lots of water."
+    },
+    {
+      "label": "Math · all",
+      "text": "42, 33, 63, 36, 44, 35, 85, 34, 47, 25, 91, 38."
+    },
+    {
+      "label": "Screen-free",
+      "text": "Low in the middle; weakens it; to show safe loads; salty water."
+    }
+  ],
+  "parentGuidance": "Gutter streams can be dirty and close to cars, so float boats in a sink, tub or tray. Keep soap and salt away from eyes, and wash hands after the clay test.",
+  "sources": [
+    {
+      "label": "Wikipedia — Sailing ballast (heavy weight carried low in a hull keeps a vessel stable)",
+      "url": "https://en.wikipedia.org/wiki/Sailing_ballast"
+    },
+    {
+      "label": "Wikipedia — Metacentric height (why weight high up makes a vessel tippy)",
+      "url": "https://en.wikipedia.org/wiki/Metacentric_height"
+    },
+    {
+      "label": "Wikipedia — Surface tension (the water surface acts like a stretched skin; soap lowers it)",
+      "url": "https://en.wikipedia.org/wiki/Surface_tension"
+    },
+    {
+      "label": "Wikipedia — Marangoni effect (flow from low to high surface tension; the soap boat)",
+      "url": "https://en.wikipedia.org/wiki/Marangoni_effect"
+    },
+    {
+      "label": "Wikipedia — Load line (watercraft) (Plimsoll mark and load lines for fresh, salt and winter water)",
+      "url": "https://en.wikipedia.org/wiki/Load_line_(watercraft)"
+    },
+    {
+      "label": "Wikipedia — Concrete ship (steel-reinforced concrete hulls; some survive as breakwaters)",
+      "url": "https://en.wikipedia.org/wiki/Concrete_ship"
+    }
+  ],
+  "levels": {
+    "1": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "Rain makes a stream by the curb. Little Wonderer sets a boat on it. The boat stays up. Big Wonderer watches. Why does it not tip?",
+            "prompt": "Does the boat tip?"
+          },
+          {
+            "id": "reach",
+            "passage": "Put a pebble low in the boat. The boat floats flat. Put it on the rim. Now the boat tips! Low weight keeps boats steady.",
+            "prompt": "Where should the pebble go?"
+          },
+          {
+            "id": "change",
+            "passage": "Water has a stretchy skin. Soap makes the skin weak. Put soap behind the boat. The front skin pulls. The boat zooms!",
+            "prompt": "What does soap do?"
+          },
+          {
+            "id": "notice",
+            "passage": "Big ships have lines on their sides. Salty water pushes up harder. Ships float higher at sea. The lines show safe loads.",
+            "prompt": "What do the lines show?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one fills two bowls. One bowl gets salt. The boat floats higher there! The water matters too.",
+            "prompt": "Which boat floats higher?"
+          },
+          {
+            "id": "keep",
+            "passage": "Some ships are made of concrete. A concrete brick sinks. A hollow ship floats! What boat would you build?",
+            "prompt": "Does a hollow ship float?"
+          }
+        ],
+        "words": [
+          {
+            "word": "steady",
+            "meaning": "not tipping or wobbling"
+          },
+          {
+            "word": "salty",
+            "meaning": "with salt mixed in"
+          },
+          {
+            "word": "concrete",
+            "meaning": "hard stone stuff used for sidewalks"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer folds 8 boats, then 5 more. How many boats?",
+            "expression": "8 + 5",
+            "equation": "8 + 5 =",
+            "answer": 13,
+            "hint": "Count on from the bigger number.",
+            "worked": "8 + 5 = 13. Add both sets of boats."
+          },
+          {
+            "plate": "wake",
+            "prompt": "There are 12 boats on the curb. Then 4 float away. How many are left?",
+            "expression": "12 − 4",
+            "equation": "12 − 4 =",
+            "answer": 8,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "12 − 4 = 8. Take away the boats that floated away."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A bin has 9 pebbles. The big one adds 6 more. How many pebbles?",
+            "expression": "9 + 6",
+            "equation": "9 + 6 =",
+            "answer": 15,
+            "hint": "Count on from the bigger number.",
+            "worked": "9 + 6 = 15. Add both sets of pebbles."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A boat has 14 pebbles. Then 8 roll out. How many are left?",
+            "expression": "14 − 8",
+            "equation": "14 − 8 =",
+            "answer": 6,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "14 − 8 = 6. Take away the pebbles that rolled out."
+          },
+          {
+            "plate": "change",
+            "prompt": "A soap boat goes 7 steps, then 4 more. How many steps?",
+            "expression": "7 + 4",
+            "equation": "7 + 4 =",
+            "answer": 11,
+            "hint": "Count on from the bigger number.",
+            "worked": "7 + 4 = 11. Add both sets of steps."
+          },
+          {
+            "plate": "change",
+            "prompt": "A tray has 16 pepper flakes. Soap pushes 7 away. How many are left?",
+            "expression": "16 − 7",
+            "equation": "16 − 7 =",
+            "answer": 9,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "16 − 7 = 9. Take away the flakes pushed away."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A ship has 10 crates, then gets 7 more. How many crates?",
+            "expression": "10 + 7",
+            "equation": "10 + 7 =",
+            "answer": 17,
+            "hint": "Count on from the bigger number.",
+            "worked": "10 + 7 = 17. Add both sets of crates."
+          },
+          {
+            "plate": "notice",
+            "prompt": "There are 13 ships. Then 9 sail away. How many are left?",
+            "expression": "13 − 9",
+            "equation": "13 − 9 =",
+            "answer": 4,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "13 − 9 = 4. Take away the ships that sailed."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one adds 5 spoons of salt, then 7 more. How many spoons?",
+            "expression": "5 + 7",
+            "equation": "5 + 7 =",
+            "answer": 12,
+            "hint": "Count on from the bigger number.",
+            "worked": "5 + 7 = 12. Add both sets of spoons."
+          },
+          {
+            "plate": "return",
+            "prompt": "There are 18 boats. Then 11 sink. How many still float?",
+            "expression": "18 − 11",
+            "equation": "18 − 11 =",
+            "answer": 7,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "18 − 11 = 7. Take away the boats that sank."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Workers pour 11 buckets, then 8 more. How many buckets?",
+            "expression": "11 + 8",
+            "equation": "11 + 8 =",
+            "answer": 19,
+            "hint": "Count on from the bigger number.",
+            "worked": "11 + 8 = 19. Add both sets of buckets."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A ship has 20 windows. Then 10 get covered. How many are open?",
+            "expression": "20 − 10",
+            "equation": "20 − 10 =",
+            "answer": 10,
+            "hint": "Count back, or think of an addition fact.",
+            "worked": "20 − 10 = 10. Take away the covered windows."
+          }
+        ]
+      }
+    },
+    "2": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "After the rain, a stream runs along the curb. Little Wonderer sets a paper boat on the water. It bobs and drifts but stays upright. Big Wonderer watches from the sidewalk. Why does it not tip over?",
+            "prompt": "Where does the boat float?"
+          },
+          {
+            "id": "reach",
+            "passage": "Put a pebble low in the middle of a boat. The boat floats level. Now put the pebble on the rim. The boat leans way over! Low, centered weight keeps a boat steady.",
+            "prompt": "What happens with the pebble on the rim?"
+          },
+          {
+            "id": "change",
+            "passage": "Water has a thin, stretchy skin on top. A drop of soap makes the skin weak. Put the soap behind a paper boat. The strong skin in front pulls the boat. It zooms forward with no wind!",
+            "prompt": "What pulls the boat forward?"
+          },
+          {
+            "id": "notice",
+            "passage": "Big ships have load lines painted near the water. Salty sea water pushes up harder than river water. So ships float higher out at sea. The lines show how much cargo is safe.",
+            "prompt": "What do load lines show?"
+          },
+          {
+            "id": "return",
+            "passage": "The little one fills two bowls with water. A spoonful of salt goes into one bowl. The same boat rides higher in the salty bowl! So floating depends on the water, too.",
+            "prompt": "Which bowl lifts the boat higher?"
+          },
+          {
+            "id": "keep",
+            "passage": "Long ago, people built ships out of concrete. A block of concrete sinks fast. But a hollow concrete ship pushes aside lots of water. So it floats! What strange boat would you build?",
+            "prompt": "Why does the concrete ship float?"
+          }
+        ],
+        "words": [
+          {
+            "word": "steady",
+            "meaning": "not tipping or wobbling"
+          },
+          {
+            "word": "load lines",
+            "meaning": "marks on a ship that show safe loads"
+          },
+          {
+            "word": "cargo",
+            "meaning": "the things a ship carries"
+          },
+          {
+            "word": "concrete",
+            "meaning": "hard stone stuff used for sidewalks"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer folds 23 boats, then 14 more. How many boats?",
+            "expression": "23 + 14",
+            "equation": "23 + 14 =",
+            "answer": 37,
+            "hint": "Add the ones, then the tens.",
+            "worked": "23 + 14 = 37. Add both sets of boats."
+          },
+          {
+            "plate": "wake",
+            "prompt": "The stream carries 40 leaves, and 16 get stuck. How many float on?",
+            "expression": "40 − 16",
+            "equation": "40 − 16 =",
+            "answer": 24,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "40 − 16 = 24. Take away the stuck leaves."
+          },
+          {
+            "plate": "reach",
+            "prompt": "The big one has 18 pebbles and finds 25 more. How many pebbles?",
+            "expression": "18 + 25",
+            "equation": "18 + 25 =",
+            "answer": 43,
+            "hint": "Add the ones, then the tens.",
+            "worked": "18 + 25 = 43. Add both sets of pebbles."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A ship has 35 ballast blocks and unloads 19. How many are left?",
+            "expression": "35 − 19",
+            "equation": "35 − 19 =",
+            "answer": 16,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "35 − 19 = 16. Take away the unloaded blocks."
+          },
+          {
+            "plate": "change",
+            "prompt": "A soap boat glides 27 steps, then 12 more. How many steps?",
+            "expression": "27 + 12",
+            "equation": "27 + 12 =",
+            "answer": 39,
+            "hint": "Add the ones, then the tens.",
+            "worked": "27 + 12 = 39. Add both sets of steps."
+          },
+          {
+            "plate": "change",
+            "prompt": "A tray has 48 pepper flakes, and soap pushes 21 away. How many stay?",
+            "expression": "48 − 21",
+            "equation": "48 − 21 =",
+            "answer": 27,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "48 − 21 = 27. Take away the flakes pushed away."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A ship loads 16 crates, then 29 more. How many crates?",
+            "expression": "16 + 29",
+            "equation": "16 + 29 =",
+            "answer": 45,
+            "hint": "Add the ones, then the tens.",
+            "worked": "16 + 29 = 45. Add both sets of crates."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A harbour has 50 ships, and 33 sail out. How many stay?",
+            "expression": "50 − 33",
+            "equation": "50 − 33 =",
+            "answer": 17,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "50 − 33 = 17. Take away the ships that sailed."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one stirs in 22 pinches of salt, then 19 more. How many pinches?",
+            "expression": "22 + 19",
+            "equation": "22 + 19 =",
+            "answer": 41,
+            "hint": "Add the ones, then the tens.",
+            "worked": "22 + 19 = 41. Add both sets of pinches."
+          },
+          {
+            "plate": "return",
+            "prompt": "There are 44 boats, and 26 float in fresh water. How many float in salty water?",
+            "expression": "44 − 26",
+            "equation": "44 − 26 =",
+            "answer": 18,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "44 − 26 = 18. Take away the fresh-water boats."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Workers pour 31 buckets of concrete, then 15 more. How many buckets?",
+            "expression": "31 + 15",
+            "equation": "31 + 15 =",
+            "answer": 46,
+            "hint": "Add the ones, then the tens.",
+            "worked": "31 + 15 = 46. Add both sets of buckets."
+          },
+          {
+            "plate": "keep",
+            "prompt": "A concrete ship has 38 windows, and 24 are on one side. How many are on the other side?",
+            "expression": "38 − 24",
+            "equation": "38 − 24 =",
+            "answer": 14,
+            "hint": "Trade 1 ten for 10 ones if needed.",
+            "worked": "38 − 24 = 14. Take away one side."
+          }
+        ]
+      }
+    },
+    "4": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "After the rain, a shallow stream runs along the curb. Little Wonderer sets a folded paper boat on it. The boat bobs and drifts, yet it stays upright the whole way. Big Wonderer crouches on the sidewalk to watch. Why doesn't the boat tip over, and could a boat ever move with no wind and no paddle?",
+            "prompt": "What two mysteries does the boat raise?"
+          },
+          {
+            "id": "reach",
+            "passage": "Here is a test: set a smooth pebble low in the middle of one boat, and it floats perfectly level. Put the same pebble up on the rim of another boat, and that boat leans far over. Weight that sits low and centered keeps a boat steady. Real ships carry heavy ballast deep in their bottoms for exactly this reason.",
+            "prompt": "Why do ships carry ballast down low?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a surprise: the top of water acts like a thin, stretchy skin, called surface tension. Cut a notch in the back of a flat paper boat and touch one tiny drop of soap to it. The soap weakens the skin behind the boat. The stronger skin in front keeps pulling, so the boat zooms forward with no wind at all.",
+            "prompt": "How does surface tension move the soap boat?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue painted on real ships: a set of marks near the water called load lines. Salty sea water is heavier than river water, so it pushes up harder. That means a ship floats higher at sea and sits lower in a river. The marks show how much cargo is safe in each kind of water.",
+            "prompt": "Why does a ship sit lower in a river?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, the little one fills two clear bowls with water and stirs a big spoonful of salt into one of them. Each bowl gets an identical boat carrying an identical pebble. The boat in the salty bowl rides noticeably higher! So the guess changes: floating depends on the water, too, not only on the boat.",
+            "prompt": "How did the salt test change the guess?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: long ago, people built real ships out of concrete, the same material as sidewalks. A solid block of concrete sinks straight to the bottom. A concrete ship, though, is a hollow shell full of air, so it pushes aside a huge amount of water. Some of those old ships still float today. What strange boat would you build?",
+            "prompt": "Why does the hollow shape matter?"
+          }
+        ],
+        "words": [
+          {
+            "word": "ballast",
+            "meaning": "heavy weight carried low in a boat to keep it steady"
+          },
+          {
+            "word": "centered",
+            "meaning": "placed in the middle"
+          },
+          {
+            "word": "surface tension",
+            "meaning": "the pull that makes the top of water act like a stretchy skin"
+          },
+          {
+            "word": "load lines",
+            "meaning": "marks on a ship that show how much it can safely carry"
+          },
+          {
+            "word": "cargo",
+            "meaning": "the things a ship carries"
+          },
+          {
+            "word": "hollow",
+            "meaning": "empty inside, with a space full of air"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "Little Wonderer counts 245 boats in a race and 168 more waiting at the start. How many boats in all?",
+            "expression": "245 + 168",
+            "equation": "245 + 168 =",
+            "answer": 413,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "245 + 168 = 413. Add both groups of boats."
+          },
+          {
+            "plate": "wake",
+            "prompt": "The big one folds 7 boats for each of 6 friends. How many boats is that?",
+            "expression": "7 × 6",
+            "equation": "7 × 6 =",
+            "answer": 42,
+            "hint": "Think 7 groups of 6, or 6 groups of 7.",
+            "worked": "7 × 6 = 42. Six groups of 7 boats."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A ship carries 500 ballast stones and unloads 237. How many are left?",
+            "expression": "500 − 237",
+            "equation": "500 − 237 =",
+            "answer": 263,
+            "hint": "Regroup across the zeros.",
+            "worked": "500 − 237 = 263. Take away the unloaded stones."
+          },
+          {
+            "plate": "reach",
+            "prompt": "There are 56 pebbles shared equally among 8 boats. How many pebbles go in each boat?",
+            "expression": "56 ÷ 8",
+            "equation": "56 ÷ 8 =",
+            "answer": 7,
+            "hint": "Think which number times 8 makes 56.",
+            "worked": "56 ÷ 8 = 7. Each boat gets the same number."
+          },
+          {
+            "plate": "change",
+            "prompt": "A soap boat glides 8 steps each time, for 9 tries. How many steps is that?",
+            "expression": "8 × 9",
+            "equation": "8 × 9 =",
+            "answer": 72,
+            "hint": "Think 8 × 10, then take away 8.",
+            "worked": "8 × 9 = 72. Nine tries of 8 steps."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, a tray holds 318 pepper flakes and the soap pushes 275 more in from a second tray. How many flakes in all?",
+            "expression": "318 + 275",
+            "equation": "318 + 275 =",
+            "answer": 593,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "318 + 275 = 593. Add both trays of flakes."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A ship can carry 900 crates and already holds 456. How many more crates fit?",
+            "expression": "900 − 456",
+            "equation": "900 − 456 =",
+            "answer": 444,
+            "hint": "Regroup across the zeros.",
+            "worked": "900 − 456 = 444. Take away the crates already aboard."
+          },
+          {
+            "plate": "notice",
+            "prompt": "There are 63 crates stacked in 7 equal rows. How many crates are in each row?",
+            "expression": "63 ÷ 7",
+            "equation": "63 ÷ 7 =",
+            "answer": 9,
+            "hint": "Think which number times 7 makes 63.",
+            "worked": "63 ÷ 7 = 9. Each row gets the same number."
+          },
+          {
+            "plate": "return",
+            "prompt": "The little one puts 4 pinches of salt into each of 6 bowls. How many pinches is that?",
+            "expression": "6 × 4",
+            "equation": "6 × 4 =",
+            "answer": 24,
+            "hint": "Think 6 groups of 4.",
+            "worked": "6 × 4 = 24. Six bowls of 4 pinches."
+          },
+          {
+            "plate": "return",
+            "prompt": "In a pretend count, 720 boats float in salty water and 385 float in fresh water. How many more float in salty water?",
+            "expression": "720 − 385",
+            "equation": "720 − 385 =",
+            "answer": 335,
+            "hint": "Regroup, then subtract each place.",
+            "worked": "720 − 385 = 335. Compare by taking away."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Workers pour 9 buckets of concrete for each of 10 walls. How many buckets is that?",
+            "expression": "9 × 10",
+            "equation": "9 × 10 =",
+            "answer": 90,
+            "hint": "Multiply by 10: think 9 tens.",
+            "worked": "9 × 10 = 90. Ten walls of 9 buckets."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 80 portholes shared equally along 10 rows. How many portholes are in each row?",
+            "expression": "80 ÷ 10",
+            "equation": "80 ÷ 10 =",
+            "answer": 8,
+            "hint": "Think which number times 10 makes 80.",
+            "worked": "80 ÷ 10 = 8. Each row gets the same number."
+          }
+        ]
+      }
+    },
+    "5": {
+      "reading": {
+        "beats": [
+          {
+            "id": "wake",
+            "passage": "After the rain, a shallow stream runs along the curb, and Little Wonderer sets a carefully folded paper boat on the moving water. The boat bobs, spins a little and drifts along, yet it stays upright the whole way down the street. Big Wonderer crouches on the sidewalk to watch. Why doesn't the boat tip over, and could a boat ever move with no wind and no paddle at all?",
+            "prompt": "What makes the boat's steady ride surprising?"
+          },
+          {
+            "id": "reach",
+            "passage": "Here is a test you can try in a basin: set a smooth pebble low in the middle of one boat, and it floats perfectly level. Put the same pebble up on the rim of another boat, and that boat leans so far that its edge nearly dips under. Weight that sits low and centered keeps a boat steady, while weight up high makes it tippy. Real ships carry heavy ballast deep in their bottoms for exactly this reason.",
+            "prompt": "How does the height of the weight change how tippy a boat is?"
+          },
+          {
+            "id": "change",
+            "passage": "Here is a surprise: the top of water acts like a thin, stretchy skin, which scientists call surface tension. Cut a small notch in the back of a flat paper boat, then touch one tiny drop of soap to the water inside the notch. The soap weakens the skin behind the boat, while the stronger skin in front keeps pulling. The boat zooms forward with no wind at all, until the soap spreads everywhere.",
+            "prompt": "Why does the soap boat stop once the soap spreads everywhere?"
+          },
+          {
+            "id": "notice",
+            "passage": "Here is a clue painted on real ships: a set of marks near the water called load lines, or Plimsoll marks. Salty sea water is heavier than fresh river water, so it pushes up on a hull a little harder. That means a loaded ship floats higher at sea and settles lower when it sails up a river. The marks show sailors how much cargo is safe in each kind of water, and even in winter seas.",
+            "prompt": "Why would a ship need different marks for rivers and seas?"
+          },
+          {
+            "id": "return",
+            "passage": "Back at the table, the little one fills two clear bowls with water and stirs a big spoonful of salt into one of them. Each bowl gets an identical folded boat carrying an identical pebble, and the Wonderers lean in to compare. The boat in the salty bowl rides noticeably higher than the other one! So the guess changes: floating depends on the water as well as the boat.",
+            "prompt": "What evidence shows that the water matters?"
+          },
+          {
+            "id": "keep",
+            "passage": "Here is a surprise: long ago, people built real cargo ships out of concrete, the same heavy material used for sidewalks. A solid block of concrete sinks straight to the bottom of a pond. A concrete ship, though, is a hollow shell full of air, so it pushes aside a huge amount of water and floats. Some of those old ships still float today as harbour walls. What strange boat would you build?",
+            "prompt": "How can the same material both sink and float?"
+          }
+        ],
+        "words": [
+          {
+            "word": "ballast",
+            "meaning": "heavy weight carried low in a boat to keep it steady"
+          },
+          {
+            "word": "centered",
+            "meaning": "placed in the middle"
+          },
+          {
+            "word": "surface tension",
+            "meaning": "the pull that makes the top of water act like a stretchy skin"
+          },
+          {
+            "word": "load lines",
+            "meaning": "marks on a ship that show how much it can safely carry"
+          },
+          {
+            "word": "Plimsoll marks",
+            "meaning": "another name for a ship's load lines"
+          },
+          {
+            "word": "cargo",
+            "meaning": "the things a ship carries"
+          },
+          {
+            "word": "hollow",
+            "meaning": "empty inside, with a space full of air"
+          }
+        ]
+      },
+      "math": {
+        "tasks": [
+          {
+            "plate": "wake",
+            "prompt": "In a pretend race, Little Wonderer counts 1250 paper boats at the start and 875 more joining later. How many boats in all?",
+            "expression": "1250 + 875",
+            "equation": "1250 + 875 =",
+            "answer": 2125,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "1250 + 875 = 2125. Add both groups of boats."
+          },
+          {
+            "plate": "wake",
+            "prompt": "A fold-a-boat club makes 340 boats on each of 6 days. How many boats is that?",
+            "expression": "340 × 6",
+            "equation": "340 × 6 =",
+            "answer": 2040,
+            "hint": "Think 300 × 6 and 40 × 6, then add.",
+            "worked": "340 × 6 = 2040. Six days of 340 boats."
+          },
+          {
+            "plate": "reach",
+            "prompt": "A ship carries 5000 ballast stones and unloads 2375. How many are left?",
+            "expression": "5000 − 2375",
+            "equation": "5000 − 2375 =",
+            "answer": 2625,
+            "hint": "Regroup across the zeros.",
+            "worked": "5000 − 2375 = 2625. Take away the unloaded stones."
+          },
+          {
+            "plate": "reach",
+            "prompt": "There are 4800 kilograms of ballast shared equally among 8 tanks. How many kilograms go in each tank?",
+            "expression": "4800 ÷ 8",
+            "equation": "4800 ÷ 8 =",
+            "answer": 600,
+            "hint": "Think 48 ÷ 8 = 6, then 4800 ÷ 8 = 600.",
+            "worked": "4800 ÷ 8 = 600. Each tank gets the same amount."
+          },
+          {
+            "plate": "change",
+            "prompt": "A soap boat glides 725 centimetres on each of 4 tries. How far does it glide in all?",
+            "expression": "725 × 4",
+            "equation": "725 × 4 =",
+            "answer": 2900,
+            "hint": "Think 700 × 4 and 25 × 4, then add.",
+            "worked": "725 × 4 = 2900. Four tries of 725 centimetres."
+          },
+          {
+            "plate": "change",
+            "prompt": "In a pretend count, one tray holds 3680 pepper flakes and another holds 2455. How many flakes in all?",
+            "expression": "3680 + 2455",
+            "equation": "3680 + 2455 =",
+            "answer": 6135,
+            "hint": "Add each place, starting with the ones.",
+            "worked": "3680 + 2455 = 6135. Add both trays."
+          },
+          {
+            "plate": "notice",
+            "prompt": "A ship can carry 9000 crates and already holds 4560. How many more crates fit?",
+            "expression": "9000 − 4560",
+            "equation": "9000 − 4560 =",
+            "answer": 4440,
+            "hint": "Regroup across the zeros.",
+            "worked": "9000 − 4560 = 4440. Take away the crates already aboard."
+          },
+          {
+            "plate": "notice",
+            "prompt": "There are 6300 crates stacked in 9 equal rows. How many crates are in each row?",
+            "expression": "6300 ÷ 9",
+            "equation": "6300 ÷ 9 =",
+            "answer": 700,
+            "hint": "Think 63 ÷ 9 = 7, then 6300 ÷ 9 = 700.",
+            "worked": "6300 ÷ 9 = 700. Each row gets the same number."
+          },
+          {
+            "plate": "return",
+            "prompt": "The big one stirs 1150 grains of salt into each of 7 bowls. How many grains is that?",
+            "expression": "1150 × 7",
+            "equation": "1150 × 7 =",
+            "answer": 8050,
+            "hint": "Think 1000 × 7 and 150 × 7, then add.",
+            "worked": "1150 × 7 = 8050. Seven bowls of 1150 grains."
+          },
+          {
+            "plate": "return",
+            "prompt": "In a pretend count, 7200 boats float in salty water and 3845 float in fresh water. How many more float in salty water?",
+            "expression": "7200 − 3845",
+            "equation": "7200 − 3845 =",
+            "answer": 3355,
+            "hint": "Regroup, then subtract each place.",
+            "worked": "7200 − 3845 = 3355. Compare by taking away."
+          },
+          {
+            "plate": "keep",
+            "prompt": "Workers pour 2500 kilograms of concrete for each of 3 hull walls. How many kilograms is that?",
+            "expression": "2500 × 3",
+            "equation": "2500 × 3 =",
+            "answer": 7500,
+            "hint": "Think 25 × 3 = 75, then 2500 × 3.",
+            "worked": "2500 × 3 = 7500. Three walls of 2500 kilograms."
+          },
+          {
+            "plate": "keep",
+            "prompt": "There are 8100 rivets shared equally among 10 sections of a hull. How many rivets are in each section?",
+            "expression": "8100 ÷ 10",
+            "equation": "8100 ÷ 10 =",
+            "answer": 810,
+            "hint": "Think which number times 10 makes 8100.",
+            "worked": "8100 ÷ 10 = 810. Each section gets the same number."
+          }
+        ]
+      }
+    }
+  },
+  "screenFree": [
+    "quiz-cards"
+  ],
+  "quiz": {
+    "title": "Four looks at a paper boat",
+    "intro": "Follow the boat from a rain stream to a ship made of concrete.",
+    "questions": [
+      {
+        "id": "pebble",
+        "prompt": "Where should a pebble go for a steady boat?",
+        "choices": [
+          "Low in the middle",
+          "Up on the rim",
+          "Out on the tip"
+        ],
+        "answerIndex": 0,
+        "answer": "Weight low and in the middle keeps a boat steady."
+      },
+      {
+        "id": "soap",
+        "prompt": "What does soap do to the water's skin?",
+        "choices": [
+          "Makes it thicker",
+          "Weakens it",
+          "Turns it blue"
+        ],
+        "answerIndex": 1,
+        "answer": "Soap weakens the skin behind the boat, so the skin in front pulls it forward."
+      },
+      {
+        "id": "lines",
+        "prompt": "Why paint load lines on a ship?",
+        "choices": [
+          "To look pretty",
+          "To show safe loads",
+          "To count fish"
+        ],
+        "answerIndex": 1,
+        "answer": "The lines show how much cargo is safe in each kind of water."
+      },
+      {
+        "id": "salt",
+        "prompt": "Which water lifts a boat higher?",
+        "choices": [
+          "Fresh water",
+          "Muddy water",
+          "Salty water"
+        ],
+        "answerIndex": 2,
+        "answer": "Salty water pushes up harder, so the boat rides higher."
+      }
+    ]
+  },
+  "titleCard": {
+    "eyebrow": "Wonder Daily",
+    "title": "The Hidden Tricks of a Paper Boat",
+    "line": "A pebble, a drop of soap, a pinch of salt, and a ship made of stone.",
+    "plate": "wake"
+  },
+  "poem": {
+    "title": "Upper Deck, Please",
+    "lines": [
+      "A pebble demanded a seat on the rim.",
+      "The boat dipped its edge. They both went for a swim.",
+      "Little Wonderer fished out the wreck.",
+      "“Let's find you a cabin below the top deck.”",
+      "",
+      "Big Wonderer moved it. The boat floated flat,",
+      "with weight in the middle, down low where it sat.",
+      "",
+      "The pebble requested the top deck instead.",
+      "They gave it a snorkel to wear on its head."
+    ],
+    "drawing": {
+      "src": "assets/a-paper-boat-2026-11-26/poem.jpg",
+      "alt": "Black-ink line drawing: Big Wonderer leans in while Little Wonderer steps toward a low basin of water, holding up a small pebble in one mitten. In the basin a paper boat floats level with a pebble sitting low in its middle."
+    }
+  }
+}
