@@ -8,9 +8,9 @@
       "printHref": "./family/print/#big",
       "today": {
         "href": "./today/",
-        "topic": "morning dew up close",
-        "why": "Comparing drops on grass tips, a half-wet bench and frost helps your child use evidence to explain where morning water really comes from.",
-        "date": "2026-11-24",
+        "topic": "a paper boat up close",
+        "why": "Testing where a pebble sits, what soap does and how salt changes floating helps your child explain why a boat stays upright and rides high.",
+        "date": "2026-11-26",
         "pdfs": [
           {
             "href": "./today/pdf/kid-worksheets.pdf",
@@ -21,12 +21,12 @@
             "label": "Print explainer"
           },
           {
-            "href": "./today/pdf/lab-page.pdf",
-            "label": "Table-top lab"
+            "href": "./today/pdf/quiz-cards.pdf",
+            "label": "Quiz cards"
           },
           {
-            "href": "./today/pdf/lab-page-key.pdf",
-            "label": "Grown-ups: table-top lab guide"
+            "href": "./today/pdf/quiz-cards-key.pdf",
+            "label": "Grown-ups: quiz cards answer key"
           }
         ]
       }

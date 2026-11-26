@@ -2,6 +2,23 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "id": "a-paper-boat-2026-11-26",
+      "band": "6-8",
+      "topic": "a paper boat up close",
+      "why": "Testing where a pebble sits, what soap does and how salt changes floating helps your child explain why a boat stays upright and rides high.",
+      "skills": [
+        "reading-comprehension",
+        "vocabulary-in-context",
+        "explain-with-words-and-pictures",
+        "one-step-add",
+        "one-step-subtract"
+      ],
+      "date": "2026-11-26",
+      "format": "curiosity-day",
+      "status": "published",
+      "hidden": false
+    },
+    {
       "id": "morning-dew-2026-11-24",
       "band": "6-8",
       "topic": "morning dew up close",

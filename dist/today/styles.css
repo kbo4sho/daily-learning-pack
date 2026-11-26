@@ -1182,7 +1182,7 @@ body[data-kind="engines"] .writing-desk label {
   margin: 0;
 }
 .print-document {
-  background: #ddd;
+  background: #fff;
   color: #111;
   font: 400 12pt/1.4 var(--sans);
 }

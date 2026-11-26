@@ -35,8 +35,8 @@
 * {
   box-sizing: border-box;
 }
-body[data-kind="curiosity-bean"],
-body[data-kind="curiosity"] {
+body[data-kind="curiosity-bean"]:not(.print-document),
+body[data-kind="curiosity"]:not(.print-document) {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
@@ -1087,7 +1087,7 @@ body.reader-open .daily-header {
 .print-document .curiosity-sheet .curiosity-plate img {
   aspect-ratio: 3/2;
   object-fit: contain;
-  background: #f4f1e8;
+  background: #fff;
   border: 0.4pt solid #b9b6aa;
   border-radius: 0;
   /* No CSS filter: Skia emits /SMask soft-masks for filtered images and
